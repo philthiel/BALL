@@ -14,9 +14,7 @@ using namespace std;
 const String BALL::CommandlineParser::NOT_FOUND = "parameter_not_found";
 const list<String> BALL::CommandlineParser::EMTPY_LIST(0);
 
-CommandlineParser::CommandlineParser
-  (String tool_name, String tool_description, 
-   String tool_version, String build_date, String category)
+CommandlineParser::CommandlineParser(String tool_name, String tool_description, String tool_version, String build_date, String category)
 {
 	max_parname_length_ = 0;
 	max_flagname_length_ = 0;
@@ -65,13 +63,12 @@ CommandlineParser::CommandlineParser
 	reserved_params_.insert("par");
 	reserved_params_.insert("h");
 	reserved_params_.insert("help");
+	reserved_params_.insert("quiet");
 	reserved_params_.insert("ini");
 	reserved_params_.insert("env");
 }
 
-void CommandlineParser::checkAndRegisterParameter
-  (String name, String description, ParameterType type, bool mandatory,
-   String default_value, bool perform_check, bool hidden)
+void CommandlineParser::checkAndRegisterParameter(String name, String description, ParameterType type, bool mandatory, String default_value, bool perform_check, bool hidden)
 {
 	checkParameterName(name, perform_check);
 
@@ -113,18 +110,13 @@ void CommandlineParser::checkAndRegisterParameter
 	}
 }
 
-void CommandlineParser::registerParameter
-  (String name, String description,
-   ParameterType type, bool mandatory,
-	 String default_value, bool hidden)
+void CommandlineParser::registerParameter(String name, String description, ParameterType type, bool mandatory, String default_value, bool hidden)
 {
 	// add parameter and check if the parameter name is valid
 	checkAndRegisterParameter(name, description, type, mandatory, default_value, true, hidden);
 }
 
-void CommandlineParser::checkAndRegisterFlag(String name, String description,
-                                             bool default_gui_value,
-																						 bool perform_check, bool hidden)
+void CommandlineParser::checkAndRegisterFlag(String name, String description, bool default_gui_value, bool perform_check, bool hidden)
 {
 	checkParameterName(name, perform_check);
 
@@ -256,6 +248,11 @@ void CommandlineParser::setOutputFormatSource(String output_parname, String inpu
 
 void CommandlineParser::printToolInfo()
 {
+	if (parameter_map_.find("quiet") != parameter_map_.end())
+	{
+		return;
+	}
+
 	String tool = "| " + tool_name_ + " -- " + tool_description_;
 	String version = "| Version: " + tool_version_;
 	String build = "| build date: " + build_date_;
@@ -296,8 +293,9 @@ void CommandlineParser::printToolInfo()
 
 void CommandlineParser::parse(int argc, char* argv[])
 {
-	checkAndRegisterFlag("h", "show help about parameters and flags of this program", false, false);
+	checkAndRegisterFlag("h", "show program help (also -help)", false, false);
 	checkAndRegisterFlag("help", "show help about parameters and flags of this program", false, false);
+	checkAndRegisterFlag("quiet", "suppress log messages (error messages are printed)", false, false);
 	checkAndRegisterParameter("write_par", "write xml parameter file for this tool", OUTFILE, false, "", false);
 	checkAndRegisterParameter("par", "read parameters from parameter-xml-file", INFILE, false, "", false);
 	setSupportedFormats("par", "xml");
@@ -307,120 +305,142 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 	validateRegisteredFilesHaveFormats();
 
+	// Make a copy of default parameters
+	map<String, list<String> > default_values = parameter_map_;
+	parameter_map_.clear();
+
+	map<String, vector<String> > keys;
+	pair<map<String, vector<String> >::iterator, bool> keys_inserter;
+	map<Size, vector<String> > invalids;
+	pair<map<Size, vector<String> >::iterator, bool> invalids_inserter;
+
+	String token, key;
+	bool key_found = false;
+
+	for (Size index=1; index!=argc; ++index)
+	{
+		token = argv[index];
+
+		if (token.hasPrefix("-"))
+		{
+			// Token is a key
+
+			key = token(1);
+			keys_inserter = keys.insert(pair<String, vector<String> >(key, vector<String>()));
+
+			if (!keys_inserter.second)
+			{
+				// Duplicate of an already discovered key - this ambiguouity is invalid
+				invalids_inserter = invalids.insert(pair<Size, vector<String> >(1, vector<String>(1, key)));
+				if (!invalids_inserter.second)
+				{
+					(invalids_inserter.first)->second.push_back(key);
+				}
+			}
+
+			key_found = true;
+		}
+		else
+		{
+			// Token is not a key
+
+			if (!key_found)
+			{
+				// Leading token(s) not being a key is an error
+
+				invalids_inserter = invalids.insert(pair<Size, vector<String> >(2, vector<String>(1, token)));
+				if (!invalids_inserter.second)
+				{
+					(invalids_inserter.first)->second.push_back(token);
+				}
+			}
+			else
+			{
+				// Token is a value
+
+				keys[key].push_back(token);
+			}
+		}
+	}
+
+	// Check for 'quiet' flag to suppress output
+	if (keys.find("quiet") != keys.end())
+	{
+		parameter_map_.insert(make_pair("quiet", list<String>(1, "1")));
+	}
+
 	printToolInfo();
 
+	// Check if errors occurred in parameter parsing
 	if (argc < 2)
 	{
 		printHelp();
 		exit(1);
 	}
 
-	// Make a copy of the default-parameters
-	map<String, list<String> > default_values = parameter_map_;
-	parameter_map_.clear();
-
-	bool name_read = 0;
-	String current_par_name="";
-	String token = "";
-	start_command_ = "";
-	for (int i = 0; i < argc; i++)
+	if (invalids.find(2) != invalids.end())
 	{
-		token = argv[i];
-		token.trim();
-		start_command_ += token;
-		if (i < argc-1) start_command_ += " ";
+		Log.error() << "[Error:] the following parameter is invalid: '" << invalids[2][0] << "'" << endl;
+		exit(1);
+	}
+	if (invalids.find(1) != invalids.end())
+	{
+		Log.error() << "[Error:] the following parameter occurs multiple times: '" << invalids[1][0] << "'" << endl;
+		exit(1);
+	}
 
-		if (token[0] == '-' && !token.isFloat())
+	vector<String> values;
+	map<String, vector<String> >::iterator key_iter;
+	pair<map<String, list<String> >::iterator, bool> param_inserter;
+	for(key_iter=keys.begin(); key_iter!=keys.end(); ++key_iter)
+	{
+		key = key_iter->first;
+		values = key_iter->second;
+
+		if (values.size() == 0)
 		{
-			token.trimLeft("-");
-			if (!name_read)
+			// Key is a flag (has no arguments)
+
+			if (registered_flags_.find(key) != registered_flags_.end())
 			{
-				current_par_name = token;
-				name_read = true;
+				parameter_map_.insert(make_pair(key, list<String>(1, "1")));
 			}
-			else // command line flag
+			else
 			{
-				if (registered_flags_.find(current_par_name) != registered_flags_.end())
+				Log.error() << "[Error:] Flag '" << key << "' is unknown." << endl;
+				Log.error() << "Use '-help' to display available parameters and flags." << endl;
+
+				exit(1);
+			}
+		}
+		else
+		{
+			// Key is a parameter (has arguments)
+
+			if (registered_parameters_.find(key) != registered_parameters_.end())
+			{
+				if (values.size() == 0)
 				{
-					list<String> v;
-					v.push_back("1");
-					parameter_map_.insert(make_pair(current_par_name, v));
-					current_par_name = token;
-					name_read = true;
-				}
-				else
-				{
-					if (registered_parameters_.find(current_par_name) != registered_parameters_.end())
-					{
-						Log.error()<<"No value specified for '"<<current_par_name<<"', but it is a parameter not a flag!!\n"
-									 <<"Use '-help' to display information about available parameters and flags."<<endl;
-					}
-					else
-					{
-						Log.error()<<"Flag '"<<current_par_name<<"' unknown!!\nUse '-help' to display information about available parameters and flags."<<endl;
-					}
+					Log.error() << "[Error:] No value specified for parameter '" << key << "." << endl;
+					Log.error() << "Use '-help' to display information about available parameters and flags." << endl;
+
 					exit(1);
 				}
-			}
-		}
-		else
-		{
-			if (name_read) // command line parameter
-			{
-				replaceEscapedCharacters_(token);
 
-				map<String, list<String> >::iterator it = parameter_map_.find(current_par_name);
-				if (it != parameter_map_.end())
+				param_inserter = parameter_map_.insert(pair<String, list<String> >(key, list<String>()));
+				for (Size i=0; i!=values.size(); ++i)
 				{
-					it->second.push_back(token);
-				}
-				else
-				{
-					if (registered_parameters_.find(current_par_name) != registered_parameters_.end())
-					{
-						list<String> v;
-						v.push_back(token);
-						parameter_map_.insert(make_pair(current_par_name, v));
-					}
-					else
-					{
-						Log.error()<<"Parameter '"<<current_par_name<<"' unknown!!\nUse '-help' to display information about available parameters and flags."<<endl;
-						exit(1);
-					}
+					replaceEscapedCharacters_(token);
+					param_inserter.first->second.push_back(token);
 				}
 			}
 			else
 			{
-				map<String, list<String> >::iterator it = parameter_map_.find(current_par_name);
-				if (it != parameter_map_.end())
-				{
-					it->second.push_back(token);
-				}
+				Log.error() << "[Error:] Flag '" << key << "' has associated values but it is no parameter." << endl;
+				Log.error() << "Use '-help' to display available parameters and flags." << endl;
+
+				exit(1);
 			}
-			name_read = false;
-		}
-	}
-	// In case last token is a flag ...
-	if (name_read)
-	{
-		if (registered_flags_.find(current_par_name) != registered_flags_.end())
-		{
-			list<String> v;
-			v.push_back("1");
-			parameter_map_.insert(make_pair(current_par_name, v));
-		}
-		else
-		{
-			if (registered_parameters_.find(current_par_name) != registered_parameters_.end())
-			{
-				Log.error()<<"No value specified for '"<<current_par_name<<"', but it is a parameter not a flag!!\n"
-					         << "Use '-help' to display information about available parameters and flags."<<endl;
-			}
-			else
-			{
-				Log.error()<<"Flag '"<<current_par_name<<"' unknown!!\nUse '-help' to display available parameters and flags."<<endl;
-			}
-			exit(1);
 		}
 	}
 
@@ -453,9 +473,9 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 		if (par_toolname != tool_name_)
 		{
-			Log.error()<<"[Error:] The specified parameter-file was created for tool '"
-				         <<par_toolname<<"' not for '"<<tool_name_
-								 <<"'. Please make sure to use the correct type of parameter-file!"<<endl;
+			Log.error() << "[Error:] The specified parameter-file was created for tool '"
+						<< par_toolname << "' not for '" << tool_name_
+						<< "'. Please make sure to use the correct type of parameter-file!" << endl;
 			exit(1);
 		}
 		pf.close();
@@ -469,8 +489,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 	// If no value for a parameter was specified on the command-line, but the 
 	// parameter has a default-value, then make sure to use that default-value.
-	for (map<String, list<String> >::iterator it = default_values.begin();
-		it != default_values.end(); it++)
+	for (map<String, list<String> >::iterator it = default_values.begin(); it != default_values.end(); it++)
 	{
 		map<String, list<String> >::iterator search_it = parameter_map_.find(it->first);
 		if (search_it == parameter_map_.end() || search_it->second.empty())
@@ -496,20 +515,25 @@ void CommandlineParser::parse(int argc, char* argv[])
 		ParamFile pf(write_par, ios::out);
 		parameter_map_.erase("write_par");
 		list<pair<String, ParameterDescription> > descriptions;
-		for (list<MapIterator>::iterator it = original_parameter_order_.begin();
-			it != original_parameter_order_.end(); it++)
+
+		for (list<MapIterator>::iterator it = original_parameter_order_.begin(); it != original_parameter_order_.end(); it++)
 		{
 			descriptions.push_back(make_pair((*it)->first, (*it)->second));
 		}
-		for (list<MapIterator>::iterator it = original_flag_order_.begin();
-			it != original_flag_order_.end(); it++)
+
+		for (list<MapIterator>::iterator it = original_flag_order_.begin(); it != original_flag_order_.end(); it++)
 		{
 			descriptions.push_back(make_pair((*it)->first, (*it)->second));
 		}
 
 		pf.writeSection(tool_name_, tool_description_, tool_version_, tool_manual_, tool_category_, descriptions, parameter_map_);
 		pf.close();
-		Log << "Tool-parameter file has been written to '" << write_par << "'. Goodbye!" << endl;
+
+		if (parameter_map_.find("quiet") == parameter_map_.end())
+		{
+			Log << "Tool-parameter file has been written to '" << write_par << "'. Goodbye!" << endl;
+		}
+
 		exit(0);
 	}
 
@@ -517,9 +541,10 @@ void CommandlineParser::parse(int argc, char* argv[])
 	for (map < String, ParameterDescription > :: iterator it = registered_parameters_.begin(); it != registered_parameters_.end(); it++)
 	{
 		if (it->second.mandatory == false) 
-  	{
+		{
 			continue;
 		}
+
 		if (parameter_map_.find(it->second.name) == parameter_map_.end())
 		{
 			missing_parameters.insert(it->first);
@@ -528,6 +553,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 	if (missing_parameters.size() > 0)
 	{
 		Log.error() << "[Error:] The following mandatory parameters are missing:" << endl;
+
 		printHelp(missing_parameters, false);
 		exit(1);
 	}
@@ -567,6 +593,11 @@ void CommandlineParser::copyAdvancedParametersToOptions(Options& options)
 
 void CommandlineParser::printHelp(const set<String>& parameter_names, bool show_manual)
 {
+	if (parameter_map_.find("quiet") != parameter_map_.end() && parameter_names.empty())
+	{
+		return;
+	}
+
 	if (parameter_names.size() == 0 && registered_parameters_.size() > 0)
 	{
 		Log << "Available parameters are ('*' indicates mandatory parameters): " << endl;
@@ -579,16 +610,20 @@ void CommandlineParser::printHelp(const set<String>& parameter_names, bool show_
 		{
 			continue;
 		}
+
 		Log << "   ";
-		if ((parameter_names.size() == 0) && p.mandatory) 
+
+		if ((parameter_names.size() == 0) && p.mandatory)
 		{
-			Log<<"*  ";
+			Log << "*  ";
 		}
 		else 
 		{
 		  Log << "   ";
 		}
+
 		Log << "-" << p.name;
+
 		String n = "";
 		if (p.type == INFILE)
 		{
@@ -610,7 +645,9 @@ void CommandlineParser::printHelp(const set<String>& parameter_names, bool show_
 		{
 			n = " <string>";
 		}
-		Log<<n;
+
+		Log << n;
+
 		Size space_size = max_parname_length_+4-p.name.size()-n.size();
 		for (Size j = 0; j < space_size; j++)
 		{
@@ -618,21 +655,31 @@ void CommandlineParser::printHelp(const set<String>& parameter_names, bool show_
 		}
 		Log << p.description << endl;
 	}
+
 	if (parameter_names.size() == 0 && registered_flags_.size() > 0)
 	{
 		Log << endl << "Available flags are: " << endl;
 	}
+
 	for (list<MapIterator>::iterator it = original_flag_order_.begin(); it != original_flag_order_.end(); it++)
 	{
 		ParameterDescription& p = (*it)->second;
+
 		if (parameter_names.size() > 0 && parameter_names.find(p.name) == parameter_names.end())
 		{
 			continue;
 		}
-		Log << "      " << "-" << p.name << String(' ', max_flagname_length_ + 4 - p.name.size())
-        << p.description << endl;
+
+		if (p.name == "help")
+		{
+			continue;
+		}
+
+		Log << "      " << "-" << p.name << String(' ', max_flagname_length_ + 4 - p.name.size()) << p.description << endl;
 	}
+
 	Log << endl;
+
 	if (show_manual && tool_manual_ != "")
 	{
 		Log << endl << tool_manual_ << endl << endl << endl;
