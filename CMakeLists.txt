@@ -667,7 +667,7 @@ IF (BALL_BUILD_QUEASY)
 ENDIF()
 
 ########################################################
-###    Documentation    														 ###
+###    Documentation                                 ###
 ########################################################
 
 INCLUDE(cmake/BALLDoc.cmake)
