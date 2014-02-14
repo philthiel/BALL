@@ -12,7 +12,6 @@ IF (MSVC)
 		COMMAND ${CMAKE_COMMAND} -E echo ""
 		COMMAND ${CMAKE_COMMAND} -E echo " (b) Applications:"
 		COMMAND ${CMAKE_COMMAND} -E echo "    BALLView        builds the viewer/modeller BALLView"
-		COMMAND ${CMAKE_COMMAND} -E echo "    ballaxy         builds tools for a workflow system"
 		COMMAND ${CMAKE_COMMAND} -E echo ""
 		COMMAND ${CMAKE_COMMAND} -E echo " (c) Documentation:"
 		COMMAND ${CMAKE_COMMAND} -E echo "    doc             builds the html documentation"
