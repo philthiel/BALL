@@ -389,6 +389,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 		exit(1);
 	}
 
+	String value;
 	vector<String> values;
 	map<String, vector<String> >::iterator key_iter;
 	pair<map<String, list<String> >::iterator, bool> param_inserter;
@@ -416,7 +417,6 @@ void CommandlineParser::parse(int argc, char* argv[])
 		else
 		{
 			// Key is a parameter (has arguments)
-
 			if (registered_parameters_.find(key) != registered_parameters_.end())
 			{
 				if (values.size() == 0)
@@ -430,8 +430,9 @@ void CommandlineParser::parse(int argc, char* argv[])
 				param_inserter = parameter_map_.insert(pair<String, list<String> >(key, list<String>()));
 				for (Size i=0; i!=values.size(); ++i)
 				{
-					replaceEscapedCharacters_(token);
-					param_inserter.first->second.push_back(token);
+					value = values[i];
+					replaceEscapedCharacters_(value);
+					param_inserter.first->second.push_back(value);
 				}
 			}
 			else
