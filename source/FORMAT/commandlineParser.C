@@ -380,12 +380,12 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 	if (invalids.find(2) != invalids.end())
 	{
-		Log.error() << "[Error:] the following parameter is invalid: '" << invalids[2][0] << "'" << endl;
+		Log.error() << "Error [101]: the following parameter is invalid: '" << invalids[2][0] << "'" << endl;
 		exit(1);
 	}
 	if (invalids.find(1) != invalids.end())
 	{
-		Log.error() << "[Error:] the following parameter occurs multiple times: '" << invalids[1][0] << "'" << endl;
+		Log.error() << "Error [102]: the following parameter occurs multiple times: '" << invalids[1][0] << "'" << endl;
 		exit(1);
 	}
 
@@ -398,35 +398,35 @@ void CommandlineParser::parse(int argc, char* argv[])
 		key = key_iter->first;
 		values = key_iter->second;
 
-		if (values.size() == 0)
+		if (registered_flags_.find(key) != registered_flags_.end())
 		{
-			// Key is a flag (has no arguments)
+			// Key is a registered flag
 
-			if (registered_flags_.find(key) != registered_flags_.end())
+			if (values.size() == 0)
 			{
+				// Valid flag (no parameter values given)
 				parameter_map_.insert(make_pair(key, list<String>(1, "1")));
 			}
 			else
 			{
-				Log.error() << "[Error:] Flag '" << key << "' is unknown." << endl;
-				Log.error() << "Use '-help' to display available parameters and flags." << endl;
+				// Invalid flag (parameter values given)
+				Log.error() << "Error [103]: Flag '" << key << "' does not take parameter values." << endl;
+
+				if (parameter_map_.find("quiet") == parameter_map_.end())
+				{
+					Log << "Use '-help' to display available parameters and flags." << endl;
+				}
 
 				exit(1);
 			}
 		}
-		else
+		else if (registered_parameters_.find(key) != registered_parameters_.end())
 		{
-			// Key is a parameter (has arguments)
-			if (registered_parameters_.find(key) != registered_parameters_.end())
+			// Key is a registered parameter
+
+			if (values.size() != 0)
 			{
-				if (values.size() == 0)
-				{
-					Log.error() << "[Error:] No value specified for parameter '" << key << "." << endl;
-					Log.error() << "Use '-help' to display information about available parameters and flags." << endl;
-
-					exit(1);
-				}
-
+				// Valid parameter (parameter values given)
 				param_inserter = parameter_map_.insert(pair<String, list<String> >(key, list<String>()));
 				for (Size i=0; i!=values.size(); ++i)
 				{
@@ -437,11 +437,28 @@ void CommandlineParser::parse(int argc, char* argv[])
 			}
 			else
 			{
-				Log.error() << "[Error:] Flag '" << key << "' has associated values but it is no parameter." << endl;
-				Log.error() << "Use '-help' to display available parameters and flags." << endl;
+				// Invalid parameter (no parameter values given)
+				Log.error() << "Error [104]: Parameter '" << key << "' has no value(s)." << endl;
+
+				if (parameter_map_.find("quiet") == parameter_map_.end())
+				{
+					Log << "Use '-help' to display available parameters and flags." << endl;
+				}
 
 				exit(1);
 			}
+		}
+		else
+		{
+			// Key is not registered
+			Log.error() << "Error [105]: Key '" << key << "' is unknown (no flag or parameter)." << endl;
+
+			if (parameter_map_.find("quiet") == parameter_map_.end())
+			{
+				Log << "Use '-help' to display available parameters and flags." << endl;
+			}
+
+			exit(1);
 		}
 	}
 
@@ -474,7 +491,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 		if (par_toolname != tool_name_)
 		{
-			Log.error() << "[Error:] The specified parameter-file was created for tool '"
+			Log.error() << "Error [106]: The specified parameter-file was created for tool '"
 						<< par_toolname << "' not for '" << tool_name_
 						<< "'. Please make sure to use the correct type of parameter-file!" << endl;
 			exit(1);
@@ -553,7 +570,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 	}
 	if (missing_parameters.size() > 0)
 	{
-		Log.error() << "[Error:] The following mandatory parameters are missing:" << endl;
+		Log.error() << "Error [107]: The following mandatory parameters are missing:" << endl;
 
 		printHelp(missing_parameters, false);
 		exit(1);
