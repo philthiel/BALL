@@ -9,6 +9,7 @@
 #include <BALL/SYSTEM/sysinfo.h>
 #include <BALL/SYSTEM/timer.h>
 
+#include <sstream>
 #include <boost/foreach.hpp>
 
 
@@ -1256,6 +1257,117 @@ void BinaryFingerprintMethods::pairwiseSimilaritiesConnectedComponents(const uns
 }
 
 
+void BinaryFingerprintMethods::writeSimilarityEdges()
+{
+	stringstream buffer;
+	
+	for (unsigned int i=0; i!=sim_edges_.size(); ++i)
+	{
+		if (!sim_edges_[i].empty())
+		{
+			for (unsigned int j=0; j!=sim_edges_[i].size(); ++j)
+			{
+				buffer << i << " " << sim_edges_[i][j].first << " " << sim_edges_[i][j].second << "\n";
+			}
+			
+			sim_edges_[i].clear();
+		}
+	}
+	
+	(*outfile_) << buffer.str();
+	edge_count_ = 0;
+}
+
+
+void BinaryFingerprintMethods::storeSimilarityEdge(const unsigned int& source, const unsigned int& dest, const float& sim)
+{
+	boost::mutex::scoped_lock lock(out_mutex_);
+	
+	if (edge_count_ >= 1000000)
+	{
+		writeSimilarityEdges();
+	}
+	
+	++edge_count_;
+	sim_edges_[source].push_back(make_pair(dest, sim));
+}
+
+
+void BinaryFingerprintMethods::pairwiseSimilaritiesNetwork(const unsigned int ii1_index, const unsigned int ii2_index, ThreadData* t_data)
+{
+	unsigned short* cc_matrix_row;
+	unsigned short** cc_matrix = t_data->cc_matrix;
+	
+	float* nn_sim = t_data->float_array;
+	unsigned int* nn_list = t_data->uint_array;
+	
+	float c, coeff;
+	unsigned int tmp_molecule_id;
+	unsigned short tmp_n_features;
+	
+	InvertedIndex *ii1 = lib_iindices_[ii1_index];
+	InvertedIndex *ii2 = lib_iindices_[ii2_index];
+	
+	unsigned int ii2_n_molecules = ii2->n_molecules;
+	unsigned short* ii1_n_features = ii1->n_features;
+	unsigned short* ii2_n_features = ii2->n_features;
+	
+	unsigned int ii1_molecules_base = ii1_index * blocksize_;
+	unsigned int ii2_molecules_base = ii2_index * blocksize_;
+	
+	if (ii1!=ii2)
+	{
+		// Iterate over all inter-InvertedIndex molecule pairs to calculate similarities
+		for (unsigned int u=0; u!=ii1->n_molecules; ++u)
+		{
+			cc_matrix_row = cc_matrix[u+1];
+			tmp_molecule_id = ii1_molecules_base + u;
+			tmp_n_features = ii1_n_features[u];
+			
+			for (unsigned int v=0; v!=ii2_n_molecules; ++v)
+			{
+				// Shared feature count
+				c = cc_matrix_row[v+1];
+				
+				// Calculate Tanimoto similarity as coeff = c / (a + b -c )
+				coeff = c / ( (tmp_n_features + ii2_n_features[v]) - c );
+				
+				if (coeff >= cutoff_)
+				{
+					storeSimilarityEdge(tmp_molecule_id, ii2_molecules_base + v, coeff);
+				}
+			}
+		}
+	}
+	// When comparing identical InvertedIndices ( i==j ) only inter-InvertedIndex pairs of different molecules should be considered
+	// Therefore the inner loop variable is everytime set to ( outer-loop-variable + 1 )
+	else
+	{
+		// Iterate over all inter-InvertedIndex molecule pairs to calculate similarities
+		for (unsigned int u=0; u!=ii1->n_molecules; ++u)
+		{
+			cc_matrix_row = cc_matrix[u+1];
+			tmp_molecule_id = ii1_molecules_base + u;
+			tmp_n_features = ii1_n_features[u];
+			
+			for (unsigned int v=u+1; v!=ii2_n_molecules; ++v)
+			{
+				// Shared feature count
+				c = cc_matrix_row[v+1];
+				
+				// Calculate Tanimoto similarity as coeff = c / (a + b -c )
+				coeff = c / ( (tmp_n_features + ii2_n_features[v]) - c );
+				
+				if (coeff >= cutoff_)
+				{
+					storeSimilarityEdge(tmp_molecule_id, ii2_molecules_base + v, coeff);
+				}
+			}
+		}
+	}
+}
+
+
 void BinaryFingerprintMethods::pairwiseSimilaritiesMedoids(const unsigned int ii1_index, const unsigned int ii2_index, ThreadData* t_data)
 {
 	unsigned short* cc_matrix_row;
@@ -1661,6 +1773,41 @@ bool BinaryFingerprintMethods::connectedComponents(const vector<unsigned int>& s
 	parent.clear();
 	
 	delete ds;
+	
+	return success;
+}
+
+
+bool BinaryFingerprintMethods::calculateSimilarityNetwork(const vector<unsigned int>& selection,
+							  const float similarity_cutoff,
+							  const String& temp_file_name)
+{
+	if (checkInputData(selection) == false)
+	{
+		return false;
+	}
+	
+	cutoff_ = similarity_cutoff;
+	store_nns_ = false;
+	
+	// Output file to write edges
+	outfile_ = new fstream;
+	outfile_->open(temp_file_name, fstream::out);
+	
+	// Data structure to store the similarity edges above the threshold
+	sim_edges_.resize(selection.size());
+	
+	// Set appropriate function pointer for similarity network calculation
+	pairwiseSimilaritiesBase = &BinaryFingerprintMethods::pairwiseSimilaritiesNetwork;
+	
+	// Run pairwise similarity calculation
+	vector<pair<unsigned int, float> > nn_data_tmp; // UNUSED FOR SIMILARTIY NETWORK CALCULATION
+	bool success = pairwiseSimilarities(selection, nn_data_tmp);
+	
+	writeSimilarityEdges();
+	
+	outfile_->close();
+	delete outfile_;
 	
 	return success;
 }

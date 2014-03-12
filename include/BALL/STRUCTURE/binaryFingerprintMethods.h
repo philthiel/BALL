@@ -282,6 +282,11 @@ namespace BALL
 			bool cutoffSearch(const float sim_cutoff, const String& outfile_name);
 			
 			
+			bool calculateSimilarityNetwork(const std::vector<unsigned int>& selection, 
+							const float similarity_cutoff,
+							const String& temp_file_name);
+			
+			
 			/** 
 			 * Calculate similarity network of a set of molecules defined by selection and return the connected components.
 			 * @param selection Indices of molecules in lib_features_ array for which connected components analysis should be performed.
@@ -553,6 +558,16 @@ namespace BALL
 			 */
 			int verbosity_;
 			
+			
+			/**
+			 * Data structure to store similarity edges.
+			 * Used to calculate the similarity network of an input library
+			 */
+			std::vector<std::vector<std::pair<unsigned int, float> > > sim_edges_;
+			
+			unsigned long edge_count_;
+			
+			std::fstream* outfile_;
 			
 			/**
 			 * Pointers to all leaf clusters.
@@ -834,6 +849,10 @@ namespace BALL
 			void pairwiseSimilaritiesNearestNeighbours(const unsigned int ii1_index, const unsigned int ii2_index, ThreadData* t_data);
 			
 			
+			void writeSimilarityEdges();
+			void storeSimilarityEdge(const unsigned int& source, const unsigned int& dest, const float& sim);
+			
+			
 			/**
 			 * Pairwise similarity calculation which implements calculation of a similarity matrix.
 			 * @param ii1_index Position of first InvertedIndex to be compared.
@@ -851,6 +870,16 @@ namespace BALL
 			 * @param t_data Pointer to thread data structure.
 			 */
 			void pairwiseSimilaritiesConnectedComponents(const unsigned int ii1_index, const unsigned int ii2_index, ThreadData* t_data);
+			
+			
+			/**
+			 * Pairwise similarity calculation which implements similarity network calculation.
+			 * All edges exceeding the defined similarity cutoff are stored and written to output file.
+			 * @param ii1_index Position of first InvertedIndex to be compared.
+			 * @param ii2_index Position of second InvertedIndex to be compared.
+			 * @param t_data Pointer to thread data structure.
+			 */
+			void pairwiseSimilaritiesNetwork(const unsigned int ii1_index, const unsigned int ii2_index, ThreadData* t_data);
 			
 			
 			/**
