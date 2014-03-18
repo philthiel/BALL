@@ -44,7 +44,7 @@ namespace BALL
 			*/
 			static bool isFileExtensionSupported(String filename);
 
-			static GenericMolFile* open(const String& name, File::OpenMode open_mode = std::ios::in);
+			static GenericMolFile* open(const String& name, File::OpenMode open_mode = File::MODE_IN);
 
 			/**
 			 * When trying to open a file in write-mode, this function can be used to pass along a desired default-format.
