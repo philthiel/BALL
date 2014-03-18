@@ -1,17 +1,13 @@
+// -*- Mode: C++; tab-width: 2; -*-
+// vi: set ts=2:
+//
+
 #ifndef BALL_FORMAT_COMMANDLINEPARSER_H
 #define BALL_FORMAT_COMMANDLINEPARSER_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMFILE_H
-# include <BALL/FORMAT/paramFile.h>
-#endif
+#include <BALL/DATATYPE/options.h>
+#include <BALL/DATATYPE/string.h>
+#include <BALL/FORMAT/paramFile.h>
 
 #include <map>
 #include <set>
