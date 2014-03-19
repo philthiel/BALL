@@ -52,10 +52,10 @@ namespace BALL
 	}
 
 
-	bool MolFileFactory::isFileCompressed(const String& name, String& compression_format, String& base_name)
+	bool MolFileFactory::isFileCompressed(const String& name, String& compression_format, String& decompressed_name)
 	{
 		compression_format = "";
-		base_name = "";
+		decompressed_name = "";
 
 		// Get supported file formats
 		set<String> supported_compression_formats;
@@ -66,13 +66,53 @@ namespace BALL
 			if (name.hasSuffix(*it))
 			{
 				compression_format = *it;
-				base_name = (name.left(name.size() - it->size())).toString();
+				decompressed_name = (name.left(name.size() - it->size())).toString();
 
 				return true;
 			}
 		}
 
 		return false;
+	}
+
+
+	void MolFileFactory::decompressFile(const String& name, const String& decompressed_name, const String& compression_format)
+	{
+		// Open input file stream
+		ifstream zfile(name.c_str(), File::MODE_IN | File::MODE_BINARY);
+
+		if (compression_format == ".gz")
+		{
+			// Apply BOOST gzip decompressor
+			iostreams::filtering_istream in;
+			in.push(iostreams::gzip_decompressor());
+			in.push(zfile);
+
+			ofstream out(decompressed_name.c_str());
+			iostreams::copy(in, out);
+
+			// Remove filters
+			in.pop();
+			in.pop();
+		}
+		else if (compression_format == ".bz2")
+		{
+			// Apply BOOST bzip2 decompressor
+			iostreams::filtering_istream in;
+			in.push(iostreams::bzip2_decompressor());
+			in.push(zfile);
+
+			ofstream out(decompressed_name.c_str());
+			iostreams::copy(in, out);
+
+			// Remove filters
+			in.pop();
+			in.pop();
+		}
+
+		zfile.close();
+
+		return;
 	}
 
 
@@ -187,13 +227,54 @@ namespace BALL
 		GenericMolFile* gmf = NULL;
 
 		String compression_format;
-		String base_name;
+		String decompressed_name;
 
-		if (isFileCompressed(name, compression_format, base_name))
+		if (isFileCompressed(name, compression_format, decompressed_name))
 		{
 			// Compressed file
 
-			// TODO
+			if (open_mode == File::MODE_IN)
+			{
+				// File read mode
+
+				// Create decompressed file
+				decompressFile(name, decompressed_name, compression_format);
+
+				// Get molecular file format
+				String format = getFileFormat(decompressed_name, true);
+
+				// Check if format is not empty (supported)
+				if (!format.isEmpty())
+				{
+					// Use appropriate molecular file class to open file
+					gmf = openBase(decompressed_name, format, open_mode);
+
+					// Make sure that temporary input file is deleted when GenericMolFile is closed.
+					gmf->defineInputAsTemporary();
+				}
+				else
+				{
+					// Molecular file format unsupported - so cleanup
+					File::remove(decompressed_name);
+				}
+			}
+			else
+			{
+				// File write mode
+
+				// Get molecular file format
+				String format = getFileFormat(decompressed_name, true);
+
+				// Check if format is not empty (supported)
+				if (!format.isEmpty())
+				{
+					// Use appropriate molecular file class to open file
+					gmf = openBase(decompressed_name, format, open_mode);
+
+					// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
+					gmf->enableOutputCompression(name);
+				}
+			}
 		}
 		else
 		{
@@ -207,70 +288,6 @@ namespace BALL
 			{
 				// Use appropriate molecular file class to open file
 				gmf = openBase(name, format, open_mode);
-			}
-		}
-
-		return gmf;
-
-		/*
-		GenericMolFile* gmf = NULL;
-
-		String compression_format = "";
-
-		if (open_mode == File::MODE_IN)
-		{
-			compression_format = getCompressionFormat(name);
-
-			if (compression_format.isEmpty())
-			{
-				// Uncompressed molecular file
-
-				// Get molecular file format
-				String format = getFileFormat(name, true);
-
-				// Check if format is not empty (supported)
-				if (!format.isEmpty())
-				{
-					// Use appropriate molecular file class to open file
-					gmf = openBase(name, format, open_mode);
-				}
-			}
-			else
-			{
-				// Compressed file
-
-				// Decompress file
-				String decomp_name = decompressFile(name, compression_format);
-
-				// Get molecular file format
-				String format = getFileFormat(decomp_name, true);
-
-				// Check if format is not empty (supported)
-				if (!format.isEmpty())
-				{
-					// Use appropriate molecular file class to open file
-					gmf = openBase(decomp_name, format, open_mode);
-
-					// Make sure that temporary input file is deleted when GenericMolFile is closed.
-					gmf->defineInputAsTemporary();
-				}
-				else
-				{
-					// Remove temporary decompressed file
-					File::remove(decomp_name);
-				}
-			}
-		}
-		else
-		{
-			String format = getFileFormat(name, false);
-
-			if (!format.isEmpty())
-			{
-				gmf = openBase(name, format, open_mode);
-
-				// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
-				gmf->enableOutputCompression(name);
 			}
 		}
 

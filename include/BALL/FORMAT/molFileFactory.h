@@ -64,7 +64,8 @@ namespace BALL
 
 			static String getSupportedCompressionFormats();
 			static void getSupportedCompressionFormats(std::set<String>& compression_formats);
-			static bool isFileCompressed(const String& name, String& compression_format, String& base_name);
+			static bool isFileCompressed(const String& name, String& compression_format, String& decompressed_name);
+			static void decompressFile(const String& name, const String& decompressed_name, const String& compression_format);
 
 			/**
 			 * Return a comma-separated string with all supported file-extensions of the MolFileFactory.
