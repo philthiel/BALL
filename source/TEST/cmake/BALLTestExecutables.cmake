@@ -280,6 +280,7 @@ SET(BALL_FORMATS_TESTS
 	TrajectoryFile_test
 	XYZFile_test
 	SCWRLRotamerFile_test
+	MolFileFactory_test
 )
 
 SET(BALL_ENERGY_TESTS

@@ -2,11 +2,12 @@
 // vi: set ts=2:
 //
 
+#include <BALL/FORMAT/molFileFactory.h>
+
 #include <BALL/DATATYPE/string.h>
 #include <BALL/FORMAT/antechamberFile.h>
 #include <BALL/FORMAT/dockResultFile.h>
 #include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/FORMAT/molFileFactory.h>
 #include <BALL/FORMAT/HINFile.h>
 #include <BALL/FORMAT/MOLFile.h>
 #include <BALL/FORMAT/MOL2File.h>
@@ -14,39 +15,268 @@
 #include <BALL/FORMAT/SDFile.h>
 #include <BALL/FORMAT/XYZFile.h>
 
+#include <set>
+#include <vector>
+
+#include <boost/iostreams/copy.hpp>
+#include <boost/iostreams/filter/bzip2.hpp>
+#include <boost/iostreams/filter/gzip.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filtering_stream.hpp>
-#include <boost/iostreams/copy.hpp>
-#include <boost/iostreams/filter/gzip.hpp>
+
+
+using namespace std;
+using namespace boost;
 
 
 namespace BALL
 {
-	String MolFileFactory::getSupportedFormats()
+	String MolFileFactory::getSupportedCompressionFormats()
 	{
-		String formats = "mol2,sdf,drf,pdb,ac,ent,brk,hin,mol,xyz,mol2.gz,sdf.gz,drf.gz,pdb.gz,ac.gz,ent.gz,brk.gz,hin.gz,mol.gz,xyz.gz";
-		return formats;
+		String supported_compression_formats = ".gz,.bz2";
+
+		return supported_compression_formats;
 	}
 
 
-	bool MolFileFactory::isFileExtensionSupported(String filename)
+	void MolFileFactory::getSupportedCompressionFormats(set<String>& compression_formats)
 	{
-		vector<String> exts;
-		String s = getSupportedFormats();
-		s.split(exts,",");
-		for (Size i=0; i<exts.size(); i++)
+		vector<String> tmp;
+		String supported_compression_formats = getSupportedCompressionFormats();
+		supported_compression_formats.split(tmp, ",");
+
+		compression_formats.clear();
+		compression_formats.insert(tmp.begin(), tmp.end());
+
+		return;
+	}
+
+
+	bool MolFileFactory::isFileCompressed(const String& name, String& compression_format, String& base_name)
+	{
+		compression_format = "";
+		base_name = "";
+
+		// Get supported file formats
+		set<String> supported_compression_formats;
+		getSupportedCompressionFormats(supported_compression_formats);
+
+		for (set<String>::iterator it=supported_compression_formats.begin(); it!=supported_compression_formats.end(); ++it)
 		{
-			if (filename.hasSuffix(exts[i]))
+			if (name.hasSuffix(*it))
 			{
+				compression_format = *it;
+				base_name = (name.left(name.size() - it->size())).toString();
+
 				return true;
 			}
 		}
+
 		return false;
+	}
+
+
+	String MolFileFactory::getSupportedFormats()
+	{
+		String supported_formats = ".ac,.brk,.drf,.ent,.hin,.mol,.mol2,.pdb,.sdf,.xyz";
+
+		return supported_formats;
+	}
+
+
+	void MolFileFactory::getSupportedFormats(set<String>& formats)
+	{
+		vector<String> tmp;
+		String supported_formats = getSupportedFormats();
+		supported_formats.split(tmp, ",");
+
+		formats.clear();
+		formats.insert(tmp.begin(), tmp.end());
+
+		return;
+	}
+
+
+	bool MolFileFactory::isFileFormatSupported(const String& name, bool input_mode)
+	{
+		String format = getFileFormat(name, input_mode);
+
+		if (format.isEmpty())
+		{
+			return false;
+		}
+
+		return true;
+	}
+
+
+	String MolFileFactory::getFileFormat(const String& name, bool input_mode)
+	{
+		String format = "";
+
+		// Strip path from file name
+		String base_name = FileSystem::baseName(name);
+		base_name.toLower();
+
+		// Get supported file formats
+		set<String> supported_formats;
+		getSupportedFormats(supported_formats);
+
+		for (set<String>::iterator it=supported_formats.begin(); it!=supported_formats.end(); ++it)
+		{
+			if (base_name.hasSuffix(*it))
+			{
+				format = *it;
+				break;
+			}
+		}
+
+		if (format.isEmpty() && input_mode)
+		{
+			// Try to identify by file content
+			format = detectFileFormat(name);
+		}
+
+		return format;
+	}
+
+
+	GenericMolFile* MolFileFactory::openBase(const String& name, const String& format, File::OpenMode open_mode)
+	{
+		GenericMolFile* gmf = NULL;
+
+		if (format == ".ac")
+		{
+			gmf = new AntechamberFile(name, open_mode);
+		}
+		else if (format == ".pdb" || format == ".brk" || format == ".ent")
+		{
+			gmf = new PDBFile(name, open_mode);
+		}
+		else if (format == ".hin")
+		{
+			gmf = new HINFile(name, open_mode);
+		}
+		else if (format == ".mol")
+		{
+			gmf = new MOLFile(name, open_mode);
+		}
+		else if (format == ".sdf")
+		{
+			gmf = new SDFile(name, open_mode);
+		}
+		else if (format == ".mol2")
+		{
+			gmf = new MOL2File(name, open_mode);
+		}
+		else if (format == ".xyz")
+		{
+			gmf = new XYZFile(name, open_mode);
+		}
+		else if (format == ".drf")
+		{
+			gmf = new DockResultFile(name, open_mode);
+		}
+
+		return gmf;
 	}
 
 
 	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode)
 	{
+		GenericMolFile* gmf = NULL;
+
+		String compression_format;
+		String base_name;
+
+		if (isFileCompressed(name, compression_format, base_name))
+		{
+			// Compressed file
+
+			// TODO
+		}
+		else
+		{
+			// Uncompressed molecular file
+
+			// Get molecular file format
+			String format = getFileFormat(name, true);
+
+			// Check if format is not empty (supported)
+			if (!format.isEmpty())
+			{
+				// Use appropriate molecular file class to open file
+				gmf = openBase(name, format, open_mode);
+			}
+		}
+
+		return gmf;
+
+		/*
+		GenericMolFile* gmf = NULL;
+
+		String compression_format = "";
+
+		if (open_mode == File::MODE_IN)
+		{
+			compression_format = getCompressionFormat(name);
+
+			if (compression_format.isEmpty())
+			{
+				// Uncompressed molecular file
+
+				// Get molecular file format
+				String format = getFileFormat(name, true);
+
+				// Check if format is not empty (supported)
+				if (!format.isEmpty())
+				{
+					// Use appropriate molecular file class to open file
+					gmf = openBase(name, format, open_mode);
+				}
+			}
+			else
+			{
+				// Compressed file
+
+				// Decompress file
+				String decomp_name = decompressFile(name, compression_format);
+
+				// Get molecular file format
+				String format = getFileFormat(decomp_name, true);
+
+				// Check if format is not empty (supported)
+				if (!format.isEmpty())
+				{
+					// Use appropriate molecular file class to open file
+					gmf = openBase(decomp_name, format, open_mode);
+
+					// Make sure that temporary input file is deleted when GenericMolFile is closed.
+					gmf->defineInputAsTemporary();
+				}
+				else
+				{
+					// Remove temporary decompressed file
+					File::remove(decomp_name);
+				}
+			}
+		}
+		else
+		{
+			String format = getFileFormat(name, false);
+
+			if (!format.isEmpty())
+			{
+				gmf = openBase(name, format, open_mode);
+
+				// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
+				gmf->enableOutputCompression(name);
+			}
+		}
+
+		return gmf;
+
+		/*
 		bool compression = false;
 		String filename = name;
 
@@ -54,7 +284,7 @@ namespace BALL
 		{
 			compression = true;
 		}
-		else if (open_mode == std::ios::in && !isFileExtensionSupported(filename)) // check whether file is zipped
+		else if (open_mode == std::ios::in && !isFileFormatSupported(filename)) // check whether file is zipped
 		{
 			std::ifstream zipped_file(filename.c_str(), std::ios_base::in | std::ios_base::binary);
 			boost::iostreams::filtering_istream in;
@@ -139,7 +369,7 @@ namespace BALL
 		{
 			if (open_mode == std::ios::in)
 			{
-				gmf = detectFormat(filename);
+				gmf = detectFileFormat(filename);
 				// Make sure that temporary input-file is deleted when GenericMolFile is closed.
 				if (gmf && compression)
 				{
@@ -147,12 +377,13 @@ namespace BALL
 				}
 				return gmf;
 			}
+
 			return NULL;
 		}
 
 		if (compression)
 		{
-			if (open_mode == std::ios::in)
+			if (open_mode == File::MODE_IN)
 			{
 				// Make sure that temporary input-file is deleted when GenericMolFile is closed.
 				gmf->defineInputAsTemporary();
@@ -165,6 +396,7 @@ namespace BALL
 		}
 
 		return gmf;
+		*/
 	}
 
 
@@ -326,54 +558,89 @@ namespace BALL
 	}
 
 
-	GenericMolFile* MolFileFactory::detectFormat(const String& name)
+	String MolFileFactory::detectFileFormat(const String& name)
 	{
-		LineBasedFile input(name, std::ios::in);
-		bool empty_file = true;
+		String format = "";
+		String line;
+		vector<String> tmp;
 
-		// Read at most 400 lines.
-		// If no format-indicator is found, return NULL
-		for (Size no=1; no < 400 && input.readLine(); no++)
+		LineBasedFile input(name, File::MODE_IN);
+
+		unsigned int count = 0;
+		unsigned int xyz_count = 0;
+		while (getline(input, line))
 		{
-			String& line = input.getLine();
-			if (!line.trim().empty())
+			// PDB check
+			if (line.hasPrefix("HEADER") || line.hasPrefix("ATOM"))
 			{
-				empty_file = false;
+				format = ".pdb";
+				break;
 			}
+
+			// SDF/Mol check
+			if (line.hasPrefix("$$$$") || line.hasPrefix("M  END"))
+			{
+				format = ".sdf";
+				break;
+			}
+
+			// Mol2 check
 			if (line.hasPrefix("@<TRIPOS>MOLECULE"))
 			{
-				input.close();
-				return new MOL2File(name, std::ios::in);
+				format = ".mol2";
+				break;
 			}
-			else if (line.hasPrefix("$$$$") || line.hasPrefix("M  END"))
+
+			// DRF check
+			if (line.hasPrefix("<dockingfile>"))
 			{
-				input.close();
-				return new SDFile(name, std::ios::in);
+				format = ".drf";
+				break;
 			}
-			else if (line.hasPrefix("<dockingfile>"))
+
+			// HIN check
+			if (line.hasPrefix("forcefield"))
 			{
-				input.close();
-				return new DockResultFile(name, std::ios::in);
+				format = ".hin";
+				break;
 			}
-			else if (line.hasPrefix("HEADER") || line.hasPrefix("ATOM") || line.hasPrefix("USER"))
+
+			// AC check
+			if (line.hasPrefix("CHARGE") || line.hasPrefix("Formula:"))
 			{
-				input.close();
-				return new PDBFile(name, std::ios::in);
+				format = ".ac";
+				break;
+			}
+
+			// XYZ coordinate line count
+			line.split(tmp);
+			if (tmp.size() == 4)
+			{
+				float num;
+
+				// Check if columnds 2, 3 and 4 are numbers (coordinates should be numbers ...)
+				if ((istringstream(tmp[1]) >> num) && (istringstream(tmp[2]) >> num) && (istringstream(tmp[3]) >> num))
+				{
+					++xyz_count;
+				}
+			}
+
+			++count;
+			if (count > 400)
+			{
+				break;
 			}
 		}
 
-		if (empty_file)
+		// XYZ check
+		if (count - xyz_count == 2)
 		{
-			Log.error() << std::endl << "[Error:] Specified input file is empty!" << std::endl << std::endl;
-		}
-		else
-		{
-			Log.error() << std::endl << "[Error:] Specified input file has unknown extension and its format could not be detected automatically!" << std::endl << std::endl;
+			format = ".xyz";
 		}
 
 		input.close();
 
-		return NULL;
+		return format;
 	}
 }
 
