@@ -169,7 +169,7 @@ CHECK(AntechamberFile read via MolFileFactory)
 	delete file;
 RESULT
 
-NEW_TMP_FILE_WITH_SUFFIX(filename, "ac")
+NEW_TMP_FILE_WITH_SUFFIX(filename, ".ac")
 CHECK(AntechamberFile write via MolFileFactory)
 	System S;
 	Molecule* m = new Molecule;
