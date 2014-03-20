@@ -30,19 +30,24 @@ using namespace std;
 using namespace BALL;
 
 CHECK(getSupportedCompressionFormats())
+
 	TEST_EQUAL(MolFileFactory::getSupportedCompressionFormats(), ".gz,.bz2")
+
 RESULT
 
 CHECK(getSupportedCompressionFormats(set<String>& compression_formats))
+
 	set<String> tmp;
 	MolFileFactory::getSupportedCompressionFormats(tmp);
 
 	TEST_EQUAL(tmp.count(".gz"), 1)
 	TEST_EQUAL(tmp.count(".bz2"), 1)
 	TEST_EQUAL(tmp.size(), 2)
+
 RESULT
 
 CHECK(isFileCompressed(const String& name, String& compression_format, String& base_name))
+
 	String f1 = "/home/mol.sdf.gz";
 	String f2 = "/home/mol.sdf.bz2";
 	String f3 = "/home/mol.sdf";
@@ -67,13 +72,17 @@ CHECK(isFileCompressed(const String& name, String& compression_format, String& b
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f5, format, base_name), false)
 	TEST_EQUAL(format, "")
 	TEST_EQUAL(base_name, "")
+
 RESULT
 
 CHECK(getSupportedFormats())
+
 	TEST_EQUAL(MolFileFactory::getSupportedFormats(), ".ac,.brk,.drf,.ent,.hin,.mol,.mol2,.pdb,.sdf,.xyz")
+
 RESULT
 
 CHECK(getSupportedFormats(set<String>& formats))
+
 	set<String> tmp;
 	MolFileFactory::getSupportedFormats(tmp);
 
@@ -88,9 +97,11 @@ CHECK(getSupportedFormats(set<String>& formats))
 	TEST_EQUAL(tmp.count(".pdb"), 1)
 	TEST_EQUAL(tmp.count(".sdf"), 1)
 	TEST_EQUAL(tmp.count(".xyz"), 1)
+
 RESULT
 
 CHECK(isFileFormatSupported(const String& name, bool input_mode))
+
 	// Write mode file name check
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol.sdf", false), true)
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol.pdb", false), true)
@@ -116,12 +127,17 @@ CHECK(isFileFormatSupported(const String& name, bool input_mode))
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported(BALL_TEST_DATA_PATH(SDFile), true), true)
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported(BALL_TEST_DATA_PATH(XYZFile), true), true)
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported(BALL_TEST_DATA_PATH(NucleicAcid), true), false)
+
 RESULT
 
 CHECK(open(const String& name, File::OpenMode open_mode))
+
 	GenericMolFile* gmf;
 
+	//
 	// Read mode tests
+	//
+
 	gmf = MolFileFactory::open(BALL_TEST_DATA_PATH(AntechamberFile_test2.ac), File::MODE_IN);
 	TEST_NOT_EQUAL(gmf, NULL)
 	TEST_NOT_EQUAL(dynamic_cast<AntechamberFile*>(gmf), NULL)
@@ -164,7 +180,124 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 	gmf->close();
 	delete gmf;
 
+	//
 	// Write mode tests
+	//
+
+	String filename;
+	Molecule* mol;
+
+	gmf = MolFileFactory::open(BALL_TEST_DATA_PATH(MOL2File_test2.mol2), File::MODE_IN);
+	MOL2File* mol2_file = dynamic_cast<MOL2File*>(gmf);
+	mol = mol2_file->read();
+	mol2_file->close();
+	delete mol2_file;
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".ac")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	AntechamberFile* ac_out = dynamic_cast<AntechamberFile*>(gmf);
+	TEST_NOT_EQUAL(ac_out, NULL)
+	ac_out->write(*mol);
+	ac_out->close();
+	delete ac_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.ac))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".hin")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	HINFile* hin_out = dynamic_cast<HINFile*>(gmf);
+	TEST_NOT_EQUAL(hin_out, NULL)
+	hin_out->write(*mol);
+	hin_out->close();
+	delete hin_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.hin))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	MOLFile* mol_out = dynamic_cast<MOLFile*>(gmf);
+	TEST_NOT_EQUAL(mol_out, NULL)
+	mol_out->write(*mol);
+	mol_out->close();
+	delete mol_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	MOL2File* mol2_out = dynamic_cast<MOL2File*>(gmf);
+	TEST_NOT_EQUAL(mol2_out, NULL)
+	mol2_out->write(*mol);
+	mol2_out->close();
+	delete mol2_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".pdb")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	PDBFile* pdb_out = dynamic_cast<PDBFile*>(gmf);
+	TEST_NOT_EQUAL(pdb_out, NULL)
+	pdb_out->write(*mol);
+	pdb_out->close();
+	delete pdb_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.pdb))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".sdf")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	SDFile* sdf_out = dynamic_cast<SDFile*>(gmf);
+	TEST_NOT_EQUAL(sdf_out, NULL)
+	sdf_out->write(*mol);
+	sdf_out->close();
+	delete sdf_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.sdf))
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".xyz")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	XYZFile* xyz_out = dynamic_cast<XYZFile*>(gmf);
+	TEST_NOT_EQUAL(xyz_out, NULL)
+	xyz_out->write(*mol);
+	xyz_out->close();
+	delete xyz_out;
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.xyz))
+
+	//
+	// Write-read tests using compression
+	//
+
+	Molecule* new_mol;
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2.gz")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	mol2_out = dynamic_cast<MOL2File*>(gmf);
+	TEST_NOT_EQUAL(mol2_out, NULL)
+	mol2_out->write(*mol);
+	mol2_out->close();
+	delete mol2_out;
+
+	gmf = MolFileFactory::open(filename, File::MODE_IN);
+	mol2_file = dynamic_cast<MOL2File*>(gmf);
+	new_mol = mol2_file->read();
+	mol2_file->close();
+	delete mol2_file;
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	mol2_out = dynamic_cast<MOL2File*>(gmf);
+	TEST_NOT_EQUAL(mol2_out, NULL)
+	mol2_out->write(*new_mol);
+	mol2_out->close();
+	delete mol2_out;
+
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
+
+
+	delete new_mol;
+	delete mol;
 RESULT
 
 /////////////////////////////////////////////////////////////
