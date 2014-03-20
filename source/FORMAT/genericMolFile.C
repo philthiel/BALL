@@ -6,16 +6,22 @@
 #include <BALL/KERNEL/system.h>
 #include <BALL/KERNEL/molecule.h>
 
-#include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/copy.hpp>
+#include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
+#include <boost/iostreams/filter/bzip2.hpp>
+
+
+using namespace std;
+using namespace boost;
+
 
 namespace BALL 
 {
 	GenericMolFile::GenericMolFile()
 		:	LineBasedFile(),
 			input_is_temporary_(false),
-			compress_output_(false),
+			compression_(""),
 			gmf_is_closed_(false)
 	{
 	}
@@ -23,7 +29,7 @@ namespace BALL
 	GenericMolFile::GenericMolFile(const String& filename, File::OpenMode open_mode)
 		:	LineBasedFile(filename, open_mode),
 			input_is_temporary_(false),
-			compress_output_(false),
+			compression_(""),
 			gmf_is_closed_(false)
 	{
 	}
@@ -37,24 +43,40 @@ namespace BALL
 	{
 		LineBasedFile::close();
 
-		if (gmf_is_closed_) return;
-
-		if (getOpenMode() == std::ios::in)
+		if (gmf_is_closed_)
 		{
-			if (input_is_temporary_)
-			{
-				File::remove(name_);
-			}
+			return;
 		}
-		else if(compress_output_)
+
+		if (getOpenMode()==File::MODE_IN && input_is_temporary_)
 		{
-			std::fstream::close();
-			std::ifstream unzipped_file(name_.c_str(), ios_base::in);
-			boost::iostreams::filtering_streambuf<boost::iostreams::input> in;
-			in.push(boost::iostreams::gzip_compressor());
+			File::remove(name_);
+		}
+
+		if(getOpenMode()==File::MODE_OUT && !compression_.isEmpty())
+		{
+			fstream::close();
+			ifstream unzipped_file(name_.c_str(), ios_base::in);
+			iostreams::filtering_streambuf<iostreams::input> in;
+
+			if (compression_ == ".gz")
+			{
+				// Apply gzip compression
+				in.push(iostreams::gzip_compressor());
+			}
+			else
+			{
+				if (compression_ == ".bz2")
+				{
+					// Apply bzip2 compression
+					in.push(iostreams::bzip2_compressor());
+				}
+			}
+
 			in.push(unzipped_file);
-			std::ofstream zipped_file(zipped_filename_.c_str(), std::ios::out | std::ios_base::binary);
-			boost::iostreams::copy(in, zipped_file);
+
+			ofstream zipped_file(zipped_filename_.c_str(), std::ios::out | std::ios_base::binary);
+			iostreams::copy(in, zipped_file);
 			File::remove(name_);
 		}
 
@@ -66,22 +88,20 @@ namespace BALL
 		input_is_temporary_ = b;
 	}
 
-	void GenericMolFile::enableOutputCompression(String zipped_filename)
+	void GenericMolFile::enableOutputCompression(const String& zipped_filename, const String& compression)
 	{
-		compress_output_ = true;
+		compression_ = compression;
 		zipped_filename_ = zipped_filename;
 	}
 
 	bool GenericMolFile::isCompressedFile()
 	{
-		if (getOpenMode() == std::ios::in)
+		if (input_is_temporary_ || !compression_.isEmpty())
 		{
-			return input_is_temporary_;
+			return true;
 		}
-		else
-		{
-			return compress_output_;
-		}
+
+		return false;
 	}
 
 	const GenericMolFile& GenericMolFile::operator = (const GenericMolFile& rhs)

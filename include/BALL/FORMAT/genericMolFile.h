@@ -94,7 +94,7 @@ namespace BALL
 
 		/** Enable compression of the output file.
 		If enabled, the output-file will be gzip'ed. Output will be stored under the specified filename and the original (uncompressed) output file will be deleted. */
-		void enableOutputCompression(String zipped_filename);
+		void enableOutputCompression(const String& zipped_filename, const String& compression);
 
 		bool isCompressedFile();
 
@@ -192,10 +192,9 @@ namespace BALL
 		virtual void initWrite_();
 
 		bool input_is_temporary_;
-		bool compress_output_;
 		bool gmf_is_closed_;
 		String zipped_filename_;
-		
+		String compression_;
 	};
 } // namespace BALL
 
