@@ -96,7 +96,7 @@ namespace BALL
 		If enabled, the output-file will be gzip'ed. Output will be stored under the specified filename and the original (uncompressed) output file will be deleted. */
 		void enableOutputCompression(const String& zipped_filename, const String& compression);
 
-		bool isCompressedFile();
+		bool isCompressedFile(String& compression);
 
 		//@}
 		/**	@name Reading and Writing of Kernel Datastructures

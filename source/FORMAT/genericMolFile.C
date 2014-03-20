@@ -94,13 +94,15 @@ namespace BALL
 		zipped_filename_ = zipped_filename;
 	}
 
-	bool GenericMolFile::isCompressedFile()
+	bool GenericMolFile::isCompressedFile(String& compression)
 	{
 		if (input_is_temporary_ || !compression_.isEmpty())
 		{
+			compression = compression_;
 			return true;
 		}
 
+		compression = "";
 		return false;
 	}
 
