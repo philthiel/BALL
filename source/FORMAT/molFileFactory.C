@@ -66,7 +66,7 @@ namespace BALL
 			if (name.hasSuffix(*it))
 			{
 				compression_format = *it;
-				decompressed_name = (name.left(name.size() - it->size())).toString();
+				decompressed_name = name.before(*it).toLower();
 
 				return true;
 			}
@@ -264,7 +264,7 @@ namespace BALL
 					gmf = openBase(decompressed_name, format, open_mode);
 
 					// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
-					gmf->enableOutputCompression(name);
+					gmf->enableOutputCompression(name, compression_format);
 				}
 			}
 		}
@@ -287,161 +287,107 @@ namespace BALL
 	}
 
 
-	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, String default_format, bool forced)
+	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, String default_format)
 	{
-		// If we do not force the default format, we start as in others
-		// else skip to avoid unnecessary computation
-		if(!forced)
+		GenericMolFile* gmf = NULL;
+		gmf = open(name, open_mode);
+		if (gmf)
 		{
-			// Try to read/write using filename with suffix (try recognise if necessary)
-			GenericMolFile* file = open(name, open_mode);
-			if (file)
+			return gmf;
+		}
+
+		if (open_mode == File::MODE_OUT)
+		{
+			String compression_format;
+			String file_format;
+
+			if (isFileCompressed(default_format, compression_format, file_format))
 			{
-				return file;
-			}
-		}
+				// Create temporary decompressed file name
+				String decompressed_name;
+				File::createTemporaryFilename(decompressed_name, file_format);
 
-		// if forced or if filetype could not be recognised by ending use default format
-		GenericMolFile* file = 0;
+				// Open temporary decompressed molecular file
+				gmf = openBase(decompressed_name, default_format, open_mode);
 
-		bool compression = false;
-		String filename = name;
-		String zipped_filename = "";
-
-		if (default_format.hasSuffix(".gz"))
-		{
-			compression = true;
-			zipped_filename = filename;
-			default_format = default_format.before(".gz");
-			String unzipped_filename;
-			File::createTemporaryFilename(unzipped_filename, default_format);
-			if (open_mode == std::ios::in)
-			{
-				std::ifstream zipped_file(zipped_filename.c_str(), std::ios_base::in | std::ios_base::binary);
-				boost::iostreams::filtering_istream in;
-				in.push(boost::iostreams::gzip_decompressor());
-				in.push(zipped_file);
-				std::ofstream unzipped_file(unzipped_filename.c_str());
-				boost::iostreams::copy(in, unzipped_file);
-			}
-
-			filename = unzipped_filename;
-		}
-
-		if (default_format == "ac")
-		{
-			file = new AntechamberFile(filename, open_mode);
-		}
-		else if(default_format == "pdb" || default_format == "ent" || default_format == "brk")
-		{
-			file = new PDBFile(filename, open_mode);
-		}
-		else if(default_format == "hin")
-		{
-			file = new HINFile(filename, open_mode);
-		}
-		else if(default_format == "mol")
-		{
-			file = new MOLFile(filename, open_mode);
-		}
-		else if(default_format == "sdf")
-		{
-			file = new SDFile(filename, open_mode);
-		}
-		else if(default_format == "mol2")
-		{
-			file = new MOL2File(filename, open_mode);
-		}
-		else if(default_format == "xyz")
-		{
-			file = new XYZFile(filename, open_mode);
-		}
-		else if(default_format == "drf")
-		{
-			file = new DockResultFile(filename, open_mode);
-		}
-
-
-		if (compression)
-		{
-			if (open_mode == std::ios::in)
-			{
-				// Make sure that temporary input-file is deleted when GenericMolFile is closed.
-				file->defineInputAsTemporary();
+				// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
+				gmf->enableOutputCompression(name, compression_format);
 			}
 			else
 			{
-				// Make sure that temporary output-file is compressed and then deleted when GenericMolFile is closed.
-				file->enableOutputCompression(zipped_filename);
+				gmf = openBase(name, default_format, open_mode);
 			}
 		}
 
-		return file;
+		return gmf;
 	}
 
 
 	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, GenericMolFile* default_format_file)
 	{
-		GenericMolFile* file = open(name, open_mode);
-		if (file)
+		GenericMolFile* gmf = NULL;
+		gmf = open(name, open_mode);
+		if (gmf)
 		{
-			return file;
+			return gmf;
 		}
 
-		if (open_mode == std::ios::out)
+		if (open_mode == File::MODE_OUT)
 		{
-			bool compression = false;
-			String filename = name;
-			String zipped_filename = "";
-			if (default_format_file->isCompressedFile())
+			String filename;
+			String compression_format = "";
+
+			if (default_format_file->isCompressedFile(compression_format))
 			{
-				compression = true;
-				zipped_filename = filename;
-				String unzipped_filename;
-				File::createTemporaryFilename(unzipped_filename);
-				filename = unzipped_filename;
+				// Create temporary decompressed file name
+				File::createTemporaryFilename(filename);
+			}
+			else
+			{
+				filename = name;
 			}
 
 			if (dynamic_cast<AntechamberFile*>(default_format_file))
 			{
-				file = new AntechamberFile(filename, open_mode);
+				gmf = new AntechamberFile(filename, open_mode);
 			}
 			else if(dynamic_cast<PDBFile*>(default_format_file))
 			{
-				file = new PDBFile(filename, open_mode);
+				gmf = new PDBFile(filename, open_mode);
 			}
 			else if(dynamic_cast<HINFile*>(default_format_file))
 			{
-				file = new HINFile(filename, open_mode);
+				gmf = new HINFile(filename, open_mode);
 			}
 			else if(dynamic_cast<SDFile*>(default_format_file))
 			{
-				file = new SDFile(filename, open_mode);
+				gmf = new SDFile(filename, open_mode);
 			}
 			else if(dynamic_cast<MOL2File*>(default_format_file))
 			{
-				file = new MOL2File(filename, open_mode);
+				gmf = new MOL2File(filename, open_mode);
 			}
 			else if(dynamic_cast<MOLFile*>(default_format_file))
 			{
-				file = new MOLFile(filename, open_mode);
+				gmf = new MOLFile(filename, open_mode);
 			}
 			else if(dynamic_cast<XYZFile*>(default_format_file))
 			{
-				file = new XYZFile(filename, open_mode);
+				gmf = new XYZFile(filename, open_mode);
 			}
 			else if(dynamic_cast<DockResultFile*>(default_format_file))
 			{
-				file = new DockResultFile(filename, open_mode);
+				gmf = new DockResultFile(filename, open_mode);
 			}
 
 			// Make sure that temporary output-file is compressed and then deleted when GenericMolFile is closed.
-			if (compression)
+			if (!compression_format.isEmpty())
 			{
-				file->enableOutputCompression(zipped_filename);
+				gmf->enableOutputCompression(name, compression_format);
 			}
 		}
-		return file;
+
+		return gmf;
 	}
 
 

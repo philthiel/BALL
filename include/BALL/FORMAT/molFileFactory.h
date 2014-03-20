@@ -41,7 +41,7 @@ namespace BALL
 
 			/**
 			 * When trying to open a file in write-mode, this function can be used to pass along a desired default format.
-			 * If the given filename does not have a supported extension and/or forced is set, the specified default format will be used.
+			 * If the given filename does not have a supported extension the specified default format will be used.
 			 *
 			 * @param name name of the requested molecule file
 			 * @param open_mode the file open mode to use
@@ -49,7 +49,7 @@ namespace BALL
 			 * @param forced
 			 * @return a pointer to a subclass of GenericMolFile, NULL if none is appropriate
 			*/
-			static GenericMolFile* open(const String& name, File::OpenMode open_mode, String default_format, bool forced = false);
+			static GenericMolFile* open(const String& name, File::OpenMode open_mode, String default_format);
 
 			/**
 			 * When trying to open a file in write-mode, this function can be used to pass along a desired default-format.
@@ -62,22 +62,44 @@ namespace BALL
 			*/
 			static GenericMolFile* open(const String& name, File::OpenMode open_mode, GenericMolFile* default_format_file);
 
+			/**
+			 * Return a comma-separated string with file extensions of all supported compression formats.
+			 *
+			 * @return comma-separated string with compression file extensions
+			 */
 			static String getSupportedCompressionFormats();
-			static void getSupportedCompressionFormats(std::set<String>& compression_formats);
-			static bool isFileCompressed(const String& name, String& compression_format, String& decompressed_name);
-			static void decompressFile(const String& name, const String& decompressed_name, const String& compression_format);
 
 			/**
-			 * Return a comma-separated string with all supported file-extensions of the MolFileFactory.
+			 * Store supported compression file extensions in a given set<String>.
+			 * The set will be cleared.
 			 *
-			 * @return comma-separated string of accepted file formats
+			 * @param compression_formats set to store the supported compression file extensions
+			 */
+			static void getSupportedCompressionFormats(std::set<String>& compression_formats);
+
+			/**
+			 * Check if the passed filename (name) has a supported compression file extension.
+			 * Return the decompressed filename and the compression file extension.
+			 *
+			 * @param name name of the file to inspect
+			 * @param compression_format stores compression file extension or empty String if file is not compressed
+			 * @param decompressed_name string to store the file name without compression extension
+			 * @return true if file is compressed, else otherwise
+			 */
+			static bool isFileCompressed(const String& name, String& compression_format, String& decompressed_name);
+
+			/**
+			 * Return a comma-separated string with all supported file extensions of the MolFileFactory.
+			 *
+			 * @return comma-separated string of supported file format extensions
 			*/
 			static String getSupportedFormats();
 
 			/**
-			 * Store supported file-extensions in a given set<String>, which will be cleared by this method.
+			 * Store supported file extensions in a given set<String>.
+			 * The set will be cleared.
 			 *
-			 * @param formats set of Strings to store accepted file formats
+			 * @param formats set to store supported file format extensions
 			*/
 			static void getSupportedFormats(std::set<String>& formats);
 
@@ -102,6 +124,15 @@ namespace BALL
 
 
 		private:
+
+			/**
+			 * Decompress an input file.
+			 *
+			 * @param name input file name
+			 * @param decompressed_name name to use for decompressed output file
+			 * @param compression_format the compression format
+			 */
+			static void decompressFile(const String& name, const String& decompressed_name, const String& compression_format);
 
 			/**
 			 * Function tries to automatically detect the molecular file format of an input file.

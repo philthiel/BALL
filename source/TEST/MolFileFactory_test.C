@@ -295,6 +295,31 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 
 	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
 
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2.bz2")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	mol2_out = dynamic_cast<MOL2File*>(gmf);
+	TEST_NOT_EQUAL(mol2_out, NULL)
+	mol2_out->write(*mol);
+	mol2_out->close();
+	delete mol2_out;
+
+	gmf = MolFileFactory::open(filename, File::MODE_IN);
+	mol2_file = dynamic_cast<MOL2File*>(gmf);
+	new_mol = mol2_file->read();
+	mol2_file->close();
+	delete mol2_file;
+
+	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2")
+	gmf = MolFileFactory::open(filename, File::MODE_OUT);
+	TEST_NOT_EQUAL(gmf, NULL)
+	mol2_out = dynamic_cast<MOL2File*>(gmf);
+	TEST_NOT_EQUAL(mol2_out, NULL)
+	mol2_out->write(*new_mol);
+	mol2_out->close();
+	delete mol2_out;
+
+	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
 
 	delete new_mol;
 	delete mol;
