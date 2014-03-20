@@ -81,34 +81,26 @@ namespace BALL
 		// Open input file stream
 		ifstream zfile(name.c_str(), File::MODE_IN | File::MODE_BINARY);
 
+		iostreams::filtering_istream in;
+
 		if (compression_format == ".gz")
 		{
 			// Apply BOOST gzip decompressor
-			iostreams::filtering_istream in;
 			in.push(iostreams::gzip_decompressor());
-			in.push(zfile);
-
-			ofstream out(decompressed_name.c_str());
-			iostreams::copy(in, out);
-
-			// Remove filters
-			in.pop();
-			in.pop();
 		}
-		else if (compression_format == ".bz2")
+		else
 		{
-			// Apply BOOST bzip2 decompressor
-			iostreams::filtering_istream in;
-			in.push(iostreams::bzip2_decompressor());
-			in.push(zfile);
-
-			ofstream out(decompressed_name.c_str());
-			iostreams::copy(in, out);
-
-			// Remove filters
-			in.pop();
-			in.pop();
+			if (compression_format == ".bz2")
+			{
+				// Apply BOOST bzip2 decompressor
+				in.push(iostreams::bzip2_decompressor());
+			}
 		}
+
+		in.push(zfile);
+
+		ofstream out(decompressed_name.c_str());
+		iostreams::copy(in, out);
 
 		zfile.close();
 
