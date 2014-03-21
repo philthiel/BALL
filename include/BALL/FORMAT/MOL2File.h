@@ -112,6 +112,13 @@ namespace BALL
 
 		//@}
 
+		/**
+		 * Count the number of @<TRIPOS>MOLECULE records
+		 *
+		 * @return number of molecule records
+		 */
+		Size countMolecules();
+
 		protected:
 
 		void readAtomSection_();

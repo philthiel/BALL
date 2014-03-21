@@ -142,6 +142,21 @@ CHECK(MOL2File::MOL2File& operator << (const System& system))
 	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(MOL2File_test.mol2))
 RESULT
 
+CHECK(Size countMolecules)
+	MOL2File f(BALL_TEST_DATA_PATH(MOL2File_test2.mol2));
+	TEST_EQUAL(f.countMolecules(), 1);
+	System S;
+	f >> S;
+	f.close();
+	TEST_EQUAL(S.countAtoms(), 21)
+	TEST_EQUAL(S.countResidues(), 0)
+	TEST_EQUAL(S.countBonds(), 23)
+
+	f.open(BALL_TEST_DATA_PATH(MOL2File_multimol.mol2));
+	TEST_EQUAL(f.countMolecules(), 2);
+	f.close();
+RESULT
+
 CHECK([Extra]Reading of triple bonds)
 	MOL2File f(BALL_TEST_DATA_PATH(MOL2File_test2.mol2));
 	System S;

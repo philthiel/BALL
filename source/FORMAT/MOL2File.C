@@ -425,6 +425,41 @@ namespace BALL
 	}
 
 
+	Size MOL2File::countMolecules()
+	{
+		Size n_molecules = 0;
+
+		while (readLine())
+		{
+			getLine().toUpper();
+			getLine().trim();
+
+			if (getLine().hasPrefix("#"))
+			{
+				continue;
+			}
+			else
+			{
+				if (startsWith(TRIPOS))
+				{
+					String RTI = getLine().after(TRIPOS);
+					RTI.trim();
+
+					if (RTI == "MOLECULE")
+					{
+						++n_molecules;
+					}
+				}
+			}
+		}
+
+		// Reopen file
+		reopen();
+
+		return n_molecules;
+	}
+
+
 	bool MOL2File::write(const System& system)
 	{
 		for (MoleculeConstIterator mol_it=system.beginMolecule(); +mol_it; mol_it++)
