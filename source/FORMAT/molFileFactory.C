@@ -290,32 +290,27 @@ namespace BALL
 	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, String default_format)
 	{
 		GenericMolFile* gmf = NULL;
-		gmf = open(name, open_mode);
-		if (gmf)
-		{
-			return gmf;
-		}
 
-		if (open_mode == File::MODE_OUT)
+		if (open_mode == File::MODE_IN)
+		{
+			gmf = open(name, open_mode);
+			if (gmf)
+			{
+				return gmf;
+			}
+		}
+		else if (open_mode == File::MODE_OUT)
 		{
 			String compression_format;
 			String file_format;
 
-			if (isFileCompressed(default_format, compression_format, file_format))
+			// Open temporary decompressed molecular file
+			gmf = openBase(name, default_format, open_mode);
+
+			if (isFileCompressed(name, compression_format, file_format))
 			{
-				// Create temporary decompressed file name
-				String decompressed_name;
-				File::createTemporaryFilename(decompressed_name, file_format);
-
-				// Open temporary decompressed molecular file
-				gmf = openBase(decompressed_name, default_format, open_mode);
-
 				// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
 				gmf->enableOutputCompression(name, compression_format);
-			}
-			else
-			{
-				gmf = openBase(name, default_format, open_mode);
 			}
 		}
 
