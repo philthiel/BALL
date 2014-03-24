@@ -380,12 +380,12 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 	if (invalids.find(2) != invalids.end())
 	{
-		Log.error() << "Error [101]: the following parameter is invalid: '" << invalids[2][0] << "'" << endl;
+		Log.error() << "-- Error [101]: the following parameter is invalid: '" << invalids[2][0] << "'" << endl;
 		exit(1);
 	}
 	if (invalids.find(1) != invalids.end())
 	{
-		Log.error() << "Error [102]: the following parameter occurs multiple times: '" << invalids[1][0] << "'" << endl;
+		Log.error() << "-- Error [102]: the following parameter occurs multiple times: '" << invalids[1][0] << "'" << endl;
 		exit(1);
 	}
 
@@ -410,11 +410,11 @@ void CommandlineParser::parse(int argc, char* argv[])
 			else
 			{
 				// Invalid flag (parameter values given)
-				Log.error() << "Error [103]: Flag '" << key << "' does not take parameter values." << endl;
+				Log.error() << "-- Error [103]: Flag '" << key << "' does not take parameter values." << endl;
 
 				if (parameter_map_.find("quiet") == parameter_map_.end())
 				{
-					Log << "Use '-help' to display available parameters and flags." << endl;
+					Log.error() << "                Use '-help' to display available parameters and flags." << endl;
 				}
 
 				exit(1);
@@ -438,11 +438,11 @@ void CommandlineParser::parse(int argc, char* argv[])
 			else
 			{
 				// Invalid parameter (no parameter values given)
-				Log.error() << "Error [104]: Parameter '" << key << "' has no value(s)." << endl;
+				Log.error() << "-- Error [104]: Parameter '" << key << "' has no value(s)." << endl;
 
 				if (parameter_map_.find("quiet") == parameter_map_.end())
 				{
-					Log << "Use '-help' to display available parameters and flags." << endl;
+					Log.error() << "                Use '-help' to display available parameters and flags." << endl;
 				}
 
 				exit(1);
@@ -451,11 +451,11 @@ void CommandlineParser::parse(int argc, char* argv[])
 		else
 		{
 			// Key is not registered
-			Log.error() << "Error [105]: Key '" << key << "' is unknown (no flag or parameter)." << endl;
+			Log.error() << "-- Error [105]: Key '" << key << "' is unknown (no flag or parameter)." << endl;
 
 			if (parameter_map_.find("quiet") == parameter_map_.end())
 			{
-				Log << "Use '-help' to display available parameters and flags." << endl;
+				Log.error() << "                Use '-help' to display available parameters and flags." << endl;
 			}
 
 			exit(1);
@@ -549,7 +549,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 
 		if (parameter_map_.find("quiet") == parameter_map_.end())
 		{
-			Log << "Tool-parameter file has been written to '" << write_par << "'. Goodbye!" << endl;
+			Log.level(10) << "++ Tool-parameter file has been written to '" << write_par << "'. Goodbye!" << endl;
 		}
 
 		exit(0);
@@ -570,7 +570,7 @@ void CommandlineParser::parse(int argc, char* argv[])
 	}
 	if (missing_parameters.size() > 0)
 	{
-		Log.error() << "Error [107]: The following mandatory parameters are missing:" << endl;
+		Log.error() << "-- Error [107]: The following mandatory parameters are missing:" << endl;
 
 		printHelp(missing_parameters, false);
 		exit(1);
