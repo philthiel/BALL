@@ -1735,6 +1735,7 @@ namespace BALL
 					{
 						throw(Exception::ParseError(__FILE__, __LINE__,"DockResultFile::readAtom","found invalid element"));
 					}
+					current_atom_->setName(current_atom_->getElement().getSymbol());
 					hasElement = true;
 				}
 				if(key=="x")
