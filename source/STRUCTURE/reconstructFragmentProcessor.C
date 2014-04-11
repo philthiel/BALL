@@ -28,37 +28,125 @@ using namespace std;
 
 namespace BALL 
 {
+	ReconstructFragmentProcessor::ReconstructFragmentProcessor(const FragmentDB& db)
+	: fragment_db_(&db),
+	  inserted_atoms_()
+	{
+	}
 
-	/////////////////////////////////////////////////////////////////
-	//		ReconstructFragmentProcessor												     //
-	/////////////////////////////////////////////////////////////////	
+
+	// Copy constructor
+	ReconstructFragmentProcessor::ReconstructFragmentProcessor(const ReconstructFragmentProcessor& rfp)
+	: UnaryProcessor<Fragment>(rfp),
+	  fragment_db_(rfp.fragment_db_),
+	  inserted_atoms_(rfp.inserted_atoms_)
+	{
+	}
+
+
+	// Default constructor
+	ReconstructFragmentProcessor::ReconstructFragmentProcessor()
+	: fragment_db_(0),
+	  inserted_atoms_()
+	{
+	}
+
+
+	// Destructor
+	ReconstructFragmentProcessor::~ReconstructFragmentProcessor()
+	{
+		fragment_db_ = 0;
+	}
+
+	// Processor start method
+	bool ReconstructFragmentProcessor::start()
+	{
+		inserted_atoms_.clear();
+		
+		if (fragment_db_ == 0)
+		{
+			Log.error() << "ReconstructFragmentProcessor: no FragmentDB defined. Use setFragmentDB() to associate a fragment database." << endl;
+			return false;
+		}
+		
+		return true;
+	}
+	
+
+	// Processor finish method
+	bool ReconstructFragmentProcessor::finish()
+	{
+		return true;
+	}
+
+
+	// Processor application method
+	Processor::Result ReconstructFragmentProcessor::operator () (Fragment& object)
+	{
+		// abort if the object is not a residue (only residues contained in the fragment DB)
+		if (!RTTI::isKindOf<Residue>(object))
+		{
+			return Processor::CONTINUE;
+		}
+
+		// cast the object to a residue
+		Residue& residue = dynamic_cast<Residue&>(object);
+
+		// get the reference fragment from the fragment DB
+		const Fragment* reference_fragment = fragment_db_->getReferenceFragment(residue);
+
+		// complain if no reference fragment could be found
+		if (reference_fragment == 0)
+		{
+			Log.warn() << "ReconstructFragmentProcessor: no reference fragment found for " << residue.getName() << ":" << residue.getID() << endl;
+			return Processor::CONTINUE;
+		}
+
+		// Reconstruct the atoms and count the number of new atoms.
+		list<Atom*> inserted_atoms = reconstructFragment(residue, *reference_fragment);
+
+		for (list<Atom*>::iterator it = inserted_atoms.begin(); it != inserted_atoms.end(); ++it)
+		{
+			inserted_atoms_.push_back(*it);
+		}
+
+		// Next residue.
+		return Processor::CONTINUE;
+	}
+
 
 	void ReconstructFragmentProcessor::setFragmentDB(const FragmentDB& db)
 	{
 		fragment_db_ = &const_cast<FragmentDB&>(db);
 	}
 
+
 	const FragmentDB* ReconstructFragmentProcessor::getFragmentDB() const
 	{
 		return fragment_db_;
 	}
 
-	/**	Identify two reference atoms.
-			Performs a breadth-first search for two additional heavy atoms
-			starting from the center atom. These atoms are used as 
-			anchor points for attaching the next atom.
-	*/
-	Triple<bool, const Atom*, const Atom*> 
-	ReconstructFragmentProcessor::getTwoReferenceAtoms
-		(const Atom& ref_center_atom, const HashSet<const Atom*>& allowed)
-		
+
+	list<Atom*>& ReconstructFragmentProcessor::getInsertedAtoms()
+	{
+		return inserted_atoms_;
+	}
+
+
+	Size ReconstructFragmentProcessor::getNumberOfInsertedAtoms() const
+	{
+		return inserted_atoms_.size();
+	}
+
+ 
+	Triple<bool, const Atom*, const Atom*> ReconstructFragmentProcessor::getTwoReferenceAtoms(const Atom& ref_center_atom, const HashSet<const Atom*>& allowed)
 	{
 		Triple<bool, const Atom*, const Atom*> result(false, 0, 0);
-		
+
 		// a hash set to remember all those atoms we have already visited
 		list<const Atom*> atom_list;
 		atom_list.push_back(&ref_center_atom);
-		
+
 		// abort if we found the three first atoms (beyond the center atom)
 		// or we are running out of fresh atoms
 		list<const Atom*>::iterator current(atom_list.begin());
@@ -68,8 +156,7 @@ namespace BALL
 			for (; +bond; ++bond)
 			{
 				const Atom* next_atom = bond->getPartner(**current);
-				if (allowed.has(next_atom) 
-						&& (find(atom_list.begin(), atom_list.end(), next_atom) == atom_list.end()))
+				if (allowed.has(next_atom) && (find(atom_list.begin(), atom_list.end(), next_atom) == atom_list.end()))
 				{
 					atom_list.push_back(next_atom);
 					if (atom_list.size() > 2)
@@ -79,12 +166,12 @@ namespace BALL
 					}
 				}
 			}
-			
+
 			// try the bonds of the next atom in the list
 			current++;
 		}
-		
-		// copy the two  reference atoms to the result 
+
+		// copy the two  reference atoms to the result
 		// (omit the first atom, which is the center atom!)
 		result.first = (atom_list.size() == 3);
 		current = atom_list.begin();
@@ -101,115 +188,15 @@ namespace BALL
 
 		return result;
 	}
-	
-	// start function of ReconstructFragmentProcessor
-	// nothing important is done here
-	bool ReconstructFragmentProcessor::start()
-	{
-		inserted_atoms_.clear();
-		
-		if (fragment_db_ == 0)
-		{
-			Log.error() << "ReconstructFragmentProcessor: no FragmentDB defined. "
-									<< "Use setFragmentDB() to associate a fragment database." << std::endl;
-			return false;
-		}
-		
-		return true;
-	}
-	
-	// Processor finish method
-	bool ReconstructFragmentProcessor::finish()
-	{
-		return true;
-	}
 
-	// Processor application method
-	Processor::Result ReconstructFragmentProcessor::operator () (Fragment& object)
-	{
-		// abort if the object is not a residue (only residues are 
-		// contained in the fragment DB)																				
-		if (!RTTI::isKindOf<Residue>(object))
-		{
-			return Processor::CONTINUE;
-		}
 
-		// cast the object to a residue
-		Residue& residue = dynamic_cast<Residue&>(object);
-
-		// get the reference fragment from the fragment DB
-		const Fragment* reference_fragment = fragment_db_->getReferenceFragment(residue);
-
-		// complain if no reference fragment could be found
-		if (reference_fragment == 0)
-		{
-			Log.warn() << "ReconstructFragmentProcessor: no reference fragment found for " 
-							   << residue.getName() << ":" << residue.getID() << std::endl;
-			return Processor::CONTINUE;
-		}
-
-		// Reconstruct the atoms and count the number of new atoms.
-		// number_of_inserted_atoms_ += reconstructFragment(residue, *reference_fragment);
-		list<Atom*> inserted_atoms;
-		list<Atom*>::iterator it;
-
-		inserted_atoms = reconstructFragment(residue, *reference_fragment);
-
-		for (it = inserted_atoms.begin(); it != inserted_atoms.end(); ++it)
-		{
-			inserted_atoms_.push_back(*it);
-		}
-
-		// Next residue.
-		return Processor::CONTINUE;
-	}
-
-	ReconstructFragmentProcessor::ReconstructFragmentProcessor(const FragmentDB& db)
-		:	fragment_db_(&db),
-			inserted_atoms_()
-	{
-	}
-	
-	// copy constructor	
-	ReconstructFragmentProcessor::ReconstructFragmentProcessor(const ReconstructFragmentProcessor& rfp)
-		:	UnaryProcessor<Fragment>(rfp),
-			fragment_db_(rfp.fragment_db_),
-			inserted_atoms_(rfp.inserted_atoms_)
-	{
-	}
-	
-	// default constructor	
-	ReconstructFragmentProcessor::ReconstructFragmentProcessor()
-		:	fragment_db_(0),
-			inserted_atoms_()
-	{
-	}
-	
-	// destructor	
-	ReconstructFragmentProcessor::~ReconstructFragmentProcessor()
-	{
-		fragment_db_ = 0;
-	}
-
-	list<Atom*>& ReconstructFragmentProcessor::getInsertedAtoms()
-	{
-		return inserted_atoms_;
-	}
-
-	// return the number of inserted atoms
-	Size ReconstructFragmentProcessor::getNumberOfInsertedAtoms() const
-	{
-		return inserted_atoms_.size();
-	}
- 
-	list<Atom*> ReconstructFragmentProcessor::reconstructFragment
-		(Fragment& fragment, const Fragment& tplate)
+	list<Atom*> ReconstructFragmentProcessor::reconstructFragment(Fragment& fragment, const Fragment& tplate)
 	{
 		// We count the number of atoms created.
 		Size number_of_inserted_atoms = 0;
 		list<Atom*> inserted_atoms;
 		
-		// Get a copy of the atom names occurring in the current reference fragment....
+		// Get a copy of the atom names occurring in the current reference fragment ....
 		StringHashMap<Atom*> name_to_atom;
 		AtomIterator it = fragment.beginAtom();
 		for (; +it; ++it)
@@ -225,7 +212,7 @@ namespace BALL
 		HashSet<const Atom*> transformed;
 		AtomConstIterator cit = tplate.beginAtom();
 		for (; +cit; ++cit)
-		{	
+		{
 			if (name_to_atom.has(cit->getName()))
 			{
 				// remember that the coordinates of this one are correct
@@ -237,11 +224,11 @@ namespace BALL
 			else
 			{
 				// We create a copy of the existing atom and insert it into
-				// the residue. Coordinates are bogus, but we'll correct that
-				// later on.
+				// the residue. Coordinates are bogus, but we'll correct that later on.
 				Atom* new_atom = reinterpret_cast<Atom*>(cit->create(false));
 				fragment.insert(*new_atom);
 				tpl_to_res.insert(std::pair<const Atom*, Atom*>(&*cit, new_atom));
+
 				// update the atom count
 				number_of_inserted_atoms++;
 				inserted_atoms.push_back(new_atom);
@@ -249,9 +236,10 @@ namespace BALL
 			}
 		}
 
+
 		// We've now made sure that all atoms of the tplate exist in the 
-    // reconstructed residue as well (careful, not the other way round!)
-		// we can now start to adjust the atom coordinates.
+		// reconstructed residue as well (careful, not the other way round!).
+		// We can now start to adjust the atom coordinates.
 
 		// If no atoms were in common, there's not much we can do...
 		// Trivial solution: no atoms are actually matched to each 
