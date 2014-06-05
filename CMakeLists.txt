@@ -655,16 +655,6 @@ ENDFOREACH(i)
 ADD_CUSTOM_TARGET(MMFF94 EXCLUDE_FROM_ALL)
 ADD_DEPENDENCIES(MMFF94 ${MMFF94_EXECUTABLES})
 
-OPTION(BALL_BUILD_QUEASY "Build BALL with QSAR frontends" ON)
-IF (BALL_BUILD_QUEASY)
-	## add QuEasyRun target
-	ADD_SUBDIRECTORY(source/APPLICATIONS/QuEasyRun)
-
-	IF(BALL_HAS_VIEW)
-		## add QuEasyViz target
-		ADD_SUBDIRECTORY(source/APPLICATIONS/QuEasyViz)
-	ENDIF()
-ENDIF()
 
 ########################################################
 ###    Documentation                                 ###
