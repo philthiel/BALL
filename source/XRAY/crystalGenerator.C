@@ -95,10 +95,15 @@ namespace BALL
 
 	}
 
-	//void CrystalGenerator::setDensity(RegularData3D* dens_ptr)
-	//{
+	void CrystalGenerator::setSpaceGroupFilename(const String& filename)
+	{
+		filename_ = filename;
+	}
 
-	//}
+	const String& CrystalGenerator::getSpaceGroupFilename() const
+	{
+		return filename_;
+	}
 
 
 	std::list<System*> CrystalGenerator::generatePacking(Index a_loweridx, Index a_upperidx, Index b_loweridx, Index b_upperidx, Index c_loweridx, Index c_upperidx)
@@ -175,11 +180,18 @@ namespace BALL
 		return asu_;
 	}
 	
-	std::list<System*> CrystalGenerator::generateSymMoleculesWithinDistance(float angstrom)
+	bool CrystalGenerator::generateSymmetryMatesCentric(float distance_a, std::vector<System*>& crystal)
 	{
+		if (system_ == NULL)
+		{
+			Log.error() << "CrystalGenerator error: no system set." << endl;
+
+			return false ;
+		}
+
 		// As we calculate the bounding boxes in fractional space
 		// Scale the distance for every axis
-		Vector3 distance = Vector3(angstrom, angstrom, angstrom);
+		Vector3 distance = Vector3(distance_a, distance_a, distance_a);
 		distance = ci_ptr_->getCart2Frac() * distance;
 		
 		transformer_.setTransformation(ci_ptr_->getCart2Frac());
@@ -190,9 +202,9 @@ namespace BALL
 		system_->apply(bbp);
 		
 		Vector3 sys_lo =  bbp.getLower();
-    Vector3 sys_up =  bbp.getUpper();
-    sys_lo =  sys_lo - distance;
-    sys_up =  sys_up + distance;
+		Vector3 sys_up =  bbp.getUpper();
+		sys_lo =  sys_lo - distance;
+		sys_up =  sys_up + distance;
 		
 		// calculate bounding box for every molecule in the unit cell	
 		// and store them in a vector
@@ -248,7 +260,6 @@ namespace BALL
 		system_->apply(transformer_);
 		
 		// generate surrounding unitcell, if there are clashing asyymetric units and delete delete non-clashing
-		std::list<System*> crystal;	
 		System* current_unitcell = 0;
 		vector<BitVector>::iterator bit = boundingbits_vector.begin();
 		for (Index a = -1; a <= 1; a++)
@@ -280,7 +291,8 @@ namespace BALL
 				}
 			}
 		}
-		return crystal;
+
+		return true;
 	}
 	
 	Box3 CrystalGenerator::getUnitCellBox(Index a, Index b, Index c)

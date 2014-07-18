@@ -95,10 +95,11 @@ namespace BALL
 			//@}
 
 			///
-			void setSpaceGroupFilename(String& filename){filename_ = filename;};	
+			void setSpaceGroupFilename(const String& filename);
 			
 			///
-			const String& getSpaceGroupFilename() const {return filename_;};	
+			const String& getSpaceGroupFilename() const;
+
 			void setCrystalInfo(boost::shared_ptr<CrystalInfo> ci_ptr);
 			void setSystem(System* system_ptr);	
 
@@ -107,8 +108,18 @@ namespace BALL
 			System* generateUnitCell(Index a, Index b, Index c);	
 			System* generateUnitCell();	
 			System* generateAsymmetricUnit();	
-			std::list<System*> generateSymMoleculesWithinDistance(float angstrom);	
+
+			/**
+			 * Generate symmetry mates of the attached system that are within the specified distance to the geometric center of this system.
+			 *
+			 * @param distance_a Distance in Angstrom which specifies the symmetry mates to be build
+			 * @param crystal Reference to a vector of System* to store the created symmetry mates
+			 * @return true in case of success, false otherwise.
+			 */
+			bool generateSymmetryMatesCentric(float distance_a, std::vector<System*>& crystal);
 			
+
+
 			Box3 getUnitCellBox(Index a, Index b, Index c);
 
 		protected:
