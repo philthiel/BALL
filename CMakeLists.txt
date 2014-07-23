@@ -826,8 +826,12 @@ ELSE()
 	## register BALL with CMake so that it can be found easily
 	EXPORT(PACKAGE BALL)
 ENDIF()
-## export our libs
 
+## Create BALLConfigVersion.cmake
+configure_file("${PROJECT_SOURCE_DIR}/cmake/BALLConfigVersion.cmake.in"
+	       "${PROJECT_BINARY_DIR}/cmake/BALLConfigVersion.cmake" @ONLY)
+
+## export our libs
 IF(BALL_HAS_VIEW)
 	EXPORT(TARGETS BALL VIEW FILE ${PROJECT_BINARY_DIR}/cmake/BALLExport.cmake)
 ELSE()
