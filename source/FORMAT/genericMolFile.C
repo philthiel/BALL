@@ -59,14 +59,14 @@ namespace BALL
 			ifstream unzipped_file(name_.c_str(), ios_base::in);
 			iostreams::filtering_streambuf<iostreams::input> in;
 
-			if (compression_ == ".gz")
+			if (compression_ == "gz")
 			{
 				// Apply gzip compression
 				in.push(iostreams::gzip_compressor());
 			}
 			else
 			{
-				if (compression_ == ".bz2")
+				if (compression_ == "bz2")
 				{
 					// Apply bzip2 compression
 					in.push(iostreams::bzip2_compressor());

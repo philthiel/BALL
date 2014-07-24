@@ -33,7 +33,7 @@ namespace BALL
 {
 	String MolFileFactory::getSupportedCompressionFormats()
 	{
-		String supported_compression_formats = ".gz,.bz2";
+		String supported_compression_formats = "gz,bz2";
 
 		return supported_compression_formats;
 	}
@@ -52,7 +52,7 @@ namespace BALL
 	}
 
 
-	bool MolFileFactory::isFileCompressed(const String& name, String& compression_format, String& decompressed_name)
+	bool MolFileFactory::isFileCompressed(const String& file_name, String& compression_format, String& decompressed_name)
 	{
 		compression_format = "";
 		decompressed_name = "";
@@ -63,10 +63,10 @@ namespace BALL
 
 		for (set<String>::iterator it=supported_compression_formats.begin(); it!=supported_compression_formats.end(); ++it)
 		{
-			if (name.hasSuffix(*it))
+			if (file_name.hasSuffix(*it))
 			{
 				compression_format = *it;
-				decompressed_name = name.before(*it).toLower();
+				decompressed_name = file_name.before("." + *it).toLower();
 
 				return true;
 			}
@@ -76,21 +76,21 @@ namespace BALL
 	}
 
 
-	void MolFileFactory::decompressFile(const String& name, const String& decompressed_name, const String& compression_format)
+	void MolFileFactory::decompressFile(const String& file_name, const String& decompressed_name, const String& compression_format)
 	{
 		// Open input file stream
-		ifstream zfile(name.c_str(), File::MODE_IN | File::MODE_BINARY);
+		ifstream zfile(file_name.c_str(), File::MODE_IN | File::MODE_BINARY);
 
 		iostreams::filtering_istream in;
 
-		if (compression_format == ".gz")
+		if (compression_format == "gz")
 		{
 			// Apply BOOST gzip decompressor
 			in.push(iostreams::gzip_decompressor());
 		}
 		else
 		{
-			if (compression_format == ".bz2")
+			if (compression_format == "bz2")
 			{
 				// Apply BOOST bzip2 decompressor
 				in.push(iostreams::bzip2_decompressor());
@@ -110,7 +110,7 @@ namespace BALL
 
 	String MolFileFactory::getSupportedFormats()
 	{
-		String supported_formats = ".ac,.brk,.drf,.ent,.hin,.mol,.mol2,.pdb,.sdf,.xyz";
+		String supported_formats = "ac,brk,drf,ent,hin,mol,mol2,pdb,sdf,xyz";
 
 		return supported_formats;
 	}
@@ -129,9 +129,23 @@ namespace BALL
 	}
 
 
-	bool MolFileFactory::isFileFormatSupported(const String& name, bool input_mode)
+	bool MolFileFactory::isFileExtensionSupported(const String& extension)
 	{
-		String format = getFileFormat(name, input_mode);
+		set<String> formats;
+		getSupportedFormats(formats);
+
+		if (formats.count(extension) != 1)
+		{
+			return false;
+		}
+
+		return true;
+	}
+
+
+	bool MolFileFactory::isFileFormatSupported(const String& file_name, bool input_mode)
+	{
+		String format = getFileFormat(file_name, input_mode);
 
 		if (format.isEmpty())
 		{
@@ -142,12 +156,12 @@ namespace BALL
 	}
 
 
-	String MolFileFactory::getFileFormat(const String& name, bool input_mode)
+	String MolFileFactory::getFileFormat(const String& file_name, bool input_mode)
 	{
 		String format = "";
 
 		// Strip path from file name
-		String base_name = FileSystem::baseName(name);
+		String base_name = FileSystem::baseName(file_name);
 		base_name.toLower();
 
 		// Get supported file formats
@@ -166,62 +180,67 @@ namespace BALL
 		if (format.isEmpty() && input_mode)
 		{
 			// Try to identify by file content
-			format = detectFileFormat(name);
+			format = detectFileFormat(file_name);
+
+			if (!format.isEmpty())
+			{
+				Log.warn() << "Input file '" << file_name << "' has no valid extension. Automatically detected format '" << format << "' could be wrong!" << endl;
+			}
 		}
 
 		return format;
 	}
 
 
-	GenericMolFile* MolFileFactory::openBase(const String& name, const String& format, File::OpenMode open_mode)
+	GenericMolFile* MolFileFactory::openBase(const String& file_name, const String& format, File::OpenMode open_mode)
 	{
 		GenericMolFile* gmf = NULL;
 
-		if (format == ".ac")
+		if (format == "ac")
 		{
-			gmf = new AntechamberFile(name, open_mode);
+			gmf = new AntechamberFile(file_name, open_mode);
 		}
-		else if (format == ".pdb" || format == ".brk" || format == ".ent")
+		else if (format == "pdb" || format == "brk" || format == "ent")
 		{
-			gmf = new PDBFile(name, open_mode);
+			gmf = new PDBFile(file_name, open_mode);
 		}
-		else if (format == ".hin")
+		else if (format == "hin")
 		{
-			gmf = new HINFile(name, open_mode);
+			gmf = new HINFile(file_name, open_mode);
 		}
-		else if (format == ".mol")
+		else if (format == "mol")
 		{
-			gmf = new MOLFile(name, open_mode);
+			gmf = new MOLFile(file_name, open_mode);
 		}
-		else if (format == ".sdf")
+		else if (format == "sdf")
 		{
-			gmf = new SDFile(name, open_mode);
+			gmf = new SDFile(file_name, open_mode);
 		}
-		else if (format == ".mol2")
+		else if (format == "mol2")
 		{
-			gmf = new MOL2File(name, open_mode);
+			gmf = new MOL2File(file_name, open_mode);
 		}
-		else if (format == ".xyz")
+		else if (format == "xyz")
 		{
-			gmf = new XYZFile(name, open_mode);
+			gmf = new XYZFile(file_name, open_mode);
 		}
-		else if (format == ".drf")
+		else if (format == "drf")
 		{
-			gmf = new DockResultFile(name, open_mode);
+			gmf = new DockResultFile(file_name, open_mode);
 		}
 
 		return gmf;
 	}
 
 
-	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode)
+	GenericMolFile* MolFileFactory::open(const String& file_name, File::OpenMode open_mode)
 	{
 		GenericMolFile* gmf = NULL;
 
 		String compression_format;
 		String decompressed_name;
 
-		if (isFileCompressed(name, compression_format, decompressed_name))
+		if (isFileCompressed(file_name, compression_format, decompressed_name))
 		{
 			// Compressed file
 
@@ -230,7 +249,7 @@ namespace BALL
 				// File read mode
 
 				// Create decompressed file
-				decompressFile(name, decompressed_name, compression_format);
+				decompressFile(file_name, decompressed_name, compression_format);
 
 				// Get molecular file format
 				String format = getFileFormat(decompressed_name, true);
@@ -264,7 +283,7 @@ namespace BALL
 					gmf = openBase(decompressed_name, format, open_mode);
 
 					// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
-					gmf->enableOutputCompression(name, compression_format);
+					gmf->enableOutputCompression(file_name, compression_format);
 				}
 			}
 		}
@@ -273,13 +292,13 @@ namespace BALL
 			// Uncompressed molecular file
 
 			// Get molecular file format
-			String format = getFileFormat(name, true);
+			String format = getFileFormat(file_name, true);
 
 			// Check if format is not empty (supported)
 			if (!format.isEmpty())
 			{
 				// Use appropriate molecular file class to open file
-				gmf = openBase(name, format, open_mode);
+				gmf = openBase(file_name, format, open_mode);
 			}
 		}
 
@@ -287,13 +306,13 @@ namespace BALL
 	}
 
 
-	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, String default_format)
+	GenericMolFile* MolFileFactory::open(const String& file_name, File::OpenMode open_mode, String default_format)
 	{
 		GenericMolFile* gmf = NULL;
 
 		if (open_mode == File::MODE_IN)
 		{
-			gmf = open(name, open_mode);
+			gmf = open(file_name, open_mode);
 			if (gmf)
 			{
 				return gmf;
@@ -305,12 +324,12 @@ namespace BALL
 			String file_format;
 
 			// Open temporary decompressed molecular file
-			gmf = openBase(name, default_format, open_mode);
+			gmf = openBase(file_name, default_format, open_mode);
 
-			if (isFileCompressed(name, compression_format, file_format))
+			if (isFileCompressed(file_name, compression_format, file_format))
 			{
 				// Make sure that temporary output file is compressed and then deleted when GenericMolFile is closed.
-				gmf->enableOutputCompression(name, compression_format);
+				gmf->enableOutputCompression(file_name, compression_format);
 			}
 		}
 
@@ -318,10 +337,10 @@ namespace BALL
 	}
 
 
-	GenericMolFile* MolFileFactory::open(const String& name, File::OpenMode open_mode, GenericMolFile* default_format_file)
+	GenericMolFile* MolFileFactory::open(const String& file_name, File::OpenMode open_mode, GenericMolFile* default_format_file)
 	{
 		GenericMolFile* gmf = NULL;
-		gmf = open(name, open_mode);
+		gmf = open(file_name, open_mode);
 		if (gmf)
 		{
 			return gmf;
@@ -329,56 +348,56 @@ namespace BALL
 
 		if (open_mode == File::MODE_OUT)
 		{
-			String filename;
+			String tmp_file_name;
 			String compression_format = "";
 
 			if (default_format_file->isCompressedFile(compression_format))
 			{
 				// Create temporary decompressed file name
-				File::createTemporaryFilename(filename);
+				File::createTemporaryFilename(tmp_file_name);
 			}
 			else
 			{
-				filename = name;
+				tmp_file_name = file_name;
 			}
 
 			if (dynamic_cast<AntechamberFile*>(default_format_file))
 			{
-				gmf = new AntechamberFile(filename, open_mode);
+				gmf = new AntechamberFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<PDBFile*>(default_format_file))
 			{
-				gmf = new PDBFile(filename, open_mode);
+				gmf = new PDBFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<HINFile*>(default_format_file))
 			{
-				gmf = new HINFile(filename, open_mode);
+				gmf = new HINFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<SDFile*>(default_format_file))
 			{
-				gmf = new SDFile(filename, open_mode);
+				gmf = new SDFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<MOL2File*>(default_format_file))
 			{
-				gmf = new MOL2File(filename, open_mode);
+				gmf = new MOL2File(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<MOLFile*>(default_format_file))
 			{
-				gmf = new MOLFile(filename, open_mode);
+				gmf = new MOLFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<XYZFile*>(default_format_file))
 			{
-				gmf = new XYZFile(filename, open_mode);
+				gmf = new XYZFile(tmp_file_name, open_mode);
 			}
 			else if(dynamic_cast<DockResultFile*>(default_format_file))
 			{
-				gmf = new DockResultFile(filename, open_mode);
+				gmf = new DockResultFile(tmp_file_name, open_mode);
 			}
 
 			// Make sure that temporary output-file is compressed and then deleted when GenericMolFile is closed.
 			if (!compression_format.isEmpty())
 			{
-				gmf->enableOutputCompression(name, compression_format);
+				gmf->enableOutputCompression(file_name, compression_format);
 			}
 		}
 
@@ -386,13 +405,13 @@ namespace BALL
 	}
 
 
-	String MolFileFactory::detectFileFormat(const String& name)
+	String MolFileFactory::detectFileFormat(const String& file_name)
 	{
 		String format = "";
 		String line;
 		vector<String> tmp;
 
-		LineBasedFile input(name, File::MODE_IN);
+		LineBasedFile input(file_name, File::MODE_IN);
 
 		unsigned int count = 0;
 		unsigned int xyz_count = 0;
@@ -401,42 +420,42 @@ namespace BALL
 			// PDB check
 			if (line.hasPrefix("HEADER") || line.hasPrefix("ATOM"))
 			{
-				format = ".pdb";
+				format = "pdb";
 				break;
 			}
 
 			// SDF/Mol check
 			if (line.hasPrefix("$$$$") || line.hasPrefix("M  END"))
 			{
-				format = ".sdf";
+				format = "sdf";
 				break;
 			}
 
 			// Mol2 check
 			if (line.hasPrefix("@<TRIPOS>MOLECULE"))
 			{
-				format = ".mol2";
+				format = "mol2";
 				break;
 			}
 
 			// DRF check
 			if (line.hasPrefix("<dockingfile>"))
 			{
-				format = ".drf";
+				format = "drf";
 				break;
 			}
 
 			// HIN check
 			if (line.hasPrefix("forcefield"))
 			{
-				format = ".hin";
+				format = "hin";
 				break;
 			}
 
 			// AC check
 			if (line.hasPrefix("CHARGE") || line.hasPrefix("Formula:"))
 			{
-				format = ".ac";
+				format = "ac";
 				break;
 			}
 
@@ -463,7 +482,7 @@ namespace BALL
 		// XYZ check
 		if (count - xyz_count == 2)
 		{
-			format = ".xyz";
+			format = "xyz";
 		}
 
 		input.close();

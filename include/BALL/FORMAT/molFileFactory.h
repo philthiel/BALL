@@ -37,7 +37,7 @@ namespace BALL
 			 * @param open_mode the file open mode to use
 			 * @return a pointer to a subclass of GenericMolFile, NULL if none is appropriate
 			*/
-			static GenericMolFile* open(const String& name, File::OpenMode open_mode = File::MODE_IN);
+			static GenericMolFile* open(const String& file_name, File::OpenMode open_mode = File::MODE_IN);
 
 			/**
 			 * When trying to open a file in write-mode, this function can be used to pass along a desired default format.
@@ -49,7 +49,7 @@ namespace BALL
 			 * @param forced
 			 * @return a pointer to a subclass of GenericMolFile, NULL if none is appropriate
 			*/
-			static GenericMolFile* open(const String& name, File::OpenMode open_mode, String default_format);
+			static GenericMolFile* open(const String& file_name, File::OpenMode open_mode, String default_format);
 
 			/**
 			 * When trying to open a file in write-mode, this function can be used to pass along a desired default-format.
@@ -60,7 +60,7 @@ namespace BALL
 			 * @param default_format the molecular file format to be used
 			 * @return a pointer to a subclass of GenericMolFile, NULL if none is appropriate
 			*/
-			static GenericMolFile* open(const String& name, File::OpenMode open_mode, GenericMolFile* default_format_file);
+			static GenericMolFile* open(const String& file_name, File::OpenMode open_mode, GenericMolFile* default_format_file);
 
 			/**
 			 * Return a comma-separated string with file extensions of all supported compression formats.
@@ -86,7 +86,7 @@ namespace BALL
 			 * @param decompressed_name string to store the file name without compression extension
 			 * @return true if file is compressed, else otherwise
 			 */
-			static bool isFileCompressed(const String& name, String& compression_format, String& decompressed_name);
+			static bool isFileCompressed(const String& file_name, String& compression_format, String& decompressed_name);
 
 			/**
 			 * Return a comma-separated string with all supported file extensions of the MolFileFactory.
@@ -104,13 +104,21 @@ namespace BALL
 			static void getSupportedFormats(std::set<String>& formats);
 
 			/**
+			 * Check if the given file extension belongs to a supported file format.
+			 *
+			 * @param format extension to be checked
+			 * @return true if supported file extension (format); false otherwise
+			 */
+			static bool isFileExtensionSupported(const String& extension);
+
+			/**
 			 * Check if the format of the specified filen is supported of MolFileFactory.
 			 *
 			 * @param name name of the molecular file to inspect
 			 * @param input_mode true if an extisting file should be read, false if the name specifies a non-existing output file
 			 * @return true if the format is supported, else otherwise
 			*/
-			static bool isFileFormatSupported(const String& name, bool input_mode);
+			static bool isFileFormatSupported(const String& file_name, bool input_mode);
 
 			/**
 			 * Try to determine the format of the given molecular file.
@@ -120,7 +128,7 @@ namespace BALL
 			 * @param input_mode true if an extisting file should be read, false if the name specifies a non-existing output file
 			 * @return file format extension if it is supported by the MolFileFactory, otherwise an empty String
 			*/
-			static String getFileFormat(const String& name, bool input_mode);
+			static String getFileFormat(const String& file_name, bool input_mode);
 
 
 		private:
@@ -132,7 +140,7 @@ namespace BALL
 			 * @param decompressed_name name to use for decompressed output file
 			 * @param compression_format the compression format
 			 */
-			static void decompressFile(const String& name, const String& decompressed_name, const String& compression_format);
+			static void decompressFile(const String& file_name, const String& decompressed_name, const String& compression_format);
 
 			/**
 			 * Function tries to automatically detect the molecular file format of an input file.
@@ -142,7 +150,7 @@ namespace BALL
 			 * @param name name of the molecular file to inspect
 			 * @return file extension of the matching molecular file format, an empty String if no matching format was found
 			*/
-			static String detectFileFormat(const String& name);
+			static String detectFileFormat(const String& file_name);
 
 			/**
 			 * Open uncompressed molecular file using the given format.
@@ -153,7 +161,7 @@ namespace BALL
 			 * @param open_mode the file open mode to use
 			 * @return a pointer to a subclass of GenericMolFile, NULL if none is appropriate
 			*/
-			static GenericMolFile* openBase(const String& name, const String& format, File::OpenMode open_mode);
+			static GenericMolFile* openBase(const String& file_name, const String& format, File::OpenMode open_mode);
 	};
 }
 

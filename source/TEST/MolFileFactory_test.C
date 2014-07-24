@@ -31,7 +31,7 @@ using namespace BALL;
 
 CHECK(getSupportedCompressionFormats())
 
-	TEST_EQUAL(MolFileFactory::getSupportedCompressionFormats(), ".gz,.bz2")
+	TEST_EQUAL(MolFileFactory::getSupportedCompressionFormats(), "gz,bz2")
 
 RESULT
 
@@ -40,8 +40,8 @@ CHECK(getSupportedCompressionFormats(set<String>& compression_formats))
 	set<String> tmp;
 	MolFileFactory::getSupportedCompressionFormats(tmp);
 
-	TEST_EQUAL(tmp.count(".gz"), 1)
-	TEST_EQUAL(tmp.count(".bz2"), 1)
+	TEST_EQUAL(tmp.count("gz"), 1)
+	TEST_EQUAL(tmp.count("bz2"), 1)
 	TEST_EQUAL(tmp.size(), 2)
 
 RESULT
@@ -58,16 +58,16 @@ CHECK(isFileCompressed(const String& name, String& compression_format, String& b
 	String base_name;
 
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f1, format, base_name), true)
-	TEST_EQUAL(format, ".gz")
+	TEST_EQUAL(format, "gz")
 	TEST_EQUAL(base_name, "/home/mol.sdf")
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f2, format, base_name), true)
-	TEST_EQUAL(format, ".bz2")
+	TEST_EQUAL(format, "bz2")
 	TEST_EQUAL(base_name, "/home/mol.sdf")
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f3, format, base_name), false)
 	TEST_EQUAL(format, "")
 	TEST_EQUAL(base_name, "")
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f4, format, base_name), true)
-	TEST_EQUAL(format, ".gz")
+	TEST_EQUAL(format, "gz")
 	TEST_EQUAL(base_name, "../mol.sdf")
 	TEST_EQUAL(MolFileFactory::isFileCompressed(f5, format, base_name), false)
 	TEST_EQUAL(format, "")
@@ -77,7 +77,7 @@ RESULT
 
 CHECK(getSupportedFormats())
 
-	TEST_EQUAL(MolFileFactory::getSupportedFormats(), ".ac,.brk,.drf,.ent,.hin,.mol,.mol2,.pdb,.sdf,.xyz")
+	TEST_EQUAL(MolFileFactory::getSupportedFormats(), "ac,brk,drf,ent,hin,mol,mol2,pdb,sdf,xyz")
 
 RESULT
 
@@ -87,16 +87,34 @@ CHECK(getSupportedFormats(set<String>& formats))
 	MolFileFactory::getSupportedFormats(tmp);
 
 	TEST_EQUAL(tmp.size(), 10)
-	TEST_EQUAL(tmp.count(".ac"), 1)
-	TEST_EQUAL(tmp.count(".brk"), 1)
-	TEST_EQUAL(tmp.count(".drf"), 1)
-	TEST_EQUAL(tmp.count(".ent"), 1)
-	TEST_EQUAL(tmp.count(".hin"), 1)
-	TEST_EQUAL(tmp.count(".mol"), 1)
-	TEST_EQUAL(tmp.count(".mol2"), 1)
-	TEST_EQUAL(tmp.count(".pdb"), 1)
-	TEST_EQUAL(tmp.count(".sdf"), 1)
-	TEST_EQUAL(tmp.count(".xyz"), 1)
+	TEST_EQUAL(tmp.count("ac"), 1)
+	TEST_EQUAL(tmp.count("brk"), 1)
+	TEST_EQUAL(tmp.count("drf"), 1)
+	TEST_EQUAL(tmp.count("ent"), 1)
+	TEST_EQUAL(tmp.count("hin"), 1)
+	TEST_EQUAL(tmp.count("mol"), 1)
+	TEST_EQUAL(tmp.count("mol2"), 1)
+	TEST_EQUAL(tmp.count("pdb"), 1)
+	TEST_EQUAL(tmp.count("sdf"), 1)
+	TEST_EQUAL(tmp.count("xyz"), 1)
+
+RESULT
+
+CHECK(isFileExtensionSupported(const String& extension))
+
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("sdf"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("pdb"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("mol"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("mol2"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("pdb"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("ent"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("ac"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("brk"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("drf"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("hin"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("xyz"), true)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported("xxx"), false)
+	TEST_EQUAL(MolFileFactory::isFileExtensionSupported(""), false)
 
 RESULT
 
@@ -105,7 +123,7 @@ CHECK(isFileFormatSupported(const String& name, bool input_mode))
 	// Write mode file name check
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol.sdf", false), true)
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol.pdb", false), true)
-	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol", false), false)
+	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol", false), true)
 	TEST_EQUAL(MolFileFactory::isFileFormatSupported("mol.txt", false), false)
 
 	// Read mode file name check
@@ -284,7 +302,7 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 	mol2_file->close();
 	delete mol2_file;
 
-	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2")
+	NEW_TMP_FILE_WITH_SUFFIX(filename, "mol2")
 	gmf = MolFileFactory::open(filename, File::MODE_OUT);
 	TEST_NOT_EQUAL(gmf, NULL)
 	mol2_out = dynamic_cast<MOL2File*>(gmf);
@@ -295,7 +313,7 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 
 	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
 
-	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2.bz2")
+	NEW_TMP_FILE_WITH_SUFFIX(filename, "mol2.bz2")
 	gmf = MolFileFactory::open(filename, File::MODE_OUT);
 	TEST_NOT_EQUAL(gmf, NULL)
 	mol2_out = dynamic_cast<MOL2File*>(gmf);
@@ -310,7 +328,7 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 	mol2_file->close();
 	delete mol2_file;
 
-	NEW_TMP_FILE_WITH_SUFFIX(filename, ".mol2")
+	NEW_TMP_FILE_WITH_SUFFIX(filename, "mol2")
 	gmf = MolFileFactory::open(filename, File::MODE_OUT);
 	TEST_NOT_EQUAL(gmf, NULL)
 	mol2_out = dynamic_cast<MOL2File*>(gmf);
@@ -322,7 +340,10 @@ CHECK(open(const String& name, File::OpenMode open_mode))
 	TEST_FILE_REGEXP(filename, BALL_TEST_DATA_PATH(MolFileFactory_write.mol2))
 
 	delete new_mol;
+
 	delete mol;
+
+
 RESULT
 
 /////////////////////////////////////////////////////////////
