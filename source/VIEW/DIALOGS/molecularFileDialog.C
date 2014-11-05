@@ -612,8 +612,9 @@ System* MolecularFileDialog::readXYZFile(String filename, String system_name)
 bool MolecularFileDialog::finish_(const String& filename, const String& system_name, System* system)
 {
 	// writing info to log
-	setStatusbarText(String(tr("Read")) + " " + String(system->countAtoms()) + " " +
-			            (String)tr("atoms from file") + " \"" + filename + "\"", true);
+	setStatusbarText(String(tr("Read infile: ")) +  "\"" + FileSystem::baseName(filename) + "\"", true);
+	setStatusbarText(String(tr("++ Molecules: ")) + String(system->countMolecules()), true);
+	setStatusbarText(String(tr("++ Atoms: ")) + String(system->countAtoms()), true);
 
 	if (system->getName() == "")
 	{
