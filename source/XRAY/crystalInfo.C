@@ -386,7 +386,7 @@ namespace BALL
 							break;
 
 						default:
-							cout << "Wrong Notation" << endl;
+							Log.error() << "Wrong Notation" << endl;
 					}
 					sym_mtrx(i,comp) = sign;
 					if (sign_add) sym_mtrx(i,comp_add) = sign_add;
@@ -402,7 +402,7 @@ namespace BALL
 		}
 		else
 		{
-			cout << "Space Group \"" << sg << "\" unknown"  << endl;
+			Log.error() << "Space Group \"" << sg << "\" unknown"  << endl;
 			groupfile->close();
 			delete groupfile;
 
@@ -491,7 +491,7 @@ namespace BALL
 		pm.readPrimitive(space_group, "space_group_");
 		if (!setSpaceGroup(space_group))
 		{
-			cout << "Could not read space group from project file, setting space group to P 1" << endl;
+			Log.warn() << "Could not read space group from project file, setting space group to P 1" << endl;
 			setSpaceGroup("P 1");
 		}
 

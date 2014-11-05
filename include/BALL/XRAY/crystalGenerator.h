@@ -118,7 +118,14 @@ namespace BALL
 			 */
 			bool generateSymmetryMatesCentric(float distance_a, std::vector<System*>& crystal);
 			
-
+			/**
+			 * Generate symmetry mates of the attached system that are within the specified distance to the given point.
+			 *
+			 * @param center Reference point for symmetry mate generation
+			 * @param distance Distance in Angstrom which specifies the symmetry mates to be build
+			 * @param crystal Reference to a vector of System* to store the created symmetry mates
+			 */
+			void generateSymmetryMatesRadial(const Vector3& center, float distance, std::vector<System*>& crystal);
 
 			Box3 getUnitCellBox(Index a, Index b, Index c);
 

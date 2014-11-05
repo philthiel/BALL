@@ -40,20 +40,16 @@ namespace BALL
 	void CrystalGenerator::setCrystalInfo(boost::shared_ptr<CrystalInfo> ci_ptr)
 	{
 		ci_ptr_ = ci_ptr;
+
 		if (buildASU_())
 		{
-			cout << "ASU successfully build" << endl;
-			if (buildUnitCell_())
-			{
-				cout << "UnitCell successfully build" << endl;
-			}
-
+			buildUnitCell_();
 		}
 	}
 
 	void CrystalGenerator::setSystem(System* system_ptr)
 	{
-			
+
 		system_ = system_ptr;	
 		ci_ptr_.reset();
 		
@@ -68,28 +64,25 @@ namespace BALL
 			{
 				if (pit->hasProperty("CRYSTALINFO"))
 				{
-					Log.info() << "CrystalInfo found in Protein " << pit->getName() << std::endl;
-					ci_ptr_ = boost::dynamic_pointer_cast<CrystalInfo>(pit->getProperty("CRYSTALINFO").getSmartObject());	
+					//Log.info() << "CrystalInfo found in Protein " << pit->getName() << std::endl;
+
+					ci_ptr_ = boost::dynamic_pointer_cast<CrystalInfo>(pit->getProperty("CRYSTALINFO").getSmartObject());
 					break;
 				}
 			}
 		}
-		
+
 		if (!ci_ptr_)
 		{
 			Log.warn() << "No CrystalInfo object found, generating default CrystalInfo" << std::endl;
+
 			boost::shared_ptr<CrystalInfo> tmp_ptr(new CrystalInfo());
 			ci_ptr_ = tmp_ptr;
 		}
 
 		if (buildASU_())
 		{
-			cout << "ASU successfully build" << endl;
-			if (buildUnitCell_())
-			{
-				cout << "UnitCell successfully build" << endl;
-			}
-
+			buildUnitCell_();
 		}
 
 
@@ -294,6 +287,11 @@ namespace BALL
 
 		return true;
 	}
+
+	void CrystalGenerator::generateSymmetryMatesRadial(const Vector3& center, float distance, std::vector<System*>& crystal)
+	{
+		return;
+	}
 	
 	Box3 CrystalGenerator::getUnitCellBox(Index a, Index b, Index c)
 	{
@@ -315,13 +313,13 @@ namespace BALL
 
 		Size symops_size = ci_ptr_->getNumberOfSymOps();
 
-		cout << "symops_size " << symops_size << endl;
+		//cout << "symops_size " << symops_size << endl;
 		//System* current_asu;
 		Matrix4x4 transmatrix;
 		for (Position i = 0; i < symops_size; i++)
 		{
 			transmatrix.setIdentity();
-			cout << "symop " << i;
+			//cout << "symop " << i;
 			System* current_asu = new System(*asu_);
 
 			transmatrix *= ci_ptr_->getFrac2Cart();
@@ -343,14 +341,14 @@ namespace BALL
 			}
 
 			unitcell_->spliceAfter(*current_asu);
-			cout << endl;
+			//cout << endl;
 		}
 		
 		//correct positions of the asu's
 		correctASUPositions_(unitcell_);
 		
-		cout << "uc_cP" << unitcell_->countProteins() << endl;
-		cout << "uc_cM" << unitcell_->countMolecules() << endl;
+		//cout << "uc_cP" << unitcell_->countProteins() << endl;
+		//cout << "uc_cM" << unitcell_->countMolecules() << endl;
 		return true;
 	}
 
@@ -358,7 +356,7 @@ namespace BALL
 	{
 		asu_ = new System();
 		Size ncs_symops_size = ci_ptr_->getNumberOfNCSSymOps();
-		cout << "ncs_symops_size" << ncs_symops_size << endl;
+		//cout << "ncs_symops_size" << ncs_symops_size << endl;
 		System* current_ncs;
 
 		current_ncs = new System(*system_);
@@ -366,7 +364,7 @@ namespace BALL
 		asu_->spliceAfter(*current_ncs);
 		for (Position i = 0; i < ncs_symops_size; i++)
 		{
-			cout << "ncs " << i;
+			//cout << "ncs " << i;
 			// TODO add if for isIdentity
 			if (!ci_ptr_->isgivenNCS(i))
 			{
@@ -377,13 +375,13 @@ namespace BALL
 			}
 			else
 			{
-				cout << " isgiven ";
+				//cout << " isgiven ";
 			}
-			cout << endl;
+			//cout << endl;
 		}
 
-		cout << "asu_cP" << asu_->countProteins() << endl;
-		cout << "asu_cM" << asu_->countMolecules() << endl;
+		//cout << "asu_cP" << asu_->countProteins() << endl;
+		//cout << "asu_cM" << asu_->countMolecules() << endl;
 		return true;
 	}
 
