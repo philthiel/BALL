@@ -1,0 +1,118 @@
+SET(BALL_core_VERSION_MINOR "${BALL_core_VERSION_MAJOR}.${BALL_core_VERSION_MINOR}")
+
+IF(UNIX AND NOT APPLE)
+	## libraries
+	SET(COMPONENT_LIBBALL "libBALL${BALL_core_VERSION_MINOR}")
+
+	## development
+	SET(COMPONENT_LIBBALL_DEV "libBALL${BALL_core_VERSION_MINOR}-dev")
+
+	## Python bindings
+	SET(COMPONENT_PYTHON_BINDINGS_BALL "python-ball${BALL_core_VERSION_MINOR}")
+
+	## Documentation
+	SET(COMPONENT_DOCUMENTATION_EXAMPLES "libball${BALL_core_VERSION_MINOR}-doc")
+	SET(COMPONENT_DOCUMENTATION_HTML "libball${BALL_core_VERSION_MINOR}-doc")
+	SET(COMPONENT_DOCUMENTATION_PDF  "libball${BALL_core_VERSION_MINOR}-doc")
+ELSEIF(APPLE)
+	## libraries
+	SET(COMPONENT_LIBBALL "libBALL${BALL_core_VERSION_MINOR}")
+
+	## development
+	SET(COMPONENT_LIBBALL_DEV "libBALL${BALL_core_VERSION_MINOR}-dev")
+
+	## Python bindings
+	SET(COMPONENT_PYTHON_BINDINGS_BALL "python-ball${BALL_core_VERSION_MINOR}")
+
+	## Documentation
+	SET(COMPONENT_DOCUMENTATION_EXAMPLES "libball${BALL_core_VERSION_MINOR}-doc-examples")
+	SET(COMPONENT_DOCUMENTATION_HTML "libball${BALL_core_VERSION_MINOR}-doc-html")
+	SET(COMPONENT_DOCUMENTATION_PDF  "libball${BALL_core_VERSION_MINOR}-doc-pdf")
+ELSEIF(WIN32)
+	## libraries
+	SET(COMPONENT_LIBBALL "Runtime")
+
+	## development
+	SET(COMPONENT_LIBBALL_DEV "Development")
+
+	## Python bindings
+	SET(COMPONENT_PYTHON_BINDINGS_BALL "PythonBindings")
+
+	## Documentation
+	SET(COMPONENT_DOCUMENTATION_EXAMPLES "DocumentationExamples")
+	SET(COMPONENT_DOCUMENTATION_HTML "DocumentationHTML")
+	SET(COMPONENT_DOCUMENTATION_PDF  "DocumentationPDF")
+ELSE()
+	## libraries
+	SET(COMPONENT_LIBBALL "libBALL${BALL_core_VERSION_MINOR}")
+
+	## development
+	SET(COMPONENT_LIBBALL_DEV "libBALL${BALL_core_VERSION_MINOR}-dev")
+
+	## Python bindings
+	SET(COMPONENT_PYTHON_BINDINGS_BALL "python-ball${BALL_core_VERSION_MINOR}")
+
+	## Documentation
+	SET(COMPONENT_DOCUMENTATION_EXAMPLES "libball${BALL_core_VERSION_MINOR}-doc-examples")
+	SET(COMPONENT_DOCUMENTATION_HTML "libball${BALL_core_VERSION_MINOR}-doc-html")
+	SET(COMPONENT_DOCUMENTATION_PDF  "libball${BALL_core_VERSION_MINOR}-doc-pdf")
+ENDIF()
+
+
+SET(BALL_COMPONENTS
+ ${COMPONENT_LIBBALL} 
+ ${COMPONENT_LIBBALL_DEV} 
+ ${COMPONENT_PYTHON_BINDINGS_BALL}
+ ${COMPONENT_DOCUMENTATION_EXAMPLES}
+ ${COMPONENT_DOCUMENTATION_HTML}
+ ${COMPONENT_DOCUMENTATION_PDF}
+ ${COMPONENT_PLUGINS}
+ "Unspecified"
+)
+
+LIST(REMOVE_DUPLICATES BALL_COMPONENTS)
+
+SET_COMPONENT_NAME(${COMPONENT_LIBBALL} 
+	"BALL libraries and runtime"
+	"The Biochemical Algorithms Library (BALL) is a rapid application development framework written in C++. It offers a variety of data structures and algorithms for all kinds of applications arising in molecular modelling."
+)
+
+SET_COMPONENT_NAME(${COMPONENT_LIBBALL_DEV}
+	"Development components for BALL"
+	"Files required for developing with BALL (C++ - header files, ...)"
+)
+SET_COMPONENT_DEPENDENCIES(${COMPONENT_LIBBALL_DEV} ${COMPONENT_LIBBALL})
+
+SET_COMPONENT_NAME(${COMPONENT_PYTHON_BINDINGS_BALL} 
+	"BALL Python bindings"
+	"The Python bindings can be used to develop fully functional BALL-based applications completely in Python. In addition, they allow to freely script BALLView"
+)
+SET_COMPONENT_DEPENDENCIES(${COMPONENT_PYTHON_BINDINGS_BALL} ${COMPONENT_LIBBALL})
+
+SET_COMPONENT_NAME(${COMPONENT_DOCUMENTATION_HTML}
+	"BALL html Documentation"
+	"This package contains the full documentation to the BALL and VIEW libraries in html format"
+)
+SET_COMPONENT_DEPENDENCIES(${COMPONENT_DOCUMENTATION_HTML} ${COMPONENT_LIBBALL})
+
+IF(NOT COMPONENT_DOCUMENTATION_HTML STREQUAL ${COMPONENT_DOCUMENTATION_PDF})
+
+	SET_COMPONENT_NAME(${COMPONENT_DOCUMENTATION_PDF}
+		"BALL PDF Documentation"
+		"This package contains the full documentation to the BALL and VIEW libraries in PDF format"
+	)
+	SET_COMPONENT_DEPENDENCIES(${COMPONENT_DOCUMENTATION_PDF} ${COMPONENT_LIBBALL})
+
+ENDIF()
+
+IF(NOT COMPONENT_DOCUMENTATION_EXAMPLES STREQUAL ${COMPONENT_DOCUMENTATION_PDF})
+
+	SET_COMPONENT_NAME(${COMPONENT_DOCUMENTATION_EXAMPLES}
+		"BALL Usage Examples"
+		"This package contains a number of examples showing the use of BALL as a library and python module"
+	)
+	SET_COMPONENT_DEPENDENCIES(${COMPONENT_DOCUMENTATION_EXAMPLES} ${COMPONENT_LIBBALL})
+
+ENDIF()
+
+SET(CPACK_COMPONENTS_ALL ${BALL_COMPONENTS})
