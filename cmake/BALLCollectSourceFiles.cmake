@@ -28,13 +28,13 @@
 # -----------------------------------------------------------------------------
 
 
-# BALLIncludes.cmake
+# BALLCollectSourceFiles.cmake
 #
 # This file gathers all source and header files that are compiled into the project target(s)
 
 # Set empty lists that will be filled with source and header files of BALL_core
-SET(BALL_sources CACHE INTERNAL "This variable should hold all BALL sources at the end of the config step")
-SET(BALL_headers CACHE INTERNAL "This variable should hold all BALL headers at the end of the config step")
+SET(BALL_sources "" CACHE INTERNAL "This variable should hold all BALL sources at the end of the config step")
+SET(BALL_headers "" CACHE INTERNAL "This variable should hold all BALL headers at the end of the config step")
 
 
 
@@ -66,7 +66,7 @@ FOREACH(source_file ${sources_cmake_lists})
 	ENDIF()
 
 	IF(MOC_SOURCES_LIST)
-		ADD_BALL_CORE_MOCFILES("${GROUP}" "${SOURCE_DIR}" "include/BALL_core/" "${MOC_SOURCES_LIST}")
+		ADD_BALL_MOCFILES("${GROUP}" "${SOURCE_DIR}" "include/${SUBPROJECT_NAME}/" "${MOC_SOURCES_LIST}")
 	ENDIF()
 
 	IF(PARSER_LEXER_LIST)

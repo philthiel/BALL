@@ -30,6 +30,8 @@
 
 PROJECT("BALL_core")
 
+SET(SUBPROJECT_NAME "BALL_core")
+
 
 ###############################################################################
 # Set BALL_core CMake module path and load macros and other paths
@@ -69,17 +71,17 @@ CONFIGURE_FILE("${PROJECT_SOURCE_DIR}/cmake/templates/version.h.in" "${PROJECT_B
 ###############################################################################
 
 # Collect all source and header files of the project BALL_core.
-# The CMake file 'BALLIncludes.cmake' creates the following variables:
+# The CMake file 'BALLCollectSourceFiles.cmake' creates the following variables:
 #   - BALL_sources: a list that contains all source files
 #   - BALL_headers: a list that contains all files files. All header files have the property 'HEADER_FILE_ONLY'
-INCLUDE(BALLIncludes)
+INCLUDE(BALLCollectSourceFiles)
 
-# Add BALL library
+# Add BALL_core library
 # Note: header files are only included to make them visible in Visual Studio
-ADD_LIBRARY(BALL SHARED ${BALL_sources} ${BALL_headers})
+ADD_LIBRARY(BALL_core SHARED ${BALL_sources} ${BALL_headers})
 
 # Add libraries to be linked against
-TARGET_LINK_LIBRARIES(BALL ${BALL_DEPENDENCY_LIBS})
+TARGET_LINK_LIBRARIES(BALL_core ${BALL_DEPENDENCY_LIBS})
 
 # BALL compile flags
 SET(BALL_COMPILE_FLAGS)
@@ -88,8 +90,8 @@ SET(BALL_COMPILE_FLAGS)
 SET(BALL_LINK_FLAGS)
 
 # Set compile flag properties of target BALL
-SET_TARGET_PROPERTIES(BALL PROPERTIES COMPILE_FLAGS "${BALL_COMPILE_FLAGS}" LINK_FLAGS "${BALL_LINK_FLAGS}")
+SET_TARGET_PROPERTIES(BALL_core PROPERTIES COMPILE_FLAGS "${BALL_COMPILE_FLAGS}" LINK_FLAGS "${BALL_LINK_FLAGS}")
 
 # Set version property of target BALL
-SET_TARGET_PROPERTIES(BALL PROPERTIES VERSION "${BALL_VERSION_MAJOR}.${BALL_VERSION_MINOR}")
+SET_TARGET_PROPERTIES(BALL_core PROPERTIES VERSION "${BALL_VERSION_MAJOR}.${BALL_VERSION_MINOR}")
 
