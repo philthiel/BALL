@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/charmmEEF1.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL_core/MOLMEC/PARAMETER/charmmEEF1.h>
+#include <BALL_core/MOLMEC/PARAMETER/forceFieldParameters.h>
 #include <cstring>
 
 using namespace std;

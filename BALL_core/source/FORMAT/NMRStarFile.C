@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/NMRStarFile.h>
-#include <BALL/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/NMRStarFile.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
 #include <iostream>
 #include <fstream>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/NMR/shiftModule.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/STRUCTURE/peptides.h>
+#include <BALL_core/NMR/shiftModule.h>
+#include <BALL_core/SYSTEM/path.h>
 
 //#define NMRSTAR_DEBUG 1
 #undef NMRSTAR_DEBUG

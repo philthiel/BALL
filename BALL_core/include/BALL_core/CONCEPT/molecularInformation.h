@@ -6,7 +6,7 @@
 #define BALL_CONCEPT_MOLECULARINFORMATION_H
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 namespace BALL

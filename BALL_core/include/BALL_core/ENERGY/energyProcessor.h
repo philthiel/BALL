@@ -8,15 +8,15 @@
 #define BALL_ENERGY_ENERGYPROCESSOR_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 namespace BALL

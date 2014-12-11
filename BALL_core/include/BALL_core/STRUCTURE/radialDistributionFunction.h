@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
 
 #ifndef BALL_MATHS_PPOLYNOMIAL_H
-# include <BALL/MATHS/piecewisePolynomial.h>
+# include <BALL_core/MATHS/piecewisePolynomial.h>
 #endif
 
 namespace BALL

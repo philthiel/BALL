@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/poseClustering.h>
+#include <BALL_core/DOCKING/COMMON/poseClustering.h>
 
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/STRUCTURE/RMSDMinimizer.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/FORMAT/lineBasedFile.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
+#include <BALL_core/STRUCTURE/RMSDMinimizer.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
 
 // TEST
-//#include <BALL/MATHS/angle.h>
+//#include <BALL_core/MATHS/angle.h>
 
 #include <stack>
 #include <queue>

@@ -10,18 +10,18 @@
 #define BALL_MOLMEC_FORCEFIELDCOMPONENT_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include	<BALL/DATATYPE/string.h>
+#	include	<BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include	<BALL/KERNEL/atom.h>
+#	include	<BALL_core/KERNEL/atom.h>
 #endif
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
 
 namespace BALL 
 {

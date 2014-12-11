@@ -6,13 +6,13 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/STRUCTURE/disulfidBondProcessor.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL_core/STRUCTURE/disulfidBondProcessor.h>
+#include <BALL_core/STRUCTURE/peptides.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/forEach.h>
 
 using namespace std;
 

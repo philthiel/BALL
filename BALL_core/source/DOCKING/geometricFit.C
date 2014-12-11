@@ -2,32 +2,32 @@
 //			- find out if all functions are really ever called in the algorithm
 //			- make use of real-to-complex property
 
-#include <BALL/DOCKING/geometricFit.h>
+#include <BALL_core/DOCKING/geometricFit.h>
 
 #include <cmath>
 #include <list>
 #include <set>
 
 ////////////////
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/KERNEL/molecule.h>
 
-#include <BALL/DATATYPE/hashGrid.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
 
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/surfaceProcessor.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/surfaceProcessor.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/DATATYPE/string.h>
 
 #ifdef BALL_HAS_MPI
-# include <BALL/SYSTEM/MPISupport.h>
+# include <BALL_core/SYSTEM/MPISupport.h>
 #endif
 
 

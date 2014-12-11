@@ -6,7 +6,7 @@
 #define BALL_FORMAT_LINEBASEDFILE_H
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #include <vector>
@@ -185,7 +185,7 @@ namespace BALL
 
 
 # ifndef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/FORMAT/lineBasedFile.iC>
+#   include <BALL_core/FORMAT/lineBasedFile.iC>
 # endif
 } // namespace BALL
 

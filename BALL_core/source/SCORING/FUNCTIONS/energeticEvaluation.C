@@ -1,4 +1,4 @@
-#include <BALL/SCORING/FUNCTIONS/energeticEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/energeticEvaluation.h>
 
 //using namespace::std;
 using namespace BALL;

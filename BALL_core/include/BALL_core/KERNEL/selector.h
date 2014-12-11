@@ -8,7 +8,7 @@
 #define BALL_KERNEL_SELECTOR_H
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/KERNEL/expression.h>
+#	include <BALL_core/KERNEL/expression.h>
 #endif
 
 

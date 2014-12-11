@@ -4,7 +4,7 @@
 // $Id: pairExpRDFIntegrator.C,v 1.18 2004/11/07 19:54:59 oliver Exp $
 //
 
-#include <BALL/SOLVATION/pairExpRDFIntegrator.h>
+#include <BALL_core/SOLVATION/pairExpRDFIntegrator.h>
 
 #include <limits>
 

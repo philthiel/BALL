@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/secondaryStructureProcessor.h>
-#include <BALL/STRUCTURE/HBondProcessor.h>
+#include <BALL_core/STRUCTURE/secondaryStructureProcessor.h>
+#include <BALL_core/STRUCTURE/HBondProcessor.h>
 
-#include <BALL/KERNEL/secondaryStructure.h>           
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/KERNEL/secondaryStructure.h>           
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/chain.h>
+#include <BALL_core/KERNEL/bond.h>
 #include <cmath>
 
 using namespace std;

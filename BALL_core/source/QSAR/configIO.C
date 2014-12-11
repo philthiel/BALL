@@ -1,6 +1,6 @@
-#include <BALL/QSAR/configIO.h>
-#include <BALL/QSAR/exception.h>
-#include <BALL/QSAR/registry.h>
+#include <BALL_core/QSAR/configIO.h>
+#include <BALL_core/QSAR/exception.h>
+#include <BALL_core/QSAR/registry.h>
  
 using namespace std;
 

@@ -10,11 +10,11 @@
 #define BALL_MOLMEC_COMMON_RULEEVALUATOR_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/KERNEL/expression.h>
+#	include <BALL_core/KERNEL/expression.h>
 #endif
 
 #include <list>

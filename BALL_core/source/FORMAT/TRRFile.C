@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/TRRFile.h>
-#include <BALL/MOLMEC/COMMON/snapShot.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/FORMAT/TRRFile.h>
+#include <BALL_core/MOLMEC/COMMON/snapShot.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/KERNEL/system.h>
 
 using namespace std;
 

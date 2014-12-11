@@ -8,11 +8,11 @@
 #define BALL_MATHS_CIRCLE3_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 

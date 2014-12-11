@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/QSAR/oplsModel.h>
-#include <BALL/QSAR/statistics.h>
+#include <BALL_core/QSAR/oplsModel.h>
+#include <BALL_core/QSAR/statistics.h>
  
 namespace BALL
 {

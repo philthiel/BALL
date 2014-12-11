@@ -8,31 +8,31 @@
 #define BALL_KERNEL_STANDARDPREDICATES_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#	include <BALL/KERNEL/bond.h>
+#	include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/KERNEL/expression.h>
+#	include <BALL_core/KERNEL/expression.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SMARTSMATCHER_H
-# include <BALL/STRUCTURE/smartsMatcher.h>
+# include <BALL_core/STRUCTURE/smartsMatcher.h>
 #endif
 
 #ifndef BALL_QSAR_AROMATICITYPROCESSOR_H
-# include <BALL/QSAR/aromaticityProcessor.h>
+# include <BALL_core/QSAR/aromaticityProcessor.h>
 #endif
 
 #ifndef BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
-# include <BALL/QSAR/ringPerceptionProcessor.h>
+# include <BALL_core/QSAR/ringPerceptionProcessor.h>
 #endif
 
 namespace BALL 

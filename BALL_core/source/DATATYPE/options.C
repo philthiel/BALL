@@ -4,7 +4,7 @@
 // $Id: options.C,v 1.27.14.2 2007/05/17 00:02:42 amoll Exp $ 
 //
 
-#include <BALL/DATATYPE/options.h>
+#include <BALL_core/DATATYPE/options.h>
 
 #include <cstdlib>
 #include <cerrno>

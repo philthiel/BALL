@@ -6,31 +6,31 @@
 #define BALL_MATHS_ANALYTICALGEOMETRY_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/MATHS/circle3.h>
+#	include <BALL_core/MATHS/circle3.h>
 #endif
 
 #ifndef BALL_MATHS_LINE3_H
-#	include <BALL/MATHS/line3.h>
+#	include <BALL_core/MATHS/line3.h>
 #endif
 
 #ifndef BALL_MATHS_PLANE3_H
-#	include <BALL/MATHS/plane3.h>
+#	include <BALL_core/MATHS/plane3.h>
 #endif
 
 #ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #define BALL_MATRIX_CELL(m, dim, row, col)   *((m) + (row) * (dim) + (col))

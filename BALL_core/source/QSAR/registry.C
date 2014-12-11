@@ -1,22 +1,22 @@
-#include <BALL/QSAR/registry.h>
+#include <BALL_core/QSAR/registry.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/svmModel.h>
-#include <BALL/QSAR/logitModel.h>
-#include <BALL/QSAR/snBModel.h>
-#include <BALL/QSAR/nBModel.h>
+#include <BALL_core/QSAR/QSARData.h>
+#include <BALL_core/QSAR/svmModel.h>
+#include <BALL_core/QSAR/logitModel.h>
+#include <BALL_core/QSAR/snBModel.h>
+#include <BALL_core/QSAR/nBModel.h>
 
-#include <BALL/QSAR/allModel.h>
-#include <BALL/QSAR/gpModel.h>
-#include <BALL/QSAR/knnModel.h>
-#include <BALL/QSAR/kpcrModel.h>
-#include <BALL/QSAR/kplsModel.h>
-#include <BALL/QSAR/ldaModel.h>
-#include <BALL/QSAR/mlrModel.h>
-#include <BALL/QSAR/oplsModel.h>
-#include <BALL/QSAR/pcrModel.h>
-#include <BALL/QSAR/plsModel.h>
-#include <BALL/QSAR/rrModel.h>
+#include <BALL_core/QSAR/allModel.h>
+#include <BALL_core/QSAR/gpModel.h>
+#include <BALL_core/QSAR/knnModel.h>
+#include <BALL_core/QSAR/kpcrModel.h>
+#include <BALL_core/QSAR/kplsModel.h>
+#include <BALL_core/QSAR/ldaModel.h>
+#include <BALL_core/QSAR/mlrModel.h>
+#include <BALL_core/QSAR/oplsModel.h>
+#include <BALL_core/QSAR/pcrModel.h>
+#include <BALL_core/QSAR/plsModel.h>
+#include <BALL_core/QSAR/rrModel.h>
 
 using namespace std;
 

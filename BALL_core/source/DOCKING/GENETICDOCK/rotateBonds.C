@@ -3,19 +3,19 @@
 // $Authors: Jan Fuhrmann, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/COMMON/constants.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/COMMON/constants.h>
 
 #include <iostream>
 
-#include <BALL/DOCKING/GENETICDOCK/rotateBonds.h>
+#include <BALL_core/DOCKING/GENETICDOCK/rotateBonds.h>
 
-#include <BALL/DOCKING/GENETICDOCK/rotateBond.h>
-#include <BALL/PYTHON/pyConstant.h>
+#include <BALL_core/DOCKING/GENETICDOCK/rotateBond.h>
+//#include <BALL_core/PYTHON/pyConstant.h>
 
 using namespace std;
 

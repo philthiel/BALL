@@ -6,22 +6,22 @@
 #define BALL_DATATYPE_STRING_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 #ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/COMMON/global.h>
+#	include <BALL_core/COMMON/global.h>
 #endif
 #ifndef BALL_COMMON_CREATE_H
-#	include <BALL/COMMON/create.h>
+#	include <BALL_core/COMMON/create.h>
 #endif
 #ifndef BALL_COMMON_MACROS_H
-#	include <BALL/COMMON/macros.h>
+#	include <BALL_core/COMMON/macros.h>
 #endif
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 #ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/COMMON/debug.h>
+#	include <BALL_core/COMMON/debug.h>
 #endif
 
 #include <string>
@@ -1892,7 +1892,7 @@ namespace std
 	//@}
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/DATATYPE/string.iC>
+#		include <BALL_core/DATATYPE/string.iC>
 #	endif
 
 #endif // BALL_DATATYPE_STRING_H

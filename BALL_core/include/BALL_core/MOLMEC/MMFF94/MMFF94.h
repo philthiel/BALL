@@ -10,31 +10,31 @@
 #define BALL_MOLMEC_MMFF94_MMFF94_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/MOLMEC/COMMON/forceField.h>
+#	include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-# include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+# include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PROCESSORS_H
-# include <BALL/MOLMEC/MMFF94/MMFF94Processors.h>
+# include <BALL_core/MOLMEC/MMFF94/MMFF94Processors.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_STRUCTURE_KEKULIZER_H
-# include <BALL/STRUCTURE/kekulizer.h>
+# include <BALL_core/STRUCTURE/kekulizer.h>
 #endif
 
 #include <vector>

@@ -3,11 +3,11 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/polarity.h>
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/SCORING/COMPONENTS/polarity.h>
+#include <BALL_core/SCORING/COMPONENTS/fresnoTypes.h>
+#include <BALL_core/KERNEL/PTE.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 
 using namespace std;

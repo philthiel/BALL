@@ -3,14 +3,14 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/hydrogenBond.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL_core/SCORING/COMPONENTS/hydrogenBond.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/DATATYPE/hashMap.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 using namespace BALL;
 using namespace std;

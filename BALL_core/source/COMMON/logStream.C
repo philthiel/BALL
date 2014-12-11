@@ -557,7 +557,7 @@ namespace BALL
 	BALL_EXPORT		LogStream	Log(new LogStreamBuf, true, true);
 
 #	ifdef	BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/COMMON/logStream.iC>
+#		include <BALL_core/COMMON/logStream.iC>
 #	endif
 
 } // namespace BALL

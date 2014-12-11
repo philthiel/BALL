@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_COMPONENTS_VANDERWAALS_H
 #define BALL_SCORING_COMPONENTS_VANDERWAALS_H
 
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
+#include <BALL_core/MOLMEC/AMBER/amberNonBonded.h>
 
 
 namespace BALL

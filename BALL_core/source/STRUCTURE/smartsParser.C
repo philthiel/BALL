@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/smartsParser.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/smartsParser.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <stack>
 

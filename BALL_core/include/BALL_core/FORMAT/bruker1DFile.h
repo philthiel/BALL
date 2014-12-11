@@ -6,11 +6,11 @@
 #define BALL_FORMAT_BRUKER1DFILE_H
 
 #ifndef BALL_FORMAT_JCAMPFILE_H
-# include <BALL/FORMAT/JCAMPFile.h>
+# include <BALL_core/FORMAT/JCAMPFile.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/DATATYPE/regularData1D.h>
+# include <BALL_core/DATATYPE/regularData1D.h>
 #endif
 
 namespace BALL

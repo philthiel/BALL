@@ -1,4 +1,4 @@
-#include <BALL/CONFIG/config.h>
+#include <BALL_core/CONFIG/config.h>
 
 namespace BALL
 {

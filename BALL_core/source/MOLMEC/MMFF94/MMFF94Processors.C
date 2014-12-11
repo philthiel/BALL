@@ -4,20 +4,20 @@
 // $Id: MMFF94Processors.C,v 1.1.8.2 2007/08/05 18:53:02 amoll Exp $
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94Processors.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Processors.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/STRUCTURE/smartsMatcher.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/STRUCTURE/smartsMatcher.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/SYSTEM/path.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 //    #define BALL_MMFF94_TEST
 #define BALL_DEBUG_TEST
 

@@ -6,19 +6,19 @@
 #define BALL_CONCEPT_TIMESTAMP_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_CREATE_H
-#	include <BALL/COMMON/create.h>
+#	include <BALL_core/COMMON/create.h>
 #endif
 
 #ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/COMMON/debug.h>
+#	include <BALL_core/COMMON/debug.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-# include <BALL/CONCEPT/persistenceManager.h>
+# include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 #include <iostream>
@@ -290,7 +290,7 @@ namespace BALL
 
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/timeStamp.iC>
+#		include <BALL_core/CONCEPT/timeStamp.iC>
 #	endif
 
 } // namespace BALL

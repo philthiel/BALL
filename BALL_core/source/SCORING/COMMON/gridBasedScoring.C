@@ -3,14 +3,14 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/STRUCTURE/residueRotamerSet.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
+#include <BALL_core/STRUCTURE/residueRotamerSet.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/iostreams/filter/gzip.hpp>

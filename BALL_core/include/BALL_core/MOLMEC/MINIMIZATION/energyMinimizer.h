@@ -10,11 +10,11 @@
 #define BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/DATATYPE/options.h>
+#	include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_GRADIENT_H
-#	include <BALL/MOLMEC/COMMON/gradient.h>
+#	include <BALL_core/MOLMEC/COMMON/gradient.h>
 #endif
 
 namespace BALL 

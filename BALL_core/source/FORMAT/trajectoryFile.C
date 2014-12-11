@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
 
 using namespace std;
 

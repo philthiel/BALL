@@ -1,5 +1,5 @@
-#include <BALL/XRAY/crystalGenerator.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/XRAY/crystalGenerator.h>
+#include <BALL_core/KERNEL/system.h>
 
 using namespace std;
 

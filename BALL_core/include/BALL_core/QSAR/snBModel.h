@@ -7,15 +7,15 @@
 #define SNBMODEL
 
 #ifndef BALL_QSAR_COMMON_H
-	#include <BALL/QSAR/common.h>
+	#include <BALL_core/QSAR/common.h>
 #endif
 
 #ifndef STATISTICS
-#include <BALL/QSAR/statistics.h>
+#include <BALL_core/QSAR/statistics.h>
 #endif
 
 #ifndef BAYESMODEL
-#include <BALL/QSAR/bayesModel.h>
+#include <BALL_core/QSAR/bayesModel.h>
 #endif
 
 

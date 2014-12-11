@@ -3,15 +3,15 @@
 //
 
 #ifndef BALL_CONCEPT_AUTODELETABLE_H
-# include <BALL/CONCEPT/autoDeletable.h>
+# include <BALL_core/CONCEPT/autoDeletable.h>
 #endif
 
 #ifndef BALL_SYSTEM_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULAREXPRESSION_H
-# include <BALL/DATATYPE/regularExpression.h>
+# include <BALL_core/DATATYPE/regularExpression.h>
 #endif
 
 #include <string>

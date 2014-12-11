@@ -4,7 +4,7 @@
 // $Id: PDBdefs.C,v 1.5 2005/02/23 11:34:18 oliver Exp $
 //
 
-#include <BALL/FORMAT/PDBdefs.h>
+#include <BALL_core/FORMAT/PDBdefs.h>
 
 namespace BALL
 {

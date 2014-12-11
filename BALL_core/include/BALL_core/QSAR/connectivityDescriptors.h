@@ -7,7 +7,7 @@
 #define BALL_QSAR_CONNECTIVITYDESCRIPTORS_H
 
 #ifndef BALL_QSAR_CONNECTIVITYBASE_H
-# include <BALL/QSAR/connectivityBase.h>
+# include <BALL_core/QSAR/connectivityBase.h>
 #endif
 
 namespace BALL

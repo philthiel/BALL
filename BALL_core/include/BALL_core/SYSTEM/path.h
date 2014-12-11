@@ -11,15 +11,15 @@
 #define BALL_COMMON_PATH_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #include <vector>

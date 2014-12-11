@@ -5,11 +5,11 @@
 #include <map>
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 namespace BALL 

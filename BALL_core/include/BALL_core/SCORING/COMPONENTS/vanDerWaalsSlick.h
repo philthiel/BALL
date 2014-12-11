@@ -4,11 +4,11 @@
 #ifndef BALL_SCORING_COMPONENTS_VANDERWAALSSLICK_H
 #define BALL_SCORING_COMPONENTS_VANDERWAALSSLICK_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
-#include <BALL/MOLMEC/PARAMETER/lennardJones.h>
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/MOLMEC/AMBER/amberNonBonded.h>
+#include <BALL_core/MOLMEC/PARAMETER/lennardJones.h>
+#include <BALL_core/MOLMEC/COMMON/atomVector.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 namespace BALL
 {

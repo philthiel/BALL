@@ -4,16 +4,16 @@
 // $Id: generalizedBornCase.C,v 1.3.10.1 2007/03/25 22:00:32 oliver Exp $
 //
 
-#include <BALL/SOLVATION/generalizedBornCase.h>
+#include <BALL_core/SOLVATION/generalizedBornCase.h>
 // #include "generalizedBornCase.h"
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/COMMON/exception.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/bond.h>
 
 using namespace std;
 

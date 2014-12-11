@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/XYZFile.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/FORMAT/XYZFile.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/COMMON/exception.h>
 
 using namespace std;
 

@@ -7,11 +7,11 @@
 #define BALL_QSAR_CONNECTIVITYBASE_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-	#include <BALL/COMMON/global.h>
+	#include <BALL_core/COMMON/global.h>
 #endif 
 
 #ifndef BALL_QSAR_DESCRIPTOR_H
-	#include <BALL/QSAR/descriptor.h>
+	#include <BALL_core/QSAR/descriptor.h>
 #endif
 
 namespace BALL

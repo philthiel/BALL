@@ -2,22 +2,22 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/DOCKING/GENETICDOCK/genes.h>
-#include <BALL/DOCKING/GENETICDOCK/evolutionaryDocking.h>
-#include <BALL/DOCKING/GENETICDOCK/dockProblem.h>
-#include <BALL/CONCEPT/composite.h>
+#include <BALL_core/FORMAT/HINFile.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/selector.h>
+#include <BALL_core/FORMAT/MOL2File.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/DATATYPE/options.h>
+#include <BALL_core/MATHS/quaternion.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/DOCKING/GENETICDOCK/genes.h>
+#include <BALL_core/DOCKING/GENETICDOCK/evolutionaryDocking.h>
+#include <BALL_core/DOCKING/GENETICDOCK/dockProblem.h>
+#include <BALL_core/CONCEPT/composite.h>
 
 #include <cmath>
 #include <iostream>

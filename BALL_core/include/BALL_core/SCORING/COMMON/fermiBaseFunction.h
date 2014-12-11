@@ -3,7 +3,7 @@
 #ifndef BALL_SCORING_COMMON_FERMIBASEFUNCTION_H
 #define BALL_SCORING_COMMON_FERMIBASEFUNCTION_H
 
-#include <BALL/SCORING/COMMON/baseFunction.h>
+#include <BALL_core/SCORING/COMMON/baseFunction.h>
 
 namespace BALL
 {

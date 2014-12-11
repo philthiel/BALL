@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_FUNCTIONS_PLPSCORING_H
 #define BALL_SCORING_FUNCTIONS_PLPSCORING_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
 
 namespace BALL
 {

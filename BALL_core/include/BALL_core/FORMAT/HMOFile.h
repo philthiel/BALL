@@ -5,14 +5,14 @@
 #ifndef BALL_FORMAT_HMOFILE_H
 #define BALL_FORMAT_HMOFILE_H
 
-#include <BALL/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-# include <BALL/MATHS/surface.h>
+# include <BALL_core/MATHS/surface.h>
 #endif
 
 namespace BALL

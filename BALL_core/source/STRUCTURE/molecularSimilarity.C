@@ -3,23 +3,23 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/STRUCTURE/molecularSimilarity.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/STRUCTURE/molecularSimilarity.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/SYSTEM/path.h>
 #include <fstream>
 #include <sstream>
 
 #ifdef BALL_HAS_OPENEYE
 	#include <oechem.h>
-	#include <BALL/FORMAT/SDFile.h>
+	#include <BALL_core/FORMAT/SDFile.h>
 	using namespace OEChem;
 #elif defined BALL_HAS_OPENBABEL
 	#include <openbabel/obconversion.h>
 	#include <openbabel/parsmart.h>
-	#include <BALL/FORMAT/SDFile.h>
+	#include <BALL_core/FORMAT/SDFile.h>
 	#include <openbabel/atom.h>
 	using namespace OpenBabel;
 #endif

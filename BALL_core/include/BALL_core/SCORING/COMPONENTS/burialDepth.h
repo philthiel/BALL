@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_COMPONENTS_BURIALDEPTH_H
 #define BALL_SCORING_COMPONENTS_BURIALDEPTH_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
 
 namespace BALL

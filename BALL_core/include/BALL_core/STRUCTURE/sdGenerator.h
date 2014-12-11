@@ -6,15 +6,15 @@
 #define BALL_STRUCTURE_SDGENERATOR_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RINGANALYSER_H
-# include <BALL/STRUCTURE/ringAnalyser.h>
+# include <BALL_core/STRUCTURE/ringAnalyser.h>
 #endif
 
 #ifndef BALL_KERNEL_PDBATOM_H
-# include <BALL/KERNEL/PDBAtom.h>
+# include <BALL_core/KERNEL/PDBAtom.h>
 #endif
 
 #include <vector>

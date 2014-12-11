@@ -6,15 +6,15 @@
 #define BALL_MATHS_VECTOR2_H
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_MATHS_COMMON_H
-#	include <BALL/MATHS/common.h>
+#	include <BALL_core/MATHS/common.h>
 #endif
 
 

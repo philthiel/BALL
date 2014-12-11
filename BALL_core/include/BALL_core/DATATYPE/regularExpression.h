@@ -6,7 +6,7 @@
 #define BALL_DATATYPE_REGULAREXPRESSION_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifdef BALL_HAS_BOOST_REGEX
@@ -41,7 +41,7 @@
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #define BALL_REGULAR_EXPRESSION_DEFAULT_PATTERN   ""
@@ -300,7 +300,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/DATATYPE/regularExpression.iC>
+#		include <BALL_core/DATATYPE/regularExpression.iC>
 #	endif
 } // namespace BALL
 

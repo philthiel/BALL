@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/GAMESSDatFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/FORMAT/GAMESSDatFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 // defined in the lexer (GAMESSDatParserLexer.l)
 extern void GAMESSDatParser_initBuffer(const char* buf);

@@ -8,15 +8,15 @@
 #define BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
 
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/MOLMEC/COMMON/snapShot.h>
+# include <BALL_core/MOLMEC/COMMON/snapShot.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 namespace BALL

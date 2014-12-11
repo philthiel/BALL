@@ -1,5 +1,5 @@
-#include <BALL/PLUGIN/pluginHandler.h>
-#include <BALL/PLUGIN/BALLPlugin.h>
+#include <BALL_core/PLUGIN/pluginHandler.h>
+#include <BALL_core/PLUGIN/BALLPlugin.h>
 
 #include <QtCore/QReadLocker>
 

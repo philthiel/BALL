@@ -6,11 +6,11 @@
 #define BALL_MATHS_VECTOR4_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifdef BALL_HAS_IEEEFP_H

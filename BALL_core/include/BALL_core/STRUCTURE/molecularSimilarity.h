@@ -11,11 +11,11 @@
 #define BALL_STRUCTURE_MOLECULARSIMILARITY_H
 
 #ifndef BALL_COMMON_H
-#       include <BALL/common.h>
+#       include <BALL_core/common.h>
 #endif
 
-#include <BALL/STRUCTURE/smartsMatcher.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/STRUCTURE/smartsMatcher.h>
+#include <BALL_core/KERNEL/system.h>
 
 #ifdef BALL_HAS_OPENEYE
 	#include <oechem/mol.h>

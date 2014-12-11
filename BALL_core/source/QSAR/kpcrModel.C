@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/QSAR/kpcrModel.h>
-#include <BALL/QSAR/pcrModel.h>
+#include <BALL_core/QSAR/kpcrModel.h>
+#include <BALL_core/QSAR/pcrModel.h>
 
 #include <Eigen/Dense>
 

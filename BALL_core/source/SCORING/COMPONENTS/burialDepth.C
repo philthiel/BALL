@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/burialDepth.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/SCORING/COMPONENTS/burialDepth.h>
+#include <BALL_core/KERNEL/atom.h>
 
 using namespace BALL;
 

@@ -3,7 +3,7 @@
 //
 // $Id: objectCreator.C,v 1.1.4.1 2007/03/25 22:00:06 oliver Exp $
 
-#include <BALL/CONCEPT/objectCreator.h>
+#include <BALL_core/CONCEPT/objectCreator.h>
 
 using namespace std;
 

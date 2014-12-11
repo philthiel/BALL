@@ -1,11 +1,11 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/XRAY/crystalInfo.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/FORMAT/parameterSection.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/XRAY/crystalInfo.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameterSection.h>
 
 using namespace std;
 

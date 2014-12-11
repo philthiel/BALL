@@ -6,11 +6,11 @@
 #ifndef BALL_QSAR_REGRESSIONVALIDATION_H
 #define BALL_QSAR_REGRESSIONVALIDATION_H
 
-#include <BALL/QSAR/common.h>
+#include <BALL_core/QSAR/common.h>
 
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/QSAR/QSARData.h>
 
-#include <BALL/QSAR/validation.h>
+#include <BALL_core/QSAR/validation.h>
 
 #include <iterator>
 

@@ -8,7 +8,7 @@
 #define BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
 
 #ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
-#	include <BALL/MOLMEC/MDSIMULATION/molecularDynamics.h>
+#	include <BALL_core/MOLMEC/MDSIMULATION/molecularDynamics.h>
 #endif
 
 namespace BALL 

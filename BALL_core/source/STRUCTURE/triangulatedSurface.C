@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/triangulatedSurface.h>
+#include <BALL_core/STRUCTURE/triangulatedSurface.h>
 
 #include <iterator>
 #include <map>

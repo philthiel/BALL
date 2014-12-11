@@ -8,11 +8,11 @@
 #define BALL_DATATYPE_STRINGHASHSET_H
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 namespace BALL 

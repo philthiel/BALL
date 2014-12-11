@@ -8,23 +8,23 @@
 #define BALL_MOLMEC_AMBER_NONBONDED_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_LENNARDJONES_H
-#	include <BALL/MOLMEC/PARAMETER/lennardJones.h>
+#	include <BALL_core/MOLMEC/PARAMETER/lennardJones.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
-#	include <BALL/MOLMEC/PARAMETER/potential1210.h>
+#	include <BALL_core/MOLMEC/PARAMETER/potential1210.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#	include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#	include <BALL/MOLMEC/COMMON/support.h>
+#	include <BALL_core/MOLMEC/COMMON/support.h>
 #endif
 
 namespace BALL 

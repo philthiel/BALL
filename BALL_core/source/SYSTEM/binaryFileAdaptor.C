@@ -1,5 +1,5 @@
-#include <BALL/SYSTEM/binaryFileAdaptor.h>
+#include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 
 #ifdef BALL_NO_INLINE_FUNCTIONS
-	#include <BALL/SYSTEM/binaryFileAdaptor.iC>
+	#include <BALL_core/SYSTEM/binaryFileAdaptor.iC>
 #endif

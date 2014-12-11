@@ -6,11 +6,11 @@
 #define BALL_KERNEL_ITERATOR_H
 
 #ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/CONCEPT/bidirectionalIterator.h>
+#	include <BALL_core/CONCEPT/bidirectionalIterator.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 

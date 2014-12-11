@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/SYSTEM/fileSystem.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL_core/DATATYPE/regularExpression.h>
 #ifdef BALL_HAS_PWD_H
 #include <pwd.h> // 'getpwnam'
 #endif

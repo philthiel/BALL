@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/global.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/global.h>
 
 using namespace::std;
 namespace BALL

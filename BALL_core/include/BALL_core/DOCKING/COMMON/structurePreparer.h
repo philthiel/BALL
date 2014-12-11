@@ -7,11 +7,11 @@
 #define BALL_DOCKING_COMMON_STRUCTUREPREPARER_H
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ADDHYDROGENSPROCESSOR_H
-#include <BALL/STRUCTURE/addHydrogenProcessor.h>
+#include <BALL_core/STRUCTURE/addHydrogenProcessor.h>
 #endif
 
 #include <set>

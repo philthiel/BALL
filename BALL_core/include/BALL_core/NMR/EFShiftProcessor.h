@@ -8,11 +8,11 @@
 #define BALL_NMR_EFSHIFTPROCESSOR_H
 
 #ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/NMR/shiftModule.h>
+#	include<BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include<BALL/KERNEL/expression.h>
+#	include<BALL_core/KERNEL/expression.h>
 #endif
 
 namespace BALL 

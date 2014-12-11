@@ -3,7 +3,7 @@
 //
 // $Id: typeRuleProcessor.C,v 1.3 2002/02/27 12:21:36 sturm Exp $
 
-#include <BALL/MOLMEC/COMMON/typeRuleProcessor.h>
+#include <BALL_core/MOLMEC/COMMON/typeRuleProcessor.h>
 
 namespace BALL
 {

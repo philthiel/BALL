@@ -3,10 +3,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/shiftModel1D.h>
-#include <BALL/NMR/shiftModel.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/NMR/shiftModel1D.h>
+#include <BALL_core/NMR/shiftModel.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
 
 using namespace std;
 

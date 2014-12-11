@@ -6,15 +6,15 @@
 #define BALL_CONCEPT_BASEITERATOR_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/COMMON/global.h>
+#	include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 namespace BALL 

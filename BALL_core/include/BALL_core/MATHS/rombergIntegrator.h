@@ -8,7 +8,7 @@
 #define BALL_MATHS_ROMBERGINTEGRATOR_H
 
 #ifndef BALL_MATHS_NUMERICALINTERGRATOR_H
-# include <BALL/MATHS/numericalIntegrator.h>
+# include <BALL_core/MATHS/numericalIntegrator.h>
 #endif
 
 namespace BALL

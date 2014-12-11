@@ -5,9 +5,9 @@
 // Atom gradient class: this class represents the gradient (i.e. the negative forces)
 // for a given system as a vector<Vector3>. THe gradient is stored in units of kJ/(mol A)
 
-#include <BALL/MOLMEC/COMMON/gradient.h>
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/MOLMEC/COMMON/gradient.h>
+#include <BALL_core/MOLMEC/COMMON/atomVector.h>
+#include <BALL_core/KERNEL/atom.h>
 
 using namespace std;
 

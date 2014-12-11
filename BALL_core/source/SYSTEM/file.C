@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/simpleDownloader.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/SYSTEM/simpleDownloader.h>
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL_core/DATATYPE/regularExpression.h>
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL_core/DATATYPE/regularExpression.h>
 
 #include <cstdlib>     // 'getenv'
 #include <sys/types.h>
@@ -569,7 +569,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/SYSTEM/file.iC>
+#		include <BALL_core/SYSTEM/file.iC>
 #	endif
 
 } // namespace BALL

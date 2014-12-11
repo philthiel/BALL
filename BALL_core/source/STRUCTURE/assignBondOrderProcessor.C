@@ -6,31 +6,31 @@
 #include <map>
 
 // BALL includes
-#include <BALL/kernel.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/STRUCTURE/connectedComponentsProcessor.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/QSAR/aromaticityProcessor.h>
-#include <BALL/KERNEL/expression.h>
+#include <BALL_core/kernel.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/STRUCTURE/connectedComponentsProcessor.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/QSAR/aromaticityProcessor.h>
+#include <BALL_core/KERNEL/expression.h>
 
 // Qt
 #include <QtXml/QtXml>
 #include <QtXml/qdom.h>
 
-#include <BALL/STRUCTURE/BONDORDERS/AStarBondOrderStrategy.h>
-#include <BALL/STRUCTURE/BONDORDERS/branchAndBoundBondOrderStrategy.h>
-#include <BALL/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.h>
-#include <BALL/STRUCTURE/BONDORDERS/KGreedyBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/AStarBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/branchAndBoundBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/KGreedyBondOrderStrategy.h>
 #ifdef BALL_HAS_LPSOLVE
-# include <BALL/STRUCTURE/BONDORDERS/ILPBondOrderStrategy.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/ILPBondOrderStrategy.h>
 #endif
 
 //#define DEBUG 1

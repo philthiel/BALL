@@ -8,7 +8,7 @@
 #define BALL_SYSTEM_FILESYSTEM_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifdef BALL_HAS_SYS_PARAM_H
@@ -25,7 +25,7 @@
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 namespace BALL 

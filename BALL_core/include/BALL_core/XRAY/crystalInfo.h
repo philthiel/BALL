@@ -5,27 +5,27 @@
 #define BALL_XRAY_CRYSTALINFO_H
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#include <BALL/CONCEPT/persistentObject.h>
+#include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#include <BALL/DATATYPE/options.h>
+#include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 

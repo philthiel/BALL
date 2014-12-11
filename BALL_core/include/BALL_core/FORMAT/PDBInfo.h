@@ -9,15 +9,15 @@
 #include <stdexcept>
 
 #ifndef BALL_FORMAT_PDBRECORDS_H
-#	include <BALL/FORMAT/PDBRecords.h>
+#	include <BALL_core/FORMAT/PDBRecords.h>
 #endif
 
 #ifndef BALL_FORMAT_PDBDEFS_H
-#	include <BALL/FORMAT/PDBdefs.h>
+#	include <BALL_core/FORMAT/PDBdefs.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 namespace BALL 

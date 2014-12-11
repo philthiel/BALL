@@ -4,10 +4,10 @@
 // $Id: lineSearch.C,v 1.20.8.3 2007/08/17 09:22:31 anhi Exp $
 //
 
-#include <BALL/MOLMEC/MINIMIZATION/lineSearch.h>
-#include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/lineSearch.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/energyMinimizer.h>
+#include <BALL_core/MOLMEC/COMMON/atomVector.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 // Parameter alpha for 'sufficient energy decrease'.
 #define LINESEARCH__DEFAULT_ALPHA 1.e-4

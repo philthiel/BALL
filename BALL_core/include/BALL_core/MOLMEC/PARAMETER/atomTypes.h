@@ -6,11 +6,11 @@
 #define BALL_MOLMEC_PARAMETER_ATOMTYPES_H
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #define	BALL_ATOM_WILDCARD_NAME "*"

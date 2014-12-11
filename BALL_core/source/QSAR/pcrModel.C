@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/pcrModel.h>
+#include <BALL_core/QSAR/pcrModel.h>
 #include <Eigen/Dense>
 
 namespace BALL

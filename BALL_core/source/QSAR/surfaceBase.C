@@ -4,14 +4,14 @@
 // $Id: surfaceBase.C,v 1.2.28.1 2007-03-16 00:06:50 bertsch Exp $
 //
 
-#include <BALL/QSAR/surfaceBase.h>
-#include <BALL/QSAR/partialChargeDescriptors.h>
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/CONCEPT/timeStamp.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL_core/QSAR/surfaceBase.h>
+#include <BALL_core/QSAR/partialChargeDescriptors.h>
+#include <BALL_core/QSAR/simpleDescriptors.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/KERNEL/fragment.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/CONCEPT/timeStamp.h>
+#include <BALL_core/STRUCTURE/numericalSAS.h>
 
 #define BALL_QSAR_SURFACEBASE_DEBUG
 #undef  BALL_QSAR_SURFACEBASE_DEBUG

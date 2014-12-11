@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/mlrModel.h>
+#include <BALL_core/QSAR/mlrModel.h>
 
 #include <Eigen/Dense>
 

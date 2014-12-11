@@ -7,7 +7,7 @@
 #define NLMODEL
 
 #ifndef REGRESSION
-#include <BALL/QSAR/regressionModel.h>
+#include <BALL_core/QSAR/regressionModel.h>
 #endif
 
 

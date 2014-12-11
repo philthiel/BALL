@@ -6,7 +6,7 @@
 #define BALL_FORMAT_TRAJECTORYFILEFACTORY_H
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 namespace BALL

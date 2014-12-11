@@ -6,11 +6,11 @@
 #define BALL_KERNEL_CHAIN_H
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_SECONDARYSTRUCTUREITERATOR_H
-#	include <BALL/KERNEL/secondaryStructureIterator.h>
+#	include <BALL_core/KERNEL/secondaryStructureIterator.h>
 #endif
 
 

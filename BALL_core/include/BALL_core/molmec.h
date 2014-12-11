@@ -9,23 +9,23 @@
 #define BALL_MOLMEC_H
 
 #ifndef BALL_MOLMEC_AMBER_H
-#	include <BALL/MOLMEC/amber.h>
+#	include <BALL_core/MOLMEC/amber.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_H
-#	include <BALL/MOLMEC/common.h>
+#	include <BALL_core/MOLMEC/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_MDSIMULATION_H
-#	include <BALL/MOLMEC/mdsimulation.h>
+#	include <BALL_core/MOLMEC/mdsimulation.h>
 #endif
 
 #ifndef BALL_MOLMEC_MINIMIZATION_H
-#	include <BALL/MOLMEC/minimization.h>
+#	include <BALL_core/MOLMEC/minimization.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_H
-#	include <BALL/MOLMEC/parameter.h>
+#	include <BALL_core/MOLMEC/parameter.h>
 #endif
 
 #endif // BALL_MOLMEC_H

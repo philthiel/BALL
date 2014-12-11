@@ -7,19 +7,19 @@
 
 
 #ifndef BALL_QSAR_VALIDATION_H
-#include <BALL/QSAR/validation.h>
+#include <BALL_core/QSAR/validation.h>
 #endif
 
 #ifndef BALL_QSAR_QSARDATA_H
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/QSAR/QSARData.h>
 #endif
 
 #ifndef BALL_QSAR_EXCEPTION_H
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
 #ifndef BALL_MATHS_PARSEDFUNCTION_H
-#include <BALL/MATHS/parsedFunction.h>
+#include <BALL_core/MATHS/parsedFunction.h>
 #endif
 
 #include <vector>

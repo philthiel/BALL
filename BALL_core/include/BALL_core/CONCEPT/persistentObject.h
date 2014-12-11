@@ -6,7 +6,7 @@
 #define BALL_CONCEPT_PERSISTENTOBJECT_H
 
 #ifndef BALL_CONCEPT_OBJECT_H
-#	include <BALL/CONCEPT/object.h>
+#	include <BALL_core/CONCEPT/object.h>
 #endif
 
 namespace BALL 

@@ -6,15 +6,15 @@
 #define BALL_KERNEL_RESIDUE_H
 
 #ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/KERNEL/fragment.h>
+#	include <BALL_core/KERNEL/fragment.h>
 #endif
 
 #ifndef BALL_KERNEL_PDBATOMITERATOR_H
-#	include <BALL/KERNEL/PDBAtomIterator.h>
+#	include <BALL_core/KERNEL/PDBAtomIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUEITERATOR_H
-#	include <BALL/KERNEL/residueIterator.h>
+#	include <BALL_core/KERNEL/residueIterator.h>
 #endif
 
  

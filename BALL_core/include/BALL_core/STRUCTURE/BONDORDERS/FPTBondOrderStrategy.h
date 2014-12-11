@@ -2,43 +2,43 @@
 #define BALL_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_MATHS_COMMON_H
-# include <BALL/MATHS/common.h>
+# include <BALL_core/MATHS/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-# include <BALL/KERNEL/bond.h>
+# include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_H
-# include <BALL/DATATYPE/GRAPH/molecularGraph.h>
+# include <BALL_core/DATATYPE/GRAPH/molecularGraph.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/DATATYPE/GRAPH/graphAlgorithms.h>
+# include <BALL_core/DATATYPE/GRAPH/graphAlgorithms.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_TREEWIDTH_H
-# include <BALL/DATATYPE/GRAPH/treeWidth.h>
+# include <BALL_core/DATATYPE/GRAPH/treeWidth.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
 #endif
 
 #include <algorithm>

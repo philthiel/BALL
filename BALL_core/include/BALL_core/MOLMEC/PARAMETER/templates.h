@@ -8,18 +8,18 @@
 #define BALL_MOLMEC_PARAMETER_TEMPLATES_H
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashset.h>
+# include <BALL_core/DATATYPE/hashset.h>
 #endif
 
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atom.h>
 
 namespace BALL 
 {

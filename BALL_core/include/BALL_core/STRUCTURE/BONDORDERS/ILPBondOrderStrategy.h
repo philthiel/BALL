@@ -2,11 +2,11 @@
 #define BALL_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
 #endif
 // forward declaration for lp_solve
 struct _lprec;

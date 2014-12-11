@@ -8,7 +8,7 @@
 #define BALL_SYSTEM_TIMER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifdef BALL_HAS_SYS_TIME_H

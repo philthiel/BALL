@@ -1,8 +1,8 @@
 %{
 
-#include <BALL/MOLMEC/AMBER/GAFFCESParser.h>
+#include <BALL_core/MOLMEC/AMBER/GAFFCESParser.h>
 #include "GAFFCESParserParser.h"
-#include <BALL/COMMON/parserDefinitions.h>
+#include <BALL_core/COMMON/parserDefinitions.h>
 
 using namespace BALL;
 

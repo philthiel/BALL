@@ -3,7 +3,7 @@
 
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #include <list>

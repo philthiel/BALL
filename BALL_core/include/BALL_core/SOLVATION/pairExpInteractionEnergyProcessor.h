@@ -8,35 +8,35 @@
 #define BALL_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include <BALL/KERNEL/atom.h>
+# include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-# include <BALL/MATHS/surface.h>
+# include <BALL_core/MATHS/surface.h>
 #endif
 
 #ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/ENERGY/energyProcessor.h>
+# include <BALL_core/ENERGY/energyProcessor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RDFPARAMETER_H
-# include <BALL/STRUCTURE/RDFParameter.h>
+# include <BALL_core/STRUCTURE/RDFParameter.h>
 #endif
 
 #ifndef BALL_SOLVATION_PAIREXPRDFINTEGRATOR_H
-# include <BALL/SOLVATION/pairExpRDFIntegrator.h>
+# include <BALL_core/SOLVATION/pairExpRDFIntegrator.h>
 #endif
 
 #ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-# include <BALL/SOLVATION/solventDescriptor.h>
+# include <BALL_core/SOLVATION/solventDescriptor.h>
 #endif
 
 // ?????: The constants alpha, C1 and C2 i.e. the K_ij have to be

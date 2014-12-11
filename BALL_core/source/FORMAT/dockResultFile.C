@@ -3,9 +3,9 @@
 // $Authors: Marc Röttig, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/FORMAT/dockResultFile.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/FORMAT/dockResultFile.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace std;
 

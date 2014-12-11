@@ -7,18 +7,18 @@
 #define PLSMODEL
 
 #ifndef LMODEL
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #ifndef STATISTICS
-#include <BALL/QSAR/statistics.h>
+#include <BALL_core/QSAR/statistics.h>
 #endif
 
 #ifndef QSAR_EXCEPTION
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
-#include <BALL/QSAR/latentVariableModel.h>
+#include <BALL_core/QSAR/latentVariableModel.h>
 
 
 namespace BALL

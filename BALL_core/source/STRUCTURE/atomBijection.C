@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/atomBijection.h>
+#include <BALL_core/STRUCTURE/atomBijection.h>
 
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/extractors.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/DATATYPE/hashGrid.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/extractors.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
 
 using namespace std;
 

@@ -2,21 +2,21 @@
 // vi: set ts=2:
 //
 
-#include <BALL/SOLVATION/ooiEnergy.h>
+#include <BALL_core/SOLVATION/ooiEnergy.h>
 
-#include <BALL/common.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/COMMON/exception.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/stringHashMap.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/MOLMEC/COMMON/typeRuleProcessor.h>
+#include <BALL_core/common.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/stringHashMap.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/STRUCTURE/numericalSAS.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/MOLMEC/COMMON/typeRuleProcessor.h>
 
 #define OOI_PARAMETER_FILENAME "solvation/Ooi.ini"
 

@@ -6,23 +6,23 @@
 #define BALL_STRUCTURE_DEFAULTPROCESSORS_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_atom_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 namespace BALL 

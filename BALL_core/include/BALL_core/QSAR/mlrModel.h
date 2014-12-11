@@ -7,11 +7,11 @@
 #define MLRMODEL
 
 #ifndef LMODEL
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #ifndef QSAR_EXCEPTION
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
 

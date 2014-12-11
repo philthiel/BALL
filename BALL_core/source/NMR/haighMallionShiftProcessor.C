@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/haighMallionShiftProcessor.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/NMR/haighMallionShiftProcessor.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace std;
 

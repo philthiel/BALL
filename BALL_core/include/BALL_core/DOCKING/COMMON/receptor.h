@@ -6,13 +6,13 @@
 #ifndef BALL_DOCKING_COMMON_RECEPTOR_H
 #define BALL_DOCKING_COMMON_RECEPTOR_H
 
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/DATATYPE/hashSet.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/PDBAtom.h>
+#include <BALL_core/DATATYPE/hashSet.h>
 
-#include <BALL/DOCKING/COMMON/conformation.h>
-#include <BALL/DOCKING/COMMON/flexibleMolecule.h>
-#include <BALL/DOCKING/COMMON/flexDefinition.h>
+#include <BALL_core/DOCKING/COMMON/conformation.h>
+#include <BALL_core/DOCKING/COMMON/flexibleMolecule.h>
+#include <BALL_core/DOCKING/COMMON/flexDefinition.h>
 
 namespace BALL
 {

@@ -3,18 +3,18 @@
 //
 // $Id: nonpolarSolvation.C,v 1.4 2006/05/27 09:05:23 anker Exp $
 
-#include <BALL/SCORING/COMPONENTS/nonpolarSolvation.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/MOLMEC/COMMON/radiusRuleProcessor.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/SCORING/COMPONENTS/nonpolarSolvation.h>
+#include <BALL_core/KERNEL/standardPredicates.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/defaultProcessors.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/DATATYPE/hashMap.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/MOLMEC/COMMON/radiusRuleProcessor.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/DATATYPE/string.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 using namespace std;
 

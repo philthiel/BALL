@@ -1,6 +1,6 @@
-#include <BALL/COMMON/global.h>
-#include <BALL/QSAR/Model.h>
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_core/QSAR/Model.h>
+#include <BALL_core/QSAR/QSARData.h>
 
 namespace BALL
 {

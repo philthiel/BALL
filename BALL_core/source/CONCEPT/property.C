@@ -4,9 +4,9 @@
 // $Id: property.C,v 1.31 2003/08/26 09:17:45 oliver Exp $
 //
 
-#include <BALL/CONCEPT/property.h>
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/property.h>
+#include <BALL_core/CONCEPT/persistenceManager.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
 
 using namespace std;
 
@@ -325,7 +325,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/property.iC>
+#		include <BALL_core/CONCEPT/property.iC>
 #	endif
 
 } // namespace BALL

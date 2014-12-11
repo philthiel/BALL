@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_SIMPLEMOLECULARGRAPH_H
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#	include <BALL/KERNEL/bond.h>
+#	include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_STRUCTURE_MOLECULE_H
-#	include <BALL/KERNEL/molecule.h>
+#	include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #ifndef BALL_STRUCTURE_FRAGMENT_H
-#	include <BALL/KERNEL/fragment.h>
+#	include <BALL_core/KERNEL/fragment.h>
 #endif
 
 #include <list>

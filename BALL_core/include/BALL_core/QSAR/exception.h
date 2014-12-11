@@ -6,7 +6,7 @@
 #define BALL_QSAR_EXCEPTION_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/COMMON/exception.h>
 #endif
 
 

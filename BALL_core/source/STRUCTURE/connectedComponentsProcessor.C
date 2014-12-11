@@ -1,5 +1,5 @@
-#include <BALL/STRUCTURE/connectedComponentsProcessor.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/STRUCTURE/connectedComponentsProcessor.h>
+#include <BALL_core/KERNEL/bond.h>
 
 #include <vector>
 #include <stack>

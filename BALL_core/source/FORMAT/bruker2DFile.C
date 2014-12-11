@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/bruker2DFile.h>
-#include <BALL/SYSTEM/binaryFileAdaptor.h>
+#include <BALL_core/FORMAT/bruker2DFile.h>
+#include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 
 using namespace std;
 

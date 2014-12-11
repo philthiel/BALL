@@ -7,19 +7,19 @@
 #define BALL_MOLMEC_AMBER_AMBER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/MOLMEC/COMMON/forceField.h>
+#	include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 namespace BALL 

@@ -5,27 +5,27 @@
 //
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/KERNEL/expression.h>
+#	include <BALL_core/KERNEL/expression.h>
 #endif
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/NMR/shiftModule.h>
+#	include <BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERS_H
-#	include <BALL/FORMAT/parameters.h>
+#	include <BALL_core/FORMAT/parameters.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #include <list>

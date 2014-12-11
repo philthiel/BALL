@@ -4,18 +4,18 @@
 
 // Molecular Mechanics: Charmm force field class
 
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/MOLMEC/CHARMM/charmmStretch.h>
-#include <BALL/MOLMEC/CHARMM/charmmBend.h>
-#include <BALL/MOLMEC/CHARMM/charmmTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmmImproperTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmmNonBonded.h>
-#include <BALL/MOLMEC/COMMON/assignTypes.h>
-#include <BALL/MOLMEC/PARAMETER/templates.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/MOLMEC/CHARMM/charmm.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmStretch.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmBend.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmTorsion.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmImproperTorsion.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmNonBonded.h>
+#include <BALL_core/MOLMEC/COMMON/assignTypes.h>
+#include <BALL_core/MOLMEC/PARAMETER/templates.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
 
 using namespace std;
 

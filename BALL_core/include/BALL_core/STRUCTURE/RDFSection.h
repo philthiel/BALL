@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_RDFSECTION_H
 
 #ifndef BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
-# include <BALL/STRUCTURE/radialDistributionFunction.h>
+# include <BALL_core/STRUCTURE/radialDistributionFunction.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/FORMAT/parameterSection.h>
+# include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 namespace BALL

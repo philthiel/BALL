@@ -1,7 +1,7 @@
 // $Id: linearBaseFunction.C,v 1.1 2005/11/21 19:27:08 anker Exp $
 
-#include <BALL/common.h>
-#include <BALL/SCORING/COMMON/linearBaseFunction.h>
+#include <BALL_core/common.h>
+#include <BALL_core/SCORING/COMMON/linearBaseFunction.h>
 
 namespace BALL
 {

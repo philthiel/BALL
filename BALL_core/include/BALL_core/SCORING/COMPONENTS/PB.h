@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/SOLVATION/poissonBoltzmann.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SOLVATION/poissonBoltzmann.h>
 
 #ifndef BALL_SCORING_COMPONENTS_PB_H
 #define BALL_SCORING_COMPONENTS_PB_H

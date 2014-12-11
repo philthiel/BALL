@@ -4,7 +4,7 @@
 // $Id: textPersistenceManager.C,v 1.20 2005/02/06 09:45:00 oliver Exp $
 //
 
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
 
 // #define BALL_DEBUG_PERSISTENCE
 

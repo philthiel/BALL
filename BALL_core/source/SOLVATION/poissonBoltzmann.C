@@ -6,18 +6,18 @@
 
 // FDPB: Finite Difference Poisson Solver
 
-#include <BALL/SOLVATION/poissonBoltzmann.h>
+#include <BALL_core/SOLVATION/poissonBoltzmann.h>
 
-#include <BALL/SOLVATION/molecularSurfaceGrid.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/MATHS/vector4.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SOLVATION/molecularSurfaceGrid.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/MATHS/vector4.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 // DEBUG
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/SYSTEM/file.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/SYSTEM/file.h>
 // /DEBUG
 
 using namespace std;

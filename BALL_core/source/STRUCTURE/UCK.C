@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/UCK.h>
+#include <BALL_core/STRUCTURE/UCK.h>
 
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <QtCore/QCryptographicHash>
 

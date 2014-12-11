@@ -7,7 +7,7 @@
 #define BALL_QSAR_KNNMODEL_H
 
 #ifndef BALL_QSAR_ALLMODEL_H
-#include <BALL/QSAR/allModel.h>
+#include <BALL_core/QSAR/allModel.h>
 #endif
 
 namespace BALL

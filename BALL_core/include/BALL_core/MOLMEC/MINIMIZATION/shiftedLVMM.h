@@ -8,11 +8,11 @@
 #define BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
 
 #ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
-#	include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
+#	include <BALL_core/MOLMEC/MINIMIZATION/energyMinimizer.h>
 #endif
 
 #ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-# include <BALL/MOLMEC/MINIMIZATION/lineSearch.h>
+# include <BALL_core/MOLMEC/MINIMIZATION/lineSearch.h>
 #endif
 
 namespace BALL 

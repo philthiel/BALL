@@ -8,19 +8,19 @@
 #define BALL_SOLVATION_PAIREXPRDFINTEGRATOR_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RDFINTEGRATOR_H
-# include <BALL/STRUCTURE/RDFIntegrator.h>
+# include <BALL_core/STRUCTURE/RDFIntegrator.h>
 #endif
 
 #ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-# include <BALL/STRUCTURE/piecewiseFunction.h>
+# include <BALL_core/STRUCTURE/piecewiseFunction.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 namespace BALL

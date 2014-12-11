@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
 
 using namespace std;
 

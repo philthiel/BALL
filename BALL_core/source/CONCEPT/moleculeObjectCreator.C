@@ -3,14 +3,14 @@
 //
 // $Id: moleculeObjectCreator.C,v 1.1.4.1 2007/03/25 22:00:06 oliver Exp $
 
-#include <BALL/CONCEPT/moleculeObjectCreator.h>
+#include <BALL_core/CONCEPT/moleculeObjectCreator.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/system.h>
 
 using namespace std;
 

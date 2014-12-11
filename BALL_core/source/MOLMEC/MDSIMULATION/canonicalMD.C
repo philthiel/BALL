@@ -3,11 +3,11 @@
 //
 // $Id: canonicalMD.C,v 1.22 2005/03/01 10:07:54 oliver Exp $
 
-#include <BALL/MOLMEC/MDSIMULATION/canonicalMD.h>
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/MOLMEC/MDSIMULATION/canonicalMD.h>
+#include <BALL_core/MOLMEC/COMMON/atomVector.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 namespace BALL
 {

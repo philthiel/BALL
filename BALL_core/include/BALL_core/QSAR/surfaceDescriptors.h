@@ -7,7 +7,7 @@
 #define BALL_QSAR_SURFACEDESCRIPTORS_H
 
 #ifndef BALL_QSAR_SURFACEBASE_H
-# include <BALL/QSAR/surfaceBase.h>
+# include <BALL_core/QSAR/surfaceBase.h>
 #endif
 
 namespace BALL

@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_RSVERTEX_H
 
 #ifndef BALL_STRUCTURE_GRAPHVERTEX_H
-#	include <BALL/STRUCTURE/graphVertex.h>
+#	include <BALL_core/STRUCTURE/graphVertex.h>
 #endif
 
 

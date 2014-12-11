@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/shiftModel.h>
-#include <BALL/CONCEPT/factory.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/NMR/johnsonBoveyShiftProcessor.h>
-#include <BALL/NMR/haighMallionShiftProcessor.h>
-#include <BALL/NMR/EFShiftProcessor.h>
-#include <BALL/NMR/anisotropyShiftProcessor.h>
-#include <BALL/NMR/randomCoilShiftProcessor.h>
-#include <BALL/NMR/HBondShiftProcessor.h>
-#include <BALL/NMR/empiricalHSShiftProcessor.h>
+#include <BALL_core/NMR/shiftModel.h>
+#include <BALL_core/CONCEPT/factory.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/NMR/johnsonBoveyShiftProcessor.h>
+#include <BALL_core/NMR/haighMallionShiftProcessor.h>
+#include <BALL_core/NMR/EFShiftProcessor.h>
+#include <BALL_core/NMR/anisotropyShiftProcessor.h>
+#include <BALL_core/NMR/randomCoilShiftProcessor.h>
+#include <BALL_core/NMR/HBondShiftProcessor.h>
+#include <BALL_core/NMR/empiricalHSShiftProcessor.h>
 
 using namespace std;
 

@@ -8,10 +8,10 @@
 #ifndef DNAMUTATOR_H
 #define DNAMUTATOR_H
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/STRUCTURE/mutator.h>
-#include <BALL/STRUCTURE/nucleotideMapping.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/STRUCTURE/mutator.h>
+#include <BALL_core/STRUCTURE/nucleotideMapping.h>
 
 #include <deque>
 #include <map>

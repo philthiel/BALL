@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/CHARMM/charmmTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmTorsion.h>
+#include <BALL_core/MOLMEC/CHARMM/charmm.h>
+#include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
 
 #include <algorithm>
 

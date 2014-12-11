@@ -6,15 +6,15 @@
 #define BALL_KERNEL_NUCLEOTIDE_H
 
 #ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/KERNEL/fragment.h>
+#	include <BALL_core/KERNEL/fragment.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_NUCLEOTIDEITERATOR_H
-#	include <BALL/KERNEL/nucleotideIterator.h>
+#	include <BALL_core/KERNEL/nucleotideIterator.h>
 #endif
 
  

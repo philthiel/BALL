@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/logitModel.h>
+#include <BALL_core/QSAR/logitModel.h>
 #include <Eigen/Dense>
 
 using namespace std;

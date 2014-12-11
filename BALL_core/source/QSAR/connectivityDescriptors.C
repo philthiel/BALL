@@ -4,13 +4,13 @@
 // $Id: connectivityDescriptors.C,v 1.1.28.1 2007/03/16 00:06:46 bertsch Exp $
 // 
 
-#include <BALL/QSAR/connectivityDescriptors.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/bondIterator.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/fragment.h>
+#include <BALL_core/QSAR/connectivityDescriptors.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/bondIterator.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/fragment.h>
 
 namespace BALL
 {

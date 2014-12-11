@@ -1,12 +1,12 @@
-#include <BALL/PLUGIN/pluginManager.h>
-#include <BALL/PLUGIN/BALLPlugin.h>
-#include <BALL/PLUGIN/pluginHandler.h>
+#include <BALL_core/PLUGIN/pluginManager.h>
+#include <BALL_core/PLUGIN/BALLPlugin.h>
+#include <BALL_core/PLUGIN/pluginHandler.h>
 
 #include <QtCore/QPluginLoader>
 #include <QtCore/QDir>
 #include <QtCore/QReadLocker>
 #include <QtCore/QWriteLocker>
-#include <BALL/COMMON/logStream.h>
+#include <BALL_core/COMMON/logStream.h>
 
 #if defined(BALL_OS_WINDOWS)
 # define PLUGIN_MASK "plugin*.dll"

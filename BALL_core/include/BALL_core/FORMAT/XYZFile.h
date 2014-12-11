@@ -6,7 +6,7 @@
 #define BALL_FORMAT_XYZFILE_H
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 namespace BALL 

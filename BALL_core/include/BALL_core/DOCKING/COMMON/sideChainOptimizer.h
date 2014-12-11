@@ -6,11 +6,11 @@
 #define BALL_DOCKING_COMMON_SIDECHAINOPTIMIZER
 
 #ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ROTAMERLIBRARY_H
-#include <BALL/STRUCTURE/rotamerLibrary.h>
+#include <BALL_core/STRUCTURE/rotamerLibrary.h>
 #endif
 
 #include <set>

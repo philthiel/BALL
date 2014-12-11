@@ -1,21 +1,21 @@
-#include <BALL/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
 
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/FORMAT/antechamberFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/XYZFile.h>
-#include <BALL/FORMAT/dockResultFile.h>
+#include <BALL_core/FORMAT/genericMolFile.h>
+#include <BALL_core/FORMAT/antechamberFile.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/HINFile.h>
+#include <BALL_core/FORMAT/MOLFile.h>
+#include <BALL_core/FORMAT/MOL2File.h>
+#include <BALL_core/FORMAT/SDFile.h>
+#include <BALL_core/FORMAT/XYZFile.h>
+#include <BALL_core/FORMAT/dockResultFile.h>
 
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
 
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/string.h>
 
 namespace BALL
 {

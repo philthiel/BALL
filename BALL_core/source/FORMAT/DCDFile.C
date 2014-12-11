@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/MOLMEC/COMMON/snapShot.h>
+#include <BALL_core/FORMAT/DCDFile.h>
+#include <BALL_core/MOLMEC/COMMON/snapShot.h>
 
 #undef BALL_DEBUG
 

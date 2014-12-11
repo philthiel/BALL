@@ -7,18 +7,18 @@
 #define BALL_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #endif
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
 namespace BALL
 {

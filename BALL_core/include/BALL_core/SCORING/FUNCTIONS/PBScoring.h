@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_FUNCTIONS_PBSCORING_H
 #define BALL_SCORING_FUNCTIONS_PBSCORING_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
 
 namespace BALL

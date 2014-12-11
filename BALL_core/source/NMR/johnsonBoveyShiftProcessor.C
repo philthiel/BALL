@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/johnsonBoveyShiftProcessor.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/NMR/johnsonBoveyShiftProcessor.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <list>
 

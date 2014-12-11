@@ -6,15 +6,15 @@
 // Molecular Mechanics: MMFF94 force field class
 //
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/fileSystem.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94StretchBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Torsion.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94NonBonded.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94OutOfPlaneBend.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/QSAR/aromaticityProcessor.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94StretchBend.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Torsion.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94NonBonded.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94OutOfPlaneBend.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/QSAR/aromaticityProcessor.h>
 
 // #define BALL_DEBUG_MMFF
 // #define BALL_DEBUG_TEST

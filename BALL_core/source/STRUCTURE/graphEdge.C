@@ -2,4 +2,4 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/graphEdge.h>
+#include <BALL_core/STRUCTURE/graphEdge.h>

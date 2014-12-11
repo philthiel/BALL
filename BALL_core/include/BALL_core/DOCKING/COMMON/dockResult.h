@@ -8,11 +8,11 @@
 #define BALL_DOCKING_COMMON_DOCKRESULT_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif
 
 namespace BALL

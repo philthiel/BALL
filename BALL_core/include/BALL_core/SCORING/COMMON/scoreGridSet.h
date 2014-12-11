@@ -6,10 +6,10 @@
 #ifndef BALL_SCORING_COMMON_SCOREGRIDSET
 #define BALL_SCORING_COMMON_SCOREGRIDSET
 
-#include <BALL/MATHS/vector3.h>
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/DATATYPE/regularData3D.h>
-#include <BALL/DOCKING/COMMON/constraints.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
+#include <BALL_core/DOCKING/COMMON/constraints.h>
 
 
 namespace BALL

@@ -8,23 +8,23 @@
 #define BALL_NMR_HBONDSHIFTPROCESSOR_H
 
 #ifndef BALL_KERNEL_PTE_H
-# include <BALL/KERNEL/PTE.h>
+# include <BALL_core/KERNEL/PTE.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-# include <BALL/KERNEL/bond.h>
+# include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include <BALL/KERNEL/atom.h>
+# include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_NMR_SHIFT_MODULE_H
-# include <BALL/NMR/shiftModule.h>
+# include <BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/FORMAT/parameterSection.h>
+# include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #include <map>

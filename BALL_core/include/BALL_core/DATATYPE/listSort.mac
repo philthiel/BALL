@@ -2,11 +2,11 @@
 #define BALL_DATATYPE_LISTSORT_MAC
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPARATOR_H
-#	include <BALL/CONCEPT/comparator.h>
+#	include <BALL_core/CONCEPT/comparator.h>
 #endif
 
 /* Sorts the null-terminated list that has head as the first */

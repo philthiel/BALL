@@ -6,35 +6,35 @@
 #define BALL_STRUCTURE_STRUCTUREMAPPER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#	include <BALL/STRUCTURE/geometricTransformations.h>
+#	include <BALL_core/STRUCTURE/geometricTransformations.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEIN_H
-#	include <BALL/KERNEL/protein.h>
+#	include <BALL_core/KERNEL/protein.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-#	include <BALL/STRUCTURE/atomBijection.h>
+#	include <BALL_core/STRUCTURE/atomBijection.h>
 #endif
 
 #include <vector>

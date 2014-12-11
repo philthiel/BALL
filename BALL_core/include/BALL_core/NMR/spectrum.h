@@ -8,28 +8,28 @@
 #define BALL_NMR_SPECTRUM_H
 
 #ifndef BALL_NMR_PEAKLIST_H
-#	include<BALL/NMR/peakList.h>
+#	include<BALL_core/NMR/peakList.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
-#	include<BALL/DATATYPE/regularData1D.h>
+#	include<BALL_core/DATATYPE/regularData1D.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA2D_H
-#	include<BALL/DATATYPE/regularData2D.h>
+#	include<BALL_core/DATATYPE/regularData2D.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-#	include<BALL/DATATYPE/regularData3D.h>
+#	include<BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #ifdef BALL_HAS_FFTW
-# include <BALL/MATHS/complex.h>
+# include <BALL_core/MATHS/complex.h>
 #ifndef BALL_MATHS_FFT1D_H
-# include <BALL/MATHS/FFT1D.h>
+# include <BALL_core/MATHS/FFT1D.h>
 #endif
 #ifndef BALL_MATHS_FFT2D_H
-# include <BALL/MATHS/FFT2D.h>
+# include <BALL_core/MATHS/FFT2D.h>
 #endif
 #endif
 
@@ -332,7 +332,7 @@ namespace BALL
 	std::istream& operator >> (std::istream& is, Spectrum<DataT, PeakT, PositionT>& spectrum);
 
 # ifndef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/NMR/spectrum.iC>
+#   include <BALL_core/NMR/spectrum.iC>
 # endif
 } // namespace BALL
 

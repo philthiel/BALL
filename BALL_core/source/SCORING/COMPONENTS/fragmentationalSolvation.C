@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/fragmentationalSolvation.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/SCORING/COMPONENTS/fragmentationalSolvation.h>
+#include <BALL_core/KERNEL/PTE.h>
 #include <map>
 
 using namespace BALL;

@@ -7,19 +7,19 @@
 #define BALL_QSAR_KERNEL_H
 
 #ifndef BALL_QSAR_LINEARMODEL_H
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #ifndef BALL_QSAR_MODEL_H
-#include <BALL/QSAR/Model.h>
+#include <BALL_core/QSAR/Model.h>
 #endif
 
 #ifndef BALL_QSAR_EXCEPTION_H
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
 #ifndef BALL_QSAR_REGRESSIONMODEL_H
-#include <BALL/QSAR/regressionModel.h>
+#include <BALL_core/QSAR/regressionModel.h>
 #endif
 
 #include <cmath>

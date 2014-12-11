@@ -8,19 +8,19 @@
 #define BALL_SYSTEM_DIRECTORY_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILESYSTEM_H
-#	include <BALL/SYSTEM/fileSystem.h>
+#	include <BALL_core/SYSTEM/fileSystem.h>
 #endif
 
 #ifdef BALL_HAS_DIRENT_H
@@ -307,7 +307,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/SYSTEM/directory.iC>
+#		include <BALL_core/SYSTEM/directory.iC>
 #	endif
   
 } // namespace BALL 

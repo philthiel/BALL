@@ -6,7 +6,7 @@
 #define BALL_CONCEPT_XDRPERSISTENCEMANAGER_H
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 #include <rpc/types.h>

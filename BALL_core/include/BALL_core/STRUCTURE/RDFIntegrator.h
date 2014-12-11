@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_RDFINTEGRATOR_H
 
 #ifndef BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
-# include <BALL/STRUCTURE/radialDistributionFunction.h>
+# include <BALL_core/STRUCTURE/radialDistributionFunction.h>
 #endif
 
 namespace BALL

@@ -1,8 +1,8 @@
 #ifndef BALL_STRUCTURE_MUTATOR_H
 #define BALL_STRUCTURE_MUTATOR_H
 
-#include <BALL/COMMON/debug.h>
-#include <BALL/COMMON/global.h>
+#include <BALL_core/COMMON/debug.h>
+#include <BALL_core/COMMON/global.h>
 
 namespace BALL
 {
@@ -85,7 +85,7 @@ namespace BALL
 	};
 
 #ifndef BALL_DEBUG
-# include <BALL/STRUCTURE/mutator.iC>
+# include <BALL_core/STRUCTURE/mutator.iC>
 #endif
 
 }

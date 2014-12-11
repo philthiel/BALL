@@ -6,7 +6,7 @@
 #define BALL_DATATYPE_FOREACH_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 /**	Container Iteration Macro.
 		Use this macro for convenient iteration over BALL container 

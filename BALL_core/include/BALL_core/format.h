@@ -9,23 +9,23 @@
 #define BALL_FORMAT_H
 
 #ifndef BALL_FORMAT_PDBFILE_H
-#	include <BALL/FORMAT/PDBFile.h>
+#	include <BALL_core/FORMAT/PDBFile.h>
 #endif
 
 #ifndef BALL_FORMAT_HINFILE_H
-#	include <BALL/FORMAT/HINFile.h>
+#	include <BALL_core/FORMAT/HINFile.h>
 #endif
 
 #ifndef BALL_FORMAT_INIFILE_H
-#	include <BALL/FORMAT/INIFile.h>
+#	include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_FORMAT_MOL2FILE_H
-#	include <BALL/FORMAT/MOL2File.h>
+#	include <BALL_core/FORMAT/MOL2File.h>
 #endif
 
 #ifndef BALL_FORMAT_RESOURCEFILE_H
-#	include <BALL/FORMAT/resourceFile.h>
+#	include <BALL_core/FORMAT/resourceFile.h>
 #endif
 
 #endif // BALL_FORMAT_H

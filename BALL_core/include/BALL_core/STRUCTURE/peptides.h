@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_PEPTIDES_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEIN_H
-#	include <BALL/KERNEL/protein.h>
+#	include <BALL_core/KERNEL/protein.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-# include <BALL/CONCEPT/embeddable.h>
+# include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 namespace BALL 

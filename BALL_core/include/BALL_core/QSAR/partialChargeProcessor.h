@@ -6,8 +6,8 @@
 #ifndef BALL_QSAR_PARTIALCHARGEPROCESSOR_H
 #define BALL_QSAR_PARTIALCHARGEPROCESSOR_H
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/DATATYPE/hashSet.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/DATATYPE/hashSet.h>
 
 #include <vector>
 #include <utility>

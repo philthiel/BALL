@@ -2,28 +2,28 @@
 #define BALL_NMR_EMPIRICALHSSHIFTPROCESSOR_H
 
 #ifndef BALL_MATHS_CUBICSPLINE2D_H
-#	include <BALL/MATHS/cubicSpline2D.h>
+#	include <BALL_core/MATHS/cubicSpline2D.h>
 #endif
 
 #ifndef BALL_MATHS_CUBICSPLINE1D_H
-#	include <BALL/MATHS/cubicSpline1D.h>
+#	include <BALL_core/MATHS/cubicSpline1D.h>
 #endif
 
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-# include <BALL/FORMAT/genericMolFile.h>
+# include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/NMR/shiftModule.h>
+#	include<BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include<BALL/KERNEL/expression.h>
+#	include<BALL_core/KERNEL/expression.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 

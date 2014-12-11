@@ -6,19 +6,19 @@
 #define BALL_DOCKING_COMMON_CONFORMATIONSET_H
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/MOLMEC/COMMON/snapShot.h>
+# include <BALL_core/MOLMEC/COMMON/snapShot.h>
 #endif
 
 #ifndef BALL_FORMAT_DCDFILE_H
-# include <BALL/FORMAT/DCDFile.h>
+# include <BALL_core/FORMAT/DCDFile.h>
 #endif
 
 #include <vector>

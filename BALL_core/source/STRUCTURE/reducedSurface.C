@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/reducedSurface.h>
+#include <BALL_core/STRUCTURE/reducedSurface.h>
 
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/DATATYPE/hashGrid.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
 
 #include <iterator>
 

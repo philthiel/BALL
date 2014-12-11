@@ -6,13 +6,13 @@
 // Molecular Mechanics: MMFF94 force field parameters 
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/FORMAT/parameters.h>
 
 // #define BALL_DEBUG_MMFF
 using namespace std;

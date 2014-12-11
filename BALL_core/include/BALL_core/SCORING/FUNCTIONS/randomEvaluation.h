@@ -5,15 +5,15 @@
 #define BALL_SCORING_FUNCTIONS_RANDOMEVALUATION_H
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
-# include <BALL/SCORING/FUNCTIONS/energeticEvaluation.h>
+# include <BALL_core/SCORING/FUNCTIONS/energeticEvaluation.h>
 #endif
 
 #include <vector>

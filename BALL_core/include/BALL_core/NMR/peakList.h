@@ -8,7 +8,7 @@
 #define BALL_NMR_PEAKLIST_H
 
 #ifndef BALL_NMR_PEAK_H
-#	include<BALL/NMR/peak.h>
+#	include<BALL_core/NMR/peak.h>
 #endif
 
 namespace BALL 

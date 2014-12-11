@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_FUNCTIONS_GRIDEDPLP_H
 #define BALL_SCORING_FUNCTIONS_GRIDEDPLP_H
 
-#include <BALL/SCORING/COMMON/diffGridBasedScoring.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/SCORING/COMMON/diffGridBasedScoring.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
 
 namespace BALL
 {

@@ -4,10 +4,10 @@
 // $Id: snapShotManager.C,v 1.15.20.2 2007/06/09 16:08:08 anhi Exp $
 //
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/FORMAT/trajectoryFile.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
 
 #include <iostream>
 

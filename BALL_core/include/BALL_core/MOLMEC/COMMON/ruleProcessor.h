@@ -10,11 +10,11 @@
 #define BALL_MOLMEC_COMMON_RULEPROCESSOR_H
 
 #ifndef BALL_MOLMEC_COMMON_RULEEVALUATOR_H
-#	include <BALL/MOLMEC/COMMON/ruleEvaluator.h>
+#	include <BALL_core/MOLMEC/COMMON/ruleEvaluator.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 namespace BALL 

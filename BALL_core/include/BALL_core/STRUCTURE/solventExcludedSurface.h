@@ -6,47 +6,47 @@
 #define BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
 
 #ifndef BALL_STRUCTURE_SESEDGE_H
-#	include <BALL/STRUCTURE/SESEdge.h>
+#	include <BALL_core/STRUCTURE/SESEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SESFACE_H
-#	include <BALL/STRUCTURE/SESFace.h>
+#	include <BALL_core/STRUCTURE/SESFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SESVERTEX_H
-#	include <BALL/STRUCTURE/SESVertex.h>
+#	include <BALL_core/STRUCTURE/SESVertex.h>
 #endif
 
 #ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/STRUCTURE/reducedSurface.h>
+#	include <BALL_core/STRUCTURE/reducedSurface.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/MATHS/circle3.h>
+#	include <BALL_core/MATHS/circle3.h>
 #endif
 
 #ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR4_H
-#	include <BALL/MATHS/vector4.h>
+#	include <BALL_core/MATHS/vector4.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHGRID_H
-#	include <BALL/DATATYPE/hashGrid.h>
+#	include <BALL_core/DATATYPE/hashGrid.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #include <vector>

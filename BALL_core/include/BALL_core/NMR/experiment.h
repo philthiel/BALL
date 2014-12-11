@@ -8,15 +8,15 @@
 #define BALL_NMR_EXPERIMENT_H
 
 #ifndef BALL_NMR_PEAKLIST_H
-#	include <BALL/NMR/peakList.h>
+#	include <BALL_core/NMR/peakList.h>
 #endif
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/NMR/shiftModule.h>
+#	include <BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/KERNEL/expression.h>
+#	include <BALL_core/KERNEL/expression.h>
 #endif
 
 namespace BALL 

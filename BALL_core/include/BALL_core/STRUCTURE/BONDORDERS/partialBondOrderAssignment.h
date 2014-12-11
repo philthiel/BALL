@@ -2,15 +2,15 @@
 #define BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include <BALL/KERNEL/atom.h>
+# include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-# include <BALL/KERNEL/bond.h>
+# include <BALL_core/KERNEL/bond.h>
 #endif
 
 #include <boost/shared_ptr.hpp>

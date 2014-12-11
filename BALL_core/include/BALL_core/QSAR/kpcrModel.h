@@ -7,15 +7,15 @@
 #define BALL_QSAR_KPCRMODEL_H
 
 #ifndef BALL_QSAR_KERNELMODEL_H
-#include <BALL/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
 #endif
 
 #ifndef BALL_QSAR_PCRMODEL_H
-#include <BALL/QSAR/pcrModel.h>
+#include <BALL_core/QSAR/pcrModel.h>
 #endif
 
 #ifndef BALL_QSAR_NONLINEARMODEL_H
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 namespace BALL

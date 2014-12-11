@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_RESIDUECHECKER_H
 
 #ifndef BALL_MATHS_COMMON_H
-#	include <BALL/MATHS/common.h>
+#	include <BALL_core/MATHS/common.h>
 #endif
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_DATATYPE_BITVECTOR_H
-# include <BALL/DATATYPE/bitVector.h>
+# include <BALL_core/DATATYPE/bitVector.h>
 #endif
 
 namespace BALL

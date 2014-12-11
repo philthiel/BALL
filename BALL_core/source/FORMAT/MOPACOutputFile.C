@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/MOPACOutputFile.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/FORMAT/MOPACOutputFile.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/KERNEL/PTE.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PDBAtom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 namespace BALL
 {

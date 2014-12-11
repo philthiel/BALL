@@ -7,7 +7,7 @@
 #define LIBSVMMODELH
 
 #ifndef SVRMODEL
-#include <BALL/QSAR/svrModel.h>
+#include <BALL_core/QSAR/svrModel.h>
 #endif
 
 #include <fstream>

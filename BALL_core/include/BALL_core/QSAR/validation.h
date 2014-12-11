@@ -7,7 +7,7 @@
 #define VALIDATION
 
 #ifndef QSARDATA
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/QSAR/QSARData.h>
 #endif
 
 #include <iterator>

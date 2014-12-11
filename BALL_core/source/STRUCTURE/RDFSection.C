@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/RDFSection.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL_core/STRUCTURE/RDFSection.h>
+#include <BALL_core/FORMAT/parameters.h>
 
 #include <limits>
 

@@ -8,7 +8,7 @@
 #define BALL_KERNEL_EXPRESSIONTREE_H
 
 #ifndef BALL_KERNEL_EXPRESSIONPREDICATE_H
-#	include <BALL/KERNEL/expressionPredicate.h>
+#	include <BALL_core/KERNEL/expressionPredicate.h>
 #endif
 
 namespace BALL

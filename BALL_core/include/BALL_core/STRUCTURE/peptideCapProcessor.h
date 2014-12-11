@@ -6,27 +6,27 @@
 #define BALL_STRUCTURE_PEPTIDECAPPROCESSOR_H
 
 #ifndef  BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/CONCEPT/composite.h>
+# include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/KERNEL/residue.h>
+# include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_CHAIN_H
-# include <BALL/KERNEL/chain.h>
+# include <BALL_core/KERNEL/chain.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-# include <BALL/STRUCTURE/atomBijection.h>
+# include <BALL_core/STRUCTURE/atomBijection.h>
 #endif
 
 namespace BALL

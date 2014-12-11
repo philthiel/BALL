@@ -6,11 +6,11 @@
 #ifndef BALL_DOCKING_COMMON_FLEXIBLEMOLECULE_H
 #define BALL_DOCKING_COMMON_FLEXIBLEMOLECULE_H
 
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/DOCKING/COMMON/conformation.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/DATATYPE/hashMap.h>
+#include <BALL_core/DOCKING/COMMON/conformation.h>
+#include <BALL_core/COMMON/exception.h>
 #include <iostream>
 
 namespace BALL

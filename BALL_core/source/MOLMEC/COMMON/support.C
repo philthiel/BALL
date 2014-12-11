@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/MATHS/common.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/MATHS/common.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/atomIterator.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
 #include <cmath>
 #include <limits>
@@ -16,7 +16,7 @@
 //   #define BALL_BENCHMARK
 
 #ifdef BALL_BENCHMARK
- #include <BALL/SYSTEM/timer.h>
+ #include <BALL_core/SYSTEM/timer.h>
 #endif 
 
 

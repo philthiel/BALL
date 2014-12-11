@@ -7,10 +7,10 @@
 #define BALL_DOCKING_GENETICDOCK_GENETICALGORITHM_H
 
 #include <vector>
-#include <BALL/MATHS/randomNumberGenerator.h>
+#include <BALL_core/MATHS/randomNumberGenerator.h>
 #include <utility>
 #include "geneticIndividual.h"
-#include <BALL/DOCKING/GENETICDOCK/parameter.h>
+#include <BALL_core/DOCKING/GENETICDOCK/parameter.h>
 
 namespace BALL
 {

@@ -7,20 +7,20 @@
 #define MOLDB_H
 
 #include <QtSql/QtSql>
-#include <BALL/COMMON/exception.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/DATATYPE/string.h>
 
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/DOCKING/COMMON/result.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/DOCKING/COMMON/result.h>
 #include <set>
-#include <BALL/STRUCTURE/molecularSimilarity.h>
+#include <BALL_core/STRUCTURE/molecularSimilarity.h>
 
 #if defined BALL_HAS_OPENBABEL || defined BALL_HAS_OPENEYE
-	#include <BALL/STRUCTURE/logP.h>
+	#include <BALL_core/STRUCTURE/logP.h>
 	#ifdef BALL_HAS_OPENEYE
 		#include <oechem/graphmol.h>
 	#endif

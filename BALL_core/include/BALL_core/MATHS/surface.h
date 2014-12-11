@@ -6,7 +6,7 @@
 #define BALL_MATHS_SURFACE_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 namespace BALL 

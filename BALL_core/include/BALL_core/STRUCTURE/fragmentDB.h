@@ -6,23 +6,23 @@
 #define BALL_STRUCTURE_FRAGMENTDB_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/KERNEL/molecule.h>
+#	include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#	include <BALL/KERNEL/bond.h>
+#	include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RECONSTRUCTFRAGMENTPROCESSOR_H
-#	include <BALL/STRUCTURE/reconstructFragmentProcessor.h>
+#	include <BALL_core/STRUCTURE/reconstructFragmentProcessor.h>
 #endif
 
 #include <vector>

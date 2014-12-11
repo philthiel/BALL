@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 
 namespace BALL
 {

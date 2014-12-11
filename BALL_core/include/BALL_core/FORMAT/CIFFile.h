@@ -6,15 +6,15 @@
 #define BALL_FORMAT_CIFFILE_H
 
 #ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/SYSTEM/file.h>
+#	include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/KERNEL/molecule.h>
+#	include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #include <map>

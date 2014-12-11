@@ -7,7 +7,7 @@
 #define BALL_DOCKING_GENETICDOCK_GENES_H
 
 #include <vector>
-#include <BALL/MATHS/quaternion.h>
+#include <BALL_core/MATHS/quaternion.h>
 
 namespace BALL
 {

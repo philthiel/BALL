@@ -9,24 +9,24 @@
 #include <vector>
 #include <string>
 
-#include <BALL/MATHS/vector3.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/MATHS/vector3.h>
 
-#include <BALL/DOCKING/GENETICDOCK/rotateBonds.h>
-#include <BALL/DOCKING/GENETICDOCK/geneticAlgorithm.h>
-#include <BALL/DOCKING/GENETICDOCK/evolutionaryDocking.h>
+#include <BALL_core/DOCKING/GENETICDOCK/rotateBonds.h>
+#include <BALL_core/DOCKING/GENETICDOCK/geneticAlgorithm.h>
+#include <BALL_core/DOCKING/GENETICDOCK/evolutionaryDocking.h>
 
-#include <BALL/DOCKING/GENETICDOCK/parameter.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/DOCKING/GENETICDOCK/parameter.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/quaternion.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/MATHS/quaternion.h>
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif // BALL_DOCKING_COMMON_CONFORMATIONSET_H
 
 namespace BALL

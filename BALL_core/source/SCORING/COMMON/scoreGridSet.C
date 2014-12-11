@@ -3,7 +3,7 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/scoreGridSet.h>
+#include <BALL_core/SCORING/COMMON/scoreGridSet.h>
 
 
 using namespace BALL;

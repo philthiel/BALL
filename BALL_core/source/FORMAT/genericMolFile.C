@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL_core/FORMAT/genericMolFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/molecule.h>
 
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/copy.hpp>

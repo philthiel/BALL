@@ -3,7 +3,7 @@
 //
 // $Id: claverieParameter.C,v 1.7 2002/02/27 12:24:03 sturm Exp $
 
-#include <BALL/SOLVATION/claverieParameter.h>
+#include <BALL_core/SOLVATION/claverieParameter.h>
 
 using namespace std;
 

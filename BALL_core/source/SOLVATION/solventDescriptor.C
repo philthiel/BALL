@@ -4,7 +4,7 @@
 // $Id: solventDescriptor.C,v 1.10 2004/11/07 19:54:59 oliver Exp $
 //
 
-#include <BALL/SOLVATION/solventDescriptor.h>
+#include <BALL_core/SOLVATION/solventDescriptor.h>
 
 using namespace std;
 

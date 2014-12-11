@@ -6,7 +6,7 @@
 #define BALL_FORMAT_SDFILE_H
 
 #ifndef BALL_FORMAT_MOLFILE_H
-#	include <BALL/FORMAT/MOLFile.h>
+#	include <BALL_core/FORMAT/MOLFile.h>
 #endif
 
 namespace BALL 

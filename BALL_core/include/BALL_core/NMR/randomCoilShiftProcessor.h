@@ -5,11 +5,11 @@
 //
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include<BALL/NMR/shiftModule.h>
+#	include<BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_DATAYTPE_STRINGHASHMAP_H
-#	include<BALL/DATATYPE/stringHashMap.h>
+#	include<BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 namespace BALL 

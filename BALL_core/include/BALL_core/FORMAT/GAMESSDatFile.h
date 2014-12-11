@@ -6,11 +6,11 @@
 #define BALL_FORMAT_GAMESSDATFILE_H
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 namespace BALL
 {

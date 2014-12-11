@@ -6,10 +6,10 @@
 #ifndef BALL_SCORING_FUNCTIONS_RESCORING_H
 #define BALL_SCORING_FUNCTIONS_RESCORING_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/regressionModel.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/FORMAT/genericMolFile.h>
+#include <BALL_core/QSAR/QSARData.h>
+#include <BALL_core/QSAR/regressionModel.h>
 
 
 namespace BALL

@@ -8,31 +8,31 @@
 #define BALL_NMR_CREATESPECTRUMPROCESSOR_H
 
 #ifndef BALL_NMR_PEAK_H
-#	include <BALL/NMR/peak.h>
+#	include <BALL_core/NMR/peak.h>
 #endif
 
 #ifndef BALL_NMR_PEAKLIST_H
-#	include <BALL/NMR/peakList.h>
+#	include <BALL_core/NMR/peakList.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include <BALL/KERNEL/atom.h>
+# include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/DATATYPE/regularData1D.h>
+# include <BALL_core/DATATYPE/regularData1D.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
-# include <BALL/KERNEL/expression.h>
+# include <BALL_core/KERNEL/expression.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHSET_H
-# include <BALL/DATATYPE/stringHashSet.h>
+# include <BALL_core/DATATYPE/stringHashSet.h>
 #endif
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/NMR/shiftModule.h>
+#	include <BALL_core/NMR/shiftModule.h>
 #endif
 
 namespace BALL 

@@ -6,15 +6,15 @@
 #define BALL_KERNEL_BOND_H
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/CONCEPT/property.h>
+#	include <BALL_core/CONCEPT/property.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_CONCEPT_ATOMCONTAINER_H
-#	include <BALL/KERNEL/atomContainer.h>
+#	include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #define BALL_BOND_DEFAULT_FIRST_ATOM    0
@@ -465,7 +465,7 @@ namespace BALL
 	};
 
 # ifndef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/KERNEL/bond.iC>
+#   include <BALL_core/KERNEL/bond.iC>
 # endif
 } // namespace BALL
 

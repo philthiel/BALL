@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/smilesParser.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/smilesParser.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <algorithm>
 

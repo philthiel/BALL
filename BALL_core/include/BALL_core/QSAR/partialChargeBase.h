@@ -7,7 +7,7 @@
 #define BALL_QSAR_PARTIALCHARGEBASE_H
 
 #ifndef BALL_QSAR_DESCRIPTOR_H
-#include <BALL/QSAR/descriptor.h>
+#include <BALL_core/QSAR/descriptor.h>
 #endif
 
 namespace BALL

@@ -6,23 +6,23 @@
 #define BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 namespace BALL 

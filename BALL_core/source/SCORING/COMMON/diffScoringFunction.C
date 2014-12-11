@@ -3,9 +3,9 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/diffScoringFunction.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SCORING/COMMON/diffScoringFunction.h>
+#include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 
 using namespace BALL;

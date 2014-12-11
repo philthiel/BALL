@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/CIFFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/FORMAT/CIFFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <utility>
 

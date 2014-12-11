@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
 
 #ifndef  BALL_COMMON_H
-#include <BALL/common.h>
+#include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/CONCEPT/composite.h>
+# include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #include <vector>

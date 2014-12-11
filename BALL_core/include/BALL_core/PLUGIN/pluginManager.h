@@ -2,11 +2,11 @@
 #define BALL_PLUGIN_PLUGINMANAGER_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #include <QtCore/QString>

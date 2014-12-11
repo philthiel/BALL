@@ -8,23 +8,23 @@
 #define BALL_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
-#	include <BALL/MOLMEC/PARAMETER/quadraticImproperTorsion.h>
+#	include <BALL_core/MOLMEC/PARAMETER/quadraticImproperTorsion.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_RESIDUETORSIONS_H
-#	include <BALL/MOLMEC/PARAMETER/residueTorsions.h>
+#	include <BALL_core/MOLMEC/PARAMETER/residueTorsions.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#	include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/MOLMEC/COMMON/forceField.h>
+# include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 namespace BALL 

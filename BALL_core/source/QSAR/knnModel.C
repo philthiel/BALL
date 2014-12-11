@@ -1,4 +1,4 @@
-#include <BALL/QSAR/knnModel.h>
+#include <BALL_core/QSAR/knnModel.h>
 
 using namespace std;
 

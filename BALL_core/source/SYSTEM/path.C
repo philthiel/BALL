@@ -7,10 +7,10 @@
 //   Oliver Kohlbacher
 //
 
-#include <BALL/COMMON/global.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/fileSystem.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
 #include <fstream>
 
 #ifdef BALL_COMPILER_MSVC

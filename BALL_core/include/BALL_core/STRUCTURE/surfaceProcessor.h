@@ -6,37 +6,37 @@
 #define BALL_STRUCTURE_SURFACE_PROCESSOR_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 #ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/STRUCTURE/reducedSurface.h>
+#	include <BALL_core/STRUCTURE/reducedSurface.h>
 #endif
 #ifndef BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#	include <BALL/STRUCTURE/solventExcludedSurface.h>
+#	include <BALL_core/STRUCTURE/solventExcludedSurface.h>
 #endif
 #ifndef BALL_STRUCTURE_TRIANGULATEDSES_H
-#	include <BALL/STRUCTURE/triangulatedSES.h>
+#	include <BALL_core/STRUCTURE/triangulatedSES.h>
 #endif
 #ifndef BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
-#	include <BALL/STRUCTURE/solventAccessibleSurface.h>
+#	include <BALL_core/STRUCTURE/solventAccessibleSurface.h>
 #endif
 #ifndef BALL_STRUCTURE_TRIANGULATEDSAS_H
-#	include <BALL/STRUCTURE/triangulatedSAS.h>
+#	include <BALL_core/STRUCTURE/triangulatedSAS.h>
 #endif
 #ifndef BALL_STRUCTURE_TRIANGULATEDSURFACE_H
-#	include <BALL/STRUCTURE/triangulatedSurface.h>
+#	include <BALL_core/STRUCTURE/triangulatedSurface.h>
 #endif
 #ifndef BALL_MATHS_SURFACE_H
-#	include <BALL/MATHS/surface.h>
+#	include <BALL_core/MATHS/surface.h>
 #endif
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 #ifndef BALL_KERNEL_PTE_H
-#	include <BALL/KERNEL/PTE.h>
+#	include <BALL_core/KERNEL/PTE.h>
 #endif
 
 namespace BALL

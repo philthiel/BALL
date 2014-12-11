@@ -1,7 +1,7 @@
 %{
 
-#include <BALL/KERNEL/expressionParser.h>
-#include <BALL/KERNEL/expressionTree.h>
+#include <BALL_core/KERNEL/expressionParser.h>
+#include <BALL_core/KERNEL/expressionTree.h>
 
 using namespace BALL;
 using namespace std;

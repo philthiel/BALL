@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
 #define BALL_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
 
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 
 namespace BALL

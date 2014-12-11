@@ -6,43 +6,43 @@
 #define BALL_FORMAT_PDBFILE_H
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/CONCEPT/property.h>
+#	include <BALL_core/CONCEPT/property.h>
 #endif
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/DATATYPE/options.h>
+#	include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_DATATYPE_QUADRUPLE_H
-#	include <BALL/DATATYPE/quadruple.h>
+#	include <BALL_core/DATATYPE/quadruple.h>
 #endif
 
 #ifndef BALL_FORMAT_PDBDEFS_H
-#	include <BALL/FORMAT/PDBdefs.h>
+#	include <BALL_core/FORMAT/PDBdefs.h>
 #endif
 
 #ifndef BALL_FORMAT_PDBINFO_H
-#	include <BALL/FORMAT/PDBInfo.h>
+#	include <BALL_core/FORMAT/PDBInfo.h>
 #endif
 
 #ifndef BALL_KERNEL_PDBAtom_H
-#	include <BALL/KERNEL/PDBAtom.h>
+#	include <BALL_core/KERNEL/PDBAtom.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-#	include <BALL/KERNEL/secondaryStructure.h>
+#	include <BALL_core/KERNEL/secondaryStructure.h>
 #endif
 
 namespace BALL
@@ -925,7 +925,7 @@ namespace BALL
 
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/FORMAT/PDBFile.iC>
+#		include <BALL_core/FORMAT/PDBFile.iC>
 #	endif
 
 } // namespace BALL

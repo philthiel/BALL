@@ -7,11 +7,11 @@
 #define LDAMODEL
 
 #ifndef CLASSIFICATION
-#include <BALL/QSAR/classificationModel.h>
+#include <BALL_core/QSAR/classificationModel.h>
 #endif
 
 #ifndef STATISTICS
-#include <BALL/QSAR/statistics.h>
+#include <BALL_core/QSAR/statistics.h>
 #endif
 
 namespace BALL{

@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_COMPONENTS_FRESNOTYPES_H
 #define BALL_SCORING_COMPONENTS_FRESNOTYPES_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/KERNEL/system.h>
 
 
 namespace BALL

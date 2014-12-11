@@ -13,15 +13,15 @@
 #include <iostream>
 
 #ifndef BALL_MATHS_LINE3_H
-#	include <BALL/MATHS/line3.h>
+#	include <BALL_core/MATHS/line3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_COMMON_H
-#	include <BALL/MATHS/common.h>
+#	include <BALL_core/MATHS/common.h>
 #endif
 
 namespace BALL 

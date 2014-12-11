@@ -6,19 +6,19 @@
 #define BALL_DATATYPE_REGULARDATA3D_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/SYSTEM/file.h>
+#	include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/SYSTEM/binaryFileAdaptor.h>
+# include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 #endif
 
 #ifndef BALL_MATHS_COMMON_H
-# include <BALL/MATHS/common.h>
+# include <BALL_core/MATHS/common.h>
 #endif
 
 #include <iostream>

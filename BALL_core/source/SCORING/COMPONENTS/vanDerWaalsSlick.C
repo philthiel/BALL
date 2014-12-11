@@ -4,12 +4,12 @@
 // $Id: vanDerWaals.C,v 1.4 2006/05/27 09:05:23 anker Exp $
 
 
-#include <BALL/common.h>
-#include <BALL/SCORING/COMPONENTS/vanDerWaalsSlick.h>
-#include <BALL/MOLMEC/COMMON/assignTypes.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/MOLMEC/PARAMETER/templates.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/common.h>
+#include <BALL_core/SCORING/COMPONENTS/vanDerWaalsSlick.h>
+#include <BALL_core/MOLMEC/COMMON/assignTypes.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/MOLMEC/PARAMETER/templates.h>
+#include <BALL_core/SYSTEM/path.h>
 
 // define a macro for the square function
 #define SQR(x) ((x) * (x))

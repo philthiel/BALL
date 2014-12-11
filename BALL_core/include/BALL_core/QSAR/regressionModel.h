@@ -6,8 +6,8 @@
 #ifndef BALL_QSAR_REGRESSIONMODEL_H
 #define BALL_QSAR_REGRESSIONMODEL_H
 
-#include <BALL/QSAR/Model.h>
-#include <BALL/QSAR/regressionValidation.h>
+#include <BALL_core/QSAR/Model.h>
+#include <BALL_core/QSAR/regressionValidation.h>
 
 #include <fstream>
 

@@ -6,11 +6,11 @@
 #define BALL_FORMAT_PARAMFILE_H
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #include <QtXml/QXmlStreamReader>

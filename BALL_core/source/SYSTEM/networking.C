@@ -3,7 +3,7 @@
 //
 
 #include <boost/bind.hpp>
-#include <BALL/SYSTEM/networking.h>
+#include <BALL_core/SYSTEM/networking.h>
 
 namespace BALL
 {

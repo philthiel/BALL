@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_SASVERTEX_H
 
 #ifndef BALL_STRUCTURE_GRAPHVERTEX_H
-#	include <BALL/STRUCTURE/graphVertex.h>
+#	include <BALL_core/STRUCTURE/graphVertex.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 namespace BALL

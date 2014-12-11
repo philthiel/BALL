@@ -6,15 +6,15 @@
 #define BALL_STRUCTURE_ROTAMERLIBRARY_H
 
 #ifndef BALL_STRUCTURE_FRAGMENT_DB_H
-#	include <BALL/STRUCTURE/fragmentDB.h>
+#	include <BALL_core/STRUCTURE/fragmentDB.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RESIDUEROTAMERSET_H
- #include <BALL/STRUCTURE/residueRotamerSet.h>
+ #include <BALL_core/STRUCTURE/residueRotamerSet.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-	#include <BALL/DATATYPE/hasMap.h>
+	#include <BALL_core/DATATYPE/hasMap.h>
 #endif
 
 //#include <map>

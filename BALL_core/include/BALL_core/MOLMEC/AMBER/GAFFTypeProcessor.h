@@ -6,27 +6,27 @@
 #define BALL_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/CONCEPT/composite.h>
+# include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_MOLMEC_AMBER_GAFFCESPARSER_H
-# include <BALL/MOLMEC/AMBER/GAFFCESParser.h>
+# include <BALL_core/MOLMEC/AMBER/GAFFCESParser.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULE_H
-# include <BALL/KERNEL/molecule.h>
+# include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #include <vector>

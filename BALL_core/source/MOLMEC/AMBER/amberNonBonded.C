@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/SCORING/COMPONENTS/advElectrostatic.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/MOLMEC/AMBER/amberNonBonded.h>
+#include <BALL_core/MOLMEC/AMBER/amber.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/SCORING/COMPONENTS/advElectrostatic.h>
+#include <BALL_core/SYSTEM/path.h>
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 %{
 
-#include <BALL/MOLMEC/AMBER/GAFFCESParser.h>
+#include <BALL_core/MOLMEC/AMBER/GAFFCESParser.h>
 
 #include <iostream>
 #include <cstdlib>

@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/featureSelection.h>
+#include <BALL_core/QSAR/featureSelection.h>
 
 using namespace std;
 

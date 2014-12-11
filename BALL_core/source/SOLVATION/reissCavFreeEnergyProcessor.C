@@ -3,8 +3,8 @@
 //
 // $Id: reissCavFreeEnergyProcessor.C,v 1.11 2002/02/27 12:24:07 sturm Exp $
 
-#include <BALL/SOLVATION/reissCavFreeEnergyProcessor.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL_core/SOLVATION/reissCavFreeEnergyProcessor.h>
+#include <BALL_core/STRUCTURE/numericalSAS.h>
 
 using namespace std;
 

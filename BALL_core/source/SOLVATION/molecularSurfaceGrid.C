@@ -4,8 +4,8 @@
 // $Id: molecularSurfaceGrid.C,v 1.24 2005/12/23 17:03:03 amoll Exp $
 //
 
-#include <BALL/SOLVATION/molecularSurfaceGrid.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL_core/SOLVATION/molecularSurfaceGrid.h>
+#include <BALL_core/KERNEL/forEach.h>
 
 namespace BALL 
 {

@@ -6,11 +6,11 @@
 #define BALL_DOCKING_COMMON_GRIDANALYSIS_H
 
 #ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #include <map>

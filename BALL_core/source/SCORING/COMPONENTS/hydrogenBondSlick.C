@@ -1,19 +1,19 @@
 // $Id: HydrogenBondSlick.C,v 1.4 2006/05/21 17:32:10 anker Exp $
 // hydrogen bond component
 
-#include <BALL/SCORING/COMPONENTS/hydrogenBondSlick.h>
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL_core/SCORING/COMPONENTS/hydrogenBondSlick.h>
+#include <BALL_core/SCORING/COMPONENTS/fresnoTypes.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/DATATYPE/hashMap.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 // #define DEBUG 1
 
 #ifdef DEBUG
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL_core/FORMAT/HINFile.h>
 #endif
 
 namespace BALL

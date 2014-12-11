@@ -2,27 +2,27 @@
 #define BALL_STRUCTURE_BINDINGPOCKETPROCESSOR_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/KERNEL/residue.h>
+# include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h> 
+# include <BALL_core/MATHS/vector3.h> 
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHGRID_H
-# include <BALL/DATATYPE/hashGrid.h>
+# include <BALL_core/DATATYPE/hashGrid.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #include <vector>

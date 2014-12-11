@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/plsModel.h>
+#include <BALL_core/QSAR/plsModel.h>
 
 #include <Eigen/Dense>
 

@@ -8,15 +8,15 @@
 #define BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
 
 #ifndef BALL_STRUCTURE_RDFINTEGRATOR_H
-# include <BALL/STRUCTURE/RDFIntegrator.h>
+# include <BALL_core/STRUCTURE/RDFIntegrator.h>
 #endif
 
 #ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-# include <BALL/MATHS/piecewiseFunction.h>
+# include <BALL_core/MATHS/piecewiseFunction.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 // ?????: DOCU ... documentation for constants

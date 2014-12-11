@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/kekulizer.h>
+#include <BALL_core/STRUCTURE/kekulizer.h>
 
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
-//#include <BALL/DATATYPE/hashSet.h>
-#include <BALL/STRUCTURE/smartsMatcher.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
+//#include <BALL_core/DATATYPE/hashSet.h>
+#include <BALL_core/STRUCTURE/smartsMatcher.h>
 
 using namespace std;
 

@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_COMPONENTS_ROTATIONALENTROPY_H
 #define BALL_SCORING_COMPONENTS_ROTATIONALENTROPY_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
 
 
 namespace BALL

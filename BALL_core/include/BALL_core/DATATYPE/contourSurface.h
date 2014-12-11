@@ -6,19 +6,19 @@
 #define BALL_DATATYPE_CONTOURSURFACE_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-# include <BALL/MATHS/surface.h>
+# include <BALL_core/MATHS/surface.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #include <vector>

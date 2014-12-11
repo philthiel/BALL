@@ -4,11 +4,11 @@
 // $Id: aromaticityProcessor.C,v 1.13.20.1 2007/03/16 00:06:45 bertsch Exp $
 //
 
-#include <BALL/QSAR/aromaticityProcessor.h>
+#include <BALL_core/QSAR/aromaticityProcessor.h>
 
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <limits>
 

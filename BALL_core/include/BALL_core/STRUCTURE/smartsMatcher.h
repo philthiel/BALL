@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_SMARTSMATCHER_H
 
 #ifndef BALL_STRUCTURE_SMARTSPARSER_H
-# include <BALL/STRUCTURE/smartsParser.h>
+# include <BALL_core/STRUCTURE/smartsParser.h>
 #endif
 
 #include <vector>

@@ -3,7 +3,7 @@
 //
 // $Id: FFT2D.C,v 1.6.10.1 2006/03/02 18:52:58 anhi Exp $
 
-#include <BALL/MATHS/FFT2D.h>
+#include <BALL_core/MATHS/FFT2D.h>
 
 namespace BALL
 {

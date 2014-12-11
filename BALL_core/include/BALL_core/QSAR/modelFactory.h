@@ -6,15 +6,15 @@
 #define BALL_QSAR_MODELFACTORY_H
 
 #ifndef BALL_CONCEPT_FACTORY_H
-#include <BALL/CONCEPT/factory.h>
+#include <BALL_core/CONCEPT/factory.h>
 #endif
 
 #ifndef MODEL
-#include <BALL/QSAR/Model.h>
+#include <BALL_core/QSAR/Model.h>
 #endif
 
 #ifndef QSARH
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/QSAR/QSARData.h>
 #endif
 
 namespace BALL

@@ -6,27 +6,27 @@
 #define BALL_CONCEPT_PERSISTENCEMANAGER_H
 
 #ifndef BALL_COMMON_RTTI_H
-#	include <BALL/COMMON/rtti.h>
+#	include <BALL_core/COMMON/rtti.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
+#	include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #include <fstream>
@@ -1028,7 +1028,7 @@ namespace BALL
 	}
 
 #ifndef BALL_NO_INLINE_FUNCTIONS
-#	include <BALL/CONCEPT/persistenceManager.iC>
+#	include <BALL_core/CONCEPT/persistenceManager.iC>
 #endif
 
 } // namespace BALL

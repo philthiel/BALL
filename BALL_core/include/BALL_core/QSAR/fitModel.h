@@ -7,13 +7,13 @@
 #define BALL_QSAR_FITMODEL
 
 #ifndef BALL_CONFIG_CONFIG_H
-# include <BALL/CONFIG/config.h>
+# include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifdef BALL_HAS_GSL
 
 #ifndef BALL_QSAR_NONLINEARMODEL_H
-# include <BALL/QSAR/nonlinearModel.h>
+# include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 #include <gsl/gsl_multifit_nlin.h>
@@ -21,7 +21,7 @@
 #include <gsl/gsl_math.h>
 
 #ifndef BALL_MATHS_PARSEDFUNCTION_H
-#  include <BALL/MATHS/parsedFunction.h>
+#  include <BALL_core/MATHS/parsedFunction.h>
 #endif
 
 //#include <list>

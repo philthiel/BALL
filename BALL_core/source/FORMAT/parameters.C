@@ -4,7 +4,7 @@
 // $Id: parameters.C,v 1.12 2003/08/26 09:17:47 oliver Exp $
 //
 
-#include <BALL/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameters.h>
 
 namespace BALL 
 {

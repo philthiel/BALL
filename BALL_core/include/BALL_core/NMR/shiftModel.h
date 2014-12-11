@@ -8,15 +8,15 @@
 #define BALL_NMR_SHIFTMODEL_H
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/NMR/shiftModule.h>
+#	include <BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/DATATYPE/options.h>
+#	include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERS_H
-#	include <BALL/FORMAT/parameters.h>
+#	include <BALL_core/FORMAT/parameters.h>
 #endif
 
 namespace BALL 

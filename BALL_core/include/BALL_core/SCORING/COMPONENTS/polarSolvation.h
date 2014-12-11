@@ -3,10 +3,10 @@
 #ifndef BALL_SCORING_COMPONENTS_POLARSOLVATION_H
 #define BALL_SCORING_COMPONENTS_POLARSOLVATION_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
 
-#include <BALL/SOLVATION/poissonBoltzmann.h>
-#include <BALL/SOLVATION/generalizedBornCase.h>
+#include <BALL_core/SOLVATION/poissonBoltzmann.h>
+#include <BALL_core/SOLVATION/generalizedBornCase.h>
 
 namespace BALL
 {

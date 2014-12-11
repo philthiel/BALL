@@ -6,18 +6,18 @@
 #define BALL_MATHS_TFFT1D_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/DATATYPE/regularData1D.h>
+# include <BALL_core/DATATYPE/regularData1D.h>
 #endif
 
 #include <cmath>
 #include <complex>
 #include <fftw3.h>
 
-#include <BALL/MATHS/fftwCommon.h>
+#include <BALL_core/MATHS/fftwCommon.h>
 
 namespace BALL
 {

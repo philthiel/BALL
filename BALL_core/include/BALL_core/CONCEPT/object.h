@@ -6,19 +6,19 @@
 #define BALL_CONCEPT_OBJECT_H
 
 #ifndef BALL_CONCEPT_AUTODELETABLE_H
-#	include <BALL/CONCEPT/autoDeletable.h>
+#	include <BALL_core/CONCEPT/autoDeletable.h>
 #endif
 
 #ifndef BALL_COMMON_RTTI_H
-#	include <BALL/COMMON/rtti.h>
+#	include <BALL_core/COMMON/rtti.h>
 #endif
 
 #ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/CONCEPT/bidirectionalIterator.h>
+#	include <BALL_core/CONCEPT/bidirectionalIterator.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 namespace BALL 
@@ -186,7 +186,7 @@ namespace BALL
 
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/object.iC>
+#		include <BALL_core/CONCEPT/object.iC>
 #	endif
 
 } // namespace BALL

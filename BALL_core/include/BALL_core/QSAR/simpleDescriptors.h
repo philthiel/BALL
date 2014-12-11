@@ -7,7 +7,7 @@
 #define BALL_QSAR_SIMPLEDESCRIPTORS_H
 
 #ifndef BALL_QSAR_SIMPLEBASE_H
-#	include <BALL/QSAR/simpleBase.h>
+#	include <BALL_core/QSAR/simpleBase.h>
 #endif
 
 namespace BALL

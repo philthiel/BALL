@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/radialDistributionFunction.h>
+#include <BALL_core/STRUCTURE/radialDistributionFunction.h>
 
 using namespace std;
 

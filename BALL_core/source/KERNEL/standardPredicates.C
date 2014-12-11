@@ -4,17 +4,17 @@
 // $Id: standardPredicates.C,v 1.58.24.1 2007/03/25 22:00:23 oliver Exp $
 //
 
-#include <BALL/KERNEL/standardPredicates.h>
+#include <BALL_core/KERNEL/standardPredicates.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/secondaryStructure.h>
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/chain.h>
+#include <BALL_core/KERNEL/secondaryStructure.h>
+#include <BALL_core/KERNEL/nucleotide.h>
+#include <BALL_core/KERNEL/nucleicAcid.h>
+#include <BALL_core/KERNEL/bond.h>
 
 // #define DEBUG
 

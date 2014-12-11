@@ -8,11 +8,11 @@
 #define BALL_FORMAT_INIFILE_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 namespace BALL 

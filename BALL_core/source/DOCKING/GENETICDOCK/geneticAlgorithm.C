@@ -6,13 +6,13 @@
 #include <iostream>
 #include <map>
 
-#include <BALL/DOCKING/GENETICDOCK/geneticAlgorithm.h>
-#include <BALL/DOCKING/GENETICDOCK/dockProblem.h>
-#include <BALL/DOCKING/GENETICDOCK/genes.h>
+#include <BALL_core/DOCKING/GENETICDOCK/geneticAlgorithm.h>
+#include <BALL_core/DOCKING/GENETICDOCK/dockProblem.h>
+#include <BALL_core/DOCKING/GENETICDOCK/genes.h>
 #include <time.h>
-#include <BALL/DOCKING/GENETICDOCK/geneticIndividual.h>
-#include <BALL/DOCKING/GENETICDOCK/parameter.h>
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/DOCKING/GENETICDOCK/geneticIndividual.h>
+#include <BALL_core/DOCKING/GENETICDOCK/parameter.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 
 using namespace std;
 

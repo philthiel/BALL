@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_KEKULIZER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif 
 
 #include <set>

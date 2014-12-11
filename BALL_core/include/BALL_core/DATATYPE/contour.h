@@ -8,11 +8,11 @@
 #define BALL_DATATYPE_CONTOUR_H
 
 #ifndef BALL_DATATYPE_REGULARDATA2D_H
-#	include <BALL/DATATYPE/regularData2D.h>
+#	include <BALL_core/DATATYPE/regularData2D.h>
 #endif
 
 #ifndef BALL_DATATYPE_CONTOURLINE_H
-#	include <BALL/DATATYPE/contourLine.h>
+#	include <BALL_core/DATATYPE/contourLine.h>
 #endif
 
 #include <vector>

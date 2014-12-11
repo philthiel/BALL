@@ -3,8 +3,8 @@
 //
 // $Id: parameterSection.C,v 1.25 2002/02/27 12:21:20 sturm Exp $
 
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/FORMAT/parameters.h>
 
 using namespace std;
 

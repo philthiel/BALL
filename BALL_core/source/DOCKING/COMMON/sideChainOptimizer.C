@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/sideChainOptimizer.h>
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/DOCKING/COMMON/sideChainOptimizer.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 using namespace std;
 

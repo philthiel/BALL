@@ -6,23 +6,23 @@
 #define BALL_DATATYPE_GRAPH_TREEWIDTH_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_CONCEPT_BASEFUNCTOR_H
-# include <BALL/CONCEPT/baseFunctor.h>
+# include <BALL_core/CONCEPT/baseFunctor.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/DATATYPE/GRAPH/graphAlgorithms.h>
+# include <BALL_core/DATATYPE/GRAPH/graphAlgorithms.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_MOLECULARGRAPH_H
-# include <BALL/DATATYPE/GRAPH/molecularGraph.h>
+# include <BALL_core/DATATYPE/GRAPH/molecularGraph.h>
 #endif
 
 #include <algorithm>
@@ -506,6 +506,6 @@ namespace BALL
 	};
 }
 
-#include <BALL/DATATYPE/GRAPH/treeWidth.iC>
+#include <BALL_core/DATATYPE/GRAPH/treeWidth.iC>
 
 #endif // BALL_DATATYPE_GRAPH_TREEWIDTH_H

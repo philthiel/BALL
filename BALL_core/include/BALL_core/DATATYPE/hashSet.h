@@ -6,31 +6,31 @@
 #define BALL_DATATYPE_HASHSET_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_COMMON_HASH_H
-#	include <BALL/COMMON/hash.h>
+#	include <BALL_core/COMMON/hash.h>
 #endif
 
 #ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/CONCEPT/forwardIterator.h>
+#	include <BALL_core/CONCEPT/forwardIterator.h>
 #endif
 
 #ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
+#	include <BALL_core/CONCEPT/visitor.h>
 #endif
 
 #ifndef BALL_DATATYPE_FOREACH_H
-#	include <BALL/DATATYPE/forEach.h>
+#	include <BALL_core/DATATYPE/forEach.h>
 #endif
 
 #ifndef BALL_CONCEPT_PREDICATE_H
-#	include <BALL/CONCEPT/predicate.h>
+#	include <BALL_core/CONCEPT/predicate.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #include <algorithm>

@@ -2,4 +2,4 @@
 // vi: set ts=2:
 //
 
-#include <BALL/QSAR/modelFactory.h>
+#include <BALL_core/QSAR/modelFactory.h>

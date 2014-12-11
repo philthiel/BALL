@@ -7,7 +7,7 @@
 #define BALL_QSAR_BAYESMODEL_H
 
 #ifndef BALL_QSAR_CLASSIFICATIONMODEL_H
-#include <BALL/QSAR/classificationModel.h>
+#include <BALL_core/QSAR/classificationModel.h>
 #endif
 
 namespace BALL

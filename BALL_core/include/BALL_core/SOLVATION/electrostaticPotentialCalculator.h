@@ -8,15 +8,15 @@
 #define BALL_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
 
 #ifndef BALL_KERNEL_SYSTEM_H
- # include <BALL/KERNEL/system.h>
+ # include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
- # include <BALL/DATATYPE/options.h>
+ # include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_STRUCTURE_DEFAULTPROCESSORS_H
- # include <BALL/STRUCTURE/defaultProcessors.h>
+ # include <BALL_core/STRUCTURE/defaultProcessors.h>
 #endif
 
 namespace BALL

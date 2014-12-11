@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include<BALL/NMR/clearShiftProcessor.h>
+#include<BALL_core/NMR/clearShiftProcessor.h>
 
 namespace BALL
 {

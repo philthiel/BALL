@@ -8,12 +8,12 @@
 
 #include <map>
 #include <vector>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/STRUCTURE/smilesParser.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/STRUCTURE/smilesParser.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/KERNEL/atom.h>
 
 
 namespace BALL

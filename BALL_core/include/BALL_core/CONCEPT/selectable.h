@@ -8,11 +8,11 @@
 #define BALL_CONCEPT_SELECTABLE_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
+#	include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #define BALL_SELECTABLE_DEFAULT_SELECTION   false
@@ -185,7 +185,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/selectable.iC>
+#		include <BALL_core/CONCEPT/selectable.iC>
 #	endif
 
 } // namespace BALL

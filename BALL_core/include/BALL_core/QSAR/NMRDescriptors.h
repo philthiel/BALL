@@ -2,23 +2,23 @@
 #define BALL_QSAR_NMRDESCRIPTORS_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/KERNEL/residue.h>
+# include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEIN_H
-# include <BALL/KERNEL/protein.h>
+# include <BALL_core/KERNEL/protein.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 namespace BALL

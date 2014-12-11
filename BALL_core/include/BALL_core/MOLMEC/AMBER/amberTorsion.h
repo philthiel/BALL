@@ -8,19 +8,19 @@
 #define BALL_MOLMEC_AMBER_AMBERTORSION_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_COSINETORSION_H
-#	include <BALL/MOLMEC/PARAMETER/cosineTorsion.h>
+#	include <BALL_core/MOLMEC/PARAMETER/cosineTorsion.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#	include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/MOLMEC/COMMON/forceField.h>
+# include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 namespace BALL 

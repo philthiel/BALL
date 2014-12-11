@@ -2,15 +2,15 @@
 #define BALL_FORMAT_COMMANDLINEPARSER_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMFILE_H
-# include <BALL/FORMAT/paramFile.h>
+# include <BALL_core/FORMAT/paramFile.h>
 #endif
 
 #include <map>

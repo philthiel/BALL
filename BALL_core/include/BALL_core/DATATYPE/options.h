@@ -8,25 +8,25 @@
 #define BALL_DATATYPE_OPTIONS_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
-#include <BALL/FORMAT/paramFile.h>
+#include <BALL_core/FORMAT/paramFile.h>
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
+#	include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 namespace BALL 

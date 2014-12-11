@@ -7,7 +7,7 @@
 #define  BALL_QSAR_ALLMODEL_H
 
 #ifndef BALL_QSAR_NONLINEARMODEL_H
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 

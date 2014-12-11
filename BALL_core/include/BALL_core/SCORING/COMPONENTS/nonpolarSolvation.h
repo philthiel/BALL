@@ -3,11 +3,11 @@
 #ifndef BALL_SCORING_COMPONENTS_NONPOLAR_H
 #define BALL_SCORING_COMPONENTS_NONPOLAR_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SOLVATION/uhligCavFreeEnergyProcessor.h>
-#include <BALL/SOLVATION/PCMCavFreeEnergyProcessor.h>
-#include <BALL/SOLVATION/pair6_12InteractionEnergyProcessor.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SOLVATION/uhligCavFreeEnergyProcessor.h>
+#include <BALL_core/SOLVATION/PCMCavFreeEnergyProcessor.h>
+#include <BALL_core/SOLVATION/pair6_12InteractionEnergyProcessor.h>
 
 namespace BALL
 {

@@ -4,7 +4,7 @@
 // $Id: client.C,v 1.1.4.1 2007/03/25 22:00:05 oliver Exp $
 //
 
-#include <BALL/CONCEPT/client.h>
+#include <BALL_core/CONCEPT/client.h>
 
 using namespace std;
 

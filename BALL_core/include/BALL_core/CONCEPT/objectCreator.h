@@ -6,20 +6,20 @@
 #define BALL_CONCEPT_OBJECTCREATOR_H
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H       
-# include <BALL/CONCEPT/persistentObject.h>
+# include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #ifndef BALL_CONCET_TEXTPERSISTENCEMANAGER_H
-# include <BALL/CONCEPT/textPersistenceManager.h>
+# include <BALL_core/CONCEPT/textPersistenceManager.h>
 #endif
 
 #ifdef BALL_HAS_ASIO
 #ifndef BALL_SYSTEM_NETWORKING_H
-#	include <BALL/SYSTEM/networking.h>
+#	include <BALL_core/SYSTEM/networking.h>
 #endif
 #endif
 

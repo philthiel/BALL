@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_SMILES_PARSER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#	include <BALL/KERNEL/bond.h>
+#	include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 namespace BALL 

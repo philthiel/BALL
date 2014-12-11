@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/MATHS/matrix44.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/fragment.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/MATHS/matrix44.h>
 
 #include <cstdio>
 #include <cmath>

@@ -8,11 +8,11 @@
 #define BALL_KERNEL_RESIDUEITERATOR_H
 
 #ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/KERNEL/iterator.h>
+#	include <BALL_core/KERNEL/iterator.h>
 #endif
 
 #ifndef BALL_KERNEL_PREDICATE_H
-# include <BALL/KERNEL/predicate.h>
+# include <BALL_core/KERNEL/predicate.h>
 #endif
 
 namespace BALL 

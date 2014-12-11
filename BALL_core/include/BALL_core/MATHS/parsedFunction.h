@@ -6,7 +6,7 @@
 #define BALL_MATHS_PARSEDFUNCTION_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #include <numeric>

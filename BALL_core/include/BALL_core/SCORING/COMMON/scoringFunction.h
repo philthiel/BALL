@@ -7,16 +7,16 @@
 
 #include <set>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/DOCKING/COMMON/staticLigandFragment.h>
-#include <BALL/DOCKING/COMMON/constraints.h>
-#include <BALL/SCORING/COMMON/baseFunction.h>
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/STRUCTURE/residueRotamerSet.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/DATATYPE/options.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/DOCKING/COMMON/staticLigandFragment.h>
+#include <BALL_core/DOCKING/COMMON/constraints.h>
+#include <BALL_core/SCORING/COMMON/baseFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/STRUCTURE/residueRotamerSet.h>
 
 namespace BALL
 {

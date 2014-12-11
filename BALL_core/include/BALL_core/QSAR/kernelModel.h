@@ -7,15 +7,15 @@
 #define KMODEL
 
 #ifndef NLMODEL
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 #ifndef LMODEL
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #ifndef KERNEL
-#include <BALL/QSAR/kernel.h>
+#include <BALL_core/QSAR/kernel.h>
 #endif
 
 

@@ -1,4 +1,4 @@
-#include <BALL/QSAR/bayesModel.h>
+#include <BALL_core/QSAR/bayesModel.h>
 
 namespace BALL
 {

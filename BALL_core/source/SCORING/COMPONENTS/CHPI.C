@@ -6,20 +6,20 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/SCORING/COMPONENTS/CHPI.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/KERNEL/residueIterator.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/SCORING/COMPONENTS/CHPI.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/KERNEL/residueIterator.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/protein.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 #define DEBUG 1
 
 #ifdef DEBUG
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL_core/FORMAT/HINFile.h>
 #endif
 
 using namespace std;

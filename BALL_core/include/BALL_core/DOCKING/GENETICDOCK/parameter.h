@@ -6,7 +6,7 @@
 #ifndef BALL_DOCKING_GENETICDOCK_PARAMETER_H
 #define BALL_DOCKING_GENETICDOCK_PARAMETER_H
 
-#include <BALL/MATHS/quaternion.h>
+#include <BALL_core/MATHS/quaternion.h>
 
 namespace BALL
 {

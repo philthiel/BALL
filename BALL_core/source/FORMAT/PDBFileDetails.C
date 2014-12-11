@@ -6,14 +6,14 @@
 // It covers the methods doing the specific parsing of all parsed records.
 // More general methods are contained in PDBFileGeneral.C
 
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/PDBFile.h>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/COMMON/logStream.h>
-#include <BALL/DATATYPE/regularExpression.h>
-#include <BALL/XRAY/crystalInfo.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/COMMON/logStream.h>
+#include <BALL_core/DATATYPE/regularExpression.h>
+#include <BALL_core/XRAY/crystalInfo.h>
 
 #include <ctime> // time, asctime
 #include <cctype>

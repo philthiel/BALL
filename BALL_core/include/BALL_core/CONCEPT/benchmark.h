@@ -3,11 +3,11 @@
 //
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_SYSTEM_TIMER_H
-# include <BALL/SYSTEM/timer.h>
+# include <BALL_core/SYSTEM/timer.h>
 #endif
 
 #include <string>

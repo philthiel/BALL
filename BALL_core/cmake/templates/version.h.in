@@ -6,11 +6,11 @@
 #define BALL_COMMON_VERSION_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 //

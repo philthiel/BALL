@@ -8,19 +8,19 @@
 #include <list>
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_TRIPLE_H
-#	include <BALL/DATATYPE/triple.h>
+#	include <BALL_core/DATATYPE/triple.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/KERNEL/fragment.h>
+#	include <BALL_core/KERNEL/fragment.h>
 #endif
 
 namespace BALL 

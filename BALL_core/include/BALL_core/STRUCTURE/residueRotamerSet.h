@@ -6,15 +6,15 @@
 #define BALL_STRUCTURE_RESIDUEROTAMERSET_H
 
 #ifndef BALL_MATHS_ANGLE_H
-	#include <BALL/MATHS/angle.h>
+	#include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-	#include <BALL/DATATYPE/string.h>
+	#include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-	#include <BALL/MATHS/vector3.h>
+	#include <BALL_core/MATHS/vector3.h>
 #endif
 
 namespace BALL

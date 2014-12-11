@@ -6,11 +6,11 @@
 #ifndef BALL_DOCKING_GENETICDOCK_ROTATEBONDS_H
 #define BALL_DOCKING_GENETICDOCK_ROTATEBONDS_H
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/DATATYPE/hashSet.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/DOCKING/COMMON/staticLigandFragment.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/DATATYPE/hashSet.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/DOCKING/COMMON/staticLigandFragment.h>
 
 #include <vector>
 

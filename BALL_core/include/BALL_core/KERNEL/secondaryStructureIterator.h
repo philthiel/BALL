@@ -8,19 +8,19 @@
 #define BALL_KERNEL_SECONDARYSTRUCTUREITERATOR_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_SECONDARY_STRUCTURE_H
-#	include <BALL/KERNEL/secondaryStructure.h>
+#	include <BALL_core/KERNEL/secondaryStructure.h>
 #endif
 
 #ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/KERNEL/iterator.h>
+#	include <BALL_core/KERNEL/iterator.h>
 #endif
 
 #ifndef BALL_KERNEL_PREDICATE_H
-#	include <BALL/KERNEL/predicate.h>
+#	include <BALL_core/KERNEL/predicate.h>
 #endif
 
 namespace BALL 

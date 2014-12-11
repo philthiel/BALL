@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/protein.h>
+#include <BALL_core/KERNEL/protein.h>
 
 using namespace::std;
 

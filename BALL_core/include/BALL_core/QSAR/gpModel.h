@@ -7,11 +7,11 @@
 #define BALL_QSAR_GPMODEL_H
 
 #ifndef BALL_QSAR_KERNELMODEL_H
-#include <BALL/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
 #endif
 
 #ifndef BALL_QSAR_NONLINEARMODEL_H
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 namespace BALL

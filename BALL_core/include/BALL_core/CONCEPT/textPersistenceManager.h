@@ -8,7 +8,7 @@
 #define BALL_CONCEPT_TEXTPERSISTENCEMANAGER_H
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 namespace BALL 

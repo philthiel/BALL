@@ -6,11 +6,11 @@
 #define BALL_KERNEL_NUCLEICACID_H
 
 #ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/KERNEL/molecule.h>
+#	include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #ifndef BALL_KERNEL_NUCLEOTIDE_H
-#	include <BALL/KERNEL/nucleotide.h>
+#	include <BALL_core/KERNEL/nucleotide.h>
 #endif
 
 #define BALL_NUCLEICACID_DEFAULT_ID   ""

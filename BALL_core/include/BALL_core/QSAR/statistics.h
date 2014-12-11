@@ -9,7 +9,7 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-#include <BALL/MATHS/parsedFunction.h>
+#include <BALL_core/MATHS/parsedFunction.h>
 
 #include <set>
 #include <Eigen/Core>

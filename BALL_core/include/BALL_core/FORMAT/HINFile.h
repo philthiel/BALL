@@ -6,11 +6,11 @@
 #define BALL_FORMAT_HINFILE_H
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_MATHS_SIMPLEBOX3_H
-# include <BALL/MATHS/simpleBox3.h>
+# include <BALL_core/MATHS/simpleBox3.h>
 #endif
 
 namespace BALL 

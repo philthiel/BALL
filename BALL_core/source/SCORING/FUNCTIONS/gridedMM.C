@@ -4,16 +4,16 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/FUNCTIONS/gridedMM.h>
+#include <BALL_core/SCORING/FUNCTIONS/gridedMM.h>
 
-#include <BALL/SCORING/COMPONENTS/advElectrostatic.h>
-#include <BALL/SCORING/COMPONENTS/aromaticRingStacking.h>
-#include <BALL/SCORING/COMPONENTS/solvation.h>
-#include <BALL/SCORING/COMPONENTS/fragmentationalSolvation.h>
-#include <BALL/SCORING/COMPONENTS/vanDerWaals.h>
-#include <BALL/SCORING/COMPONENTS/hydrogenBond.h>
-#include <BALL/SCORING/COMPONENTS/rotationalEntropy.h>
-#include <BALL/SCORING/COMPONENTS/lipophilic.h>
+#include <BALL_core/SCORING/COMPONENTS/advElectrostatic.h>
+#include <BALL_core/SCORING/COMPONENTS/aromaticRingStacking.h>
+#include <BALL_core/SCORING/COMPONENTS/solvation.h>
+#include <BALL_core/SCORING/COMPONENTS/fragmentationalSolvation.h>
+#include <BALL_core/SCORING/COMPONENTS/vanDerWaals.h>
+#include <BALL_core/SCORING/COMPONENTS/hydrogenBond.h>
+#include <BALL_core/SCORING/COMPONENTS/rotationalEntropy.h>
+#include <BALL_core/SCORING/COMPONENTS/lipophilic.h>
 
 
 using namespace BALL;

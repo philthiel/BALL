@@ -9,7 +9,7 @@
 #define BALL_SOLVATION_H
 
 #ifndef BALL_SOLVATION_POISSONBOLTZMANN_H
-#	include <BALL/SOLVATION/poissonBoltzmann.h>
+#	include <BALL_core/SOLVATION/poissonBoltzmann.h>
 #endif
 
 #endif // BALL_SOLVATION_H

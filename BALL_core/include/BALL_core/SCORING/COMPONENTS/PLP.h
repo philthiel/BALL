@@ -6,10 +6,10 @@
 #ifndef BALL_SCORING_COMPONENTS_PLP_H
 #define BALL_SCORING_COMPONENTS_PLP_H
 
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+#include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 
 
 namespace BALL

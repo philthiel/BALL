@@ -3,7 +3,7 @@
 // $Authors: Jan Fuhrmann, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/GENETICDOCK/geneticIndividual.h>
+#include <BALL_core/DOCKING/GENETICDOCK/geneticIndividual.h>
 
 #include <iostream>
 

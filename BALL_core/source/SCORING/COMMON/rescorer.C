@@ -1,15 +1,15 @@
-#include <BALL/FORMAT/molFileFactory.h>
-#include <BALL/FORMAT/dockResultFile.h>
-#include <BALL/SCORING/COMMON/rescorer.h>
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
-#include <BALL/SCORING/FUNCTIONS/gridedMM.h>
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/SCORING/FUNCTIONS/PBScoring.h>
-#include <BALL/SCORING/FUNCTIONS/gridedPLP.h>
-#include <BALL/SCORING/FUNCTIONS/PLPScoring.h>
-#include <BALL/SCORING/FUNCTIONS/rescoring3D.h>
-#include <BALL/SCORING/FUNCTIONS/rescoring4D.h>
-#include <BALL/SCORING/FUNCTIONS/rescoring1D.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/dockResultFile.h>
+#include <BALL_core/SCORING/COMMON/rescorer.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/SCORING/FUNCTIONS/gridedMM.h>
+#include <BALL_core/SCORING/FUNCTIONS/MMScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/PBScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/gridedPLP.h>
+#include <BALL_core/SCORING/FUNCTIONS/PLPScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring3D.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring4D.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring1D.h>
 
 using namespace std;
 

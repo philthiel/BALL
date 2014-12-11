@@ -6,11 +6,11 @@
 #define BALL_CONCEPT_RANDOMACCESSITERATOR_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/CONCEPT/bidirectionalIterator.h>
+#	include <BALL_core/CONCEPT/bidirectionalIterator.h>
 #endif
 
 namespace BALL 

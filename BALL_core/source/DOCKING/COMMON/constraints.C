@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/constraints.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/KERNEL/molecularInteractions.h>
+#include <BALL_core/DOCKING/COMMON/constraints.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
+#include <BALL_core/KERNEL/molecularInteractions.h>
 
 using namespace std;
 

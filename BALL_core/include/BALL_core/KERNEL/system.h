@@ -6,23 +6,23 @@
 #define BALL_KERNEL_SYSTEM_H
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atomIterator.h>
+#	include <BALL_core/KERNEL/atomIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULEITERATOR_H
-#	include <BALL/KERNEL/moleculeIterator.h>
+#	include <BALL_core/KERNEL/moleculeIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEINITERATOR_H
-#	include <BALL/KERNEL/proteinIterator.h>
+#	include <BALL_core/KERNEL/proteinIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_NUCLEICACIDITERATOR_H
-#	include <BALL/KERNEL/nucleicAcidIterator.h>
+#	include <BALL_core/KERNEL/nucleicAcidIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_NUCLEOTIDEIDITERATOR_H
-#	include <BALL/KERNEL/nucleotideIterator.h>
+#	include <BALL_core/KERNEL/nucleotideIterator.h>
 #endif
 
 #define BALL_SYSTEM_DEFAULT_NAME   ""

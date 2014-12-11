@@ -7,15 +7,15 @@
 #define BALL_QSAR_CLASSIFICATIONMODEL_H
 
 #ifndef BALL_QSAR_MODEL_H
-#include <BALL/QSAR/Model.h>
+#include <BALL_core/QSAR/Model.h>
 #endif
 
 #ifndef BALL_QSAR_CLASSIFICATIONVALIDATION_H
-#include <BALL/QSAR/classificationValidation.h>
+#include <BALL_core/QSAR/classificationValidation.h>
 #endif
 
 #ifndef BALL_QSAR_EXCEPTION_H
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
 

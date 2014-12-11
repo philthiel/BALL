@@ -6,47 +6,47 @@
 #define BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-	#include <BALL/CONCEPT/processor.h>
+	#include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/KERNEL/atomContainer.h>
+	#include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-	#include <BALL/DATATYPE/hashMap.h>
+	#include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-	#include <BALL/DATATYPE/hashSet.h>
+	#include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-	#include <BALL/KERNEL/bond.h>
+	#include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_SYSTEM_TIMER_H
-# include <BALL/SYSTEM/timer.h>
+# include <BALL_core/SYSTEM/timer.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
 #endif
 
 #include <map>

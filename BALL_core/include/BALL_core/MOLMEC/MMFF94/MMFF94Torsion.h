@@ -8,15 +8,15 @@
 #define BALL_MOLMEC_MMFF94_MMFF94TORSION_H
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#	include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/MOLMEC/COMMON/forceField.h>
+# include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+#	include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 #endif
 
 namespace BALL 

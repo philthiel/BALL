@@ -4,10 +4,10 @@
 // $Id: enumerator.C,v 1.14 2003/08/26 09:17:44 oliver Exp $
 //
 
-#include <BALL/COMMON/global.h>
-#include <BALL/COMMON/exception.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/CONCEPT/enumerator.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/CONCEPT/enumerator.h>
 
 #include <algorithm>
 #include <functional>
@@ -188,7 +188,7 @@ namespace BALL
 	
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/CONCEPT/enumerator.iC>
+#   include <BALL_core/CONCEPT/enumerator.iC>
 # endif
 
 }

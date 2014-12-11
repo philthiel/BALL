@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/nBModel.h>
+#include <BALL_core/QSAR/nBModel.h>
 #include <limits>
 
 using namespace std;

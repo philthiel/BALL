@@ -6,11 +6,11 @@
 #define BALL_FORMAT_KCFFILE_H
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 namespace BALL 

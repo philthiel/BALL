@@ -6,35 +6,35 @@
 #define BALL_DOCKING_POSECLUSTERING_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/MOLMEC/COMMON/snapShot.h>
+# include <BALL_core/MOLMEC/COMMON/snapShot.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-# include <BALL/STRUCTURE/atomBijection.h>
+# include <BALL_core/STRUCTURE/atomBijection.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#       include <BALL/MATHS/vector3.h>
+#       include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-# include <BALL/MATHS/matrix44.h>
+# include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #include <Eigen/Core>

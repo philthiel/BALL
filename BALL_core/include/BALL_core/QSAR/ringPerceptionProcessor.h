@@ -8,15 +8,15 @@
 #define BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/KERNEL/atomContainer.h>
+	#include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SIMPLEMOLECULARGRAPH_H
-	#include <BALL/STRUCTURE/simpleMolecularGraph.h>
+	#include <BALL_core/STRUCTURE/simpleMolecularGraph.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-	#include <BALL/DATATYPE/options.h>
+	#include <BALL_core/DATATYPE/options.h>
 #endif
 
 #include <stack>

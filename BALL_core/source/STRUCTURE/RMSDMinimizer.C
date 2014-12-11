@@ -7,14 +7,14 @@
 // Coutsalis et al, J. Comput. Chem., 25(15), 1849 (2004)
 //
 
-#include <BALL/STRUCTURE/RMSDMinimizer.h>
-#include <BALL/STRUCTURE/structureMapper.h>
+#include <BALL_core/STRUCTURE/RMSDMinimizer.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/MATHS/quaternion.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
 
 #include <Eigen/Core>
 #include <Eigen/Eigenvalues>

@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/QSAR/fitModel.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/QSAR/fitModel.h>
+#include <BALL_core/COMMON/exception.h>
 
 using namespace std;
 

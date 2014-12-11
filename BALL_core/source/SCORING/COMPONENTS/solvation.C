@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/solvation.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/SCORING/COMPONENTS/solvation.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace BALL;
 using namespace std;

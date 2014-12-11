@@ -9,7 +9,7 @@
 #define BALL_FORMAT_PARAMETERS_H
 
 #ifndef BALL_FORMAT_INIFILE_H
-# include <BALL/FORMAT/INIFile.h>
+# include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 namespace BALL 

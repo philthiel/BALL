@@ -7,8 +7,8 @@
 // limited-memory variable metric method.
 
 
-#include <BALL/MOLMEC/MINIMIZATION/shiftedLVMM.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/shiftedLVMM.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 #include <limits>
 

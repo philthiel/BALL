@@ -6,15 +6,15 @@
 #define BALL_DATATYPE_REGULARDATA1D_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/SYSTEM/binaryFileAdaptor.h>
+# include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 #endif
 
 #include <vector>

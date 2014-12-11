@@ -6,18 +6,18 @@
 #define BALL_SYSTEM_FILE_H
 
 #ifndef BALL_DATATYPE_REGULAREXPRESSION_H
-#	include <BALL/DATATYPE/regularExpression.h>
+#	include <BALL_core/DATATYPE/regularExpression.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILESYSTEM_H
-#	include <BALL/SYSTEM/fileSystem.h>
+#	include <BALL_core/SYSTEM/fileSystem.h>
 #endif
 
-#include <BALL/DATATYPE/hashSet.h>
+#include <BALL_core/DATATYPE/hashSet.h>
 
 #include <cstdlib>                   // 'getenv'
 #include <sys/stat.h>                 // 'stat', 'lstat'
@@ -613,7 +613,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/SYSTEM/file.iC>
+#		include <BALL_core/SYSTEM/file.iC>
 #	endif
   
 } // namespace BALL

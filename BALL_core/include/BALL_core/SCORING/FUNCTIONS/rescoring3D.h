@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_FUNCTIONS_RESCORING3D_H
 #define BALL_SCORING_FUNCTIONS_RESCORING3D_H
 
-#include <BALL/SCORING/FUNCTIONS/rescoring.h>
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 
 
 namespace BALL

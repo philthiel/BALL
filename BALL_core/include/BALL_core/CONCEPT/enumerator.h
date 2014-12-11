@@ -6,19 +6,19 @@
 #define BALL_CONCEPT_ENUMERATOR_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_COMMON_RTTI_H
-# include <BALL/COMMON/rtti.h>
+# include <BALL_core/COMMON/rtti.h>
 #endif
 
 #ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/CONCEPT/forwardIterator.h>
+#	include <BALL_core/CONCEPT/forwardIterator.h>
 #endif
 
 #include <vector>
@@ -679,7 +679,7 @@ namespace BALL
 
 	
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/enumerator.iC>
+#		include <BALL_core/CONCEPT/enumerator.iC>
 #	endif
 
 }

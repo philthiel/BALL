@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_SESFACE_H
 
 #ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/STRUCTURE/graphFace.h>
+#	include <BALL_core/STRUCTURE/graphFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSEDGE_H
-#	include <BALL/STRUCTURE/RSEdge.h>
+#	include <BALL_core/STRUCTURE/RSEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSFACE_H
-#	include <BALL/STRUCTURE/RSFace.h>
+#	include <BALL_core/STRUCTURE/RSFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSVERTEX_H
-#	include <BALL/STRUCTURE/RSVertex.h>
+#	include <BALL_core/STRUCTURE/RSVertex.h>
 #endif
 
 namespace BALL

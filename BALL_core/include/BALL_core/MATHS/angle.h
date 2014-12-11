@@ -6,19 +6,19 @@
 #define BALL_MATHS_ANGLE_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_COMMON_DEBUG_H
-# include <BALL/COMMON/debug.h>
+# include <BALL_core/COMMON/debug.h>
 #endif
 
 #ifndef BALL_COMMON_CREATE_H
-# include <BALL/COMMON/create.h>
+# include <BALL_core/COMMON/create.h>
 #endif
 
 #ifndef BALL_MATHS_COMMON_H
-#	include <BALL/MATHS/common.h>
+#	include <BALL_core/MATHS/common.h>
 #endif
 
 namespace BALL 

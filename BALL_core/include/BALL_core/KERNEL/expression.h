@@ -6,11 +6,11 @@
 #define BALL_KERNEL_EXPRESSION_H
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_EXPRESSIONPARSER_H
-#	include <BALL/KERNEL/expressionParser.h>
+#	include <BALL_core/KERNEL/expressionParser.h>
 #endif
 
 namespace BALL

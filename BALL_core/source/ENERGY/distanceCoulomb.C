@@ -3,10 +3,10 @@
 //
 // $Id: distanceCoulomb.C,v 1.3 2002/02/27 12:21:13 sturm Exp $
 
-#include <BALL/ENERGY/distanceCoulomb.h>
+#include <BALL_core/ENERGY/distanceCoulomb.h>
 
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/system.h>
 
 #define EPSILON_0 8.85419e-12
 #define ELECTRON_CHARGE 1.60219e-19

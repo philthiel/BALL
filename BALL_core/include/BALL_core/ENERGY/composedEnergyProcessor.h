@@ -8,11 +8,11 @@
 #define BALL_ENERGY_COMPOSEDENERGYPROCESSOR
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/ENERGY/energyProcessor.h>
+# include <BALL_core/ENERGY/energyProcessor.h>
 #endif
 
 namespace BALL

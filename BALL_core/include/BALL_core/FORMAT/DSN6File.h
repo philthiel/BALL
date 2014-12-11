@@ -6,11 +6,11 @@
 #define BALL_FORMAT_DSN6FILE_H
 
 #ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/SYSTEM/file.h>
+#	include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 namespace BALL

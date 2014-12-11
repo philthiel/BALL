@@ -4,9 +4,9 @@
 // $Id: steepestDescent.C,v 1.27.26.5 2007/05/18 10:58:39 aleru Exp $
 //
 
-#include <BALL/MOLMEC/MINIMIZATION/steepestDescent.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/steepestDescent.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
 
 #include <limits>
 

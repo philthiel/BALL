@@ -6,19 +6,19 @@
 #define BALL_FORMAT_MOPACINPUTFILE_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-# include <BALL/FORMAT/genericMolFile.h>
+# include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 namespace BALL

@@ -8,19 +8,19 @@
 #define BALL_SYSTEM_MPISUPPORT_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #include <iostream>

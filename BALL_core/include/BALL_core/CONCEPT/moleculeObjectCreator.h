@@ -6,7 +6,7 @@
 #define BALL_CONCEPT_MOLECULEOBJECTCREATOR_H
 
 #ifndef BALL_CONCEPT_OBJECTCREATOR_H
-#	include <BALL/CONCEPT/objectCreator.h>
+#	include <BALL_core/CONCEPT/objectCreator.h>
 #endif
   
 namespace BALL

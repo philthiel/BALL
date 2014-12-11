@@ -8,15 +8,15 @@
 #define BALL_KERNEL_PTE_H
 
 #ifndef BALL_COMMON_CREATE_H
-# include <BALL/COMMON/create.h>
+# include <BALL_core/COMMON/create.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #define BALL_ELEMENT_NAME_DEFAULT                "Unknown"
@@ -795,7 +795,7 @@ namespace BALL
 
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/KERNEL/PTE.iC>
+#		include <BALL_core/KERNEL/PTE.iC>
 #	endif
 } //namespace BALL 
 

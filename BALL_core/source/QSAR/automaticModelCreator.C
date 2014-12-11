@@ -1,6 +1,6 @@
-#include <BALL/QSAR/automaticModelCreator.h>
-#include <BALL/QSAR/registry.h>
-#include <BALL/QSAR/featureSelection.h>
+#include <BALL_core/QSAR/automaticModelCreator.h>
+#include <BALL_core/QSAR/registry.h>
+#include <BALL_core/QSAR/featureSelection.h>
 
 using namespace BALL::QSAR;
 using namespace std;

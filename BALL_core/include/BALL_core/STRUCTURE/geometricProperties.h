@@ -6,31 +6,31 @@
 #define BALL_STRUCTURE_GEOMETRICPROPERTIES_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/MATHS/simpleBox3.h>
+#	include <BALL_core/MATHS/simpleBox3.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/KERNEL/fragment.h>
+#	include <BALL_core/KERNEL/fragment.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #include <vector>

@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_RMSDMINIMIZER_H
 
 #ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-#	include <BALL/STRUCTURE/atomBijection.h>
+#	include <BALL_core/STRUCTURE/atomBijection.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 namespace BALL

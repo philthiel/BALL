@@ -6,11 +6,11 @@
 // Author:
 //   Oliver Kohlbacher
 
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/MOLMEC/COMMON/gradient.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/MOLMEC/COMMON/atomVector.h>
+#include <BALL_core/MOLMEC/COMMON/gradient.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/CONCEPT/composite.h>
+#include <BALL_core/KERNEL/atom.h>
 
 #undef BALL_DEBUG
 

@@ -5,11 +5,11 @@
 #define BALL_XRAY_SPACEGROUPPARAMETERS_H
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 namespace BALL 

@@ -4,7 +4,7 @@
 // $Id: directory.C,v 1.29.18.1 2007/03/25 22:00:35 oliver Exp $
 //
 
-#include <BALL/SYSTEM/directory.h>
+#include <BALL_core/SYSTEM/directory.h>
 
 #include <cstdio>
 #include <cstring>
@@ -756,7 +756,7 @@ namespace BALL
 	}
 
 #ifdef BALL_NO_INLINE_FUNCTIONS
-# include <BALL/SYSTEM/directory.iC>
+# include <BALL_core/SYSTEM/directory.iC>
 #endif
 
 } // namespace BALL 

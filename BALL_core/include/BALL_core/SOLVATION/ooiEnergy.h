@@ -8,11 +8,11 @@
 #define BALL_SOLVATION_OOIENERGY_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
-#	include <BALL/MOLMEC/COMMON/typeRuleProcessor.h>
+#	include <BALL_core/MOLMEC/COMMON/typeRuleProcessor.h>
 #endif
 
 namespace BALL 

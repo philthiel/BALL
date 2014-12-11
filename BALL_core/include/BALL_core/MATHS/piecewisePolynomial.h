@@ -8,7 +8,7 @@
 #define BALL_MATHS_PPOLYNOMIAL_H
 
 #ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-# include <BALL/MATHS/piecewiseFunction.h>
+# include <BALL_core/MATHS/piecewiseFunction.h>
 #endif
 
 namespace BALL 

@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/CHARMM/charmmNonBonded.h>
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmNonBonded.h>
+#include <BALL_core/MOLMEC/CHARMM/charmm.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/support.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 
 // define square function

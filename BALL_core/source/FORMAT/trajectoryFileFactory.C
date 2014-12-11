@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/trajectoryFileFactory.h>
+#include <BALL_core/FORMAT/trajectoryFileFactory.h>
 
-#include <BALL/FORMAT/trajectoryFile.h>
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/FORMAT/TRRFile.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/DCDFile.h>
+#include <BALL_core/FORMAT/TRRFile.h>
 
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
 
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/string.h>
 
 // TODO: - this shares a lot of code with MolFileFactory. We should probably put the shared stuff into a base class.
 //       - also, we currently do not handle automatic compression/decompression into a temporary. I am not even sure

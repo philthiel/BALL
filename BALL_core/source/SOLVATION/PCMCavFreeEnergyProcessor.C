@@ -3,9 +3,9 @@
 //
 // $Id: PCMCavFreeEnergyProcessor.C,v 1.11 2002/02/27 12:24:03 sturm Exp $
 
-#include <BALL/SOLVATION/PCMCavFreeEnergyProcessor.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
-#include <BALL/STRUCTURE/analyticalSES.h>
+#include <BALL_core/SOLVATION/PCMCavFreeEnergyProcessor.h>
+#include <BALL_core/STRUCTURE/numericalSAS.h>
+#include <BALL_core/STRUCTURE/analyticalSES.h>
 
 using namespace std;
 

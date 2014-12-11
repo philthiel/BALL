@@ -4,7 +4,7 @@
 // $Id: amiraMeshFile.C
 //
 
-#include <BALL/FORMAT/amiraMeshFile.h>
+#include <BALL_core/FORMAT/amiraMeshFile.h>
 #include <cstdio>
 
 

@@ -6,27 +6,27 @@
 #define BALL_DOCKING_IMGDOCK_IMGDOCK_H
 
 #ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHEM_H
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 #ifndef BALL_MATH_MATRIX44_H
-#include <BALL/MATHS/matrix44.h>
+#include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT_H
-#include <BALL/DOCKING/COMMON/staticLigandFragment.h>
+#include <BALL_core/DOCKING/COMMON/staticLigandFragment.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_SIDECHAINOPTIMIZER_H
-#include <BALL/DOCKING/COMMON/sideChainOptimizer.h>
+#include <BALL_core/DOCKING/COMMON/sideChainOptimizer.h>
 #endif
 
 #include <map>

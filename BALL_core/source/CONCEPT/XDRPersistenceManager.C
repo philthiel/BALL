@@ -4,7 +4,7 @@
 // $Id: XDRPersistenceManager.C,v 1.31 2005/12/23 17:02:33 amoll Exp $
 //
 
-#include <BALL/CONCEPT/XDRPersistenceManager.h>
+#include <BALL_core/CONCEPT/XDRPersistenceManager.h>
 
 #include <rpc/types.h>
 #include <rpc/xdr.h>

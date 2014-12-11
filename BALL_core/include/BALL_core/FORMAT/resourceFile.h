@@ -6,27 +6,27 @@
 #define BALL_FORMAT_RESOURCEFILE_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/CONCEPT/forwardIterator.h>
+#	include <BALL_core/CONCEPT/forwardIterator.h>
 #endif
 
 #ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
+#	include <BALL_core/CONCEPT/visitor.h>
 #endif
 
 #ifndef BALL_CONCEPT_AUTODELETABLE_H
-#	include <BALL/CONCEPT/autoDeletable.h>
+#	include <BALL_core/CONCEPT/autoDeletable.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/SYSTEM/file.h>
+#	include <BALL_core/SYSTEM/file.h>
 #endif
 
 namespace BALL 
@@ -810,7 +810,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/FORMAT/resourceFile.iC>
+#		include <BALL_core/FORMAT/resourceFile.iC>
 #	endif
 } // namespace BALL
 

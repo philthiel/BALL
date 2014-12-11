@@ -3,7 +3,7 @@
 // $Authors: Marc Röttig $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/COMMON/flexDefinition.h>
+#include <BALL_core/DOCKING/COMMON/flexDefinition.h>
 
 namespace BALL
 {

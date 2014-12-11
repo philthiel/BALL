@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/NMR/empiricalHSShiftProcessor.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/NMR/empiricalHSShiftProcessor.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/STRUCTURE/peptides.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
 #include <map>
 #include <set>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/MATHS/cubicSpline1D.h>
-#include <BALL/MATHS/cubicSpline2D.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/MATHS/cubicSpline1D.h>
+#include <BALL_core/MATHS/cubicSpline2D.h>
 
 
 #define FLOAT_VALUE_NA 3600.

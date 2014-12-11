@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/nucleicAcid.h>
+#include <BALL_core/KERNEL/nucleicAcid.h>
 
 using namespace::std;
 

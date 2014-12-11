@@ -2,11 +2,11 @@
 #define BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #include <boost/shared_ptr.hpp>

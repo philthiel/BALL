@@ -6,11 +6,11 @@
 #define BALL_KERNEL_ATOMCONTAINER_H
 
 #ifndef BALL_KERNEL_ATOMITERATOR_H
-#	include <BALL/KERNEL/atomIterator.h>
+#	include <BALL_core/KERNEL/atomIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINERITERATOR_H
-#	include <BALL/KERNEL/atomContainerIterator.h>
+#	include <BALL_core/KERNEL/atomContainerIterator.h>
 #endif
 
 #define BALL_ATOMCONTAINER_DEFAULT_NAME   ""

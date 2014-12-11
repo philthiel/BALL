@@ -3,4 +3,4 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/COMMON/staticLigandFragment.h>
+#include <BALL_core/DOCKING/COMMON/staticLigandFragment.h>

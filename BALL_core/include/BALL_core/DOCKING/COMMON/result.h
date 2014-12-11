@@ -6,8 +6,8 @@
 #ifndef BALL_DOCKING_RESULT_H
 #define BALL_DOCKING_RESULT_H
 
-#include <BALL/DOCKING/COMMON/receptor.h>
-#include <BALL/DOCKING/COMMON/flexibleMolecule.h>
+#include <BALL_core/DOCKING/COMMON/receptor.h>
+#include <BALL_core/DOCKING/COMMON/flexibleMolecule.h>
 #include <vector>
 #include <map>
 

@@ -1,9 +1,9 @@
-#include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/fragment.h>
+#include <BALL_core/KERNEL/molecule.h>
 
 namespace BALL
 {

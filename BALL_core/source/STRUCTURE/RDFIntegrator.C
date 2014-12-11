@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/RDFIntegrator.h>
+#include <BALL_core/STRUCTURE/RDFIntegrator.h>
 
 using namespace std;
 

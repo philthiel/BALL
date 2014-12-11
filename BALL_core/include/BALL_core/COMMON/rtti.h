@@ -6,11 +6,11 @@
 #define BALL_COMMON_RTTI_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #include <string>

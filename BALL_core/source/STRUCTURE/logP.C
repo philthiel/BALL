@@ -1,4 +1,4 @@
-#include <BALL/STRUCTURE/logP.h>
+#include <BALL_core/STRUCTURE/logP.h>
 
 using namespace std;
 

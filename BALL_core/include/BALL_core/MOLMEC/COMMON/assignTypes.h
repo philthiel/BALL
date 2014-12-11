@@ -10,11 +10,11 @@
 #define BALL_MOLMEC_COMMON_ASSIGNTYPES_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/MOLMEC/PARAMETER/atomTypes.h>
+#	include <BALL_core/MOLMEC/PARAMETER/atomTypes.h>
 #endif
 
 #include <vector>

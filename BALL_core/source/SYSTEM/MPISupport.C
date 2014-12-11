@@ -1,13 +1,13 @@
 // TODO: - Why does XDRManager fail for Options???
 // 			 - The distribute / combine / accept methods for TVector currently just cast
 // 			   TVector3<float> -> float[3]. This is _not_ portable...
-#include <BALL/SYSTEM/MPISupport.h>
+#include <BALL_core/SYSTEM/MPISupport.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/DATATYPE/options.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/DATATYPE/options.h>
 
-#include <BALL/CONCEPT/XDRPersistenceManager.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/XDRPersistenceManager.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
 
 #include <vector>
 #include <iostream>

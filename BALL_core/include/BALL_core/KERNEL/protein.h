@@ -6,11 +6,11 @@
 #define BALL_KERNEL_PROTEIN_H
 
 #ifndef BALL_KERNEL_CHAINITERATOR_H
-#	include <BALL/KERNEL/chainIterator.h>
+#	include <BALL_core/KERNEL/chainIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/KERNEL/molecule.h>
+#	include <BALL_core/KERNEL/molecule.h>
 #endif
 
 #define BALL_PROTEIN_DEFAULT_ID   ""

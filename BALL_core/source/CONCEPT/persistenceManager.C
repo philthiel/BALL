@@ -4,14 +4,14 @@
 // $Id: persistenceManager.C,v 1.23 2005/02/06 09:45:00 oliver Exp $
 //
 
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/XRAY/crystalInfo.h>
-#include <BALL/FORMAT/PDBRecords.h>
-#include <BALL/FORMAT/PDBInfo.h>
+#include <BALL_core/CONCEPT/persistenceManager.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/nucleicAcid.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/XRAY/crystalInfo.h>
+#include <BALL_core/FORMAT/PDBRecords.h>
+#include <BALL_core/FORMAT/PDBInfo.h>
 
 // #define BALL_DEBUG_PERSISTENCE
 
@@ -419,7 +419,7 @@ namespace BALL
 
 
 #ifdef BALL_NO_INLINE_FUNCTIONS
-#	include <BALL/CONCEPT/persistenceManager.iC>
+#	include <BALL_core/CONCEPT/persistenceManager.iC>
 #endif
 
 } // namespace BALL

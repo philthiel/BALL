@@ -6,15 +6,15 @@
 #define BALL_STRUCTURE_SASEDGE_H
 
 #ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#	include <BALL/STRUCTURE/graphEdge.h>
+#	include <BALL_core/STRUCTURE/graphEdge.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/MATHS/circle3.h>
+#	include <BALL_core/MATHS/circle3.h>
 #endif
 
 namespace BALL

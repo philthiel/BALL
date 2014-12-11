@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MATHS/parsedFunction.h>
+#include <BALL_core/MATHS/parsedFunction.h>
 
 namespace BALL
 {

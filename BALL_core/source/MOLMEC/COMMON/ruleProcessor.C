@@ -3,8 +3,8 @@
 //
 // $Id: ruleProcessor.C,v 1.8 2002/12/16 12:23:00 sturm Exp $
 
-#include <BALL/MOLMEC/COMMON/ruleProcessor.h>
-#include <BALL/FORMAT/INIFile.h>
+#include <BALL_core/MOLMEC/COMMON/ruleProcessor.h>
+#include <BALL_core/FORMAT/INIFile.h>
 
 using namespace std;
 

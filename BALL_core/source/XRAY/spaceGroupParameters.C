@@ -1,7 +1,7 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/XRAY/spaceGroupParameters.h>
+#include <BALL_core/XRAY/spaceGroupParameters.h>
 
 using namespace std;
 

@@ -6,9 +6,9 @@
 #ifndef BALL_SCORING_COMPONENTS_LIPOPHILIC_H
 #define BALL_SCORING_COMPONENTS_LIPOPHILIC_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMPONENTS/fresnoTypes.h>
 
 
 namespace BALL

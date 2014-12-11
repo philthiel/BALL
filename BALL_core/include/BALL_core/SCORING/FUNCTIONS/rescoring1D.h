@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_FUNCTIONS_RESCORING1D_H
 #define BALL_SCORING_FUNCTIONS_RESCORING1D_H
 
-#include <BALL/SCORING/FUNCTIONS/rescoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring.h>
 
 namespace BALL
 {

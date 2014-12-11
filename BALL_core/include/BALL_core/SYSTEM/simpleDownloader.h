@@ -2,7 +2,7 @@
 #define BALL_SYSTEM_SIMPLEDOWNLOADER_H
 
 #ifndef BALL_DATATYPE_STRING_H
-	#include <BALL/DATATYPE/string.h>
+	#include <BALL_core/DATATYPE/string.h>
 #endif
 
 #include <QtCore/QThread>

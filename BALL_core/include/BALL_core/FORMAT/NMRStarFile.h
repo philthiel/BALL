@@ -6,15 +6,15 @@
 #define BALL_FORMAT_NMRSTARFILE_H
 
 #ifndef BALL_FORMAT_CIFFILE_H
-# include <BALL/FORMAT/CIFFile.h>
+# include <BALL_core/FORMAT/CIFFile.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEIN_H
-# include <BALL/KERNEL/protein.h>
+# include <BALL_core/KERNEL/protein.h>
 #endif
 
 #ifndef BALL_STRUCTURE_PEPTIDES_H
-# include <BALL/STRUCTURE/peptides.h>
+# include <BALL_core/STRUCTURE/peptides.h>
 #endif
 
 #include <vector>

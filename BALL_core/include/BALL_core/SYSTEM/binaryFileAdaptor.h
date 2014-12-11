@@ -5,7 +5,7 @@
 #include <algorithm>
 
 #ifndef BALL_COMMON_LOGSTREAM_H
-# include <BALL/COMMON/logStream.h>
+# include <BALL_core/COMMON/logStream.h>
 #endif
 
 namespace BALL
@@ -182,7 +182,7 @@ namespace BALL
 } //namespace BALL
 
 #ifndef BALL_NO_INLINE_FUNCTIONS
-	#include <BALL/SYSTEM/binaryFileAdaptor.iC>
+	#include <BALL_core/SYSTEM/binaryFileAdaptor.iC>
 #endif
 
 #endif //BALL_SYSTEM_BINARYFILEADAPTOR_H

@@ -7,15 +7,15 @@
 #define SVMMODEL
 
 #ifndef CLASSIFICATION
-#include <BALL/QSAR/classificationModel.h>
+#include <BALL_core/QSAR/classificationModel.h>
 #endif
 
 #ifndef KMODEL
-#include <BALL/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
 #endif
 
 #ifndef NLMODEL
-#include <BALL/QSAR/nonlinearModel.h>
+#include <BALL_core/QSAR/nonlinearModel.h>
 #endif
 
 namespace BALL{

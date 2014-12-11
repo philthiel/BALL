@@ -8,15 +8,15 @@
 #define BALL_SOLVATION_CLAVERIEPARAMETER_H
 
 #ifndef BALL_FORMAT_PARAMETERS_H
-# include <BALL/FORMAT/parameters.h>
+# include <BALL_core/FORMAT/parameters.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/FORMAT/parameterSection.h>
+# include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_FORCEFIELDPARAMETERS_H
-# include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+# include <BALL_core/MOLMEC/PARAMETER/forceFieldParameters.h>
 #endif
 
 namespace BALL

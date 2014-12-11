@@ -3,7 +3,7 @@
 //
 // $Id: complex.C,v 1.6 2005/02/02 10:50:49 anhi Exp $
 
-#include <BALL/MATHS/complex.h>
+#include <BALL_core/MATHS/complex.h>
 
 
 // AR: obsolete now by using of the C++-datatype complex<.> and new FFTW3

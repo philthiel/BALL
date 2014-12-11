@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/defaultProcessors.h>
+#include <BALL_core/STRUCTURE/defaultProcessors.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/KERNEL/fragment.h>
+#include <BALL_core/KERNEL/residue.h>
 
 using namespace ::std;
 

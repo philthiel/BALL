@@ -2,11 +2,11 @@
 #define BALL_NMR_SHIFTMODEL1D_H
 
 #ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/NMR/shiftModule.h>
+#	include <BALL_core/NMR/shiftModule.h>
 #endif
 
 #ifndef BALL_NMR_SPECTRUM_H
-	#include <BALL/NMR/spectrum.h>
+	#include <BALL_core/NMR/spectrum.h>
 #endif
 
 

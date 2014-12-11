@@ -6,11 +6,11 @@
 #define BALL_FORMAT_DCDFILE_H
 
 #ifndef BALL_FORMAT_TRAJECTORYFILE_H
-#	include <BALL/FORMAT/trajectoryFile.h>
+#	include <BALL_core/FORMAT/trajectoryFile.h>
 #endif
 
 #ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/SYSTEM/binaryFileAdaptor.h>
+# include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 #endif
 
 namespace BALL

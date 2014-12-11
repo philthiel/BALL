@@ -6,47 +6,47 @@
 #define BALL_STRUCTURE_REDUCEDSURFACE_H
 
 #ifndef BALL_MATHC_COMMON_H
-#	include <BALL/MATHS/common.h>
+#	include <BALL_core/MATHS/common.h>
 #endif
 
 #ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/MATHS/simpleBox3.h>
+#	include <BALL_core/MATHS/simpleBox3.h>
 #endif
 
 #ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/MATHS/circle3.h>
+#	include <BALL_core/MATHS/circle3.h>
 #endif
 
 #ifndef BALL_MATHS_SPHERE_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSEDGE_H
-#	include <BALL/STRUCTURE/RSEdge.h>
+#	include <BALL_core/STRUCTURE/RSEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSFACE_H
-#	include <BALL/STRUCTURE/RSFace.h>
+#	include <BALL_core/STRUCTURE/RSFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RSVERTEX_H
-#	include <BALL/STRUCTURE/RSVertex.h>
+#	include <BALL_core/STRUCTURE/RSVertex.h>
 #endif
 
 #include <set>

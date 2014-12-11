@@ -1,6 +1,6 @@
 %{
 
-#include <BALL/FORMAT/GAMESSDatFile.h>
+#include <BALL_core/FORMAT/GAMESSDatFile.h>
 
 #include <iostream>
 #include <cstdlib>

@@ -8,35 +8,35 @@
 #define BALL_MOLMEC_COMMON_FORCEFIELD_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/DATATYPE/options.h>
+#	include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_CONCEPT_TIMESTAMP_H
-#	include <BALL/CONCEPT/timeStamp.h>
+#	include <BALL_core/CONCEPT/timeStamp.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_FORCEFIELDPARAMETERS_H
-#	include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#	include <BALL_core/MOLMEC/PARAMETER/forceFieldParameters.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/MOLMEC/PARAMETER/atomTypes.h>
+#	include <BALL_core/MOLMEC/PARAMETER/atomTypes.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_PERIODIC_BOUNDARY_H
-#	include <BALL/MOLMEC/COMMON/periodicBoundary.h>
+#	include <BALL_core/MOLMEC/COMMON/periodicBoundary.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-#	include <BALL/MOLMEC/COMMON/atomVector.h>
+#	include <BALL_core/MOLMEC/COMMON/atomVector.h>
 #endif
 
 #include <vector>
@@ -443,7 +443,7 @@ namespace BALL
 	};
 
 # ifndef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/MOLMEC/COMMON/forceField.iC>
+#   include <BALL_core/MOLMEC/COMMON/forceField.iC>
 # endif
 
 } // namespace BALL

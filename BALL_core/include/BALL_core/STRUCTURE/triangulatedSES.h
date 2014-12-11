@@ -6,39 +6,39 @@
 #define BALL_STRUCTURE_TRIANGULATEDSES_H
 
 #ifndef BALL_TRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#	include <BALL/STRUCTURE/solventExcludedSurface.h>
+#	include <BALL_core/STRUCTURE/solventExcludedSurface.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGLE_H
-#	include <BALL/STRUCTURE/triangle.h>
+#	include <BALL_core/STRUCTURE/triangle.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGLEEDGE_H
-#	include <BALL/STRUCTURE/triangleEdge.h>
+#	include <BALL_core/STRUCTURE/triangleEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGLEPOINT_H
-#	include <BALL/STRUCTURE/trianglePoint.h>
+#	include <BALL_core/STRUCTURE/trianglePoint.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGULATEDSURFACE_H
-#	include <BALL/STRUCTURE/triangulatedSurface.h>
+#	include <BALL_core/STRUCTURE/triangulatedSurface.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/MATHS/circle3.h>
+#	include <BALL_core/MATHS/circle3.h>
 #endif
 
 #ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #include <list>

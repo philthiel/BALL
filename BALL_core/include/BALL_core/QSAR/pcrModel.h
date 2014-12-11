@@ -7,16 +7,16 @@
 #define PCRMODEL
 
 #ifndef LMODEL
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #ifndef QSAR_EXCEPTION
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
-#include <BALL/QSAR/rrModel.h>
+#include <BALL_core/QSAR/rrModel.h>
 
-#include <BALL/QSAR/latentVariableModel.h>
+#include <BALL_core/QSAR/latentVariableModel.h>
 
 
 namespace BALL 

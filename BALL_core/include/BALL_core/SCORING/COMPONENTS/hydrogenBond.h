@@ -6,9 +6,9 @@
 #ifndef BALL_SCORING_COMPONENTS_HYDROGENBOND_H
 #define BALL_SCORING_COMPONENTS_HYDROGENBOND_H
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
+#include <BALL_core/SCORING/COMMON/scoringComponent.h>
+#include <BALL_core/DATATYPE/options.h>
+#include <BALL_core/SCORING/COMPONENTS/fresnoTypes.h>
 
 namespace BALL
 {

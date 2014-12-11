@@ -4,8 +4,8 @@
 // $Id: selector.C,v 1.28 2003/12/20 16:00:53 amoll Exp $
 //
 
-#include <BALL/KERNEL/selector.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/selector.h>
+#include <BALL_core/KERNEL/atom.h>
 
 namespace BALL 
 {

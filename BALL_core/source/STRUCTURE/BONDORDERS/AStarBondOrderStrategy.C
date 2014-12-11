@@ -1,6 +1,6 @@
-#include <BALL/STRUCTURE/BONDORDERS/AStarBondOrderStrategy.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/AStarBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #define INFINITE_PENALTY 1e5
 

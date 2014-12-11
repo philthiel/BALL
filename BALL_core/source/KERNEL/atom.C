@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/secondaryStructure.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/molecularInteractions.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/fragment.h>
+#include <BALL_core/KERNEL/chain.h>
+#include <BALL_core/KERNEL/secondaryStructure.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/molecularInteractions.h>
 
 #include <algorithm>
 
@@ -673,7 +673,7 @@ namespace BALL
 	}
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/KERNEL/atom.iC>
+#   include <BALL_core/KERNEL/atom.iC>
 # endif
 
 } // namespace BALL

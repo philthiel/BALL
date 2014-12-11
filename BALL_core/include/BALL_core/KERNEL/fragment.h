@@ -6,7 +6,7 @@
 #define BALL_KERNEL_FRAGMENT_H
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/KERNEL/atomContainer.h>
+#	include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 namespace BALL 

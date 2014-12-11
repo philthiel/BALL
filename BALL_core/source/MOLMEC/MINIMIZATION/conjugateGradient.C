@@ -6,9 +6,9 @@
 // Minimize the potential energy of a system using a nonlinear conjugate 
 // gradient method with  line search
 
-#include <BALL/MOLMEC/MINIMIZATION/conjugateGradient.h>
-#include <BALL/MOLMEC/MINIMIZATION/lineSearch.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/conjugateGradient.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/lineSearch.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 #include <limits>
 

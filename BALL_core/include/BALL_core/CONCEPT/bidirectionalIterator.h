@@ -6,7 +6,7 @@
 #define BALL_CONCEPT_BIDIRECTIONALITERATOR_H
 
 #ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/CONCEPT/forwardIterator.h>
+#	include <BALL_core/CONCEPT/forwardIterator.h>
 #endif
 
 namespace BALL 

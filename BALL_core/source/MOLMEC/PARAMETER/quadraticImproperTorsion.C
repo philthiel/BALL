@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/quadraticImproperTorsion.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL_core/MOLMEC/PARAMETER/quadraticImproperTorsion.h>
+#include <BALL_core/MOLMEC/PARAMETER/forceFieldParameters.h>
 
 using namespace std;
 

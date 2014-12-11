@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/system.h>
 
 namespace BALL 
 {

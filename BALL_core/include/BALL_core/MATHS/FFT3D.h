@@ -6,19 +6,19 @@
 #define BALL_MATHS_TFFT3D_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 //#ifndef BALL_MATHS_VECTOR2_H
-//# include <BALL/MATHS/vector3.h>
+//# include <BALL_core/MATHS/vector3.h>
 //#endif
 
-#include <BALL/MATHS/fftwCommon.h>
+#include <BALL_core/MATHS/fftwCommon.h>
 #include <cmath>
 #include <complex>
 #include <fftw3.h>

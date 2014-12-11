@@ -9,11 +9,11 @@
 #include <stdexcept>
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/CONCEPT/persistenceManager.h>
+#	include <BALL_core/CONCEPT/persistenceManager.h>
 #endif
 
 namespace BALL 

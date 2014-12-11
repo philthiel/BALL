@@ -3,11 +3,11 @@
 //
 //
 
-#include <BALL/QSAR/connectivityBase.h>
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/QSAR/connectivityBase.h>
+#include <BALL_core/QSAR/simpleDescriptors.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
 
 #include <queue>
 #include <numeric>

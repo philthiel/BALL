@@ -6,7 +6,7 @@
 #define BALL_FORMAT_PUBCHEMDOWNLOADER_H
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 namespace BALL

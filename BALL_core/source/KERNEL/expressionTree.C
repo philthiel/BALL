@@ -4,7 +4,7 @@
 // $Id: expressionTree.C,v 1.13 2003/08/26 09:17:49 oliver Exp $
 //
 
-#include <BALL/KERNEL/expressionTree.h>
+#include <BALL_core/KERNEL/expressionTree.h>
 
 using namespace::std;
 namespace BALL

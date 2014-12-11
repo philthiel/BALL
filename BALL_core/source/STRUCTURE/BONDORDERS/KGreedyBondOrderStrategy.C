@@ -1,5 +1,5 @@
-#include <BALL/STRUCTURE/BONDORDERS/KGreedyBondOrderStrategy.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/KGreedyBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
 
 namespace BALL
 {

@@ -3,11 +3,11 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMPONENTS/fresnoTypes.h>
+#include <BALL_core/KERNEL/standardPredicates.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
 
 using namespace BALL;

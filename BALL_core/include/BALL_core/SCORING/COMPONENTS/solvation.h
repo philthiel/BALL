@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_COMPONENTS_SOLVATION_H
 #define BALL_SCORING_COMPONENTS_SOLVATION_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 #include <map>
 
 

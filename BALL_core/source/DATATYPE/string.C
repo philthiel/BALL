@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/string.h>
 
 #include <QtCore/QString>
 #include <QtCore/QByteArray>
@@ -1818,6 +1818,6 @@ String String::decodeBase64()
 } // namespace BALL
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/DATATYPE/string.iC>
+#		include <BALL_core/DATATYPE/string.iC>
 #	endif
 

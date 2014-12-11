@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/buildBondsProcessor.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/resourceFile.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/STRUCTURE/buildBondsProcessor.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/FORMAT/resourceFile.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
 
 #include <limits>
 

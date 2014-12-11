@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/ringAnalyser.h>
+#include <BALL_core/STRUCTURE/ringAnalyser.h>
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/CONCEPT/property.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/CONCEPT/property.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
 
 //#define BALL_DEBUG_RINGANALYSER
 

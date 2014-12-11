@@ -3,7 +3,7 @@
 //
 // $Id: timer.C,v 1.17 2005/02/14 17:06:45 amoll Exp $
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 
 #ifdef BALL_HAS_UNISTD_H
 #	include <unistd.h>
@@ -456,7 +456,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/SYSTEM/timer.iC>
+#		include <BALL_core/SYSTEM/timer.iC>
 #	endif
 
 } // namespace BALL

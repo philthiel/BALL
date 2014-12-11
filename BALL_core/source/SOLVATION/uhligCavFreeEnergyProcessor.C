@@ -3,8 +3,8 @@
 //
 // $Id: uhligCavFreeEnergyProcessor.C,v 1.11 2002/12/16 12:30:37 amoll Exp $
 
-#include <BALL/SOLVATION/uhligCavFreeEnergyProcessor.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL_core/SOLVATION/uhligCavFreeEnergyProcessor.h>
+#include <BALL_core/STRUCTURE/numericalSAS.h>
 
 using std::endl;
 

@@ -5,8 +5,8 @@
 #ifndef BALL_DOCKING_COMMON_CONFORMATION_H
 #define BALL_DOCKING_COMMON_CONFORMATION_H
 
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/CONCEPT/property.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/CONCEPT/property.h>
 
 #include <QtCore/QCryptographicHash>
 

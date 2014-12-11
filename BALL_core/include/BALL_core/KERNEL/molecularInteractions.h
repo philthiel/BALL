@@ -1,8 +1,8 @@
 #ifndef BALL_KERNEL_MOLECULARINTERACTIONS_H
 #define BALL_KERNEL_MOLECULARINTERACTIONS_H
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/DATATYPE/string.h>
 #include <map>
 
 

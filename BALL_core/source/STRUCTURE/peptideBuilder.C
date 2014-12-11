@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/peptideBuilder.h>
+#include <BALL_core/STRUCTURE/peptideBuilder.h>
 
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/KERNEL/PTE.h>
 #include <cmath>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
 
 namespace BALL
 {

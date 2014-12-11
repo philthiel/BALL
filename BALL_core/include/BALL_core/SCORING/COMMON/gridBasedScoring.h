@@ -6,9 +6,9 @@
 #ifndef BALL_SCORING_COMMON_GRIDBASEDSCORING_H
 #define BALL_SCORING_COMMON_GRIDBASEDSCORING_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SCORING/COMMON/scoreGridSet.h>
-#include <BALL/MOLMEC/PARAMETER/atomTypes.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoreGridSet.h>
+#include <BALL_core/MOLMEC/PARAMETER/atomTypes.h>
 #include <set>
 #include <map>
 

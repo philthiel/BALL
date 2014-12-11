@@ -8,15 +8,15 @@
 #define BALL_NMR_PEAK_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include	<BALL/MATHS/vector3.h>
+#	include	<BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR2_H
-#	include	<BALL/MATHS/vector2.h>
+#	include	<BALL_core/MATHS/vector2.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-#	include	<BALL/CONCEPT/property.h>
+#	include	<BALL_core/CONCEPT/property.h>
 #endif
 
 #include <iostream>

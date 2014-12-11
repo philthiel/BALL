@@ -5,11 +5,11 @@
 #include <map>
 
 #ifndef BALL_MATHS_CUBICSPLINE1D_H
-#	include <BALL/MATHS/cubicSpline1D.h>
+#	include <BALL_core/MATHS/cubicSpline1D.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/COMMON/exception.h>
 #endif
 
 namespace BALL 

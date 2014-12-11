@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_ATOMTYPER_H
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #include <vector>

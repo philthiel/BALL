@@ -3,21 +3,21 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/QSAR/partialChargeProcessor.h>
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/MOLMEC/PARAMETER/templates.h>
-#include <BALL/MOLMEC/PARAMETER/lennardJones.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
-#include <BALL/STRUCTURE/buildBondsProcessor.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/SCORING/COMPONENTS/PLP.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/DOCKING/COMMON/structurePreparer.h>
+#include <BALL_core/STRUCTURE/defaultProcessors.h>
+#include <BALL_core/QSAR/partialChargeProcessor.h>
+#include <BALL_core/QSAR/simpleDescriptors.h>
+#include <BALL_core/MOLMEC/PARAMETER/templates.h>
+#include <BALL_core/MOLMEC/PARAMETER/lennardJones.h>
+#include <BALL_core/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL_core/STRUCTURE/buildBondsProcessor.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
+#include <BALL_core/DATATYPE/options.h>
+#include <BALL_core/SCORING/COMPONENTS/PLP.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_core/SYSTEM/path.h>
 
 using namespace std;
 

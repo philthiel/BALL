@@ -9,23 +9,23 @@
 #define BALL_MATHS_H
 
 #ifndef BALL_MATHS_ANALYTICALGEOMETRY_H
-#	include <BALL/MATHS/analyticalGeometry.h>
+#	include <BALL_core/MATHS/analyticalGeometry.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/MATHS/angle.h>
+#	include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_MATHS_BOX3_H
-#	include <BALL/MATHS/box3.h>
+#	include <BALL_core/MATHS/box3.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_MATHS_QUATERNION_H
-#	include <BALL/MATHS/quaternion.h>
+#	include <BALL_core/MATHS/quaternion.h>
 #endif
 
 #endif // BALL_MATHS_H

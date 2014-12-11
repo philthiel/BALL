@@ -8,7 +8,7 @@
 #define BALL_MATHS_NUMERICALINTEGRATOR_H
 
 #ifndef BALL_MATHS_FUNCTION_H
-# include <BALL/MATHS/function.h>
+# include <BALL_core/MATHS/function.h>
 #endif
 
 namespace BALL

@@ -4,8 +4,8 @@
 // $Id: pair6_12RDFIntegrator.C,v 1.20 2003/08/26 09:18:26 oliver Exp $
 //
 
-#include <BALL/MATHS/common.h>
-#include <BALL/SOLVATION/pair6_12RDFIntegrator.h>
+#include <BALL_core/MATHS/common.h>
+#include <BALL_core/SOLVATION/pair6_12RDFIntegrator.h>
 
 #include <limits>
 

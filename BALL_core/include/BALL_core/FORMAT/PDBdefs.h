@@ -6,31 +6,31 @@
 #define BALL_FORMAT_PDBDEFS_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-#	include <BALL/KERNEL/secondaryStructure.h>
+#	include <BALL_core/KERNEL/secondaryStructure.h>
 #endif
 
 #ifndef BALL_KERNEL_CHAIN_H
-#	include <BALL/KERNEL/chain.h>
+#	include <BALL_core/KERNEL/chain.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_DATATYPES_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 namespace BALL 

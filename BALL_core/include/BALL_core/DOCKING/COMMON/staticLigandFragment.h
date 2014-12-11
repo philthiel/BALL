@@ -6,11 +6,11 @@
 #define BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT
 
 #ifndef BALL_MATH_MATRIX44_H
-#include <BALL/MATHS/matrix44.h>
+#include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atom.h>
 #endif
 
 namespace BALL

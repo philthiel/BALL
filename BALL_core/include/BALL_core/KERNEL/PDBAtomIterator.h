@@ -8,23 +8,23 @@
 #define BALL_KERNEL_PDBATOMITERATOR_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_PDBATOM_H
-#	include <BALL/KERNEL/PDBAtom.h>
+#	include <BALL_core/KERNEL/PDBAtom.h>
 #endif
 
 #ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/KERNEL/iterator.h>
+#	include <BALL_core/KERNEL/iterator.h>
 #endif
 
 #ifndef BALL_KERNEL_PREDICATE_H
-#	include <BALL/KERNEL/predicate.h>
+#	include <BALL_core/KERNEL/predicate.h>
 #endif
 
 #ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-# include <BALL/CONCEPT/stdIteratorWrapper.h>
+# include <BALL_core/CONCEPT/stdIteratorWrapper.h>
 #endif
 
 namespace BALL 

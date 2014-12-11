@@ -8,7 +8,7 @@
 #define BALL_QSAR_PARTIALCHARGEDESCRIPTORS_H
 
 #ifndef BALL_QSAR_PARTIALCHARGEBASE_H
-# include <BALL/QSAR/partialChargeBase.h>
+# include <BALL_core/QSAR/partialChargeBase.h>
 #endif
 
 namespace BALL

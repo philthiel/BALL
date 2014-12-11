@@ -6,9 +6,9 @@
 #ifndef BALL_DOCKING_GENETICDOCK_ROTATE_BOND_H
 #define BALL_DOCKING_GENETICDOCK_ROTATE_BOND_H
 
-#include <BALL/DATATYPE/hashSet.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/MATHS/matrix44.h>
+#include <BALL_core/DATATYPE/hashSet.h>
+#include <BALL_core/MATHS/angle.h>
+#include <BALL_core/MATHS/matrix44.h>
 
 // This class changes the rotation angle(radians) around a defined axis, furthermore it is possible to select
 // 2 additional atoms to calculate and change the dihedral angle. The rotation axis must not be contained in a

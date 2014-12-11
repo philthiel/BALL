@@ -7,7 +7,7 @@
 #define LOGITMODEL
 
 #ifndef CLASSIFICATION
-#include <BALL/QSAR/classificationModel.h>
+#include <BALL_core/QSAR/classificationModel.h>
 #endif
 
 

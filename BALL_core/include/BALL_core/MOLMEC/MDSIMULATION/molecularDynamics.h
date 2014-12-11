@@ -11,15 +11,15 @@
 #define BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-# include <BALL/MOLMEC/COMMON/atomVector.h>
+# include <BALL_core/MOLMEC/COMMON/atomVector.h>
 #endif
 
 #include <vector>

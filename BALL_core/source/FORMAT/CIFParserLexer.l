@@ -1,5 +1,5 @@
 %{
-#include <BALL/FORMAT/CIFFile.h>
+#include <BALL_core/FORMAT/CIFFile.h>
 
 using namespace BALL;
 

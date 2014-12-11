@@ -8,23 +8,23 @@
 #define BALL_MOLMEC_MMFF94_PROCESSORS_H
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-# include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+# include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/DATATYPE/stringHashMap.h>
+# include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-# include <BALL/KERNEL/bond.h>
+# include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ATOMTYPER_H
-# include <BALL/STRUCTURE/atomTyper.h>
+# include <BALL_core/STRUCTURE/atomTyper.h>
 #endif
 
 #include <vector>

@@ -8,7 +8,7 @@
 
 #include <Eigen/Core>
 
-#include <BALL/COMMON/global.h>
+#include <BALL_core/COMMON/global.h>
 
 namespace BALL
 {

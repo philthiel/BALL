@@ -6,39 +6,39 @@
 #define BALL_CONCEPT_COMPOSITE_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
+#	include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPARATOR_H
-#	include <BALL/CONCEPT/comparator.h>
+#	include <BALL_core/CONCEPT/comparator.h>
 #endif
 
 #ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/CONCEPT/bidirectionalIterator.h>
+#	include <BALL_core/CONCEPT/bidirectionalIterator.h>
 #endif
 
 #ifndef BALL_CONCEPT_OBJECT_H
-#	include <BALL/CONCEPT/object.h>
+#	include <BALL_core/CONCEPT/object.h>
 #endif
 
 #ifndef BALL_CONCEPT_SELECTABLE_H
-#	include <BALL/CONCEPT/selectable.h>
+#	include <BALL_core/CONCEPT/selectable.h>
 #endif
 
 #ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
+#	include <BALL_core/CONCEPT/visitor.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_CONCEPT_TIMESTAMP_H
-#	include <BALL/CONCEPT/timeStamp.h>
+#	include <BALL_core/CONCEPT/timeStamp.h>
 #endif
 
 ///
@@ -2189,7 +2189,7 @@ B		*/
 	}
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/composite.iC>
+#		include <BALL_core/CONCEPT/composite.iC>
 #	endif
 
 

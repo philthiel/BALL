@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/MOL2File.h>
+#include <BALL_core/FORMAT/MOL2File.h>
 
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/regularExpression.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/regularExpression.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/PDBAtom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/forEach.h>
 
-#include <BALL/MOLMEC/AMBER/GAFFTypeProcessor.h>
+#include <BALL_core/MOLMEC/AMBER/GAFFTypeProcessor.h>
 
 using namespace std;
 

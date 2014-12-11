@@ -3,7 +3,7 @@
 //
 // $Id: radiusRuleProcessor.C,v 1.4 2002/02/27 12:21:34 sturm Exp $
 
-#include <BALL/MOLMEC/COMMON/radiusRuleProcessor.h>
+#include <BALL_core/MOLMEC/COMMON/radiusRuleProcessor.h>
 
 namespace BALL
 {

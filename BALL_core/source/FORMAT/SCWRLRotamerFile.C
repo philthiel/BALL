@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/SCWRLRotamerFile.h>
-#include <BALL/STRUCTURE/rotamerLibrary.h>
+#include <BALL_core/FORMAT/SCWRLRotamerFile.h>
+#include <BALL_core/STRUCTURE/rotamerLibrary.h>
 
 using namespace std;
 

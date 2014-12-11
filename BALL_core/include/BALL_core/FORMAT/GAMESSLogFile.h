@@ -6,15 +6,15 @@
 #define BALL_FORMAT_GAMESSLOGFILE_H
 
 #ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/FORMAT/genericMolFile.h>
+#	include <BALL_core/FORMAT/genericMolFile.h>
 #endif
 
 #ifndef BALL_STRUCTURE_QMBASISSET_H
-# include <BALL/STRUCTURE/QMBasisSet.h>
+# include <BALL_core/STRUCTURE/QMBasisSet.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SPLITVALENCESET_H
-# include <BALL/STRUCTURE/splitValenceSet.h>
+# include <BALL_core/STRUCTURE/splitValenceSet.h>
 #endif
 
 namespace BALL

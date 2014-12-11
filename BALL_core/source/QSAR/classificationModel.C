@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/classificationModel.h>
+#include <BALL_core/QSAR/classificationModel.h>
 
 namespace BALL
 {

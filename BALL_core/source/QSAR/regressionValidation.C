@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 // 
-#include <BALL/QSAR/regressionValidation.h>
-#include <BALL/QSAR/statistics.h>
-#include <BALL/QSAR/regressionModel.h>
-#include <BALL/QSAR/kernelModel.h>
-#include <BALL/QSAR/latentVariableModel.h>
-#include <BALL/QSAR/registry.h>
+#include <BALL_core/QSAR/regressionValidation.h>
+#include <BALL_core/QSAR/statistics.h>
+#include <BALL_core/QSAR/regressionModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/latentVariableModel.h>
+#include <BALL_core/QSAR/registry.h>
 
 #include <boost/random/mersenne_twister.hpp>
 

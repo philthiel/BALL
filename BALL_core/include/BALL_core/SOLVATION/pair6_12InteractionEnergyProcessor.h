@@ -8,31 +8,31 @@
 #define BALL_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-# include <BALL/MATHS/surface.h>
+# include <BALL_core/MATHS/surface.h>
 #endif
 
 #ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/ENERGY/energyProcessor.h>
+# include <BALL_core/ENERGY/energyProcessor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_RDFPARAMETER_H
-# include <BALL/STRUCTURE/RDFParameter.h>
+# include <BALL_core/STRUCTURE/RDFParameter.h>
 #endif
 
 #ifndef BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
-# include <BALL/SOLVATION/pair6_12RDFIntegrator.h>
+# include <BALL_core/SOLVATION/pair6_12RDFIntegrator.h>
 #endif
 
 #ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-# include <BALL/SOLVATION/solventDescriptor.h>
+# include <BALL_core/SOLVATION/solventDescriptor.h>
 #endif
 
 namespace BALL

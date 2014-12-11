@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_ANALYTICALSES_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 namespace BALL 

@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/addHydrogenProcessor.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+#include <BALL_core/STRUCTURE/addHydrogenProcessor.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/CONCEPT/composite.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 
 //    #define DEBUG
 

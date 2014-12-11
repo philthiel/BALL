@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/molecularInformation.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL_core/CONCEPT/molecularInformation.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/bond.h>
 
 using namespace std;
 

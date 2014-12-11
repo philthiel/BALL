@@ -8,15 +8,15 @@
 #define BALL_KERNEL_FRAGMENTITERATOR_H
 
 #ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/KERNEL/iterator.h>
+#	include <BALL_core/KERNEL/iterator.h>
 #endif
 
 #ifndef BALL_KERNEL_PREDICATE_H
-# include <BALL/KERNEL/predicate.h>
+# include <BALL_core/KERNEL/predicate.h>
 #endif
 
 #ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-# include <BALL/CONCEPT/stdIteratorWrapper.h>
+# include <BALL_core/CONCEPT/stdIteratorWrapper.h>
 #endif
 
 namespace BALL 

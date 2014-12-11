@@ -6,23 +6,23 @@
 #define BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
 
 #ifndef BALL_STRUCTURE_SASEDGE_H
-#	include <BALL/STRUCTURE/SASEdge.h>
+#	include <BALL_core/STRUCTURE/SASEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SASFACE_H
-#	include <BALL/STRUCTURE/SASFace.h>
+#	include <BALL_core/STRUCTURE/SASFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SASVERTEX_H
-#	include <BALL/STRUCTURE/SASVertex.h>
+#	include <BALL_core/STRUCTURE/SASVertex.h>
 #endif
 
 #ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/STRUCTURE/reducedSurface.h>
+#	include <BALL_core/STRUCTURE/reducedSurface.h>
 #endif
 
 #ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #include <vector>

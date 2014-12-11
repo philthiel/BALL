@@ -3,17 +3,17 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/scoringOptimizer.h>
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/FORMAT/SDFile.h>
+#include <BALL_core/SCORING/COMMON/scoringOptimizer.h>
+#include <BALL_core/DOCKING/COMMON/structurePreparer.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/MOLFile.h>
+#include <BALL_core/FORMAT/MOL2File.h>
+#include <BALL_core/FORMAT/SDFile.h>
 
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/SCORING/FUNCTIONS/PLPScoring.h>
-#include <BALL/SCORING/FUNCTIONS/PBScoring.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/SCORING/FUNCTIONS/MMScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/PLPScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/PBScoring.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace BALL;
 using namespace std;

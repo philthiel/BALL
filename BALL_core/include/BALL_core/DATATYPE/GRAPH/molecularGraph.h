@@ -9,11 +9,11 @@
 #include <list>
 
 #ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/COMMON/global.h>
+#	include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/DATATYPE/GRAPH/graphAlgorithms.h>
+# include <BALL_core/DATATYPE/GRAPH/graphAlgorithms.h>
 #endif
 
 namespace BALL

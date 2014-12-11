@@ -10,11 +10,11 @@
 #define BALL_SCORING_FUNCTIONS_AMBEREVALUATION_H
 
 #ifndef BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
-# include <BALL/SCORING/FUNCTIONS/forceFieldEvaluation.h>
+# include <BALL_core/SCORING/FUNCTIONS/forceFieldEvaluation.h>
 #endif
 
 #ifndef BALL_MOLMEC_AMBER_AMBER_H
-# include <BALL/MOLMEC/AMBER/amber.h>
+# include <BALL_core/MOLMEC/AMBER/amber.h>
 #endif
 
 namespace BALL

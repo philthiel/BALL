@@ -7,15 +7,15 @@
 #define BALL_CONCEPT_AUTODELETABLE_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_COMMON_H
-#	include <BALL/COMMON/debug.h>
+#	include <BALL_core/COMMON/debug.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #include <cstdlib>
@@ -173,7 +173,7 @@ namespace BALL
 	};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/autoDeletable.iC>
+#		include <BALL_core/CONCEPT/autoDeletable.iC>
 #	endif
 
 } // namespace BALL

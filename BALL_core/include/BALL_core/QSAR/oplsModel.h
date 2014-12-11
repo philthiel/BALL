@@ -7,7 +7,7 @@
 #define OPLSMODEL
 
 #ifndef PLSMODEL
-#include <BALL/QSAR/plsModel.h>
+#include <BALL_core/QSAR/plsModel.h>
 #endif
 
 

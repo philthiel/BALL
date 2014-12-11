@@ -8,7 +8,7 @@
 
 #include <vector>
 
-#include <BALL/DOCKING/GENETICDOCK/genes.h>
+#include <BALL_core/DOCKING/GENETICDOCK/genes.h>
 
 namespace BALL
 {

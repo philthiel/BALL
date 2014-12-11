@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/residueChecker.h>
+#include <BALL_core/STRUCTURE/residueChecker.h>
 
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/DATATYPE/hashSet.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/chain.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/DATATYPE/hashSet.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_core/KERNEL/residue.h>
 
 using namespace std;
 

@@ -6,22 +6,22 @@
 #define BALL_MATHS_TFFT2D_H
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA2D_H
-# include <BALL/DATATYPE/regularData2D.h>
+# include <BALL_core/DATATYPE/regularData2D.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR2_H
-# include <BALL/MATHS/vector2.h>
+# include <BALL_core/MATHS/vector2.h>
 #endif
 
 #include <cmath>
 #include <complex>
 #include <fftw3.h>
 
-#include <BALL/MATHS/fftwCommon.h>
+#include <BALL_core/MATHS/fftwCommon.h>
 
 
 namespace BALL

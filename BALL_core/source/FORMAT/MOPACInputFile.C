@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/MOPACInputFile.h>
+#include <BALL_core/FORMAT/MOPACInputFile.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PDBAtom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 namespace BALL
 {

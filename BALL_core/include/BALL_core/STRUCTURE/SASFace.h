@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_SASFACE_H
 
 #ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/STRUCTURE/graphFace.h>
+#	include <BALL_core/STRUCTURE/graphFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 #include <list>

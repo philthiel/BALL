@@ -4,10 +4,10 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/PB.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/SCORING/COMPONENTS/PB.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace BALL;
 using namespace std;

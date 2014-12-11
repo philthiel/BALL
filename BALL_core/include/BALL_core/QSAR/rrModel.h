@@ -7,11 +7,11 @@
 #define RIDGEMODEL
 
 #ifndef MLRMODEL
-#include <BALL/QSAR/mlrModel.h>
+#include <BALL_core/QSAR/mlrModel.h>
 #endif
 
 #ifndef QSAR_EXCEPTION
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
 

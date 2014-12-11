@@ -5,10 +5,10 @@
 #ifndef BALL_FORMAT_DBINTERFACE_H
 #define BALL_FORMAT_DBINTERFACE_H
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/FORMAT/MOLFile.h>
+#include <BALL_core/COMMON/exception.h>
 
 #include <QSqlRecord>
 #include <QSqlDatabase>

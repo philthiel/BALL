@@ -6,11 +6,11 @@
 #define BALL_MOLMEC_PARAMETER_QUADRATICBONDSTRETCH_H
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/MOLMEC/PARAMETER/atomTypes.h>
+#	include <BALL_core/MOLMEC/PARAMETER/atomTypes.h>
 #endif
 
 namespace BALL 

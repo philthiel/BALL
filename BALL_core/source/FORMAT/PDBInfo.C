@@ -4,7 +4,7 @@
 // $Id: PDBInfo.C,v 1.3 2005/02/16 14:09:40 oliver Exp $
 //
 
-#include <BALL/FORMAT/PDBInfo.h>
+#include <BALL_core/FORMAT/PDBInfo.h>
 
 namespace BALL 
 {

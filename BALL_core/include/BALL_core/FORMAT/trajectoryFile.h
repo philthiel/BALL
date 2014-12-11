@@ -6,11 +6,11 @@
 #define BALL_FORMAT_TRAJECTORYFILE_H
 
 #ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/SYSTEM/file.h>
+#	include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-#	include <BALL/MOLMEC/COMMON/snapShot.h>
+#	include <BALL_core/MOLMEC/COMMON/snapShot.h>
 #endif
 
 namespace BALL

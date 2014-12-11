@@ -1,12 +1,12 @@
-#include <BALL/STRUCTURE/mutator.h>
+#include <BALL_core/STRUCTURE/mutator.h>
 
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
 
 namespace BALL
 {
 
 #ifdef BALL_DEBUG
-# include <BALL/STRUCTURE/mutator.iC>
+# include <BALL_core/STRUCTURE/mutator.iC>
 #endif
 
 	Mutator::Mutator(FragmentDB* db)

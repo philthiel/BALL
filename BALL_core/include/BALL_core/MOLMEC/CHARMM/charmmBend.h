@@ -7,11 +7,11 @@
 #define BALL_MOLMEC_CHARMM_CHARMMBEND_H
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_BENDCOMPONENT_H
-# include <BALL/MOLMEC/COMMON/bendComponent.h>
+# include <BALL_core/MOLMEC/COMMON/bendComponent.h>
 #endif
 
 namespace BALL 

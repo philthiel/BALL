@@ -6,19 +6,19 @@
 #define BALL_KERNEL_ATOM_H
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/CONCEPT/property.h>
+#	include <BALL_core/CONCEPT/property.h>
 #endif
 
 #ifndef BALL_CONCEPT_RANDOMACCESSITERATOR_H
-#	include <BALL/CONCEPT/randomAccessIterator.h>
+#	include <BALL_core/CONCEPT/randomAccessIterator.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 // Defines for default values for an atom
@@ -1011,12 +1011,12 @@ template class BALL_EXPORT std::vector<Atom*>;
 #endif
 
 # ifndef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/KERNEL/atom.iC>
+#   include <BALL_core/KERNEL/atom.iC>
 # endif
 } // namespace BALL
 
 #ifndef BALL_KERNEL_BONDITERATOR_H
-#	include <BALL/KERNEL/bondIterator.h>
+#	include <BALL_core/KERNEL/bondIterator.h>
 #endif
 
 

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include<BALL/NMR/EFShiftProcessor.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/FORMAT/parameterSection.h>
+#include<BALL_core/NMR/EFShiftProcessor.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/FORMAT/parameterSection.h>
 
 #include <limits>
 

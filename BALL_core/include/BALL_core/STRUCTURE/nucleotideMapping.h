@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL_core/DATATYPE/hashMap.h>
 
 namespace BALL
 {

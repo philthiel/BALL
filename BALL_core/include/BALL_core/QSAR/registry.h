@@ -2,13 +2,13 @@
 #define BALL_QSAR_REGISTRY_H
 
 #ifndef MODEL_FACTORY_H
-#include <BALL/QSAR/modelFactory.h>
+#include <BALL_core/QSAR/modelFactory.h>
 #endif
 
 #include <map>
 
 #ifdef BALL_HAS_LIBSVM
-# include <BALL/QSAR/libsvmModel.h>
+# include <BALL_core/QSAR/libsvmModel.h>
 #endif
 
 namespace BALL

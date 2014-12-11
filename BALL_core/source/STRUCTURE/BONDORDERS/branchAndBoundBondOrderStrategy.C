@@ -1,5 +1,5 @@
-#include <BALL/STRUCTURE/BONDORDERS/branchAndBoundBondOrderStrategy.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/STRUCTURE/BONDORDERS/branchAndBoundBondOrderStrategy.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
 
 namespace BALL
 {

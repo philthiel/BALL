@@ -7,11 +7,11 @@
 #define QSARH
 
 #include <iostream>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/MOLFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/FORMAT/SDFile.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/HINFile.h>
+#include <BALL_core/FORMAT/MOLFile.h>
 #include <vector>
 #include <list>
 #include <set>
@@ -21,22 +21,22 @@
 #include <fstream>
 #include <limits>
 #include <fstream>
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/QSAR/connectivityDescriptors.h>
-#include <BALL/QSAR/partialChargeDescriptors.h>
-#include <BALL/QSAR/surfaceDescriptors.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/QSAR/simpleDescriptors.h>
+#include <BALL_core/QSAR/connectivityDescriptors.h>
+#include <BALL_core/QSAR/partialChargeDescriptors.h>
+#include <BALL_core/QSAR/surfaceDescriptors.h>
+#include <BALL_core/COMMON/exception.h>
 #include <cstring>
 
 #ifndef STATISTICS
-#include <BALL/QSAR/statistics.h>
+#include <BALL_core/QSAR/statistics.h>
 #endif
 
 #ifndef QSAR_EXCEPTION
-#include <BALL/QSAR/exception.h>
+#include <BALL_core/QSAR/exception.h>
 #endif
 
-#include <BALL/CONCEPT/timeStamp.h>
+#include <BALL_core/CONCEPT/timeStamp.h>
 
 // #ifndef MODEL
 // #include "Model.h"

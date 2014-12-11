@@ -4,12 +4,12 @@
 // $Id: composite.C,v 1.43 2005/12/23 17:02:33 amoll Exp $
 //
 
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/DATATYPE/listSort.mac>
-#include <BALL/KERNEL/predicate.h>
+#include <BALL_core/CONCEPT/composite.h>
+#include <BALL_core/CONCEPT/persistenceManager.h>
+#include <BALL_core/DATATYPE/listSort.mac>
+#include <BALL_core/KERNEL/predicate.h>
 
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atom.h>
 
 using namespace std;
 
@@ -1756,7 +1756,7 @@ namespace BALL
 
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/composite.iC>
+#		include <BALL_core/CONCEPT/composite.iC>
 #	endif
 
 } // namespace BALL

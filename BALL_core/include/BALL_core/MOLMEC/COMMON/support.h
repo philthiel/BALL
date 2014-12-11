@@ -9,27 +9,27 @@
 #define BALL_MOLMEC_COMMON_SUPPORT_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/MATHS/simpleBox3.h>
+#	include <BALL_core/MATHS/simpleBox3.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/MOLMEC/COMMON/forceField.h>
+#	include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-#	include <BALL/MOLMEC/COMMON/atomVector.h>
+#	include <BALL_core/MOLMEC/COMMON/atomVector.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHGRID_H
-#	include <BALL/DATATYPE/hashGrid.h>
+#	include <BALL_core/DATATYPE/hashGrid.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#     include <BALL/KERNEL/bond.h>
+#     include <BALL_core/KERNEL/bond.h>
 #endif
 
 #include <vector>

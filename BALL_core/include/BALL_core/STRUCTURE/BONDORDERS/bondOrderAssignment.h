@@ -2,15 +2,15 @@
 #define BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
 #endif
 
 namespace BALL

@@ -2,19 +2,19 @@
 #define BALL_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
 #endif
 
 #ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
+# include <BALL_core/STRUCTURE/BONDORDERS/bondOrderAssignment.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #include <queue>

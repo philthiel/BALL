@@ -8,15 +8,15 @@
 #define BALL_NMR_ANISOTROPYSHIFTPROCESSOR_H
 
 #ifndef BALL_KERNEL_BOND_H
-# include <BALL/KERNEL/bond.h>
+# include <BALL_core/KERNEL/bond.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include<BALL/KERNEL/atom.h>
+# include<BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/NMR/shiftModule.h>
+#	include<BALL_core/NMR/shiftModule.h>
 #endif
 
 #include <list>

@@ -6,7 +6,7 @@
 #define BALL_KERNEL_EXPRESSIONPARSER_H
 
 #ifndef BALL_KERNEL_EXPRESSION_TREE_H
-#	include <BALL/KERNEL/expressionTree.h>
+#	include <BALL_core/KERNEL/expressionTree.h>
 #endif
 
 namespace BALL 

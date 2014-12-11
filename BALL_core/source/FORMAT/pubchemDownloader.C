@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/pubchemDownloader.h>
-#include <BALL/SYSTEM/simpleDownloader.h>
+#include <BALL_core/FORMAT/pubchemDownloader.h>
+#include <BALL_core/SYSTEM/simpleDownloader.h>
 
 namespace BALL
 {

@@ -6,15 +6,15 @@
 #define BALL_DATATYPE_REGULARDATA2D_H
 
 #ifndef BALL_MATHS_VECTOR2_H
-# include <BALL/MATHS/vector2.h>
+# include <BALL_core/MATHS/vector2.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/SYSTEM/binaryFileAdaptor.h>
+# include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 #endif
 
 #include <iostream>

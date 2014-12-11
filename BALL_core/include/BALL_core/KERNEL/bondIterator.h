@@ -8,7 +8,7 @@
 #define BALL_KERNEL_BONDITERATOR_H
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 namespace BALL

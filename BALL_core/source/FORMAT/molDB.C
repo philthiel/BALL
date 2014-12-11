@@ -3,9 +3,9 @@
 // $Authors: Marcel Schumann, Marc Röttig $
 // ----------------------------------------------------
 
-#include <BALL/FORMAT/molDB.h>
-#include <BALL/DOCKING/COMMON/conformation.h>
-#include <BALL/STRUCTURE/UCK.h>
+#include <BALL_core/FORMAT/molDB.h>
+#include <BALL_core/DOCKING/COMMON/conformation.h>
+#include <BALL_core/STRUCTURE/UCK.h>
 
 using namespace std;
 

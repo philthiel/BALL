@@ -8,15 +8,15 @@
 #define BALL_CONCEPT_PROPERTY_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_BITVECTOR_H
-#	include <BALL/DATATYPE/bitVector.h>
+#	include <BALL_core/DATATYPE/bitVector.h>
 #endif
 
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
+#	include <BALL_core/CONCEPT/persistentObject.h>
 #endif
 
 #include <iostream>
@@ -651,7 +651,7 @@ namespace BALL
 	//@}
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/property.iC>
+#		include <BALL_core/CONCEPT/property.iC>
 #	endif
 
 } // namespace BALL

@@ -6,10 +6,10 @@
 #ifndef BALL_FORMAT_DOCKRESULTFILE_H
 #define BALL_FORMAT_DOCKRESULTFILE_H
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/DOCKING/COMMON/result.h>
-#include <BALL/DOCKING/COMMON/receptor.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/DATATYPE/hashMap.h>
+#include <BALL_core/DOCKING/COMMON/result.h>
+#include <BALL_core/DOCKING/COMMON/receptor.h>
 
 #include <QtXml/QXmlDefaultHandler>
 #include <QtXml/QXmlStreamReader>

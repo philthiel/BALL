@@ -5,31 +5,31 @@
 #define BALL_XRAY_CRYSTALGENERATOR_H
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #ifndef BALL_XRAY_CRYSTALINFO_H
-#include <BALL/XRAY/crystalInfo.h>
+#include <BALL_core/XRAY/crystalInfo.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GEOMETRICPROPERTIES_H
-# include <BALL/STRUCTURE/geometricProperties.h>
+# include <BALL_core/STRUCTURE/geometricProperties.h>
 #endif
 
 #ifndef BALL_MATHS_BOX3_H
-# include <BALL/MATHS/box3.h>
+# include <BALL_core/MATHS/box3.h>
 #endif
 
 namespace BALL

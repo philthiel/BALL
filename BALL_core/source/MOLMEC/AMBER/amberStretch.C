@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/AMBER/amberStretch.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL_core/MOLMEC/AMBER/amberStretch.h>
+#include <BALL_core/MOLMEC/AMBER/amber.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
 
 using namespace std;
 

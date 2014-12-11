@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include<BALL/NMR/randomCoilShiftProcessor.h>
-#include<BALL/FORMAT/parameterSection.h>
+#include<BALL_core/NMR/randomCoilShiftProcessor.h>
+#include<BALL_core/FORMAT/parameterSection.h>
 
 namespace BALL
 {

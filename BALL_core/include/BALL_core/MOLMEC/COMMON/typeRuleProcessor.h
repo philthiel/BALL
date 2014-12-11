@@ -10,7 +10,7 @@
 #define BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
 
 #ifndef BALL_MOLMEC_COMMON_RULEPROCESSOR_H
-#	include <BALL/MOLMEC/COMMON/ruleProcessor.h>
+#	include <BALL_core/MOLMEC/COMMON/ruleProcessor.h>
 #endif
 
 namespace BALL 

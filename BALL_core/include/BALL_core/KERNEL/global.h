@@ -8,11 +8,11 @@
 #define BALL_KERNEL_GLOBAL_H
 
 #ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/KERNEL/atom.h>
+#	include <BALL_core/KERNEL/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#	include <BALL/KERNEL/bond.h>
+#	include <BALL_core/KERNEL/bond.h>
 #endif
 
 namespace BALL 

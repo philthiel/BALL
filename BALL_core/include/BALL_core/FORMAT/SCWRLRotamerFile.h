@@ -5,7 +5,7 @@
 #ifndef BALL_FORMAT_SCWRLROTAMERFILE_H
 #define BALL_FORMAT_SCWRLROTAMERFILE_H
 
-#include <BALL/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
 
 namespace BALL
 {

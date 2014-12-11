@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_ADDHYDROGENPROCESSOR_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#include <BALL/CONCEPT/processor.h>
+#include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#include <BALL/MATHS/vector3.h> 
+#include <BALL_core/MATHS/vector3.h> 
 #endif
 
 #include <vector>

@@ -6,11 +6,11 @@
 #define BALL_SYSTEM_NETWORKING_H
 
 #ifndef BALL_COMMON_GLOBAL_HH
-# include<BALL/COMMON/global.h>
+# include<BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifdef BALL_HAS_BOOST_ASIO

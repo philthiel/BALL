@@ -6,19 +6,19 @@
 #define BALL_STRUCTURE_TRIANGLEPOINT_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#	include <BALL/STRUCTURE/graphEdge.h>
+#	include <BALL_core/STRUCTURE/graphEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/STRUCTURE/graphFace.h>
+#	include <BALL_core/STRUCTURE/graphFace.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GRAPHVERTEX_H
-#	include <BALL/STRUCTURE/graphVertex.h>
+#	include <BALL_core/STRUCTURE/graphVertex.h>
 #endif
 
 

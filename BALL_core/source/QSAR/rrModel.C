@@ -3,8 +3,8 @@
 //
 // 
 
-#include <BALL/QSAR/rrModel.h>
-//#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/QSAR/rrModel.h>
+//#include <BALL_core/SYSTEM/timer.h>
 
 #include <Eigen/Dense>
 

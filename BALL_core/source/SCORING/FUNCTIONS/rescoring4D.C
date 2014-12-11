@@ -1,7 +1,7 @@
-#include <BALL/SCORING/FUNCTIONS/rescoring4D.h>
-#include <BALL/SCORING/COMPONENTS/aromaticRingStacking.h>
-#include <BALL/SCORING/COMPONENTS/polarity.h>
-#include <BALL/KERNEL/molecularInteractions.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring4D.h>
+#include <BALL_core/SCORING/COMPONENTS/aromaticRingStacking.h>
+#include <BALL_core/SCORING/COMPONENTS/polarity.h>
+#include <BALL_core/KERNEL/molecularInteractions.h>
 
 
 using namespace BALL;

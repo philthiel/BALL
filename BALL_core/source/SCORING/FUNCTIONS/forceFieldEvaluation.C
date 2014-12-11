@@ -1,4 +1,4 @@
-#include <BALL/SCORING/FUNCTIONS/forceFieldEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/forceFieldEvaluation.h>
 
 using namespace BALL;
 

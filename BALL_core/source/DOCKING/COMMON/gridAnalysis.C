@@ -3,7 +3,7 @@
 //
 
 
-#include <BALL/DOCKING/COMMON/gridAnalysis.h>
+#include <BALL_core/DOCKING/COMMON/gridAnalysis.h>
 
 using namespace std;
 

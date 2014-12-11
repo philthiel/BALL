@@ -10,7 +10,7 @@
 #define BALL_FORMAT_PARAMETERSECTION_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 namespace BALL 

@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/QSAR/exception.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/QSAR/exception.h>
+#include <BALL_core/DATATYPE/string.h>
 
 using namespace BALL::QSAR::Exception;
 

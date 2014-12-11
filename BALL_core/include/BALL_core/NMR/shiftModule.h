@@ -8,19 +8,19 @@
 #define BALL_NMR_SHIFTMODULE_H
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include<BALL/KERNEL/system.h>
+#	include<BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include<BALL/DATATYPE/string.h>
+#	include<BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include<BALL/CONCEPT/processor.h>
+#	include<BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERS_H
-#	include<BALL/FORMAT/parameters.h>
+#	include<BALL_core/FORMAT/parameters.h>
 #endif
 
 namespace BALL 

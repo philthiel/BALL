@@ -6,8 +6,8 @@
 #ifndef BALL_SCORING_COMMON_DIFFSCORINGFUNCTION_H
 #define BALL_SCORING_COMMON_DIFFSCORINGFUNCTION_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
 
 
 namespace BALL

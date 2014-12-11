@@ -3,9 +3,9 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/FUNCTIONS/PLPScoring.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/SCORING/COMPONENTS/PLP.h>
+#include <BALL_core/SCORING/FUNCTIONS/PLPScoring.h>
+#include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
+#include <BALL_core/SCORING/COMPONENTS/PLP.h>
 
 using namespace BALL;
 using namespace std;

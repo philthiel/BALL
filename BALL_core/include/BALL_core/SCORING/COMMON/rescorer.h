@@ -7,15 +7,15 @@
 #define BALL_SCORING_COMMON_RESCORER_H
 
 #ifndef BALL_COMMON_H
-#       include <BALL/common.h>
+#       include <BALL_core/common.h>
 #endif
 
-#include <BALL/FORMAT/commandlineParser.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SCORING/FUNCTIONS/rescoring.h>
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/FORMAT/commandlineParser.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/FUNCTIONS/rescoring.h>
+#include <BALL_core/DOCKING/COMMON/structurePreparer.h>
+#include <BALL_core/FORMAT/genericMolFile.h>
+#include <BALL_core/DATATYPE/string.h>
 
 namespace BALL
 {

@@ -6,11 +6,11 @@
 #define BALL_STRUCTURE_ATOMBIJECTION_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/KERNEL/atomContainer.h>
+#	include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 namespace BALL 

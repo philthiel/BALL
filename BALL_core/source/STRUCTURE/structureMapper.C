@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/structureMapper.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
 
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/MATHS/quaternion.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/MATHS/quaternion.h>
 
 
 #include <stack>

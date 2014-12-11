@@ -7,11 +7,11 @@
 #define CLASVALIDATION
 
 #ifndef QSARDATA
-#include <BALL/QSAR/QSARData.h>
+#include <BALL_core/QSAR/QSARData.h>
 #endif
 
 #ifndef VALIDATION
-#include <BALL/QSAR/validation.h>
+#include <BALL_core/QSAR/validation.h>
 #endif
 
 #include <iterator>

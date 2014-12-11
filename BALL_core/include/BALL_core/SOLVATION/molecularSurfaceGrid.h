@@ -8,19 +8,19 @@
 #define BALL_SOLVATION_MOLECULARSURFACEGRID_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/KERNEL/system.h>
+#	include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 namespace BALL 

@@ -1,8 +1,8 @@
 %{
 
-#include <BALL/STRUCTURE/smartsParser.h>
+#include <BALL_core/STRUCTURE/smartsParser.h>
 //#include <iostream>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace BALL;
 using namespace std;

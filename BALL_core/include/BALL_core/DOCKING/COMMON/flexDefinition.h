@@ -6,7 +6,7 @@
 #ifndef BALL_DOCKING_COMMON_FLEXDEFINITION_H
 #define BALL_DOCKING_COMMON_FLEXDEFINITION_H
 
-#include <BALL/KERNEL/protein.h>
+#include <BALL_core/KERNEL/protein.h>
 
 namespace BALL
 {

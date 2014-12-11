@@ -6,15 +6,15 @@
 #define BALL_QSAR_FEATURESELECTION_H
 
 #ifndef BALL_QSAR_MODEL_H
-#include <BALL/QSAR/Model.h>
+#include <BALL_core/QSAR/Model.h>
 #endif
 
 #ifndef BALL_QSAR_KERNELMODEL_H
-#include <BALL/QSAR/kernelModel.h>
+#include <BALL_core/QSAR/kernelModel.h>
 #endif
 
 #ifndef BALL_QSAR_LINEARMODEL_H
-#include <BALL/QSAR/linearModel.h>
+#include <BALL_core/QSAR/linearModel.h>
 #endif
 
 #include <set>

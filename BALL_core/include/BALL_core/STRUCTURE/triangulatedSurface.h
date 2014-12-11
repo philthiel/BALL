@@ -6,27 +6,27 @@
 #define BALL_STRUCTURE_TRIANGULATEDSURFACE_H
 
 #ifndef BALL_STRUCTURE_TRIANGLE_H
-#	include <BALL/STRUCTURE/triangle.h>
+#	include <BALL_core/STRUCTURE/triangle.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGLEEDGE_H
-#	include <BALL/STRUCTURE/triangleEdge.h>
+#	include <BALL_core/STRUCTURE/triangleEdge.h>
 #endif
 
 #ifndef BALL_STRUCTURE_TRIANGLEPOINT_H
-#	include <BALL/STRUCTURE/trianglePoint.h>
+#	include <BALL_core/STRUCTURE/trianglePoint.h>
 #endif
 
 #ifndef BALL_MATHS_PLANE3_H
-#	include <BALL/MATHS/plane3.h>
+#	include <BALL_core/MATHS/plane3.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-#	include <BALL/MATHS/surface.h>
+#	include <BALL_core/MATHS/surface.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #include <list>

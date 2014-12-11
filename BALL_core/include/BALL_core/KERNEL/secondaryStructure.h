@@ -6,15 +6,15 @@
 #define BALL_KERNEL_SECONDARYSTRUCTURE_H
 
 #ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/KERNEL/residue.h>
+#	include <BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUEITERATOR_H
-#	include <BALL/KERNEL/residueIterator.h>
+#	include <BALL_core/KERNEL/residueIterator.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/KERNEL/atomContainer.h>
+# include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 namespace BALL 

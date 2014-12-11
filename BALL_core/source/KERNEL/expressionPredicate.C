@@ -4,7 +4,7 @@
 // $Id: expressionPredicate.C,v 1.6 2003/08/26 09:17:49 oliver Exp $
 //
 
-#include <BALL/KERNEL/expressionPredicate.h>
+#include <BALL_core/KERNEL/expressionPredicate.h>
 
 namespace BALL
 {

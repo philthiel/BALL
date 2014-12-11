@@ -6,7 +6,7 @@
 #define BALL_STRUCTURE_PEPTIDEBUILDER_H
 
 #ifndef BALL_STRUCTURE_PEPTIDES_H
-#	include <BALL/STRUCTURE/peptides.h>
+#	include <BALL_core/STRUCTURE/peptides.h>
 #endif
 
 namespace BALL

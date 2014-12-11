@@ -6,7 +6,7 @@
 #ifndef BALL_SCORING_COMMON_SCORINGOPTIMIZER_H
 #define BALL_SCORING_COMMON_SCORINGOPTIMIZER_H
 
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
 
 namespace BALL

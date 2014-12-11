@@ -1,10 +1,10 @@
-#include <BALL/DATATYPE/GRAPH/molecularGraph.h>
+#include <BALL_core/DATATYPE/GRAPH/molecularGraph.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/atomContainer.h>
 
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/COMMON/exception.h>
 
 namespace BALL
 {

@@ -4,8 +4,8 @@
 // $Id: solventParameter.C,v 1.11 2003/08/26 09:18:26 oliver Exp $
 //
 
-#include <BALL/SOLVATION/solventParameter.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/SOLVATION/solventParameter.h>
+#include <BALL_core/SYSTEM/path.h>
 
 using namespace std;
 

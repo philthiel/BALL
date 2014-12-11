@@ -7,27 +7,27 @@
 #define BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#include <BALL/MATHS/matrix44.h>
+#include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_SYSTEM_TIMER_H
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/timer.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_CONSTRAINTS_H
-#include <BALL/DOCKING/COMMON/constraints.h>
+#include <BALL_core/DOCKING/COMMON/constraints.h>
 #endif
 
 

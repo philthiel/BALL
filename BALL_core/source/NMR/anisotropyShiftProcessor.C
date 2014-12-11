@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/anisotropyShiftProcessor.h>
+#include <BALL_core/NMR/anisotropyShiftProcessor.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/FORMAT/parameterSection.h>
+#include <BALL_core/DATATYPE/string.h>
 
 using namespace std;
 

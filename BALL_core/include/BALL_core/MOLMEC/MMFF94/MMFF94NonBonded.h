@@ -8,19 +8,19 @@
 #define BALL_MOLMEC_MMFF94_NONBONDED_H
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#	include <BALL_core/MOLMEC/COMMON/forceFieldComponent.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#	include <BALL/MOLMEC/COMMON/support.h>
+#	include <BALL_core/MOLMEC/COMMON/support.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/MOLMEC/MMFF94/MMFF94Parameters.h>
+#	include <BALL_core/MOLMEC/MMFF94/MMFF94Parameters.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_PROCESSORS_H
-# include <BALL/MOLMEC/MMFF94/MMFF94Processors.h>
+# include <BALL_core/MOLMEC/MMFF94/MMFF94Processors.h>
 #endif
 
 namespace BALL 

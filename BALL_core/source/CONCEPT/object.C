@@ -3,7 +3,7 @@
 //
 // $Id: object.C,v 1.11 2002/02/27 12:21:09 sturm Exp $
 
-#include <BALL/CONCEPT/object.h>
+#include <BALL_core/CONCEPT/object.h>
 
 
 using std::endl;
@@ -71,7 +71,7 @@ namespace BALL
 
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/object.iC>
+#		include <BALL_core/CONCEPT/object.iC>
 #	endif
 
 } // namespace BALL

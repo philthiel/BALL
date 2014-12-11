@@ -6,11 +6,11 @@
 #ifndef BALL_SCORING_COMMON_SCORINGCOMPONENT_H
 #define BALL_SCORING_COMMON_SCORINGCOMPONENT_H
 
-#include <BALL/DATATYPE/string.h>
-#include <BALL/SCORING/COMMON/baseFunction.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/SCORING/COMMON/baseFunction.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
 
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atom.h>
 
 
 namespace BALL

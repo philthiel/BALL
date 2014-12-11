@@ -6,15 +6,15 @@
 #define BALL_DATATYPE_LIST_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
+#	include <BALL_core/CONCEPT/visitor.h>
 #endif
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #include <list>

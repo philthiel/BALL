@@ -2,11 +2,11 @@
 #define BALL_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/CONCEPT/processor.h>
+# include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 namespace BALL

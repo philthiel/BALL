@@ -5,11 +5,11 @@
 #define BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
 
 #ifndef BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
-# include <BALL/SCORING/FUNCTIONS/energeticEvaluation.h>
+# include <BALL_core/SCORING/FUNCTIONS/energeticEvaluation.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/MOLMEC/COMMON/forceField.h>
+# include <BALL_core/MOLMEC/COMMON/forceField.h>
 #endif
 
 namespace BALL

@@ -6,9 +6,9 @@
 #ifndef BALL_SCORING_FUNCTIONS_GRIDEDMM_H
 #define BALL_SCORING_FUNCTIONS_GRIDEDMM_H
 
-#include <BALL/SCORING/COMMON/diffGridBasedScoring.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/SCORING/COMPONENTS/electrostatic.h>
+#include <BALL_core/SCORING/COMMON/diffGridBasedScoring.h>
+#include <BALL_core/MOLMEC/AMBER/amber.h>
+#include <BALL_core/SCORING/COMPONENTS/electrostatic.h>
 
 namespace BALL
 {

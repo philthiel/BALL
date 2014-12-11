@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/FORMAT/molFileFactory.h>
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/FORMAT/dockResultFile.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/structureMapper.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/SCORING/COMMON/scoringFunction.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/genericMolFile.h>
+#include <BALL_core/FORMAT/dockResultFile.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_core/DOCKING/COMMON/structurePreparer.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
 
 #include <stdlib.h>
 #include <iostream>

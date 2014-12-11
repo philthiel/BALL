@@ -5,7 +5,7 @@
 #define BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
 
 #ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/DOCKING/COMMON/conformationSet.h>
+# include <BALL_core/DOCKING/COMMON/conformationSet.h>
 #endif
 
 #include <vector>

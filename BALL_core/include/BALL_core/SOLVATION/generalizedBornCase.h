@@ -8,27 +8,27 @@
 #define BALL_SOLVATION_GENERALIZED_BORN_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_KERNEL_PTE_H
-#	include <BALL/KERNEL/PTE.h>
+#	include <BALL_core/KERNEL/PTE.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/KERNEL/atomContainer.h>
+#	include <BALL_core/KERNEL/atomContainer.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/DATATYPE/stringHashMap.h>
+#	include <BALL_core/DATATYPE/stringHashMap.h>
 #endif
 
 #ifndef BALL_FORMAT_INIFILE_H
-#	include <BALL/FORMAT/INIFile.h>
+#	include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/FORMAT/parameterSection.h>
+#	include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 #include <map>
