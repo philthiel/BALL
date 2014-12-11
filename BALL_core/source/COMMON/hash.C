@@ -4,7 +4,7 @@
 // $Id: hash.C,v 1.13 2003/08/26 09:17:44 oliver Exp $
 //
 
-#include <BALL/COMMON/hash.h>
+#include <BALL_core/COMMON/hash.h>
 
 namespace BALL 
 {

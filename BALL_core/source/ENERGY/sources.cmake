@@ -1,13 +1,11 @@
-### the directory name ###
-SET(DIRECTORY source/ENERGY)
+# Set the source group name
+SET(GROUP ENERGY)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	atomicContactEnergy.C
 	composedEnergyProcessor.C
 	coulomb.C
 	distanceCoulomb.C
 	energyProcessor.C
-)	
-
-ADD_BALL_SOURCES("ENERGY" "${SOURCES_LIST}")
+)

@@ -1,16 +1,16 @@
-### the directory name ###
-SET(DIRECTORY source/KERNEL)
+# Set the source group name
+SET(GROUP KERNEL)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	atom.C
 	atomContainer.C
 	bond.C
 	chain.C
 	expression.C
+	expressionParser.C
 	expressionPredicate.C
 	expressionTree.C
-	expressionParser.C
 	extractors.C
 	fragment.C
 	global.C
@@ -27,9 +27,10 @@ SET(SOURCES_LIST
 	selector.C
 	standardPredicates.C
 	system.C
-#	extractors.C\
-)	
+)
 
-ADD_BALL_SOURCES("KERNEL" "${SOURCES_LIST}")
+SET(PARSER_LEXER_LIST
+	expressionParser
+)
 
-ADD_BALL_PARSER_LEXER("KERNEL" "expressionParser" "ExpressionParser")
+#ADD_BALL_PARSER_LEXER("KERNEL" "expressionParser" "ExpressionParser")

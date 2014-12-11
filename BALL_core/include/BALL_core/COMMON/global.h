@@ -6,7 +6,7 @@
 #define BALL_COMMON_GLOBAL_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #include <limits>

@@ -1,8 +1,9 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP PLUGIN)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	BALLPlugin.C
 	pluginManager.C
 	pluginHandler.C
 )
-
-ADD_BALL_SOURCES("PLUGIN" "${SOURCES_LIST}")

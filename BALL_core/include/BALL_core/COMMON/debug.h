@@ -6,7 +6,7 @@
 #define BALL_COMMON_DEBUG_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifdef BALL_NO_INLINE_FUNCTIONS

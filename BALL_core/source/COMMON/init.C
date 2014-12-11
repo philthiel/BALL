@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/COMMON/init.h>
+#include <BALL_core/COMMON/init.h>
 
 #include <clocale>
 #include <cstdlib>

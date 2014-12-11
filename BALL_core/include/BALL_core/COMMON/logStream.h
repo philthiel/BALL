@@ -6,15 +6,15 @@
 #define BALL_COMMON_LOGSTREAM_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/COMMON/global.h>
+#	include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/COMMON/debug.h>
+#	include <BALL_core/COMMON/debug.h>
 #endif
 
 #ifdef BALL_HAS_SYS_TIME_H
@@ -558,7 +558,7 @@ namespace BALL
 	//@}
 	
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/COMMON/logStream.iC>
+#		include <BALL_core/COMMON/logStream.iC>
 #	endif
 
 } // namespace BALL

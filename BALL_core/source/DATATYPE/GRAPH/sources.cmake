@@ -1,10 +1,9 @@
-SET(DIRECTORY source/DATATYPE/GRAPH)
+# Set the source group name
+SET(GROUP DATATYPE/GRAPH)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	graphAlgorithms.C
 	molecularGraph.C
 	treeWidth.C
 )
-
-ADD_BALL_SOURCES("DATATYPE/GRAPH" "${SOURCES_LIST}")

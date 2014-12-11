@@ -1,11 +1,11 @@
-### the directory name ###
-SET(DIRECTORY source/DOCKING/COMMON)
+# Set the source group name
+SET(GROUP DOCKING/COMMON)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	conformation.C
-	constraints.C
 	conformationSet.C
+	constraints.C
 	dockingAlgorithm.C
 	dockResult.C
 	flexDefinition.C
@@ -18,5 +18,3 @@ SET(SOURCES_LIST
 	staticLigandFragment.C
 	structurePreparer.C
 )
-
-ADD_BALL_SOURCES("DOCKING/COMMON" "${SOURCES_LIST}")

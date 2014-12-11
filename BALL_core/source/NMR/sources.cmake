@@ -1,23 +1,21 @@
-### the directory name ###
-SET(DIRECTORY source/NMR)
+# Set the source group name
+SET(GROUP NMR)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	anisotropyShiftProcessor.C
 	clearShiftProcessor.C
+	createSpectrumProcessor.C
 	EFShiftProcessor.C
 	empiricalHSShiftProcessor.C
 	experiment.C
-	HBondShiftProcessor.C
 	haighMallionShiftProcessor.C
-	createSpectrumProcessor.C
+	HBondShiftProcessor.C
+	johnsonBoveyShiftProcessor.C
 	peak.C
 	peakList.C
+	randomCoilShiftProcessor.C
 	shiftModel.C
 	shiftModule.C
 	spectrum.C
-	johnsonBoveyShiftProcessor.C
-	randomCoilShiftProcessor.C
-)	
-
-ADD_BALL_SOURCES("NMR" "${SOURCES_LIST}")
+)

@@ -1,19 +1,17 @@
-### the directory name ###
-SET(DIRECTORY source/SCORING/COMMON)
+# Set the source group name
+SET(GROUP SCORING/COMMON)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	baseFunction.C
 	diffScoringFunction.C
 	diffGridBasedScoring.C
+	fermiBaseFunction.C
 	gridBasedScoring.C
 	linearBaseFunction.C
-	fermiBaseFunction.C
 	rescorer.C
 	scoreGridSet.C
 	scoringComponent.C
 	scoringFunction.C
 	scoringOptimizer.C
-)	
-
-ADD_BALL_SOURCES("SCORING/COMMON" "${SOURCES_LIST}")
+)

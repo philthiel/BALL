@@ -4,9 +4,9 @@
 // $Id: version.C,v 1.14 2004/02/19 12:24:33 oliver Exp $
 //
 
-#include <BALL/COMMON/version.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/stringHashMap.h>
+#include <BALL_core/COMMON/version.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/DATATYPE/stringHashMap.h>
 
 namespace BALL
 {

@@ -1,14 +1,12 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/MINIMIZATION)
+# Set the source group name
+SET(GROUP MOLMEC/MINIMIZATION)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
+	conjugateGradient.C
 	energyMinimizer.C
 	lineSearch.C
+	shiftedLVMM.C
 	steepestDescent.C
 	strangLBFGS.C
-	shiftedLVMM.C
-	conjugateGradient.C
-)	
-
-ADD_BALL_SOURCES("MOLMEC/MINIMIZATION" "${SOURCES_LIST}")
+)

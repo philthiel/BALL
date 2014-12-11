@@ -6,15 +6,15 @@
 #define BALL_COMMON_MACROS_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_CONSTANTS_H
-#	include <BALL/COMMON/constants.h>
+#	include <BALL_core/COMMON/constants.h>
 #endif
 
 #ifndef BALL_COMMON_RTTI_H
-#	include <BALL/COMMON/rtti.h>
+#	include <BALL_core/COMMON/rtti.h>
 #endif
 
 #include <math.h>     // needed for fabs

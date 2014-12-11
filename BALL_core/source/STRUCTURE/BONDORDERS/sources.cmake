@@ -1,4 +1,7 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP STRUCTURE/BONDORDERS)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	AStarBondOrderStrategy.C
 	bondOrderAssignment.C
@@ -9,8 +12,6 @@ SET(SOURCES_LIST
 	partialBondOrderAssignment.C
 )
 
-IF (BALL_HAS_LPSOLVE)
+IF(BALL_HAS_LPSOLVE)
 	LIST(APPEND SOURCES_LIST ILPBondOrderStrategy.C)
 ENDIF()
-
-ADD_BALL_SOURCES("STRUCTURE/BONDORDERS" "${SOURCES_LIST}")

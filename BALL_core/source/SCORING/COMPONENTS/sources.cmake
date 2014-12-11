@@ -1,30 +1,27 @@
-### the directory name ###
-SET(DIRECTORY source/SCORING/COMPONENTS)
+# Set the source group name
+SET(GROUP SCORING/COMPONENTS)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
-	aromaticRingStacking.C
 	advElectrostatic.C
-	fragmentationalSolvation.C
+	aromaticRingStacking.C
 	burialDepth.C
 	buriedPolar.C
 	CHPI.C
 	CHPISlick.C
 	electrostatic.C
+	fragmentationalSolvation.C
 	fresnoTypes.C
 	hydrogenBond.C
 	hydrogenBondSlick.C
 	lipophilic.C
-	polarity.C
+	nonpolarSolvation.C
 	PB.C
 	PLP.C
+	polarity.C
+	polarSolvation.C
 	rotationalEntropy.C
 	solvation.C
-	nonpolarSolvation.C
-	polarSolvation.C
-	#rotationalEntropyLoss.C
 	vanDerWaals.C
 	vanDerWaalsSlick.C
 )
-
-ADD_BALL_SOURCES("SCORING/COMPONENTS" "${SOURCES_LIST}")

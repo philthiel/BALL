@@ -1,17 +1,19 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/AMBER)
+# Set the source group name
+SET(GROUP MOLMEC/AMBER)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	amber.C
 	amberBend.C
 	amberNonBonded.C
 	amberStretch.C
 	amberTorsion.C
-	GAFFTypeProcessor.C
 	GAFFCESParser.C
-)	
+	GAFFTypeProcessor.C
+)
 
-ADD_BALL_SOURCES("MOLMEC/AMBER" "${SOURCES_LIST}")
+SET(PARSER_LEXER_LIST
+	GAFFCESParser
+)
 
-ADD_BALL_PARSER_LEXER("MOLMEC/AMBER" "GAFFCESParser" "GAFFCESParser")
+#ADD_BALL_PARSER_LEXER("MOLMEC/AMBER" "GAFFCESParser" "GAFFCESParser")

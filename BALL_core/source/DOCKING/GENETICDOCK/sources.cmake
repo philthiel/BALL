@@ -1,16 +1,14 @@
-### the directory name ###
-SET(DIRECTORY source/DOCKING/GENETICDOCK)
+# Set the source group name
+SET(GROUP DOCKING/GENETICDOCK)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
-  dockProblem.C
-  evolutionaryDocking.C
-  genes.C
-  geneticAlgorithm.C
-  geneticIndividual.C
-  parameter.C
-  rotateBond.C
-  rotateBonds.C
+	dockProblem.C
+	evolutionaryDocking.C
+	genes.C
+	geneticAlgorithm.C
+	geneticIndividual.C
+	parameter.C
+	rotateBond.C
+	rotateBonds.C
 )
-
-ADD_BALL_SOURCES("DOCKING/GENETICDOCK" "${SOURCES_LIST}")

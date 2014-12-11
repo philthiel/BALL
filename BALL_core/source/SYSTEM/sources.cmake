@@ -1,4 +1,7 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP SYSTEM)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	binaryFileAdaptor.C
 	directory.C
@@ -12,16 +15,14 @@ SET(SOURCES_LIST
 	timer.C
 )
 
-IF (BALL_HAS_ASIO)
+SET(MOC_SOURCES_LIST
+	simpleDownloader.C
+)
+
+IF(BALL_HAS_ASIO)
 	SET(SOURCES_LIST ${SOURCES_LIST} networking.C)
 ENDIF()
 
-IF (BALL_HAS_MPI)
+IF(BALL_HAS_MPI)
 	SET(SOURCES_LIST ${SOURCES_LIST} MPISupport.C)
 ENDIF()
-
-SET(MOC_SOURCES_LIST "simpleDownloader.C")
-
-ADD_BALL_SOURCES("SYSTEM" "${SOURCES_LIST}")
-
-ADD_BALL_CORE_MOCFILES("SYSTEM" "include/BALL/SYSTEM" "${MOC_SOURCES_LIST}")

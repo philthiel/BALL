@@ -1,6 +1,5 @@
-### the directory name ###
-SET(DIRECTORY source/SCORING)
+# Set the source group name
+SET(GROUP SCORING)
 
-INCLUDE(source/SCORING/COMMON/sources.cmake)
-INCLUDE(source/SCORING/COMPONENTS/sources.cmake)
-INCLUDE(source/SCORING/FUNCTIONS/sources.cmake)
+# List all filenames of this group here
+SET(SOURCES_LIST )

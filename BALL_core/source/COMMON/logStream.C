@@ -9,7 +9,7 @@
 #include <cstring>
 #include <cstdio>
 
-#include <BALL/COMMON/logStream.h>
+#include <BALL_core/COMMON/logStream.h>
 
 #define BUFFER_LENGTH 32768
 

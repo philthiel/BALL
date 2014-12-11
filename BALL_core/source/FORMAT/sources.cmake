@@ -1,17 +1,20 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP FORMAT)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	amiraMeshFile.C
 	antechamberFile.C
 	bruker1DFile.C
 	bruker2DFile.C
-	commandlineParser.C
-	dockResultFile.C
 	CCP4File.C
 	CIFFile.C
+	commandlineParser.C
 	DCDFile.C
+	dockResultFile.C
 	DSN6File.C
 	GAMESSDatFile.C
-#	GAMESSLogFile.C
+#       GAMESSLogFile.C
 	genericMolFile.C
 	HINFile.C
 	HMOFile.C
@@ -19,37 +22,40 @@ SET(SOURCES_LIST
 	JCAMPFile.C
 	KCFFile.C
 	lineBasedFile.C
+	MOL2File.C
 	molDB.C
 	MOLFile.C
 	molFileFactory.C
 	MOPACInputFile.C
 	MOPACOutputFile.C
-	SDFile.C
-	MOL2File.C
 	NMRStarFile.C
-	paramFile.C
 	parameters.C
 	parameterSection.C
+	paramFile.C
 	PDBdefs.C
-	PDBFileGeneral.C
 	PDBFileDetails.C
+	PDBFileGeneral.C
 	PDBInfo.C
 	PDBRecords.C
 	pubchemDownloader.C
 	resourceFile.C
 	SCWRLRotamerFile.C
+	SDFile.C
 	trajectoryFile.C
 	trajectoryFileFactory.C
 	TRRFile.C
 	XYZFile.C
 )
 
-IF (BALL_HAS_QTSQL)
+IF(BALL_HAS_QTSQL)
 	SET(SOURCES_LIST ${SOURCES_LIST} DBInterface.C)
 ENDIF()
 
-ADD_BALL_SOURCES("FORMAT" "${SOURCES_LIST}")
+SET(PARSER_LEXER_LIST
+	CIFParser
+	GAMESSDatParser
+)
 
-ADD_BALL_PARSER_LEXER("FORMAT" "CIFParser" "CIFParser")
-ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSDatParser" "GAMESSDatParser")
+#ADD_BALL_PARSER_LEXER("FORMAT" "CIFParser" "CIFParser")
+#ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSDatParser" "GAMESSDatParser")
 #ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSLogParser" "GAMESSLogParser")

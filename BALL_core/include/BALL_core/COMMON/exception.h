@@ -6,11 +6,11 @@
 #define BALL_COMMON_EXCEPTION_H
 
 #ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
+#	include <BALL_core/CONFIG/config.h>
 #endif
 
 #ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/COMMON/global.h>
+#	include <BALL_core/COMMON/global.h>
 #endif
 
 #ifdef BALL_COMPILER_MSVC

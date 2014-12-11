@@ -1,7 +1,7 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/CHARMM)
+# Set the source group name
+SET(GROUP MOLMEC/CHARMM)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	charmm.C
 	charmmBend.C
@@ -9,6 +9,4 @@ SET(SOURCES_LIST
 	charmmNonBonded.C
 	charmmStretch.C
 	charmmTorsion.C
-)	
-
-ADD_BALL_SOURCES("MOLMEC/CHARMM" "${SOURCES_LIST}")
+)

@@ -1,8 +1,9 @@
-### the directory name ###
-SET(DIRECTORY source/QSAR)
+# Set the source group name
+SET(GROUP QSAR)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
+	allModel.C
 	aromaticityProcessor.C
 	automaticModelCreator.C
 	bayesModel.C
@@ -13,23 +14,34 @@ SET(SOURCES_LIST
 	connectivityDescriptors.C
 	descriptor.C
 	exception.C
+	featureSelection.C
+	gpModel.C
 	kernel.C
 	kernelModel.C
+	knnModel.C
+	kpcrModel.C
+	kplsModel.C
 	latentVariableModel.C
+	ldaModel.C
 	linearModel.C
 	logitModel.C
+	mlrModel.C
 	Model.C
 	modelFactory.C
 	nBModel.C
 	nonlinearModel.C
+	oplsModel.C
 	partialChargeBase.C
 	partialChargeDescriptors.C
 	partialChargeProcessor.C
+	pcrModel.C
+	plsModel.C
 	QSARData.C
 	registry.C
 	regressionModel.C
 	regressionValidation.C
 	ringPerceptionProcessor.C
+	rrModel.C
 	simpleBase.C
 	simpleDescriptors.C
 	snBModel.C
@@ -39,28 +51,12 @@ SET(SOURCES_LIST
 	svmModel.C
 	svrModel.C
 	validation.C
-	allModel.C
-	featureSelection.C
-	gpModel.C
-	knnModel.C
-	kpcrModel.C
-	kplsModel.C
-	ldaModel.C
-	mlrModel.C
-	oplsModel.C
-	pcrModel.C
-	plsModel.C
-	rrModel.C
-)	
+)
 
 IF(BALL_HAS_GSL)
-	LIST(APPEND SOURCES_LIST
-		fitModel.C
-	)
+	LIST(APPEND SOURCES_LIST fitModel.C)
 ENDIF()
 
-IF (BALL_HAS_LIBSVM)
- SET(SOURCES_LIST ${SOURCES_LIST} libsvmModel.C)
+IF(BALL_HAS_LIBSVM)
+	LIST(APPEND SOURCES_LIST libsvmModel.C)
 ENDIF()
-
-ADD_BALL_SOURCES("QSAR" "${SOURCES_LIST}")

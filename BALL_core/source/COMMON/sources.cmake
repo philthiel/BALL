@@ -1,7 +1,7 @@
-### the directory name ###
-SET(DIRECTORY source/COMMON)
+# Set the source group name
+SET(GROUP COMMON)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	constants.C
 	exception.C
@@ -11,5 +11,3 @@ SET(SOURCES_LIST
 	rtti.C
 	version.C
 )	
-
-ADD_BALL_SOURCES("COMMON" "${SOURCES_LIST}")

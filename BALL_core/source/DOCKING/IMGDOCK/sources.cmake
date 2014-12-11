@@ -1,9 +1,7 @@
-### the directory name ###
-SET(DIRECTORY source/DOCKING/IMGDOCK)
+# Set the source group name
+SET(GROUP DOCKING/IMGDOCK)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	IMGDock.C
 )
-
-ADD_BALL_SOURCES("DOCKING/IMGDOCK" "${SOURCES_LIST}")

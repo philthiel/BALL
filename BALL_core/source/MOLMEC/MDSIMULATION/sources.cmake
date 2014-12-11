@@ -1,11 +1,9 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/MDSIMULATION)
+# Set the source group name
+SET(GROUP MOLMEC/MDSIMULATION)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
-	molecularDynamics.C
+	canonicalMD.C
 	microCanonicalMD.C
-	canonicalMD.C 
-)	
-
-ADD_BALL_SOURCES("MOLMEC/MDSIMULATION" "${SOURCES_LIST}")
+	molecularDynamics.C
+)

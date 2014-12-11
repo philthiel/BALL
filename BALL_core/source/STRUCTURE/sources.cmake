@@ -1,6 +1,7 @@
-INCLUDE(source/STRUCTURE/BONDORDERS/sources.cmake)
+# Set the source group name
+SET(GROUP STRUCTURE)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	addHydrogenProcessor.C
 	analyticalSES.C
@@ -28,18 +29,21 @@ SET(SOURCES_LIST
 	mutator.C
 	nucleotideMapping.C
 	numericalSAS.C
-	peptides.C
 	peptideBuilder.C
 	peptideCapProcessor.C
+	peptides.C
 	radialDistributionFunction.C
-	reconstructFragmentProcessor.C
 	RDFIntegrator.C
 	RDFParameter.C
 	RDFSection.C
+	reconstructFragmentProcessor.C
 	reducedSurface.C
 	residueChecker.C
+	residueRotamerSet.C
 	rGroupAssembler.C
 	ringAnalyser.C
+	RMSDMinimizer.C
+	rotamerLibrary.C
 	RSEdge.C
 	RSFace.C
 	RSVertex.C
@@ -47,14 +51,14 @@ SET(SOURCES_LIST
 	SASFace.C
 	SASVertex.C
 	sdGenerator.C
+	secondaryStructureProcessor.C
 	SESEdge.C
 	SESFace.C
 	SESVertex.C
-	secondaryStructureProcessor.C
 	sideChainPlacementProcessor.C
-	smilesParser.C
-	smartsParser.C
 	smartsMatcher.C
+	smartsParser.C
+	smilesParser.C
 	solventAccessibleSurface.C
 	solventExcludedSurface.C
 	structureMapper.C
@@ -66,16 +70,16 @@ SET(SOURCES_LIST
 	triangulatedSES.C
 	triangulatedSurface.C
 	UCK.C
-	residueRotamerSet.C
-	rotamerLibrary.C
-	RMSDMinimizer.C
 )
 
 IF(BALL_HAS_OPENBABEL OR BALL_HAS_OPENEYE)
 	LIST(APPEND SOURCES_LIST logP.C)
 ENDIF()
 
-ADD_BALL_SOURCES("STRUCTURE" "${SOURCES_LIST}")
+SET(PARSER_LEXER_LIST
+	smilesParser
+	smartsParser
+)
 
-ADD_BALL_PARSER_LEXER("STRUCTURE" "smilesParser" "SmilesParser")
-ADD_BALL_PARSER_LEXER("STRUCTURE" "smartsParser" "SmartsParser")
+#ADD_BALL_PARSER_LEXER("STRUCTURE" "smilesParser" "SmilesParser")
+#ADD_BALL_PARSER_LEXER("STRUCTURE" "smartsParser" "SmartsParser")

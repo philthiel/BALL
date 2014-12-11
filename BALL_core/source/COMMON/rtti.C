@@ -4,8 +4,8 @@
 // $Id: rtti.C,v 1.14 2003/08/26 09:17:44 oliver Exp $
 //
 
-#include <BALL/COMMON/global.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_core/COMMON/rtti.h>
 
 #include <typeinfo>
 #include <ctype.h>

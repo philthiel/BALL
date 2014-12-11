@@ -1,7 +1,7 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/COMMON)
+# Set the source group name
+SET(GROUP MOLMEC/COMMON)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	assignTypes.C
 	atomVector.C
@@ -20,6 +20,4 @@ SET(SOURCES_LIST
 	stretchComponent.C
 	typenameRuleProcessor.C
 	typeRuleProcessor.C
-)	
-
-ADD_BALL_SOURCES("MOLMEC/COMMON" "${SOURCES_LIST}")
+)
