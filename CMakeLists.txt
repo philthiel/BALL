@@ -143,7 +143,7 @@ POSTPROCESS_DEP_LIBS(BALL_DEPENDENCY_LIBS)
 ###############################################################################
 
 # Variable to store the BALL_core includ files for downstream use
-# Will be set in the BALL_core subproject
+# Will be populated in the BALL_core subproject
 SET(BALL_core_INCLUDE_DIRS)
 
 # Variable pointing to BALL data path
@@ -152,6 +152,16 @@ SET(BALL_DATA_PATH)
 
 ADD_SUBDIRECTORY(BALL_core "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALL_core")
 
+
+###############################################################################
+###    Include BALL view library                                            ###
+###############################################################################
+
+# Variable to store the BALL_view includ files for downstream use
+# Will be populated in the BALL_view subproject
+SET(BALL_view_INCLUDE_DIRS)
+
+ADD_SUBDIRECTORY(BALL_view "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALL_view")
 
 
 

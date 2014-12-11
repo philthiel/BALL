@@ -47,6 +47,7 @@ SET(BALL_headers "" CACHE INTERNAL "This variable should hold all BALL headers a
 #   - GROUP:             Source group name
 #   - SOURCES_LIST:      list of source files to be added
 #   - MOC_SOURCES_LIST:  list of source files that have to be compiled with moc (Qt)
+#   - UI_SOURCES_LIST:   list of UI source files (Qt)
 #   - PARSER_LEXER_LIST: lsit of files that define parsers
 
 FILE(GLOB_RECURSE sources_cmake_lists RELATIVE ${PROJECT_SOURCE_DIR} source/*sources.cmake)
@@ -55,6 +56,7 @@ FOREACH(source_file ${sources_cmake_lists})
 
 	SET(SOURCES_LIST "")
 	SET(MOC_SOURCES_LIST "")
+	SET(UI_SOURCES_LIST "")
 	SET(PARSER_LEXER_LIST "")
 
 	GET_FILENAME_COMPONENT(SOURCE_DIR "${source_file}" DIRECTORY)
@@ -67,6 +69,10 @@ FOREACH(source_file ${sources_cmake_lists})
 
 	IF(MOC_SOURCES_LIST)
 		ADD_BALL_MOCFILES("${GROUP}" "${SOURCE_DIR}" "include/${SUBPROJECT_NAME}/" "${MOC_SOURCES_LIST}")
+	ENDIF()
+
+	IF(UI_SOURCES_LIST)
+		ADD_BALL_UIFILES("${GROUP}" "${SOURCE_DIR}" "${UI_SOURCES_LIST}")
 	ENDIF()
 
 	IF(PARSER_LEXER_LIST)

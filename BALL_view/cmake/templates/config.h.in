@@ -1,0 +1,27 @@
+// -*- Mode: C++; tab-width: 2; -*-
+// vi: set ts=2:
+
+#ifndef VIEW_CONFIG_CONFIG_H
+#define VIEW_CONFIG_CONFIG_H
+
+#include <BALL/CONFIG/config.h>
+
+// Here are some global configuration flags for BALL_view
+
+// BALL_DEBUG enables some debugging methods
+// change the DEBUG entry in configure to define this flag.
+// If in debug mode, inline functions won't be compiled
+// as inline by defining VIEW_NO_INLINE_FUNCTIONS
+// This facilitates debugging, as the debugger can always
+// find the corresponding source code line.
+// See also COMMON/debug.h for these symbols.
+#cmakedefine VIEW_DEBUG
+#cmakedefine VIEW_NO_INLINE_FUNCTIONS
+
+// Define whether BALL was built with rtfact support
+#cmakedefine VIEW_HAS_RTFACT
+
+// Glew
+#cmakedefine VIEW_HAS_GLEW
+
+#endif // VIEW_CONFIG_CONFIG_H

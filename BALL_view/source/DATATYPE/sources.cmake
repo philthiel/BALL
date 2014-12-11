@@ -1,25 +1,27 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP DATATYPE)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	colorExtensions.C
 	colorHSV.C
-	colorRGBA.C
 	colorMap.C
+	colorRGBA.C
 	colorUnit.C
 	colorUnitHue.C
-	vertex1.C
-	vertex2.C
 	dataset.C
 	raytraceableGrid.C
 	standardDatasets.C
+	vertex1.C
+	vertex2.C
 )
 
-### the list of all files requiring a moc run ###
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST
 	dataset.C
 	standardDatasets.C
 )
 
-ADD_VIEW_SOURCES("VIEW/DATATYPE" "${SOURCES_LIST}")
-
-ADD_BALL_MOCFILES("VIEW/DATATYPE" "include/BALL/VIEW/DATATYPE" "${MOC_SOURCES_LIST}")
+#ADD_VIEW_SOURCES("VIEW/DATATYPE" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/DATATYPE" "include/BALL/VIEW/DATATYPE" "${MOC_SOURCES_LIST}")
 

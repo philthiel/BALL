@@ -15,6 +15,7 @@ SET(SOURCES_LIST
 	timer.C
 )
 
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST
 	simpleDownloader.C
 )

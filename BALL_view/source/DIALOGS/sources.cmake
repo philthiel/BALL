@@ -1,26 +1,84 @@
-### The ui files go here ###
-SET(UI_LIST
+# Set the source group name
+SET(GROUP DIALOGS)
+
+# List all filenames of this group here
+SET(SOURCES_LIST
+	amberConfigurationDialog.C
+	assignBondOrderConfigurationDialog.C
+	assignBondOrderResultsDialog.C
+	atomOverview.C
+	bondProperties.C
+	charmmConfigurationDialog.C
+	clippingDialog.C
+	coloringSettingsDialog.C
+	compositeProperties.C
+	contourSurfaceDialog.C
+	displayProperties.C
+	dockDialog.C
+	dockProgressDialog.C
+	dockResultDialog.C
+	downloadElectronDensity.C
+	downloadPDBFile.C
+	editSettings.C
+	editSingleShortcut.C
+	exportGeometryDialog.C
+	FDPBDialog.C
+	fieldLinesDialog.C
+	generateCrystalDialog.C
+	gridVisualizationDialog.C
+	labelDialog.C
+	lightSettings.C
+	mainControlPreferences.C
+	materialSettings.C
+	minimizationDialog.C
+	MMFF94ConfigurationDialog.C
+	modelSettingsDialog.C
+	modifyRepresentationDialog.C
+	molecularDynamicsDialog.C
+	molecularFileDialog.C
+	networkPreferences.C
+	openSavePreferences.C
+	parsedFunctionDialog.C
+	peptideDialog.C
+	pluginDialog.C
+	preferences.C
+	PTEDialog.C
+	pubchemDialog.C
+	raytraceableContourSurfaceDialog.C
+	serverPreferences.C
+	setCamera.C
+	setClippingPlane.C
+	shortcutDialog.C
+	snapShotVisualisation.C
+	stageSettings.C
+	stereoSettingsDialog.C
+	undoManagerDialog.C
+)
+
+# List all UI files here
+SET(UI_SOURCES_LIST
+	amberConfigurationDialog.ui
 	assignBondOrderConfigurationDialog.ui
 	assignBondOrderResultsDialog.ui
 	atomOverview.ui
-	amberConfigurationDialog.ui
 	bondProperties.ui
 	charmmConfigurationDialog.ui
-	contourSurfaceDialog.ui
+	clippingDialog.ui
 	coloringSettingsDialog.ui
 	compositeProperties.ui
-	clippingDialog.ui
+	contourSurfaceDialog.ui
+	displayProperties.ui
 	dockDialog.ui
 	dockProgressDialog.ui
 	dockResultDialog.ui
-	downloadPDBFile.ui
 	downloadElectronDensity.ui
+	downloadPDBFile.ui
+	editorPDBInfoDialog.ui
 	editSettings.ui
 	editSingleShortcut.ui
-	editorPDBInfoDialog.ui
-	displayProperties.ui
-	fieldLinesDialog.ui
+	exportGeometryDialog.ui
 	FDPBDialog.ui
+	fieldLinesDialog.ui
 	generateCrystalDialog.ui
 	gridColorWidget.ui
 	gridVisualizationDialog.ui
@@ -29,10 +87,10 @@ SET(UI_LIST
 	mainControlPreferences.ui
 	materialSettings.ui
 	minimizationDialog.ui
+	MMFF94ConfigurationDialog.ui
 	modelSettingsDialog.ui
 	modifyRepresentationDialog.ui
 	molecularDynamicsDialog.ui
-	MMFF94ConfigurationDialog.ui
 	networkPreferences.ui
 	openSavePreferences.ui
 	parsedFunctionDialog.ui
@@ -41,7 +99,6 @@ SET(UI_LIST
 	preferences.ui
 	propEditorWidget.ui
 	propertyEditor.ui
-	exportGeometryDialog.ui
 	PTEDialog.ui
 	pubchemDialog.ui
 	raytraceableContourSurfaceDialog.ui
@@ -54,75 +111,19 @@ SET(UI_LIST
 	undoManagerDialog.ui
 )
 
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
-	assignBondOrderConfigurationDialog.C
-	assignBondOrderResultsDialog.C
-	atomOverview.C
-	amberConfigurationDialog.C
-	bondProperties.C
-	charmmConfigurationDialog.C
-	contourSurfaceDialog.C
-	coloringSettingsDialog.C
-	compositeProperties.C
-	clippingDialog.C
-	dockDialog.C
-	dockProgressDialog.C
-	dockResultDialog.C
-	downloadPDBFile.C
-	downloadElectronDensity.C
-	editSettings.C
-	editSingleShortcut.C
-	displayProperties.C
-	fieldLinesDialog.C
-	FDPBDialog.C
-	generateCrystalDialog.C
-	gridVisualizationDialog.C
-	labelDialog.C
-	lightSettings.C
-	mainControlPreferences.C
-	materialSettings.C
-	minimizationDialog.C
-	modelSettingsDialog.C
-	modifyRepresentationDialog.C
-	molecularDynamicsDialog.C
-	molecularFileDialog.C
-	MMFF94ConfigurationDialog.C
-	networkPreferences.C
-	openSavePreferences.C
-	parsedFunctionDialog.C
-	peptideDialog.C
-	pluginDialog.C
-	preferences.C
-	exportGeometryDialog.C
-	PTEDialog.C
-	pubchemDialog.C
-	raytraceableContourSurfaceDialog.C
-	setCamera.C
-	setClippingPlane.C
-	serverPreferences.C
-	shortcutDialog.C
-	snapShotVisualisation.C
-	stageSettings.C
-	stereoSettingsDialog.C
-	undoManagerDialog.C
-)
-
 IF(BALL_PYTHON_SUPPORT)
-	SET(UI_LIST ${UI_LIST} pythonSettings.ui)
+	SET(UI_SOURCES_LIST ${UI_SOURCES_LIST} pythonSettings.ui)
 	SET(SOURCES_LIST ${SOURCES_LIST} pythonSettings.C)
 ENDIF()
 
 IF(BALL_HAS_FFTW)
-	SET(UI_LIST ${UI_LIST} geometricFitDialog.ui)
+	SET(UI_SOURCES_LIST ${UI_SOURCES_LIST} geometricFitDialog.ui)
 	SET(SOURCES_LIST ${SOURCES_LIST} geometricFitDialog.C)
 ENDIF()
 
-### the list of all files requiring a moc run ###
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST "${SOURCES_LIST}")
 
-ADD_VIEW_SOURCES("VIEW/DIALOGS" "${SOURCES_LIST}")
-
-ADD_BALL_MOCFILES("VIEW/DIALOGS" "include/BALL/VIEW/DIALOGS" "${MOC_SOURCES_LIST}")
-
-ADD_BALL_UIFILES("VIEW/DIALOGS" "${UI_LIST}")
+#ADD_VIEW_SOURCES("VIEW/DIALOGS" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/DIALOGS" "include/BALL/VIEW/DIALOGS" "${MOC_SOURCES_LIST}")
+#ADD_BALL_UIFILES("VIEW/DIALOGS" "${UI_LIST}")

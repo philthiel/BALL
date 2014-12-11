@@ -1,4 +1,7 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP MODELS)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	atomBondModelBaseProcessor.C
 	backboneModel.C
@@ -17,9 +20,5 @@ SET(SOURCES_LIST
 	vanDerWaalsModel.C
 )
 
-### the list of all files requiring a moc run ###
-SET(MOC_SOURCES_LIST "")
-
-ADD_VIEW_SOURCES("VIEW/MODELS" "${SOURCES_LIST}")
-
-ADD_BALL_MOCFILES("VIEW/MODELS" "include/BALL/VIEW/MODELS" "${MOC_SOURCES_LIST}")
+#ADD_VIEW_SOURCES("VIEW/MODELS" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/MODELS" "include/BALL/VIEW/MODELS" "${MOC_SOURCES_LIST}")

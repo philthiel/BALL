@@ -169,7 +169,7 @@ MACRO(ADD_BALL_PARSER_LEXER GROUP SOURCE_DIR PARSER_LEXER_LIST)
 ENDMACRO()
 
 
-MACRO(ADD_BALL_CORE_MOCFILES GROUP SOURCE_DIR INPUT_DIRECTORY MOC_LIST)
+MACRO(ADD_BALL_MOCFILES GROUP SOURCE_DIR INPUT_DIRECTORY MOC_LIST)
 
 	SET(DIRECTORY ${SOURCE_DIR})
 
@@ -194,6 +194,75 @@ MACRO(ADD_BALL_CORE_MOCFILES GROUP SOURCE_DIR INPUT_DIRECTORY MOC_LIST)
 		STRING(REGEX REPLACE "/" "\\\\" S_GROUP ${GROUP})
 		SOURCE_GROUP("Source Files\\\\${S_GROUP}" FILES ${OUTFILE})
 
+	ENDFOREACH()
+
+ENDMACRO()
+
+
+### This macro is a terrible ugly hack and if life was fair, it would never exist.
+### However, the QT4_WRAP_UI - macro from FindQt4.cmake does not allow changing the
+### output directory, and the default choice is unacceptable.
+###
+### So this macro is a nearly one-to-one copy of the FindQt4 - version with only
+### minor modifications (marked with ## BALL ###)
+###
+MACRO(QT4_WRAP_UI_BALL outfiles)
+	# since 2.8.12 qt4_extract_options has an additional argument
+	# copied fix from OpenMS
+	IF(${CMAKE_VERSION} VERSION_LESS "2.8.12")
+		QT4_EXTRACT_OPTIONS(ui_files ui_options ${ARGN})
+	ELSE()
+		QT4_EXTRACT_OPTIONS(ui_files ui_options ui_target ${ARGN})
+	ENDIF()
+
+	### BALL ###
+	# create output directory (will not exist for out-of-source builds)
+	FILE(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/include/BALL_view/UIC/)
+
+	FOREACH(it ${ui_files})
+		GET_FILENAME_COMPONENT(outfile ${it} NAME_WE)
+		GET_FILENAME_COMPONENT(infile ${it} ABSOLUTE)
+		### BALL ###
+		SET(outfile ${PROJECT_BINARY_DIR}/include/BALL_view/UIC/ui_${outfile}.h)
+
+		ADD_CUSTOM_COMMAND(OUTPUT ${outfile}
+				   COMMAND ${QT_UIC_EXECUTABLE}
+				   ARGS ${ui_options} -o ${outfile} ${infile}
+				   MAIN_DEPENDENCY ${infile})
+		SET(${outfiles} ${${outfiles}} ${outfile})
+	ENDFOREACH(it)
+ENDMACRO(QT4_WRAP_UI_BALL)
+
+
+### Generate appropriate uic and moc rules for the files in UI_LIST,
+### and add the resulting source files to the VIEW sources and to their
+### source group
+MACRO(ADD_BALL_UIFILES GROUP SOURCE_DIR UI_SOURCES_LIST)
+
+	SET(DIRECTORY ${SOURCE_DIR})
+	#SET(DIRECTORY source/${GROUP})
+
+	### for out of source builds, the output directory might not yet exist ###
+	FILE(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/${DIRECTORY})
+
+	### iterate over the ui files ###
+	FOREACH(ui_source ${UI_SOURCES_LIST})
+
+		#GET_FILENAME_COMPONENT(ui_source ${ui_source} NAME)
+
+		SET(UI_FILE ${DIRECTORY}/${ui_source})
+
+		### Generate the corresponding ui file ###
+		SET(OUTFILES)
+		QT4_WRAP_UI_BALL(OUTFILES ${UI_FILE})
+
+		### and add them to the sources ###
+		SET(BALL_sources ${BALL_sources} "${OUTFILES}" ${UI_FILE})
+
+		### source group definition ###
+		STRING(REGEX REPLACE "/" "\\\\" S_GROUP ${GROUP})
+		SOURCE_GROUP("Source Files\\\\${S_GROUP}" FILES ${OUTFILES})
+		SOURCE_GROUP("UI Files" FILES ${UI_FILE})
 	ENDFOREACH()
 
 ENDMACRO()

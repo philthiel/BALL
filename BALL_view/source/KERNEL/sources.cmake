@@ -1,6 +1,7 @@
-INCLUDE(source/VIEW/KERNEL/MODES/sources.cmake)
+# Set the source group name
+SET(GROUP KERNEL)
 
-### list all filenames of the directory here ###
+# List all filenames of this group here
 SET(SOURCES_LIST
 	clippingPlane.C
 	common.C
@@ -14,8 +15,8 @@ SET(SOURCES_LIST
 	modelInformation.C
 	modularWidget.C
 	preferencesEntry.C
-	representationManager.C
 	representation.C
+	representationManager.C
 	shortcutRegistry.C
 	snapshotManagerInterface.C
 	stage.C
@@ -23,7 +24,7 @@ SET(SOURCES_LIST
 	UIOperationMode.C
 )
 
-### the list of all files requiring a moc run ###
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST
 	mainControl.C
 	shortcutRegistry.C
@@ -34,6 +35,5 @@ IF(BALL_HAS_ASIO)
 	SET(MOC_SOURCES_LIST ${MOC_SOURCES_LIST} serverWidget.C)
 ENDIF()
 
-ADD_VIEW_SOURCES("VIEW/KERNEL" "${SOURCES_LIST}")
-
-ADD_BALL_MOCFILES("VIEW/KERNEL" "include/BALL/VIEW/KERNEL" "${MOC_SOURCES_LIST}")
+#ADD_VIEW_SOURCES("VIEW/KERNEL" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/KERNEL" "include/BALL/VIEW/KERNEL" "${MOC_SOURCES_LIST}")

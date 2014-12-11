@@ -1,12 +1,16 @@
-### list all filenames of the directory here ###
+# Set the source group name
+SET(GROUP WIDGETS)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
+#       canvasWidget.C
 	colorButton.C
 	colorTable.C
 	datasetControl.C
 	dockingController.C
 	dockWidget.C
 	fileObserver.C
- 	genericControl.C
+	genericControl.C
 	geometricControl.C
 	gridColorWidget.C
 	helpViewer.C
@@ -14,29 +18,25 @@ SET(SOURCES_LIST
 	molecularControl.C
 	molecularStructure.C
 	propertyEditor.C
+#       regularData1DWidget.C
+#       regularData2DWidget.C
 	scene.C
-	shortcutTableView.C
 	SDWidget.C
+	shortcutTableView.C
 	testFramework.C
 	textEditorWidget.C
-#	canvasWidget.C
-#	regularData2DWidget.C
-#	regularData1DWidget.C
 )
 
 IF(USE_QTWEBKIT)
-	LIST(APPEND SOURCES_LIST
-		HTMLView.C
-	)
+	SET(SOURCES_LIST ${SOURCES_LIST} HTMLView.C)
 ENDIF()
 
 IF(BALL_PYTHON_SUPPORT)
 	SET(SOURCES_LIST ${SOURCES_LIST} pyWidget.C hotkeyTable.C)
 ENDIF()
 
-### the list of all files requiring a moc run ###
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST "${SOURCES_LIST}")
 
-ADD_VIEW_SOURCES("VIEW/WIDGETS" "${SOURCES_LIST}")
-
-ADD_BALL_MOCFILES("VIEW/WIDGETS" "include/BALL/VIEW/WIDGETS" "${MOC_SOURCES_LIST}")
+#ADD_VIEW_SOURCES("VIEW/WIDGETS" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/WIDGETS" "include/BALL/VIEW/WIDGETS" "${MOC_SOURCES_LIST}")

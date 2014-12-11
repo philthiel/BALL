@@ -1,3 +1,7 @@
+# Set the source group name
+SET(GROUP KERNEL/MODES)
+
+# List all filenames of this group here
 SET(SOURCES_LIST
 	editMode.C
 	interactionMode.C
@@ -7,12 +11,13 @@ SET(SOURCES_LIST
 	rotateMode.C
 )
 
+# List all files requiring a moc run here
 SET(MOC_SOURCES_LIST
-	moveMode.C
 	editMode.C
+	moveMode.C
 	interactionMode.C
 	interactionModeManager.C
 )
 
-ADD_VIEW_SOURCES("VIEW/KERNEL/MODES" "${SOURCES_LIST}")
-ADD_BALL_MOCFILES("VIEW/KERNEL/MODES" "include/BALL/VIEW/KERNEL/MODES" "${MOC_SOURCES_LIST}")
+#ADD_VIEW_SOURCES("VIEW/KERNEL/MODES" "${SOURCES_LIST}")
+#ADD_BALL_MOCFILES("VIEW/KERNEL/MODES" "include/BALL/VIEW/KERNEL/MODES" "${MOC_SOURCES_LIST}")
