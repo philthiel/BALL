@@ -33,5 +33,3 @@ ENDIF()
 SET(PARSER_LEXER_LIST
 	parsedFunction
 )
-
-#ADD_BALL_PARSER_LEXER("MATHS" "parsedFunction" "ParsedFunction")

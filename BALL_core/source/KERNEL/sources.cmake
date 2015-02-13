@@ -32,5 +32,3 @@ SET(SOURCES_LIST
 SET(PARSER_LEXER_LIST
 	expressionParser
 )
-
-#ADD_BALL_PARSER_LEXER("KERNEL" "expressionParser" "ExpressionParser")

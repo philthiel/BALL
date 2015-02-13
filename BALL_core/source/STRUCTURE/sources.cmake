@@ -80,6 +80,3 @@ SET(PARSER_LEXER_LIST
 	smilesParser
 	smartsParser
 )
-
-#ADD_BALL_PARSER_LEXER("STRUCTURE" "smilesParser" "SmilesParser")
-#ADD_BALL_PARSER_LEXER("STRUCTURE" "smartsParser" "SmartsParser")
