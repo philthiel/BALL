@@ -290,6 +290,12 @@
 // defined if asio is taken from boost
 #cmakedefine BALL_HAS_BOOST_ASIO
 
+// defined if BALL was configured with asio support
+#cmakedefine BALL_HAS_ASIO
+
+// the namespace to use for asio
+#cmakedefine BALL_ASIO_NAMESPACE @BALL_ASIO_NAMESPACE@
+
 // Define whether the FFTW library/header is available.
 #cmakedefine BALL_HAS_FFTW
 #cmakedefine BALL_HAS_FFTW_H
@@ -302,15 +308,47 @@
 // The default traits for the FFTW classes
 #cmakedefine BALL_FFTW_DEFAULT_TRAITS @BALL_FFTW_DEFAULT_TRAITS@
 
-// CUDA
-#cmakedefine BALL_HAS_CUDA
+// Define whether BALL was built with lpsolve support
+#cmakedefine BALL_HAS_LPSOLVE
 
-// MPI
-#cmakedefine BALL_HAS_MPI
+// Define whether BALL was built with libsvm support
+#cmakedefine BALL_HAS_LIBSVM
+
+// VIEW related options
+#cmakedefine BALL_HAS_VIEW
+
+// Define whether BALL was built with rtfact support
+#cmakedefine BALL_HAS_RTFACT
+
+// OpenEye
+#cmakedefine BALL_HAS_OPENEYE
+
+//OpenBabel
+#cmakedefine BALL_HAS_OPENBABEL
 
 // QT options
 #define BALL_QT_HAS_THREADS // Qt now always has thread support
 #define QT_THREAD_SUPPORT
+
+#cmakedefine BALL_HAS_QTWEBKIT
+
+// gsl
+#cmakedefine BALL_HAS_GSL
+
+// Glew
+#cmakedefine BALL_HAS_GLEW
+
+// MPI
+#cmakedefine BALL_HAS_MPI
+
+// TBB
+#cmakedefine BALL_HAS_TBB
+
+// RTfact
+#cmakedefine BALL_HAS_RTFACT
+
+// Define for activated PYTHON support
+#cmakedefine BALL_PYTHON_SUPPORT
 
 // Maximum line length for reading from files (see source/FORMAT)
 #cmakedefine BALL_MAX_LINE_LENGTH @BALL_MAX_LINE_LENGTH@
