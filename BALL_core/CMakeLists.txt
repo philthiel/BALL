@@ -37,13 +37,9 @@ SET(SUBPROJECT_NAME "BALL_core")
 # Set BALL_core CMake module path and load macros and other paths
 #
 LIST(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
-LIST(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
 
 # Include BALL components
 INCLUDE(BALLComponents)
-
-# Set variable pointing to BALL data path
-SET(BALL_DATA_PATH "${PROJECT_SOURCE_DIR}/data" PARENT_SCOPE)
 
 # BALL standard include directory
 INCLUDE_DIRECTORIES("${PROJECT_SOURCE_DIR}/include")
@@ -94,4 +90,20 @@ SET_TARGET_PROPERTIES(BALL_core PROPERTIES COMPILE_FLAGS "${BALL_COMPILE_FLAGS}"
 
 # Set version property of target BALL
 SET_TARGET_PROPERTIES(BALL_core PROPERTIES VERSION "${BALL_VERSION_MAJOR}.${BALL_VERSION_MINOR}")
+
+
+###############################################################################
+###    Set upstream variables                                               ###
+###############################################################################
+
+# Fetch BALL_view include directories
+GET_DIRECTORY_PROPERTY(TMP_BALL_core_INCLUDE_DIRS INCLUDE_DIRECTORIES)
+SET(BALL_core_INCLUDE_DIRS "${TMP_BALL_core_INCLUDE_DIRS}" PARENT_SCOPE)
+
+
+###############################################################################
+###    BALL_core tests                                                      ###
+###############################################################################
+
+ADD_SUBDIRECTORY(TEST EXCLUDE_FROM_ALL)
 

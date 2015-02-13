@@ -104,6 +104,12 @@ OPTION(BALL_TEST_VERBOSE "Use verbose output for all tests" ON)
 
 
 ###############################################################################
+# BALL data path
+#
+SET(BALL_DATA_PATH "${PROJECT_SOURCE_DIR}/data")
+
+
+###############################################################################
 # Set CMake output paths and prefixes
 #
 
@@ -146,26 +152,33 @@ POSTPROCESS_DEP_LIBS(BALL_DEPENDENCY_LIBS)
 # Will be populated in the BALL_core subproject
 SET(BALL_core_INCLUDE_DIRS)
 
-# Variable pointing to BALL data path
-# Will be set in the BALL_core subproject
-SET(BALL_DATA_PATH)
-
 ADD_SUBDIRECTORY(BALL_core "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALL_core")
 
 
 ###############################################################################
-###    Include BALL view library                                            ###
+###    Include BALL view library and BALLView - OPTIONAL                    ###
 ###############################################################################
 
-# Variable to store the BALL_view includ files for downstream use
-# Will be populated in the BALL_view subproject
-SET(BALL_view_INCLUDE_DIRS)
+IF(BALL_BUILD_VIEW)
 
-ADD_SUBDIRECTORY(BALL_view "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALL_view")
+	# Variable to store the BALL_view includ files for downstream use
+	# It will be populated in the BALL_view subproject
+	SET(BALL_view_INCLUDE_DIRS)
+
+	ADD_SUBDIRECTORY(BALL_view "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALL_view")
+
+ENDIF(BALL_BUILD_VIEW)
 
 
+###############################################################################
+###    Include BALLTools - OPTIONAL                                         ###
+###############################################################################
 
+IF(BALL_BUILD_TOOLS)
 
+	ADD_SUBDIRECTORY(BALLTools "${BALL_CMAKE_BINARY_SOURCE_BASE}/BALLTools")
+
+ENDIF(BALL_BUILD_TOOLS)
 
 
 
