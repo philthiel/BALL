@@ -1,0 +1,228 @@
+// -*- Mode: C++; tab-width: 2; -*-
+// vi: set ts=2:
+//
+
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/commandlineParser.h>
+#include <BALL_core/DOCKING/COMMON/structurePreparer.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/DATATYPE/options.h>
+#include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
+#include <BALL_core/SCORING/FUNCTIONS/gridedPLP.h>
+#include <BALL_core/SCORING/FUNCTIONS/gridedMM.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_core/STRUCTURE/rotamerLibrary.h>
+#include <BALL_core/STRUCTURE/peptideBuilder.h>
+#include <BALL_core/COMMON/version.h>
+
+
+using namespace BALL;
+using namespace std;
+
+GridBasedScoring* createScoringFunction(AtomContainer* receptor, AtomContainer* ref_ligand, String scoring_type, list<Constraint*>* constraints, Options* option)
+{
+	GridBasedScoring* gbs = 0;
+	if (scoring_type == "GridedMM")
+	{
+		gbs = new GridedMM(*receptor, *ref_ligand, *option);
+	}
+	else if (scoring_type == "GridedPLP")
+	{
+		gbs = new GridedPLP(*receptor, *ref_ligand, *option);
+	}
+	for (list < Constraint* > ::iterator it = constraints->begin(); it != constraints->end(); it++)
+	{
+		gbs->constraints.push_back(*it);
+		(*it)->setScoringFunction(gbs);
+	}
+	return gbs;
+}
+
+
+int main(int argc, char* argv[])
+{
+	CommandlineParser parpars("SideChainGridBuilder", "build side chain grid", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	parpars.registerParameter("params", "parameter file", INFILE, true);
+	parpars.registerParameter("d", "output directory", STRING, true);
+	parpars.setSupportedFormats("params", "ini");
+	parpars.setToolManual("This tool precalculates a side chain grid.");
+
+	parpars.parse(argc, argv);
+
+	Options option;
+	list<Constraint*> constraints;
+
+	if (parpars.get("params") == CommandlineParser::NOT_FOUND)
+	{
+		Log.error() << "[Error:] parameter input file must be given" << endl;
+		exit (1);
+	}
+
+	String inifile = parpars.get("params");
+	DockingAlgorithm::readOptionFile(inifile, option, constraints);
+	String scoring_type = option.get("scoring_type");
+	String grid_file = option.get("grid_file");
+
+	// Support for using one and the same config-file for grid precalculation and docking
+	String precalc_nonbonded_cuttoff = option.get("nonbonded_cutoff_precalculation");
+	if (precalc_nonbonded_cuttoff != "")
+	{
+		option.set("nonbonded_cutoff", precalc_nonbonded_cuttoff);
+	}
+
+	if (scoring_type == "")
+	{
+		Log.error() << "[Error:] scoring_type must be specified in the config-file!" << endl;
+		exit(1);
+	}
+
+	if (scoring_type != "GridedMM" && scoring_type != "GridedPLP")
+	{
+		Log.error() << "[Error:] specified scoring_type is not grid-based, so no grid can be build for it!" << endl;
+		exit(1);
+	}
+
+	String par_file = option.get("filename");
+	if (par_file == "" && !scoring_type.hasSubstring("GH"))
+	{
+		Log.error() << "[Error:] 'filename' for force-field parameter file must be specified in the config-file!" << endl;
+		return(1);
+	}
+
+	if (grid_file == "")
+	{
+		Log.error() << "[Error:] the grid_file must be specified in the config-file!" << endl;
+		return(1);
+	}
+
+	StructurePreparer* sp;
+	bool use_PLP = 0;
+	if (scoring_type.hasSubstring("PLP"))
+	{
+		use_PLP = 1;
+		sp = new StructurePreparer("PLP");
+	}
+	else
+	{
+		use_PLP = 0;
+		sp = new StructurePreparer;
+	}
+
+	String at = option.get("atom_types");
+	set<String> types;
+	if (!use_PLP && at != "")
+	{
+		Size no = at.countFields(", ");
+		for (Size i = 0; i < no; i++)
+		{
+			String type_i = at.getField(i, ", ");
+			type_i.trim();
+			types.insert(type_i);
+		}
+	}
+
+	// Angles are irrelevant, since we construct only single amino acids
+	Angle angle(0);
+
+	if (parpars.get("d") == CommandlineParser::NOT_FOUND)
+	{
+		Log.error() << "[Error:] out directory must be given." << endl;
+		exit (1);
+	}
+
+	String prefix = parpars.get("d");
+	prefix += "/";
+
+	FragmentDB frag_db("fragments/Fragments.db");
+	RotamerLibrary rotamer_lib("rotamers/bbind02.May.lib", frag_db);
+	String one_letter_codes = "ARNDCQEGHILKMFPSTWYV";
+
+	for (Size i = 0; i < 20; i++)
+	{
+		Peptides::PeptideBuilder pb(one_letter_codes[i], angle, angle, angle);
+		pb.setFragmentDB(&frag_db);
+		Protein* protein_template = pb.construct();
+		sp->prepare(protein_template, par_file);
+
+		Residue* residue = protein_template->getResidue(0);
+		ResidueRotamerSet* rotamer_set = rotamer_lib.getRotamerSet(*residue);
+
+		if (!rotamer_set) // GLY and ALA have no rotamers
+		{
+			Log << "No rotamers for " << residue->getName() << " found." << endl;
+			continue;
+		}
+
+		// Remove atoms that are not part of the residue templates
+		for (AtomIterator atom_it = protein_template->beginAtom(); +atom_it; atom_it++)
+		{
+			const String& name = atom_it->getName();
+			if (name == "1H" || name == "2H" || name == "3H" || name == "OXT")
+			{
+				atom_it->select();
+			}
+		}
+		protein_template->removeSelected();
+
+		// Do for each rotamer of the current amino acid
+		for (ResidueRotamerSet::ConstIterator it = rotamer_set->begin(); it != rotamer_set->end(); it++)
+		{
+			rotamer_set->setRotamer(*residue, *it);
+			Protein protein = *protein_template; // make a copy
+
+			/// Remove backbone atoms!!
+			/// Grids should only contain contributions for side-chains!
+			for (AtomIterator atom_it = protein.beginAtom(); +atom_it; atom_it++)
+			{
+				const String& name = atom_it->getName();
+				if (name == "N" || name == "O" || name == "CA" || name == "C" ||name == "HA")
+				{
+					atom_it->select();
+				}
+			}
+			protein.removeSelected();
+
+
+			GridBasedScoring* gbs = createScoringFunction(&protein, &protein, scoring_type, &constraints, &option);
+			gbs->setAtomTypeNames(types);
+
+			String name = residue->getName()+"_";
+			name += String((int)it->chi1)+"_";
+			name += String((int)it->chi2)+"_";
+			name += String((int)it->chi3)+"_";
+			name += String((int)it->chi4);
+
+			Log << "\n---- Will now precalculate grids for " << name << " ...  ------------\n" << endl;
+
+			// Make sure that atoms lying outside of the grids for flexible side-chains will not be penalized during docking/scoring.
+			vector<ScoreGridSet*>* gridsets = gbs->getScoreGridSets();
+			for (Size i = 0; i < gridsets->size(); i++)
+			{
+				gridsets->at(i)->setParameters(0, 0, 0);
+			}
+
+			gbs->precalculateGrids();
+
+			gbs->saveGridSetsToFile(prefix+name+".bngrd", name);
+			PDBFile out(prefix+name+".pdb", ios::out);
+
+			out << *protein_template; // include backbone atoms into pdb-file, because they will be needed for mapping later
+
+			out.close();
+			delete gbs;
+		}
+		delete protein_template;
+	}
+
+
+	for (list < Constraint* > ::iterator it = constraints.begin(); it != constraints.end(); it++)
+	{
+		delete *it;
+	}
+
+	delete sp;
+
+	return 0;
+}

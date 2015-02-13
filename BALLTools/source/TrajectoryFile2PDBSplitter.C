@@ -1,0 +1,111 @@
+// -*- Mode: C++; tab-width: 2; -*-
+// vi: set ts=2:
+//
+
+// A very simple utility for splitting a trajectory file into 
+// several pdb snapshots of a system
+// 
+
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/trajectoryFileFactory.h>
+#include <BALL_core/MOLMEC/COMMON/snapShot.h>
+
+#include <BALL_core/FORMAT/commandlineParser.h>
+#include <iostream>
+#include <BALL_core/COMMON/version.h>
+
+using namespace BALL;
+using namespace std;
+
+int main(int argc, char** argv)
+{
+	CommandlineParser parpars("TrajectoryFile2PDBSplitter", "splits SnapShots into PDB files ", VersionInfo::getVersion(), String(__DATE__), "Convert, combine and store");
+
+	parpars.registerParameter("i_traj", "input trajectory file", INFILE, true);
+	parpars.registerParameter("i_pdb", "input pdb-file", INFILE, true);
+
+	parpars.registerParameter("o", "output pdb-file for first solution", OUTFILE, true, "", true);
+
+	// parameters for galaxy for handling multiple output files
+	parpars.registerParameter("o_id", "output id", GALAXY_OPT_OUTID, false, "$o.id", true);
+	// need to be hidden in command line mode
+	parpars.setParameterAsAdvanced("o_id");
+
+	// parameters for galaxy for handling multiple output files
+	parpars.registerParameter("o_dir", "output directory for 2nd to last pdb file", GALAXY_OPT_OUTDIR, false, "$__new_file_path__", true);
+	// need to be hidden in command line mode
+	parpars.setParameterAsAdvanced("o_dir");
+
+	// the manual
+	String man = "This tool splits SnapShots of a given TrajectoryFile and the reference PDBFile into separate PDBFiles.\n\nParameters are the input SnapShots as TrajectoryFile (-i_traj), the corresponding reference pdb file that was originally used to create the TrajectoryFile (-i_pdb) and a naming schema for the results (-o).\n\nOutput of this tool is a number of PDBFiles each containing one SnapShot.";
+
+	parpars.setToolManual(man);
+
+	// here we set the types of I/O files
+	parpars.setSupportedFormats("i_traj", "dcd");
+	parpars.setSupportedFormats("i_pdb",  "pdb");
+	parpars.setSupportedFormats("o",      "pdb");
+
+	parpars.parse(argc, argv);
+
+	//////////////////////////////////////////////////
+
+	// read the input	
+	PDBFile pdb;
+	pdb.open(parpars.get("i_pdb"));
+	System sys;
+	pdb.read(sys);
+
+	SnapShot ss;
+	TrajectoryFile *traj_file = TrajectoryFileFactory::open(parpars.get("i_traj"));
+	Size num_ss = traj_file->getNumberOfSnapShots();
+
+	// called as command line or e.g. via galaxy?
+	bool is_cmd =    !parpars.has("env")
+			          || ((parpars.has("env") && parpars.get("env")=="cmdline"));
+
+	for (Size i=0; i< num_ss; i++)
+	{
+		// create the output name
+		String outfile_name = String(parpars.get("o")) + "_snapshot_" + String(i) + ".pdb";
+		if (parpars.has("o_dir"))
+		{
+			outfile_name =  String(parpars.get("o_dir")) + "/" + outfile_name;
+		}
+
+		// NOTE: Galaxy requires this strange naming convention 
+		//       including the fact, that zero-th element has a different name
+		if (!is_cmd)
+		{
+			outfile_name = (i == 0) ? String(parpars.get("o"))
+				                               :   String(parpars.get("o_dir")) + "/primary_"
+				                                 + String(parpars.get("o_id"))  + "_snapshot" + String(i)
+				                                 + "_visible_pdb";
+		}
+		Log << "   write SnapShot " << i << " as " << outfile_name << endl;
+
+		if (traj_file->read(ss))
+		{
+			System sys_temp(sys);
+			ss.applySnapShot(sys_temp);
+
+			PDBFile file(outfile_name, ios::out);
+			if (file.bad())
+			{
+				Log.error() << "cannot write file " << outfile_name << endl;
+				return 2;
+			}
+			file << sys_temp;
+			file.close();
+		}
+		else
+			break;
+	}
+
+	Log << "done." << endl;
+
+	return 0;
+}
