@@ -3,9 +3,9 @@
 //
 // $Id: mesh.C,v 1.6.16.1 2007-03-25 22:02:34 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/binaryFileAdaptor.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/SYSTEM/binaryFileAdaptor.h>
 
 using namespace std;
 

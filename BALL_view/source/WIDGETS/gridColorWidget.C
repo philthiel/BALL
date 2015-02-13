@@ -1,6 +1,6 @@
-#include <BALL/VIEW/WIDGETS/gridColorWidget.h>
+#include <BALL_view/WIDGETS/gridColorWidget.h>
 
-#include <BALL/VIEW/DATATYPE/colorRGBA.h>
+#include <BALL_view/DATATYPE/colorRGBA.h>
 
 #include <QtGui/QDoubleValidator>
 

@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/lightSettings.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/DIALOGS/lightSettings.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QLineEdit> 

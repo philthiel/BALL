@@ -4,7 +4,7 @@
 
 // order of includes is important: first qapplication, than BALL includes
 #include <QtGui/QApplication>
-#include <BALL/CONFIG/config.h>
+#include <BALL_core/CONFIG/config.h>
 
 #ifdef BALL_HAS_GLEW
 #	include <GL/glew.h>
@@ -18,13 +18,13 @@
 #include <QtOpenGL/qgl.h>
 
 #include "mainframe.h"
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/directory.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/SYSTEM/fileSystem.h>
-#include <BALL/COMMON/logStream.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/directory.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
+#include <BALL_core/COMMON/logStream.h>
 
-#include <BALL/VIEW/KERNEL/UIOperationMode.h>
+#include <BALL_view/KERNEL/UIOperationMode.h>
 
 #include <iostream>
 

@@ -6,10 +6,10 @@
 #define BALL_VIEW_DIALOGS_SETCAMERA_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_setCamera.h>
+#include <BALL_view/UIC/ui_setCamera.h>
 
 #include <QtGui/QDialog>
 

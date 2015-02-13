@@ -8,11 +8,11 @@
 #define BALL_VIEW_MODELS_ATOMBONDMODELBASEPROCESSOR_H
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-#	include <BALL/VIEW/MODELS/modelProcessor.h>
+#	include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 namespace BALL
@@ -166,7 +166,7 @@ namespace BALL
 		};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/MODELS/atomBondModelBaseProcessor.iC>
+#		include <BALL_view/MODELS/atomBondModelBaseProcessor.iC>
 #	endif
 
 } } // namespaces

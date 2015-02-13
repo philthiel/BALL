@@ -6,15 +6,15 @@
 #define BALL_VIEW_DATATYPE_COLORUNITHUE_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORUNIT_H
-#	include <BALL/VIEW/DATATYPE/colorUnit.h>
+#	include <BALL_view/DATATYPE/colorUnit.h>
 #endif
 
 #include <iostream>
@@ -487,7 +487,7 @@ namespace BALL
 		};
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorUnitHue.iC>
+#			include <BALL_view/DATATYPE/colorUnitHue.iC>
 #		endif
   
 	} // namspace VIEW

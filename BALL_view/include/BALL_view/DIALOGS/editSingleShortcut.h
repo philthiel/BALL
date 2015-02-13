@@ -7,18 +7,18 @@
 #define BALL_VIEW_DIALOGS_EDITSINGLESHORTCUT_H
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_SHORTCUTREGISTRY_H
-# include <BALL/VIEW/KERNEL/shortcutRegistry.h>
+# include <BALL_view/KERNEL/shortcutRegistry.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_editSingleShortcut.h>
+#include <BALL_view/UIC/ui_editSingleShortcut.h>
 
 #include <QtGui/QDialog>
 

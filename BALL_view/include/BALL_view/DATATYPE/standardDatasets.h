@@ -6,31 +6,31 @@
 #define BALL_VIEW_DATATYPE_STANDARDDATASETS_H
 
 #ifndef BALL_VIEW_DATATYPE_DATASET_H
-# include <BALL/VIEW/DATATYPE/dataset.h>
+# include <BALL_view/DATATYPE/dataset.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/DATATYPE/regularData1D.h>
+# include <BALL_core/DATATYPE/regularData1D.h>
 #endif 
 
 #ifndef BALL_DATATYPE_REGULARDATA2D_H
-# include <BALL/DATATYPE/regularData2D.h>
+# include <BALL_core/DATATYPE/regularData2D.h>
 #endif 
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif 
 
 #ifndef BALL_VIEW_DATATYPE_RAYTRACEABLEGRID_H
-# include <BALL/VIEW/DATATYPE/raytraceableGrid.h>
+# include <BALL_view/DATATYPE/raytraceableGrid.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_RAYTRACEABLECONTOURSURFACEDIALOG_H
-# include <BALL/VIEW/DIALOGS/raytraceableContourSurfaceDialog.h>
+# include <BALL_view/DIALOGS/raytraceableContourSurfaceDialog.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #include <boost/shared_ptr.hpp>

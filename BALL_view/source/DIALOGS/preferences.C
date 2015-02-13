@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/preferences.h>
-#include <BALL/VIEW/KERNEL/preferencesEntry.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/WIDGETS/helpViewer.h>
-#include <BALL/FORMAT/INIFile.h>
+#include <BALL_view/DIALOGS/preferences.h>
+#include <BALL_view/KERNEL/preferencesEntry.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/WIDGETS/helpViewer.h>
+#include <BALL_core/FORMAT/INIFile.h>
 
 #include <QtGui/QStackedWidget>
 #include <QtGui/QTreeWidget>

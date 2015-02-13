@@ -2,21 +2,21 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/modelSettingsDialog.h>
+#include <BALL_view/DIALOGS/modelSettingsDialog.h>
 
 
-#include <BALL/VIEW/MODELS/backboneModel.h>
-#include <BALL/VIEW/MODELS/cartoonModel.h>
-#include <BALL/VIEW/MODELS/ballAndStickModel.h>
-#include <BALL/VIEW/MODELS/lineModel.h>
-#include <BALL/VIEW/MODELS/surfaceModel.h>
-#include <BALL/VIEW/MODELS/vanDerWaalsModel.h>
-#include <BALL/VIEW/MODELS/HBondModel.h>
-#include <BALL/VIEW/MODELS/forceModel.h>
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
+#include <BALL_view/MODELS/backboneModel.h>
+#include <BALL_view/MODELS/cartoonModel.h>
+#include <BALL_view/MODELS/ballAndStickModel.h>
+#include <BALL_view/MODELS/lineModel.h>
+#include <BALL_view/MODELS/surfaceModel.h>
+#include <BALL_view/MODELS/vanDerWaalsModel.h>
+#include <BALL_view/MODELS/HBondModel.h>
+#include <BALL_view/MODELS/forceModel.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
 
-#include <BALL/DATATYPE/string.h>
-#include <BALL/FORMAT/INIFile.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/FORMAT/INIFile.h>
 
 #include <QtGui/QSlider>
 #include <QtGui/QLabel>

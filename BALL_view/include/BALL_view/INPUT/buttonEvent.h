@@ -1,8 +1,8 @@
 #ifndef BUTTONEVENT_H
 #define BUTTONEVENT_H
 
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/INPUT/deviceEvent.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/INPUT/deviceEvent.h>
 
 #include <QtCore/QEvent>
 

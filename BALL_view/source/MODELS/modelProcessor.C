@@ -4,9 +4,9 @@
 // $Id: modelProcessor.C,v 1.13 2005/12/23 17:03:34 amoll Exp $
 //
 
-#include <BALL/VIEW/MODELS/modelProcessor.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/geometricObject.h>
+#include <BALL_view/MODELS/modelProcessor.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/geometricObject.h>
 
 using namespace std;
 

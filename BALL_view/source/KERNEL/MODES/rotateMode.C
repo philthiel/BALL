@@ -1,4 +1,4 @@
-#include <BALL/VIEW/KERNEL/MODES/rotateMode.h>
+#include <BALL_view/KERNEL/MODES/rotateMode.h>
 
 #define  ROTATE_FACTOR    50.
 #define  ROTATE_FACTOR2   50.
@@ -7,8 +7,8 @@
 #include <QtGui/QMouseEvent>
 #include <QtGui/QKeyEvent>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
 namespace BALL
 {

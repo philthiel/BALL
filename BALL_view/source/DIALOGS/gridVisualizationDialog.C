@@ -2,20 +2,20 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/gridVisualizationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/DATATYPE/colorMap.h>
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
-#include <BALL/VIEW/PRIMITIVES/gridVisualisation.h>
+#include <BALL_view/DIALOGS/gridVisualizationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/DATATYPE/colorMap.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
+#include <BALL_view/PRIMITIVES/gridVisualisation.h>
 
-#include <BALL/DATATYPE/regularData3D.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QSpinBox>

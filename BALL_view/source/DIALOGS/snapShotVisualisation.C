@@ -1,10 +1,10 @@
-#include <BALL/VIEW/DIALOGS/snapShotVisualisation.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/FORMAT/trajectoryFile.h>
-#include <BALL/SYSTEM/systemCalls.h>
+#include <BALL_view/DIALOGS/snapShotVisualisation.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/SYSTEM/systemCalls.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QCheckBox>

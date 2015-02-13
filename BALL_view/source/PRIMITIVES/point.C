@@ -3,7 +3,7 @@
 //
 // $Id: point.C,v 1.4.28.1 2007-03-25 22:02:35 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/point.h>
 
 using namespace std;
 

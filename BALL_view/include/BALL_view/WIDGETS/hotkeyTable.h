@@ -2,15 +2,15 @@
 #define BALL_VIEW_WIDGETS_HOTKEY_TABLE_H
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_PYWIDGET_H
-# include <BALL/VIEW/WIDGETS/pyWidget.h>
+# include <BALL_view/WIDGETS/pyWidget.h>
 #endif
 
 #include <QtGui/QTableWidget>

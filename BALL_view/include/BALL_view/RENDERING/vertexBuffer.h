@@ -8,15 +8,15 @@
 #define BALL_VIEW_RENDERING_RENDERERS_VERTEXBUFFER_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-#	include <BALL/VIEW/KERNEL/common.h>
+#	include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-#	include <BALL/VIEW/DATATYPE/colorRGBA.h>
+#	include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 namespace BALL

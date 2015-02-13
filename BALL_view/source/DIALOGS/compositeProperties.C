@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 //
-#include <BALL/VIEW/DIALOGS/compositeProperties.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/VIEW/WIDGETS/propertyEditor.h>
+#include <BALL_view/DIALOGS/compositeProperties.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_view/WIDGETS/propertyEditor.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>

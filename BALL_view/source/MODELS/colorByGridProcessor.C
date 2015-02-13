@@ -1,10 +1,10 @@
-#include <BALL/VIEW/MODELS/colorByGridProcessor.h>
+#include <BALL_view/MODELS/colorByGridProcessor.h>
 
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
 
-#include <BALL/VIEW/WIDGETS/gridColorWidget.h>
+#include <BALL_view/WIDGETS/gridColorWidget.h>
 
 namespace BALL
 {

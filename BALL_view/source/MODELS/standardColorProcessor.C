@@ -4,17 +4,17 @@
 // $Id: standardColorProcessor.C,v 1.56.18.1 2007/03/25 22:02:31 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/DATATYPE/colorExtensions.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/secondaryStructure.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/DATATYPE/colorExtensions.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/chain.h>
+#include <BALL_core/KERNEL/protein.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/secondaryStructure.h>
 
 namespace BALL
 {
@@ -1192,7 +1192,7 @@ namespace BALL
 
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/MODELS/standardColorProcessor.iC>
+#		include <BALL_view/MODELS/standardColorProcessor.iC>
 #	endif
 
 	} // namespace VIEW

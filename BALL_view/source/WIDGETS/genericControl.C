@@ -4,9 +4,9 @@
 // $Id: genericControl.C,v 1.17.16.1 2007/03/25 21:56:47 oliver Exp $
 //
 
-#include <BALL/VIEW/WIDGETS/genericControl.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/genericControl.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
 namespace BALL
 {

@@ -4,8 +4,8 @@
 // $Id: mainControlPreferences.C,v 1.16.16.1 2007/03/25 22:02:03 oliver Exp $
 //
 
-#include <BALL/VIEW/DIALOGS/mainControlPreferences.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/mainControlPreferences.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtCore/QDir>
 
@@ -13,7 +13,7 @@
 #include <QtGui/QStyleFactory>
 #include <QtGui/QFontDialog>
 
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/path.h>
 
 namespace BALL
 {

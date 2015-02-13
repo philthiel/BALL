@@ -6,23 +6,23 @@
 #define BALL_VIEW_RENDERING_RENDERERS_XML3DRENDERER_H
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+# include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-# include <BALL/MATHS/matrix44.h>
+# include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_MATHS_SURFACE_H
-# include <BALL/MATHS/surface.h>
+# include <BALL_core/MATHS/surface.h>
 #endif
 
 namespace BALL

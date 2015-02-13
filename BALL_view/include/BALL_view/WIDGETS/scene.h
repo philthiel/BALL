@@ -6,39 +6,39 @@
 #define BALL_VIEW_WIDGETS_SCENE_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERERSGLRENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
+# include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/renderWindow.h>
+# include <BALL_view/RENDERING/renderWindow.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_GLRENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/glRenderWindow.h>
+# include <BALL_view/RENDERING/glRenderWindow.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERSETUP_H
-# include <BALL/VIEW/RENDERING/renderSetup.h>
+# include <BALL_view/RENDERING/renderSetup.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_EDITSETTINGS_H
-# include <BALL/VIEW/DIALOGS/editSettings.h>
+# include <BALL_view/DIALOGS/editSettings.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_EDITOPERATION_H
-# include <BALL/VIEW/KERNEL/editOperation.h>
+# include <BALL_view/KERNEL/editOperation.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODES_INTERACTIONMODEMANAGER_H
-# include <BALL/VIEW/KERNEL/MODES/interactionModeManager.h>
+# include <BALL_view/KERNEL/MODES/interactionModeManager.h>
 #endif
 
 #include <QtCore/QThread>
@@ -54,7 +54,7 @@
 #ifdef BALL_HAS_RTFACT
 
 #ifndef BALL_VIEW_RENDERING_RAYTRACINGRENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/raytracingRenderer.h>
+# include <BALL_view/RENDERING/RENDERERS/raytracingRenderer.h>
 #endif
 
 #endif // BALL_HAS_RTFACT

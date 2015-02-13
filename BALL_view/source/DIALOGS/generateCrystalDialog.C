@@ -1,13 +1,13 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/VIEW/DIALOGS/generateCrystalDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/threads.h>
-#include <BALL/XRAY/crystalInfo.h>
+#include <BALL_view/DIALOGS/generateCrystalDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/FORMAT/parameters.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/threads.h>
+#include <BALL_core/XRAY/crystalInfo.h>
 
 #include <QComboBox>
 

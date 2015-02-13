@@ -1,6 +1,6 @@
-#include <BALL/VIEW/KERNEL/stage.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL_view/KERNEL/stage.h>
+#include <BALL_core/MATHS/plane3.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
 
 using std::endl;
 

@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/networkPreferences.h>
-#include <BALL/VIEW/DIALOGS/downloadPDBFile.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/DIALOGS/networkPreferences.h>
+#include <BALL_view/DIALOGS/downloadPDBFile.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
 #include <QtGui/QCheckBox>
 #include <QtGui/QLineEdit>

@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/RENDERING/pixelFormat.h>
+#include <BALL_view/RENDERING/pixelFormat.h>
 
 namespace BALL 
 {

@@ -4,7 +4,7 @@
 // $Id: tube.C,v 1.7.16.1 2007-03-25 22:02:36 oliver Exp $
 //
 
-#include <BALL/VIEW/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/tube.h>
 
 using namespace std;
 

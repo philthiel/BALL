@@ -6,38 +6,38 @@
 #define BALL_VIEW_DIALOGS_MODIFYSURFACEDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_VIEW_PRIMITIVES_MESH_H
-# include <BALL/VIEW/PRIMITIVES/mesh.h>
+# include <BALL_view/PRIMITIVES/mesh.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_REPRESENTATION_H
-# include <BALL/VIEW/KERNEL/representation.h>
+# include <BALL_view/KERNEL/representation.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif 
 
 #ifndef BALL_DATATYPE_HASHGRID_H
-# include <BALL/DATATYPE/hashGrid.h>
+# include <BALL_core/DATATYPE/hashGrid.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOG_MATERIALSETTINGS_H
-# include <BALL/VIEW/DIALOGS/materialSettings.h>
+# include <BALL_view/DIALOGS/materialSettings.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_modifyRepresentationDialog.h>
+#include <BALL_view/UIC/ui_modifyRepresentationDialog.h>
 
 namespace BALL
 {

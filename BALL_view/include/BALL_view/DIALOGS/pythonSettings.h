@@ -6,18 +6,18 @@
 #define BALL_VIEW_DIALOGS_PYTHONSETTINGS_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_PYWIDGET_H
-# include <BALL/VIEW/WIDGETS/pyWidget.h>
+# include <BALL_view/WIDGETS/pyWidget.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_pythonSettings.h>
+#include <BALL_view/UIC/ui_pythonSettings.h>
 
 #include <QtGui/QWidget>
 #include <QtGui/QFont>

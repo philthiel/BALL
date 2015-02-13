@@ -3,15 +3,15 @@
 //
 // $Id: vertexBuffer.C,v 1.6.16.1 2007/03/25 21:57:02 oliver Exp $
 
-#include <BALL/CONFIG/config.h>
+#include <BALL_core/CONFIG/config.h>
 
 #ifdef BALL_HAS_GLEW
 #include <GL/glew.h>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
-#include <BALL/VIEW/RENDERING/vertexBuffer.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
+#include <BALL_view/RENDERING/vertexBuffer.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/KERNEL/common.h>
 
 namespace BALL
 {

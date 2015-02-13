@@ -4,14 +4,14 @@
 // $Id: backboneModel.C,v 1.25.18.2 2007/08/19 14:23:37 anhi Exp $
 //
 
-#include <BALL/VIEW/MODELS/backboneModel.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/MODELS/backboneModel.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_view/KERNEL/common.h>
 
 using namespace std;
 

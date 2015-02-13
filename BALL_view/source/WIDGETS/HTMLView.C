@@ -1,4 +1,4 @@
-#include <BALL/VIEW/WIDGETS/HTMLView.h>
+#include <BALL_view/WIDGETS/HTMLView.h>
 
 namespace BALL
 {

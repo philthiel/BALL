@@ -6,18 +6,18 @@
 #define BALL_VIEW_DIALOGS_RUNGAMESSDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_SYSTEM_PATH_H
-# include <BALL/SYSTEM/path.h>
+# include <BALL_core/SYSTEM/path.h>
 #endif
 
 #ifndef BALL_FORMAT_GAMESSDATFILE_H
-# include <BALL/FORMAT/GAMESSDatFile.h>
+# include <BALL_core/FORMAT/GAMESSDatFile.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_runGAMESSDialog.h>
+#include <BALL_view/UIC/ui_runGAMESSDialog.h>
 
 namespace BALL
 {

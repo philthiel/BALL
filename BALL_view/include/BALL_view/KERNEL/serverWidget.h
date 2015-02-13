@@ -6,27 +6,27 @@
 #define BALL_VIEW_KERNEL_SERVERWIDGET_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-#	include <BALL/VIEW/KERNEL/modularWidget.h>
+#	include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_CONCEPT_OBJECTCREATOR_H
-# include <BALL/CONCEPT/objectCreator.h>
+# include <BALL_core/CONCEPT/objectCreator.h>
 #endif
 
 #ifndef BALL_SYSTEM_NETWORKING_H
-# include <BALL/SYSTEM/networking.h>
+# include <BALL_core/SYSTEM/networking.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_THREADS_H
-# include <BALL/VIEW/KERNEL/threads.h>
+# include <BALL_view/KERNEL/threads.h>
 #endif
 
 #include <QtCore/QTimer>
@@ -324,7 +324,7 @@ namespace BALL
 
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/KERNEL/serverWidget.iC>
+#			include <BALL_view/KERNEL/serverWidget.iC>
 #		endif
   
 	}// namespace VIEW

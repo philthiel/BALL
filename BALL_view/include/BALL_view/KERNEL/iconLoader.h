@@ -3,7 +3,7 @@
 
 #include <list>
 #include <boost/shared_ptr.hpp>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL_core/DATATYPE/hashMap.h>
 
 #include <QtCore/QMutex>
 #include <QtCore/QReadWriteLock>

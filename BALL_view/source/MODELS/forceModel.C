@@ -4,10 +4,10 @@
 // $Id: forceModel.C,v 1.11.18.1 2007/03/25 22:02:31 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/forceModel.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/MODELS/forceModel.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/KERNEL/common.h>
 
 using namespace std;
 

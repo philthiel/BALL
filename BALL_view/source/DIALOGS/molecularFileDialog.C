@@ -2,20 +2,20 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/molecularFileDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/DIALOGS/molecularFileDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/antechamberFile.h>
-#include <BALL/FORMAT/XYZFile.h>
-#include <BALL/MATHS/simpleBox3.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/FORMAT/HINFile.h>
+#include <BALL_core/FORMAT/MOLFile.h>
+#include <BALL_core/FORMAT/MOL2File.h>
+#include <BALL_core/FORMAT/SDFile.h>
+#include <BALL_core/FORMAT/antechamberFile.h>
+#include <BALL_core/FORMAT/XYZFile.h>
+#include <BALL_core/MATHS/simpleBox3.h>
+#include <BALL_core/KERNEL/system.h>
 
 #include <QtGui/QMenuBar>
 #include <QtGui/QFileDialog>

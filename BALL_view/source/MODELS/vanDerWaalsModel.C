@@ -4,10 +4,10 @@
 // $Id: vanDerWaalsModel.C,v 1.10 2005/12/23 17:03:35 amoll Exp $
 //
 
-#include <BALL/VIEW/MODELS/vanDerWaalsModel.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_view/MODELS/vanDerWaalsModel.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace std;
 

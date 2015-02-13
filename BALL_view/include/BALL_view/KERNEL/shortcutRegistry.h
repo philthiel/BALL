@@ -6,17 +6,17 @@
 #define BALL_VIEW_KERNEL_SHORTCUTREGISTRY_H
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-# include <BALL/CONCEPT/embeddable.h>
+# include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 #include <map>
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY_H
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #include <QtCore/QObject>

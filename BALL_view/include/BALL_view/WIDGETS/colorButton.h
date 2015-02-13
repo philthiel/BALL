@@ -2,7 +2,7 @@
 #define BALL_VIEW_WIDGETS_COLORBUTTON_H
 
 #ifndef BALL_COMMON_GLOBAL_
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #include <QtGui/QPushButton>

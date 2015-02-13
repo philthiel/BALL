@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/downloadPDBFile.h>
+#include <BALL_view/DIALOGS/downloadPDBFile.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
 #include <fstream>
 #include <iostream>

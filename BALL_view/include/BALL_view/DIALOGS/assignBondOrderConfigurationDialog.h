@@ -7,18 +7,18 @@
 #define BALL_VIEW_DIALOGS_ASSIGNBONDORDERCONFIGURATIONDIALOG_H
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
-# include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+# include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_assignBondOrderConfigurationDialog.h>
+#include <BALL_view/UIC/ui_assignBondOrderConfigurationDialog.h>
 
 namespace BALL
 {

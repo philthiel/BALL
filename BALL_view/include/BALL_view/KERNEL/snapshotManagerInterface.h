@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_KERNEL_SNAPSHOT_MANAGER_INTERFACE_H
 #define BALL_VIEW_KERNEL_SNAPSHOT_MANAGER_INTERFACE_H
 
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
 
 #include <vector>
 #include <deque>

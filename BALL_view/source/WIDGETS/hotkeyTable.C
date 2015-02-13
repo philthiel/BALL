@@ -1,4 +1,4 @@
-#include <BALL/VIEW/WIDGETS/hotkeyTable.h>
+#include <BALL_view/WIDGETS/hotkeyTable.h>
 
 namespace BALL
 {

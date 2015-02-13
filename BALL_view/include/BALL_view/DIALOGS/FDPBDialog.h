@@ -5,34 +5,34 @@
 #define BALL_VIEW_DIALOGS_FDPBDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_SOLVATION_POISSONBOLTZMANN_H
-# include <BALL/SOLVATION/poissonBoltzmann.h>
+# include <BALL_core/SOLVATION/poissonBoltzmann.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_RADIUSRULEPROCESSOR_H
-# include <BALL/MOLMEC/COMMON/radiusRuleProcessor.h>
+# include <BALL_core/MOLMEC/COMMON/radiusRuleProcessor.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
-# include <BALL/MOLMEC/COMMON/chargeRuleProcessor.h>
+# include <BALL_core/MOLMEC/COMMON/chargeRuleProcessor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_DEFAULTPROCESSORS_H
-# include <BALL/STRUCTURE/defaultProcessors.h>
+# include <BALL_core/STRUCTURE/defaultProcessors.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_FDPBDialog.h>
+#include <BALL_view/UIC/ui_FDPBDialog.h>
 
 class QLineEdit;
 

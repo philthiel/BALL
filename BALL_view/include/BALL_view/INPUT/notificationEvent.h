@@ -3,7 +3,7 @@
 
 #include <QtCore/QEvent>
 
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/KERNEL/message.h>
 
 namespace BALL
 {

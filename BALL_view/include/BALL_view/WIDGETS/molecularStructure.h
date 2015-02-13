@@ -6,55 +6,55 @@
 #define BALL_VIEW_WIDGETS_MOLECULARSTRUCTURE_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
- #include <BALL/MATHS/vector3.h>
+ #include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_AMBERCONFIGURATIONDIALOG_H
- #include <BALL/VIEW/DIALOGS/amberConfigurationDialog.h>
+ #include <BALL_view/DIALOGS/amberConfigurationDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_MINIMIZATIONDIALOG_H
-# include <BALL/VIEW/DIALOGS/minimizationDialog.h>
+# include <BALL_view/DIALOGS/minimizationDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_MOLECULARDYNAMICSDIALOG_H
-# include <BALL/VIEW/DIALOGS/molecularDynamicsDialog.h>
+# include <BALL_view/DIALOGS/molecularDynamicsDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_CHARMMCONFIGURATIONDIALOG_H
-# include <BALL/VIEW/DIALOGS/charmmConfigurationDialog.h>
+# include <BALL_view/DIALOGS/charmmConfigurationDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_MMFF94CONFIGURATIONDIALOG_H
-# include <BALL/VIEW/DIALOGS/MMFF94ConfigurationDialog.h>
+# include <BALL_view/DIALOGS/MMFF94ConfigurationDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_ASSIGNBONDORDERCONFIGURATIONDIALOG_H
-# include <BALL/VIEW/DIALOGS/assignBondOrderConfigurationDialog.h>
+# include <BALL_view/DIALOGS/assignBondOrderConfigurationDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_ASSIGNBONDORDERRESULTSDIALOG_H
-# include <BALL/VIEW/DIALOGS/assignBondOrderResultsDialog.h>
+# include <BALL_view/DIALOGS/assignBondOrderResultsDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_GENERaTECRYSTALDIALOG_H
-# include <BALL/VIEW/DIALOGS/generateCrystalDialog.h>
+# include <BALL_view/DIALOGS/generateCrystalDialog.h>
 #endif
 
 #ifndef BALL_MOLMEC_AMBER_AMBER_H
-# include <BALL/MOLMEC/AMBER/amber.h>
+# include <BALL_core/MOLMEC/AMBER/amber.h>
 #endif
 
 #ifndef BALL_MOLMEC_CHARMM_CHARMM_H
-# include <BALL/MOLMEC/CHARMM/charmm.h>
+# include <BALL_core/MOLMEC/CHARMM/charmm.h>
 #endif
 
 #ifndef BALL_MOLMEC_MMFF94_MMFF94
-# include <BALL/MOLMEC/MMFF94/MMFF94.h>
+# include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
 #endif
 
 

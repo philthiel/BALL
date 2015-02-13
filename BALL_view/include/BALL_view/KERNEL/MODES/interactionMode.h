@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_KERNEL_MODES_INTERACTIONMODE_H
 #define BALL_VIEW_KERNEL_MODES_INTERACTIONMODE_H
 
-#include <BALL/COMMON/global.h>
+#include <BALL_core/COMMON/global.h>
 
 #include <QtCore/QPoint>
 #include <QtCore/QSize>

@@ -6,47 +6,47 @@
 #define BALL_VIEW_KERNEL_MAINCONTROL_H
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-#	include <BALL/CONCEPT/embeddable.h>
+#	include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
+#	include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_CONNECTIONOBJECT_H
-#	include <BALL/VIEW/KERNEL/connectionObject.h>
+#	include <BALL_view/KERNEL/connectionObject.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_REPRESENTATIONMANAGER_H
-#	include <BALL/VIEW/KERNEL/representationManager.h>
+#	include <BALL_view/KERNEL/representationManager.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMPOSITEMANAGER_H
-#	include <BALL/VIEW/KERNEL/compositeManager.h>
+#	include <BALL_view/KERNEL/compositeManager.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_SHORTCUTREGISTRY_H
-#include <BALL/VIEW/KERNEL/shortcutRegistry.h>
+#include <BALL_view/KERNEL/shortcutRegistry.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_UIOPERATIONMODE_H
-#include <BALL/VIEW/KERNEL/UIOperationMode.h>
+#include <BALL_view/KERNEL/UIOperationMode.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_UIOPERATIONMODE_H
-#include <BALL/VIEW/KERNEL/shortcutRegistry.h>
+#include <BALL_view/KERNEL/shortcutRegistry.h>
 #endif
 
 #ifndef BALL_FORMAT_INIFILE_H
-# include <BALL/FORMAT/INIFile.h>
+# include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_STRUCTURE_FRAGMENTDB_H
-# include <BALL/STRUCTURE/fragmentDB.h>
+# include <BALL_core/STRUCTURE/fragmentDB.h>
 #endif
 
 #include <QtGui/QKeySequence>
@@ -965,7 +965,7 @@ namespace BALL
 };
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/KERNEL/mainControl.iC>
+#			include <BALL_view/KERNEL/mainControl.iC>
 #		endif 
     
 		}	// namespace VIEW

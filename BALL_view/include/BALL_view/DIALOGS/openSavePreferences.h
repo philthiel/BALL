@@ -2,10 +2,10 @@
 #define BALL_VIEW_DIALOGS_OPENSAVEPREFERENCES_H
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_openSavePreferences.h>
+#include <BALL_view/UIC/ui_openSavePreferences.h>
 
 #include <QtGui/QWidget>
 

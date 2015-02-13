@@ -5,30 +5,30 @@
 #include "demoTutorialDialog.h"
 #include "mainframe.h"
 
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/KERNEL/message.h>
 
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
-#include <BALL/VIEW/DIALOGS/FDPBDialog.h>
-#include <BALL/VIEW/DIALOGS/modifyRepresentationDialog.h>
-#include <BALL/VIEW/DIALOGS/molecularFileDialog.h>
-#include <BALL/VIEW/DIALOGS/lightSettings.h>
-#include <BALL/VIEW/DIALOGS/stageSettings.h>
+#include <BALL_view/DIALOGS/displayProperties.h>
+#include <BALL_view/DIALOGS/FDPBDialog.h>
+#include <BALL_view/DIALOGS/modifyRepresentationDialog.h>
+#include <BALL_view/DIALOGS/molecularFileDialog.h>
+#include <BALL_view/DIALOGS/lightSettings.h>
+#include <BALL_view/DIALOGS/stageSettings.h>
 
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
-#include <BALL/DATATYPE/contourSurface.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+#include <BALL_core/DATATYPE/contourSurface.h>
 
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/WIDGETS/logView.h>
-#include <BALL/VIEW/WIDGETS/pyWidget.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/WIDGETS/molecularControl.h>
-#include <BALL/VIEW/WIDGETS/geometricControl.h>
-#include <BALL/VIEW/WIDGETS/helpViewer.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/logView.h>
+#include <BALL_view/WIDGETS/pyWidget.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/WIDGETS/molecularControl.h>
+#include <BALL_view/WIDGETS/geometricControl.h>
+#include <BALL_view/WIDGETS/helpViewer.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QMessageBox>

@@ -4,11 +4,11 @@
 // $Id: label.C,v 1.10.16.1 2007-03-25 22:02:34 oliver Exp $
 //
 
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 using namespace std;
 

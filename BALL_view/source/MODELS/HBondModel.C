@@ -4,11 +4,11 @@
 // $Id: HBondModel.C,v 1.12 2005/12/23 17:03:33 amoll Exp $
 //
 
-#include <BALL/VIEW/MODELS/HBondModel.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
+#include <BALL_view/MODELS/HBondModel.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/disc.h>
 
 using namespace std;
 

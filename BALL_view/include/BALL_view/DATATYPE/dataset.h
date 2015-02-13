@@ -6,23 +6,23 @@
 #define BALL_VIEW_DATATYPE_DATASET_H
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-#	include <BALL/CONCEPT/embeddable.h>
+#	include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_UIOPERATIONMODE_H
-# include <BALL/VIEW/KERNEL/UIOperationMode.h>
+# include <BALL_view/KERNEL/UIOperationMode.h>
 #endif
 
 #include <QtGui/QMenu>

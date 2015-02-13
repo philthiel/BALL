@@ -6,11 +6,11 @@
 #define BALL_VIEW_KERNEL_MESSAGE_H
 
 #ifndef BALL_VIEW_KERNEL_STAGE_H
-#	include <BALL/VIEW/KERNEL/stage.h>
+#	include <BALL_view/KERNEL/stage.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #include <boost/any.hpp>
@@ -877,7 +877,7 @@ class BALL_VIEW_EXPORT DockingFinishedMessage
 //@}
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/KERNEL/message.iC>
+#		include <BALL_view/KERNEL/message.iC>
 #	endif
   			
 } } // namespaces

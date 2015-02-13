@@ -4,10 +4,10 @@
 // $Id: glDisplayList.C,v 1.7.16.1 2007/03/25 21:57:01 oliver Exp $
 //
 
-#include <BALL/VIEW/RENDERING/glDisplayList.h>
-#include <BALL/COMMON/exception.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_view/RENDERING/glDisplayList.h>
+#include <BALL_core/COMMON/exception.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/COMMON/rtti.h>
 
 using namespace std;
 
@@ -157,7 +157,7 @@ namespace BALL
 		}
 
 		#	ifdef BALL_NO_INLINE_FUNCTIONS
-		#		include <BALL/VIEW/RENDERING/glDisplayList.iC>
+		#		include <BALL_view/RENDERING/glDisplayList.iC>
 		#	endif
 
 	} // namespace VIEW

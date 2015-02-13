@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/molecularDynamicsDialog.h>
-#include <BALL/VIEW/DIALOGS/amberConfigurationDialog.h>
-#include <BALL/VIEW/DIALOGS/charmmConfigurationDialog.h>
-#include <BALL/VIEW/DIALOGS/MMFF94ConfigurationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/molecularDynamicsDialog.h>
+#include <BALL_view/DIALOGS/amberConfigurationDialog.h>
+#include <BALL_view/DIALOGS/charmmConfigurationDialog.h>
+#include <BALL_view/DIALOGS/MMFF94ConfigurationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QLineEdit>

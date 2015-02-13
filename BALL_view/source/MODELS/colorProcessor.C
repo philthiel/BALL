@@ -4,15 +4,15 @@
 // $Id: colorProcessor.C,v 1.38.18.1 2007/03/25 22:02:30 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/colorProcessor.h>
+#include <BALL_view/MODELS/colorProcessor.h>
 
-#include <BALL/VIEW/DATATYPE/colorExtensions.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_view/DATATYPE/colorExtensions.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
 using namespace std;
 

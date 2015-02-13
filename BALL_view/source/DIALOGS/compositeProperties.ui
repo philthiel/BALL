@@ -512,12 +512,12 @@
   <customwidget>
    <class>BALL::VIEW::PropertyEditor</class>
    <extends>QWidget</extends>
-   <header location="global">BALL/VIEW/WIDGETS/propertyEditor.h</header>
+   <header location="global">BALL_view/WIDGETS/propertyEditor.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global">BALL/COMMON/global.h</include>
+  <include location="global">BALL_core/COMMON/global.h</include>
  </includes>
  <resources/>
  <connections>

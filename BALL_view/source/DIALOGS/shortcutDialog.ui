@@ -182,7 +182,7 @@
   <customwidget>
    <class>BALL::VIEW::ShortcutTableView</class>
    <extends>QTableView</extends>
-   <header>BALL/VIEW/WIDGETS/shortcutTableView.h</header>
+   <header>BALL_view/WIDGETS/shortcutTableView.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -194,7 +194,7 @@
   <tabstop>predefined_combo_box</tabstop>
  </tabstops>
  <includes>
-  <include location="global">BALL/COMMON/global.h</include>
+  <include location="global">BALL_core/COMMON/global.h</include>
  </includes>
  <resources/>
  <connections>

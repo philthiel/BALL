@@ -2,7 +2,7 @@
 #define BALL_VIEW_PLUGIN_INPUTDEVPLUGINHANDLER_H
 
 #ifndef BALL_PLUGIN_PLUGINHANDLER_H
-# include <BALL/PLUGIN/pluginHandler.h>
+# include <BALL_core/PLUGIN/pluginHandler.h>
 #endif
 
 namespace BALL

@@ -6,22 +6,22 @@
 #define BALL_VIEW_DIALOGS_LABELDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_FORMAT_INIFILE_H
-#	include <BALL/FORMAT/INIFile.h>
+#	include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MESSAGE_H
-# include <BALL/VIEW/KERNEL/message.h>
+# include <BALL_view/KERNEL/message.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_labelDialog.h>
+#include <BALL_view/UIC/ui_labelDialog.h>
 
 #include <QtGui/QFont>
 

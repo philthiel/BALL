@@ -8,7 +8,7 @@
 #define BALL_VIEW_MODELS_CARTOONMODEL_H
 
 #ifndef BALL_VIEW_MODELS_BACKBONEMODEL_H
-#	include <BALL/VIEW/MODELS/backboneModel.h>
+#	include <BALL_view/MODELS/backboneModel.h>
 #endif
 
 namespace BALL

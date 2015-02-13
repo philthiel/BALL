@@ -1,5 +1,5 @@
-#include <BALL/VIEW/WIDGETS/colorButton.h>
-#include <BALL/VIEW/DATATYPE/colorRGBA.h>
+#include <BALL_view/WIDGETS/colorButton.h>
+#include <BALL_view/DATATYPE/colorRGBA.h>
 
 #include <QtGui/QPaintEvent>
 #include <QtGui/QColorDialog>

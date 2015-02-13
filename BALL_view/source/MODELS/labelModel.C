@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/MODELS/labelModel.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL_view/MODELS/labelModel.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/residue.h>
 
 using namespace std;
 

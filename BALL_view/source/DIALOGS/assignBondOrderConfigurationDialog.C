@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/assignBondOrderConfigurationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/assignBondOrderConfigurationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/SYSTEM/path.h>
 
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
 #include <QtGui/QLineEdit>
 #include <QtGui/QRadioButton>
 #include <QtGui/QCheckBox>

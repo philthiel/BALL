@@ -6,18 +6,18 @@
 #define BALL_VIEW_DIALOGS_GEOMETRICFITDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-#include <BALL/DATATYPE/options.h>
+#include <BALL_core/DATATYPE/options.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_geometricFitDialog.h>
+#include <BALL_view/UIC/ui_geometricFitDialog.h>
 
 namespace BALL
 {

@@ -7,14 +7,14 @@
 #define BALL_DEMOTUTORIALDIALOG_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_PRIMITIV_MESH_H
-# include <BALL/VIEW/PRIMITIVES/mesh.h>
+# include <BALL_view/PRIMITIVES/mesh.h>
 #endif
 
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 
 #include "ui_demoTutorialDialog.h"
 

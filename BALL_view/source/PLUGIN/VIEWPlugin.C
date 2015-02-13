@@ -1,1 +1,1 @@
-#include <BALL/VIEW/PLUGIN/VIEWPlugin.h>
+#include <BALL_view/PLUGIN/VIEWPlugin.h>

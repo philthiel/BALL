@@ -484,7 +484,7 @@
   <customwidget>
    <class>BALL::VIEW::ColorButton</class>
    <extends>QPushButton</extends>
-   <header location="global">BALL/VIEW/WIDGETS/colorButton.h</header>
+   <header location="global">BALL_view/WIDGETS/colorButton.h</header>
    <slots>
     <signal>colorChanged(QColor)</signal>
    </slots>
@@ -504,7 +504,7 @@
   <tabstop>coloring_options</tabstop>
  </tabstops>
  <includes>
-  <include location="global">BALL/COMMON/global.h</include>
+  <include location="global">BALL_core/COMMON/global.h</include>
  </includes>
  <resources/>
  <connections>

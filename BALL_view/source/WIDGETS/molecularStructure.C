@@ -2,40 +2,40 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/DIALOGS/peptideDialog.h>
-#include <BALL/VIEW/DIALOGS/generateCrystalDialog.h>
-#include <BALL/VIEW/DIALOGS/FDPBDialog.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/DIALOGS/peptideDialog.h>
+#include <BALL_view/DIALOGS/generateCrystalDialog.h>
+#include <BALL_view/DIALOGS/FDPBDialog.h>
 
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
-#include <BALL/STRUCTURE/residueChecker.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/peptideCapProcessor.h>
-#include <BALL/STRUCTURE/secondaryStructureProcessor.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/STRUCTURE/HBondProcessor.h>
+#include <BALL_core/STRUCTURE/residueChecker.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/peptideCapProcessor.h>
+#include <BALL_core/STRUCTURE/secondaryStructureProcessor.h>
+#include <BALL_core/STRUCTURE/structureMapper.h>
+#include <BALL_core/STRUCTURE/HBondProcessor.h>
 
-#include <BALL/FORMAT/trajectoryFileFactory.h>
-#include <BALL/FORMAT/trajectoryFile.h>
-#include <BALL/FORMAT/DCDFile.h>
+#include <BALL_core/FORMAT/trajectoryFileFactory.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/DCDFile.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SYSTEM/directory.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/SYSTEM/directory.h>
 
-#include <BALL/MOLMEC/MINIMIZATION/conjugateGradient.h>
-#include <BALL/MOLMEC/MINIMIZATION/steepestDescent.h>
-#include <BALL/MOLMEC/MINIMIZATION/strangLBFGS.h>
-#include <BALL/MOLMEC/MINIMIZATION/shiftedLVMM.h>
-#include <BALL/MOLMEC/MDSIMULATION/microCanonicalMD.h>
-#include <BALL/MOLMEC/MDSIMULATION/canonicalMD.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/conjugateGradient.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/steepestDescent.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/strangLBFGS.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/shiftedLVMM.h>
+#include <BALL_core/MOLMEC/MDSIMULATION/microCanonicalMD.h>
+#include <BALL_core/MOLMEC/MDSIMULATION/canonicalMD.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
 
-#include <BALL/VIEW/KERNEL/threads.h>
+#include <BALL_view/KERNEL/threads.h>
 
 #include <QtCore/QDir>
 #include <QtGui/QMenuBar>

@@ -8,11 +8,11 @@
 #define BALL_VIEW_PRIMITIV_SIMPLEBOX_H
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-# include <BALL/VIEW/KERNEL/geometricObject.h>
+# include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/MATHS/simpleBox3.h>
+#	include <BALL_core/MATHS/simpleBox3.h>
 #endif
 
 namespace BALL

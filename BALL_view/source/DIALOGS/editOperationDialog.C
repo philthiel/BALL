@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/editOperationDialog.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/DIALOGS/editOperationDialog.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 #include <QtGui/QToolTip>
 #include <QtGui/QButtonGroup>

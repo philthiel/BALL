@@ -6,15 +6,15 @@
 #define BALL_VIEW_WIDGETS_MODULARWIDGET_H
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-#	include <BALL/CONCEPT/embeddable.h>
+#	include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_CONNECTIONOBJECT_H
-# include <BALL/VIEW/KERNEL/connectionObject.h>
+# include <BALL_view/KERNEL/connectionObject.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_UIOPERATIONMODE_H
-# include <BALL/VIEW/KERNEL/UIOperationMode.h>
+# include <BALL_view/KERNEL/UIOperationMode.h>
 #endif
 
 #include <QtGui/QKeySequence>

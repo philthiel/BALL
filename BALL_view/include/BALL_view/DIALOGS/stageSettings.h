@@ -6,26 +6,26 @@
 #define BALL_VIEW_DIALOGS_STAGESETTINGS_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_MATH_VECTOR3
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERSETUP_H
-# include <BALL/VIEW/RENDERING/renderSetup.h>
+# include <BALL_view/RENDERING/renderSetup.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+# include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_stageSettings.h>
+#include <BALL_view/UIC/ui_stageSettings.h>
 
 #include <QtGui/QWidget>
 

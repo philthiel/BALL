@@ -1,6 +1,55 @@
-PROJECT(BALLView)
+# -----------------------------------------------------------------------------
+#   BALL - Biochemical ALgorithms Library
+#   A C++ framework for molecular modeling and structural bioinformatics.
+# -----------------------------------------------------------------------------
+#
+# Copyright (C) The BALL Team:
+#  - Eberhard Karls University, Tuebingen
+#  - Saarland University, Saarbrücken
+#
+# This file is part of BALL.
+#
+# BALL is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published
+# by the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
+#
+# BALL is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with BALL. If not, see <http://www.gnu.org/licenses/>.
+#
+# -----------------------------------------------------------------------------
+# $Maintainer: $
+# $Authors: Andreas Moll, Philipp Thiel, others $
+# -----------------------------------------------------------------------------
 
-### list all filenames of the directory here ###
+
+PROJECT("BALLView")
+
+
+###############################################################################
+###    Upstream include directories                                         ###
+###############################################################################
+
+# BALLView include directory for configured files
+INCLUDE_DIRECTORIES(${PROJECT_BINARY_DIR})
+
+# BALL_core include directories
+INCLUDE_DIRECTORIES(${BALL_core_INCLUDE_DIRS})
+
+# BALL_view include directories
+INCLUDE_DIRECTORIES(${BALL_view_INCLUDE_DIRS})
+
+
+###############################################################################
+###    Set BALLView sources                                                 ###
+###############################################################################
+
+# List all filenames of the directory here ###
 SET(SOURCES_LIST
 	demoTutorialDialog.C
 	icons.C
@@ -8,7 +57,7 @@ SET(SOURCES_LIST
 	mainframe.C
 )
 
-### the list of all files requiring a moc run ###
+# List of all files requiring a moc run ###
 SET(MOC_SOURCES_LIST
 	demoTutorialDialog.h
 	mainframe.h
@@ -27,18 +76,20 @@ SET(RESOURCES_LIST
 	BALLView.rc
 )
 
-IF (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	LIST(APPEND RESOURCES_LIST ${CMAKE_SOURCE_DIR}/cmake/installer/BALLView.icns)
+IF(BALL_OS_DARWIN)
+	LIST(APPEND RESOURCES_LIST "${PROJECT_SOURCE_DIR}/cmake/installer/BALLView.icns")
 	SET(MACOSX_BUNDLE_ICON_FILE BALLView.icns)
-	SET_SOURCE_FILES_PROPERTIES(${CMAKE_SOURCE_DIR}/cmake/installer/BALLView.icns
-			PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+	SET_SOURCE_FILES_PROPERTIES("${PROJECT_SOURCE_DIR}/cmake/installer/BALLView.icns" PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 ENDIF()
 
 QT4_WRAP_CPP(MOC_OUTFILES ${MOC_SOURCES_LIST})
 QT4_ADD_RESOURCES(RCC_OUTFILES ${RCC_SOURCES_LIST})
 QT4_WRAP_UI(UIC_OUTFILES ${UI_SOURCES_LIST})
 
-INCLUDE_DIRECTORIES(${PROJECT_BINARY_DIR})
+
+###############################################################################
+###    Add BALLView target                                                  ###
+###############################################################################
 
 ADD_EXECUTABLE(BALLView
 	${SOURCES_LIST}
@@ -48,44 +99,14 @@ ADD_EXECUTABLE(BALLView
 	${RESOURCES_LIST}
 )
 
-IF (WIN32)
-	SET_TARGET_PROPERTIES(BALLView PROPERTIES WIN32_EXECUTABLE TRUE)
-ELSEIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	SET_TARGET_PROPERTIES(BALLView PROPERTIES MACOSX_BUNDLE TRUE)
-ENDIF()
+TARGET_LINK_LIBRARIES(BALLView BALL_core BALL_view ${BALL_DEPENDENCY_LIBS})
 
-INSTALL(TARGETS BALLView
-	COMPONENT "${COMPONENT_BALLVIEW}"
-	RUNTIME DESTINATION "${BALL_RUNTIME_INSTALL_DIRECTORY}"
-	BUNDLE DESTINATION "${BALL_BUNDLE_INSTALL_DIRECTORY}"
-)
 
-INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/doc/internal 
-	DESTINATION "${BALL_DOCUMENTATION_INSTALL_DIRECTORY}" 
-	COMPONENT "${COMPONENT_BALLVIEW}"
-)
 
-INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/doc/BALLView 
-	DESTINATION "${BALL_DOCUMENTATION_INSTALL_DIRECTORY}" 
-	COMPONENT "${COMPONENT_BALLVIEW}"
-)
 
-IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-	GET_FILENAME_COMPONENT(MACDEPLOYQT_EXECUTABLE "${QT_QMAKE_EXECUTABLE}" PATH)
-	SET(MACDEPLOYQT_EXECUTABLE "${MACDEPLOYQT_EXECUTABLE}/macdeployqt")
-	INSTALL(CODE "SET(MACDEPLOYQT_EXECUTABLE \"${MACDEPLOYQT_EXECUTABLE}\")" COMPONENT "${COMPONENT_BALLVIEW}")
-	INSTALL(CODE "SET(FIXBUNDLE ${CMAKE_SOURCE_DIR}/MacOSX/fixbundleframeworks.sh)" COMPONENT "${COMPONENT_BALLVIEW}")
-	INSTALL(CODE "SET(BALLVIEW_BUNDLE \"\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${BALL_BUNDLE_INSTALL_DIRECTORY}/BALLView.app\")" COMPONENT "${COMPONENT_BALLVIEW}")
-	INSTALL(CODE "SET(CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR})" COMPONENT "${COMPONENT_BALLVIEW}")
-	INSTALL(SCRIPT "${CMAKE_SOURCE_DIR}/cmake/BALLViewCreateBundle.cmake" COMPONENT "${COMPONENT_BALLVIEW}")
-ENDIF()
 
-SET(BALLVIEW_SUPPORT_LIBRARIES "")
-IF (UNIX)
-	LIST(APPEND BALLVIEW_SUPPORT_LIBRARIES "pthread")
-ENDIF ()
 
-TARGET_LINK_LIBRARIES(BALLView BALL VIEW ${BALLVIEW_SUPPORT_LIBRARIES})
 
-#Setup the translations
-INCLUDE(${CMAKE_SOURCE_DIR}/cmake/BALLViewTranslations.cmake)
+
+
+

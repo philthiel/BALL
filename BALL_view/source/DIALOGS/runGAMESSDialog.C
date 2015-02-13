@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/runGAMESSDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
+#include <BALL_view/DIALOGS/runGAMESSDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QComboBox>

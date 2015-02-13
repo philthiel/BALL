@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/openSavePreferences.h>
+#include <BALL_view/DIALOGS/openSavePreferences.h>
 
-#include <BALL/VIEW/DIALOGS/molecularFileDialog.h>
+#include <BALL_view/DIALOGS/molecularFileDialog.h>
 
 namespace BALL
 {

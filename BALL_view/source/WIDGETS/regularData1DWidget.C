@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/regularData1DWidget.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/regularData1DWidget.h>
+#include <BALL_view/KERNEL/message.h>
 
 #include <QtGui/QPopupMenu>
 #include <QtGui/QApplication>

@@ -1,11 +1,11 @@
-#include <BALL/VIEW/KERNEL/MODES/interactionModeManager.h>
+#include <BALL_view/KERNEL/MODES/interactionModeManager.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/scene.h>
 
-#include <BALL/VIEW/KERNEL/MODES/editMode.h>
-#include <BALL/VIEW/KERNEL/MODES/moveMode.h>
-#include <BALL/VIEW/KERNEL/MODES/rotateMode.h>
-#include <BALL/VIEW/KERNEL/MODES/pickingMode.h>
+#include <BALL_view/KERNEL/MODES/editMode.h>
+#include <BALL_view/KERNEL/MODES/moveMode.h>
+#include <BALL_view/KERNEL/MODES/rotateMode.h>
+#include <BALL_view/KERNEL/MODES/pickingMode.h>
 
 #include <QtGui/QMenu>
 

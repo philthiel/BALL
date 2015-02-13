@@ -2,11 +2,11 @@
 #define BALL_VIEW_WIDGETS_SHORTCUTTABLEVIEW_H
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_EDITSINGLESHORTCUT_H
-# include <BALL/VIEW/DIALOGS/editSingleShortcut.h>
+# include <BALL_view/DIALOGS/editSingleShortcut.h>
 #endif
 
 #include <QtGui/QTableView>

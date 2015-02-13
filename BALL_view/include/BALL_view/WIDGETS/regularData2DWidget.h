@@ -6,19 +6,19 @@
 #define BALL_VIEW_WIDGETS_REGULARDATA2DWIDGET_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_CANVASWIDGET_H
-# include <BALL/VIEW/WIDGETS/canvasWidget.h>
+# include <BALL_view/WIDGETS/canvasWidget.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA2D_H
-# include <BALL/DATATYPE/regularData2D.h>
+# include <BALL_core/DATATYPE/regularData2D.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-# include <BALL/VIEW/WIDGETS/dockWidget.h>
+# include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #include <QtGui/QColor>

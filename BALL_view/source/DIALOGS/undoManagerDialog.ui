@@ -106,7 +106,7 @@
   <tabstop>reset_to_button</tabstop>
  </tabstops>
  <includes>
-  <include location="global">BALL/COMMON/global.h</include>
+  <include location="global">BALL_core/COMMON/global.h</include>
  </includes>
  <resources/>
  <connections/>

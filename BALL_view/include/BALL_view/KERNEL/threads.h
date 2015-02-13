@@ -2,7 +2,7 @@
 #define BALL_VIEW_KERNEL_THREADS_H
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H_
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/common.h>
 #endif
 
 #include <QtCore/QThread>

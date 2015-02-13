@@ -5,14 +5,14 @@
 #define BALL_VIEW_DIALOGS_CONTOURSURFACEDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_contourSurfaceDialog.h>
+#include <BALL_view/UIC/ui_contourSurfaceDialog.h>
 
 namespace BALL
 {

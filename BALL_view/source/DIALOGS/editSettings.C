@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/editSettings.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/editSettings.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtGui/QCheckBox>
 #include <QtGui/QLineEdit>

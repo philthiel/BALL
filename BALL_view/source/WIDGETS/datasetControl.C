@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/DATATYPE/dataset.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/DATATYPE/dataset.h>
+#include <BALL_view/KERNEL/message.h>
 
 namespace BALL
 {

@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/stageSettings.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/stage.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/RENDERING/renderSetup.h>
+#include <BALL_view/DIALOGS/stageSettings.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/stage.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/RENDERING/renderSetup.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QLabel>

@@ -5,14 +5,14 @@
 // This include has to be first in order to avoid collisions.
 #include <Python.h>
 
-#include <BALL/VIEW/WIDGETS/pyWidget.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/DIALOGS/pythonSettings.h>
-#include <BALL/PYTHON/pyInterpreter.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/SYSTEM/directory.h>
+#include <BALL_view/WIDGETS/pyWidget.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/DIALOGS/pythonSettings.h>
+#include <BALL_core/PYTHON/pyInterpreter.h>
+#include <BALL_view/DIALOGS/preferences.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_core/SYSTEM/directory.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QApplication>

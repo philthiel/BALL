@@ -2,19 +2,19 @@
 #define BALL_VIEW_WIDGETS_PROPERTYEDITOR_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/DATATYPE/hashMap.h>
+# include <BALL_core/DATATYPE/hashMap.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_propertyEditor.h>
-#include <BALL/VIEW/UIC/ui_propEditorWidget.h>
-#include <BALL/VIEW/UIC/ui_editorPDBInfoDialog.h>
+#include <BALL_view/UIC/ui_propertyEditor.h>
+#include <BALL_view/UIC/ui_propEditorWidget.h>
+#include <BALL_view/UIC/ui_editorPDBInfoDialog.h>
 
 #ifndef BALL_FORMAT_PDBINFO_H
-# include <BALL/FORMAT/PDBInfo.h>
+# include <BALL_core/FORMAT/PDBInfo.h>
 #endif
 
 #include <QtGui/QWidget>

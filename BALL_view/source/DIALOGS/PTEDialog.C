@@ -1,9 +1,9 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/VIEW/DIALOGS/PTEDialog.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/DIALOGS/PTEDialog.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 #include <QtGui/QToolTip>
 #include <QtGui/QPushButton>

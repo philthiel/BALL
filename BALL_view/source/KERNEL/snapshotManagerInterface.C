@@ -1,7 +1,7 @@
-#include <BALL/VIEW/KERNEL/snapshotManagerInterface.h>
+#include <BALL_view/KERNEL/snapshotManagerInterface.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
 namespace BALL
 {

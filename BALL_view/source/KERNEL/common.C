@@ -2,22 +2,22 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/WIDGETS/scene.h>
 
-#include <BALL/SYSTEM/directory.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/fileSystem.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/directory.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
+#include <BALL_core/SYSTEM/path.h>
 
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
 
 #include <QtGui/QApplication>
 #include <QtCore/QUrl>
 
-#include <BALL/COMMON/init.h>
+#include <BALL_core/COMMON/init.h>
 
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/random/uniform_real.hpp>

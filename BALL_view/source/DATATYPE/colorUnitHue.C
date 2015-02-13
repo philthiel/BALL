@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DATATYPE/colorUnitHue.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_view/DATATYPE/colorUnitHue.h>
+#include <BALL_core/COMMON/rtti.h>
 
 using namespace std;
 
@@ -482,7 +482,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorUnitHue.iC>
+#			include <BALL_view/DATATYPE/colorUnitHue.iC>
 #		endif 
 
 	} // namespace VIEW

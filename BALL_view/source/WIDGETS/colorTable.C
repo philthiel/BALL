@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/colorTable.h>
+#include <BALL_view/WIDGETS/colorTable.h>
 
 namespace BALL
 {

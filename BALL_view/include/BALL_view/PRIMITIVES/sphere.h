@@ -8,11 +8,11 @@
 #define BALL_VIEW_PRIMITIV_SPHERE_H
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-# include <BALL/VIEW/KERNEL/geometricObject.h>
+# include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_VIEW_MATHS_SPHERE3_H
-#	include <BALL/MATHS/sphere3.h>
+#	include <BALL_core/MATHS/sphere3.h>
 #endif
 
 namespace BALL

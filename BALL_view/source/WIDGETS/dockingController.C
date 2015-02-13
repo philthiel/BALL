@@ -2,30 +2,30 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/dockingController.h>
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/dockingController.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
 
-#include <BALL/VIEW/DIALOGS/dockResultDialog.h>
-#include <BALL/VIEW/DIALOGS/dockProgressDialog.h>
+#include <BALL_view/DIALOGS/dockResultDialog.h>
+#include <BALL_view/DIALOGS/dockProgressDialog.h>
 
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
-#include <BALL/DOCKING/COMMON/dockResult.h>
-#include <BALL/DOCKING/COMMON/conformationSet.h>
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
-#include <BALL/SCORING/FUNCTIONS/energeticEvaluation.h>
-#include <BALL/SCORING/FUNCTIONS/amberEvaluation.h>
-#include <BALL/SCORING/FUNCTIONS/randomEvaluation.h>
+#include <BALL_core/DOCKING/COMMON/dockResult.h>
+#include <BALL_core/DOCKING/COMMON/conformationSet.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/SCORING/FUNCTIONS/energeticEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/amberEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/randomEvaluation.h>
 
 #ifdef BALL_HAS_FFTW
-#include <BALL/VIEW/DIALOGS/geometricFitDialog.h>
-#include <BALL/DOCKING/geometricFit.h>
+#include <BALL_view/DIALOGS/geometricFitDialog.h>
+#include <BALL_core/DOCKING/geometricFit.h>
 #endif
 
-#include <BALL/VIEW/KERNEL/threads.h>
+#include <BALL_view/KERNEL/threads.h>
 
 #include <QtGui/QMessageBox>
 #include <QtGui/QComboBox>

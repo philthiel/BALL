@@ -1,11 +1,11 @@
-#include <BALL/VIEW/WIDGETS/propertyEditor.h>
+#include <BALL_view/WIDGETS/propertyEditor.h>
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-# include <BALL/CONCEPT/property.h>
+# include <BALL_core/CONCEPT/property.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_ICONLOADER_H
-# include <BALL/VIEW/KERNEL/iconLoader.h>
+# include <BALL_view/KERNEL/iconLoader.h>
 #endif
 
 #include <QtGui/QMenu>

@@ -2,7 +2,7 @@
 #define BALL_VIEW_WIDGETS_DOCKABLEWIDGET_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-#	include <BALL/VIEW/KERNEL/modularWidget.h>
+#	include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #include <QtGui/QDockWidget>

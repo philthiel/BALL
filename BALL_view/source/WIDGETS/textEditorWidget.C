@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/textEditorWidget.h>
+#include <BALL_view/WIDGETS/textEditorWidget.h>
 
 #include <QtCore/QSize>
 #include <QtGui/QPainter>

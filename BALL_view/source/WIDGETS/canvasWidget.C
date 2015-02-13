@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/canvasWidget.h>
+#include <BALL_view/WIDGETS/canvasWidget.h>
 #include <QPixmap>
 
 namespace BALL

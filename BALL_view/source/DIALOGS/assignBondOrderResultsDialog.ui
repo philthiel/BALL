@@ -217,7 +217,7 @@
   <customwidget>
    <class>BALL::VIEW::SDWidget</class>
    <extends>QWidget</extends>
-   <header>BALL/VIEW/WIDGETS/SDWidget.h</header>
+   <header>BALL_view/WIDGETS/SDWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

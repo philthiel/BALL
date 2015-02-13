@@ -1,9 +1,9 @@
-#include <BALL/VIEW/PLUGIN/inputDevPluginHandler.h>
+#include <BALL_view/PLUGIN/inputDevPluginHandler.h>
 
-#include <BALL/PLUGIN/BALLPlugin.h>
+#include <BALL_core/PLUGIN/BALLPlugin.h>
 
-#include <BALL/VIEW/INPUT/inputPlugin.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/INPUT/inputPlugin.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 namespace BALL
 {

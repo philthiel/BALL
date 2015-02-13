@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
 
 using namespace std;
 

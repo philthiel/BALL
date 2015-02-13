@@ -1,7 +1,7 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/VIEW/DIALOGS/dockProgressDialog.h>
+#include <BALL_view/DIALOGS/dockProgressDialog.h>
 
 #include <QtGui/QProgressBar>
 #include <QtGui/QTextEdit>

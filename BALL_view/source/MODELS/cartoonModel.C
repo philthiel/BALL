@@ -4,23 +4,23 @@
 // $Id: cartoonModel.C,v 1.60.16.1 2007/03/25 22:02:29 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/cartoonModel.h>
+#include <BALL_view/MODELS/cartoonModel.h>
 
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/KERNEL/common.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
 
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
 
 using namespace std;
 

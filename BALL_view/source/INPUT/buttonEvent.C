@@ -1,4 +1,4 @@
-#include <BALL/VIEW/INPUT/buttonEvent.h>
+#include <BALL_view/INPUT/buttonEvent.h>
 
 namespace BALL
 {

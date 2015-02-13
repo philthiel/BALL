@@ -2,7 +2,7 @@
 #define BALL_VIEW_KERNEL_MODES_MODEMANAGER_H
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-	#include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+	#include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
 #include <list>

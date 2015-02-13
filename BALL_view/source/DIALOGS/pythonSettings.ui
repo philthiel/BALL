@@ -205,11 +205,11 @@
   <customwidget>
    <class>BALL::VIEW::HotkeyTable</class>
    <extends>QTableView</extends>
-   <header location="global">BALL/VIEW/WIDGETS/hotkeyTable.h</header>
+   <header location="global">BALL_view/WIDGETS/hotkeyTable.h</header>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global">BALL/COMMON/global.h</include>
+  <include location="global">BALL_core/COMMON/global.h</include>
  </includes>
  <resources/>
  <connections/>

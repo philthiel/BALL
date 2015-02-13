@@ -6,22 +6,22 @@
 #define BALL_VIEW_DIALOGS_MODELSETTINGSDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-# include <BALL/VIEW/MODELS/modelProcessor.h>
+# include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_modelSettingsDialog.h>
+#include <BALL_view/UIC/ui_modelSettingsDialog.h>
 
 #include <QtGui/QCheckBox>
 #include <QtGui/QLabel>

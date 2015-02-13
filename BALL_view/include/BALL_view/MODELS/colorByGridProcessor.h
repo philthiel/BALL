@@ -1,10 +1,10 @@
 #ifndef BALL_VIEW_MODELS_COLORBYGRIDPROCESSOR_H
 #define BALL_VIEW_MODELS_COLORBYGRIDPROCESSOR_H
 
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 
-#include <BALL/VIEW/MODELS/colorProcessor.h>
-#include <BALL/VIEW/DATATYPE/colorMap.h>
+#include <BALL_view/MODELS/colorProcessor.h>
+#include <BALL_view/DATATYPE/colorMap.h>
 
 namespace BALL
 {

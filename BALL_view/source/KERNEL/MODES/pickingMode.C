@@ -1,11 +1,11 @@
-#include <BALL/VIEW/KERNEL/MODES/pickingMode.h>
+#include <BALL_view/KERNEL/MODES/pickingMode.h>
 
 #include <QtGui/QMouseEvent>
 #include <QtGui/QKeyEvent>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
 namespace BALL
 {

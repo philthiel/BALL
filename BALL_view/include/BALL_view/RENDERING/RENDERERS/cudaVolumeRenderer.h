@@ -6,7 +6,7 @@
 #define BALL_VIEW_RENDERING_RENDERERS_CUDARAYTRACINGRENDERER_H
 
 #define BALLVIEW_CUDAVOLUMERENDERER_THROW(exceptionName, message) (throw BALL::Exception::##exceptionName##(__FILE__, __LINE__, message))
-#include <BALL/VIEW/RENDERING/RENDERERS/raytracingRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/raytracingRenderer.h>
 #include <cudamm/cuda.hpp>
 
 namespace BALL

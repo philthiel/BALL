@@ -4,12 +4,12 @@
 // $Id: atomBondModelBaseProcessor.C,v 1.15.18.1 2007/03/25 22:02:28 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/atomBondModelBaseProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL_view/MODELS/atomBondModelBaseProcessor.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/residue.h>
 
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
 
 using namespace std;
 
@@ -155,7 +155,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/MODELS/atomBondModelBaseProcessor.iC>
+#			include <BALL_view/MODELS/atomBondModelBaseProcessor.iC>
 #		endif
 
 	} // namespace VIEW

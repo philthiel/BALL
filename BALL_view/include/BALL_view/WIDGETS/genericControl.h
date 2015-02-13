@@ -7,7 +7,7 @@
 #define BALL_VIEW_WIDGETS_GENERICCONTROL_H
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-# include <BALL/VIEW/WIDGETS/dockWidget.h>
+# include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #include <QtGui/QKeyEvent>

@@ -3,8 +3,8 @@
 //
 // $Id: colorExtensions.C,v 1.1.4.1 2007/03/25 21:56:33 oliver Exp $
 
-#include <BALL/VIEW/DATATYPE/colorExtensions.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_view/DATATYPE/colorExtensions.h>
+#include <BALL_core/COMMON/rtti.h>
 
 using namespace std;
 
@@ -130,7 +130,7 @@ namespace BALL
 
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorExtensions.iC>
+#			include <BALL_view/DATATYPE/colorExtensions.iC>
 #		endif 
 
 	} // namespace VIEW

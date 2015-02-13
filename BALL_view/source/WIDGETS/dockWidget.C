@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/dockWidget.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/dockWidget.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
 #include <QtGui/QMenuBar>
 

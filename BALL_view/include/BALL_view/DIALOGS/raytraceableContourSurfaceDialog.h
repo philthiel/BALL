@@ -6,22 +6,22 @@
 #define BALL_VIEW_DIALOGS_RAYTRACEABLECONTOURSURFACEDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/COMMON/exception.h>
+#	include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYP_RAYTRACEABLEGRID_H
-# include <BALL/VIEW/DATATYPE/raytraceableGrid.h>
+# include <BALL_view/DATATYPE/raytraceableGrid.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_raytraceableContourSurfaceDialog.h>
+#include <BALL_view/UIC/ui_raytraceableContourSurfaceDialog.h>
 
 #include <QtGui/QDialog>
 

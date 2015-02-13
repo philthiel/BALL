@@ -4,7 +4,7 @@
 // $Id: vertex1.C,v 1.7.20.1 2007/03/25 21:56:36 oliver Exp $
 //
 
-#include <BALL/VIEW/DATATYPE/vertex1.h>
+#include <BALL_view/DATATYPE/vertex1.h>
 
 using namespace std;
 
@@ -109,7 +109,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/vertex1.iC>
+#			include <BALL_view/DATATYPE/vertex1.iC>
 #		endif 
 		
 	} // namespace VIEW

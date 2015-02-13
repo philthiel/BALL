@@ -7,7 +7,7 @@
 #define BALL_VIEW_RENDERING_GLDISPLAYLIST_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #include <QtOpenGL/qgl.h>
@@ -232,7 +232,7 @@ class BALL_VIEW_EXPORT GLDisplayList
 };
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/RENDERING/glDisplayList.iC>
+#		include <BALL_view/RENDERING/glDisplayList.iC>
 #	endif
 
 	} // namespace VIEW

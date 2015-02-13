@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/assignBondOrderResultsDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/STRUCTURE/sdGenerator.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/DIALOGS/assignBondOrderResultsDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/STRUCTURE/sdGenerator.h>
+#include <BALL_view/KERNEL/message.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QTreeWidget>

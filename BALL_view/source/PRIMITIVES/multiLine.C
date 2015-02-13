@@ -3,7 +3,7 @@
 //
 // $Id: multiLine.C,v 1.1.4.1 2007-03-25 22:02:34 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
 
 using namespace std;
 

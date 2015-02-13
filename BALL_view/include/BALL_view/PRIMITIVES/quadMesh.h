@@ -8,11 +8,11 @@
 #define BALL_VIEW_PRIMITIV_QUADMESH_H
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-# include <BALL/VIEW/KERNEL/geometricObject.h>
+# include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLOREXTENSIONS_H
-# include <BALL/VIEW/DATATYPE/colorExtensions.h>
+# include <BALL_view/DATATYPE/colorExtensions.h>
 #endif
 
 namespace BALL

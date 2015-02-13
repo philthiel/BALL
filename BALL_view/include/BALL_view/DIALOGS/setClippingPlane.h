@@ -6,14 +6,14 @@
 #define BALL_VIEW_DIALOGS_SETCLIPPINGPLANE_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_CLIPPING_PLANE_H
-# include <BALL/VIEW/KERNEL/clippingPlane.h>
+# include <BALL_view/KERNEL/clippingPlane.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_setClippingPlane.h>
+#include <BALL_view/UIC/ui_setClippingPlane.h>
 
 #include <QtGui/QDialog>
 

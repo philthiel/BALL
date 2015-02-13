@@ -2,22 +2,22 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/threads.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/representation.h>
-#include <BALL/VIEW/DIALOGS/FDPBDialog.h>
-#include <BALL/VIEW/DIALOGS/generateCrystalDialog.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/KERNEL/threads.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/representation.h>
+#include <BALL_view/DIALOGS/FDPBDialog.h>
+#include <BALL_view/DIALOGS/generateCrystalDialog.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
-#include <BALL/MOLMEC/MDSIMULATION/molecularDynamics.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/MOLMEC/COMMON/forceField.h>
+#include <BALL_core/MOLMEC/MINIMIZATION/energyMinimizer.h>
+#include <BALL_core/MOLMEC/MDSIMULATION/molecularDynamics.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
 
-#include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
-#include <BALL/FORMAT/trajectoryFile.h>
-#include <BALL/FORMAT/DCDFile.h>
+#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/DCDFile.h>
 
 #include <QtGui/QApplication>
 

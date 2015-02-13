@@ -1,9 +1,9 @@
-#include <BALL/VIEW/INPUT/inputDeviceDriver.h>
+#include <BALL_view/INPUT/inputDeviceDriver.h>
 
-#include <BALL/VIEW/INPUT/transformationEvent6D.h>
-#include <BALL/VIEW/INPUT/headTrackingEvent.h>
-#include <BALL/VIEW/INPUT/motionTrackingEvent.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/INPUT/transformationEvent6D.h>
+#include <BALL_view/INPUT/headTrackingEvent.h>
+#include <BALL_view/INPUT/motionTrackingEvent.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 #include <QtCore/QMutexLocker>
 #include <QtCore/QCoreApplication>

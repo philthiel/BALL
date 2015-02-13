@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/raytraceableContourSurfaceDialog.h>
+#include <BALL_view/DIALOGS/raytraceableContourSurfaceDialog.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QLineEdit>

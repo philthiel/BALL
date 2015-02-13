@@ -2,14 +2,14 @@
 #define BALL_VIEW_WIDGETS_SDWIDGET_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
-#include <BALL/KERNEL/system.h>
+#include <BALL_core/KERNEL/system.h>
 
 #include <QtGui/QWidget>
 

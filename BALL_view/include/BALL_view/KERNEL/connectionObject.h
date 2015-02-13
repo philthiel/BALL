@@ -6,7 +6,7 @@
 #define BALL_VIEW_KERNEL_CONNECTIONOBJECT_H
 
 #ifndef BALL_COMMON_MACROS_H
-# include <BALL/COMMON/macros.h>
+# include <BALL_core/COMMON/macros.h>
 #endif
 
 namespace BALL
@@ -211,7 +211,7 @@ namespace BALL
 		};
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/KERNEL/connectionObject.iC>
+#			include <BALL_view/KERNEL/connectionObject.iC>
 #		endif
   		
 } } // namespace

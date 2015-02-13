@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/helpViewer.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/lineBasedFile.h>
+#include <BALL_view/WIDGETS/helpViewer.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
 
 #include <QtGui/QMenu>
 #include <QtGui/QMouseEvent>

@@ -6,15 +6,15 @@
 #define BALL_VIEW_WIDGETS_GEOMETRICCONTROL_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_GENERICCONTROL_H
-#	include <BALL/VIEW/WIDGETS/genericControl.h>
+#	include <BALL_view/WIDGETS/genericControl.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif 
 
 #include <QtCore/QPoint>

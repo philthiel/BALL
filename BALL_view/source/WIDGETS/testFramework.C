@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/testFramework.h>
-#include <BALL/VIEW/WIDGETS/dockWidget.h>
-#include <BALL/VIEW/DIALOGS/molecularFileDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/WIDGETS/testFramework.h>
+#include <BALL_view/WIDGETS/dockWidget.h>
+#include <BALL_view/DIALOGS/molecularFileDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtCore/QFSFileEngine>
 #include <QtGui/QFileDialog>
@@ -16,7 +16,7 @@
 #include <QTest>
 
 #ifdef BALL_PYTHON_SUPPORT
- #include <BALL/VIEW/WIDGETS/pyWidget.h>
+ #include <BALL_view/WIDGETS/pyWidget.h>
  #include <BALL/PYTHON/pyInterpreter.h>
 #endif
 

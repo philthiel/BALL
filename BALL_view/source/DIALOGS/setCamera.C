@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 //
-#include <BALL/VIEW/DIALOGS/setCamera.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/stage.h>
+#include <BALL_view/DIALOGS/setCamera.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/stage.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QLineEdit> 

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/geometricFitDialog.h>
-#include <BALL/DOCKING/geometricFit.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/geometricFitDialog.h>
+#include <BALL_core/DOCKING/geometricFit.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QComboBox>

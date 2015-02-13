@@ -6,11 +6,11 @@
 #define BALL_VIEW_PRIMITIV_LABEL_H
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-# include <BALL/VIEW/KERNEL/geometricObject.h>
+# include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_VERTEX1_H
-#	include <BALL/VIEW/DATATYPE/vertex1.h>
+#	include <BALL_view/DATATYPE/vertex1.h>
 #endif
 
 #include <QtGui/QFont>

@@ -49,14 +49,6 @@ INCLUDE_DIRECTORIES(${BALL_core_INCLUDE_DIRS})
 
 
 ###############################################################################
-###    Configure BALL_view header files                                          ###
-###############################################################################
-
-# BALL_view/CONFIG/config.h
-#CONFIGURE_FILE("${PROJECT_SOURCE_DIR}/cmake/templates/config.h.in" "${PROJECT_BINARY_DIR}/include/BALL_view/CONFIG/config.h")
-
-
-###############################################################################
 ###    Build BALL_view library                                              ###
 ###############################################################################
 
@@ -71,7 +63,7 @@ INCLUDE(BALLCollectSourceFiles)
 ADD_LIBRARY(BALL_view SHARED ${BALL_sources} ${BALL_headers})
 
 # Add libraries to be linked against
-TARGET_LINK_LIBRARIES(BALL_view ${BALL_DEPENDENCY_LIBS})
+TARGET_LINK_LIBRARIES(BALL_view BALL_core ${BALL_DEPENDENCY_LIBS})
 
 # BALL compile flags
 SET(BALL_COMPILE_FLAGS)
@@ -84,4 +76,29 @@ SET_TARGET_PROPERTIES(BALL_view PROPERTIES COMPILE_FLAGS "${BALL_COMPILE_FLAGS}"
 
 # Set version property of target BALL_view
 SET_TARGET_PROPERTIES(BALL_view PROPERTIES VERSION "${BALL_VERSION_MAJOR}.${BALL_VERSION_MINOR}")
+
+
+###############################################################################
+###    Set upstream variables                                               ###
+###############################################################################
+
+# Fetch BALL_view include directories
+GET_DIRECTORY_PROPERTY(TMP_BALL_view_INCLUDE_DIRS INCLUDE_DIRECTORIES)
+SET(BALL_view_INCLUDE_DIRS "${TMP_BALL_view_INCLUDE_DIRS}" PARENT_SCOPE)
+
+
+###############################################################################
+###    Build BALLView                                                       ###
+###############################################################################
+
+ADD_SUBDIRECTORY(BALLView)
+
+
+
+
+
+
+
+
+
 

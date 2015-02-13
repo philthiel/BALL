@@ -1,5 +1,5 @@
-#include <BALL/VIEW/INPUT/headTrackingEvent.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/INPUT/headTrackingEvent.h>
+#include <BALL_view/KERNEL/common.h>
 
 namespace BALL
 {

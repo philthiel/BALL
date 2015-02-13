@@ -3,9 +3,9 @@
 
 #include <QtCore/QEvent>
 
-#include <BALL/VIEW/INPUT/deviceEvent.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/quaternion.h>
+#include <BALL_view/INPUT/deviceEvent.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/MATHS/quaternion.h>
 
 namespace BALL
 {

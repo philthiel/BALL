@@ -2,25 +2,25 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/modifyRepresentationDialog.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
-#include <BALL/VIEW/WIDGETS/geometricControl.h>
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
-#include <BALL/VIEW/MODELS/colorByGridProcessor.h>
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
+#include <BALL_view/DIALOGS/modifyRepresentationDialog.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+#include <BALL_view/WIDGETS/geometricControl.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
+#include <BALL_view/MODELS/colorByGridProcessor.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/DATATYPE/regularData3D.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
+#include <BALL_core/DATATYPE/hashGrid.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QSpinBox>

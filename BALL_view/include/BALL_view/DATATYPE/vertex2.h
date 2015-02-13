@@ -8,11 +8,11 @@
 #define BALL_VIEW_DATATYPE_VERTEX2_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 namespace BALL
@@ -356,7 +356,7 @@ namespace BALL
 
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/vertex2.iC>
+#			include <BALL_view/DATATYPE/vertex2.iC>
 #		endif
 	
 	} // namespace VIEW

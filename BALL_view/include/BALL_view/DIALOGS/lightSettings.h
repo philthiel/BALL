@@ -6,22 +6,22 @@
 #define BALL_VIEW_DIALOGS_LIGHTSETTINGS_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-#	include <BALL/CONCEPT/embeddable.h>
+#	include <BALL_core/CONCEPT/embeddable.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_STAGE_H
-# include <BALL/VIEW/KERNEL/stage.h>
+# include <BALL_view/KERNEL/stage.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_lightSettings.h>
+#include <BALL_view/UIC/ui_lightSettings.h>
 
 namespace BALL
 {

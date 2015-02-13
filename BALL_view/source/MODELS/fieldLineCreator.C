@@ -3,13 +3,13 @@
 //
 // $Id: fieldLineCreator.C,v 1.1.4.2 2007/04/11 11:55:53 amoll Exp $
 
-#include <BALL/VIEW/MODELS/fieldLineCreator.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_view/MODELS/fieldLineCreator.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/atom.h>
 
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
 
 using namespace std;
 

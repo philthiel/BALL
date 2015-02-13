@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DATATYPE/dataset.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/CONCEPT/molecularInformation.h>
+#include <BALL_view/DATATYPE/dataset.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/CONCEPT/molecularInformation.h>
 
 #include <QtGui/QFileDialog>
 #include <QtCore/QStringList>

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/compositeManager.h>
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL_view/KERNEL/compositeManager.h>
+#include <BALL_core/CONCEPT/composite.h>
+#include <BALL_core/KERNEL/atomContainer.h>
 
 using namespace std;
 

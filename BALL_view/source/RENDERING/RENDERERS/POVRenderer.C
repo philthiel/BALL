@@ -4,26 +4,26 @@
 // $Id: POVRenderer.C,v 1.22.16.3 2007/04/18 21:06:17 amoll Exp $
 //
 
-#include <BALL/VIEW/RENDERING/RENDERERS/POVRenderer.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/stage.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/RENDERING/RENDERERS/POVRenderer.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/stage.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/WIDGETS/scene.h>
 
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
 
 
 using std::endl;

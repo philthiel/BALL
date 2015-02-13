@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/serverWidget.h>
-#include <BALL/CONCEPT/client.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
-#include <BALL/VIEW/DIALOGS/serverPreferences.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/SYSTEM/systemCalls.h>
+#include <BALL_view/KERNEL/serverWidget.h>
+#include <BALL_core/CONCEPT/client.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/DIALOGS/preferences.h>
+#include <BALL_view/DIALOGS/serverPreferences.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_core/SYSTEM/systemCalls.h>
 
 #include <QtGui/QStatusBar>
 #include <QtGui/QPixmap>
@@ -326,7 +326,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/KERNEL/serverWidget.iC>
+#			include <BALL_view/KERNEL/serverWidget.iC>
 #		endif 
 	} 
 } // namespaces

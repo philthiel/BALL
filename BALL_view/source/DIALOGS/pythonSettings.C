@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/pythonSettings.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/DIALOGS/pythonSettings.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QFileDialog>

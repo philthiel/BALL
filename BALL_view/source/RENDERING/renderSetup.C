@@ -1,18 +1,18 @@
-#include <BALL/VIEW/RENDERING/renderSetup.h>
+#include <BALL_view/RENDERING/renderSetup.h>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/bufferedRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/tilingRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/POVRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/VRMLRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/STLRenderer.h>
-#include <BALL/VIEW/RENDERING/glRenderWindow.h>
+#include <BALL_view/RENDERING/RENDERERS/bufferedRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/tilingRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/POVRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/VRMLRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/STLRenderer.h>
+#include <BALL_view/RENDERING/glRenderWindow.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 
-#include <BALL/SYSTEM/timer.h> 
+#include <BALL_core/SYSTEM/timer.h> 
 #ifdef BALL_HAS_RTFACT
-#include <BALL/VIEW/RENDERING/RENDERERS/rtfactRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/rtfactRenderer.h>
 
 #define USE_TBB
 #ifdef USE_TBB

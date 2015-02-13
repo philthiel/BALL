@@ -6,19 +6,19 @@
 #define BALL_VIEW_WIDGETS_MOLECULARCONTROL_H
 
 #ifndef BALL_VIEW_WIDGETS_GENERICCONTROL_H
-# include <BALL/VIEW/WIDGETS/genericControl.h>
+# include <BALL_view/WIDGETS/genericControl.h>
 #endif
 
 #ifndef BALL_CONCEPT_MOLECULARINFORMATION_H
-# include <BALL/CONCEPT/molecularInformation.h>
+# include <BALL_core/CONCEPT/molecularInformation.h>
 #endif
 
 #ifndef BALL_SYSTEM_MUTEX_H
-# include <BALL/SYSTEM/mutex.h>
+# include <BALL_core/SYSTEM/mutex.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #include <QtGui/QMenu>

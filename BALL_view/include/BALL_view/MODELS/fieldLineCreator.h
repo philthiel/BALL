@@ -8,11 +8,11 @@
 #define BALL_VIEW_MODELS_FIELDLINE_CREATOR_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef  BALL_VIEW_KERNEL_REPRESENTATION_H
-# include <BALL/VIEW/KERNEL/representation.h>
+# include <BALL_view/KERNEL/representation.h>
 #endif
 
 namespace BALL

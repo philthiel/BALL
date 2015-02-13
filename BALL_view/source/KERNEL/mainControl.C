@@ -7,45 +7,45 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/modelInformation.h>
-#include <BALL/VIEW/KERNEL/geometricObject.h>
-#include <BALL/VIEW/KERNEL/iconLoader.h>
-#include <BALL/VIEW/KERNEL/modularWidget.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/KERNEL/UIOperationMode.h>
-#include <BALL/VIEW/DIALOGS/mainControlPreferences.h>
-#include <BALL/VIEW/DIALOGS/networkPreferences.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
-#include <BALL/VIEW/DIALOGS/openSavePreferences.h>
-#include <BALL/VIEW/DIALOGS/shortcutDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/modelInformation.h>
+#include <BALL_view/KERNEL/geometricObject.h>
+#include <BALL_view/KERNEL/iconLoader.h>
+#include <BALL_view/KERNEL/modularWidget.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/KERNEL/UIOperationMode.h>
+#include <BALL_view/DIALOGS/mainControlPreferences.h>
+#include <BALL_view/DIALOGS/networkPreferences.h>
+#include <BALL_view/DIALOGS/preferences.h>
+#include <BALL_view/DIALOGS/openSavePreferences.h>
+#include <BALL_view/DIALOGS/shortcutDialog.h>
 
-#include <BALL/VIEW/WIDGETS/genericControl.h>
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/WIDGETS/logView.h>
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
+#include <BALL_view/WIDGETS/genericControl.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/logView.h>
+#include <BALL_view/DIALOGS/displayProperties.h>
 
-#include <BALL/VIEW/DATATYPE/dataset.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/DATATYPE/dataset.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/MATHS/common.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
+#include <BALL_core/MATHS/common.h>
+#include <BALL_core/SYSTEM/path.h>
 
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
 
-#include <BALL/SYSTEM/directory.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/CONCEPT/XDRPersistenceManager.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/SYSTEM/systemCalls.h>
-#include <BALL/VIEW/KERNEL/threads.h>
+#include <BALL_core/SYSTEM/directory.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/XDRPersistenceManager.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/systemCalls.h>
+#include <BALL_view/KERNEL/threads.h>
 
 #include <QtGui/QStatusBar>  // statusbar
 #include <QtGui/QToolTip>
@@ -2310,7 +2310,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/KERNEL/mainControl.iC>
+#		include <BALL_view/KERNEL/mainControl.iC>
 #	endif
 
 		} // namespace VIEW

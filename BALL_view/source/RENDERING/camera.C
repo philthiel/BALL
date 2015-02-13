@@ -1,6 +1,6 @@
-#include <BALL/VIEW/RENDERING/camera.h>
+#include <BALL_view/RENDERING/camera.h>
 
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <iostream>
 

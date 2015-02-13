@@ -8,11 +8,11 @@
 #define  BALL_VIEW_KERNEL_CLIPPING_PLANE_H
 
 #ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef  BALL_VIEW_KERNEL_REPRESENTATION_H
-# include <BALL/VIEW/KERNEL/representation.h>
+# include <BALL_view/KERNEL/representation.h>
 #endif
 
 namespace BALL

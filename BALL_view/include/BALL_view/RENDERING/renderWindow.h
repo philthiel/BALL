@@ -5,8 +5,8 @@
 #ifndef BALL_VIEW_RENDERING_RENDERINGWINDOW_H
 #define BALL_VIEW_RENDERING_RENDERINGWINDOW_H
 
-#include <BALL/COMMON/global.h>
-#include <BALL/VIEW/RENDERING/renderTarget.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_view/RENDERING/renderTarget.h>
 
 #include <boost/static_assert.hpp>
 #include <boost/type_traits/is_same.hpp>

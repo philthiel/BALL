@@ -6,15 +6,15 @@
 #define BALL_VIEW_WIDGETS_EDITFUNCTIONS_H
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-#	include <BALL/VIEW/WIDGETS/dockWidget.h>
+#	include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_PTEDIALOG_H
-#	include <BALL/VIEW/DIALOGS/PTEDialog.h>
+#	include <BALL_view/DIALOGS/PTEDialog.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_EDITOPERATIONDIALOG_H
-#	include <BALL/VIEW/DIALOGS/editOperationDialog.h>
+#	include <BALL_view/DIALOGS/editOperationDialog.h>
 #endif
 
 #include <QtGui/QTabWidget>

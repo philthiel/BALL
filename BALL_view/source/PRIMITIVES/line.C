@@ -3,7 +3,7 @@
 //
 // $Id: line.C,v 1.4.28.1 2007-03-25 22:02:34 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/line.h>
 
 using namespace std;
 

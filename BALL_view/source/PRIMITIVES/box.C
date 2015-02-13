@@ -3,7 +3,7 @@
 //
 // $Id: box.C,v 1.4.28.1 2007-03-25 22:02:33 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/box.h>
 
 using namespace std;
 

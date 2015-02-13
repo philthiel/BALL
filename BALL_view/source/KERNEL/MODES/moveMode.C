@@ -1,11 +1,11 @@
-#include <BALL/VIEW/KERNEL/MODES/moveMode.h>
+#include <BALL_view/KERNEL/MODES/moveMode.h>
 
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/RENDERING/camera.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/RENDERING/camera.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
 #include <QtGui/QMouseEvent>
 #include <QtGui/QKeyEvent>

@@ -3,7 +3,7 @@
 //
 // $Id: twoColoredTube.C,v 1.5.28.1 2007-03-25 22:02:36 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
 
 using namespace std;
 
@@ -96,7 +96,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/PRIMITIVES/twoColoredTube.iC>
+#			include <BALL_view/PRIMITIVES/twoColoredTube.iC>
 #		endif
 
 	} // namespace VIEW

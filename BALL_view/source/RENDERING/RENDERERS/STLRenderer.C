@@ -1,23 +1,23 @@
 //STL Renderer: v 1.0 (2008.09.12) Annette Treichel
 
-#include <BALL/VIEW/RENDERING/RENDERERS/STLRenderer.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/stage.h>
+#include <BALL_view/RENDERING/RENDERERS/STLRenderer.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/stage.h>
 
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
 
-#include <BALL/MATHS/surface.h>
+#include <BALL_core/MATHS/surface.h>
 
 using std::endl;
 

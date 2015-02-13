@@ -6,15 +6,15 @@
 #define BALL_VIEW_RENDERING_RENDERERS_RAYTRACINGRENDERER_H
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-#	include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+#	include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_STAGE_H
-# include <BALL/VIEW/KERNEL/stage.h>
+# include <BALL_view/KERNEL/stage.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_BUFFEREDRENDERER_H
-#include <BALL/VIEW/RENDERING/RENDERERS/bufferedRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/bufferedRenderer.h>
 #endif
 
 #include <vector>

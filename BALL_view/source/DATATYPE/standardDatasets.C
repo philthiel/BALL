@@ -2,29 +2,29 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
 
-#include <BALL/VIEW/DIALOGS/snapShotVisualisation.h>
-#include <BALL/VIEW/DIALOGS/contourSurfaceDialog.h>
-#include <BALL/VIEW/DIALOGS/fieldLinesDialog.h>
-#include <BALL/VIEW/DIALOGS/gridVisualizationDialog.h>
+#include <BALL_view/DIALOGS/snapShotVisualisation.h>
+#include <BALL_view/DIALOGS/contourSurfaceDialog.h>
+#include <BALL_view/DIALOGS/fieldLinesDialog.h>
+#include <BALL_view/DIALOGS/gridVisualizationDialog.h>
 
-#include <BALL/FORMAT/trajectoryFile.h>
-#include <BALL/FORMAT/trajectoryFileFactory.h>
-#include <BALL/FORMAT/DSN6File.h>
-#include <BALL/FORMAT/CCP4File.h>
-#include <BALL/FORMAT/amiraMeshFile.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/DATATYPE/contourSurface.h>
-#include <BALL/DOCKING/COMMON/dockResult.h>
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL_core/FORMAT/trajectoryFile.h>
+#include <BALL_core/FORMAT/trajectoryFileFactory.h>
+#include <BALL_core/FORMAT/DSN6File.h>
+#include <BALL_core/FORMAT/CCP4File.h>
+#include <BALL_core/FORMAT/amiraMeshFile.h>
+#include <BALL_core/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL_core/DATATYPE/contourSurface.h>
+#include <BALL_core/DOCKING/COMMON/dockResult.h>
+#include <BALL_core/DATATYPE/regularData3D.h>
 
 #include <QtGui/QFileDialog>
 

@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/RENDERING/RENDERERS/tilingRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/tilingRenderer.h>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
-#include <BALL/VIEW/RENDERING/glRenderWindow.h>
-#include <BALL/VIEW/RENDERING/glOffscreenTarget.h>
+#include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
+#include <BALL_view/RENDERING/glRenderWindow.h>
+#include <BALL_view/RENDERING/glOffscreenTarget.h>
 
 namespace BALL
 {

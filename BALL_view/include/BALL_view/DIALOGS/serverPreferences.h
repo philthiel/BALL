@@ -6,7 +6,7 @@
 #define BALL_VIEW_DIALOGS_SERVERPREFERENCES_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #include <QtGui/QWidget>
@@ -14,7 +14,7 @@
 #include <QtGui/QLineEdit>
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 namespace BALL

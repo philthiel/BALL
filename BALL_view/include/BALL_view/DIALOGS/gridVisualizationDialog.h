@@ -6,22 +6,22 @@
 #define BALL_VIEW_DIALOGS_GRIDVISUALIZATIONDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif 
 
 #ifndef BALL_VIEW_DATATYPE_STANDARDDATASETS_H
-# include <BALL/VIEW/DATATYPE/standardDatasets.h>
+# include <BALL_view/DATATYPE/standardDatasets.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_gridVisualizationDialog.h>
+#include <BALL_view/UIC/ui_gridVisualizationDialog.h>
 
 namespace BALL
 {

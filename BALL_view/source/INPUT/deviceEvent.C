@@ -1,4 +1,4 @@
-#include <BALL/VIEW/INPUT/deviceEvent.h>
+#include <BALL_view/INPUT/deviceEvent.h>
 
 namespace BALL
 {

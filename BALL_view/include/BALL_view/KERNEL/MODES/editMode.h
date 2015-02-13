@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_KERNEL_MODES_EDITMODE_H
 #define BALL_VIEW_KERNEL_MODES_EDITMODE_H
 
-#include <BALL/VIEW/KERNEL/MODES/interactionMode.h>
+#include <BALL_view/KERNEL/MODES/interactionMode.h>
 
 #include <QtGui/QMouseEvent>
 

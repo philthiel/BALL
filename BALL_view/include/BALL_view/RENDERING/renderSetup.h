@@ -6,19 +6,19 @@
 #define BALL_VIEW_RENDERING_RENDERSETUP_H
 
 #ifndef BALL_VIEW_RENDERING_GLRENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
+# include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERTARGET_H
-# include <BALL/VIEW/RENDERING/renderTarget.h>
+# include <BALL_view/RENDERING/renderTarget.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_GLRENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/glRenderWindow.h>
+# include <BALL_view/RENDERING/glRenderWindow.h>
 #endif
 
 #ifndef BALL_SYSTEM_MUTEX_H
-# include <BALL/SYSTEM/mutex.h>
+# include <BALL_core/SYSTEM/mutex.h>
 #endif
 
 #include <QtCore/QThread>

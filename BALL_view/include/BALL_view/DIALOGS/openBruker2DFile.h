@@ -6,19 +6,19 @@
 #define BALL_VIEW_DIALOGS_OPENBRUKER2DFILE_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_COMMON_H
-# include <BALL/common.h>
+# include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_REGULARDATA2DWIDGET_H
-# include <BALL/VIEW/WIDGETS/regularData2DWidget.h>
+# include <BALL_view/WIDGETS/regularData2DWidget.h>
 #endif
 
 #ifndef BALL_FORMAT_BRUKER2DFILE_H
-# include <BALL/FORMAT/bruker2DFile.h>
+# include <BALL_core/FORMAT/bruker2DFile.h>
 #endif
 
 #include <QtGui/QWidget>

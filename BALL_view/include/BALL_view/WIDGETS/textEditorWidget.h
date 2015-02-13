@@ -6,11 +6,11 @@
 #define BALL_VIEW_WIDGETS_TEXTEDITORWIDGET_H
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-# include <BALL/VIEW/WIDGETS/dockWidget.h>
+# include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #include <QPlainTextEdit>

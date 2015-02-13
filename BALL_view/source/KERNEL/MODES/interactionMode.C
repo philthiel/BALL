@@ -1,6 +1,6 @@
-#include <BALL/VIEW/KERNEL/MODES/interactionMode.h>
+#include <BALL_view/KERNEL/MODES/interactionMode.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QMouseEvent>

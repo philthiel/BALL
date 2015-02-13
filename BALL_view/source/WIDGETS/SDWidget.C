@@ -1,11 +1,11 @@
-#include <BALL/VIEW/WIDGETS/SDWidget.h>
+#include <BALL_view/WIDGETS/SDWidget.h>
 
-#include <BALL/VIEW/KERNEL/iconLoader.h>
+#include <BALL_view/KERNEL/iconLoader.h>
 
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/sdGenerator.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/sdGenerator.h>
 
 #include <QtGui/QPainter>
 #include <QtGui/QStyle>

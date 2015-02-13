@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_KERNEL_MODES_ROTATEMODE_H
 #define BALL_VIEW_KERNEL_MODES_ROTATEMODE_H
 
-#include <BALL/VIEW/KERNEL/MODES/interactionMode.h>
+#include <BALL_view/KERNEL/MODES/interactionMode.h>
 
 namespace BALL
 {

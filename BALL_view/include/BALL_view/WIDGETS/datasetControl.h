@@ -8,11 +8,11 @@
 #define BALL_VIEW_WIDGETS_DATASETCONTROL_H
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_GENERICCONTROL_H
-# include <BALL/VIEW/WIDGETS/genericControl.h>
+# include <BALL_view/WIDGETS/genericControl.h>
 #endif
 
 #include <QtGui/QTreeWidgetItem>

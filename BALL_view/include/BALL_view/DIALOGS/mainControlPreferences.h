@@ -6,18 +6,18 @@
 #define BALL_VIEW_DIALOGS_MAINCONTROLPREFERENCES_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_FORMAT_INIFILE_H
-# include <BALL/FORMAT/INIFile.h>
+# include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_mainControlPreferences.h>
+#include <BALL_view/UIC/ui_mainControlPreferences.h>
 
 #include <QtGui/QWidget>
 #include <QtGui/QFont>

@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/openBruker2DFile.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
+#include <BALL_view/DIALOGS/openBruker2DFile.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
 
-#include <BALL/FORMAT/bruker2DFile.h>
+#include <BALL_core/FORMAT/bruker2DFile.h>
 
 #include <QtGui/QFileDialog>
 

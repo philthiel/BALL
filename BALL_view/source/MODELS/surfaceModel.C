@@ -4,11 +4,11 @@
 // $Id: surfaceModel.C,v 1.13.18.2 2007/04/12 12:04:06 amoll Exp $
 //
 
-#include <BALL/VIEW/MODELS/surfaceModel.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL_view/MODELS/surfaceModel.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/KERNEL/atomContainer.h>
+#include <BALL_core/KERNEL/forEach.h>
 
 using namespace std;
 

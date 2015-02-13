@@ -6,15 +6,15 @@
 #define BALL_VIEW_RENDERING_GLOFFSCREENTARGET_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/renderWindow.h>
+# include <BALL_view/RENDERING/renderWindow.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_GLRENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/glRenderWindow.h>
+# include <BALL_view/RENDERING/glRenderWindow.h>
 #endif
 
 

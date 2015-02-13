@@ -1,4 +1,4 @@
-#include <BALL/VIEW/KERNEL/UIOperationMode.h>
+#include <BALL_view/KERNEL/UIOperationMode.h>
 
 namespace BALL
 {

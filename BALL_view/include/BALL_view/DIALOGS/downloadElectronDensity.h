@@ -4,17 +4,17 @@
 #ifndef BALL_VIEW_DIALOGS_DOWNLOADELECTRONDENSITY_H
 #define BALL_VIEW_DIALOGS_DOWNLOADELECTRONDENSITY_H
 
-#include <BALL/VIEW/UIC/ui_downloadElectronDensity.h>
+#include <BALL_view/UIC/ui_downloadElectronDensity.h>
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_downloadElectronDensity.h>
+#include <BALL_view/UIC/ui_downloadElectronDensity.h>
 
 #include <QtNetwork/QNetworkReply>
 

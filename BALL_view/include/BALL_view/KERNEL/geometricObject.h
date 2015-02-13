@@ -8,15 +8,15 @@
 #define BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-#	include <BALL/VIEW/DATATYPE/colorRGBA.h>
+#	include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifdef BALL_DATATYPE_HASHSET_H
-#	include <BALL/DATATYPE/hashSet.h>
+#	include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 namespace BALL

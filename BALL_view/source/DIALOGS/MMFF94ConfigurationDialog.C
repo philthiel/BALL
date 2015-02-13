@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/MMFF94ConfigurationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94NonBonded.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94StretchBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Torsion.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94OutOfPlaneBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94Torsion.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/MMFF94ConfigurationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94NonBonded.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94StretchBend.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Torsion.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94OutOfPlaneBend.h>
+#include <BALL_core/MOLMEC/MMFF94/MMFF94Torsion.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QRadioButton>

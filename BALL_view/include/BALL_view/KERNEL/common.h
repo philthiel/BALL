@@ -8,19 +8,19 @@
 #define BALL_VIEW_KERNEL_COMMON_H
 
 #ifndef BALL_DATATYPE_STRING_H
- #include <BALL/DATATYPE/string.h>
+ #include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3
- #include <BALL/MATHS/vector3.h>
+ #include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
- #include <BALL/CONCEPT/composite.h>
+ #include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
- #include <BALL/DATATYPE/regularData3D.h>
+ #include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #include <QtCore/QEvent>

@@ -323,7 +323,7 @@
   <customwidget>
    <class>BALL::VIEW::ColorButton</class>
    <extends>QPushButton</extends>
-   <header location="global">BALL/VIEW/WIDGETS/colorButton.h</header>
+   <header location="global">BALL_view/WIDGETS/colorButton.h</header>
    <slots>
     <signal>colorChanged(QColor)</signal>
    </slots>

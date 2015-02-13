@@ -8,11 +8,11 @@
 #define BALL_VIEW_MODELS_BALLANDSTICKMODEL_H
 
 #ifndef BALL_VIEW_MODELS_ATOMBONDMODELBASEPROCESSOR_H
-#	include <BALL/VIEW/MODELS/atomBondModelBaseProcessor.h>
+#	include <BALL_view/MODELS/atomBondModelBaseProcessor.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
- #include <BALL/KERNEL/atom.h>
+ #include <BALL_core/KERNEL/atom.h>
 #endif
 
 namespace BALL
@@ -216,7 +216,7 @@ namespace BALL
 		};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/MODELS/ballAndStickModel.iC>
+#		include <BALL_view/MODELS/ballAndStickModel.iC>
 #	endif
 
 	} // namespace VIEW

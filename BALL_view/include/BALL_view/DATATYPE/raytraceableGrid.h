@@ -6,7 +6,7 @@
 #define BALL_VIEW_DATATYPE_RAYTRACEABLEGRID_H
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 namespace BALL

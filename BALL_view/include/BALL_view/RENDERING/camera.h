@@ -2,15 +2,15 @@
 #define BALL_VIEW_RENDERING_CAMERA_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-	#include <BALL/COMMON/global.h>
+	#include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-	#include <BALL/MATHS/vector3.h>
+	#include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_QUATERNION_H
-	#include <BALL/MATHS/quaternion.h>
+	#include <BALL_core/MATHS/quaternion.h>
 #endif
 
 namespace BALL

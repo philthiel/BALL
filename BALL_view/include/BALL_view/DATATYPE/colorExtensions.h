@@ -8,7 +8,7 @@
 #define BALL_VIEW_DATATYPE_COLOREXTENSIONS_H
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 namespace BALL
@@ -201,7 +201,7 @@ namespace BALL
 
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorExtensions.iC>
+#			include <BALL_view/DATATYPE/colorExtensions.iC>
 #		endif
 
 	} // namespace VIEW

@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/peptideDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/COMMON/logStream.h>
-#include <BALL/STRUCTURE/peptideCapProcessor.h>
+#include <BALL_view/DIALOGS/peptideDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/COMMON/logStream.h>
+#include <BALL_core/STRUCTURE/peptideCapProcessor.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QRadioButton>

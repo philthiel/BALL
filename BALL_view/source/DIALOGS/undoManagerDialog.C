@@ -1,11 +1,11 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/VIEW/DIALOGS/undoManagerDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/COMMON/logStream.h>
+#include <BALL_view/DIALOGS/undoManagerDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/COMMON/logStream.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QRadioButton>

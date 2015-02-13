@@ -6,14 +6,14 @@
 #define BALL_VIEW_DIALOGS_ATOMOVERVIEW_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_atomOverview.h>
+#include <BALL_view/UIC/ui_atomOverview.h>
 
 namespace BALL
 {

@@ -6,15 +6,15 @@
 #define BALL_VIEW_MODELS_LABELMODEL_H
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-# include <BALL/VIEW/MODELS/modelProcessor.h>
+# include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_STRUCTURE_GEOMETRICPROPERTIES_H
-# include <BALL/STRUCTURE/geometricProperties.h>
+# include <BALL_core/STRUCTURE/geometricProperties.h>
 #endif
 
 

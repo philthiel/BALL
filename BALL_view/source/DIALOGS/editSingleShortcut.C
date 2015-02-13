@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/editSingleShortcut.h>
-#include <BALL/VIEW/KERNEL/shortcutRegistry.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/editSingleShortcut.h>
+#include <BALL_view/KERNEL/shortcutRegistry.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/SYSTEM/path.h>
 #include <QtGui/QDialog>
 
 namespace BALL

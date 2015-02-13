@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/FDPBDialog.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/threads.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/DIALOGS/FDPBDialog.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/threads.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>

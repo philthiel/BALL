@@ -6,16 +6,16 @@
 #define BALL_VIEW_RENDERING_RENDERERS_RTFACTRENDERER_H
 
 #define BALLVIEW_RTFACTRENDERER_THROW(exceptionName, message) (throw BALL::Exception::##exceptionName##(__FILE__, __LINE__, message))
-#include <BALL/VIEW/RENDERING/RENDERERS/raytracingRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/raytracingRenderer.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/stage.h>
-#include <BALL/VIEW/KERNEL/representationManager.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/MATHS/surface.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/stage.h>
+#include <BALL_view/KERNEL/representationManager.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/MATHS/surface.h>
+#include <BALL_core/MATHS/vector3.h>
+#include <BALL_core/DATATYPE/hashMap.h>
 
 #include <RTpieCpp/RayTracerHandle.hpp>
 #include <RTfact/Model/Image/BasicImage2D.hpp>

@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/RENDERING/glOffscreenTarget.h>
+#include <BALL_view/RENDERING/glOffscreenTarget.h>
 
 #include <QtGui/QApplication>
 #include <QtGui/QImage>

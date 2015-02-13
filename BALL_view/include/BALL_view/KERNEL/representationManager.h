@@ -7,11 +7,11 @@
 #define  BALL_VIEW_KERNEL_REPRESENTATIONMANAGER_H
 
 #ifndef BALL_VIEW_KERNEL_REPRESENTATION_H
-#	include <BALL/VIEW/KERNEL/representation.h>
+#	include <BALL_view/KERNEL/representation.h>
 #endif
 
 #ifndef BALL_SYSTEM_MUTEX_H
-#include <BALL/SYSTEM/mutex.h>
+#include <BALL_core/SYSTEM/mutex.h>
 #endif
 
 #include <QtCore/QCoreApplication>

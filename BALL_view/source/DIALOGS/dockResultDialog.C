@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/dockResultDialog.h>
-#include <BALL/VIEW/DIALOGS/amberConfigurationDialog.h>
+#include <BALL_view/DIALOGS/dockResultDialog.h>
+#include <BALL_view/DIALOGS/amberConfigurationDialog.h>
 
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
 
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
-#include <BALL/SCORING/FUNCTIONS/energeticEvaluation.h>
-#include <BALL/SCORING/FUNCTIONS/amberEvaluation.h>
-#include <BALL/SCORING/FUNCTIONS/randomEvaluation.h>
-#include <BALL/DOCKING/COMMON/dockResult.h>
+#include <BALL_core/SCORING/FUNCTIONS/energeticEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/amberEvaluation.h>
+#include <BALL_core/SCORING/FUNCTIONS/randomEvaluation.h>
+#include <BALL_core/DOCKING/COMMON/dockResult.h>
 
 #include <QtGui/QTableWidget>
 #include <QtGui/QHeaderView>

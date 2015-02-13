@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/preferencesObject.h>
-#include <BALL/VIEW/KERNEL/preferencesEntry.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/DATATYPE/colorRGBA.h>
-#include <BALL/VIEW/WIDGETS/colorButton.h>
+#include <BALL_core/CONCEPT/preferencesObject.h>
+#include <BALL_view/KERNEL/preferencesEntry.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/DATATYPE/colorRGBA.h>
+#include <BALL_view/WIDGETS/colorButton.h>
 
 #include <QtGui/QSlider>
 #include <QtGui/QSpinBox>

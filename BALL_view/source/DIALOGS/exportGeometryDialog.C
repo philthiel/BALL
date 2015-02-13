@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/exportGeometryDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/exportGeometryDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/common.h>
 
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/gridVisualisation.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/gridVisualisation.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QMessageBox>

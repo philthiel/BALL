@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/shortcutRegistry.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/shortcutRegistry.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtGui/QAction>
 

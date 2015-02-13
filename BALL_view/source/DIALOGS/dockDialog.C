@@ -13,19 +13,19 @@
 #include <QtGui/QTabWidget>
 #include <QtGui/QButtonGroup>
 
-#include <BALL/VIEW/DIALOGS/dockDialog.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/WIDGETS/dockingController.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/DATATYPE/options.h>
+#include <BALL_view/DIALOGS/dockDialog.h>
+#include <BALL_core/STRUCTURE/fragmentDB.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/dockingController.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/DATATYPE/options.h>
 
 #ifdef BALL_HAS_FFTW
-#include <BALL/DOCKING/geometricFit.h>
-#include <BALL/VIEW/DIALOGS/geometricFitDialog.h>
+#include <BALL_core/DOCKING/geometricFit.h>
+#include <BALL_view/DIALOGS/geometricFitDialog.h>
 #endif
 
 

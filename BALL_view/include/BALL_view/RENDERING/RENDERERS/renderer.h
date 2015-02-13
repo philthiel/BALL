@@ -6,19 +6,19 @@
 #define BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
 
 #ifndef BALL_VIEW_KERNEL_REPRESENTATION_H
-#	include <BALL/VIEW/KERNEL/representation.h>
+#	include <BALL_view/KERNEL/representation.h>
 #endif
 
 #ifndef BALL_CONCEPT_OBJECT_H
-#	include <BALL/CONCEPT/object.h>
+#	include <BALL_core/CONCEPT/object.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_STAGE_H
-# include <BALL/VIEW/KERNEL/stage.h>
+# include <BALL_view/KERNEL/stage.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR2_H
-# include <BALL/MATHS/vector2.h>
+# include <BALL_core/MATHS/vector2.h>
 #endif
 
 class QImage;

@@ -8,23 +8,23 @@
 #define BALL_VIEW_MODELS_BACKBONEMODEL_H
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-#	include <BALL/VIEW/MODELS/modelProcessor.h>
+#	include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif 
 
 #ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
- #include <BALL/KERNEL/secondaryStructure.h>
+ #include <BALL_core/KERNEL/secondaryStructure.h>
 #endif
 
 #ifndef BALL_KERNEL_PROTEIN_H
- #include <BALL/KERNEL/protein.h>
+ #include <BALL_core/KERNEL/protein.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
- #include <BALL/MATHS/matrix44.h>
+ #include <BALL_core/MATHS/matrix44.h>
 #endif
 
 namespace BALL

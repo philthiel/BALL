@@ -1,18 +1,18 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/VIEW/DIALOGS/downloadElectronDensity.h>
-#include <BALL/VIEW/DIALOGS/downloadPDBFile.h>
+#include <BALL_view/DIALOGS/downloadElectronDensity.h>
+#include <BALL_view/DIALOGS/downloadPDBFile.h>
 
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
-#include <BALL/FORMAT/DSN6File.h>
-#include <BALL/FORMAT/CCP4File.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/threads.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+#include <BALL_core/FORMAT/DSN6File.h>
+#include <BALL_core/FORMAT/CCP4File.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/threads.h>
 
 #include <fstream>
 #include <iostream>

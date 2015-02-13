@@ -6,35 +6,35 @@
 #define BALL_VIEW_KERNEL_STAGE_H
 
 #ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/MATHS/vector3.h>
+# include <BALL_core/MATHS/vector3.h>
 #endif
 
 #ifndef BALL_MATHS_QUATERNION_H
-#	include <BALL/MATHS/quaternion.h>
+#	include <BALL_core/MATHS/quaternion.h>
 #endif
 
 #ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/MATHS/matrix44.h>
+#	include <BALL_core/MATHS/matrix44.h>
 #endif
 
 #ifndef BALL_MATHS_ANGLE_H
-# include <BALL/MATHS/angle.h>
+# include <BALL_core/MATHS/angle.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef  BALL_VIEW_KERNEL_REPRESENTATION_H
-# include <BALL/VIEW/KERNEL/representation.h>
+# include <BALL_view/KERNEL/representation.h>
 #endif
 
 #ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/COMMON/exception.h>
+# include <BALL_core/COMMON/exception.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_CAMERA_H
-# include <BALL/VIEW/RENDERING/camera.h>
+# include <BALL_view/RENDERING/camera.h>
 #endif
 
 namespace BALL

@@ -3,7 +3,7 @@
 //
 
 
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
 
 namespace BALL
 {

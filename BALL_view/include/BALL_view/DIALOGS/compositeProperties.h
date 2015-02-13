@@ -8,14 +8,14 @@
 #define BALL_VIEW_DIALOGS_COMPOSITEPROPERTIES_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE
-# include <BALL/CONCEPT/composite.h>
+# include <BALL_core/CONCEPT/composite.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_compositeProperties.h>
+#include <BALL_view/UIC/ui_compositeProperties.h>
 
 namespace BALL
 {

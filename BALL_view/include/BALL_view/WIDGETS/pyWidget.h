@@ -6,19 +6,19 @@
 #define BALL_VIEW_WIDGETS_PYWIDGET_H
 
 #ifndef BALL_COMMON_H
-#	include <BALL/common.h>
+#	include <BALL_core/common.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-#	include <BALL/VIEW/WIDGETS/dockWidget.h>
+#	include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_TEXTEDITORWIDGET_H
-#	include <BALL/VIEW/WIDGETS/textEditorWidget.h>
+#	include <BALL_view/WIDGETS/textEditorWidget.h>
 #endif
 
 #include <QtGui/QDragEnterEvent>

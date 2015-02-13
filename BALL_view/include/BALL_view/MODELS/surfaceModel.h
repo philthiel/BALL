@@ -8,11 +8,11 @@
 #define BALL_VIEW_MODELS_SURFACEMODEL_H
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-#	include <BALL/VIEW/MODELS/modelProcessor.h>
+#	include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_SURFACEPROCESSOR_H
-#	include <BALL/STRUCTURE/surfaceProcessor.h>
+#	include <BALL_core/STRUCTURE/surfaceProcessor.h>
 #endif
 
 namespace BALL

@@ -6,14 +6,14 @@
 #define BALL_VIEW_DIALOGS_STEREOSETTINSGDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_stereoSettingsDialog.h>
+#include <BALL_view/UIC/ui_stereoSettingsDialog.h>
 
 #include <QtGui/QDialog>
 

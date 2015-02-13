@@ -7,21 +7,21 @@
 #define BALL_VIEW_DIALOGS_DOCKPROGRESSDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
 #ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
-# include <BALL/DOCKING/COMMON/dockingAlgorithm.h>
+# include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #endif
 
 #include <QtCore/QTimer>
 #include <QtCore/QDateTime>
 
-#include <BALL/VIEW/UIC/ui_dockProgressDialog.h>
+#include <BALL_view/UIC/ui_dockProgressDialog.h>
 
 namespace BALL
 {

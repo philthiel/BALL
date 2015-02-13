@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/amberConfigurationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/AMBER/amberBend.h>
-#include <BALL/MOLMEC/AMBER/amberStretch.h>
-#include <BALL/MOLMEC/AMBER/amberTorsion.h>
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/amberConfigurationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/MOLMEC/AMBER/amber.h>
+#include <BALL_core/MOLMEC/AMBER/amberBend.h>
+#include <BALL_core/MOLMEC/AMBER/amberStretch.h>
+#include <BALL_core/MOLMEC/AMBER/amberTorsion.h>
+#include <BALL_core/MOLMEC/AMBER/amberNonBonded.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QRadioButton>

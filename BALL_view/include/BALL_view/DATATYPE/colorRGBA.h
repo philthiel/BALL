@@ -6,11 +6,11 @@
 #define BALL_VIEW_DATATYPE_COLORRGBA_H
 
 #ifndef BALL_VIEW_DATATYPE_COLORUNIT_H
-#	include <BALL/VIEW/DATATYPE/colorUnit.h>
+#	include <BALL_view/DATATYPE/colorUnit.h>
 #endif
 
 #ifndef BALL_CONCEPT_TIMESTAMP_H
- #include <BALL/CONCEPT/timeStamp.h>
+ #include <BALL_core/CONCEPT/timeStamp.h>
 #endif
 
 class QColor;
@@ -444,10 +444,10 @@ template class BALL_VIEW_EXPORT std::vector<ColorRGBA>;
 #endif
 
 #		ifndef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorRGBA.iC>
+#			include <BALL_view/DATATYPE/colorRGBA.iC>
 #		endif
   		
 	} // namespace VIEW
 } // namespace BALL
 
-#endif // <BALL/VIEW_DATATYPE_COLORRGBA_H
+#endif // <BALL_core/VIEW_DATATYPE_COLORRGBA_H

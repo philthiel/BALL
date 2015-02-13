@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/modelInformation.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/modelInformation.h>
+#include <BALL_view/KERNEL/common.h>
 
 using namespace std;
 

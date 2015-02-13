@@ -6,32 +6,32 @@
 #define  BALL_VIEW_KERNEL_REPRESENTATION_H
 
 #ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/CONCEPT/property.h>
+#	include <BALL_core/CONCEPT/property.h>
 #endif
 
 #ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/CONCEPT/composite.h>
+#	include <BALL_core/CONCEPT/composite.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #ifndef BALL_CONCEPT_MOLECULARINFORMATION_H
-#	include <BALL/CONCEPT/molecularInformation.h>
+#	include <BALL_core/CONCEPT/molecularInformation.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODELINFORMATION_H
-#	include <BALL/VIEW/KERNEL/modelInformation.h>
+#	include <BALL_view/KERNEL/modelInformation.h>
 #endif
 
 // next two defines need to be included in header file, because of iC file
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-# include <BALL/VIEW/MODELS/modelProcessor.h>
+# include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 #ifndef BALL_VIEW_MODELS_COLORPROCESSOR_H
-# include <BALL/VIEW/MODELS/colorProcessor.h>
+# include <BALL_view/MODELS/colorProcessor.h>
 #endif
 
 
@@ -342,7 +342,7 @@ namespace BALL
 		typedef std::list<Representation*> RepresentationList;
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/KERNEL/representation.iC>
+#		include <BALL_view/KERNEL/representation.iC>
 #	endif
 
 	} // namespace VIEW

@@ -8,27 +8,27 @@
 #define BALL_VIEW_MODELS_STANDARDCOLORPROCESSOR_H
 
 #ifndef BALL_VIEW_MODELS_COLORPROCESSOR_H
-#	include <BALL/VIEW/MODELS/colorProcessor.h>
+#	include <BALL_view/MODELS/colorProcessor.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPTE_COLORMAP_H
-# include <BALL/VIEW/DATATYPE/colorMap.h>
+# include <BALL_view/DATATYPE/colorMap.h>
 #endif
 
 #ifndef BALL_KERNEL_RESIDUE_H
-# include<BALL/KERNEL/residue.h>
+# include<BALL_core/KERNEL/residue.h>
 #endif
 
 #ifndef BALL_KERNEL_CHAIN_H
-# include<BALL/KERNEL/chain.h>
+# include<BALL_core/KERNEL/chain.h>
 #endif
 
 #ifndef BALL_KERNEL_MOLECULE_H
-# include<BALL/KERNEL/molecule.h>
+# include<BALL_core/KERNEL/molecule.h>
 #endif
 
 #ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-# include<BALL/KERNEL/secondaryStructure.h>
+# include<BALL_core/KERNEL/secondaryStructure.h>
 #endif
 
 
@@ -611,7 +611,7 @@ namespace BALL
 		};
 			
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/MODELS/standardColorProcessor.iC>
+#		include <BALL_view/MODELS/standardColorProcessor.iC>
 #	endif
 
 } } // namespaces

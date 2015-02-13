@@ -4,7 +4,7 @@
 // $Id: editFunctions.C,v 1.5.20.1 2007/03/25 21:56:45 oliver Exp $
 //
 
-#include <BALL/VIEW/WIDGETS/editFunctions.h>
+#include <BALL_view/WIDGETS/editFunctions.h>
 
 namespace BALL
 {

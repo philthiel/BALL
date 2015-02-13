@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/contourSurfaceDialog.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/contourSurfaceDialog.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>

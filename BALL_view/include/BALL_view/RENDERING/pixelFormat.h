@@ -5,7 +5,7 @@
 #ifndef BALL_VIEW_RENDERING_PIXELFORMAT_H
 #define BALL_VIEW_RENDERING_PIXELFORMAT_H
 
-#include <BALL/COMMON/global.h>
+#include <BALL_core/COMMON/global.h>
 
 #include <iostream>
 

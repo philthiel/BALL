@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/editOperation.h>
+#include <BALL_view/KERNEL/editOperation.h>
 namespace BALL
 {
 	namespace VIEW

@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/geometricObject.h>
-#include <BALL/VIEW/DATATYPE/colorExtensions.h>
+#include <BALL_view/KERNEL/geometricObject.h>
+#include <BALL_view/DATATYPE/colorExtensions.h>
 
 using std::endl;
 using std::ostream;

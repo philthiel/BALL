@@ -3,7 +3,7 @@
 //
 
 #include <limits>
-#include <BALL/VIEW/DATATYPE/raytraceableGrid.h>
+#include <BALL_view/DATATYPE/raytraceableGrid.h>
 namespace BALL
 {
 	namespace VIEW

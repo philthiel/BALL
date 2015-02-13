@@ -8,11 +8,11 @@
 #define BALL_VIEW_KERNEL_PREFERENCES_ENTRY
 
 #ifndef BALL_FORMAT_INIFILE_H
-# include <BALL/FORMAT/INIFile.h>
+# include <BALL_core/FORMAT/INIFile.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 

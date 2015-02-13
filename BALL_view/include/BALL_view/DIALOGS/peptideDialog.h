@@ -6,14 +6,14 @@
 #define BALL_VIEW_DIALOGS_PEPTIDEDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_STRUCTURE_PEPTIDEBUILDER_H
-#include <BALL/STRUCTURE/peptideBuilder.h>
+#include <BALL_core/STRUCTURE/peptideBuilder.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_peptideDialog.h>
+#include <BALL_view/UIC/ui_peptideDialog.h>
 
 namespace BALL
 {

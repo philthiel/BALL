@@ -7,26 +7,26 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/molecularControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/representation.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/DIALOGS/compositeProperties.h>
-#include <BALL/VIEW/DIALOGS/bondProperties.h>
-#include <BALL/VIEW/DIALOGS/atomOverview.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/residueRotamerSet.h>
-#include <BALL/STRUCTURE/rotamerLibrary.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/STRUCTURE/disulfidBondProcessor.h>
+#include <BALL_view/WIDGETS/molecularControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/representation.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/DIALOGS/compositeProperties.h>
+#include <BALL_view/DIALOGS/bondProperties.h>
+#include <BALL_view/DIALOGS/atomOverview.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/selector.h>
+#include <BALL_core/KERNEL/residue.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/STRUCTURE/residueRotamerSet.h>
+#include <BALL_core/STRUCTURE/rotamerLibrary.h>
+#include <BALL_core/STRUCTURE/peptides.h>
+#include <BALL_core/STRUCTURE/disulfidBondProcessor.h>
 
 #include <QtGui/QComboBox>
 #include <QtGui/QPushButton>

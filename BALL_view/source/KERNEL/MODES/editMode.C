@@ -7,24 +7,24 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/MODES/editMode.h>
+#include <BALL_view/KERNEL/MODES/editMode.h>
 
 #include <QtGui/QMenu>
 #include <QtGui/QKeyEvent>
 #include <QtGui/QWheelEvent>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/KERNEL/PDBAtom.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/iconLoader.h>
-#include <BALL/VIEW/DIALOGS/PTEDialog.h>
-#include <BALL/VIEW/DIALOGS/compositeProperties.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/iconLoader.h>
+#include <BALL_view/DIALOGS/PTEDialog.h>
+#include <BALL_view/DIALOGS/compositeProperties.h>
 
 namespace BALL
 {

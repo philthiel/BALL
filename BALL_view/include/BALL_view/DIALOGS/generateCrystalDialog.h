@@ -4,30 +4,30 @@
 #ifndef BALL_VIEW_DIALOGS_GENERATECRYSTALDIALOG_H
 #define BALL_VIEW_DIALOGS_GENERATECRYSTALDIALOG_H
 
-#include <BALL/VIEW/UIC/ui_generateCrystalDialog.h>
+#include <BALL_view/UIC/ui_generateCrystalDialog.h>
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 #ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/KERNEL/system.h>
+# include <BALL_core/KERNEL/system.h>
 #endif
 
 #ifndef BALL_XRAY_CRYSTALGENERATOR_H
-# include <BALL/XRAY/crystalGenerator.h>
+# include <BALL_core/XRAY/crystalGenerator.h>
 #endif
 
 #ifndef BALL_XRAY_CRYSTALGENERATOR_H
-# include <BALL/XRAY/crystalGenerator.h>
+# include <BALL_core/XRAY/crystalGenerator.h>
 #endif
 
 #ifndef BALL_FORMAT_PARAAMETERSECTION_H
-# include <BALL/FORMAT/parameterSection.h>
+# include <BALL_core/FORMAT/parameterSection.h>
 #endif
 
 namespace BALL

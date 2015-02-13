@@ -6,23 +6,23 @@
 #define BALL_VIEW_RENDERING_RENDERERS_GLRENDERER_H
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-#	include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+#	include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
 #ifndef BALL_MATHS_QUATERNION_H
-# include <BALL/MATHS/quaternion.h>
+# include <BALL_core/MATHS/quaternion.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-#	include <BALL/VIEW/KERNEL/geometricObject.h>
+#	include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_STAGE_H
-# include <BALL/VIEW/KERNEL/stage.h>
+# include <BALL_view/KERNEL/stage.h>
 #endif
 
 #ifdef BALL_HAS_GLEW
@@ -30,11 +30,11 @@
 #endif
 
 #ifndef BALL_VIEW_RENDERING_GLDISPLAYLIST_H
-# include <BALL/VIEW/RENDERING/glDisplayList.h>
+# include <BALL_view/RENDERING/glDisplayList.h>
 #endif
 
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/DATATYPE/regularData3D.h>
+# include <BALL_core/DATATYPE/regularData3D.h>
 #endif
 
 #ifndef APIENTRY
@@ -486,7 +486,7 @@ namespace BALL
 		};
 
 #	ifndef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.iC>
+#		include <BALL_view/RENDERING/RENDERERS/glRenderer.iC>
 #	endif
 
 	} // namespace VIEW

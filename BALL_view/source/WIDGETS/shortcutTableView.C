@@ -1,18 +1,18 @@
-#include <BALL/VIEW/WIDGETS/shortcutTableView.h>
+#include <BALL_view/WIDGETS/shortcutTableView.h>
 
 #ifndef BALL_VIEW_KERNEL_SHORTCUTREGISTRY_H
-# include <BALL/VIEW/KERNEL/shortcutRegistry.h>
+# include <BALL_view/KERNEL/shortcutRegistry.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_EDITSINGLESHORTCUT_H
-# include <BALL/VIEW/DIALOGS/editSingleShortcut.h>
+# include <BALL_view/DIALOGS/editSingleShortcut.h>
 #endif
 
 #include <QtCore/QAbstractTableModel>
 #include <QtGui/QFontMetrics>
 #include <QtGui/QSortFilterProxyModel>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/scene.h>
 
 Q_DECLARE_METATYPE(BALL::String)
 

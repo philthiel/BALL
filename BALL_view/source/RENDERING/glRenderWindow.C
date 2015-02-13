@@ -4,10 +4,10 @@
 
 #include <GL/glew.h>
 
-#include <BALL/VIEW/RENDERING/glRenderWindow.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/COMMON/logStream.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/RENDERING/glRenderWindow.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_core/COMMON/logStream.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtCore/QEvent>
 #include <QtGui/QPaintEvent>

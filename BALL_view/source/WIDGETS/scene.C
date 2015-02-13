@@ -7,70 +7,70 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/stage.h>
-#include <BALL/VIEW/KERNEL/threads.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/KERNEL/shortcutRegistry.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/iconLoader.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/stage.h>
+#include <BALL_view/KERNEL/threads.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/KERNEL/shortcutRegistry.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/iconLoader.h>
 
-#include <BALL/VIEW/DIALOGS/setCamera.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
-#include <BALL/VIEW/DIALOGS/lightSettings.h>
-#include <BALL/VIEW/DIALOGS/stageSettings.h>
-#include <BALL/VIEW/DIALOGS/materialSettings.h>
-#include <BALL/VIEW/DIALOGS/exportGeometryDialog.h>
+#include <BALL_view/DIALOGS/setCamera.h>
+#include <BALL_view/DIALOGS/preferences.h>
+#include <BALL_view/DIALOGS/lightSettings.h>
+#include <BALL_view/DIALOGS/stageSettings.h>
+#include <BALL_view/DIALOGS/materialSettings.h>
+#include <BALL_view/DIALOGS/exportGeometryDialog.h>
 
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/POVRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/VRMLRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/XML3DRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/STLRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/tilingRenderer.h>
-#include <BALL/VIEW/RENDERING/glOffscreenTarget.h>
+#include <BALL_view/RENDERING/RENDERERS/POVRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/VRMLRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/XML3DRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/STLRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/tilingRenderer.h>
+#include <BALL_view/RENDERING/glOffscreenTarget.h>
 
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/line.h>
 
-#include <BALL/VIEW/INPUT/transformationEvent6D.h>
-#include <BALL/VIEW/INPUT/headTrackingEvent.h>
-#include <BALL/VIEW/INPUT/motionTrackingEvent.h>
-#include <BALL/VIEW/INPUT/notificationEvent.h>
-#include <BALL/VIEW/INPUT/buttonEvent.h>
+#include <BALL_view/INPUT/transformationEvent6D.h>
+#include <BALL_view/INPUT/headTrackingEvent.h>
+#include <BALL_view/INPUT/motionTrackingEvent.h>
+#include <BALL_view/INPUT/notificationEvent.h>
+#include <BALL_view/INPUT/buttonEvent.h>
 
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/SYSTEM/systemCalls.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/SYSTEM/directory.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/SYSTEM/systemCalls.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/KERNEL/PTE.h>
+#include <BALL_core/SYSTEM/directory.h>
+#include <BALL_core/MATHS/quaternion.h>
+#include <BALL_core/QSAR/ringPerceptionProcessor.h>
 
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/addHydrogenProcessor.h>
+#include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL_core/STRUCTURE/geometricTransformations.h>
+#include <BALL_core/STRUCTURE/geometricProperties.h>
+#include <BALL_core/STRUCTURE/addHydrogenProcessor.h>
 
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/DATATYPE/colorMap.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/DATATYPE/colorMap.h>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/bufferedRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/bufferedRenderer.h>
 
 #ifdef BALL_HAS_RTFACT
 
-#include <BALL/VIEW/RENDERING/glRenderWindow.h>
-//#include <BALL/VIEW/RENDERING/RENDERERS/cudaVolumeRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/rtfactRenderer.h>
+#include <BALL_view/RENDERING/glRenderWindow.h>
+//#include <BALL_view/RENDERING/RENDERERS/cudaVolumeRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/rtfactRenderer.h>
 
 #endif
 

@@ -7,11 +7,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/VIEW/DIALOGS/labelDialog.h>
-#include <BALL/VIEW/MODELS/labelModel.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_view/DIALOGS/labelDialog.h>
+#include <BALL_view/MODELS/labelModel.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtGui/QMenuBar>
 #include <QtGui/QLabel>

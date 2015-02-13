@@ -7,29 +7,29 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
-#include <BALL/VIEW/DIALOGS/modelSettingsDialog.h>
-#include <BALL/VIEW/DIALOGS/coloringSettingsDialog.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
+#include <BALL_view/DIALOGS/displayProperties.h>
+#include <BALL_view/DIALOGS/modelSettingsDialog.h>
+#include <BALL_view/DIALOGS/coloringSettingsDialog.h>
+#include <BALL_view/DIALOGS/preferences.h>
 
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/common.h>
 
-#include <BALL/VIEW/WIDGETS/geometricControl.h>
+#include <BALL_view/WIDGETS/geometricControl.h>
 
-#include <BALL/VIEW/MODELS/backboneModel.h>
-#include <BALL/VIEW/MODELS/cartoonModel.h>
-#include <BALL/VIEW/MODELS/ballAndStickModel.h>
-#include <BALL/VIEW/MODELS/lineModel.h>
-#include <BALL/VIEW/MODELS/surfaceModel.h>
-#include <BALL/VIEW/MODELS/vanDerWaalsModel.h>
-#include <BALL/VIEW/MODELS/HBondModel.h>
-#include <BALL/VIEW/MODELS/forceModel.h>
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
+#include <BALL_view/MODELS/backboneModel.h>
+#include <BALL_view/MODELS/cartoonModel.h>
+#include <BALL_view/MODELS/ballAndStickModel.h>
+#include <BALL_view/MODELS/lineModel.h>
+#include <BALL_view/MODELS/surfaceModel.h>
+#include <BALL_view/MODELS/vanDerWaalsModel.h>
+#include <BALL_view/MODELS/HBondModel.h>
+#include <BALL_view/MODELS/forceModel.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
 
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
 
 #include <QtGui/QMenuBar>
 #include <QtGui/QLabel>

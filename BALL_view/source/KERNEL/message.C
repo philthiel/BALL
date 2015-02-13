@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/DATATYPE/dataset.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/DATATYPE/dataset.h>
+#include <BALL_core/COMMON/rtti.h>
 
 using namespace std;
 
@@ -358,7 +358,7 @@ DockingFinishedMessage::~DockingFinishedMessage()
 
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/KERNEL/message.iC>
+#		include <BALL_view/KERNEL/message.iC>
 #	endif 
 
 } } // namespaces

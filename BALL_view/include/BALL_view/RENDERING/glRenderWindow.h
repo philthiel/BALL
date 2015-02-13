@@ -6,23 +6,23 @@
 #define BALL_VIEW_RENDERING_GLRENDERWINDOW_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
+# include <BALL_core/DATATYPE/string.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERWINDOW_H
-# include <BALL/VIEW/RENDERING/renderWindow.h>
+# include <BALL_view/RENDERING/renderWindow.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-# include <BALL/VIEW/DATATYPE/colorRGBA.h>
+# include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_SYSTEM_MUTEX_H
-# include <BALL/SYSTEM/mutex.h>
+# include <BALL_core/SYSTEM/mutex.h>
 #endif
 
 #include <QtOpenGL/qgl.h>

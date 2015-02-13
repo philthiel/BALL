@@ -3,11 +3,11 @@
 //
 // $Id: lineModel.C,v 1.12 2005/12/23 17:03:34 amoll Exp $
 
-#include <BALL/VIEW/MODELS/lineModel.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/MODELS/lineModel.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
 
 using namespace std;
 

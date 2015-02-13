@@ -8,7 +8,7 @@
 #define BALL_VIEW_MODELS_FORCEMODEL_H
 
 #ifndef BALL_VIEW_MODELS_MODELPROCESSOR_H
-# include <BALL/VIEW/MODELS/modelProcessor.h>
+# include <BALL_view/MODELS/modelProcessor.h>
 #endif
 
 namespace BALL

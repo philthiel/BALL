@@ -6,11 +6,11 @@
 #define BALL_APPLICATIONS_BALLVIEW_MAINFRAME_H
 
 #ifndef BALL_VIEW_KERNEL_MAINCONTROL_H
-# include <BALL/VIEW/KERNEL/mainControl.h>
+# include <BALL_view/KERNEL/mainControl.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_SCENE_H
-# include <BALL/VIEW/WIDGETS/scene.h>
+# include <BALL_view/WIDGETS/scene.h>
 #endif
 
 #include <QtGui/QWidget>

@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/materialSettings.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/representation.h>
-#include <BALL/VIEW/DIALOGS/modifyRepresentationDialog.h>
-#include <BALL/CONCEPT/property.h>
+#include <BALL_view/DIALOGS/materialSettings.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/representation.h>
+#include <BALL_view/DIALOGS/modifyRepresentationDialog.h>
+#include <BALL_core/CONCEPT/property.h>
 
 #include <QtGui/QLabel>
 #include <QtGui/QSlider>

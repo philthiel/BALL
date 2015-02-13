@@ -6,14 +6,14 @@
 #define BALL_VIEW_DIALOGS_LABELDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_MODELS_FIELDLINE_CREATOR_H
-# include <BALL/VIEW/MODELS/fieldLineCreator.h>
+# include <BALL_view/MODELS/fieldLineCreator.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_fieldLinesDialog.h>
+#include <BALL_view/UIC/ui_fieldLinesDialog.h>
 
 namespace BALL
 {

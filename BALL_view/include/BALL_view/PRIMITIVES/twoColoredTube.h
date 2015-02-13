@@ -8,15 +8,15 @@
 #define BALL_VIEW_PRIMITIVES_TWOCOLOREDTUBE_H
 
 #ifndef BALL_VIEW_DATATYPE_COLOREXTENSIONS_H
-#	include <BALL/VIEW/DATATYPE/colorExtensions.h>
+#	include <BALL_view/DATATYPE/colorExtensions.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-#	include <BALL/VIEW/KERNEL/geometricObject.h>
+#	include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_VIEW_DATATYPE_VERTEX2_H
-#	include <BALL/VIEW/DATATYPE/vertex2.h>
+#	include <BALL_view/DATATYPE/vertex2.h>
 #endif
 
 namespace BALL
@@ -194,7 +194,7 @@ namespace BALL
 		};
 
 	#ifndef BALL_NO_INLINE_FUNCTIONS
-	# include <BALL/VIEW/PRIMITIVES/twoColoredTube.iC>
+	# include <BALL_view/PRIMITIVES/twoColoredTube.iC>
 	#endif
 
 	} // namespace VIEW

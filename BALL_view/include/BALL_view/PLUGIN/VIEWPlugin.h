@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_PLUGIN_VIEWPLUGIN_H
 #define BALL_VIEW_PLUGIN_VIEWPLUGIN_H
 
-#include <BALL/VIEW/KERNEL/preferencesEntry.h>
+#include <BALL_view/KERNEL/preferencesEntry.h>
 
 #include <QtCore/QString>
 #include <QtCore/QtPlugin>

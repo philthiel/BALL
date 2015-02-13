@@ -1,15 +1,15 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/VIEW/KERNEL/iconLoader.h>
+#include <BALL_view/KERNEL/iconLoader.h>
 
 #include <QtCore/QDir>
 #include <QtCore/QString>
 #include <QtGui/QIcon>
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/fileSystem.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
+#include <BALL_core/DATATYPE/string.h>
 
 namespace BALL
 {

@@ -6,18 +6,18 @@
 #define BALL_VIEW_DIALOGS_ASSIGNBONDORDERRESULTSDIALOG_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_WIDGETS_SDWIDGET_H
-# include <BALL/VIEW/WIDGETS/SDWidget.h>
+# include <BALL_view/WIDGETS/SDWidget.h>
 #endif
 
 #ifndef BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
-# include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+# include <BALL_core/STRUCTURE/assignBondOrderProcessor.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_assignBondOrderResultsDialog.h>
+#include <BALL_view/UIC/ui_assignBondOrderResultsDialog.h>
 
 #include <QtGui/QDialog>
 #include <map>

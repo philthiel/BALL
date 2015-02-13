@@ -3,7 +3,7 @@
 //
 // $Id: twoColoredLine.C,v 1.4.28.1 2007-03-25 22:02:36 oliver Exp $
 
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
 
 using namespace std;
 
@@ -87,7 +87,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/PRIMITIVES/twoColoredLine.iC>
+#			include <BALL_view/PRIMITIVES/twoColoredLine.iC>
 #		endif
 
 	} // namespace VIEW

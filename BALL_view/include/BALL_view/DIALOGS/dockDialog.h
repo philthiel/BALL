@@ -7,30 +7,30 @@
 #define BALL_VIEW_DIALOGS_DOCKDIALOG_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_PREFERENCESENTRY_H
-# include <BALL/VIEW/KERNEL/preferencesEntry.h>
+# include <BALL_view/KERNEL/preferencesEntry.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_RADIUSRULEPROCESSOR_H
-# include <BALL/MOLMEC/COMMON/radiusRuleProcessor.h>
+# include <BALL_core/MOLMEC/COMMON/radiusRuleProcessor.h>
 #endif
 
 #ifndef BALL_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
-# include <BALL/MOLMEC/COMMON/chargeRuleProcessor.h>
+# include <BALL_core/MOLMEC/COMMON/chargeRuleProcessor.h>
 #endif
 
 #ifndef BALL_STRUCTURE_DEFAULTPROCESSORS_H
-# include <BALL/STRUCTURE/defaultProcessors.h>
+# include <BALL_core/STRUCTURE/defaultProcessors.h>
 #endif
 
 #ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/DATATYPE/options.h>
+# include <BALL_core/DATATYPE/options.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_dockDialog.h>
+#include <BALL_view/UIC/ui_dockDialog.h>
 
 namespace BALL
 {

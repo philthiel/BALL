@@ -8,11 +8,11 @@
 #define BALL_WIDGETS_DOCKINGCONTROLLER_H
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 #ifndef BALL_VIEW_DIALOGS_DOCKDIALOG_H
-# include <BALL/VIEW/DIALOGS/dockDialog.h>
+# include <BALL_view/DIALOGS/dockDialog.h>
 #endif
 
 namespace BALL

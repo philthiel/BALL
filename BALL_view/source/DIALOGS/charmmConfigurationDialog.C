@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/charmmConfigurationDialog.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/MOLMEC/CHARMM/charmmBend.h>
-#include <BALL/MOLMEC/CHARMM/charmmStretch.h>
-#include <BALL/MOLMEC/CHARMM/charmmTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmmImproperTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmmNonBonded.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL_view/DIALOGS/charmmConfigurationDialog.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/MOLMEC/CHARMM/charmm.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmBend.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmStretch.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmTorsion.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmImproperTorsion.h>
+#include <BALL_core/MOLMEC/CHARMM/charmmNonBonded.h>
+#include <BALL_core/SYSTEM/path.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QLineEdit>

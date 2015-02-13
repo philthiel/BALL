@@ -8,19 +8,19 @@
 #define BALL_VIEW_MODELS_COLORPROCESSOR_H
 
 #ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
+#	include <BALL_core/CONCEPT/processor.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_GEOMETRICOBJECT_H
-#	include <BALL/VIEW/KERNEL/geometricObject.h>
+#	include <BALL_view/KERNEL/geometricObject.h>
 #endif
 
 #ifndef BALL_DATATYPE_HASHGRID_H
-# include <BALL/DATATYPE/hashGrid.h>
+# include <BALL_core/DATATYPE/hashGrid.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 namespace BALL

@@ -1,7 +1,7 @@
 #ifndef BALL_VIEW_WIDGETS_GRIDCOLORWIDGET_H
 #define BALL_VIEW_WIDGETS_GRIDCOLORWIDGET_H
 
-#include <BALL/VIEW/UIC/ui_gridColorWidget.h>
+#include <BALL_view/UIC/ui_gridColorWidget.h>
 
 namespace BALL
 {

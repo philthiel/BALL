@@ -6,11 +6,11 @@
 #define BALL_VIEW_RENDERING_RENDERERS_BUFFEREDRENDERER_H
 
 #ifndef BALL_VIEW_RENDERING_RENDERERS_RENDERER_H
-# include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
+# include <BALL_view/RENDERING/RENDERERS/renderer.h>
 #endif
 
 #ifndef BALL_VIEW_RENDERING_RENDERTARGET_H
-# include <BALL/VIEW/RENDERING/renderTarget.h>
+# include <BALL_view/RENDERING/renderTarget.h>
 #endif
 
 namespace BALL

@@ -1,7 +1,7 @@
 #ifndef DEVICEEVENT_H
 #define DEVICEEVENT_H
 
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/KERNEL/common.h>
 
 #include <QtCore/QEvent>
 

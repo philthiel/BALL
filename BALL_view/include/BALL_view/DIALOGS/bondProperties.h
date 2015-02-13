@@ -5,14 +5,14 @@
 #define BALL_VIEW_DIALOGS_BONDPROPERTIES_H
 
 #ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_KERNEL_ATOM_H
-# include <BALL/KERNEL/atom.h>
+# include <BALL_core/KERNEL/atom.h>
 #endif
 
-#include <BALL/VIEW/UIC/ui_bondProperties.h>
+#include <BALL_view/UIC/ui_bondProperties.h>
 
 namespace BALL
 {

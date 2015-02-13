@@ -7,25 +7,25 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/RENDERING/RENDERERS/renderer.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/stage.h>
+#include <BALL_view/RENDERING/RENDERERS/renderer.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/stage.h>
 
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
-#include <BALL/VIEW/PRIMITIVES/gridVisualisation.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
+#include <BALL_view/PRIMITIVES/gridVisualisation.h>
 
 namespace BALL
 {

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/coloringSettingsDialog.h>
-#include <BALL/VIEW/MODELS/standardColorProcessor.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_view/DIALOGS/coloringSettingsDialog.h>
+#include <BALL_view/MODELS/standardColorProcessor.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 #include <QtGui/QColorDialog>
 #include <QtGui/QSlider>

@@ -4,8 +4,8 @@
 // $Id: colorMap.C,v 1.2.18.1 2007/03/25 21:56:34 oliver Exp $
 //
 
-#include <BALL/VIEW/DATATYPE/colorMap.h>
-#include <BALL/MATHS/common.h>
+#include <BALL_view/DATATYPE/colorMap.h>
+#include <BALL_core/MATHS/common.h>
 
 using namespace std;
 

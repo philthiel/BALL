@@ -6,15 +6,15 @@
 #define BALL_VIEW_WIDGETS_TESTFRAMEWORK_H
 
 #ifndef BALL_VIEW_WIDGETS_DOCKWIDGET_H
-#	include <BALL/VIEW/WIDGETS/dockWidget.h>
+#	include <BALL_view/WIDGETS/dockWidget.h>
 #endif
 
 #ifndef BALL_SYSTEM_FILE_H
-# include <BALL/SYSTEM/file.h>
+# include <BALL_core/SYSTEM/file.h>
 #endif
 
 #ifndef BALL_SYSTEM_TIMER_H
-# include <BALL/SYSTEM/timer.h>
+# include <BALL_core/SYSTEM/timer.h>
 #endif
 
 #include <QtCore/QThread>

@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DATATYPE/colorRGBA.h>
-#include <BALL/VIEW/DATATYPE/colorHSV.h>
+#include <BALL_view/DATATYPE/colorRGBA.h>
+#include <BALL_view/DATATYPE/colorHSV.h>
 #include <QtGui/QColor>
 
 using namespace std;
@@ -297,7 +297,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/DATATYPE/colorRGBA.iC>
+#			include <BALL_view/DATATYPE/colorRGBA.iC>
 #		endif
 
 	} // namespace VIEW

@@ -7,27 +7,27 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/WIDGETS/geometricControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/representation.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
+#include <BALL_view/WIDGETS/geometricControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/representation.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
 
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
-#include <BALL/VIEW/DIALOGS/modifyRepresentationDialog.h>
-#include <BALL/VIEW/DIALOGS/clippingDialog.h>
-#include <BALL/VIEW/DIALOGS/setClippingPlane.h>
+#include <BALL_view/DIALOGS/displayProperties.h>
+#include <BALL_view/DIALOGS/modifyRepresentationDialog.h>
+#include <BALL_view/DIALOGS/clippingDialog.h>
+#include <BALL_view/DIALOGS/setClippingPlane.h>
 
 #include <QtGui/QFileDialog>
 #include <QtGui/QMenuBar>
 #include <QtGui/QToolTip>
 #include <QtGui/QInputDialog>
 
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/VIEW/PRIMITIVES/gridVisualisation.h>
+#include <BALL_core/MATHS/matrix44.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
+#include <BALL_view/PRIMITIVES/gridVisualisation.h>
 
 using std::endl;
 

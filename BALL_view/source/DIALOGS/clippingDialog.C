@@ -3,10 +3,10 @@
 //
 // $Id:
 
-#include <BALL/VIEW/DIALOGS/clippingDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/DIALOGS/clippingDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/common.h>
 
 namespace BALL
 {

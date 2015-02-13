@@ -6,7 +6,7 @@
 #define BALL_VIEW_KERNEL_COMPOSITEMANAGER_H
 
 #ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/DATATYPE/hashSet.h>
+# include <BALL_core/DATATYPE/hashSet.h>
 #endif
 
 namespace BALL

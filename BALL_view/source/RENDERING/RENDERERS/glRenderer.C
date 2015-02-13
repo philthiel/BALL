@@ -2,38 +2,38 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/DATATYPE/colorMap.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/RENDERING/RENDERERS/glRenderer.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/DATATYPE/colorMap.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/PRIMITIVES/line.h>
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/quadMesh.h>
-#include <BALL/VIEW/PRIMITIVES/point.h>
-#include <BALL/VIEW/PRIMITIVES/box.h>
-#include <BALL/VIEW/PRIMITIVES/simpleBox.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/PRIMITIVES/multiLine.h>
-#include <BALL/VIEW/PRIMITIVES/gridVisualisation.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/PRIMITIVES/line.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/quadMesh.h>
+#include <BALL_view/PRIMITIVES/point.h>
+#include <BALL_view/PRIMITIVES/box.h>
+#include <BALL_view/PRIMITIVES/simpleBox.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/multiLine.h>
+#include <BALL_view/PRIMITIVES/gridVisualisation.h>
 
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL_core/SYSTEM/timer.h>
+#include <BALL_core/KERNEL/atom.h>
 
 #include <QtGui/QPixmap>
 #include <QtGui/QPainter>
 #include <QtGui/QImage>
 
-#include <BALL/MATHS/vector2.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL_core/MATHS/vector2.h>
+#include <BALL_core/MATHS/plane3.h>
+#include <BALL_core/MATHS/analyticalGeometry.h>
 
 #ifndef BALL_HAS_GLEW
  #define GLX_GLXEXT_PROTOTYPES // required for Mesa-like implementations
@@ -43,7 +43,7 @@
 #endif
 
 #ifdef BALL_HAS_GLEW
-# include <BALL/VIEW/RENDERING/vertexBuffer.h>
+# include <BALL_view/RENDERING/vertexBuffer.h>
 #endif
 
 using namespace std;
@@ -2969,7 +2969,7 @@ namespace BALL
 
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/VIEW/RENDERING/RENDERERS/glRenderer.iC>
+#		include <BALL_view/RENDERING/RENDERERS/glRenderer.iC>
 #	endif
 
 	} // namespace VIEW

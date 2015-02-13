@@ -6,50 +6,52 @@
 #include "icons.h"
 #include "demoTutorialDialog.h"
 
-#include <BALL/VIEW/KERNEL/iconLoader.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/POVRenderer.h>
-#include <BALL/VIEW/RENDERING/RENDERERS/VRMLRenderer.h>
-#include <BALL/VIEW/WIDGETS/molecularStructure.h>
-#include <BALL/VIEW/WIDGETS/molecularControl.h>
-#include <BALL/VIEW/WIDGETS/geometricControl.h>
-#include <BALL/VIEW/WIDGETS/logView.h>
-#include <BALL/VIEW/WIDGETS/helpViewer.h>
-#include <BALL/VIEW/WIDGETS/datasetControl.h>
-#include <BALL/VIEW/WIDGETS/scene.h>
-#include <BALL/VIEW/WIDGETS/fileObserver.h>
-#include <BALL/VIEW/DIALOGS/pubchemDialog.h>
-#include <BALL/VIEW/DIALOGS/undoManagerDialog.h>
-#include <BALL/VIEW/DIALOGS/downloadPDBFile.h>
-#include <BALL/VIEW/DIALOGS/downloadElectronDensity.h>
-#include <BALL/VIEW/DIALOGS/labelDialog.h>
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
-#include <BALL/VIEW/DIALOGS/molecularFileDialog.h>
-#include <BALL/VIEW/DATATYPE/standardDatasets.h>
+#include <BALL_view/KERNEL/iconLoader.h>
+#include <BALL_view/RENDERING/RENDERERS/POVRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/VRMLRenderer.h>
+#include <BALL_view/WIDGETS/molecularStructure.h>
+#include <BALL_view/WIDGETS/molecularControl.h>
+#include <BALL_view/WIDGETS/geometricControl.h>
+#include <BALL_view/WIDGETS/logView.h>
+#include <BALL_view/WIDGETS/helpViewer.h>
+#include <BALL_view/WIDGETS/datasetControl.h>
+#include <BALL_view/WIDGETS/scene.h>
+#include <BALL_view/WIDGETS/fileObserver.h>
+#include <BALL_view/DIALOGS/pubchemDialog.h>
+#include <BALL_view/DIALOGS/undoManagerDialog.h>
+#include <BALL_view/DIALOGS/downloadPDBFile.h>
+#include <BALL_view/DIALOGS/downloadElectronDensity.h>
+#include <BALL_view/DIALOGS/labelDialog.h>
+#include <BALL_view/DIALOGS/displayProperties.h>
+#include <BALL_view/DIALOGS/molecularFileDialog.h>
+#include <BALL_view/DATATYPE/standardDatasets.h>
+
 #ifdef BALL_PYTHON_SUPPORT
-#	include <BALL/VIEW/WIDGETS/pyWidget.h>
-# include <BALL/VIEW/WIDGETS/testFramework.h>
+#	include <BALL_view/WIDGETS/pyWidget.h>
+# include <BALL_view/WIDGETS/testFramework.h>
 #endif
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/COMMON/version.h>
+#include <BALL_core/SYSTEM/path.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_core/COMMON/version.h>
 
 #include <QtGui/QKeyEvent>
 #include <QtGui/QTreeWidget>
 
-#include <BALL/CONCEPT/moleculeObjectCreator.h>
+#include <BALL_core/CONCEPT/moleculeObjectCreator.h>
+
 #ifdef BALL_HAS_ASIO
-#include <BALL/VIEW/KERNEL/serverWidget.h>
+#include <BALL_view/KERNEL/serverWidget.h>
 #endif
 
 #include "ui_aboutDialog.h"
 
-#include <BALL/PLUGIN/pluginManager.h>
-#include <BALL/VIEW/PLUGIN/inputDevPluginHandler.h>
-#include <BALL/VIEW/PLUGIN/modularWidgetPluginHandler.h>
-#include <BALL/VIEW/PLUGIN/VIEWPlugin.h>
-#include <BALL/VIEW/DIALOGS/pluginDialog.h>
-#include <BALL/VIEW/DIALOGS/preferences.h>
+#include <BALL_core/PLUGIN/pluginManager.h>
+#include <BALL_view/PLUGIN/inputDevPluginHandler.h>
+#include <BALL_view/PLUGIN/modularWidgetPluginHandler.h>
+#include <BALL_view/PLUGIN/VIEWPlugin.h>
+#include <BALL_view/DIALOGS/pluginDialog.h>
+#include <BALL_view/DIALOGS/preferences.h>
 
 using namespace std;
 //#define BALL_VIEW_DEBUG

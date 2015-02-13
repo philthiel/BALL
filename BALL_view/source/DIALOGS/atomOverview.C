@@ -3,11 +3,11 @@
 //
 // $Id:
 
-#include <BALL/VIEW/DIALOGS/atomOverview.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL_view/DIALOGS/atomOverview.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_core/KERNEL/PTE.h>
 
 namespace BALL
 {

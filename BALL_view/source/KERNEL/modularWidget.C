@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/KERNEL/modularWidget.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/iconLoader.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/VIEW/KERNEL/preferencesEntry.h>
+#include <BALL_view/KERNEL/modularWidget.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/iconLoader.h>
+#include <BALL_core/FORMAT/INIFile.h>
+#include <BALL_view/KERNEL/preferencesEntry.h>
 #include <QtGui/QMenuBar>
 
 using namespace std;

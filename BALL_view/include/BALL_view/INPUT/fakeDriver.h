@@ -1,4 +1,4 @@
-#include <BALL/VIEW/INPUT/inputDeviceDriver.h>
+#include <BALL_view/INPUT/inputDeviceDriver.h>
 
 namespace BALL
 {

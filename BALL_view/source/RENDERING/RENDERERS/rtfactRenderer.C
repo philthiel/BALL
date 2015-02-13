@@ -1,13 +1,13 @@
-#include <BALL/STRUCTURE/triangulatedSurface.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredLine.h>
+#include <BALL_core/STRUCTURE/triangulatedSurface.h>
+#include <BALL_view/KERNEL/clippingPlane.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/PRIMITIVES/twoColoredLine.h>
 
 #include <RTfact/Config/Common.hpp>
 #include <RTfact/Config/Init.hpp>
 
-#include <BALL/VIEW/RENDERING/RENDERERS/rtfactRenderer.h>
+#include <BALL_view/RENDERING/RENDERERS/rtfactRenderer.h>
 
 #include <QtGui/QImage>
 

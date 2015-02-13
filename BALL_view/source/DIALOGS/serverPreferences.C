@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/serverPreferences.h>
-#include <BALL/VIEW/KERNEL/common.h>
-#include <BALL/COMMON/rtti.h>
+#include <BALL_view/DIALOGS/serverPreferences.h>
+#include <BALL_view/KERNEL/common.h>
+#include <BALL_core/COMMON/rtti.h>
 
 #include <QtGui/QLabel>
 #include <QtGui/QPushButton>

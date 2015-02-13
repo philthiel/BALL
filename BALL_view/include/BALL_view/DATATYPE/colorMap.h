@@ -8,11 +8,11 @@
 #define BALL_VIEW_DATATYPE_COLORMAP_H
 
 #ifndef BALL_VIEW_DATATYPE_COLORRGBA_H
-#	include <BALL/VIEW/DATATYPE/colorRGBA.h>
+#	include <BALL_view/DATATYPE/colorRGBA.h>
 #endif
 
 #ifndef BALL_MATHS_VECTOR4_H
-# include <BALL/MATHS/vector4.h>
+# include <BALL_core/MATHS/vector4.h>
 #endif
 
 #include <vector>

@@ -4,15 +4,15 @@
 // $Id: ballAndStickModel.C,v 1.23.18.1 2007/03/25 22:02:29 oliver Exp $
 //
 
-#include <BALL/VIEW/MODELS/ballAndStickModel.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/VIEW/PRIMITIVES/tube.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
-#include <BALL/VIEW/PRIMITIVES/disc.h>
-#include <BALL/VIEW/PRIMITIVES/twoColoredTube.h>
-#include <BALL/VIEW/KERNEL/common.h>
+#include <BALL_view/MODELS/ballAndStickModel.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/KERNEL/bond.h>
+#include <BALL_core/KERNEL/forEach.h>
+#include <BALL_view/PRIMITIVES/tube.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
+#include <BALL_view/PRIMITIVES/disc.h>
+#include <BALL_view/PRIMITIVES/twoColoredTube.h>
+#include <BALL_view/KERNEL/common.h>
 
 using namespace std;
 
@@ -512,7 +512,7 @@ namespace BALL
 		}
 
 #		ifdef BALL_NO_INLINE_FUNCTIONS
-#			include <BALL/VIEW/MODELS/ballAndStickModel.iC>
+#			include <BALL_view/MODELS/ballAndStickModel.iC>
 #		endif
 
 	} // namespace VIEW

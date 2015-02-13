@@ -8,7 +8,7 @@
 #define BALL_VIEW_MODELS_LINEMODEL_H
 
 #ifndef BALL_VIEW_MODELS_ATOMBONDMODELBASEPROCESSOR_H
-#	include <BALL/VIEW/MODELS/atomBondModelBaseProcessor.h>
+#	include <BALL_view/MODELS/atomBondModelBaseProcessor.h>
 #endif
 
 namespace BALL

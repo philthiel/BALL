@@ -6,11 +6,11 @@
 #define BALL_VIEW_KERNEL_UIOPERATIONMODE_H
 
 #ifndef BALL_CONCEPT_EMBEDDABLE_H
-# include <BALL/COMMON/global.h>
+# include <BALL_core/COMMON/global.h>
 #endif
 
 #ifndef BALL_SYSTEM_MUTEX_H
-# include <BALL/SYSTEM/mutex.h>
+# include <BALL_core/SYSTEM/mutex.h>
 #endif
 
 #include <boost/shared_ptr.hpp>

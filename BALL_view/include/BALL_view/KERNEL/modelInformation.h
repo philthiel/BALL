@@ -6,7 +6,7 @@
 #define BALL_VIEW_KERNEL_MODELINFORMATION_H
 
 #ifndef BALL_VIEW_KERNEL_COMMON_H
-# include <BALL/VIEW/KERNEL/common.h>
+# include <BALL_view/KERNEL/common.h>
 #endif
 
 #include <QtCore/QCoreApplication>

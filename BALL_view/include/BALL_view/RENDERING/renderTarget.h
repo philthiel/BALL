@@ -5,15 +5,15 @@
 #ifndef BALL_VIEW_RENDERING_RENDERTARGET_H
 #define BALL_VIEW_RENDERING_RENDERTARGET_H
 
-#include <BALL/COMMON/global.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL_core/COMMON/global.h>
+#include <BALL_core/COMMON/exception.h>
 
 #include <assert.h>
 #include <vector>
 #include <boost/smart_ptr.hpp>
 #include <boost/shared_array.hpp>
 
-#include <BALL/VIEW/RENDERING/pixelFormat.h>
+#include <BALL_view/RENDERING/pixelFormat.h>
 
 namespace BALL
 {

@@ -1,11 +1,11 @@
-#include <BALL/VIEW/PLUGIN/modularWidgetPluginHandler.h>
+#include <BALL_view/PLUGIN/modularWidgetPluginHandler.h>
 
-#include <BALL/PLUGIN/BALLPlugin.h>
-#include <BALL/PLUGIN/pluginManager.h>
+#include <BALL_core/PLUGIN/BALLPlugin.h>
+#include <BALL_core/PLUGIN/pluginManager.h>
 
-#include <BALL/VIEW/PLUGIN/modularWidgetPlugin.h>
+#include <BALL_view/PLUGIN/modularWidgetPlugin.h>
 
-#include <BALL/VIEW/KERNEL/mainControl.h>
+#include <BALL_view/KERNEL/mainControl.h>
 
 namespace BALL
 {

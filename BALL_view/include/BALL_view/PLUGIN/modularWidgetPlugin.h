@@ -6,11 +6,11 @@
 #define BALL_VIEW_PLUGIN_MODULARWIDGETPLUGIN_H
 
 #ifndef BALL_VIEW_PLUGIN_VIEWPLUGIN_H
-# include <BALL/VIEW/PLUGIN/VIEWPlugin.h>
+# include <BALL_view/PLUGIN/VIEWPlugin.h>
 #endif
 
 #ifndef BALL_VIEW_KERNEL_MODULARWIDGET_H
-# include <BALL/VIEW/KERNEL/modularWidget.h>
+# include <BALL_view/KERNEL/modularWidget.h>
 #endif
 
 namespace BALL

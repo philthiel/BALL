@@ -5,21 +5,21 @@
 //
 
 
-#include <BALL/VIEW/KERNEL/representation.h>
-#include <BALL/VIEW/KERNEL/message.h>
-#include <BALL/VIEW/KERNEL/geometricObject.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/PRIMITIVES/sphere.h>
+#include <BALL_view/KERNEL/representation.h>
+#include <BALL_view/KERNEL/message.h>
+#include <BALL_view/KERNEL/geometricObject.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_view/PRIMITIVES/sphere.h>
 
-#include <BALL/VIEW/PRIMITIVES/mesh.h>
-#include <BALL/VIEW/PRIMITIVES/label.h>
-#include <BALL/VIEW/DATATYPE/vertex1.h>
-#include <BALL/VIEW/DATATYPE/vertex2.h>
+#include <BALL_view/PRIMITIVES/mesh.h>
+#include <BALL_view/PRIMITIVES/label.h>
+#include <BALL_view/DATATYPE/vertex1.h>
+#include <BALL_view/DATATYPE/vertex2.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL_core/KERNEL/atom.h>
+#include <BALL_core/SYSTEM/timer.h>
 
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL_core/CONCEPT/textPersistenceManager.h>
 
 //     #define BALL_BENCHMARKING
 
@@ -754,7 +754,7 @@ namespace BALL
 		}
 			
   #	ifdef BALL_NO_INLINE_FUNCTIONS
-  #		include <BALL/VIEW/KERNEL/representation.iC>
+  #		include <BALL_view/KERNEL/representation.iC>
   #	endif
 
 	} // namespace VIEW

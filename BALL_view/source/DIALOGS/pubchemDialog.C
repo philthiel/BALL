@@ -7,10 +7,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/VIEW/DIALOGS/pubchemDialog.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/STRUCTURE/sdGenerator.h>
-#include <BALL/FORMAT/SDFile.h>
+#include <BALL_view/DIALOGS/pubchemDialog.h>
+#include <BALL_view/KERNEL/mainControl.h>
+#include <BALL_core/STRUCTURE/sdGenerator.h>
+#include <BALL_core/FORMAT/SDFile.h>
 
 #include <QtGui/QPushButton>
 #include <QtGui/QTreeWidget>
@@ -28,7 +28,7 @@
 #include <QtNetwork/QNetworkRequest>
 
 #include <algorithm>
-#include <BALL/VIEW/UIC/ui_pubchemDialog.h>
+#include <BALL_view/UIC/ui_pubchemDialog.h>
 
 namespace BALL
 {
