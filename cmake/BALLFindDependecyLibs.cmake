@@ -80,11 +80,18 @@ IF(Qt4_FOUND)
 	SET(QT_USE_QTCORE TRUE)
 	SET(QT_USE_QTGUI TRUE)
 	SET(QT_USE_QTNETWORK TRUE)
-	SET(QT_USE_QTSQL TRUE)
+	SET(QT_USE_QTOPENGL TRUE)
+	SET(QT_USE_QTTEST TRUE)
+	SET(QT_USE_QTWEBKIT TRUE)
 	SET(QT_USE_QTXML TRUE)
 
 	INCLUDE(${QT_USE_FILE})
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${QT_LIBRARIES})
+
+	IF(QT_QTWEBKIT_FOUND)
+		SET(BALL_HAS_QTWEBKIT TRUE)
+		MESSAGE(STATUS "QtWebkit has not been found. Disabling browser support.")
+	ENDIF()
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find a Qt4 installation! This is a required dependency for BALL!")
 ENDIF()
@@ -99,9 +106,7 @@ SET(BALL_BOOST_COMPONENTS chrono date_time thread iostreams regex serialization 
 
 FIND_PACKAGE(Boost 1.46 COMPONENTS ${BALL_BOOST_COMPONENTS})
 
-IF(NOT Boost_FOUND)
-	MESSAGE(FATAL_ERROR "Could not find a suitable Boost installation! This is a required dependency for BALL!")
-ELSE()
+IF(Boost_FOUND)
 	MESSAGE(STATUS "Boost include directory: ${Boost_INCLUDE_DIRS}")
 	MESSAGE(STATUS "Boost library directory: ${Boost_LIBRARY_DIRS}")
 
@@ -113,6 +118,7 @@ ELSE()
 		STRING(TOUPPER ${COMPONENT} COMPONENT)
 
 		IF(Boost_${COMPONENT}_FOUND)
+			SET(BALL_HAS_BOOST_${COMPONENT} TRUE)
 			LIST(APPEND BOOST_LIBRARIES ${Boost_${COMPONENT}_LIBRARY})
 		ELSE()
 			LIST(APPEND BOOST_MISSING_LIBRARIES ${COMPONENT})
@@ -124,9 +130,11 @@ ELSE()
 		MESSAGE(FATAL_ERROR "The following Boost libraries are missing: ${BOOST_MISSING_LIBRARIES}")
 	ELSE()
 		# Store the include directories and the libraries
-		INCLUDE_DIRECTORIES(${BOOST_INCLUDE_DIRS})
+		INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 		LIST(APPEND BALL_DEPENDENCY_LIBS ${BOOST_LIBRARIES})
 	ENDIF()
+ELSE()
+	MESSAGE(FATAL_ERROR "Could not find a suitable Boost installation! This is a required dependency for BALL!")
 ENDIF()
 
 
@@ -137,11 +145,9 @@ FIND_PACKAGE(Eigen3 3.0.0)
 
 IF(EIGEN3_FOUND)
 	INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
-	# Eigen3 has no libraries!
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find Eigen3! This is a required dependency for BALL!")
 ENDIF()
-
 
 
 ###############################################################################
@@ -150,9 +156,10 @@ ENDIF()
 FIND_PACKAGE(OpenBabel2)
 
 IF(OPENBABEL2_FOUND)
-	MESSAGE(STATUS "Found OpenBabel version: " ${OPENBABEL2_VERSION})
 	INCLUDE_DIRECTORIES(${OPENBABEL2_INCLUDE_DIRS})
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${OPENBABEL2_LIBRARIES})
+
+	SET(BALL_HAS_OPENBABEL TRUE)
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find a OpenBabel2 installation! This is a required dependency for BALL!")
 ENDIF()
@@ -167,6 +174,8 @@ IF(GSL_FOUND)
 	ADD_DEFINITIONS(${CMAKE_GSL_CXX_FLAGS})
 	INCLUDE_DIRECTORIES(${GSL_INCLUDE_DIR})
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${GSL_LIBRARIES})
+
+	SET(BALL_HAS_GSL TRUE)
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find GSL! This is a required dependency for BALL!")
 ENDIF()
@@ -179,9 +188,11 @@ ENDIF()
 FIND_PACKAGE(libSVM)
 
 IF(LIBSVM_FOUND)
-	MESSAGE(STATUS "Found LibSVM: ${LIBSVM_INCLUDE_DIR}")
+	MESSAGE(STATUS "LibSVM include directory: ${LIBSVM_INCLUDE_DIR}")
 	INCLUDE_DIRECTORIES(${LIBSVM_INCLUDE_DIRS})
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${LIBSVM_LIBRARIES})
+
+	SET(BALL_HAS_LIBSVM TRUE)
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find LibSVM! This is a required dependency for BALL!")
 ENDIF()
@@ -196,6 +207,8 @@ IF(TBB_FOUND)
 	INCLUDE_DIRECTORIES(${TBB_INCLUDE_DIRS})
 	BALL_COMBINE_LIBS(TBB_LIBRARIES "${TBB_LIBRARIES}" "${TBB_DEBUG_LIBRARIES}")
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${TBB_LIBRARIES})
+
+	SET(BALL_HAS_TBB TRUE)
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find Intel TBB! This is a required dependency for BALL!")
 ENDIF()
@@ -207,9 +220,11 @@ ENDIF()
 FIND_PACKAGE(LPSolve)
 
 IF(LPSOLVE_FOUND)
-	MESSAGE(STATUS "Found LPSolve: ${LPSOLVE_INCLUDE_DIR}")
+	MESSAGE(STATUS "LPSolve include directory: ${LPSOLVE_INCLUDE_DIR}")
 	INCLUDE_DIRECTORIES(${LPSOLVE_INCLUDE_DIR})
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${LPSOLVE_LIBRARIES})
+
+	SET(BALL_HAS_LPSOLVE TRUE)
 ELSE()
 	MESSAGE(FATAL_ERROR "Could not find LPSolve! This is a required dependency for BALL!")
 ENDIF()
@@ -226,7 +241,7 @@ OPTION(USE_FFTW_THREADS "Try to find FFTW with thread support" OFF)
 FIND_PACKAGE(FFTW)
 
 IF(FFTW_FOUND)
-	MESSAGE(STATUS "Found FFTW: ${FFTW_INCLUDE}")
+	MESSAGE(STATUS "FFTW include directory: ${FFTW_INCLUDE}")
 	INCLUDE(BALLConfigFFTW)
 	LIST(APPEND BALL_DEPENDENCY_LIBS ${FFTW_LIBRARIES})
 ELSE()
@@ -235,6 +250,32 @@ ENDIF()
 
 IF(NOT BALL_COMPLEX_PRECISION)
 	SET(BALL_COMPLEX_PRECISION "float")
+ENDIF()
+
+
+###############################################################################
+# EXTERNAL_LIB: OpenGL
+#
+FIND_PACKAGE(OpenGL)
+
+IF(OPENGL_FOUND AND OPENGL_GLU_FOUND)
+	LIST(APPEND BALL_DEPENDENCY_LIBS ${OPENGL_LIBRARIES})
+ELSE()
+	MESSAGE(FATAL_ERROR "Could not find gl/glu! This is a required dependency for BALL_view!")
+ENDIF()
+
+
+###############################################################################
+# EXTERNAL_LIB: GLEW
+#
+FIND_PACKAGE(GLEW)
+
+IF(GLEW_FOUND)
+	LIST(APPEND BALL_DEPENDENCY_LIBS ${GLEW_LIBRARIES})
+
+	SET(BALL_HAS_GLEW TRUE)
+ELSE()
+	MESSAGE(FATAL_ERROR "Could not find GLEW! This is a required dependency for BALL_view!")
 ENDIF()
 
 
@@ -258,6 +299,7 @@ ENDIF()
 IF(FOUND_CUDART)
 	#MESSAGE(STATUS "Found CUDA: ${FFTW_INCLUDE}")
 	#CUDA_ADD_LIBRARY(BALL ${BALL_sources} ${BALL_headers} ${Cuda_sources})
+
 	SET(BALL_HAS_CUDA TRUE)
 ELSE()
 	IF(BALL_REQUIRE_CUDA)
@@ -281,9 +323,28 @@ IF(MPI_FOUND)
 	MESSAGE(STATUS "Found MPI: ${MPI_INCLUDE_PATH}")
 	ADD_DEFINITIONS(${MPI_COMPILE_FLAGS})
 	INCLUDE_DIRECTORIES(${MPI_INCLUDE_PATH})
+
 	SET(BALL_HAS_MPI TRUE)
 ELSE()
 	IF(BALL_REQUIRE_MPI)
 		MESSAGE(FATAL_ERROR "Could not find user required MPI! If not needed skip cmake flag BALL_REQUIRE_MPI")
 	ENDIF()
+ENDIF()
+
+
+###############################################################################
+# EXTERNAL_LIB: RTFact
+#
+
+FIND_PACKAGE(RTFact)
+
+IF(RTFACT_FOUND)
+	SET(BALL_HAS_RTFACT TRUE)
+	INCLUDE_DIRECTORIES(${RTFACT_INCLUDE_DIR})
+	LIST(APPEND BALL_DEPENDENCY_LIBS ${RTFACT_LIBRARIES})
+
+	SET(BALL_HAS_RTFACT TRUE)
+ELSE()
+	#MESSAGE(FATAL_ERROR "Could not find RTFact! This is a required dependency for BALL!")
+	MESSAGE(STATUS "TODO !!! Could not find RTFact! This is a required dependency for BALL!")
 ENDIF()
