@@ -94,7 +94,11 @@ SET(BALL_view_INCLUDE_DIRS "${TMP_BALL_view_INCLUDE_DIRS}" PARENT_SCOPE)
 ADD_SUBDIRECTORY(BALLView)
 
 
+###############################################################################
+###    BALL_view tests                                                      ###
+###############################################################################
 
+ADD_SUBDIRECTORY(TEST EXCLUDE_FROM_ALL)
 
 
 
