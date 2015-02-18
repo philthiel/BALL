@@ -7,14 +7,14 @@
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <BALL_core/KERNEL/molecule.h>
 #include <BALL_core/STRUCTURE/UCK.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("MolCombine", "combine molecular files", VersionInfo::getVersion(), String(__DATE__), "Convert, combine and store");
+	CommandlineParser parpars("MolCombine", "combine molecular files", VERSION, String(__DATE__), "Convert, combine and store");
 	parpars.registerParameter("i1", "input molecule file A", INFILE, true);
 	parpars.registerParameter("i2", "input molecule file B", INFILE, true);
 	parpars.registerParameter("mode","'intersection', 'union' or 'b_not_a'", STRING, true);

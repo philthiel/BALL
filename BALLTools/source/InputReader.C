@@ -6,7 +6,7 @@
 #include <BALL_core/QSAR/registry.h>
 #include <BALL_core/QSAR/configIO.h>
 #include <fstream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL::QSAR;
 using namespace BALL;
@@ -91,7 +91,7 @@ void startInputReading(InputConfiguration& conf, String data_path, QSARData* q, 
 #ifndef EXT_MAIN
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("InputReader","generate QSAR data set     ", VersionInfo::getVersion(), String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("InputReader","generate QSAR data set     ", VERSION, String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input sd-file",INFILE,true);
 	par.registerParameter("o","output dat-file",OUTFILE,true);
 	par.registerParameter("act","sd-property containing response values",STRING);

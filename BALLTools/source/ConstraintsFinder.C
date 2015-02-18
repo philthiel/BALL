@@ -16,14 +16,14 @@
 #include <BALL_core/SCORING/FUNCTIONS/MMScoring.h>
 #include <BALL_core/STRUCTURE/fragmentDB.h>
 #include <set>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("ConstraintsFinder", "find strongly interacting residues", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("ConstraintsFinder", "find strongly interacting residues", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	parpars.registerParameter("rl", "reference-ligand", INFILE, true);
 	parpars.registerParameter(DockingAlgorithm::OPTION_FILE_PARAMETER_NAME, "configuration file", INFILE);

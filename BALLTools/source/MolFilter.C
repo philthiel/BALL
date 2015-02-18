@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
 	parpars.registerParameter("smarts_file", "SMARTS pattern", INFILE);
 
 	parpars.registerParameter("o", "output molecule file", OUTFILE);
+	parpars.registerFlag("quiet", "by quiet, i.e. do not show progress information");
 	parpars.registerFlag("rm", "remove input file when finished");
 	parpars.setSupportedFormats("i","mol2, sdf, drf");
 	parpars.setSupportedFormats("o","mol2, sdf, drf");

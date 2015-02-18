@@ -12,7 +12,7 @@
 #include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
 #include <BALL_core/SCORING/FUNCTIONS/gridedPLP.h>
 #include <BALL_core/SCORING/FUNCTIONS/gridedMM.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 
 using namespace BALL;
@@ -20,7 +20,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("GridBuilder", "create score-grids for docking", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("GridBuilder", "create score-grids for docking", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	parpars.registerParameter("rl", "reference-ligand", INFILE, true);
 	parpars.registerParameter("pocket", "configuration file", INFILE);

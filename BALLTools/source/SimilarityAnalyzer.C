@@ -7,7 +7,7 @@
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <BALL_core/KERNEL/molecule.h>
 #include <BALL_core/STRUCTURE/molecularSimilarity.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -19,6 +19,7 @@ int main(int argc, char* argv[])
 	parpars.registerParameter("i2", "input molecule file 2", INFILE, true);
 	parpars.registerParameter("o", "output eps-/png- or pdf-file", OUTFILE);
 	parpars.registerParameter("title", "plot title", STRING);
+	parpars.registerFlag("quiet", "by quiet, i.e. do not print status");
 	String man = "This tool evaluates the similarity between molecules in two input files and creates a distribution plot to visualize the result.\n\nTherefore, for each molecule a pathway-based, hashed binary fingerprint is generated and compared to the fingerprint of other molecules by use of the Tanimoto similarity measure.\nThe output graphic will created by use of gnuplot, so make sure to have it installed and in your PATH environment variable.\n\nThe resulting plot (in form of an eps-, png- or pdf-file; as chosen) shows the distribution of similarity values obtained by comparing each molecule in input file 1 against each molecule in input file 2.";
 	parpars.setToolManual(man);
 	parpars.setSupportedFormats("i1",MolFileFactory::getSupportedFormats());

@@ -10,7 +10,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -18,7 +18,7 @@ using namespace BALL;
 int main(int argc, char* argv[])
 {
 	// instantiate CommandlineParser object
-	CommandlineParser parpars("CalculateBindingFreeEnergy", "calculate binding energy of two proteins using AMBER", VersionInfo::getVersion(), String(__DATE__), "ForceFields");
+	CommandlineParser parpars("CalculateBindingFreeEnergy", "calculate binding energy of two proteins using AMBER", VERSION, String(__DATE__), "ForceFields");
 	parpars.registerParameter("pdb_a",  "first input pdb file ", INFILE,  true);
 	parpars.registerParameter("pdb_b",  "second input pdb file ", INFILE,  true);
 

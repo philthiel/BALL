@@ -10,14 +10,14 @@
 #include <BALL_core/DOCKING/IMGDOCK/IMGDock.h>
 #include <BALL_core/SCORING/COMMON/gridBasedScoring.h>
 #include <BALL_core/DOCKING/COMMON/constraints.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("IMGDock", "Iterative Multi-Greedy Docking", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("IMGDock", "Iterative Multi-Greedy Docking", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	parpars.registerParameter("rl", "reference-ligand", INFILE, true);
 	parpars.registerParameter("pocket", "configuration file", INFILE);

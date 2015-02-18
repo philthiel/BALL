@@ -8,7 +8,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -21,7 +21,7 @@ int main (int argc, char **argv)
 	// - version string
 	// - build date
 	// - category
-	CommandlineParser parpars("BondOrderAssigner", "computes bond order assignments for a ligand ", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("BondOrderAssigner", "computes bond order assignments for a ligand ", VERSION, String(__DATE__), "Preparation");
 
 	// we register an input file parameter 
 	// - CLI switch

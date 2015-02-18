@@ -9,7 +9,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -17,7 +17,7 @@ using namespace BALL;
 int main(int argc, char* argv[])
 {
 	// instantiate CommandlineParser object
-	CommandlineParser parpars("ResidueChecker", "check residues to debug a protein structure wrt to PDB conventions", VersionInfo::getVersion(), String(__DATE__), "ForceFields");
+	CommandlineParser parpars("ResidueChecker", "check residues to debug a protein structure wrt to PDB conventions", VERSION, String(__DATE__), "ForceFields");
 	parpars.registerParameter("pdb",  "input pdb file ", INFILE,  true);
 
 	// TODO: offer upload of a distinguished fragDB file? 

@@ -13,14 +13,16 @@
 #include <BALL_core/STRUCTURE/residueChecker.h>
 #include <BALL_core/STRUCTURE/fragmentDB.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
+
 
 using namespace BALL;
 using namespace std;
 
+
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("AddMissingAtoms", "add missing atoms to protein structures", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("AddMissingAtoms", "add missing atoms to protein structures", VERSION, String(__DATE__), "Preparation");
 	parpars.registerParameter("i", "input file", INFILE, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);
 

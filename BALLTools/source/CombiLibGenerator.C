@@ -8,7 +8,7 @@
 #include <BALL_core/FORMAT/molFileFactory.h>
 #include <BALL_core/STRUCTURE/rGroupAssembler.h>
 #include <BALL_core/FORMAT/commandlineParser.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 #include <vector>
 #include <map>
 
@@ -154,7 +154,7 @@ void readFile(String a_file_name)
 
 int main(int argc, char** argv)
 {
-	CommandlineParser parpars("CombiLibGenerator", "generate combinatorial lib", VersionInfo::getVersion(), String(__DATE__), "Get Data");
+	CommandlineParser parpars("CombiLibGenerator", "generate combinatorial lib", VERSION, String(__DATE__), "Get Data");
 	parpars.registerParameter("i", "input combi-lib file", INFILE, true);
 	parpars.registerParameter("o", "output molecule file", OUTFILE, true);
 	parpars.registerParameter("write_ini", "write ini-file w/ default parameters (and don't do anything else)", OUTFILE);

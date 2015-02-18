@@ -11,7 +11,7 @@
 
 #include <map>
 #include <set>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 
 using namespace BALL;
@@ -287,7 +287,7 @@ void mergeDRFiles(vector<String>& names, string& output_file, Size& best_k, stri
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("DockResultMerger", "merge docking output files", VersionInfo::getVersion(), String(__DATE__), "Convert, combine and store");
+	CommandlineParser parpars("DockResultMerger", "merge docking output files", VERSION, String(__DATE__), "Convert, combine and store");
 	parpars.registerParameter("i", "input files", INFILELIST, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);
 	parpars.registerParameter("score", "score property name", STRING, false, "score");

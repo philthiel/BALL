@@ -9,7 +9,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	FDPB fdpb;
 
 	// instantiate CommandlineParser object
-	CommandlineParser parpars("CalculateSolvationFreeEnergy", "calculate solvation free energy of a protein using AMBER ", VersionInfo::getVersion(), String(__DATE__), "ForceFields");
+	CommandlineParser parpars("CalculateSolvationFreeEnergy", "calculate solvation free energy of a protein using AMBER ", VERSION, String(__DATE__), "ForceFields");
 	parpars.registerParameter("pdb",  "input pdb file ", INFILE,  true);
 	parpars.registerParameter("epsilon_medium", "dielectric constant in medium", DOUBLE, false,  fdpb.options.getReal(FDPB::Option::SOLVENT_DC));
 	parpars.registerParameter("epsilon_vacuum", "dielectric constant in vacuum", DOUBLE, false, 1);

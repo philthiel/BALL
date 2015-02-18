@@ -13,14 +13,14 @@
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <iostream>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
 
 int main (int argc, char **argv)
 {
-	CommandlineParser parpars("Split2ConnectedComponents", "splits a molecular file into its connected components", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("Split2ConnectedComponents", "splits a molecular file into its connected components", VERSION, String(__DATE__), "Preparation");
 
 	parpars.registerParameter("i", "input mol2-file", INFILE, true);
 

@@ -7,7 +7,7 @@
 #include <BALL_core/FORMAT/lineBasedFile.h>
 #include <BALL_core/SYSTEM/directory.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 
 using namespace BALL;
@@ -16,7 +16,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("PDBDownload", "Download an entry from the Protein Data Bank", VersionInfo::getVersion(), String(__DATE__), "Get Data");
+	CommandlineParser par("PDBDownload", "Download an entry from the Protein Data Bank", VERSION, String(__DATE__), "Get Data");
 	par.registerParameter("id", "PDB ID of entry to download", STRING, true);
 	par.registerParameter("o", "Output file", OUTFILE, true);
 	par.registerParameter("format", "Download format. Possible formats are PDB, CIF and XML (default: PDB)", STRING, false, "PDB");

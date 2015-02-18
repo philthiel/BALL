@@ -3,20 +3,20 @@
 //
 
 
-#include <BALL/COMMON/limits.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/FORMAT/commandlineParser.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/FORMAT/molFileFactory.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/STRUCTURE/binaryFingerprintMethods.h>
-#include <BALL/SYSTEM/directory.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/fileSystem.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_core/COMMON/limits.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/FORMAT/commandlineParser.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/SDFile.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/STRUCTURE/binaryFingerprintMethods.h>
+#include <BALL_core/SYSTEM/directory.h>
+#include <BALL_core/SYSTEM/file.h>
+#include <BALL_core/SYSTEM/fileSystem.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
-#include <BALL/COMMON/version.h>
+#include <BALLTools/version.h>
 
 #include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
@@ -154,7 +154,7 @@ void readFingerprintsSDF(SDFile* fprints_in, vector<vector<unsigned short> >& mo
 
 bool readFingerprints(const String& input_file, vector<vector<unsigned short> >& mol_features, vector<String>& mol_identifiers)
 {
-	if (!MolFileFactory::isFileFormatSupported(input_file, true))
+	if (!MolFileFactory::isFileExtensionSupported(input_file))
 	{
 		// Assuming space separated CSV file which contains fingerprints
 		
@@ -258,7 +258,7 @@ bool readFingerprints(const String& input_file, vector<vector<unsigned short> >&
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("FingerprintSimilaritySearch", "calculate similar molecules in a library", VersionInfo::getVersion(), String(__DATE__), "Chemoinformatics");
+	CommandlineParser parpars("FingerprintSimilaritySearch", "calculate similar molecules in a library", VERSION, String(__DATE__), "Chemoinformatics");
 	
 	parpars.registerParameter("t", "Target library input file", INFILE, true);
 	parpars.registerParameter("q", "Query library input file", INFILE, true);
@@ -270,6 +270,7 @@ int main(int argc, char* argv[])
 	parpars.registerParameter("id_tag", "Tag name for SDF input which contains the molecule identifier", STRING, false, " ");
 	parpars.registerParameter("tc", "Tanimoto cutoff [default: 0.7]", DOUBLE, false, "0.7");
 	parpars.registerParameter("nt", "Number of parallel threads to use. To use all possible threads enter <max> [default: 1]", STRING, false, "1");
+	parpars.registerParameter("bs", "Block size [default: 500]", BALL::INT, false, "500");
 	parpars.registerFlag("sdf_out", "If query file has SD format, this flag activates writing of nearest neighbours as a new CSV tag in a copy of the query SD file.");
 	
 	parpars.setParameterRestrictions("f", 1, 2);
@@ -301,7 +302,8 @@ $ FingerprintSimilaritySearch -t target.sdf -q query.smi -o results -fp_tag FPRI
 	// Set read and parameters
 	fprint_format = parpars.get("f").toInt();
 	float sim_cutoff = parpars.get("tc").toFloat();
-	
+	unsigned int bs = parpars.get("bs").toInt();
+
 	unsigned int n_threads = 1;
 	if (parpars.get("nt") != "1")
 	{
@@ -388,9 +390,8 @@ $ FingerprintSimilaritySearch -t target.sdf -q query.smi -o results -fp_tag FPRI
 	}
 	Log.level(10) << "++" << endl;
 	
-	
 	Options options;
-	options.setDefaultInteger(BinaryFingerprintMethods::Option::BLOCKSIZE, 500);
+	options.setDefaultInteger(BinaryFingerprintMethods::Option::BLOCKSIZE, bs);
 	options.setDefaultReal(BinaryFingerprintMethods::Option::SIM_CUTOFF, sim_cutoff);
 	options.setDefaultInteger(BinaryFingerprintMethods::Option::N_THREADS, n_threads);
 	options.setDefaultInteger(BinaryFingerprintMethods::Option::VERBOSITY, 6);

@@ -15,14 +15,14 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	CommandlineParser parpars("Trajectory2RigidTransformation", "converts a trajectory file into a rigid transformation file ", VersionInfo::getVersion(), String(__DATE__), "Convert, combine and store");
+	CommandlineParser parpars("Trajectory2RigidTransformation", "converts a trajectory file into a rigid transformation file ", VERSION, String(__DATE__), "Convert, combine and store");
 
 	parpars.registerParameter("i_dcd", "input trajectory file", INFILE, true);
 	parpars.registerParameter("i_pdb",  "input pdb-file", INFILE, true);

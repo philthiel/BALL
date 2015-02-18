@@ -20,7 +20,7 @@
 #include <BALL_core/FORMAT/parameterSection.h>
 #include <BALL_core/SYSTEM/path.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 	// - version string
 	// - build date
 	// - category
-	CommandlineParser parpars("CrystalGenerator", "creates crystals", "VersionInfo::getVersion()", String(__DATE__), "Structure Creation");
+	CommandlineParser parpars("CrystalGenerator", "creates crystals", "VERSION", String(__DATE__), "Structure Creation");
 	
   parpars.registerParameter("i",  "input pdb file",    INFILE,  true);
 	parpars.registerParameter("o",  "output pdb file",   OUTFILE, true);

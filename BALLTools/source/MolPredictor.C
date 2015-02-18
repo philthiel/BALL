@@ -6,7 +6,7 @@
 #include <BALL_core/QSAR/registry.h>
 #include <BALL_core/QSAR/configIO.h>
 #include <fstream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL::QSAR;
 using namespace BALL;
@@ -14,7 +14,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("MolPredictor","predict molecule activities with QSAR model", VersionInfo::getVersion(), String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("MolPredictor","predict molecule activities with QSAR model", VERSION, String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input sd-file",INFILE,true);
 	par.registerParameter("mod","file containing QSAR model",INFILE,true);
 	par.registerParameter("o","output sd-file",OUTFILE,true);

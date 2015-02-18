@@ -7,7 +7,7 @@
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <BALL_core/KERNEL/molecule.h>
 #include <BALL_core/QSAR/statistics.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 #include <set>
 #include <iostream>
 
@@ -124,7 +124,7 @@ BALL::String valueToString(double value)
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("ScoreAnalyzer", "generate ROC or enrichment plots", VersionInfo::getVersion(), String(__DATE__), "Analysis");
+	CommandlineParser parpars("ScoreAnalyzer", "generate ROC or enrichment plots", VERSION, String(__DATE__), "Analysis");
 	parpars.registerParameter("mode", "'roc', 'top50', 'scatter' or 'enrichment'", STRING, true);
 	parpars.registerParameter("title", "plot title", STRING);
 	parpars.registerParameter("o", "output eps-/png-file", OUTFILE);

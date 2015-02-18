@@ -3,17 +3,17 @@
 //
 
 
-#include <BALL/COMMON/limits.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/FORMAT/commandlineParser.h>
-#include <BALL/FORMAT/molFileFactory.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/STRUCTURE/binaryFingerprintMethods.h>
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL_core/COMMON/limits.h>
+#include <BALL_core/DATATYPE/string.h>
+#include <BALL_core/FORMAT/lineBasedFile.h>
+#include <BALL_core/FORMAT/commandlineParser.h>
+#include <BALL_core/FORMAT/molFileFactory.h>
+#include <BALL_core/FORMAT/SDFile.h>
+#include <BALL_core/KERNEL/molecule.h>
+#include <BALL_core/STRUCTURE/binaryFingerprintMethods.h>
+#include <BALL_core/SYSTEM/sysinfo.h>
 
-#include <BALL/COMMON/version.h>
+#include <BALLTools/version.h>
 
 #include <boost/unordered_map.hpp>
 #include <boost/iostreams/copy.hpp>
@@ -359,7 +359,7 @@ void writeConnectedComponents(const vector<unsigned int>& m_indices,
 
 bool readFingerprints(const String& input_file, vector<vector<unsigned short> >& mol_features, vector<String>& mol_identifiers)
 {
-	if (!MolFileFactory::isFileFormatSupported(input_file, true))
+	if (!MolFileFactory::isFileExtensionSupported(input_file))
 	{
 		// Assuming space separated CSV file which contains fingerprints
 		
@@ -544,7 +544,7 @@ unsigned int getIDMin(vector<unsigned int>& ids)
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("FingerprintSimilarityClustering", "fast clustering of compounds using 2D binary fingerprints", VersionInfo::getVersion(), String(__DATE__), "Chemoinformatics");
+	CommandlineParser parpars("FingerprintSimilarityClustering", "fast clustering of compounds using 2D binary fingerprints", VERSION, String(__DATE__), "Chemoinformatics");
 	
 	parpars.registerParameter("t", "Target library input file", INFILE, true);
 	parpars.registerParameter("f", "Fingerprint format [1 = binary bitstring, 2 = comma separated feature list]", INT, true, "1");
@@ -593,7 +593,7 @@ $ FingerprintSimilarityClustering -t target.sdf -fp_tag FPRINT -f 1 -id_tag NAME
 	limit = parpars.get("l").toInt();
 	if (limit == 0)
 	{
-		limit = Limits<unsigned int>::max();
+		limit = std::numeric_limits<unsigned int>::max();
 	}
 	
 	unsigned int n_threads = 1;

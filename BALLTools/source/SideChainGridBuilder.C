@@ -15,7 +15,7 @@
 #include <BALL_core/STRUCTURE/fragmentDB.h>
 #include <BALL_core/STRUCTURE/rotamerLibrary.h>
 #include <BALL_core/STRUCTURE/peptideBuilder.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 
 using namespace BALL;
@@ -43,24 +43,26 @@ GridBasedScoring* createScoringFunction(AtomContainer* receptor, AtomContainer* 
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("SideChainGridBuilder", "build side chain grid", VersionInfo::getVersion(), String(__DATE__), "Docking");
-	parpars.registerParameter("params", "parameter file", INFILE, true);
+	CommandlineParser parpars("SideChainGridBuilder", "build side chain grid", VERSION, String(__DATE__), "Docking");
+	parpars.registerParameter("param", "parameter file", INFILE, true);
 	parpars.registerParameter("d", "output directory", STRING, true);
-	parpars.setSupportedFormats("params", "ini");
+	parpars.setSupportedFormats("param", "ini");
 	parpars.setToolManual("This tool precalculates a side chain grid.");
 
 	parpars.parse(argc, argv);
 
+	//Log.setMinLevel(cout, 10);
+
 	Options option;
 	list<Constraint*> constraints;
 
-	if (parpars.get("params") == CommandlineParser::NOT_FOUND)
+	if (parpars.get("param") == CommandlineParser::NOT_FOUND)
 	{
-		Log.error() << "[Error:] parameter input file must be given" << endl;
+		cout<<"[Error:] ini file must be given" << std::endl;
 		exit (1);
 	}
 
-	String inifile = parpars.get("params");
+	String inifile = parpars.get("param");
 	DockingAlgorithm::readOptionFile(inifile, option, constraints);
 	String scoring_type = option.get("scoring_type");
 	String grid_file = option.get("grid_file");
@@ -74,26 +76,23 @@ int main(int argc, char* argv[])
 
 	if (scoring_type == "")
 	{
-		Log.error() << "[Error:] scoring_type must be specified in the config-file!" << endl;
+		cout<<"[Error:] scoring_type must be specified in the config-file!"<<endl;
 		exit(1);
 	}
-
 	if (scoring_type != "GridedMM" && scoring_type != "GridedPLP")
 	{
-		Log.error() << "[Error:] specified scoring_type is not grid-based, so no grid can be build for it!" << endl;
+		cout<<"[Error:] specified scoring_type is not grid-based, so no grid can be build for it!"<<endl;
 		exit(1);
 	}
-
 	String par_file = option.get("filename");
 	if (par_file == "" && !scoring_type.hasSubstring("GH"))
 	{
-		Log.error() << "[Error:] 'filename' for force-field parameter file must be specified in the config-file!" << endl;
+		cout<<"[Error:] 'filename' for force-field parameter file must be specified in the config-file  !"<<endl;
 		return(1);
 	}
-
 	if (grid_file == "")
 	{
-		Log.error() << "[Error:] the grid_file must be specified in the config-file!" << endl;
+		cout<<"'grid_file' must be specified in the config-file  !"<<endl;
 		return(1);
 	}
 
@@ -128,7 +127,7 @@ int main(int argc, char* argv[])
 
 	if (parpars.get("d") == CommandlineParser::NOT_FOUND)
 	{
-		Log.error() << "[Error:] out directory must be given." << endl;
+		cout<<"[Error:] out directory must be given" << std::endl;
 		exit (1);
 	}
 
@@ -151,7 +150,7 @@ int main(int argc, char* argv[])
 
 		if (!rotamer_set) // GLY and ALA have no rotamers
 		{
-			Log << "No rotamers for " << residue->getName() << " found." << endl;
+			cout<<"No rotamers for "<<residue->getName()<<" found."<<endl;
 			continue;
 		}
 
@@ -177,7 +176,8 @@ int main(int argc, char* argv[])
 			for (AtomIterator atom_it = protein.beginAtom(); +atom_it; atom_it++)
 			{
 				const String& name = atom_it->getName();
-				if (name == "N" || name == "O" || name == "CA" || name == "C" ||name == "HA")
+				if (name == "N" || name == "O" || name == "CA" || name == "C"
+				||name == "HA")
 				{
 					atom_it->select();
 				}
@@ -194,7 +194,7 @@ int main(int argc, char* argv[])
 			name += String((int)it->chi3)+"_";
 			name += String((int)it->chi4);
 
-			Log << "\n---- Will now precalculate grids for " << name << " ...  ------------\n" << endl;
+			cout<<endl<<"---- Will now precalculate grids for "<<name<<" ...  ------------"<<endl<<flush;
 
 			// Make sure that atoms lying outside of the grids for flexible side-chains will not be penalized during docking/scoring.
 			vector<ScoreGridSet*>* gridsets = gbs->getScoreGridSets();
@@ -207,9 +207,7 @@ int main(int argc, char* argv[])
 
 			gbs->saveGridSetsToFile(prefix+name+".bngrd", name);
 			PDBFile out(prefix+name+".pdb", ios::out);
-
 			out << *protein_template; // include backbone atoms into pdb-file, because they will be needed for mapping later
-
 			out.close();
 			delete gbs;
 		}
@@ -221,8 +219,6 @@ int main(int argc, char* argv[])
 	{
 		delete *it;
 	}
-
 	delete sp;
-
 	return 0;
 }

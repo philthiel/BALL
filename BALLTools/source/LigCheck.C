@@ -12,7 +12,7 @@
 #include <BALL_core/STRUCTURE/UCK.h>
 #include <set>
 #include <map>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -198,7 +198,7 @@ bool checkMolecule(Molecule* mol, int molecule_no, map<String, pair<int, String>
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("LigCheck", "check molecules for errors", VersionInfo::getVersion(), String(__DATE__), "Checks and evaluations");
+	CommandlineParser par("LigCheck", "check molecules for errors", VERSION, String(__DATE__), "Checks and evaluations");
 	par.registerParameter("i", "input molecule file", INFILE, true);
 	par.registerParameter("o", "output file", OUTFILE, true);
 	par.registerParameter("ef", "error fraction; print error if fraction of invalid mols is larger", DOUBLE, false, "0.5");

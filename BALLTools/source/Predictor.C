@@ -6,7 +6,7 @@
 #include <BALL_core/QSAR/registry.h>
 #include <BALL_core/QSAR/configIO.h>
 #include <fstream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL::QSAR;
 using namespace BALL;
@@ -112,7 +112,7 @@ void startPrediction(PredictionConfiguration& conf, QSARData* q, String* data_fi
 #ifndef EXT_MAIN
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("Predictor","predict activities with QSAR model", VersionInfo::getVersion() ,String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("Predictor","predict activities with QSAR model", VERSION ,String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input mod-file",INFILE,true);
 	par.registerParameter("dat","data-file containing prediction data set",INFILE,true);
 	par.registerParameter("o","output text file",OUTFILE,true);

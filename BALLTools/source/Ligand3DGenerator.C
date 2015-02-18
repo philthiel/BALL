@@ -18,7 +18,7 @@
 #include <openbabel/forcefield.h>
 #include <openbabel/plugin.h>
 #include <openbabel/obconversion.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 
 using namespace BALL;
@@ -145,7 +145,7 @@ bool advancedMoleculeCheck(Molecule* mol)
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("Ligand3DGenerator", "generate 3D coordinates for small molecules", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("Ligand3DGenerator", "generate 3D coordinates for small molecules", VERSION, String(__DATE__), "Preparation");
 	parpars.registerParameter("i", "input file", INFILE, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);
 	parpars.registerParameter("ph", "pH-value for pH-dep. protonation", DOUBLE, false, "7.0");

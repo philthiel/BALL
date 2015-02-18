@@ -8,14 +8,14 @@
 #include <BALL_core/KERNEL/system.h>
 #include <BALL_core/STRUCTURE/peptides.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 
 int main(int argc, char* argv[])
 {
 	// instantiate CommandlineParser object
-	CommandlineParser parpars("ExtractProteinSequence", "extracts fasta sequence", VersionInfo::getVersion(), String(__DATE__), "Get Data");
+	CommandlineParser parpars("ExtractProteinSequence", "extracts fasta sequence", VERSION, String(__DATE__), "Get Data");
 	parpars.registerParameter("i",  "input pdb file from which to extract ", INFILE,  true);
 	parpars.registerParameter("c",  "chain specifier", STRING,  false);
 	parpars.registerParameter("o",  "output fasta file", OUTFILE, true);

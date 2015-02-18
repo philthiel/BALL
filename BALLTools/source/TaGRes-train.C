@@ -16,13 +16,13 @@
 #include <BALL_core/SCORING/FUNCTIONS/rescoring4D.h>
 #include <BALL_core/SCORING/FUNCTIONS/rescoring1D.h>
 #include <BALL_core/SCORING/COMMON/rescorer.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("TaGResTrain", "Target-specific Grid-Rescoring, training", VersionInfo::getVersion(), String(__DATE__), "Rescoring");
+	CommandlineParser par("TaGResTrain", "Target-specific Grid-Rescoring, training", VERSION, String(__DATE__), "Rescoring");
 	par.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	par.registerParameter("rl", "reference-ligand", INFILE, true);
 	par.registerParameter(DockingAlgorithm::OPTION_FILE_PARAMETER_NAME, "configuration file", INFILE);

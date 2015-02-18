@@ -1,7 +1,7 @@
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <BALL_core/QSAR/automaticModelCreator.h>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace BALL::QSAR;
@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("AutoModel","automatically find best QSAR model", VersionInfo::getVersion(), String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("AutoModel","automatically find best QSAR model", VERSION, String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input data-file",INFILE,true);
 	par.registerParameter("o","output model file",OUTFILE,true);
 	par.registerParameter("min_quality","minimal desired quality (default: 0.3)",DOUBLE, false, "0.3");

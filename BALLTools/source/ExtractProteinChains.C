@@ -5,7 +5,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -13,7 +13,7 @@ using namespace BALL;
 int main(int argc, char* argv[])
 {
 	// instantiate CommandlineParser object
-	CommandlineParser parpars("ExtractProteinChains", "separate all chains of a pdb file into separate pdb files", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("ExtractProteinChains", "separate all chains of a pdb file into separate pdb files", VERSION, String(__DATE__), "Preparation");
 
 	parpars.registerParameter("pdb",  "input pdb file ", INFILE,  true);
 	parpars.registerParameter("chain_id",  "chain to extract ", STRING,  false);

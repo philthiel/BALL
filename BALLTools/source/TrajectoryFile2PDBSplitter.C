@@ -15,14 +15,14 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	CommandlineParser parpars("TrajectoryFile2PDBSplitter", "splits SnapShots into PDB files ", VersionInfo::getVersion(), String(__DATE__), "Convert, combine and store");
+	CommandlineParser parpars("TrajectoryFile2PDBSplitter", "splits SnapShots into PDB files ", VERSION, String(__DATE__), "Convert, combine and store");
 
 	parpars.registerParameter("i_traj", "input trajectory file", INFILE, true);
 	parpars.registerParameter("i_pdb", "input pdb-file", INFILE, true);

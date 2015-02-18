@@ -7,14 +7,14 @@
 #include <BALL_core/KERNEL/molecule.h>
 #include <BALL_core/MATHS/common.h>
 #include <BALL_core/FORMAT/commandlineParser.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("BindingDBCleaner", "fix bindingdb.org downloads", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("BindingDBCleaner", "fix bindingdb.org downloads", VERSION, String(__DATE__), "Preparation");
 	parpars.registerParameter("i", "input file", INFILE, true);
 	parpars.registerParameter("type", "type of contained activity values: 'Ki' or 'IC50'",STRING, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);
@@ -53,8 +53,8 @@ int main(int argc, char* argv[])
 	Size no_invalid = 0;
 	for (Molecule* mol = input->read(); mol; mol = input->read(), total++)
 	{
-		bool found = false;
-		int prop_id = 0;
+        bool found = false;
+        int prop_id = 0;
 		int target_no = 1;
 
 		for (NamedPropertyIterator it = mol->beginNamedProperty();
@@ -96,35 +96,35 @@ int main(int argc, char* argv[])
 					if (use_IC50)
 					{
 						String name = "Enzymologic: pIC50 nM";
-						if (prop_id > 0)
-						{
-							name += " "+String(prop_id);
-						}
+                        if (prop_id > 0)
+                        {
+                            name += " "+String(prop_id);
+                        }
 						mol->setProperty(name, -log10(value));
 					}
 					else if (use_Ki)
 					{
 						String name = "Enzymologic: pKi nM";
-						if (prop_id > 0)
-						{
-							name += " " + String(prop_id);
-						}
+                        if (prop_id > 0)
+                        {
+                            name += " " + String(prop_id);
+                        }
 						mol->setProperty(name, -log10(value));
 					}
 
 					String name = "binding_free_energy";
-					if (prop_id > 0)
-					{
-						name += " " + String(prop_id);
-					}
+                    if (prop_id > 0)
+                    {
+                        name += " " + String(prop_id);
+                    }
 					float free_energy = 1.987*298.15*log(1e-09*value)*4.184/1000;
 					mol->setProperty(name, free_energy);
 
 					// remove compounds with completely senseless binding-affinity data
 					if (free_energy > -125 && free_energy < 0 && !BALL::Maths::isNan(free_energy) && BALL::Maths::isFinite(free_energy))
 					{
-						found = true;
-						prop_id++;
+                        found = true;
+                        prop_id++;
 						no_acitivities_found++;
 					}
 					break;

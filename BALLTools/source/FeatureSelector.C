@@ -7,7 +7,7 @@
 #include <BALL_core/QSAR/featureSelection.h>
 #include <BALL_core/QSAR/configIO.h>
 #include <fstream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL::QSAR;
 using namespace BALL;
@@ -138,7 +138,7 @@ void startFeatureSelection(FeatureSelectionConfiguration& conf, QSARData* q, Str
 #ifndef EXT_MAIN
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("FeatureSelector","run feature-selection on a QSAR model", VersionInfo::getVersion(), String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("FeatureSelector","run feature-selection on a QSAR model", VERSION, String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input mod-file",INFILE,true);
 	par.registerParameter("dat","data-file",INFILE,true);
 	par.registerParameter("o","output mod-file",OUTFILE,true);

@@ -5,9 +5,10 @@
 #include <BALL_core/FORMAT/molFileFactory.h>
 #include <BALL_core/FORMAT/genericMolFile.h>
 #include <BALL_core/KERNEL/molecule.h>
+//#include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #include <BALL_core/DOCKING/COMMON/flexibleMolecule.h>
 #include <BALL_core/FORMAT/commandlineParser.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -33,7 +34,7 @@ double calculateMedian(HashMap<String, double>& scores)
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("AntitargetRescorer", "rescore w/ anti-target dock-results", VersionInfo::getVersion(), String(__DATE__), "Rescoring");
+	CommandlineParser parpars("AntitargetRescorer", "rescore w/ anti-target dock-results", VERSION, String(__DATE__), "Rescoring");
 	parpars.registerParameter("t", "input file w/ target dock-results", INFILE, true);
 	parpars.registerParameter("at", "input file w/ anti-target dock-results", INFILE, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);

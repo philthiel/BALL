@@ -17,7 +17,7 @@
 #include <BALL_core/DOCKING/COMMON/gridAnalysis.h>
 #include <BALL_core/STRUCTURE/fragmentDB.h>
 #include <set>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -418,7 +418,7 @@ double calculateMinimalDistance(const AtomContainer& ref_ligand, const AtomConta
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("WaterFinder", "find strongly bound waters ", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser par("WaterFinder", "find strongly bound waters ", VERSION, String(__DATE__), "Docking");
 	par.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	par.registerParameter("rl", "reference-ligand", INFILE, true);
 	par.registerParameter(DockingAlgorithm::OPTION_FILE_PARAMETER_NAME, "configuration file", INFILE);

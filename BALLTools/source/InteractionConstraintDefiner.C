@@ -8,14 +8,14 @@
 #include <BALL_core/DOCKING/COMMON/constraints.h>
 #include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #include <BALL_core/DATATYPE/options.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("InteractionConstraintDefiner", "define interaction constraint", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("InteractionConstraintDefiner", "define interaction constraint", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter("res", "residue ID", STRING, true);
 	parpars.registerParameter(DockingAlgorithm::OPTION_FILE_PARAMETER_NAME, "input configuration file", INFILE);
 	parpars.registerParameter("s", "desired minimal interation (score) between ligand and specified residue(s)", DOUBLE, true, "-2.0");

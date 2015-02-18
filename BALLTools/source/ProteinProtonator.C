@@ -2,6 +2,11 @@
 // vi: set ts=2:
 //
 
+// ----------------------------------------------------
+// $Maintainer: Marcel Schumann $
+// $Authors: Marcel Schumann $
+// ----------------------------------------------------
+
 #include <BALL_core/FORMAT/molFileFactory.h>
 #include <BALL_core/FORMAT/dockResultFile.h>
 #include <BALL_core/FORMAT/commandlineParser.h>
@@ -12,7 +17,7 @@
 #include <BALL_core/STRUCTURE/fragmentDB.h>
 #include <openbabel/mol.h>
 #include <openbabel/obconversion.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -21,7 +26,7 @@ void copyHydrogens(OpenBabel::OBMol* obmol, Protein* protein);
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("ProteinProtonator", "protonate protein structures", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("ProteinProtonator", "protonate protein structures", VERSION, String(__DATE__), "Preparation");
 	parpars.registerParameter("i", "input file", INFILE, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);
 	parpars.registerParameter("ph", "pH-value for pH-dep. protonation", DOUBLE, false, "7.0");

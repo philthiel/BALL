@@ -8,14 +8,14 @@
 #include <BALL_core/DOCKING/COMMON/constraints.h>
 #include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
 #include <BALL_core/DATATYPE/options.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("SpatialConstraintDefiner", "define spatial constraint", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("SpatialConstraintDefiner", "define spatial constraint", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter(DockingAlgorithm::OPTION_FILE_PARAMETER_NAME, "input configuration file", INFILE);
 	parpars.registerParameter("i", "input molecule file", INFILE, true);
 	parpars.registerParameter("o", "output configuration file", OUTFILE, true);

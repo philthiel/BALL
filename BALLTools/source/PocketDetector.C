@@ -9,7 +9,7 @@
 #include <BALL_core/KERNEL/PTE.h>
 #include <BALL_core/DOCKING/COMMON/constraints.h>
 #include <BALL_core/DOCKING/COMMON/dockingAlgorithm.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 #include <iostream>
 
 using namespace std;
@@ -145,7 +145,7 @@ void createReferenceArea(const vector<vector<std::pair<Vector3, double> > >& lay
 
 int main (int argc, char **argv)
 {
-	CommandlineParser parpars("PocketDetector", "detect binding pocket", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("PocketDetector", "detect binding pocket", VERSION, String(__DATE__), "Docking");
 	parpars.registerParameter("rec", "receptor pdb-file", INFILE, true);
 	parpars.registerParameter("rl", "reference ligand", INFILE, true);
 	parpars.registerParameter("o", "output file", OUTFILE, true);

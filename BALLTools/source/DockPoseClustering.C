@@ -14,7 +14,7 @@
 
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -27,7 +27,7 @@ int main (int argc, char **argv)
 	// - version string
 	// - build date
 	// - category
-	CommandlineParser parpars("DockPoseClustering", "clusters docking poses ", VersionInfo::getVersion(), String(__DATE__), "Docking");
+	CommandlineParser parpars("DockPoseClustering", "clusters docking poses ", VERSION, String(__DATE__), "Docking");
 
 	// we register an input file parameter 
 	// - CLI switch

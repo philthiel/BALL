@@ -11,7 +11,7 @@
 #include <BALL_core/STRUCTURE/secondaryStructureProcessor.h>
 #include <BALL_core/STRUCTURE/peptides.h>
 #include <set>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
@@ -583,7 +583,7 @@ void generateReport(Protein& protein, String inputfilename, String outputfile)
 	\\usepackage[dvips]{color}\n\
 	\\usepackage[dvips]{graphicx}\n\
 	\\title{ProteinCheck on input-file " << inputfilename << " }\n\
-	\\author{ProteinCheck, version " << VersionInfo::getVersion() << ", build "<< String(__DATE__) << "} \n\
+	\\author{ProteinCheck, version " << VERSION << ", build "<< String(__DATE__) << "} \n\
 	\\begin{document}\n\
 	\\maketitle\n\
 	\
@@ -820,7 +820,7 @@ void generateReport(Protein& protein, String inputfilename, String outputfile)
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser parpars("ProteinCheck", "quality check for proteins structures", VersionInfo::getVersion(), String(__DATE__), "Checks and evaluations");
+	CommandlineParser parpars("ProteinCheck", "quality check for proteins structures", VERSION, String(__DATE__), "Checks and evaluations");
 	parpars.registerParameter("i", "input pdb-file", INFILE, true);
 	parpars.registerParameter("o", "pdf-file for quality report", OUTFILE, true);
 	parpars.registerFlag("bc", "ignore broken chains");

@@ -6,14 +6,14 @@
 #include <BALL_core/FORMAT/genericMolFile.h>
 #include <BALL_core/FORMAT/commandlineParser.h>
 #include <BALL_core/KERNEL/molecule.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("PartialChargesCopy", "transfer part. charges between files", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser par("PartialChargesCopy", "transfer part. charges between files", VERSION, String(__DATE__), "Preparation");
 	par.registerParameter("i", "input molecule file", INFILE, true);
 	par.registerParameter("chr", "file containing the same molecules as the input file, but with (different) partial charges", INFILE, true);
 	par.registerParameter("o", "output file", OUTFILE, true);

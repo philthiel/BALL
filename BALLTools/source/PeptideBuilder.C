@@ -13,7 +13,7 @@
 
 #include <vector>
 #include <iostream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace std;
 using namespace BALL;
@@ -22,7 +22,7 @@ void usage (const char *progname);
 
 int main (int argc, char **argv)
 {
-	CommandlineParser parpars("PeptideBuilder", "build a peptide  ", VersionInfo::getVersion(), String(__DATE__), "Preparation");
+	CommandlineParser parpars("PeptideBuilder", "build a peptide  ", VERSION, String(__DATE__), "Preparation");
 	parpars.registerParameter("i", "input torsion-file", INFILE, true);
 	parpars.registerParameter("o", "peptide output pdb-file", OUTFILE, true);
 	//parpars.registerParameter("peptide_name", "name of the peptide", STRING, false);

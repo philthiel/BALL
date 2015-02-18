@@ -19,7 +19,7 @@
 #include <BALL_core/MOLMEC/COMMON/assignTypes.h>
 #include <BALL_core/SYSTEM/path.h>
 #include <BALL_core/DATATYPE/stringHashSet.h>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 #include <BALL_core/KERNEL/PTE.h>
 
@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 	String tmp;
 	String configuration_string = "";
 
-	CommandlineParser parpars("SLICK", "scoring protein-carbohydrate interactions", VersionInfo::getVersion(), String(__DATE__), "Scoring");
+	CommandlineParser parpars("SLICK", "scoring protein-carbohydrate interactions", VERSION, String(__DATE__), "Scoring");
 	parpars.registerFlag("E", "compute only SLICKEnergy");
 	parpars.registerFlag("S", "compute only SLICKScore");
 	parpars.registerFlag("u", "unite atoms");

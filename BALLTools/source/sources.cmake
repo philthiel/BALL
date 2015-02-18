@@ -2,103 +2,67 @@
 SET(DIRECTORY source)
 
 SET(TOOLS_SOURCES
-	#LigandFileSplitter
-	LigandFileMerger
-	PDBChainSplitter
-	PDBReceptorSplitter
 	PDBDownload
-	RemoveWater
-	#PlayTool
 )
 
 SET(UTILITIES_SOURCES
-	#AMBER
-	AddHydrogens
 	AddMissingAtoms
 	AntitargetRescorer
-	AssignBondOrders
-	AssignChargesFromRules
-	AssignPositionsFromTemplate
-	AssignRadiiFromRules
-	AssignTypenamesFromRules
-	AtomTyper
 	AutoModel
 	BindingDBCleaner
 	BondOrderAssigner
 	CalculateBindingFreeEnergy
 	CalculateEnergy
-	CalculateRMSD
 	CalculateSolvationFreeEnergy
-	ClipProteinAroundLigand
 	CombiLibGenerator
-	ComputeConnectedComponents
-	ComputeDockingRMSD
 	ConstraintsFinder
+	Converter
 	CrystalGenerator
-	DCD2DCD
 	DockPoseClustering
 	DockResultMerger
 	EvenSplit
-	ExportFragment
 	ExtractClustersFromWardTree
 	ExtractProteinChains
 	ExtractProteinSequence
 	FeatureSelector
-
-	#FingerprintSimilarityClustering
-	#FingerprintSimilarityNetwork
-	#FingerprintSimilaritySearch
-	#GeometricFit_slave
-
+	FingerprintSimilarityClustering
+	FingerprintSimilaritySearch
 	GridBuilder
-	HIN2MOL2
 	IMGDock
 	InputPartitioner
 	InputReader
 	InteractionConstraintDefiner
 	Ligand3DGenerator
+	LigandFileSplitter
 	LigCheck
 	ModelCreator
-	MolecularFileConverter
 	MolCombine
-	MolDepict
+	MolecularFileConverter
 	MolFilter
 	MolPredictor
 	PartialChargesCopy
-	PDB2AmberNaming
-	PDB2DCD
-	PDB2HIN
+	PDBCutter
 	PDBRMSDCalculator
 	PeptideBuilder
 	PocketDetector
-	PoissonBoltzmannSolver
 	PoseIndices2PDB
 	Predictor
 	PropertyModifier
 	PropertyPlotter
 	ProteinCheck
-	ProteinMapper
 	ProteinProtonator
-	ReconstructFragment
-
-	#RescoringCommon
-
+	RemoveWater
 	ResidueChecker
-
-	#RigidDocking
-
 	RMSDCalculator
 	ScoreAnalyzer
 	SideChainGridBuilder
 	SimilarityAnalyzer
 	SimpleRescorer
 	SLICK
-	SolventAccessibility
 	SpatialConstraintDefiner
 	Split2ConnectedComponents
-	SurfaceAndVolume
+	TaGRes-train
 	TaGRes
-	TaGResTrain
 	Trajectory2RigidTransformation
 	TrajectoryFile2PDBSplitter
 	Validator

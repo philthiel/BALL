@@ -7,7 +7,7 @@
 #include <BALL_core/QSAR/featureSelection.h>
 #include <BALL_core/QSAR/configIO.h>
 #include <fstream>
-#include <BALL_core/COMMON/version.h>
+#include <BALLTools/version.h>
 
 using namespace BALL::QSAR;
 using namespace BALL;
@@ -84,7 +84,7 @@ void startInputPartitioning(InputPartitioningConfiguration& conf, QSARData* q, S
 #ifndef EXT_MAIN
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("InputPartitioner","split QSAR data set     ", VersionInfo::getVersion(), String(__DATE__), "QuEasy (QSAR)");
+	CommandlineParser par("InputPartitioner","split QSAR data set     ", VERSION, String(__DATE__), "QuEasy (QSAR)");
 	par.registerParameter("i","input data-file",INFILE,true);
 	par.registerParameter("o","output dat-file",OUTFILE,true);
 	par.registerParameter("n","number of partitions",INT,true);

@@ -2,57 +2,74 @@
 // vi: set ts=2:
 //
 
+#include <BALL_core/FORMAT/PDBFile.h>
+#include <BALL_core/KERNEL/system.h>
+#include <BALL_core/KERNEL/selector.h>
+#include <BALL_core/STRUCTURE/peptides.h>
 
 #include <BALL_core/FORMAT/commandlineParser.h>
-#include <BALL_core/FORMAT/PDBFile.h>
 
-#include <BALL_core/COMMON/version.h>
-
+#include <BALLTools/version.h>
 
 using namespace BALL;
-using namespace std;
-
 
 int main(int argc, char* argv[])
 {
-	CommandlineParser par("RemoveWater", "Removes water molecules from a PDB file ", VersionInfo::getVersion(), String(__DATE__), "Protein Preparation");
-	par.registerParameter("i",  "PDB input file", INFILE,  true);
-	par.registerParameter("o",  "PDB output file", OUTFILE, true);
+	// instantiate CommandlineParser object
+	CommandlineParser parpars("RemoveWater", "removes water from PDB file ", VERSION, String(__DATE__), "Preparation");
+	parpars.registerParameter("i",  "input pdb file ", INFILE,  true);
+	parpars.registerParameter("o",  "output fasta file", OUTFILE, true);
 
-	String man = String("This tool removes all water molecules from a given PDB file.");
+	// the manual
+	String man = String("This tool removes water from a given pdb file.");
 
-	par.setToolManual(man);
+	parpars.setToolManual(man);
 
-	par.setSupportedFormats("i", "pdb");
-	par.setSupportedFormats("o", "pdb");
+	parpars.setSupportedFormats("i", "pdb");
+	parpars.setSupportedFormats("o", "pdb");
 
-	par.parse(argc, argv);
+	// parse the command line
+	parpars.parse(argc, argv);
 
-	Protein protein;
-	PDBFile pdb_in;
-	pdb_in.open(par.get("i"));
-	pdb_in >> protein;
-	pdb_in.close();
+	PDBFile in_file;
+	in_file.open(parpars.get("i"), std::ios::in);
 
-	for (ChainIterator it_ch = protein.beginChain(); it_ch != protein.endChain(); ++it_ch)
+	if (!in_file)
 	{
-		for (ResidueIterator it_res = it_ch->beginResidue(); it_res != it_ch->endResidue(); ++ it_res)
-		{
-			if (it_res->getName() == "HOH")
-			{
-				it_res->select();
-			}
-		}
+		// if file does not exist: complain and abort
+		Log.error() << "error opening " << parpars.get("i") << " for input." << std::endl;
+		exit(2);
 	}
 
-	protein.removeSelected();
+	PDBFile out_file;
+	out_file.open(parpars.get("o"), std::ios::out);
 
-	PDBFile pdb_out(par.get("o"), File::MODE_OUT);
-	pdb_out << protein;
-	pdb_out.close();
+	if (!out_file)
+	{
+		// if file does not exist: complain and abort
+		Log.error() << "error opening " << parpars.get("o") << " for output." << std::endl;
+		exit(2);
+	}
 
-	Log.level(10) << "++ Generated " << par.get("o") << " output file without water molecule." << endl;
-	Log.level(10) << "++ DONE." << endl;
+	System system;
+	in_file >> system;
+	in_file.close();
+
+	// define the selector by Expression
+	Selector wat("residue(HOH) OR residue(WAT)");
+	// apply
+	system.apply(wat);
+
+	// remove
+	system.removeSelected();
+	system.deselect();
+
+	Log << wat.getNumberOfSelectedAtoms() << std::endl;
+
+	out_file << system;
+	out_file.close();
+
+	Log << "wrote file " << parpars.get("o") << std::endl;
 
 	return 0;
 }
