@@ -1,0 +1,2 @@
+#cmakedefine TOOLS_TEST_DATA_PATH(filename) "@TOOLS_TEST_DATA_PATH@/" #filename
+#cmakedefine TOOLS_RUNTIME_OUTPUT_PATH(toolname) "@TOOLS_RUNTIME_OUTPUT_PATH@/" #toolname

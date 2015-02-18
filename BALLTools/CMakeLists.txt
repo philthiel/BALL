@@ -35,6 +35,8 @@ PROJECT("BALLTools")
 ###    Upstream include directories                                         ###
 ###############################################################################
 
+# BALLTools include directory
+INCLUDE_DIRECTORIES("${PROJECT_SOURCE_DIR}/include")
 
 # BALL_core include directories
 INCLUDE_DIRECTORIES(${BALL_core_INCLUDE_DIRS})
@@ -58,6 +60,7 @@ SET(TOOLS_CTD_PATH "${PROJECT_BINARY_DIR}/ctd")
 SET(TOOLS_CTD_LOGFILE "${PROJECT_BINARY_DIR}/generate_ctd.log")
 
 
+
 ###############################################################################
 ###    Add TOOLS and UTILITIES                                              ###
 ###############################################################################
@@ -65,11 +68,15 @@ SET(TOOLS_CTD_LOGFILE "${PROJECT_BINARY_DIR}/generate_ctd.log")
 INCLUDE(source/sources.cmake)
 
 FOREACH(source_file ${TOOLS_SOURCES})
-	BALL_ADD_EXECUTABLE(TARGET_NAME ${source_file} SOURCE_FILES "source/${source_file}.C" LINK_LIBRARIES BALL_core OUTPUT_DIR "${TOOLS_RUNTIME_OUTPUT_PATH}")
+	BALL_ADD_EXECUTABLE(TARGET_NAME ${source_file}
+			    SOURCE_FILES "source/${source_file}.C" "include/BALLTools/version.h"
+			    LINK_LIBRARIES BALL_core OUTPUT_DIR "${TOOLS_RUNTIME_OUTPUT_PATH}")
 ENDFOREACH()
 
 FOREACH(source_file ${UTILITIES_SOURCES})
-	BALL_ADD_EXECUTABLE(TARGET_NAME ${source_file} SOURCE_FILES "source/${source_file}.C" LINK_LIBRARIES BALL_core OUTPUT_DIR "${UTILS_RUNTIME_OUTPUT_PATH}")
+	BALL_ADD_EXECUTABLE(TARGET_NAME ${source_file}
+			    SOURCE_FILES "source/${source_file}.C" "include/BALLTools/version.h"
+			    LINK_LIBRARIES BALL_core OUTPUT_DIR "${UTILS_RUNTIME_OUTPUT_PATH}")
 ENDFOREACH()
 
 
@@ -99,3 +106,8 @@ FOREACH(tool ${TOOLS_SOURCES})
 ENDFOREACH()
 
 
+########################################################
+###    Build TOOLS tests                             ###
+########################################################
+
+ADD_SUBDIRECTORY(TEST EXCLUDE_FROM_ALL)

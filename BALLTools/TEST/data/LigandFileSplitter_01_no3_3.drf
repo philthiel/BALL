@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dockingfile>
+<results>
+    <result method="1" methodstring="LIGANDIMPORT" toolinfo="" time="">
+        <subresult lconf="ffc0e03ebeda0f16550a8b077584b3fa28d90239">
+            <entry lconf="ffc0e03ebeda0f16550a8b077584b3fa28d90239"/>
+        </subresult>
+        <subresult lconf="cfcd8740b1c37f2e0a29fab7b574b54894a69fe6">
+            <entry lconf="cfcd8740b1c37f2e0a29fab7b574b54894a69fe6"/>
+        </subresult>
+        <subresult lconf="ad55b3e7062f20462d1a8b6706688e574dcb84ec">
+            <entry lconf="ad55b3e7062f20462d1a8b6706688e574dcb84ec"/>
+        </subresult>
+    </result>
+</results>
+<receptors/>
+<ligands>
+    <ligand id="ffc0e03ebeda0f16550a8b077584b3fa28d90239">
+        <molecule name="acetylcholine chloride for injection (conformation  1)">
+            <atoms>
+                <atom element="C" x="-1.282000" y="-1.412000" z="-0.837000"/>
+                <atom element="H" x="-1.858000" y="-2.099000" z="-0.175000"/>
+                <atom element="H" x="-0.943000" y="-1.993000" z="-1.725000"/>
+                <atom element="H" x="-1.954000" y="-0.598000" z="-1.191000"/>
+                <atom element="C" x="-0.094000" y="-0.834000" z="-0.095000"/>
+                <atom element="O" x="-0.531000" y="-0.139000" z="0.993000"/>
+                <atom element="O" x="1.064000" y="-0.982000" z="-0.433000"/>
+                <atom element="C" x="0.487000" y="0.499000" z="1.755000"/>
+                <atom element="H" x="1.116000" y="1.105000" z="1.061000"/>
+                <atom element="H" x="-0.042000" y="1.216000" z="2.428000"/>
+                <atom element="C" x="1.299000" y="-0.520000" z="2.587000"/>
+                <atom element="H" x="0.595000" y="-1.016000" z="3.297000"/>
+                <atom element="H" x="1.691000" y="-1.324000" z="1.922000"/>
+                <atom element="N" x="2.450000" y="0.085000" z="3.343000" chrg="1.000000"/>
+                <atom element="C" x="1.995000" y="1.151000" z="4.286000"/>
+                <atom element="H" x="2.839000" y="1.532000" z="4.905000"/>
+                <atom element="H" x="1.579000" y="2.032000" z="3.748000"/>
+                <atom element="H" x="1.212000" y="0.771000" z="4.982000"/>
+                <atom element="C" x="3.105000" y="-0.998000" z="4.145000"/>
+                <atom element="H" x="3.490000" y="-1.815000" z="3.492000"/>
+                <atom element="H" x="3.973000" y="-0.610000" z="4.727000"/>
+                <atom element="H" x="2.398000" y="-1.452000" z="4.877000"/>
+                <atom element="C" x="3.474000" y="0.655000" z="2.416000"/>
+                <atom element="H" x="3.088000" y="1.529000" z="1.847000"/>
+                <atom element="H" x="4.370000" y="1.016000" z="2.972000"/>
+                <atom element="H" x="3.820000" y="-0.103000" z="1.675000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="4" order="1"/>
+                <bond from="1" to="3" order="1"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="1" to="5" order="1"/>
+                <bond from="5" to="7" order="2"/>
+                <bond from="5" to="6" order="1"/>
+                <bond from="6" to="8" order="1"/>
+                <bond from="8" to="9" order="1"/>
+                <bond from="8" to="10" order="1"/>
+                <bond from="8" to="11" order="1"/>
+                <bond from="11" to="12" order="1"/>
+                <bond from="11" to="13" order="1"/>
+                <bond from="11" to="14" order="1"/>
+                <bond from="14" to="15" order="1"/>
+                <bond from="14" to="23" order="1"/>
+                <bond from="14" to="19" order="1"/>
+                <bond from="15" to="17" order="1"/>
+                <bond from="15" to="16" order="1"/>
+                <bond from="15" to="18" order="1"/>
+                <bond from="19" to="21" order="1"/>
+                <bond from="19" to="20" order="1"/>
+                <bond from="19" to="22" order="1"/>
+                <bond from="23" to="25" order="1"/>
+                <bond from="23" to="24" order="1"/>
+                <bond from="23" to="26" order="1"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="ffc0e03ebeda0f16550a8b077584b3fa28d90239">
+                <property NAME="acetylcholine chloride for injection"/>
+                <property b_1rotN="8"/>
+                <property Weight="146.21"/>
+                <property TPSA="26.3"/>
+                <property a_acc="2"/>
+                <property a_don="0"/>
+                <property logP="-0.259"/>
+                <property SlogP="0.2557"/>
+                <property ID="8"/>
+            </conformation>
+        </conformations>
+    </ligand>
+    <ligand id="cfcd8740b1c37f2e0a29fab7b574b54894a69fe6">
+        <molecule name="acetylcysteine (conformation  1)">
+            <atoms>
+                <atom element="S" x="8.014000" y="9.389000" z="0.746000"/>
+                <atom element="C" x="8.864000" y="10.390000" z="-0.522000"/>
+                <atom element="C" x="8.535000" y="11.885000" z="-0.345000"/>
+                <atom element="H" x="9.963000" y="10.236000" z="-0.414000"/>
+                <atom element="H" x="8.589000" y="10.040000" z="-1.543000"/>
+                <atom element="N" x="7.091000" y="12.163000" z="-0.369000"/>
+                <atom element="H" x="8.893000" y="12.192000" z="0.668000"/>
+                <atom element="C" x="4.876000" y="12.335000" z="-1.463000"/>
+                <atom element="C" x="9.336000" y="12.755000" z="-1.303000"/>
+                <atom element="O" x="10.202000" y="12.396000" z="-2.071000"/>
+                <atom element="O" x="8.972000" y="14.042000" z="-1.170000"/>
+                <atom element="C" x="6.363000" y="12.052000" z="-1.547000"/>
+                <atom element="O" x="6.895000" y="11.739000" z="-2.597000"/>
+                <atom element="H" x="6.790000" y="9.426000" z="0.188000"/>
+                <atom element="H" x="6.572000" y="12.409000" z="0.475000"/>
+                <atom element="H" x="4.389000" y="12.220000" z="-2.458000"/>
+                <atom element="H" x="4.392000" y="11.626000" z="-0.753000"/>
+                <atom element="H" x="4.704000" y="13.377000" z="-1.109000"/>
+                <atom element="H" x="9.553000" y="14.416000" z="-1.853000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="14" order="1"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="2" to="4" order="1"/>
+                <bond from="2" to="5" order="1"/>
+                <bond from="2" to="3" order="1"/>
+                <bond from="3" to="7" order="1"/>
+                <bond from="3" to="9" order="1"/>
+                <bond from="3" to="6" order="1"/>
+                <bond from="6" to="15" order="1"/>
+                <bond from="6" to="12" order="1"/>
+                <bond from="8" to="17" order="1"/>
+                <bond from="8" to="16" order="1"/>
+                <bond from="8" to="18" order="1"/>
+                <bond from="8" to="12" order="1"/>
+                <bond from="9" to="11" order="1"/>
+                <bond from="9" to="10" order="2"/>
+                <bond from="11" to="19" order="1"/>
+                <bond from="12" to="13" order="2"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="cfcd8740b1c37f2e0a29fab7b574b54894a69fe6">
+                <property NAME="acetylcysteine"/>
+                <property b_1rotN="7"/>
+                <property Weight="163.197"/>
+                <property TPSA="105.2"/>
+                <property a_acc="3"/>
+                <property a_don="3"/>
+                <property logP="-0.38"/>
+                <property SlogP="-0.7225"/>
+                <property ID="9"/>
+            </conformation>
+        </conformations>
+    </ligand>
+    <ligand id="ad55b3e7062f20462d1a8b6706688e574dcb84ec">
+        <molecule name="acetylkitasamycin (conformation  1)">
+            <atoms>
+                <atom element="C" x="-42.935001" y="-55.686001" z="3.220000"/>
+                <atom element="C" x="-41.737000" y="-54.716000" z="3.076000"/>
+                <atom element="C" x="-42.119999" y="-53.264000" z="3.452000"/>
+                <atom element="C" x="-41.127998" y="-52.154999" z="3.021000"/>
+                <atom element="C" x="-41.060001" y="-52.001999" z="1.478000"/>
+                <atom element="C" x="-42.236000" y="-51.258999" z="0.802000"/>
+                <atom element="C" x="-42.535999" y="-51.792999" z="-0.617000"/>
+                <atom element="C" x="-43.999001" y="-51.699001" z="-1.103000"/>
+                <atom element="O" x="-45.645000" y="-52.889999" z="-2.302000"/>
+                <atom element="C" x="-46.083000" y="-54.002998" z="-3.067000"/>
+                <atom element="C" x="-46.389999" y="-55.168999" z="-2.110000"/>
+                <atom element="C" x="-45.216000" y="-55.509998" z="-1.222000"/>
+                <atom element="C" x="-45.193001" y="-55.254002" z="0.096000"/>
+                <atom element="C" x="-44.061001" y="-55.612999" z="0.962000"/>
+                <atom element="C" x="-44.058998" y="-55.316002" z="2.271000"/>
+                <atom element="C" x="-44.300999" y="-52.676998" z="-2.231000"/>
+                <atom element="O" x="-43.437000" y="-53.230000" z="-2.883000"/>
+                <atom element="O" x="-43.354000" y="-55.714001" z="4.574000"/>
+                <atom element="C" x="-44.348999" y="-56.594002" z="4.874000"/>
+                <atom element="O" x="-44.886002" y="-57.375999" z="4.116000"/>
+                <atom element="C" x="-44.708000" y="-56.455002" z="6.340000"/>
+                <atom element="C" x="-40.526001" y="-55.216000" z="3.886000"/>
+                <atom element="C" x="-41.422001" y="-50.842999" z="3.775000"/>
+                <atom element="O" x="-41.957001" y="-49.870998" z="0.795000"/>
+                <atom element="C" x="-43.095001" y="-49.042999" z="0.957000"/>
+                <atom element="O" x="-41.555000" y="-51.382999" z="-1.556000"/>
+                <atom element="C" x="-41.696999" y="-50.224998" z="-2.255000"/>
+                <atom element="O" x="-42.595001" y="-49.410999" z="-2.188000"/>
+                <atom element="C" x="-40.528000" y="-50.063999" z="-3.208000"/>
+                <atom element="C" x="-47.339001" y="-53.598999" z="-3.857000"/>
+                <atom element="O" x="-39.811001" y="-51.424000" z="1.121000"/>
+                <atom element="C" x="-38.974998" y="-52.250000" z="0.351000"/>
+                <atom element="O" x="-38.701000" y="-53.284000" z="1.259000"/>
+                <atom element="C" x="-37.638000" y="-54.134998" z="0.856000"/>
+                <atom element="C" x="-37.226002" y="-53.944000" z="-0.615000"/>
+                <atom element="C" x="-36.846001" y="-52.463001" z="-0.927000"/>
+                <atom element="C" x="-37.683998" y="-51.534000" z="-0.009000"/>
+                <atom element="O" x="-38.332001" y="-54.393002" z="-1.392000"/>
+                <atom element="O" x="-38.044998" y="-50.341000" z="-0.685000"/>
+                <atom element="C" x="-38.119999" y="-49.201000" z="0.060000"/>
+                <atom element="O" x="-37.768002" y="-49.049000" z="1.213000"/>
+                <atom element="C" x="-38.759998" y="-48.104000" z="-0.767000"/>
+                <atom element="C" x="-36.463001" y="-54.011002" z="1.842000"/>
+                <atom element="N" x="-35.398998" y="-52.222000" z="-0.854000"/>
+                <atom element="C" x="-34.665001" y="-52.933998" z="-1.900000"/>
+                <atom element="C" x="-35.050999" y="-50.807999" z="-0.946000"/>
+                <atom element="C" x="-38.066002" y="-55.189999" z="-2.516000"/>
+                <atom element="O" x="-37.581001" y="-54.292000" z="-3.478000"/>
+                <atom element="C" x="-38.530998" y="-53.365002" z="-3.985000"/>
+                <atom element="C" x="-39.727001" y="-54.094002" z="-4.605000"/>
+                <atom element="C" x="-40.405998" y="-55.008999" z="-3.582000"/>
+                <atom element="C" x="-39.325001" y="-55.931000" z="-2.992000"/>
+                <atom element="H" x="-42.580002" y="-56.713001" z="2.952000"/>
+                <atom element="H" x="-41.442001" y="-54.772999" z="2.003000"/>
+                <atom element="H" x="-43.116001" y="-53.012001" z="3.026000"/>
+                <atom element="H" x="-42.250999" y="-53.230999" z="4.559000"/>
+                <atom element="H" x="-40.123001" y="-52.484001" z="3.377000"/>
+                <atom element="H" x="-41.091000" y="-53.035999" z="1.079000"/>
+                <atom element="H" x="-43.137001" y="-51.450001" z="1.431000"/>
+                <atom element="H" x="-42.401001" y="-52.900002" z="-0.534000"/>
+                <atom element="H" x="-44.320000" y="-50.687000" z="-1.425000"/>
+                <atom element="H" x="-44.658001" y="-51.970001" z="-0.245000"/>
+                <atom element="H" x="-45.299999" y="-54.320999" z="-3.799000"/>
+                <atom element="H" x="-47.272999" y="-54.901001" z="-1.484000"/>
+                <atom element="H" x="-46.674000" y="-56.078999" z="-2.689000"/>
+                <atom element="H" x="-44.345001" y="-55.984001" z="-1.707000"/>
+                <atom element="H" x="-46.071999" y="-54.769001" z="0.552000"/>
+                <atom element="H" x="-43.203999" y="-56.158001" z="0.534000"/>
+                <atom element="H" x="-44.910000" y="-54.761002" z="2.702000"/>
+                <atom element="H" x="-45.070000" y="-55.424000" z="6.556000"/>
+                <atom element="H" x="-45.518002" y="-57.169998" z="6.614000"/>
+                <atom element="H" x="-43.823002" y="-56.673000" z="6.980000"/>
+                <atom element="H" x="-40.285999" y="-56.276001" z="3.641000"/>
+                <atom element="H" x="-39.606998" y="-54.627998" z="3.668000"/>
+                <atom element="H" x="-40.715000" y="-55.157001" z="4.982000"/>
+                <atom element="H" x="-42.466999" y="-50.512001" z="3.579000"/>
+                <atom element="H" x="-41.355000" y="-51.027000" z="4.873000"/>
+                <atom element="H" x="-43.548000" y="-49.196999" z="1.965000"/>
+                <atom element="H" x="-42.758999" y="-47.983002" z="0.877000"/>
+                <atom element="H" x="-43.851002" y="-49.240002" z="0.166000"/>
+                <atom element="H" x="-40.719002" y="-50.638000" z="-4.139000"/>
+                <atom element="H" x="-40.396999" y="-48.993999" z="-3.487000"/>
+                <atom element="H" x="-39.573002" y="-50.419998" z="-2.764000"/>
+                <atom element="H" x="-47.715000" y="-54.446999" z="-4.474000"/>
+                <atom element="H" x="-48.160000" y="-53.280998" z="-3.173000"/>
+                <atom element="H" x="-47.130001" y="-52.747002" z="-4.544000"/>
+                <atom element="H" x="-39.546001" y="-52.604000" z="-0.540000"/>
+                <atom element="H" x="-38.020000" y="-55.181000" z="0.981000"/>
+                <atom element="H" x="-36.380001" y="-54.648998" z="-0.773000"/>
+                <atom element="H" x="-37.152000" y="-52.229000" z="-1.969000"/>
+                <atom element="H" x="-37.125999" y="-51.306999" z="0.930000"/>
+                <atom element="H" x="-38.632999" y="-47.116001" z="-0.270000"/>
+                <atom element="H" x="-38.297001" y="-48.042999" z="-1.778000"/>
+                <atom element="H" x="-39.851002" y="-48.299000" z="-0.871000"/>
+                <atom element="H" x="-35.665001" y="-54.752998" z="1.610000"/>
+                <atom element="H" x="-35.992001" y="-53.004002" z="1.822000"/>
+                <atom element="H" x="-36.799999" y="-54.199001" z="2.888000"/>
+                <atom element="H" x="-33.569000" y="-52.757000" z="-1.800000"/>
+                <atom element="H" x="-34.783001" y="-54.035999" z="-1.841000"/>
+                <atom element="H" x="-34.980999" y="-52.604000" z="-2.917000"/>
+                <atom element="H" x="-33.945999" y="-50.667000" z="-0.921000"/>
+                <atom element="H" x="-35.442001" y="-50.349998" z="-1.885000"/>
+                <atom element="H" x="-35.428001" y="-50.234001" z="-0.071000"/>
+                <atom element="H" x="-37.265999" y="-55.937000" z="-2.277000"/>
+                <atom element="H" x="-38.893002" y="-52.700001" z="-3.165000"/>
+                <atom element="H" x="-39.348000" y="-54.713001" z="-5.453000"/>
+                <atom element="H" x="-39.748001" y="-56.528000" z="-2.149000"/>
+                <atom element="H" x="-39.014999" y="-56.660999" z="-3.777000"/>
+                <atom element="C" x="-41.546001" y="-55.841999" z="-4.195000"/>
+                <atom element="H" x="-42.360001" y="-55.198002" z="-4.595000"/>
+                <atom element="H" x="-41.179001" y="-56.476002" z="-5.034000"/>
+                <atom element="H" x="-42.002998" y="-56.514999" z="-3.433000"/>
+                <atom element="C" x="-37.799000" y="-52.473000" z="-5.005000"/>
+                <atom element="H" x="-36.917000" y="-51.977001" z="-4.539000"/>
+                <atom element="H" x="-37.433998" y="-53.071999" z="-5.870000"/>
+                <atom element="H" x="-38.456001" y="-51.665001" z="-5.400000"/>
+                <atom element="O" x="-40.946999" y="-54.223999" z="-2.539000"/>
+                <atom element="H" x="-41.696999" y="-53.737999" z="-2.859000"/>
+                <atom element="O" x="-40.655998" y="-53.122002" z="-5.054000"/>
+                <atom element="C" x="-41.058998" y="-53.171001" z="-6.355000"/>
+                <atom element="O" x="-40.834999" y="-54.056000" z="-7.157000"/>
+                <atom element="C" x="-41.778000" y="-51.880001" z="-6.708000"/>
+                <atom element="H" x="-41.057999" y="-51.041000" z="-6.558000"/>
+                <atom element="H" x="-42.022999" y="-51.893002" z="-7.796000"/>
+                <atom element="C" x="-43.063000" y="-51.630001" z="-5.900000"/>
+                <atom element="H" x="-42.818001" y="-51.659000" z="-4.811000"/>
+                <atom element="C" x="-43.631001" y="-50.233002" z="-6.198000"/>
+                <atom element="H" x="-44.548000" y="-50.034000" z="-5.596000"/>
+                <atom element="H" x="-42.893002" y="-49.436001" z="-5.950000"/>
+                <atom element="H" x="-43.900002" y="-50.129002" z="-7.275000"/>
+                <atom element="C" x="-44.115002" y="-52.710999" z="-6.192000"/>
+                <atom element="H" x="-44.389000" y="-52.728001" z="-7.271000"/>
+                <atom element="H" x="-43.748001" y="-53.726002" z="-5.917000"/>
+                <atom element="H" x="-45.044998" y="-52.523998" z="-5.611000"/>
+                <atom element="C" x="-40.470001" y="-49.694000" z="3.492000"/>
+                <atom element="O" x="-40.820999" y="-48.535999" z="3.499000"/>
+                <atom element="H" x="-39.396999" y="-49.941002" z="3.328000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="53" order="1"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="1" to="15" order="1"/>
+                <bond from="1" to="18" order="1"/>
+                <bond from="2" to="54" order="1"/>
+                <bond from="2" to="22" order="1"/>
+                <bond from="2" to="3" order="1"/>
+                <bond from="3" to="55" order="1"/>
+                <bond from="3" to="56" order="1"/>
+                <bond from="3" to="4" order="1"/>
+                <bond from="4" to="57" order="1"/>
+                <bond from="4" to="23" order="1"/>
+                <bond from="4" to="5" order="1"/>
+                <bond from="5" to="58" order="1"/>
+                <bond from="5" to="6" order="1"/>
+                <bond from="5" to="31" order="1"/>
+                <bond from="6" to="59" order="1"/>
+                <bond from="6" to="7" order="1"/>
+                <bond from="6" to="24" order="1"/>
+                <bond from="7" to="60" order="1"/>
+                <bond from="7" to="8" order="1"/>
+                <bond from="7" to="26" order="1"/>
+                <bond from="8" to="61" order="1"/>
+                <bond from="8" to="62" order="1"/>
+                <bond from="8" to="16" order="1"/>
+                <bond from="9" to="10" order="1"/>
+                <bond from="9" to="16" order="1"/>
+                <bond from="10" to="63" order="1"/>
+                <bond from="10" to="30" order="1"/>
+                <bond from="10" to="11" order="1"/>
+                <bond from="11" to="64" order="1"/>
+                <bond from="11" to="65" order="1"/>
+                <bond from="11" to="12" order="1"/>
+                <bond from="12" to="66" order="1"/>
+                <bond from="12" to="13" order="2"/>
+                <bond from="13" to="67" order="1"/>
+                <bond from="13" to="14" order="1"/>
+                <bond from="14" to="68" order="1"/>
+                <bond from="14" to="15" order="2"/>
+                <bond from="15" to="69" order="1"/>
+                <bond from="16" to="17" order="2"/>
+                <bond from="18" to="19" order="1"/>
+                <bond from="19" to="21" order="1"/>
+                <bond from="19" to="20" order="2"/>
+                <bond from="21" to="71" order="1"/>
+                <bond from="21" to="70" order="1"/>
+                <bond from="21" to="72" order="1"/>
+                <bond from="22" to="74" order="1"/>
+                <bond from="22" to="73" order="1"/>
+                <bond from="22" to="75" order="1"/>
+                <bond from="23" to="76" order="1"/>
+                <bond from="23" to="77" order="1"/>
+                <bond from="23" to="135" order="1"/>
+                <bond from="24" to="25" order="1"/>
+                <bond from="25" to="79" order="1"/>
+                <bond from="25" to="78" order="1"/>
+                <bond from="25" to="80" order="1"/>
+                <bond from="26" to="27" order="1"/>
+                <bond from="27" to="29" order="1"/>
+                <bond from="27" to="28" order="2"/>
+                <bond from="29" to="82" order="1"/>
+                <bond from="29" to="81" order="1"/>
+                <bond from="29" to="83" order="1"/>
+                <bond from="30" to="85" order="1"/>
+                <bond from="30" to="84" order="1"/>
+                <bond from="30" to="86" order="1"/>
+                <bond from="31" to="32" order="1"/>
+                <bond from="32" to="87" order="1"/>
+                <bond from="32" to="37" order="1"/>
+                <bond from="32" to="33" order="1"/>
+                <bond from="33" to="34" order="1"/>
+                <bond from="34" to="88" order="1"/>
+                <bond from="34" to="43" order="1"/>
+                <bond from="34" to="35" order="1"/>
+                <bond from="35" to="89" order="1"/>
+                <bond from="35" to="36" order="1"/>
+                <bond from="35" to="38" order="1"/>
+                <bond from="36" to="90" order="1"/>
+                <bond from="36" to="37" order="1"/>
+                <bond from="36" to="44" order="1"/>
+                <bond from="37" to="91" order="1"/>
+                <bond from="37" to="39" order="1"/>
+                <bond from="38" to="47" order="1"/>
+                <bond from="39" to="40" order="1"/>
+                <bond from="40" to="42" order="1"/>
+                <bond from="40" to="41" order="2"/>
+                <bond from="42" to="93" order="1"/>
+                <bond from="42" to="92" order="1"/>
+                <bond from="42" to="94" order="1"/>
+                <bond from="43" to="96" order="1"/>
+                <bond from="43" to="95" order="1"/>
+                <bond from="43" to="97" order="1"/>
+                <bond from="44" to="46" order="1"/>
+                <bond from="44" to="45" order="1"/>
+                <bond from="45" to="99" order="1"/>
+                <bond from="45" to="98" order="1"/>
+                <bond from="45" to="100" order="1"/>
+                <bond from="46" to="102" order="1"/>
+                <bond from="46" to="101" order="1"/>
+                <bond from="46" to="103" order="1"/>
+                <bond from="47" to="104" order="1"/>
+                <bond from="47" to="52" order="1"/>
+                <bond from="47" to="48" order="1"/>
+                <bond from="48" to="49" order="1"/>
+                <bond from="49" to="105" order="1"/>
+                <bond from="49" to="113" order="1"/>
+                <bond from="49" to="50" order="1"/>
+                <bond from="50" to="106" order="1"/>
+                <bond from="50" to="51" order="1"/>
+                <bond from="50" to="119" order="1"/>
+                <bond from="51" to="109" order="1"/>
+                <bond from="51" to="52" order="1"/>
+                <bond from="51" to="117" order="1"/>
+                <bond from="52" to="107" order="1"/>
+                <bond from="52" to="108" order="1"/>
+                <bond from="109" to="111" order="1"/>
+                <bond from="109" to="110" order="1"/>
+                <bond from="109" to="112" order="1"/>
+                <bond from="113" to="115" order="1"/>
+                <bond from="113" to="114" order="1"/>
+                <bond from="113" to="116" order="1"/>
+                <bond from="117" to="118" order="1"/>
+                <bond from="119" to="120" order="1"/>
+                <bond from="120" to="122" order="1"/>
+                <bond from="120" to="121" order="2"/>
+                <bond from="122" to="124" order="1"/>
+                <bond from="122" to="123" order="1"/>
+                <bond from="122" to="125" order="1"/>
+                <bond from="125" to="126" order="1"/>
+                <bond from="125" to="131" order="1"/>
+                <bond from="125" to="127" order="1"/>
+                <bond from="127" to="129" order="1"/>
+                <bond from="127" to="128" order="1"/>
+                <bond from="127" to="130" order="1"/>
+                <bond from="131" to="133" order="1"/>
+                <bond from="131" to="132" order="1"/>
+                <bond from="131" to="134" order="1"/>
+                <bond from="135" to="137" order="1"/>
+                <bond from="135" to="136" order="2"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="ad55b3e7062f20462d1a8b6706688e574dcb84ec">
+                <property NAME="acetylkitasamycin"/>
+                <property b_1rotN="32"/>
+                <property Weight="912.08"/>
+                <property TPSA="218.19"/>
+                <property a_acc="18"/>
+                <property a_don="1"/>
+                <property logP="4.44222"/>
+                <property SlogP="4.155"/>
+                <property ID="10"/>
+            </conformation>
+        </conformations>
+    </ligand>
+</ligands>
+</dockingfile>

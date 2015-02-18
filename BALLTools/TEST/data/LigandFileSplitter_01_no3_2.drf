@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dockingfile>
+<results>
+    <result method="1" methodstring="LIGANDIMPORT" toolinfo="" time="">
+        <subresult lconf="c8be688838ff7bca897b3e5c582540dcf77d1bcd">
+            <entry lconf="c8be688838ff7bca897b3e5c582540dcf77d1bcd"/>
+        </subresult>
+        <subresult lconf="ac3a38bb695f7f383c299133c97b792dee88f4d2">
+            <entry lconf="ac3a38bb695f7f383c299133c97b792dee88f4d2"/>
+        </subresult>
+        <subresult lconf="2e6a9c329a289e815863bf29bf40d05c3d5c2249">
+            <entry lconf="2e6a9c329a289e815863bf29bf40d05c3d5c2249"/>
+        </subresult>
+        <subresult lconf="e83dd91102a16f5248331a6c3da92a7b5dad22fd">
+            <entry lconf="e83dd91102a16f5248331a6c3da92a7b5dad22fd"/>
+        </subresult>
+    </result>
+</results>
+<receptors/>
+<ligands>
+    <ligand id="c8be688838ff7bca897b3e5c582540dcf77d1bcd">
+        <molecule name="acemetacin (conformation  1)">
+            <atoms>
+                <atom element="C" x="-2.157000" y="-6.902000" z="-0.103000"/>
+                <atom element="C" x="-2.550000" y="-8.213000" z="0.176000"/>
+                <atom element="C" x="-2.137000" y="-9.325000" z="-0.572000"/>
+                <atom element="C" x="-1.285000" y="-9.067000" z="-1.656000"/>
+                <atom element="C" x="-0.893000" y="-7.763000" z="-1.931000"/>
+                <atom element="C" x="-1.303000" y="-6.672000" z="-1.177000"/>
+                <atom element="H" x="-2.538000" y="-6.087000" z="0.532000"/>
+                <atom element="H" x="-3.225000" y="-8.382000" z="1.032000"/>
+                <atom element="H" x="-0.909000" y="-9.873000" z="-2.303000"/>
+                <atom element="C" x="0.035000" y="-5.894000" z="-2.752000"/>
+                <atom element="C" x="-0.020000" y="-7.223000" z="-2.967000"/>
+                <atom element="C" x="-0.999000" y="-4.243000" z="-1.206000"/>
+                <atom element="N" x="-0.782000" y="-5.536000" z="-1.692000"/>
+                <atom element="O" x="-1.417000" y="-4.038000" z="-0.078000"/>
+                <atom element="C" x="-0.755000" y="-3.052000" z="-2.083000"/>
+                <atom element="C" x="0.051000" y="-2.009000" z="-1.628000"/>
+                <atom element="C" x="0.256000" y="-0.889000" z="-2.433000"/>
+                <atom element="C" x="-0.355000" y="-0.806000" z="-3.685000"/>
+                <atom element="C" x="-1.178000" y="-1.842000" z="-4.128000"/>
+                <atom element="C" x="-1.384000" y="-2.964000" z="-3.326000"/>
+                <atom element="H" x="0.535000" y="-2.069000" z="-0.638000"/>
+                <atom element="H" x="0.904000" y="-0.074000" z="-2.067000"/>
+                <atom element="Cl" x="-0.091000" y="0.586000" z="-4.669000"/>
+                <atom element="H" x="-1.673000" y="-1.784000" z="-5.112000"/>
+                <atom element="H" x="-2.043000" y="-3.775000" z="-3.677000"/>
+                <atom element="C" x="0.989000" y="-4.978000" z="-3.497000"/>
+                <atom element="H" x="0.468000" y="-4.438000" z="-4.317000"/>
+                <atom element="H" x="1.471000" y="-4.257000" z="-2.801000"/>
+                <atom element="H" x="1.827000" y="-5.544000" z="-3.961000"/>
+                <atom element="C" x="0.743000" y="-8.034000" z="-3.977000"/>
+                <atom element="H" x="0.136000" y="-8.909000" z="-4.306000"/>
+                <atom element="H" x="0.922000" y="-7.431000" z="-4.895000"/>
+                <atom element="C" x="2.074000" y="-8.510000" z="-3.426000"/>
+                <atom element="O" x="3.154000" y="-8.222000" z="-3.902000"/>
+                <atom element="O" x="1.852000" y="-9.294000" z="-2.338000"/>
+                <atom element="C" x="3.004000" y="-9.802000" z="-1.712000"/>
+                <atom element="H" x="3.545000" y="-10.479000" z="-2.417000"/>
+                <atom element="H" x="3.657000" y="-8.956000" z="-1.383000"/>
+                <atom element="C" x="2.550000" y="-10.581000" z="-0.505000"/>
+                <atom element="O" x="1.413000" y="-10.753000" z="-0.123000"/>
+                <atom element="O" x="3.614000" y="-11.094000" z="0.137000"/>
+                <atom element="H" x="3.139000" y="-11.541000" z="0.858000"/>
+                <atom element="O" x="-2.589000" y="-10.568000" z="-0.206000"/>
+                <atom element="C" x="-2.139000" y="-11.690000" z="-0.939000"/>
+                <atom element="H" x="-2.598000" y="-12.600000" z="-0.486000"/>
+                <atom element="H" x="-2.477000" y="-11.621000" z="-2.000000"/>
+                <atom element="H" x="-1.030000" y="-11.784000" z="-0.863000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="7" order="1"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="1" to="6" order="2"/>
+                <bond from="2" to="8" order="1"/>
+                <bond from="2" to="3" order="2"/>
+                <bond from="3" to="4" order="1"/>
+                <bond from="3" to="43" order="1"/>
+                <bond from="4" to="9" order="1"/>
+                <bond from="4" to="5" order="2"/>
+                <bond from="5" to="11" order="1"/>
+                <bond from="5" to="6" order="1"/>
+                <bond from="6" to="13" order="1"/>
+                <bond from="10" to="26" order="1"/>
+                <bond from="10" to="11" order="2"/>
+                <bond from="10" to="13" order="1"/>
+                <bond from="11" to="30" order="1"/>
+                <bond from="12" to="15" order="1"/>
+                <bond from="12" to="13" order="1"/>
+                <bond from="12" to="14" order="2"/>
+                <bond from="15" to="16" order="2"/>
+                <bond from="15" to="20" order="1"/>
+                <bond from="16" to="21" order="1"/>
+                <bond from="16" to="17" order="1"/>
+                <bond from="17" to="22" order="1"/>
+                <bond from="17" to="18" order="2"/>
+                <bond from="18" to="19" order="1"/>
+                <bond from="18" to="23" order="1"/>
+                <bond from="19" to="24" order="1"/>
+                <bond from="19" to="20" order="2"/>
+                <bond from="20" to="25" order="1"/>
+                <bond from="26" to="28" order="1"/>
+                <bond from="26" to="27" order="1"/>
+                <bond from="26" to="29" order="1"/>
+                <bond from="30" to="31" order="1"/>
+                <bond from="30" to="32" order="1"/>
+                <bond from="30" to="33" order="1"/>
+                <bond from="33" to="34" order="2"/>
+                <bond from="33" to="35" order="1"/>
+                <bond from="35" to="36" order="1"/>
+                <bond from="36" to="37" order="1"/>
+                <bond from="36" to="38" order="1"/>
+                <bond from="36" to="39" order="1"/>
+                <bond from="39" to="41" order="1"/>
+                <bond from="39" to="40" order="2"/>
+                <bond from="41" to="42" order="1"/>
+                <bond from="43" to="44" order="1"/>
+                <bond from="44" to="46" order="1"/>
+                <bond from="44" to="45" order="1"/>
+                <bond from="44" to="47" order="1"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="c8be688838ff7bca897b3e5c582540dcf77d1bcd">
+                <property NAME="acemetacin"/>
+                <property b_1rotN="11"/>
+                <property Weight="415.829"/>
+                <property TPSA="94.83"/>
+                <property a_acc="6"/>
+                <property a_don="2"/>
+                <property logP="4.142"/>
+                <property SlogP="3.47049"/>
+                <property ID="4"/>
+            </conformation>
+        </conformations>
+    </ligand>
+    <ligand id="ac3a38bb695f7f383c299133c97b792dee88f4d2">
+        <molecule name="acetaminophen (conformation  1)">
+            <atoms>
+                <atom element="C" x="-0.004000" y="0.092000" z="0.151000"/>
+                <atom element="C" x="-0.727000" y="1.262000" z="-0.097000"/>
+                <atom element="C" x="-2.114000" y="1.240000" z="-0.231000"/>
+                <atom element="C" x="-2.842000" y="0.054000" z="-0.119000"/>
+                <atom element="C" x="-2.115000" y="-1.111000" z="0.138000"/>
+                <atom element="C" x="-0.726000" y="-1.098000" z="0.272000"/>
+                <atom element="N" x="1.337000" y="0.188000" z="0.272000"/>
+                <atom element="H" x="-0.205000" y="2.229000" z="-0.197000"/>
+                <atom element="H" x="-2.653000" y="2.182000" z="-0.430000"/>
+                <atom element="O" x="-4.199000" y="0.046000" z="-0.251000"/>
+                <atom element="H" x="-2.653000" y="-2.069000" z="0.239000"/>
+                <atom element="H" x="-0.232000" y="-2.058000" z="0.486000"/>
+                <atom element="H" x="1.707000" y="1.133000" z="0.379000"/>
+                <atom element="C" x="2.313000" y="-0.805000" z="0.235000"/>
+                <atom element="H" x="-4.549000" y="-0.855000" z="-0.147000"/>
+                <atom element="C" x="3.746000" y="-0.333000" z="0.421000"/>
+                <atom element="O" x="2.088000" y="-1.989000" z="0.057000"/>
+                <atom element="H" x="4.461000" y="-1.186000" z="0.382000"/>
+                <atom element="H" x="4.021000" y="0.387000" z="-0.383000"/>
+                <atom element="H" x="3.859000" y="0.167000" z="1.410000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="6" order="2"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="1" to="7" order="1"/>
+                <bond from="2" to="8" order="1"/>
+                <bond from="2" to="3" order="2"/>
+                <bond from="3" to="9" order="1"/>
+                <bond from="3" to="4" order="1"/>
+                <bond from="4" to="5" order="2"/>
+                <bond from="4" to="10" order="1"/>
+                <bond from="5" to="11" order="1"/>
+                <bond from="5" to="6" order="1"/>
+                <bond from="6" to="12" order="1"/>
+                <bond from="7" to="13" order="1"/>
+                <bond from="7" to="14" order="1"/>
+                <bond from="10" to="15" order="1"/>
+                <bond from="14" to="16" order="1"/>
+                <bond from="14" to="17" order="2"/>
+                <bond from="16" to="19" order="1"/>
+                <bond from="16" to="18" order="1"/>
+                <bond from="16" to="20" order="1"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="ac3a38bb695f7f383c299133c97b792dee88f4d2">
+                <property NAME="acetaminophen"/>
+                <property b_1rotN="4"/>
+                <property Weight="151.165"/>
+                <property TPSA="49.33"/>
+                <property a_acc="2"/>
+                <property a_don="2"/>
+                <property logP="0.889"/>
+                <property SlogP="1.3506"/>
+                <property ID="5"/>
+            </conformation>
+        </conformations>
+    </ligand>
+    <ligand id="2e6a9c329a289e815863bf29bf40d05c3d5c2249">
+        <molecule name="acetazolamide (conformation  1)">
+            <atoms>
+                <atom element="C" x="-0.277000" y="0.196000" z="-0.558000"/>
+                <atom element="N" x="0.425000" y="0.162000" z="-1.631000"/>
+                <atom element="N" x="1.605000" y="0.616000" z="-1.491000"/>
+                <atom element="C" x="1.846000" y="1.016000" z="-0.297000"/>
+                <atom element="S" x="0.551000" y="0.848000" z="0.806000"/>
+                <atom element="N" x="-1.625000" y="-0.292000" z="-0.603000"/>
+                <atom element="H" x="-1.999000" y="-0.651000" z="-1.466000"/>
+                <atom element="C" x="-2.388000" y="-0.270000" z="0.510000"/>
+                <atom element="O" x="-2.047000" y="0.140000" z="1.616000"/>
+                <atom element="C" x="-3.803000" y="-0.814000" z="0.342000"/>
+                <atom element="S" x="3.399000" y="1.687000" z="0.167000"/>
+                <atom element="O" x="4.050000" y="0.811000" z="1.119000"/>
+                <atom element="O" x="3.246000" y="3.083000" z="0.522000"/>
+                <atom element="N" x="4.409000" y="1.714000" z="-1.090000"/>
+                <atom element="H" x="5.084000" y="0.972000" z="-1.185000"/>
+                <atom element="H" x="4.516000" y="2.571000" z="-1.609000"/>
+                <atom element="H" x="-4.519000" y="-0.039000" z="0.616000"/>
+                <atom element="H" x="-3.987000" y="-1.122000" z="-0.687000"/>
+                <atom element="H" x="-3.936000" y="-1.672000" z="1.001000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="6" order="1"/>
+                <bond from="1" to="2" order="2"/>
+                <bond from="1" to="5" order="1"/>
+                <bond from="2" to="3" order="1"/>
+                <bond from="3" to="4" order="2"/>
+                <bond from="4" to="5" order="1"/>
+                <bond from="4" to="11" order="1"/>
+                <bond from="6" to="7" order="1"/>
+                <bond from="6" to="8" order="1"/>
+                <bond from="8" to="10" order="1"/>
+                <bond from="8" to="9" order="2"/>
+                <bond from="10" to="18" order="1"/>
+                <bond from="10" to="17" order="1"/>
+                <bond from="10" to="19" order="1"/>
+                <bond from="11" to="14" order="1"/>
+                <bond from="11" to="13" order="2"/>
+                <bond from="11" to="12" order="2"/>
+                <bond from="14" to="15" order="1"/>
+                <bond from="14" to="16" order="1"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="2e6a9c329a289e815863bf29bf40d05c3d5c2249">
+                <property NAME="acetazolamide"/>
+                <property b_1rotN="5"/>
+                <property Weight="222.249"/>
+                <property TPSA="151.66"/>
+                <property a_acc="6"/>
+                <property a_don="2"/>
+                <property logP="-0.93"/>
+                <property SlogP="-0.8561"/>
+                <property ID="6"/>
+            </conformation>
+        </conformations>
+    </ligand>
+    <ligand id="e83dd91102a16f5248331a6c3da92a7b5dad22fd">
+        <molecule name="acetohexamide (conformation  1)">
+            <atoms>
+                <atom element="C" x="-2.104000" y="-1.499000" z="-0.001000"/>
+                <atom element="C" x="-2.643000" y="-0.231000" z="0.211000"/>
+                <atom element="C" x="-1.916000" y="0.915000" z="-0.119000"/>
+                <atom element="C" x="-0.641000" y="0.766000" z="-0.668000"/>
+                <atom element="C" x="-0.105000" y="-0.505000" z="-0.879000"/>
+                <atom element="C" x="-0.827000" y="-1.653000" z="-0.546000"/>
+                <atom element="C" x="-2.516000" y="2.259000" z="0.122000"/>
+                <atom element="O" x="-3.638000" y="2.379000" z="0.562000"/>
+                <atom element="C" x="-1.702000" y="3.504000" z="-0.183000"/>
+                <atom element="S" x="-0.175000" y="-3.236000" z="-0.788000"/>
+                <atom element="O" x="1.177000" y="-3.127000" z="-1.094000"/>
+                <atom element="O" x="-1.111000" y="-3.933000" z="-1.549000"/>
+                <atom element="N" x="-0.229000" y="-3.973000" z="0.676000"/>
+                <atom element="H" x="-0.524000" y="-4.946000" z="0.701000"/>
+                <atom element="C" x="0.117000" y="-3.389000" z="1.835000"/>
+                <atom element="O" x="0.509000" y="-2.197000" z="1.898000"/>
+                <atom element="N" x="0.014000" y="-4.148000" z="2.941000"/>
+                <atom element="H" x="-0.347000" y="-5.095000" z="2.835000"/>
+                <atom element="C" x="1.598000" y="-4.087000" z="6.411000"/>
+                <atom element="C" x="1.305000" y="-4.567000" z="4.982000"/>
+                <atom element="C" x="0.322000" y="-3.620000" z="4.274000"/>
+                <atom element="C" x="-0.977000" y="-3.491000" z="5.084000"/>
+                <atom element="C" x="-0.688000" y="-3.009000" z="6.514000"/>
+                <atom element="C" x="0.299000" y="-3.951000" z="7.219000"/>
+                <atom element="H" x="-2.707000" y="-2.381000" z="0.276000"/>
+                <atom element="H" x="-3.653000" y="-0.154000" z="0.647000"/>
+                <atom element="H" x="-0.029000" y="1.638000" z="-0.947000"/>
+                <atom element="H" x="0.906000" y="-0.578000" z="-1.314000"/>
+                <atom element="H" x="-0.757000" y="3.511000" z="0.407000"/>
+                <atom element="H" x="-1.472000" y="3.566000" z="-1.271000"/>
+                <atom element="H" x="-2.268000" y="4.424000" z="0.091000"/>
+                <atom element="H" x="2.288000" y="-4.803000" z="6.919000"/>
+                <atom element="H" x="2.119000" y="-3.101000" z="6.375000"/>
+                <atom element="H" x="2.256000" y="-4.630000" z="4.400000"/>
+                <atom element="H" x="0.874000" y="-5.596000" z="5.020000"/>
+                <atom element="H" x="0.804000" y="-2.615000" z="4.214000"/>
+                <atom element="H" x="-1.670000" y="-2.777000" z="4.577000"/>
+                <atom element="H" x="-1.494000" y="-4.479000" z="5.125000"/>
+                <atom element="H" x="-0.261000" y="-1.979000" z="6.481000"/>
+                <atom element="H" x="-1.640000" y="-2.951000" z="7.095000"/>
+                <atom element="H" x="0.526000" y="-3.568000" z="8.243000"/>
+                <atom element="H" x="-0.170000" y="-4.957000" z="7.341000"/>
+            </atoms>
+            <bonds>
+                <bond from="1" to="25" order="1"/>
+                <bond from="1" to="2" order="1"/>
+                <bond from="1" to="6" order="2"/>
+                <bond from="2" to="26" order="1"/>
+                <bond from="2" to="3" order="2"/>
+                <bond from="3" to="4" order="1"/>
+                <bond from="3" to="7" order="1"/>
+                <bond from="4" to="27" order="1"/>
+                <bond from="4" to="5" order="2"/>
+                <bond from="5" to="28" order="1"/>
+                <bond from="5" to="6" order="1"/>
+                <bond from="6" to="10" order="1"/>
+                <bond from="7" to="9" order="1"/>
+                <bond from="7" to="8" order="2"/>
+                <bond from="9" to="30" order="1"/>
+                <bond from="9" to="29" order="1"/>
+                <bond from="9" to="31" order="1"/>
+                <bond from="10" to="13" order="1"/>
+                <bond from="10" to="11" order="2"/>
+                <bond from="10" to="12" order="2"/>
+                <bond from="13" to="14" order="1"/>
+                <bond from="13" to="15" order="1"/>
+                <bond from="15" to="17" order="1"/>
+                <bond from="15" to="16" order="2"/>
+                <bond from="17" to="18" order="1"/>
+                <bond from="17" to="21" order="1"/>
+                <bond from="19" to="32" order="1"/>
+                <bond from="19" to="33" order="1"/>
+                <bond from="19" to="24" order="1"/>
+                <bond from="19" to="20" order="1"/>
+                <bond from="20" to="34" order="1"/>
+                <bond from="20" to="35" order="1"/>
+                <bond from="20" to="21" order="1"/>
+                <bond from="21" to="36" order="1"/>
+                <bond from="21" to="22" order="1"/>
+                <bond from="22" to="37" order="1"/>
+                <bond from="22" to="38" order="1"/>
+                <bond from="22" to="23" order="1"/>
+                <bond from="23" to="39" order="1"/>
+                <bond from="23" to="40" order="1"/>
+                <bond from="23" to="24" order="1"/>
+                <bond from="24" to="41" order="1"/>
+                <bond from="24" to="42" order="1"/>
+            </bonds>
+        </molecule>
+        <conformations>
+            <conformation id="e83dd91102a16f5248331a6c3da92a7b5dad22fd">
+                <property NAME="acetohexamide"/>
+                <property b_1rotN="7"/>
+                <property Weight="324.401"/>
+                <property TPSA="100.72"/>
+                <property a_acc="4"/>
+                <property a_don="2"/>
+                <property logP="2.231"/>
+                <property SlogP="2.2098"/>
+                <property ID="7"/>
+            </conformation>
+        </conformations>
+    </ligand>
+</ligands>
+</dockingfile>
