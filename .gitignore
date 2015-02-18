@@ -1,5 +1,4 @@
 include/BALL/BALL.doc
-contrib/*
 *.o
 *.lo
 *_moc.C
