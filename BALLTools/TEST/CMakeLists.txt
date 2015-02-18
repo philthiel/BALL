@@ -36,7 +36,7 @@ PROJECT("BALLTools_test")
 ###############################################################################
 
 # Path to place the binaries
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BALL_CMAKE_BINARY_BASE}/TEST/TOOLS")
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BALL_CMAKE_BINARY_BASE}/TEST/BALLTools")
 
 # Data path path for BALLTools tests
 SET(TOOLS_TEST_DATA_PATH "${PROJECT_SOURCE_DIR}/data")
