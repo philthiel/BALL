@@ -25,11 +25,7 @@
 #	include <BALL/MATHS/vector3.h>
 #endif
 
-#ifdef BALL_HAS_GNU_SLIST
-#include <ext/slist>
-#else
-#include <list>
-#endif
+#include <forward_list>
 
 #include <algorithm>
 
@@ -351,12 +347,7 @@ namespace BALL
 			return ConstBoxIterator::end(*this);
 		}
 
-#ifdef BALL_HAS_GNU_SLIST
-		typedef typename __gnu_cxx::slist<Item> DataContainer;
-#else
-		typedef typename std::list<Item> DataContainer;
-#endif
-
+		typedef typename std::forward_list<Item> DataContainer;
 		typedef typename DataContainer::iterator DataIteratorPosition;
 		
 		class DataIteratorTraits
@@ -527,11 +518,13 @@ namespace BALL
 		HashGrid3<Item>* parent;
 
 		DataContainer data;
+
+		Size data_size;
 	};
 
 	template<typename Item>  
 	HashGridBox3<Item>::HashGridBox3(HashGrid3<Item>* p)
-		: parent(p)
+		: parent(p), data_size(0)
 	{
 	}
 
@@ -539,6 +532,7 @@ namespace BALL
 	void HashGridBox3<Item>::clear()
 	{
 		data.clear();
+		data_size = 0;
 	}
 
 	template<typename Item>  
@@ -584,7 +578,8 @@ namespace BALL
 	template<typename Item>  
 	Size HashGridBox3<Item>::getSize() const
 	{
-		return data.size();
+		return data_size;
+		//return std::distance(data.begin(), data.end());
 	}
 
 	template<typename Item>  
@@ -592,12 +587,12 @@ namespace BALL
 	void HashGridBox3<Item>::insert(const Item& item)
 	{
 		data.push_front(item);
+		++data_size;
 	}
 
 	template<typename Item>  
 	bool HashGridBox3<Item>::remove(const Item& item)
 	{
-#ifdef BALL_HAS_GNU_SLIST
 		if(data.empty())
 		{
 			return false;
@@ -606,6 +601,8 @@ namespace BALL
 		if(*data.begin() == item)
 		{
 			data.pop_front();
+			--data_size;
+
 			return true;
 		}
 
@@ -616,32 +613,57 @@ namespace BALL
 			if(*pos == item)
 			{
 				data.erase_after(prev);
+				--data_size;
+
 				return true;
 			}
 
 			prev = pos;
 		}
-		return false;
-#else
-		DataIteratorPosition pos = std::find(data.begin(), data.end(), item);
-
-		if (pos != data.end())
-		{
-			data.erase(pos);
-
-			return true;
-		}
 
 		return false;
-#endif
 	}
 
 	template<typename Item>  
 	bool HashGridBox3<Item>::removeAll(const Item& item)
 	{
-		data.remove(item);
+		if(data.empty())
+		{
+			return false;
+		}
 
-		return true;
+		std::vector<DataIteratorPosition> to_remove;
+
+		DataIteratorPosition pos = data.begin();
+		DataIteratorPosition prev = data.before_begin();
+		for (pos; pos!=data.end(); ++pos)
+		{
+			if (*(pos) == item)
+			{
+				to_remove.push_back(prev);
+			}
+
+			++prev;
+		}
+
+		Size n = to_remove.size();
+		if (n == 0)
+		{
+			return false;
+		}
+		else
+		{
+
+			typename std::vector<DataIteratorPosition>::reverse_iterator rit = to_remove.rbegin();
+			for (rit; rit!=to_remove.rend(); ++rit)
+			{
+				data.erase_after(*rit);
+			}
+
+			data_size -= n;
+
+			return true;
+		}
 	}
 
 	template <typename Item>
