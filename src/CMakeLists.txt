@@ -39,18 +39,18 @@ add_subdirectory(ball_core)
 
 
 # --------------------------------------------------------------------------
-# BALL python bindings
-#
-if(BBUILD_PYTHON)
-	add_subdirectory(ball_python)
-endif()
-
-
-# --------------------------------------------------------------------------
 # BALL view library
 #
 if(BBUILD_VIEW)
 	add_subdirectory(ball_view)
+endif()
+
+
+# --------------------------------------------------------------------------
+# BALL python bindings
+#
+if(BBUILD_PYTHON)
+	add_subdirectory(ball_python)
 endif()
 
 
