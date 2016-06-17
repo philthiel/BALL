@@ -1,5 +1,4 @@
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	claverieParameter.C
 	electrostaticPotentialCalculator.C
 	generalizedBornCase.C
@@ -17,5 +16,3 @@ SET(SOURCES_LIST
 	solventParameter.C
 	uhligCavFreeEnergyProcessor.C
 )
-
-ADD_BALL_SOURCES("SOLVATION" "${SOURCES_LIST}")

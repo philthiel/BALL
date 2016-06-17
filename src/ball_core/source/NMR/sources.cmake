@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/NMR)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	anisotropyShiftProcessor.C
 	clearShiftProcessor.C
 	EFShiftProcessor.C
@@ -19,5 +15,3 @@ SET(SOURCES_LIST
 	johnsonBoveyShiftProcessor.C
 	randomCoilShiftProcessor.C
 )	
-
-ADD_BALL_SOURCES("NMR" "${SOURCES_LIST}")

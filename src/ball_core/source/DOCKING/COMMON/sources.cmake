@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/DOCKING/COMMON)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	conformation.C
 	constraints.C
 	conformationSet.C
@@ -18,5 +14,3 @@ SET(SOURCES_LIST
 	staticLigandFragment.C
 	structurePreparer.C
 )
-
-ADD_BALL_SOURCES("DOCKING/COMMON" "${SOURCES_LIST}")

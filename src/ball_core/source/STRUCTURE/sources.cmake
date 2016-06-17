@@ -1,7 +1,4 @@
-INCLUDE(source/STRUCTURE/BONDORDERS/sources.cmake)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	addHydrogenProcessor.C
 	analyticalSES.C
 	assignBondOrderProcessor.C
@@ -71,11 +68,9 @@ SET(SOURCES_LIST
 	RMSDMinimizer.C
 )
 
-IF(BALL_HAS_OPENBABEL)
-	LIST(APPEND SOURCES_LIST logP.C)
-ENDIF()
+if(BALL_HAS_OPENBABEL)
+	list(APPEND SOURCES_LIST logP.C)
+endif()
 
-ADD_BALL_SOURCES("STRUCTURE" "${SOURCES_LIST}")
-
-ADD_BALL_PARSER_LEXER("STRUCTURE" "smilesParser" "SmilesParser")
-ADD_BALL_PARSER_LEXER("STRUCTURE" "smartsParser" "SmartsParser")
+#ADD_BALL_PARSER_LEXER("STRUCTURE" "smilesParser" "SmilesParser")
+#ADD_BALL_PARSER_LEXER("STRUCTURE" "smartsParser" "SmartsParser")

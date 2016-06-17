@@ -1,10 +1,4 @@
-INCLUDE(source/DATATYPE/GRAPH/sources.cmake)
-
-### the directory name ###
-SET(DIRECTORY source/DATATYPE)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	bitVector.C
 	contourSurface.C
 	hashGrid.C
@@ -15,5 +9,3 @@ SET(SOURCES_LIST
 	regularData3D.C
 	string.C
 )	
-
-ADD_BALL_SOURCES("DATATYPE" "${SOURCES_LIST}")

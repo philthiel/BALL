@@ -1,5 +1,4 @@
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	binaryFileAdaptor.C
 	directory.C
 	file.C
@@ -13,8 +12,6 @@ SET(SOURCES_LIST
 	timer.C
 )
 
-IF (BALL_HAS_MPI)
-	SET(SOURCES_LIST ${SOURCES_LIST} MPISupport.C)
-ENDIF()
-
-ADD_BALL_SOURCES("SYSTEM" "${SOURCES_LIST}")
+if(BALL_HAS_MPI)
+	list(APPEND SOURCES_LIST MPISupport.C)
+endif()

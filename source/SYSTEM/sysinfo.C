@@ -5,18 +5,6 @@
 
 #include <BALL/SYSTEM/sysinfo.h>
 
-#ifdef BALL_OS_SOLARIS
-# undef BALL_HAS_SYS_SYSINFO_H
-# include <cstdlib>
-# include <cstdio>
-# include <kstat.h>
-# include <sys/sysinfo.h>
-# include <sys/stat.h>
-# include <sys/swap.h>
-# include <sys/param.h>
-# include <unistd.h>
-#endif
-
 #ifdef BALL_HAS_SYS_SYSINFO_H
 #	 include <sys/sysinfo.h>
 #	 include <BALL/SYSTEM/file.h>
@@ -147,81 +135,6 @@ namespace BALL
 			MEMORYSTATUSEX statex = getMemoryStatus();
 			return (LongIndex) statex.ullAvailPageFile;
 		}
-
-#else
-#ifdef BALL_OS_SOLARIS
-
-	LongIndex getFreeMemory()
-	{
-	 	return ((LongIndex)sysconf(_SC_AVPHYS_PAGES)) * sysconf(_SC_PAGE_SIZE);
-	}
-
-	Index getNumberOfProcessors()
-	{
-		return sysconf(_SC_NPROCESSORS_CONF);
-	}
-
-	LongIndex getTotalMemory()
-	{
-		return ((LongIndex)sysconf(_SC_PHYS_PAGES)) * sysconf(_SC_PAGE_SIZE);
-	}
-
-	LongIndex getAvailableMemory()
-	{
-		return getFreeMemory();
-	}
-
-	LongIndex getFreeSwapSpace()
-	{
-		long pgsize_in_kbytes = sysconf(_SC_PAGE_SIZE) / 1024L;
-
-		int swap_count=swapctl(SC_GETNSWP, NULL);
-		if (swap_count == -1 || swap_count == 0) return swap_count;
-
-		/*
-		 *  Although it's not particularly clear in the documentation, you're
-		 *  responsible for creating a variable length structure (ie. the
-		 *  array is within the struct rather than being pointed to
-		 *  by the struct).  Also, it is necessary for you to allocate space
-		 *  for the path strings (see /usr/include/sys/swap.h).
-		 */
-		swaptbl_t* st = (swaptbl_t*)malloc(sizeof(int) + swap_count * sizeof(struct swapent));
-		if (st == NULL) return -1;
-
-		st->swt_n = swap_count;
-		for (int i=0; i < swap_count; i++) 
-		{
-			if ((st->swt_ent[i].ste_path = (char*)malloc(MAXPATHLEN)) == NULL)
-			{
-				free(st);
-				return -1;
-			}
-		}
-
-		swap_count = swapctl(SC_LIST, (void*)st);
-		if (swap_count == -1) return -1;
-
-		long swap_avail = 0;
-		for (int i = 0; i < swap_count; i++) 
-		{
-			swap_avail += st->swt_ent[i].ste_free * pgsize_in_kbytes;
-		}
-
-		free(st);
-
-		return ((LongIndex)swap_avail) * 1024;
-	}
-
-	LongIndex getBufferedMemory()
-	{
-		return 0;
-	}
-
-	Time getUptime()
-	{
-		return -1;
-	}
-
 
 #else
 #ifdef BALL_OS_DARWIN

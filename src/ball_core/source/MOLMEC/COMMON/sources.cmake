@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/COMMON)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	assignTypes.C
 	atomVector.C
 	bendComponent.C
@@ -21,5 +17,3 @@ SET(SOURCES_LIST
 	typenameRuleProcessor.C
 	typeRuleProcessor.C
 )	
-
-ADD_BALL_SOURCES("MOLMEC/COMMON" "${SOURCES_LIST}")

@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/AMBER)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	amber.C
 	amberBend.C
 	amberNonBonded.C
@@ -12,6 +8,4 @@ SET(SOURCES_LIST
 	GAFFCESParser.C
 )	
 
-ADD_BALL_SOURCES("MOLMEC/AMBER" "${SOURCES_LIST}")
-
-ADD_BALL_PARSER_LEXER("MOLMEC/AMBER" "GAFFCESParser" "GAFFCESParser")
+#ADD_BALL_PARSER_LEXER("MOLMEC/AMBER" "GAFFCESParser" "GAFFCESParser")

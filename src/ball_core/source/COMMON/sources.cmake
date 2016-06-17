@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/COMMON)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	constants.C
 	exception.C
 	hash.C
@@ -11,5 +7,3 @@ SET(SOURCES_LIST
 	rtti.C
 	version.C
 )	
-
-ADD_BALL_SOURCES("COMMON" "${SOURCES_LIST}")

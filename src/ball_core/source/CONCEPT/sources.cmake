@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/CONCEPT)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	autoDeletable.C
 	client.C
 	composite.C
@@ -23,8 +19,6 @@ SET(SOURCES_LIST
 	molecularInformation.C
 )
 
-IF(BALL_HAS_XDR)
-	LIST(APPEND SOURCES_LIST XDRPersistenceManager.C)
-ENDIF()
-
-ADD_BALL_SOURCES("CONCEPT" "${SOURCES_LIST}")
+if(BALL_HAS_XDR)
+	list(APPEND SOURCES_LIST XDRPersistenceManager.C)
+endif()

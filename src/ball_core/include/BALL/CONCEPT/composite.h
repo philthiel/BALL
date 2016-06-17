@@ -5,43 +5,18 @@
 #ifndef BALL_CONCEPT_COMPOSITE_H
 #define BALL_CONCEPT_COMPOSITE_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/common.h>
-#endif
 
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/CONCEPT/persistentObject.h>
-#endif
+#include <BALL/COMMON/macros.h>
+#include <BALL/CONCEPT/bidirectionalIterator.h>
+#include <BALL/CONCEPT/comparator.h>
+#include <BALL/CONCEPT/object.h>
+#include <BALL/CONCEPT/persistentObject.h>
+#include <BALL/CONCEPT/processor.h>
+#include <BALL/CONCEPT/selectable.h>
+#include <BALL/CONCEPT/timeStamp.h>
+#include <BALL/CONCEPT/visitor.h>
 
-#ifndef BALL_CONCEPT_COMPARATOR_H
-#	include <BALL/CONCEPT/comparator.h>
-#endif
 
-#ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/CONCEPT/bidirectionalIterator.h>
-#endif
-
-#ifndef BALL_CONCEPT_OBJECT_H
-#	include <BALL/CONCEPT/object.h>
-#endif
-
-#ifndef BALL_CONCEPT_SELECTABLE_H
-#	include <BALL/CONCEPT/selectable.h>
-#endif
-
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
-#endif
-
-#ifndef BALL_CONCEPT_TIMESTAMP_H
-#	include <BALL/CONCEPT/timeStamp.h>
-#endif
-
-///
 namespace BALL 
 {
 	class Atom;

@@ -23,47 +23,47 @@
 #endif
 
 #ifdef BALL_COMPILER_MSVC
-# define BALL_HIDE
+	#define BALL_HIDE
 #	ifdef BALL_BUILD_DLL
-#		define BALL_EXPORT __declspec(dllexport)
-#		define BALL_EXTERN_VARIABLE __declspec(dllexport) extern
+		#define BALL_EXPORT __declspec(dllexport)
+		#define BALL_EXTERN_VARIABLE __declspec(dllexport) extern
 #	else
-#		define BALL_EXPORT __declspec(dllimport)
-#		define BALL_EXTERN_VARIABLE __declspec(dllimport) extern
+		#define BALL_EXPORT __declspec(dllimport)
+		#define BALL_EXTERN_VARIABLE __declspec(dllimport) extern
 #	endif
 #	ifdef BALL_VIEW_BUILD_DLL
-#		define BALL_VIEW_EXPORT __declspec(dllexport)
+		#define BALL_VIEW_EXPORT __declspec(dllexport)
 #	else
-#		define BALL_VIEW_EXPORT __declspec(dllimport)
+		#define BALL_VIEW_EXPORT __declspec(dllimport)
 #	endif
-#elif defined(BALL_COMPILER_GXX) && (BALL_COMPILER_VERSION_MAJOR > 4 || (BALL_COMPILER_VERSION_MAJOR == 4 && BALL_COMPILER_VERSION_MINOR >= 3))
-# define BALL_EXPORT __attribute__((visibility ("default")))
-# define BALL_HIDE __attribute__((visibility ("hidden")))
-# define BALL_VIEW_EXPORT __attribute__((visibility ("default")))
-# define BALL_EXTERN_VARIABLE extern __attribute__((visibility ("default")))
+#elif defined(BALL_COMPILER_GXX)
+	#define BALL_EXPORT __attribute__((visibility ("default")))
+	#define BALL_HIDE __attribute__((visibility ("hidden")))
+	#define BALL_VIEW_EXPORT __attribute__((visibility ("default")))
+	#define BALL_EXTERN_VARIABLE extern __attribute__((visibility ("default")))
 # elif defined(BALL_COMPILER_LLVM)
-# define BALL_EXPORT __attribute__((visibility ("default")))
-# define BALL_HIDE __attribute__((visibility ("hidden")))
-# define BALL_VIEW_EXPORT __attribute__((visibility ("default")))
-# define BALL_EXTERN_VARIABLE extern __attribute__((visibility ("default")))
+	#define BALL_EXPORT __attribute__((visibility ("default")))
+	#define BALL_HIDE __attribute__((visibility ("hidden")))
+	#define BALL_VIEW_EXPORT __attribute__((visibility ("default")))
+	#define BALL_EXTERN_VARIABLE extern __attribute__((visibility ("default")))
 #else
-# define BALL_EXPORT
-# define BALL_HIDE
-# define BALL_VIEW_EXPORT
-# define BALL_EXTERN_VARIABLE extern
+	#define BALL_EXPORT
+	#define BALL_HIDE
+	#define BALL_VIEW_EXPORT
+	#define BALL_EXTERN_VARIABLE extern
 #endif
 
-//This declares a BALL_DEPRECATED macro that can be used to mark deprecated api
-//It is essentially copied from Qt 4.4.1 but simplified, thus there might be
-//some cases where it does not work as expected, yet.
-#if defined(BALL_COMPILER_MSVC) && (_MSC_VER >= 1300)
-    #define BALL_DEPRECATED __declspec(deprecated)
-#elif defined(BALL_COMPILER_GXX) && (BALL_COMPILER_VERSION_MAJOR - 0 > 3 || (BALL_COMPILER_VERSION_MAJOR - 0 == 3 && BALL_COMPILER_VERSION_MINOR - 0 >= 2))
-    #define BALL_DEPRECATED __attribute__((deprecated))
+// This declares a BALL_DEPRECATED macro that can be used to mark deprecated api
+// It is essentially copied from Qt 4.4.1 but simplified, thus there might be
+// some cases where it does not work as expected, yet.
+#ifdef BALL_COMPILER_MSVC
+	#define BALL_DEPRECATED __declspec(deprecated)
+#elif defined(BALL_COMPILER_GXX)
+	#define BALL_DEPRECATED __attribute__((deprecated))
 #elif defined(BALL_COMPILER_LLVM)
-    #define BALL_DEPRECATED __attribute__((deprecated))
+	#define BALL_DEPRECATED __attribute__((deprecated))
 #else
-    #define BALL_DEPRECATED
+	#define BALL_DEPRECATED
 #endif
 
 namespace BALL

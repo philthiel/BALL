@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/SCORING/COMMON)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	baseFunction.C
 	diffScoringFunction.C
 	diffGridBasedScoring.C
@@ -15,5 +11,3 @@ SET(SOURCES_LIST
 	scoringFunction.C
 	scoringOptimizer.C
 )	
-
-ADD_BALL_SOURCES("SCORING/COMMON" "${SOURCES_LIST}")

@@ -5,13 +5,8 @@
 #ifndef BALL_COMMON_RTTI_H
 #define BALL_COMMON_RTTI_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/CONFIG/config.h>
-#endif
+#include <BALL/CONFIG/config.h>
 
-#ifndef BALL_COMMON_H
-#	include <BALL/common.h>
-#endif
 
 #include <string>
 #include <typeinfo>

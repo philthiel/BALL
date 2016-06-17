@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/KERNEL)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	atom.C
 	atomContainer.C
 	bond.C
@@ -30,6 +26,4 @@ SET(SOURCES_LIST
 #	extractors.C\
 )	
 
-ADD_BALL_SOURCES("KERNEL" "${SOURCES_LIST}")
-
-ADD_BALL_PARSER_LEXER("KERNEL" "expressionParser" "ExpressionParser")
+#ADD_BALL_PARSER_LEXER("KERNEL" "expressionParser" "ExpressionParser")

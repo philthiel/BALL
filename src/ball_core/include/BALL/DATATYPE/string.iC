@@ -709,7 +709,7 @@ bool String::isAlnum(char c)
 BALL_INLINE 
 bool String::isDigit(char c)
 {
-  return ((c != 0) && ((char*)strchr(CHARACTER_CLASS__ASCII_NUMERIC, c) != 0));
+	return ((c != 0) && ((char*)strchr(CHARACTER_CLASS__ASCII_NUMERIC, c) != 0));
 }
 
 BALL_INLINE 
@@ -717,15 +717,9 @@ bool String::isFloat() const
 {
 	char* test;
 	char* str = const_cast<char*>(c_str());
-  errno = 0;
-
-//Get rid of those friggin warnings
-#if defined BALL_COMPILER_GXX && ((BALL_COMPILER_VERSION_MAJOR == 4 && BALL_COMPILER_VERSION_MINOR < 6) || BALL_COMPILER_VERSION_MAJOR < 4)
-	double d = 0;
-	d = strtod(str, &test);
-#else
+	errno = 0;
 	strtod(str, &test);
-#endif
+
 	return (errno == 0 && *test == '\0');
 }
 
@@ -947,49 +941,49 @@ bool operator > (char c, const String &s)
 // ---------------------------------------------
 
 BALL_INLINE
-String::iterator String::begin() BALL_NOEXCEPT
+String::iterator String::begin() noexcept
 {
 	return str_.begin();
 }
 
 BALL_INLINE
-String::const_iterator String::begin() const BALL_NOEXCEPT
+String::const_iterator String::begin() const noexcept
 {
 	return str_.begin();
 }
 
 BALL_INLINE
-String::iterator String::end() BALL_NOEXCEPT
+String::iterator String::end() noexcept
 {
 	return str_.end();
 }
 
 BALL_INLINE
-String::const_iterator String::end() const BALL_NOEXCEPT
+String::const_iterator String::end() const noexcept
 {
 	return str_.end();
 }
 
 BALL_INLINE
-String::reverse_iterator String::rbegin() BALL_NOEXCEPT
+String::reverse_iterator String::rbegin() noexcept
 {
 	return str_.rbegin();
 }
 
 BALL_INLINE
-String::const_reverse_iterator String::rbegin() const BALL_NOEXCEPT
+String::const_reverse_iterator String::rbegin() const noexcept
 {
 	return str_.rbegin();
 }
 
 BALL_INLINE
-String::reverse_iterator String::rend() BALL_NOEXCEPT
+String::reverse_iterator String::rend() noexcept
 {
 	return str_.rend();
 }
 
 BALL_INLINE
-String::const_reverse_iterator String::rend() const BALL_NOEXCEPT
+String::const_reverse_iterator String::rend() const noexcept
 {
 	return str_.rend();
 }
@@ -997,25 +991,25 @@ String::const_reverse_iterator String::rend() const BALL_NOEXCEPT
 #ifdef BALL_HAS_STD_STRING_CONST_ITERATORS
 
 BALL_INLINE
-String::const_iterator String::cbegin() const BALL_NOEXCEPT
+String::const_iterator String::cbegin() const noexcept
 {
 	return str_.cbegin();
 }
 
 BALL_INLINE
-String::const_iterator String::cend() const BALL_NOEXCEPT
+String::const_iterator String::cend() const noexcept
 {
 	return str_.cend();
 }
 
 BALL_INLINE
-String::const_reverse_iterator String::crbegin() const BALL_NOEXCEPT
+String::const_reverse_iterator String::crbegin() const noexcept
 {
 	return str_.crbegin();
 }
 
 BALL_INLINE
-String::const_reverse_iterator String::crend() const BALL_NOEXCEPT
+String::const_reverse_iterator String::crend() const noexcept
 {
 	return str_.crend();
 }
@@ -1023,19 +1017,19 @@ String::const_reverse_iterator String::crend() const BALL_NOEXCEPT
 #endif
 
 BALL_INLINE
-size_t String::size() const BALL_NOEXCEPT
+size_t String::size() const noexcept
 {
 	return str_.size();
 }
 
 BALL_INLINE
-size_t String::length() const BALL_NOEXCEPT
+size_t String::length() const noexcept
 {
 	return str_.length();
 }
 
 BALL_INLINE
-size_t String::max_size() const BALL_NOEXCEPT
+size_t String::max_size() const noexcept
 {
 	return str_.max_size();
 }
@@ -1053,7 +1047,7 @@ void String::resize(size_t n, char c)
 }
 
 BALL_INLINE
-size_t String::capacity() const BALL_NOEXCEPT
+size_t String::capacity() const noexcept
 {
 	return str_.capacity();
 }
@@ -1065,13 +1059,13 @@ void String::reserve(size_t n)
 }
 
 BALL_INLINE
-void String::clear() BALL_NOEXCEPT
+void String::clear() noexcept
 {
 	str_.clear();
 }
 
 BALL_INLINE
-bool String::empty() const BALL_NOEXCEPT
+bool String::empty() const noexcept
 {
 	return str_.empty();
 }
@@ -1297,7 +1291,7 @@ String& String::assign(std::initializer_list<char> li)
 
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 BALL_INLINE
-String& String::assign(string&& str) BALL_NOEXCEPT
+String& String::assign(string&& str) noexcept
 {
 	str_.assign(str);
 	return *this;
@@ -1547,19 +1541,19 @@ void String::pop_back()
 #endif
 
 BALL_INLINE
-const char* String::c_str() const BALL_NOEXCEPT
+const char* String::c_str() const noexcept
 {
 	return str_.c_str();
 }
 
 BALL_INLINE
-const char* String::data() const BALL_NOEXCEPT
+const char* String::data() const noexcept
 {
 	return str_.data();
 }
 
 BALL_INLINE
-String::allocator_type String::get_allocator() const BALL_NOEXCEPT
+String::allocator_type String::get_allocator() const noexcept
 {
 	return str_.get_allocator();
 }
@@ -1571,7 +1565,7 @@ size_t String::copy(char* s, size_t len, size_t pos) const
 }
 
 BALL_INLINE
-size_t String::find(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find(const string& str, size_t pos) const noexcept
 {
 	return str_.find(str, pos);
 }
@@ -1589,13 +1583,13 @@ size_t String::find(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::find(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::find(char c, size_t pos) const noexcept
 {
 	return str_.find(c, pos);
 }
 
 BALL_INLINE
-size_t String::rfind(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::rfind(const string& str, size_t pos) const noexcept
 {
 	return str_.rfind(str, pos);
 }
@@ -1613,13 +1607,13 @@ size_t String::rfind(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::rfind(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::rfind(char c, size_t pos) const noexcept
 {
 	return str_.rfind(c, pos);
 }
 
 BALL_INLINE
-size_t String::find_first_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_of(const string& str, size_t pos) const noexcept
 {
 	return str_.find_first_of(str, pos);
 }
@@ -1637,13 +1631,13 @@ size_t String::find_first_of(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::find_first_of(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_of(char c, size_t pos) const noexcept
 {
 	return str_.find_first_of(c, pos);
 }
 
 BALL_INLINE
-size_t String::find_last_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_of(const string& str, size_t pos) const noexcept
 {
 	return str_.find_last_of(str, pos);
 }
@@ -1661,13 +1655,13 @@ size_t String::find_last_of(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::find_last_of(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_of(char c, size_t pos) const noexcept
 {
 	return str_.find_last_of(c, pos);
 }
 
 BALL_INLINE
-size_t String::find_first_not_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_not_of(const string& str, size_t pos) const noexcept
 {
 	return str_.find_first_not_of(str, pos);
 }
@@ -1685,13 +1679,13 @@ size_t String::find_first_not_of(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::find_first_not_of(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_not_of(char c, size_t pos) const noexcept
 {
 	return str_.find_first_not_of(c, pos);
 }
 
 BALL_INLINE
-size_t String::find_last_not_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_not_of(const string& str, size_t pos) const noexcept
 {
 	return str_.find_last_not_of(str, pos);
 }
@@ -1709,7 +1703,7 @@ size_t String::find_last_not_of(const char* s, size_t pos, size_t n) const
 }
 
 BALL_INLINE
-size_t String::find_last_not_of(char c, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_not_of(char c, size_t pos) const noexcept
 {
 	return str_.find_last_not_of(c, pos);
 }
@@ -1721,7 +1715,7 @@ string String::substr(size_t pos, size_t len) const
 }
 
 BALL_INLINE
-int String::compare(const string& str) const BALL_NOEXCEPT
+int String::compare(const string& str) const noexcept
 {
 	return str_.compare(str);
 }

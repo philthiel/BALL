@@ -32,3 +32,46 @@
 project("BALL_core")
 
 
+# --------------------------------------------------------------------------
+# Collect source and header files
+#
+SET(BALL_core_sources CACHE INTERNAL "This variable should hold all BALL source files at the end of the config step")
+SET(BALL_core_headers CACHE INTERNAL "This variable should hold all BALL header files at the end of the config step")
+
+BALL_FUNCTIONS_collect_headers()
+BALL_FUNCTIONS_collect_sources()
+
+# Mark header files
+SET_PROPERTY(SOURCE ${BALL_core_headers} APPEND PROPERTY HEADER_FILE_ONLY TRUE)
+
+# Also include header files configured by CMake
+INCLUDE_DIRECTORIES(${PROJECT_BINARY_DIR}/include)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+
+# --------------------------------------------------------------------------
+# Add ball_core library target
+#
+if(BALL_HAS_CUDA AND BALL_USE_CUDA)
+	cuda_add_library(ball_core SHARED ${BALL_core_sources} ${BALL_core_headers} ${Cuda_sources})
+else()
+	add_library(ball_core SHARED ${BALL_core_sources} ${BALL_core_headers})
+endif()
+
+target_link_libraries(ball_core ${BALL_DEP_LIBRARIES})
+
+#set_target_properties(ball_core PROPERTIES
+#	COMPILE_FLAGS "${BALL_COMPILE_FLAGS}"
+#	LINK_FLAGS "${BALL_LINK_FLAGS}"
+#)
+
+set_target_properties(ball_core PROPERTIES
+	SOVERSION "${BALL_PACKAGE_VERSION_MAJOR}.${BALL_PACKAGE_VERSION_MINOR}"
+)
+
+set_target_properties(ball_core PROPERTIES INSTALL_NAME_DIR "@executable_path/../Frameworks")
+
+
+
+
+

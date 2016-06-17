@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/DOCKING/GENETICDOCK)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
   dockProblem.C
   evolutionaryDocking.C
   genes.C
@@ -12,5 +8,3 @@ SET(SOURCES_LIST
   rotateBond.C
   rotateBonds.C
 )
-
-ADD_BALL_SOURCES("DOCKING/GENETICDOCK" "${SOURCES_LIST}")

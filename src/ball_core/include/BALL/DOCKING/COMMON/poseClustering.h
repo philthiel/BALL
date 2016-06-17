@@ -41,17 +41,7 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/variant.hpp>
-
-// Boost 1.56+ implicitly deletes the copy constructors of stored_edge_properties. In order
-// to automatically use the respective move constructor instead, ClusterProperties has to
-// be _nothrow_ move constructible!
-#if defined(BALL_HAS_RVALUE_REFERENCES) && !defined(BALL_HAS_NOEXCEPT)
-# define BOOST_NO_CXX11_DEFAULTED_FUNCTIONS
-# include <boost/graph/adjacency_list.hpp>
-# undef BOOST_NO_CXX11_DEFAULTED_FUNCTIONS
-#else
-# include <boost/graph/adjacency_list.hpp>
-#endif
+#include <boost/graph/adjacency_list.hpp>
 
 #include <set>
 #include <iostream>
@@ -232,11 +222,9 @@ namespace BALL
 						ClusterProperties(const ClusterProperties&);
 
 						ClusterProperties& operator=(const ClusterProperties&);
+						ClusterProperties(ClusterProperties&&) noexcept;
+						ClusterProperties& operator=(ClusterProperties&&) noexcept;
 
-#ifdef BALL_HAS_RVALUE_REFERENCES
-						ClusterProperties(ClusterProperties&&) BALL_NOEXCEPT;
-						ClusterProperties& operator=(ClusterProperties&&) BALL_NOEXCEPT;
-#endif
 					/** Serialization method
 					 */
 					template <class Archive>

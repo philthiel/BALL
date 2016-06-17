@@ -1051,31 +1051,31 @@ namespace BALL
 		//@{
 
 		///
-		iterator begin() BALL_NOEXCEPT;
+		iterator begin() noexcept;
 		///
-		const_iterator begin() const BALL_NOEXCEPT;
+		const_iterator begin() const noexcept;
 		///
-		iterator end() BALL_NOEXCEPT;
+		iterator end() noexcept;
 		///
-		const_iterator end() const BALL_NOEXCEPT;
+		const_iterator end() const noexcept;
 		///
-		reverse_iterator rbegin() BALL_NOEXCEPT;
+		reverse_iterator rbegin() noexcept;
 		///
-		const_reverse_iterator rbegin() const BALL_NOEXCEPT;
+		const_reverse_iterator rbegin() const noexcept;
 		///
-		reverse_iterator rend() BALL_NOEXCEPT;
+		reverse_iterator rend() noexcept;
 		///
-		const_reverse_iterator rend() const BALL_NOEXCEPT;
+		const_reverse_iterator rend() const noexcept;
 
 #ifdef BALL_HAS_STD_STRING_CONST_ITERATORS
 		///
-		const_iterator cbegin() const BALL_NOEXCEPT;
+		const_iterator cbegin() const noexcept;
 		///
-		const_iterator cend() const BALL_NOEXCEPT;
+		const_iterator cend() const noexcept;
 		///
-		const_reverse_iterator crbegin() const BALL_NOEXCEPT;
+		const_reverse_iterator crbegin() const noexcept;
 		///
-		const_reverse_iterator crend() const BALL_NOEXCEPT;
+		const_reverse_iterator crend() const noexcept;
 #endif
 
 		//@}
@@ -1085,23 +1085,23 @@ namespace BALL
 		//@{
 
 		///
-		size_t size() const BALL_NOEXCEPT;
+		size_t size() const noexcept;
 		///
-		size_t length() const BALL_NOEXCEPT;
+		size_t length() const noexcept;
 		///
-		size_t max_size() const BALL_NOEXCEPT;
+		size_t max_size() const noexcept;
 		///
 		void resize(size_t n);
 		///
 		void resize(size_t n, char c);
 		///
-		size_t capacity() const BALL_NOEXCEPT;
+		size_t capacity() const noexcept;
 		///
 		void reserve(size_t n = 0);
 		///
-		void clear() BALL_NOEXCEPT;
+		void clear() noexcept;
 		///
-		bool empty() const BALL_NOEXCEPT;
+		bool empty() const noexcept;
 
 #ifdef BALL_HAS_STD_STRING_SHRINK_TO_FIT
 		///
@@ -1192,7 +1192,7 @@ namespace BALL
 #endif
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 		///
-		String& assign(string&& str) BALL_NOEXCEPT;
+		String& assign(string&& str) noexcept;
 #endif
 
 		///
@@ -1292,73 +1292,73 @@ namespace BALL
 		//@{
 
 		///
-		const char* c_str() const BALL_NOEXCEPT;
+		const char* c_str() const noexcept;
 		///
-		const char* data() const BALL_NOEXCEPT;
+		const char* data() const noexcept;
 		///
-		allocator_type get_allocator() const BALL_NOEXCEPT;
+		allocator_type get_allocator() const noexcept;
 		///
 		size_t copy(char* s, size_t len, size_t pos = 0) const;
 
 		///
-		size_t find(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find(const string& str, size_t pos = 0) const noexcept;
 		///
 		size_t find(const char* s, size_t pos = 0) const;
 		///
 		size_t find(const char* s, size_t pos, size_t n) const;
 		///
-		size_t find(char c, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find(char c, size_t pos = 0) const noexcept;
 
 		///
-		size_t rfind(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t rfind(const string& str, size_t pos = npos) const noexcept;
 		///
 		size_t rfind(const char* s, size_t pos = npos) const;
 		///
 		size_t rfind(const char* s, size_t pos, size_t n) const;
 		///
-		size_t rfind(char c, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t rfind(char c, size_t pos = npos) const noexcept;
 		
 		///
-		size_t find_first_of(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_of(const string& str, size_t pos = 0) const noexcept;
 		///
 		size_t find_first_of(const char* s, size_t pos = 0) const;
 		///
 		size_t find_first_of(const char* s, size_t pos, size_t n) const;
 		///
-		size_t find_first_of(char c, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_of(char c, size_t pos = 0) const noexcept;
 
 		///
-		size_t find_last_of(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_of(const string& str, size_t pos = npos) const noexcept;
 		///
 		size_t find_last_of(const char* s, size_t pos = npos) const;
 		///
 		size_t find_last_of(const char* s, size_t pos, size_t n) const;
 		///
-		size_t find_last_of(char c, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_of(char c, size_t pos = npos) const noexcept;
 
 		///
-		size_t find_first_not_of(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_not_of(const string& str, size_t pos = 0) const noexcept;
 		///
 		size_t find_first_not_of(const char* s, size_t pos = 0) const;
 		///
 		size_t find_first_not_of(const char* s, size_t pos, size_t n) const;
 		///
-		size_t find_first_not_of(char c, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_not_of(char c, size_t pos = 0) const noexcept;
 
 		///
-		size_t find_last_not_of(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_not_of(const string& str, size_t pos = npos) const noexcept;
 		///
 		size_t find_last_not_of(const char* s, size_t pos = npos) const;
 		///
 		size_t find_last_not_of(const char* s, size_t pos, size_t n) const;
 		///
-		size_t find_last_not_of(char c, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_not_of(char c, size_t pos = npos) const noexcept;
 
 		///
 		string substr(size_t pos = 0, size_t len = npos) const;
 
 		///
-		int compare(const string& str) const BALL_NOEXCEPT;
+		int compare(const string& str) const noexcept;
 		///
 		int compare(size_t pos, size_t len, const string& str) const;
 		///

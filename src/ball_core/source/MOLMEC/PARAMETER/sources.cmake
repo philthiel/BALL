@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/PARAMETER)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	atomTypes.C
 	charmmEEF1.C
 	cosineTorsion.C
@@ -15,5 +11,3 @@ SET(SOURCES_LIST
 	residueTorsions.C
 	templates.C
 )	
-
-ADD_BALL_SOURCES("MOLMEC/PARAMETER" "${SOURCES_LIST}")

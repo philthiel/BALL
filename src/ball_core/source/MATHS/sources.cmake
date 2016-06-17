@@ -1,7 +1,4 @@
-#INCLUDE(source/MATHS/LINALG/sources.cmake)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	analyticalGeometry.C
 	angle.C
 	box3.C
@@ -25,10 +22,8 @@ SET(SOURCES_LIST
 	vector4.C
 )
 
-IF (BALL_HAS_FFTW)
-	SET(SOURCES_LIST ${SOURCES_LIST} FFT1D.C FFT2D.C FFT3D.C)
-ENDIF()
+if(BALL_HAS_FFTW)
+	list(APPEND SOURCES_LIST FFT1D.C FFT2D.C FFT3D.C)
+endif()
 
-ADD_BALL_SOURCES("MATHS" "${SOURCES_LIST}")
-
-ADD_BALL_PARSER_LEXER("MATHS" "parsedFunction" "ParsedFunction")
+#ADD_BALL_PARSER_LEXER("MATHS" "parsedFunction" "ParsedFunction")

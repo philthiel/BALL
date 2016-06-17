@@ -3,7 +3,7 @@
 #       A C++ framework for molecular modeling and structural bioinformatics
 # --------------------------------------------------------------------------
 #
-# Copyright (C) 2016 the BALL team:
+# Copyright (C) 2000-2016 the BALL team:
 # - Andreas Hildebrandt (andreas.hildebrandt@uni-mainz.de)
 # - Oliver Kohlbacher (oliver.kohlbacher@uni-tuebingen.de)
 # - Hans-Peter Lenhof (lenhof@bioinf.uni-sb.de)
@@ -45,22 +45,19 @@ set(CF_BALL_PACKAGE_VERSION ${BALL_PACKAGE_VERSION_MAJOR}.${BALL_PACKAGE_VERSION
 
 
 # --------------------------------------------------------------------------
-# Unsupported systems
-#
-if (MINGW OR MSYS)
-	message(FATAL_ERROR "MSYS and MinGW are not supported! Please use a Visual Studio environment.")
-endif()
-
-# --------------------------------------------------------------------------
-# Add BALL module path
+# Add CMake module/script search paths and load BALL functions
 #
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
+include(ball_functions)
 
 
 # --------------------------------------------------------------------------
-# BALL contrib path
+# Global project configuration and system compatibility checks
 #
-set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${CMAKE_PREFIX_PATH})
+include(ball_config)
+configure_file(${PROJECT_SOURCE_DIR}/include/BALL/CONFIG/config.h.in ${PROJECT_BINARY_DIR}/include/BALL/CONFIG/config.h)
+configure_file(${PROJECT_SOURCE_DIR}/include/BALL/COMMON/version.h.in ${PROJECT_BINARY_DIR}/include/BALL/COMMON/version.h)
 
 
 # --------------------------------------------------------------------------
@@ -68,14 +65,16 @@ set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${CMAKE_PREFIX_PATH})
 #
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release)
+	message(STATUS "Set default build type to 'Release'.")
 endif()
 
 
 # --------------------------------------------------------------------------
-# BALL options
+# Build options
 #
-OPTION(BBUILD_PYTHON "Build BALL python bindings" OFF)
-OPTION(BBUILD_VIEW "Build BALL's VIEW library required for visualization and graphical user interfaces" OFF)
+OPTION(BALL_BUILD_PYTHON "Build BALL python bindings" OFF)
+OPTION(BALL_BUILD_VIEW "Build BALL's VIEW library required for visualization and graphical user interfaces" OFF)
+OPTION(BALL_USE_CUDA "Use CUDA tools to build the project" OFF)
 
 
 # --------------------------------------------------------------------------

@@ -33,31 +33,63 @@ project("BALL")
 
 
 # --------------------------------------------------------------------------
-# BALL core library
+# Find and configure external dependencies
 #
-add_subdirectory(ball_core)
+
+set(BALL_DEP_LIBRARIES)
+set(BALL_DEP_MISSING)
+
+# Mandatory dependencies
+include(ball_config_boost)
+include(ball_config_eigen3)
+include(ball_config_flexbison)
+include(ball_config_qt)
+
+# Optional dependencies
+include(ball_config_cuda)
+include(ball_config_fftw)
+include(ball_config_lpsolve)
+include(ball_config_mpi)
+include(ball_config_openbabel)
+include(ball_config_tbb)
+include(ball_config_xdr)
+
+# Evaluate external dependencies search results
+BALL_FUNCTIONS_evaluate_dependencies("${BALL_DEP_LIBRARIES}" "${BALL_DEP_MISSING}")
 
 
 # --------------------------------------------------------------------------
-# BALL view library
+# BALL core library
 #
-if(BBUILD_VIEW)
-	add_subdirectory(ball_view)
+add_subdirectory(ball)
+
+
+# --------------------------------------------------------------------------
+# BALL command line tools
+#
+add_subdirectory(BALLTools)
+
+
+# --------------------------------------------------------------------------
+# BALL view library and BALLView application
+#
+if(BALL_BUILD_VIEW)
+	add_subdirectory(view)
+	add_subdirectory(BALLView)
 endif()
 
 
 # --------------------------------------------------------------------------
 # BALL python bindings
 #
-if(BBUILD_PYTHON)
-	add_subdirectory(ball_python)
+if(BALL_BUILD_PYTHON)
+	add_subdirectory(pyball)
 endif()
 
 
-# --------------------------------------------------------------------------
-# BALL command line tools
-#
-add_subdirectory(tools)
+
+
+
 
 
 

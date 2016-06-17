@@ -5,13 +5,9 @@
 #ifndef BALL_COMMON_HASH_H
 #define BALL_COMMON_HASH_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/common.h>
-#endif
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/DATATYPE/string.h>
-#endif
+#include <BALL/DATATYPE/string.h>
+
 
 namespace BALL 
 {

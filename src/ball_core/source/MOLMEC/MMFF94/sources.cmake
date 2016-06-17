@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/MOLMEC/MMFF94)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	MMFF94.C
 	MMFF94StretchBend.C
 	MMFF94Torsion.C
@@ -11,5 +7,3 @@ SET(SOURCES_LIST
 	MMFF94Processors.C
 	MMFF94NonBonded.C
 )	
-
-ADD_BALL_SOURCES("MOLMEC/MMFF94" "${SOURCES_LIST}")

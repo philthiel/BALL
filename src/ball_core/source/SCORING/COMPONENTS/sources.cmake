@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/SCORING/COMPONENTS)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	aromaticRingStacking.C
 	advElectrostatic.C
 	fragmentationalSolvation.C
@@ -26,5 +22,3 @@ SET(SOURCES_LIST
 	vanDerWaals.C
 	vanDerWaalsSlick.C
 )
-
-ADD_BALL_SOURCES("SCORING/COMPONENTS" "${SOURCES_LIST}")

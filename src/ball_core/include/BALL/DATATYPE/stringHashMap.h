@@ -7,27 +7,14 @@
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
 #define BALL_DATATYPE_STRINGHASHMAP_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/common.h>
-#endif
-
-#ifndef BALL_COMMON_HASH_H
-#	include <BALL/COMMON/hash.h>
-#endif
-
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/CONCEPT/visitor.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/CONCEPT/processor.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/DATATYPE/hashMap.h>
-#endif
 
 #include <algorithm>
+
+#include <BALL/COMMON/hash.h>
+#include <BALL/CONCEPT/visitor.h>
+#include <BALL/CONCEPT/processor.h>
+#include <BALL/DATATYPE/hashMap.h>
+
 
 namespace BALL 
 {

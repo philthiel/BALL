@@ -1,8 +1,4 @@
-### the directory name ###
-SET(DIRECTORY source/QSAR)
-
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	aromaticityProcessor.C
 	automaticModelCreator.C
 	bayesModel.C
@@ -53,8 +49,7 @@ SET(SOURCES_LIST
 	rrModel.C
 )	
 
-IF (BALL_HAS_LIBSVM)
- SET(SOURCES_LIST ${SOURCES_LIST} libsvmModel.C)
-ENDIF()
+if(BALL_HAS_LIBSVM)
+	list(APPEND SOURCES_LIST libsvmModel.C)
+endif()
 
-ADD_BALL_SOURCES("QSAR" "${SOURCES_LIST}")

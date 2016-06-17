@@ -1,5 +1,4 @@
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	AStarBondOrderStrategy.C
 	bondOrderAssignment.C
 	bondOrderAssignmentStrategy.C
@@ -9,8 +8,6 @@ SET(SOURCES_LIST
 	partialBondOrderAssignment.C
 )
 
-IF (BALL_HAS_LPSOLVE)
-	LIST(APPEND SOURCES_LIST ILPBondOrderStrategy.C)
-ENDIF()
-
-ADD_BALL_SOURCES("STRUCTURE/BONDORDERS" "${SOURCES_LIST}")
+if(BALL_HAS_LPSOLVE)
+	list(APPEND SOURCES_LIST ILPBondOrderStrategy.C)
+endif()

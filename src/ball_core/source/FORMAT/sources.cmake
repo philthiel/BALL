@@ -1,5 +1,4 @@
-### list all filenames of the directory here ###
-SET(SOURCES_LIST
+set(SOURCES_LIST
 	amiraMeshFile.C
 	antechamberFile.C
 	bruker1DFile.C
@@ -43,8 +42,6 @@ SET(SOURCES_LIST
 	XYZFile.C
 )
 
-ADD_BALL_SOURCES("FORMAT" "${SOURCES_LIST}")
-
-ADD_BALL_PARSER_LEXER("FORMAT" "CIFParser" "CIFParser")
-ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSDatParser" "GAMESSDatParser")
+#ADD_BALL_PARSER_LEXER("FORMAT" "CIFParser" "CIFParser")
+#ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSDatParser" "GAMESSDatParser")
 #ADD_BALL_PARSER_LEXER("FORMAT" "GAMESSLogParser" "GAMESSLogParser")
