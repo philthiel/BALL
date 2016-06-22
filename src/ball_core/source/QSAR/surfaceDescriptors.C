@@ -4,9 +4,9 @@
 // $Id: surfaceDescriptors.C,v 1.1.28.1 2007/03/16 00:06:50 bertsch Exp $
 // 
 
-#include <BALL/QSAR/surfaceDescriptors.h>
+#include <BALL/core/qsar/surfaceDescriptors.h>
 
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/kernel/fragment.h>
 
 namespace BALL 
 {

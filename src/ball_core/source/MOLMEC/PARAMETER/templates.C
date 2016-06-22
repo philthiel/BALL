@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/templates.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL/core/molmec/parameter/templates.h>
+#include <BALL/core/kernel/residue.h>
 
 using namespace std;
 

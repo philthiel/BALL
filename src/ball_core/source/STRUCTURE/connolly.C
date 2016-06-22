@@ -100,7 +100,7 @@
 
 #include <algorithm>
 #include <iostream>
-#include <BALL/COMMON/exception.h>
+#include <BALL/core/common/exception.h>
 using std::min;
 using std::max;
 using std::cerr;

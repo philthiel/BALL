@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/advElectrostatic.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL/core/scoring/components/advElectrostatic.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 #include <set>
 
 

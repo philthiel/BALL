@@ -5,20 +5,20 @@
 
 // CH---pi interaction for the SLICK energy function
 
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/SCORING/COMPONENTS/CHPISlick.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/KERNEL/residueIterator.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/scoring/components/CHPISlick.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/kernel/residueIterator.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/protein.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL/core/system/timer.h>
 
 #define DEBUG 1
 
 #ifdef DEBUG
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/format/HINFile.h>
 #endif
 
 using namespace std;

@@ -3,20 +3,20 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/amber/amberNonBonded.h>
 
-#include <BALL/SCORING/COMPONENTS/aromaticRingStacking.h>
-#include <BALL/SCORING/COMPONENTS/solvation.h>
-#include <BALL/SCORING/COMPONENTS/fragmentationalSolvation.h>
-#include <BALL/SCORING/COMPONENTS/advElectrostatic.h>
-#include <BALL/SCORING/COMPONENTS/electrostatic.h>
-#include <BALL/SCORING/COMPONENTS/vanDerWaals.h>
-#include <BALL/SCORING/COMPONENTS/hydrogenBond.h>
-#include <BALL/SCORING/COMPONENTS/rotationalEntropy.h>
-#include <BALL/SCORING/COMPONENTS/lipophilic.h>
-#include <BALL/SCORING/COMPONENTS/burialDepth.h>
+#include <BALL/core/scoring/components/aromaticRingStacking.h>
+#include <BALL/core/scoring/components/solvation.h>
+#include <BALL/core/scoring/components/fragmentationalSolvation.h>
+#include <BALL/core/scoring/components/advElectrostatic.h>
+#include <BALL/core/scoring/components/electrostatic.h>
+#include <BALL/core/scoring/components/vanDerWaals.h>
+#include <BALL/core/scoring/components/hydrogenBond.h>
+#include <BALL/core/scoring/components/rotationalEntropy.h>
+#include <BALL/core/scoring/components/lipophilic.h>
+#include <BALL/core/scoring/components/burialDepth.h>
 
 
 using namespace BALL;

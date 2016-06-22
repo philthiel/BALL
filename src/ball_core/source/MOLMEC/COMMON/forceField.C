@@ -4,12 +4,12 @@
 // $Id: forceField.C,v 1.40.26.4 2007/05/18 12:06:00 oliver Exp $
 //
 
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL/core/molmec/common/forceField.h>
 
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/COMMON/periodicBoundary.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/periodicBoundary.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
 
 #include <limits>
 
@@ -681,7 +681,7 @@ namespace BALL
 	}
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/MOLMEC/COMMON/forceField.iC>
+#   include <BALL/core/molmec/common/forceField.iC>
 # endif
 	
 } // namespace BALL

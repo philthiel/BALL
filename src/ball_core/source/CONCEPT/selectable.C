@@ -3,8 +3,8 @@
 //
 // $Id: selectable.C,v 1.7 2002/12/12 10:05:40 oliver Exp $
 
-#include <BALL/CONCEPT/selectable.h>
-#include <BALL/CONCEPT/persistenceManager.h>
+#include <BALL/core/concept/selectable.h>
+#include <BALL/core/concept/persistenceManager.h>
 
 using namespace std;
 
@@ -55,7 +55,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/CONCEPT/selectable.iC>
+#		include <BALL/core/concept/selectable.iC>
 #	endif
 	 
 } // namespace BALL

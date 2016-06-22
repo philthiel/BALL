@@ -2,21 +2,21 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/solventExcludedSurface.h>
-#include <BALL/STRUCTURE/triangle.h>
-#include <BALL/STRUCTURE/triangleEdge.h>
-#include <BALL/STRUCTURE/trianglePoint.h>
-#include <BALL/STRUCTURE/triangulatedSES.h>
-#include <BALL/STRUCTURE/triangulatedSurface.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/MATHS/circle3.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/MATHS/sphere3.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/vector4.h>
+#include <BALL/core/structure/solventExcludedSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
+#include <BALL/core/structure/triangulatedSES.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+#include <BALL/core/maths/analyticalGeometry.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/quaternion.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/vector4.h>
 #include <list>
 #include <vector>
 

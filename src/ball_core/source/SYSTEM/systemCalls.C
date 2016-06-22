@@ -4,7 +4,7 @@
 // $Id: systemCalls.C,v 1.1.6.2 2007/08/08 09:21:34 oliver Exp $
 //
 
-#include <BALL/SYSTEM/systemCalls.h>
+#include <BALL/core/system/systemCalls.h>
 
 #ifdef BALL_OS_WINDOWS
 #include <windows.h>

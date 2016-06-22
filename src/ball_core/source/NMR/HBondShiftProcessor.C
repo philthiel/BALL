@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/HBondShiftProcessor.h>
+#include <BALL/core/nmr/HBondShiftProcessor.h>
 #include <cstdio>
 #include <cmath>
 

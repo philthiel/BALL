@@ -1,15 +1,15 @@
-#include <BALL/SCORING/FUNCTIONS/rescoring.h>
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/SCORING/COMPONENTS/aromaticRingStacking.h>
-#include <BALL/SCORING/COMPONENTS/polarity.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/QSAR/registry.h>
-#include <BALL/QSAR/featureSelection.h>
-#include <BALL/QSAR/statistics.h>
-#include <BALL/QSAR/plsModel.h>
-#include <BALL/QSAR/kplsModel.h>
-#include <BALL/QSAR/automaticModelCreator.h>
+#include <BALL/core/scoring/functions/rescoring.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/scoring/components/aromaticRingStacking.h>
+#include <BALL/core/scoring/components/polarity.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/format/MOL2File.h>
+#include <BALL/core/qsar/registry.h>
+#include <BALL/core/qsar/featureSelection.h>
+#include <BALL/core/qsar/statistics.h>
+#include <BALL/core/qsar/plsModel.h>
+#include <BALL/core/qsar/kplsModel.h>
+#include <BALL/core/qsar/automaticModelCreator.h>
 
 using namespace BALL;
 using namespace std;

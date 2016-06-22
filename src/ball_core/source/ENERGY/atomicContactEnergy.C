@@ -4,18 +4,18 @@
 // $Id: atomicContactEnergy.C,v 1.6 2003/08/26 09:17:45 oliver Exp $
 //
 
-#include <BALL/ENERGY/atomicContactEnergy.h>
+#include <BALL/core/energy/atomicContactEnergy.h>
 
-#include <BALL/common.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/stringHashMap.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL/core/common.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/atomContainer.h>
 
 #define ACE_FILENAME "energy/AtomicContactEnergy.dat"
 #define ACE_TYPES_FILENAME "energy/ACE_types.dat"

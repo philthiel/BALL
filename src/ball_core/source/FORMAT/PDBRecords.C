@@ -4,7 +4,7 @@
 // $Id: PDBRecords.C,v 1.1 2005/02/08 17:32:37 oliver Exp $
 //
 
-#include <BALL/FORMAT/PDBRecords.h>
+#include <BALL/core/format/PDBRecords.h>
 
 namespace BALL 
 {

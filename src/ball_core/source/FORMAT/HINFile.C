@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <stack>
 

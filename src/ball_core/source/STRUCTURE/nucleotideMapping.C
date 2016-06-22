@@ -1,8 +1,8 @@
-#include <BALL/STRUCTURE/nucleotideMapping.h>
+#include <BALL/core/structure/nucleotideMapping.h>
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/protein.h>
 
 namespace BALL
 {

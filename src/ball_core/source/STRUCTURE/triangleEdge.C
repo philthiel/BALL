@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/triangleEdge.h>
-#include <BALL/STRUCTURE/triangle.h>
-#include <BALL/STRUCTURE/trianglePoint.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/trianglePoint.h>
 
 namespace BALL
 {

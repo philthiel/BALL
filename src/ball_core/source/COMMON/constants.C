@@ -3,7 +3,7 @@
 //
 // $Id: constants.C,v 1.6 2002/02/27 12:20:33 sturm Exp $
 
-#include <BALL/COMMON/constants.h>
+#include <BALL/core/common/constants.h>
 
 namespace BALL
 {

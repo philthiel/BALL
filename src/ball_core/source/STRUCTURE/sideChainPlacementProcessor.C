@@ -2,16 +2,16 @@
 #include <cstdlib>
 
 // BALL includes
-#include <BALL/kernel.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/STRUCTURE/sideChainPlacementProcessor.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/STRUCTURE/atomBijection.h> 
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/kernel.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/structure/sideChainPlacementProcessor.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/structure/atomBijection.h> 
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/format/PDBFile.h>
 
 //#define DEBUG 1
 #undef DEBUG

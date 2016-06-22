@@ -5,8 +5,8 @@
 //
 
 #include <BALL/version.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/DATATYPE/stringHashMap.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/datatype/stringHashMap.h>
 
 namespace BALL
 {

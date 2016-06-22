@@ -4,9 +4,9 @@
 
 #include <algorithm>
 
-#include <BALL/SYSTEM/fileSystem.h>
+#include <BALL/core/system/fileSystem.h>
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL/core/datatype/regularExpression.h>
 #ifdef BALL_HAS_PWD_H
 #include <pwd.h> // 'getpwnam'
 #endif

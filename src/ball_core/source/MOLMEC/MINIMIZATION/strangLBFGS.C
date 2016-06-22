@@ -6,8 +6,8 @@
 // Minimize the potential energy of a system using an improved version
 // of the limited memory BFGS with Strang recurrences.
 
-#include <BALL/MOLMEC/MINIMIZATION/strangLBFGS.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL/core/molmec/MINIMIZATION/strangLBFGS.h>
+#include <BALL/core/molmec/common/forceField.h>
 
 #include <limits>
 

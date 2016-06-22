@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/kernel/bond.h>
 
 using namespace::std;
 namespace BALL
@@ -229,7 +229,7 @@ namespace BALL
 	}
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/KERNEL/bond.iC>
+#   include <BALL/core/kernel/bond.iC>
 # endif
 
 } // namespace BALL

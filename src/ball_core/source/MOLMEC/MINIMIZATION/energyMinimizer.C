@@ -4,10 +4,10 @@
 // $Id: energyMinimizer.C,v 1.29.28.3 2007/05/18 10:58:37 aleru Exp $
 //
 
-#include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
+#include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
 
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
 
 #include <limits>
 

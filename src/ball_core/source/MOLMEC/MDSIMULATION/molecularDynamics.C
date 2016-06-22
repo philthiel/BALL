@@ -4,10 +4,10 @@
 // $Id: molecularDynamics.C,v 1.22 2005/03/01 10:07:54 oliver Exp $
 //
 
-#include <BALL/MOLMEC/MDSIMULATION/molecularDynamics.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/kernel/PTE.h>
 
 namespace BALL
 {

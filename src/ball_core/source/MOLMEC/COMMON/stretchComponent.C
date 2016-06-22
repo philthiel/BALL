@@ -1,6 +1,6 @@
-#include <BALL/MOLMEC/COMMON/stretchComponent.h>
+#include <BALL/core/molmec/common/stretchComponent.h>
 
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL/core/molmec/common/forceField.h>
 
 namespace BALL
 {

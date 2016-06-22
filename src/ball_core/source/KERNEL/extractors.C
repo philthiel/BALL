@@ -7,13 +7,13 @@
 //   Oliver Kohlbacher
 //
 
-#include <BALL/KERNEL/extractors.h>
+#include <BALL/core/kernel/extractors.h>
 
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/nucleicAcid.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/nucleicAcid.h>
 
 namespace BALL
 {

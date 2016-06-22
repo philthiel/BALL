@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/COMMON/logStream.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/logStream.h>
+#include <BALL/core/datatype/string.h>
 
 #include <iostream>
 #include <typeinfo>

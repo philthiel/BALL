@@ -3,14 +3,14 @@
 // $Authors: Jan Fuhrmann, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/GENETICDOCK/rotateBond.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/COMMON/constants.h>
+#include <BALL/core/docking/geneticdock/rotateBond.h>
+#include <BALL/core/maths/quaternion.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/common/constants.h>
 
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/format/HINFile.h>
 #include <iostream>
 
 using namespace std;

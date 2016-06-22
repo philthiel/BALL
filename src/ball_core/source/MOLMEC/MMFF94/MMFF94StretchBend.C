@@ -4,15 +4,15 @@
 // $Id: MMFF94StretchBend.C,v 1.1.8.6 2007/08/05 18:52:46 amoll Exp $
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94StretchBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/COMMON/macros.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL/core/molmec/mmff94/MMFF94StretchBend.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/common/macros.h>
+#include <BALL/core/format/parameters.h>
 
 // #define BALL_DEBUG_MMFF
 // #define BALL_MMFF_TEST

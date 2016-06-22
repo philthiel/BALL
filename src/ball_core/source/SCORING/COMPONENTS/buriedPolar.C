@@ -4,11 +4,11 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/buriedPolar.h>
-#include <BALL/SCORING/COMPONENTS/fresnoTypes.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/scoring/components/buriedPolar.h>
+#include <BALL/core/scoring/components/fresnoTypes.h>
+#include <BALL/core/kernel/PTE.h>
 
-#include <BALL/SYSTEM/timer.h>
+#include <BALL/core/system/timer.h>
 
 
 using namespace std;

@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/regressionModel.h>
+#include <BALL/core/qsar/regressionModel.h>
 
 using namespace std;
 

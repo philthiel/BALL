@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/kernel/protein.h>
 
 #include <list>
 #include <vector>
 #include <algorithm>
 
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/format/lineBasedFile.h>
+#include <BALL/core/system/path.h>
 	
 using namespace std;
 

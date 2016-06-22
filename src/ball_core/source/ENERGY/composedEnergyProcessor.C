@@ -3,7 +3,7 @@
 //
 // $Id: composedEnergyProcessor.C,v 1.6 2002/02/27 12:21:13 sturm Exp $
 
-#include <BALL/ENERGY/composedEnergyProcessor.h>
+#include <BALL/core/energy/composedEnergyProcessor.h>
 
 namespace BALL
 {

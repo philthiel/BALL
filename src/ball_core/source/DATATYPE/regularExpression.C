@@ -3,7 +3,7 @@
 //
 // $Id: regularExpression.C,v 1.2 2003/08/26 09:17:45 oliver Exp $ 
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL/core/datatype/regularExpression.h>
 
 using std::endl;
 using std::istream;
@@ -274,7 +274,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/DATATYPE/regularExpression.iC>
+#		include <BALL/core/datatype/regularExpression.iC>
 #	endif
 
 } // namespace BALL

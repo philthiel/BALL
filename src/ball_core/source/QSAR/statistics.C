@@ -3,7 +3,7 @@
 //
 // 
 
-#include <BALL/QSAR/statistics.h>
+#include <BALL/core/qsar/statistics.h>
 #include <iostream>
 #include <map>
 

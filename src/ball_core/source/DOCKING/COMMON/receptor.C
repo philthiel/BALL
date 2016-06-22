@@ -3,7 +3,7 @@
 // $Authors: Marc Röttig $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/COMMON/receptor.h>
+#include <BALL/core/docking/common/receptor.h>
 
 namespace BALL
 {

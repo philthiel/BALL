@@ -1,12 +1,12 @@
-#include <BALL/FORMAT/antechamberFile.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/format/antechamberFile.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/maths/common.h>
 
 #include <vector>
 

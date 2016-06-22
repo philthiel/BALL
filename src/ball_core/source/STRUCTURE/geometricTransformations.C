@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL/core/structure/geometricTransformations.h>
 
 namespace BALL 
 {

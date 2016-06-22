@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/rotamerLibrary.h>
-#include <BALL/FORMAT/SCWRLRotamerFile.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/structure/rotamerLibrary.h>
+#include <BALL/core/format/SCWRLRotamerFile.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/maths/common.h>
 
 #include <algorithm>
 

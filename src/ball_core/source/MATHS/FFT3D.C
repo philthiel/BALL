@@ -4,7 +4,7 @@
 // $Id: FFT3D.C,v 1.7.10.2 2006/03/01 19:04:24 anhi Exp $
 //
 
-#include <BALL/MATHS/FFT3D.h>
+#include <BALL/core/maths/FFT3D.h>
 
 namespace BALL
 {

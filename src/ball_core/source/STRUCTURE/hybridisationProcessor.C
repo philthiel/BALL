@@ -3,17 +3,17 @@
 //
 #include <iostream>
 
-#include <BALL/STRUCTURE/hybridisationProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/FORMAT/parameters.h>
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/structure/hybridisationProcessor.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/maths/common.h>
 
 // Qt
 #include <QtXml/QtXml>

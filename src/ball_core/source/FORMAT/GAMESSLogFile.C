@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/GAMESSLogFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/format/GAMESSLogFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
 
 // defined in the lexer (GAMESSLogParserLexer.l)
 extern void GAMESSLogParser_initBuffer(const char* buf);

@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/kernel/fragment.h>
 
 using namespace::std;
 namespace BALL 

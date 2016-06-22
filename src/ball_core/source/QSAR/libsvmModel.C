@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/libsvmModel.h>
+#include <BALL/core/qsar/libsvmModel.h>
 #define Malloc(type,n) (type *)malloc((n)*sizeof(type))
 
 using namespace BALL::QSAR;

@@ -4,9 +4,9 @@
 // $Id: ringPerceptionProcessor.C,v 1.22.4.2 2007/04/03 13:29:39 bertsch Exp $
 //
 
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <limits>
 

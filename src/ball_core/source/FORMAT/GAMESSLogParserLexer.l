@@ -1,6 +1,6 @@
 %{
-#include <BALL/FORMAT/GAMESSLogFile.h>
-#include <BALL/COMMON/parserDefinitions.h>
+#include <BALL/core/format/GAMESSLogFile.h>
+#include <BALL/core/common/parserDefinitions.h>
 
 using namespace BALL;
 

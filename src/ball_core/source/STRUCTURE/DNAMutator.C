@@ -5,27 +5,27 @@
  * Author: Daniel Stoeckel
  */
 
-#include <BALL/COMMON/exception.h>
-#include <BALL/STRUCTURE/DNAMutator.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/structure/DNAMutator.h>
 
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/forEach.h>
 
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/RMSDMinimizer.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/structure/RMSDMinimizer.h>
+#include <BALL/core/structure/geometricProperties.h>
 
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
 
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/format/HINFile.h>
 
 #include <algorithm>
 

@@ -1,4 +1,4 @@
-#include <BALL/KERNEL/molecularInteractions.h>
+#include <BALL/core/kernel/molecularInteractions.h>
 
 using namespace BALL;
 

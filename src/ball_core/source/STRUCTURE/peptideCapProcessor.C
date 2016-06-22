@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/peptideCapProcessor.h>
-#include <BALL/KERNEL/system.h>
-//#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL/core/structure/peptideCapProcessor.h>
+#include <BALL/core/kernel/system.h>
+//#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/structure/geometricTransformations.h>
 
 
 namespace BALL

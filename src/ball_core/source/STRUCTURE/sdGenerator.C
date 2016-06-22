@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/sdGenerator.h>
-#include <BALL/STRUCTURE/ringAnalyser.h>
+#include <BALL/core/structure/sdGenerator.h>
+#include <BALL/core/structure/ringAnalyser.h>
 
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/selector.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
 
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <algorithm>
 

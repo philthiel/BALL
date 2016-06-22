@@ -3,7 +3,7 @@
 //
 // $Id: timeStamp.C,v 1.21 2005/12/23 17:02:33 amoll Exp $
 
-#include <BALL/CONCEPT/timeStamp.h>
+#include <BALL/core/concept/timeStamp.h>
 
 #ifdef BALL_HAS_SYS_TIME_H
 #	include <sys/time.h>
@@ -122,7 +122,7 @@ namespace BALL
 	}
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/CONCEPT/timeStamp.iC>
+#   include <BALL/core/concept/timeStamp.iC>
 # endif
 
 }

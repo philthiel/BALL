@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/quadraticBondStretch.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/quadraticBondStretch.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 using namespace std;
 

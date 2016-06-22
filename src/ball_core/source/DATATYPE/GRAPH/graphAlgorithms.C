@@ -1,5 +1,5 @@
-#include <BALL/DATATYPE/GRAPH/graphAlgorithms.h>
-#include <BALL/DATATYPE/string.h>
+#include <BALL/core/datatype/graph/graphAlgorithms.h>
+#include <BALL/core/datatype/string.h>
 
 namespace BALL
 {

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/conformation.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/docking/common/conformation.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/bond.h>
 #include <map>
 #include <set>
 

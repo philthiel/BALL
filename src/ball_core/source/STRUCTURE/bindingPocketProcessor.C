@@ -1,8 +1,8 @@
-#include <BALL/STRUCTURE/bindingPocketProcessor.h>
+#include <BALL/core/structure/bindingPocketProcessor.h>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/format/HINFile.h>
 
 
 

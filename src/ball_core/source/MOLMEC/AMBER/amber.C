@@ -4,14 +4,14 @@
 // Molecular Mechanics: Amber force field class
 //
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/AMBER/amberStretch.h>
-#include <BALL/MOLMEC/AMBER/amberBend.h>
-#include <BALL/MOLMEC/AMBER/amberTorsion.h>
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
-#include <BALL/MOLMEC/COMMON/assignTypes.h>
-#include <BALL/MOLMEC/PARAMETER/templates.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/molmec/amber/amberStretch.h>
+#include <BALL/core/molmec/amber/amberBend.h>
+#include <BALL/core/molmec/amber/amberTorsion.h>
+#include <BALL/core/molmec/amber/amberNonBonded.h>
+#include <BALL/core/molmec/common/assignTypes.h>
+#include <BALL/core/molmec/parameter/templates.h>
 
 using namespace std;
 

@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/svrModel.h>
+#include <BALL/core/qsar/svrModel.h>
 
 namespace BALL
 {

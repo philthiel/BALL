@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/residue.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/residue.h>
 
 using namespace::std;
 

@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/MOLMEC/COMMON/snapShot.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/kernel/system.h>
 
 using namespace std;
 

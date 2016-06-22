@@ -3,4 +3,4 @@
 //
 // $Id: vector2.C,v 1.2 2002/02/27 12:21:28 sturm Exp $
 
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/maths/vector3.h>

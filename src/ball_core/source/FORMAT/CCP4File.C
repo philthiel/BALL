@@ -4,7 +4,7 @@
 // $Id: CCP4File.C,v 1.1.4.1 2007/03/25 22:00:16 oliver Exp $
 //
 
-#include <BALL/FORMAT/CCP4File.h>
+#include <BALL/core/format/CCP4File.h>
 
 namespace BALL
 {

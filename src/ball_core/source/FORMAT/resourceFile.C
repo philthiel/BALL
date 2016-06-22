@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/resourceFile.h>
+#include <BALL/core/format/resourceFile.h>
 
 #include <stack>
 
@@ -879,7 +879,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/FORMAT/resourceFile.iC>
+#		include <BALL/core/format/resourceFile.iC>
 #	endif
 
 } // namespace BALL

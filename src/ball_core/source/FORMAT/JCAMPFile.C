@@ -3,9 +3,9 @@
 //
 
 
-#include <BALL/FORMAT/JCAMPFile.h>
-#include <BALL/DATATYPE/regularExpression.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/format/JCAMPFile.h>
+#include <BALL/core/datatype/regularExpression.h>
+#include <BALL/core/maths/common.h>
 
 namespace BALL
 {

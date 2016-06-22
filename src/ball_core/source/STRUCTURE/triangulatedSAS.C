@@ -2,24 +2,24 @@
 // vi: set ts=2:
 //
 
-#	include <BALL/KERNEL/atom.h>
-#	include <BALL/KERNEL/molecule.h>
-#	include <BALL/KERNEL/system.h>
-#	include <BALL/KERNEL/PTE.h>
-#	include <BALL/DATATYPE/string.h>
+#	include <BALL/core/kernel/atom.h>
+#	include <BALL/core/kernel/molecule.h>
+#	include <BALL/core/kernel/system.h>
+#	include <BALL/core/kernel/PTE.h>
+#	include <BALL/core/datatype/string.h>
 
-#include <BALL/STRUCTURE/solventAccessibleSurface.h>
-#include <BALL/STRUCTURE/triangle.h>
-#include <BALL/STRUCTURE/triangleEdge.h>
-#include <BALL/STRUCTURE/trianglePoint.h>
-#include <BALL/STRUCTURE/triangulatedSAS.h>
-#include <BALL/STRUCTURE/triangulatedSurface.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/vector4.h>
+#include <BALL/core/structure/solventAccessibleSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
+#include <BALL/core/structure/triangulatedSAS.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/quaternion.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/vector4.h>
 
 #include <list>
 #include <vector>

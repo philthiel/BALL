@@ -3,8 +3,8 @@
 //
 // $Id: pierottiCavFreeEnergyProcessor.C,v 1.10 2002/02/27 12:24:06 sturm Exp $
 
-#include <BALL/SOLVATION/pierottiCavFreeEnergyProcessor.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL/core/solvation/pierottiCavFreeEnergyProcessor.h>
+#include <BALL/core/structure/numericalSAS.h>
 
 using namespace std;
 

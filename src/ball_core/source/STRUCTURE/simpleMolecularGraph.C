@@ -2,5 +2,5 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/simpleMolecularGraph.h>
+#include <BALL/core/structure/simpleMolecularGraph.h>
 

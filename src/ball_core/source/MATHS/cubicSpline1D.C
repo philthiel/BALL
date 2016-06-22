@@ -1,4 +1,4 @@
-#include <BALL/MATHS/cubicSpline1D.h>
+#include <BALL/core/maths/cubicSpline1D.h>
 #include <map>
 #include <set>
 

@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/analyticalSES.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL/core/structure/analyticalSES.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/atomContainer.h>
 
 namespace BALL
 {

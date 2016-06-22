@@ -3,7 +3,7 @@
 //
 // $Id: sysinfo.C,v 1.22 2005/12/23 17:03:06 amoll Exp $
 
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL/core/system/sysinfo.h>
 
 #ifdef BALL_OS_SOLARIS
 # undef BALL_HAS_SYS_SYSINFO_H
@@ -19,7 +19,7 @@
 
 #ifdef BALL_HAS_SYS_SYSINFO_H
 #	 include <sys/sysinfo.h>
-#	 include <BALL/SYSTEM/file.h>
+#	 include <BALL/core/system/file.h>
 #else
 # ifdef BALL_COMPILER_MSVC
 #	  define WIN32_LEAN_AND_MEAN

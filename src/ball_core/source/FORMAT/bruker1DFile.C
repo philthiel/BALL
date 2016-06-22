@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/bruker1DFile.h>
-#include <BALL/SYSTEM/binaryFileAdaptor.h>
+#include <BALL/core/format/bruker1DFile.h>
+#include <BALL/core/system/binaryFileAdaptor.h>
 
 namespace BALL 
 {

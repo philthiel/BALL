@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/expressionParser.h>
+#include <BALL/core/kernel/expressionParser.h>
 
 // defined in the lexer (expressionParserLexer.l)
 extern void ExpressionParser_initBuffer(const char* buf);

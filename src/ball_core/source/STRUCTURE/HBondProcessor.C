@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/HBondProcessor.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/structure/HBondProcessor.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/kernel/PTE.h>
 #include <map>
 #include <set>
 

@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/FUNCTIONS/PBScoring.h>
-#include <BALL/SCORING/COMPONENTS/PB.h>
+#include <BALL/core/scoring/functions/PBScoring.h>
+#include <BALL/core/scoring/components/PB.h>
 
 using namespace BALL;
 

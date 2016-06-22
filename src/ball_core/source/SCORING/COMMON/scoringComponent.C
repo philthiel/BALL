@@ -3,10 +3,10 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/scoringComponent.h>
-#include <BALL/SCORING/COMMON/fermiBaseFunction.h>
-#include <BALL/SCORING/COMMON/linearBaseFunction.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL/core/scoring/common/scoringComponent.h>
+#include <BALL/core/scoring/common/fermiBaseFunction.h>
+#include <BALL/core/scoring/common/linearBaseFunction.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 
 using namespace std;
 using namespace BALL;

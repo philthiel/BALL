@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/paramFile.h>
+#include <BALL/core/format/paramFile.h>
 
 using namespace BALL;
 using namespace std;

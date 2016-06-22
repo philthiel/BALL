@@ -4,14 +4,14 @@
 // $Id: simpleBase.C,v 1.2.28.2 2007-03-19 21:43:47 bertsch Exp $
 //
 
-#include <BALL/QSAR/simpleBase.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/smartsMatcher.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/QSAR/aromaticityProcessor.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/qsar/simpleBase.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/smartsMatcher.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
 

@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/COMMON/periodicBoundary.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/CONCEPT/processor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/MATHS/common.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/molmec/common/periodicBoundary.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/maths/common.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
 
 using namespace std;
 

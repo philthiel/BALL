@@ -1,7 +1,7 @@
-#include <BALL/QSAR/NMRDescriptors.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL/core/qsar/NMRDescriptors.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/maths/analyticalGeometry.h>
 
 #define FLOAT_VALUE_NA 3600. //TODO
 

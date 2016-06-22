@@ -1,4 +1,4 @@
-#include <BALL/STRUCTURE/BONDORDERS/bondOrderAssignmentStrategy.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
 
 namespace BALL
 {

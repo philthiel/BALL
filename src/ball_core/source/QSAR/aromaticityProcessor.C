@@ -4,11 +4,11 @@
 // $Id: aromaticityProcessor.C,v 1.13.20.1 2007/03/16 00:06:45 bertsch Exp $
 //
 
-#include <BALL/QSAR/aromaticityProcessor.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
 
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <limits>
 
@@ -104,7 +104,7 @@ namespace BALL
 			{
 				// count pi-electrons
 				Size num_pi = countPiElectrons_(ring);
-				// aromatic? 
+				// aromatic?
 				if ((num_pi-2)%4 == 0)
 				{
 					// test if the rings contains a sp3 nitrogen
@@ -128,7 +128,7 @@ namespace BALL
 							}
 						}
 					}
-					
+
 					if (!has_sp2n)
 					{
 						aromatic_rings.push_back(ring);
@@ -170,7 +170,7 @@ namespace BALL
 					}
 					else
 					{
-						sp2n_rings.push_back(ring);	
+						sp2n_rings.push_back(ring);
 					}
 				}
 			}
@@ -259,7 +259,7 @@ namespace BALL
 										{
 											can_be_rings.push_back(ring2);
 										}
-									}										
+									}
 								}
 							}
 						}
@@ -305,7 +305,7 @@ namespace BALL
 										if (simpleCanBeAromaticWeaker_(ring3) && (countPiElectrons_(ring3)-2)%4 == 0)
 										{
 											can_be_rings.push_back(ring3);
-										}	
+										}
 									}
 								}
 							}
@@ -334,7 +334,7 @@ namespace BALL
 			}
 		}
 
-		// now handle the rings which can be aromatic 
+		// now handle the rings which can be aromatic
 		for (vector<HashSet<Atom*> >::const_iterator it=can_be_rings.begin(); it!=can_be_rings.end(); ++it)
 		{
 			bool can_be(true);
@@ -380,7 +380,7 @@ namespace BALL
 				}
 			}
 		}
-	
+
 		// write the aromatic rings back to the sssr set
 		sssr.clear();
 		for (vector<HashSet<Atom*> >::const_iterator it=aromatic_rings.begin();it!=aromatic_rings.end();++it)
@@ -476,7 +476,7 @@ namespace BALL
 				{
 					destab++;
 				}
-        if ((*ait)->getElement() == PTE[Element::S])
+		if ((*ait)->getElement() == PTE[Element::S])
 				{
 					if ((*ait)->countBonds() > 2)
 					{
@@ -526,7 +526,7 @@ namespace BALL
 					{
 						is_charged = true;
 					}
-								
+
 					for(Atom::BondIterator b_it=(*it2)->beginBond();b_it!=(*it2)->endBond();++b_it)
 					{
 						if (b_it->getOrder() == Bond::ORDER__DOUBLE)
@@ -578,7 +578,7 @@ namespace BALL
 		sssr = sssr_new;
 
 		while(!sssr.empty())
-		{			
+		{
 			// calc intersection and sort the rings, for some reasons set_intersection does not work properly here
 			// also accumulate does not work properly
 			vector<int> inter_sections;
@@ -608,7 +608,7 @@ namespace BALL
 			HashSet<Atom*> min_is_ring = 0;
 			Size sssr_it(0), tmp(0);
 			int min_is_d(0);
-			
+
 			for (Size i=0;i!=inter_sections.size();++i, ++sssr_it)
 			{
 				// count the double bonds, this is for greater ring systems which a single ring has no double bond
@@ -629,7 +629,7 @@ namespace BALL
 					}
 				}
 
-				if(min_is > inter_sections[i] || 
+				if(min_is > inter_sections[i] ||
 					(min_is == inter_sections[i] && (min_is_ring.size() < sssr[i].size() ||	min_is_d < d_count)))
 				{
 					min_is = inter_sections[i];
@@ -667,7 +667,7 @@ namespace BALL
 			}
 		}
 
-		// if aromatic bonds are set, i.e. from a fragment db we must set the 
+		// if aromatic bonds are set, i.e. from a fragment db we must set the
 		// isAromatic property for the atoms, in most cases this is not necessary
 		AtomIterator a_it = ac.beginAtom();
 		Atom::BondIterator b_it = a_it->beginBond();
@@ -716,7 +716,7 @@ namespace BALL
 			}
 		}
 		sssr_it = tmp;
-		
+
 		HashSet<Atom*> merge;
 		// now merge the two rings, and avoid the atoms that are in both (except _two_), if any
 		if (max_is != 0)
@@ -764,7 +764,7 @@ namespace BALL
 					merge.insert(*it1);
 				}
 			}
-		
+
 
 			// test if N is in more than one ring...
 			bool correct_n = false;
@@ -789,7 +789,7 @@ namespace BALL
 
 			if (!correct_n)
 			{
-				// test the merged ring if it is an aromatic one, if not set aromaticity on the first and delete both, 
+				// test the merged ring if it is an aromatic one, if not set aromaticity on the first and delete both,
 				// if delete both and insert the merged one
 				if (hasConjugatedDoubleBonds_(merge))
 				{
@@ -809,13 +809,13 @@ namespace BALL
 						}
 						sssr = temp;
 						is = is_tmp;
-						
+
 						//add the merged ring
 						sssr.push_back(merge);
 					}
 					else
 					{
-						// Hückel's rule not satifsfied for merge -> set aromaticity
+						// Hï¿½ckel's rule not satifsfied for merge -> set aromaticity
 						for (HashSet<Atom*>::iterator it=ring.begin();it!=ring.end();++it)
 						{
 							(*it)->setProperty("IsAromatic", true);
@@ -845,7 +845,7 @@ namespace BALL
 							{
 								b_it->setProperty(Bond::IS_AROMATIC);
 								if (overwrite_bond_orders_)
-								{	
+								{
 									b_it->setOrder(Bond::ORDER__AROMATIC);
 								}
 							}
@@ -876,7 +876,7 @@ namespace BALL
 				}
 			}
 		}
-		
+
 		// erase ring from sssr
 		Size ring_pos = 0;
 		for (Size i=0;i!=is.size();++i)
@@ -902,7 +902,7 @@ namespace BALL
 
 	bool AromaticityProcessor::hasConjugatedDoubleBonds_(HashSet<Atom*> ring_orig)
 	{
-		// the ring is considered to have conj. double bonds, if 
+		// the ring is considered to have conj. double bonds, if
 		// every carbon is sp2 hybridized, hetero atoms are not counted
 		// sometimes it might be the case, that a triple bond substitutes a double bond
 		// this is a weak criterion, and avoids some clear cases, were the ringed system
@@ -919,13 +919,13 @@ namespace BALL
 				break;
 			}
 		}
-		
+
 		Atom * ancestor = *(ring.begin());
 		for (Size i=0; i!=size;++i)
 		{
 			if (ancestor->getElement() == PTE[Element::C])
 			{
-				// count if it has _one_ double bond 
+				// count if it has _one_ double bond
 				// or two or more aromatic bonds
 				// or one triple bond (ok more than one would be strange)
 				int d_tmp(0), a_tmp(0), t_tmp(0);
@@ -935,12 +935,12 @@ namespace BALL
 					{
 						++d_tmp;
 					}
-					else 
+					else
 					{
 						if (it->getOrder() == Bond::ORDER__TRIPLE)
 						{
 							++t_tmp;
-						} 
+						}
 						else
 						{
 							if (it->getOrder() == Bond::ORDER__AROMATIC)
@@ -960,7 +960,7 @@ namespace BALL
 				}
 			}
 
-			// het atoms are not taken into account, they are considered in the countPiElectrons(...) procedure		
+			// het atoms are not taken into account, they are considered in the countPiElectrons(...) procedure
 			Atom * atom = bond_it->getPartner(*ancestor);
 			// get next ring bond
 			for (Atom::BondIterator it=atom->beginBond();it!=atom->endBond();++it)
@@ -980,7 +980,7 @@ namespace BALL
 	Size AromaticityProcessor::countPiElectrons_(HashSet<Atom*>& ring)
 	{
 		// here we count the pi electrons of the ringed system
-		
+
 		Size num_pi(0), d_count(0), t_count(0), a_count(0), s_count(0), het_count(0);
 		Atom::BondIterator j;
 
@@ -989,7 +989,7 @@ namespace BALL
 		{
 			// handles charged atoms, tests if the charge is an integer value
 			// this is bc BALL knows nothing about formal charges, explicitely
-			// i.e. cyclopropyl cation or tropylium cation 
+			// i.e. cyclopropyl cation or tropylium cation
 			if (((*i)->getCharge() - (int)((*i)->getCharge())) == 0 && (*i)->getCharge() != 0)
 			{
 				switch ((int)(*i)->getCharge())
@@ -1025,15 +1025,15 @@ namespace BALL
 						if (j->getOrder() == Bond::ORDER__DOUBLE)
 						{
 							d_count++;
-						}	 
-						else 
+						}
+						else
 						{
 							if (j->getOrder() == Bond::ORDER__TRIPLE &&
 								j->getBoundAtom(**i)->getElement() == PTE[Element::C])
 							{
 								t_count++;
 							}
-							else 
+							else
 							{
 								if (j->getOrder() == Bond::ORDER__AROMATIC)
 								{
@@ -1088,13 +1088,13 @@ namespace BALL
 					{
 						return 0;
 					}
-					
-					// sp2 
+
+					// sp2
 					if (d_count == 1 || (a_count == 2 && s_count == 0))
 					{
 						++num_pi;
 					}
-					
+
 					// sp3
 					if (d_count == 0 || (a_count == 2 && s_count == 1))
 					{
@@ -1109,18 +1109,18 @@ namespace BALL
 					num_pi += 2;
 					++het_count;
 					break;
-				default: 
-					// this is very difficult to decide what to do here :), 
+				default:
+					// this is very difficult to decide what to do here :),
 					// so we be passiv, do nothing and hope the user will fix that
-					Log.error() << "AromaticityProcessor::countPiElectrons_: No pi-electron-handle for atom with element: " 
+					Log.error() << "AromaticityProcessor::countPiElectrons_: No pi-electron-handle for atom with element: "
 						<< (*i)->getElement().getAtomicNumber() << endl;
 					break;
 			}
-		}	
-		
+		}
+
 		// these het atoms destabilize the ring, the ring isnt plane any more -> no pi system!
 		// beside the fact this should not be possible, bc this is checked above, but only for first
-		// level rings, not for merged ones! Returning 0 will result in not satisfying Hückels rule.
+		// level rings, not for merged ones! Returning 0 will result in not satisfying Hï¿½ckels rule.
 		if (het_count > 1)
 		{
 			return 0;
@@ -1130,11 +1130,11 @@ namespace BALL
 			return num_pi;
 		}
 	}
-	
+
 	void AromaticityProcessor::setDefaultOptions()
-	{		
-	 	options.setDefaultBool(AromaticityProcessor::Option::OVERWRITE_BOND_ORDERS, 
-	 												 AromaticityProcessor::Default::OVERWRITE_BOND_ORDERS); 
+	{
+		options.setDefaultBool(AromaticityProcessor::Option::OVERWRITE_BOND_ORDERS,
+													 AromaticityProcessor::Default::OVERWRITE_BOND_ORDERS);
 	}
 } // namespace BALL
 

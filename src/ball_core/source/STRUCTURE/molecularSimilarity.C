@@ -3,19 +3,19 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/STRUCTURE/molecularSimilarity.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/DATATYPE/string.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/structure/molecularSimilarity.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/system/path.h>
 #include <fstream>
 #include <sstream>
 
 #ifdef BALL_HAS_OPENBABEL
 	#include <openbabel/obconversion.h>
 	#include <openbabel/parsmart.h>
-	#include <BALL/FORMAT/SDFile.h>
+	#include <BALL/core/format/SDFile.h>
 	#include <openbabel/atom.h>
 	using namespace OpenBabel;
 #endif

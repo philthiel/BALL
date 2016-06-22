@@ -3,8 +3,8 @@
 //
 // $Id: electrostaticPotentialCalculator.C,v 1.4 2004/05/10 11:47:17 amoll Exp $
 
-#include <BALL/SOLVATION/electrostaticPotentialCalculator.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/solvation/electrostaticPotentialCalculator.h>
+#include <BALL/core/structure/fragmentDB.h>
 
 namespace BALL
 {

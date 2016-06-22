@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/commandlineParser.h>
+#include <BALL/core/format/commandlineParser.h>
 
 #ifdef BALL_OS_WINDOWS
 	#include <winsock2.h>

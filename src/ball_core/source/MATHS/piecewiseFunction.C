@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MATHS/piecewiseFunction.h>
+#include <BALL/core/maths/piecewiseFunction.h>
 
 using namespace std;
 

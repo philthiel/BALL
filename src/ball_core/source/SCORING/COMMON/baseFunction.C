@@ -1,6 +1,6 @@
 // $Id: baseFunction.C,v 1.2 2005/11/25 14:03:55 anker Exp $
 
-#include <BALL/SCORING/COMMON/baseFunction.h>
+#include <BALL/core/scoring/common/baseFunction.h>
 
 namespace BALL
 {

@@ -3,9 +3,9 @@
 //
 // $Id: coulomb.C,v 1.3 2002/02/27 12:21:13 sturm Exp $
 
-#include <BALL/ENERGY/coulomb.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL/core/energy/coulomb.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/atomContainer.h>
 
 namespace BALL 
 {

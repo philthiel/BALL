@@ -3,18 +3,18 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/IMGDOCK/IMGDock.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/MATHS/plane3.h>
+#include <BALL/core/docking/imgdock/IMGDock.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/maths/plane3.h>
 #include <cmath>
 #include <sstream>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/SDFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/SDFile.h>
 
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/SCORING/FUNCTIONS/gridedMM.h>
-#include <BALL/SCORING/FUNCTIONS/gridedPLP.h>
-#include <BALL/SCORING/FUNCTIONS/PLPScoring.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/scoring/functions/gridedMM.h>
+#include <BALL/core/scoring/functions/gridedPLP.h>
+#include <BALL/core/scoring/functions/PLPScoring.h>
 
 using namespace std;
 

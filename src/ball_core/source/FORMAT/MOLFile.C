@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/forEach.h>
 
 #define MOLFILE_VERSION_STRING_2 "V2000"
 #define MOLFILE_VERSION_STRING_3 "V3000"

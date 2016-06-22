@@ -4,7 +4,7 @@
 // $Id: descriptor.C,v 1.12.20.3 2007/08/07 16:16:16 bertsch Exp $
 //
 
-#include <BALL/QSAR/descriptor.h>
+#include <BALL/core/qsar/descriptor.h>
 
 using namespace std;
 

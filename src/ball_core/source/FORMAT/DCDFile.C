@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/MOLMEC/COMMON/snapShot.h>
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/molmec/common/snapShot.h>
 
 #undef BALL_DEBUG
 
@@ -14,20 +14,20 @@ namespace BALL
 
 	/*
 	* general structure of a DCD-file:
-	* 
+	*
 	* <header>
 	* first snapshot: (<extra_block_A>) (<extra_block_B>) <snapshot_data>
 	* [...]
 	* last snapshot: (<extra_block_A>) (<extra_block_B>) <snapshot_data>
-	* 
+	*
 	* for a more detailed definition of <header> see: readHeader() or writeHeader()
-	* 
+	*
 	* all other blocks (<extra_block_A>, <extra_block_B> and <snapshot_data>)
 	* are build-up in the same scheme:
 	* <block_size in bytes>
 	* <block_content>
 	* <block_size in bytes>
-	*	
+	*
 	* detailed definition of <snapshot_data>:
 	* <block_size in bytes> = # of atoms * 4
 	* <x_coords>
@@ -76,7 +76,7 @@ namespace BALL
 	{
 		if ((open_mode & std::ios::binary) == 0)
 		{
-			open_mode_ = (open_mode | std::ios::binary); 
+			open_mode_ = (open_mode | std::ios::binary);
 			reopen();
 		}
 		init();
@@ -111,7 +111,7 @@ namespace BALL
 
 	bool DCDFile::operator == (const DCDFile& file) const
 	{
-		// ?????: Header vergleichen. Was heißt gleich eigentlich in diesem Fall?
+		// ?????: Header vergleichen. Was heiï¿½t gleich eigentlich in diesem Fall?
 		return (TrajectoryFile::operator == (file));
 	}
 
@@ -139,7 +139,7 @@ namespace BALL
 			// if this file is to be overwritten, write a default header.
 			return writeHeader();
 		}
-		
+
 		return readHeader();
 	}
 
@@ -154,12 +154,12 @@ namespace BALL
 	{
 		/*
 		* general structure of a DCD-file header:
-		* 
+		*
 		* it consists of 3 blocks
 		*
 		* each block is enclosed by its size given as a 4 byte int:
 		* <size> <block_content> <size>
-		* 
+		*
 		* where:
 		* -> size is given in bytes
 		* -> block_content is given in subblocks of 4 bytes each
@@ -183,25 +183,25 @@ namespace BALL
 		* <size> = number of comments * 80 + 4
 		* <block_content> = comments
 		* <size> = number of comments * 80 + 4
-		* 
+		*
 		* 3. block (number of atoms):
 		* <size> = 4
 		* <block_content> = number of atoms
 		* <size> = 4
 		*
 		*/
-		
+
 		current_snapshot_ = 0;
 
 		// read the "header" of the 84 byte block. This must contain the number
 		// 84 to indicate the size of this block
-		*this >> adapt_size_; 
+		*this >> adapt_size_;
 		if (adapt_size_.getData() != 84)
 		{
 			swapBytes(adapt_size_.getData());
 			if (adapt_size_.getData() != 84)
 			{
-				Log.error() << "DCDFile::readHeader(): wrong header; expected 84, got " 
+				Log.error() << "DCDFile::readHeader(): wrong header; expected 84, got "
 										<< adapt_size_.getData() << endl;
 				return false;
 			}
@@ -225,7 +225,7 @@ namespace BALL
 			if (adapt_char.getData() != CORD_[i])
 			{
 				Log.error() << "DCDFile::readHeader(): "
-										<< "error in CORD; expected " << CORD_[i] 
+										<< "error in CORD; expected " << CORD_[i]
 										<< ", got " << adapt_char.getData() << endl;
 				return false;
 			}
@@ -235,7 +235,7 @@ namespace BALL
 		number_of_snapshots_ = readSize_();
 		if (verbosity_ > 0)
 		{
-			Log.info() << "DCDFile::readHeader(): number of snapshots: " 
+			Log.info() << "DCDFile::readHeader(): number of snapshots: "
 								 << number_of_snapshots_ << endl;
 		}
 
@@ -288,7 +288,7 @@ namespace BALL
 		time_step_length_ = adapt_double.getData();
 		if (verbosity_ > 0)
 		{
-			Log.info() << "DCDFile::readHeader(): length of a time step: " 
+			Log.info() << "DCDFile::readHeader(): length of a time step: "
 								 << time_step_length_ << endl;
 		}
 
@@ -312,7 +312,7 @@ namespace BALL
 			time_step_length_ = readFloat_();
 			if (verbosity_ > 0)
 			{
-				Log.info() << "DCDFile::readHeader(): length of a time step: " 
+				Log.info() << "DCDFile::readHeader(): length of a time step: "
 									 << time_step_length_ << endl;
 			}
 
@@ -362,7 +362,7 @@ namespace BALL
 			return false;
 		}
 		Size number_of_comments = (comment_size - 4) / 80;
-		
+
 		if (readSize_() != number_of_comments)
 		{
 			Log.warn() << "DCDFile::readHeader(): "
@@ -396,7 +396,7 @@ namespace BALL
 		if (readSize_() != 4)
 		{
 			Log.error() << "DCDFile::readHeader(): "
-				<< "atomnumber-block header contains wrong size " 
+				<< "atomnumber-block header contains wrong size "
 				<< adapt_size_.getData() << endl;
 			return false;
 		}
@@ -408,7 +408,7 @@ namespace BALL
 		if (readSize_() != 4)
 		{
 			Log.error() << "DCDFile::readHeader(): "
-				<< "atomnumber-block footer contains wrong size " 
+				<< "atomnumber-block footer contains wrong size "
 				<< adapt_size_.getData() << endl;
 			return false;
 		}
@@ -444,12 +444,12 @@ namespace BALL
 	{
 		/*
 		* general structure of a DCD-file header:
-		* 
+		*
 		* it consists of 3 blocks
 		*
 		* each block is enclosed by its size given as a 4 byte int:
 		* <size> <block_content> <size>
-		* 
+		*
 		* where:
 		* -> size is given in bytes
 		* -> block_content is given in subblocks of 4 bytes each
@@ -473,7 +473,7 @@ namespace BALL
 		* <size> = number of comments * 80 + 4
 		* <block_content> = comments
 		* <size> = number of comments * 80 + 4
-		* 
+		*
 		* 3. block (number of atoms):
 		* <size> = 4
 		* <block_content> = number of atoms
@@ -530,12 +530,12 @@ namespace BALL
 		{
 			if (number_of_atoms_ != 0)
 			{
-				Log.error() << "Differnt number of atoms in SnapShot in DCDFile:" 
+				Log.error() << "Differnt number of atoms in SnapShot in DCDFile:"
 										<< snapshot.getNumberOfAtoms() << std::endl;
 			}
 			number_of_atoms_ = snapshot.getNumberOfAtoms();
 		}
-		
+
 		// increase the snapshot counter for a correct header
 		number_of_snapshots_++;
 
@@ -582,7 +582,7 @@ namespace BALL
 		writeSize_(4*number_of_atoms_);
 	}
 
-	
+
 	bool DCDFile::read(SnapShot& snapshot)
 	{
 		#ifdef BALL_DEBUG
@@ -602,7 +602,7 @@ namespace BALL
 		}
 
 		if (!good() || ((current > number_of_snapshots_) && (current == current_snapshot_))
-				        || ((current_snapshot_ == number_of_snapshots_) && (number_of_snapshots_ != 0)))
+						|| ((current_snapshot_ == number_of_snapshots_) && (number_of_snapshots_ != 0)))
 			return false;
 
 		// the number of atoms has to be read from the file header before ever
@@ -636,7 +636,7 @@ namespace BALL
 		if (!readVector_(positions))
 		{
 			Log.error() << "Error while reading the atom positions." << std::endl;
-			return false; 
+			return false;
 		}
 		snapshot.setAtomPositions(positions);
 
@@ -663,7 +663,7 @@ namespace BALL
 			if (!readVector_(velocities))
 			{
 				Log.error() << "Error while reading the atom velocities." << std::endl;
-				return false; 
+				return false;
 			}
 
 			snapshot.setAtomVelocities(velocities);
@@ -676,7 +676,7 @@ namespace BALL
 
 	Size DCDFile::readSize_()
 	{
-		*this >> adapt_size_; 
+		*this >> adapt_size_;
 		if (swap_bytes_) swapBytes(adapt_size_.getData());
 		return adapt_size_.getData();
 	}
@@ -687,7 +687,7 @@ namespace BALL
 		// sanity check
 		if (tmp != expected_size)
 		{
-			Log.error() << "DC2File::read(): " << what << " block footer: expected " 
+			Log.error() << "DC2File::read(): " << what << " block footer: expected "
 									<< expected_size << " but got " << tmp << endl;
 			return false;
 		}
@@ -697,7 +697,7 @@ namespace BALL
 
 	float DCDFile::readFloat_()
 	{
-		*this >> adapt_float_; 
+		*this >> adapt_float_;
 		if (swap_bytes_) swapBytes(adapt_float_.getData());
 		return adapt_float_.getData();
 	}
@@ -766,7 +766,7 @@ namespace BALL
 
 		// write the header
 		seekp(0, ios::beg);
-		if (!writeHeader()) 
+		if (!writeHeader())
 		{
 			Log.error() << "Could not write header in DCDFile" << std::endl;
 			return false;
@@ -800,7 +800,7 @@ namespace BALL
 
 		if (sizeof(Size) != 4)
 		{
-			Log.error() << "DCDFile::DCDFile(): " 
+			Log.error() << "DCDFile::DCDFile(): "
 									<< "Size of int is not equal to 4 on this machine." << endl;
 			return false;
 		}

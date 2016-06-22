@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/RDFParameter.h>
-#include <BALL/STRUCTURE/RDFSection.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL/core/structure/RDFParameter.h>
+#include <BALL/core/structure/RDFSection.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 using namespace std;
 

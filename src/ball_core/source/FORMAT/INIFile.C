@@ -4,7 +4,7 @@
 // $Id: INIFile.C,v 1.38.18.1 2007/03/25 22:00:17 oliver Exp $
 //
 
-#include <BALL/FORMAT/INIFile.h>
+#include <BALL/core/format/INIFile.h>
 #include <fstream>
 
 #include <iostream>

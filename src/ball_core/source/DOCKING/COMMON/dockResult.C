@@ -4,9 +4,9 @@
 // $Id: dockResult.C,v 1.3.16.2 2007/08/07 16:16:17 bertsch Exp $
 //
 
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/DOCKING/COMMON/dockResult.h>
+#include <BALL/core/format/INIFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/docking/common/dockResult.h>
 
 //#define BALL_VIEW_DEBUG
 namespace BALL

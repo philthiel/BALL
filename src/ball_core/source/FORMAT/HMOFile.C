@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/HMOFile.h>
+#include <BALL/core/format/HMOFile.h>
 
 namespace BALL
 {

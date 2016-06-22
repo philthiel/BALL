@@ -1,6 +1,6 @@
-#include <BALL/STRUCTURE/BONDORDERS/partialBondOrderAssignment.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
+#include <BALL/core/kernel/PTE.h>
 
 namespace BALL
 {

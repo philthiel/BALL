@@ -4,7 +4,7 @@
 // $Id: contourSurface.C,v 1.6 2003/08/26 09:17:45 oliver Exp $
 //
 
-#include <BALL/DATATYPE/contourSurface.h>
+#include <BALL/core/datatype/contourSurface.h>
 
 namespace BALL
 {

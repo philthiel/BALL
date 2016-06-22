@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/residueRotamerSet.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/structure/residueRotamerSet.h>
+#include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/kernel/bond.h>
 
 #include <algorithm>
 

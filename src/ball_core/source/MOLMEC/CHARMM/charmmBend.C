@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/CHARMM/charmmBend.h>
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/molmec/charmm/charmmBend.h>
+#include <BALL/core/molmec/charmm/charmm.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 
 using namespace std;
 

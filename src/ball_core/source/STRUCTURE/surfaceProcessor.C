@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/surfaceProcessor.h>
+#include <BALL/core/structure/surfaceProcessor.h>
 
 namespace BALL
 {

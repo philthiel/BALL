@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/CONCEPT/factory.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/concept/factory.h>
 
 using namespace::std;
 namespace BALL

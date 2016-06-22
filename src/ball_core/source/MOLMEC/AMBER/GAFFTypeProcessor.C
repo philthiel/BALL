@@ -1,11 +1,11 @@
-#include <BALL/MOLMEC/AMBER/GAFFTypeProcessor.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/QSAR/aromaticityProcessor.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
+#include <BALL/core/molmec/amber/GAFFTypeProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/selector.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
 
 #include <queue>
 

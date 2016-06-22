@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/binaryFingerprintMethods.h>
+#include <BALL/core/structure/binaryFingerprintMethods.h>
 
-#include <BALL/COMMON/limits.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/sysinfo.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL/core/common/limits.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/sysinfo.h>
+#include <BALL/core/system/timer.h>
 
 #include <boost/foreach.hpp>
 #include <boost/unordered_map.hpp>

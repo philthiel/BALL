@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/sideChainOptimizer.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/molecularInteractions.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
-#include <BALL/SCORING/COMMON/linearBaseFunction.h>
-#include <BALL/SCORING/COMMON/fermiBaseFunction.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/docking/common/sideChainOptimizer.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/molecularInteractions.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
+#include <BALL/core/scoring/common/linearBaseFunction.h>
+#include <BALL/core/scoring/common/fermiBaseFunction.h>
+#include <BALL/core/system/path.h>
 
 
 using namespace std;

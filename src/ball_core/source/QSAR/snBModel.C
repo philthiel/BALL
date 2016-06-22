@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/QSAR/snBModel.h>
+#include <BALL/core/qsar/snBModel.h>
 
 using namespace std;
 

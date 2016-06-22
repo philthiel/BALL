@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/KCFFile.h>
+#include <BALL/core/format/KCFFile.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/forEach.h>
 
 // enable/disable some debug output
 #define DEBUG

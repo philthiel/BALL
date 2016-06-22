@@ -3,9 +3,9 @@
 //
 
 
-#include <BALL/DOCKING/COMMON/flexibleMolecule.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/docking/common/flexibleMolecule.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/bond.h>
 
 
 namespace BALL

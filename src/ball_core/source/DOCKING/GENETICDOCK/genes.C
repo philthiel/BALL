@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/GENETICDOCK/genes.h>
-#include <BALL/MATHS/randomNumberGenerator.h>
+#include <BALL/core/docking/geneticdock/genes.h>
+#include <BALL/core/maths/randomNumberGenerator.h>
 #include <time.h>
 #include <iostream>
 

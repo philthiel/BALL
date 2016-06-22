@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/structure/fragmentDB.h>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/FORMAT/resourceFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/format/resourceFile.h>
 	
 /*			Things still missing (among others)
 				===================================

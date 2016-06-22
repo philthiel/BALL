@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/reconstructFragmentProcessor.h>
+#include <BALL/core/structure/reconstructFragmentProcessor.h>
 
 #include <list>
 #include <vector>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/DATATYPE/stringHashMap.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/structureMapper.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/structureMapper.h>
 	
 using namespace std;
 

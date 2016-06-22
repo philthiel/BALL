@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/rotationalEntropy.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL/core/scoring/components/rotationalEntropy.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 
 using namespace BALL;
 

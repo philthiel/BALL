@@ -3,8 +3,8 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/FUNCTIONS/rescoring3D.h>
-#include <BALL/KERNEL/molecularInteractions.h>
+#include <BALL/core/scoring/functions/rescoring3D.h>
+#include <BALL/core/kernel/molecularInteractions.h>
 
 
 using namespace BALL;

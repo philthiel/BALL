@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/quadraticAngleBend.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/quadraticAngleBend.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 using namespace std;
 

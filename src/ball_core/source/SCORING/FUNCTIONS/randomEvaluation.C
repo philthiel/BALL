@@ -1,4 +1,4 @@
-#include <BALL/SCORING/FUNCTIONS/randomEvaluation.h>
+#include <BALL/core/scoring/functions/randomEvaluation.h>
 
 //using namespace::std;
 using namespace BALL;

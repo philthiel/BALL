@@ -4,11 +4,11 @@
 // $Id: MMFF94NonBonded.C,v 1.1.8.6 2007/07/13 22:12:25 amoll Exp $
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94NonBonded.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/molmec/mmff94/MMFF94NonBonded.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
 

@@ -4,15 +4,15 @@
 // $Id: MMFF94Torsion.C,v 1.1.8.2 2007/05/13 00:06:10 amoll Exp $
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94Torsion.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL/core/molmec/mmff94/MMFF94Torsion.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/format/parameters.h>
 
 #include <algorithm>
 

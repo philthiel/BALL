@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/SASEdge.h>
-#include <BALL/STRUCTURE/SASFace.h>
-#include <BALL/STRUCTURE/SASVertex.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/structure/SASEdge.h>
+#include <BALL/core/structure/SASFace.h>
+#include <BALL/core/structure/SASVertex.h>
+#include <BALL/core/maths/vector3.h>
 
 
 namespace BALL

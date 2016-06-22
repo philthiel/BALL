@@ -4,15 +4,15 @@
 // $Id: partialChargeBase.C,v 1.2.28.1 2007-03-16 00:06:47 bertsch Exp $
 //
 
-#include <BALL/QSAR/partialChargeBase.h>
-#include <BALL/QSAR/partialChargeProcessor.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/bondIterator.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/CONCEPT/timeStamp.h>
+#include <BALL/core/qsar/partialChargeBase.h>
+#include <BALL/core/qsar/partialChargeProcessor.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/bondIterator.h>
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/concept/timeStamp.h>
 
 #include <utility>
 

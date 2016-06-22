@@ -3,7 +3,7 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/aromaticRingStacking.h>
+#include <BALL/core/scoring/components/aromaticRingStacking.h>
 
 using namespace std;
 

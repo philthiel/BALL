@@ -3,9 +3,9 @@
 //
 // 
 
-#include <BALL/QSAR/QSARData.h>
+#include <BALL/core/qsar/QSARData.h>
 
-#include <BALL/STRUCTURE/molecularSimilarity.h>
+#include <BALL/core/structure/molecularSimilarity.h>
 
 #include <set>
 #include <algorithm>

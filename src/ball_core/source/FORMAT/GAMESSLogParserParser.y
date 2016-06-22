@@ -1,6 +1,6 @@
 %{
 
-#include <BALL/FORMAT/GAMESSLogFile.h>
+#include <BALL/core/format/GAMESSLogFile.h>
 
 #include <iostream>
 #include <malloc.h>

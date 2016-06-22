@@ -3,11 +3,11 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMMON/diffGridBasedScoring.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
+#include <BALL/core/scoring/common/diffGridBasedScoring.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/system/timer.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/docking/common/structurePreparer.h>
 
 
 using namespace BALL;

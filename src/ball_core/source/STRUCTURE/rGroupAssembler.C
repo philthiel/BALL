@@ -1,7 +1,7 @@
 
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/rGroupAssembler.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/rGroupAssembler.h>
 
 using namespace std;
 

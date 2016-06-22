@@ -4,9 +4,9 @@
 // $Id: simpleDescriptors.C,v 1.9.20.1 2007/03/16 00:06:49 bertsch Exp $
 //
 
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/forEach.h>
 
 using namespace std;
 

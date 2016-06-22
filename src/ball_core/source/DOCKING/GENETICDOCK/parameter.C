@@ -3,7 +3,7 @@
 // $Authors: Jan Fuhrmann, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/DOCKING/GENETICDOCK/parameter.h>
+#include <BALL/core/docking/geneticdock/parameter.h>
 
 namespace BALL
 {

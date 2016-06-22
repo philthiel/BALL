@@ -6,13 +6,13 @@
 // ----------------------------------------------------
 
 
-#include <BALL/SCORING/COMPONENTS/PLP.h>
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/standardPredicates.h>
+#include <BALL/core/scoring/components/PLP.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/standardPredicates.h>
 #include <map>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/format/HINFile.h>
 
 using namespace std;
 using namespace BALL;

@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/lineBasedFile.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL/core/format/lineBasedFile.h>
+#include <BALL/core/common/exception.h>
 #include <cstdio>
 
 using namespace std;
@@ -266,7 +266,7 @@ namespace BALL
 	}
 
 # ifdef BALL_NO_INLINE_FUNCTIONS
-#   include <BALL/FORMAT/lineBasedFile.iC>
+#   include <BALL/core/format/lineBasedFile.iC>
 # endif
 
 } // namespace BALL

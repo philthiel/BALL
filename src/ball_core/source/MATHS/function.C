@@ -3,4 +3,4 @@
 //
 // $Id: function.C,v 1.2 2002/02/27 12:21:27 sturm Exp $
 
-#include <BALL/MATHS/function.h>
+#include <BALL/core/maths/function.h>

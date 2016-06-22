@@ -4,8 +4,8 @@
 // $Id: atomTypes.C,v 1.13 2003/08/26 09:17:53 oliver Exp $
 //
 
-#include <BALL/MOLMEC/PARAMETER/atomTypes.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 using namespace std;
 

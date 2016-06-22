@@ -1,18 +1,18 @@
-#include <BALL/MOLMEC/AMBER/GAFFCESParser.h>
+#include <BALL/core/molmec/amber/GAFFCESParser.h>
 
 #ifndef BALL_KERNEL_ATOM_H
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/kernel/atom.h>
 #endif
 
 #ifndef BALL_KERNEL_BOND_H
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/kernel/bond.h>
 #endif
 
 #ifndef BALL_KERNEL_PTE_H
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/kernel/PTE.h>
 #endif
 
-#include <BALL/MOLMEC/AMBER/GAFFTypeProcessor.h>
+#include <BALL/core/molmec/amber/GAFFTypeProcessor.h>
 
 //defined in the lexer (GAFFCESParserLexer.l)
 extern void GAFFCESParser_destroy();

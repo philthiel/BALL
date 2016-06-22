@@ -1,4 +1,4 @@
-#include <BALL/QSAR/latentVariableModel.h>
+#include <BALL/core/qsar/latentVariableModel.h>
 #include <iostream>
 
 namespace BALL

@@ -1,6 +1,6 @@
-#include <BALL/STRUCTURE/BONDORDERS/ILPBondOrderStrategy.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/structure/bondorders/ILPBondOrderStrategy.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
+#include <BALL/core/kernel/forEach.h>
 
 #include <lpsolve/lp_lib.h>
 

@@ -4,7 +4,7 @@
 // $Id: piecewisePolynomial.C,v 1.9 2003/08/26 09:17:51 oliver Exp $
 //
 
-#include <BALL/MATHS/piecewisePolynomial.h>
+#include <BALL/core/maths/piecewisePolynomial.h>
 
 using namespace std;
 

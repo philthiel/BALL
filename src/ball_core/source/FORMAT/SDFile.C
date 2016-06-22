@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
 
 namespace BALL 
 {

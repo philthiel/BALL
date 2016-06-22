@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/RSEdge.h>
-#include <BALL/STRUCTURE/RSFace.h>
-#include <BALL/STRUCTURE/RSVertex.h>
+#include <BALL/core/structure/RSEdge.h>
+#include <BALL/core/structure/RSFace.h>
+#include <BALL/core/structure/RSVertex.h>
 
 namespace BALL
 {

@@ -1,6 +1,6 @@
-#include <BALL/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.h>
-#include <BALL/STRUCTURE/assignBondOrderProcessor.h>
-#include <BALL/KERNEL/forEach.h>
+#include <BALL/core/structure/bondorders/FPTBondOrderStrategy.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
+#include <BALL/core/kernel/forEach.h>
 
 #include <boost/graph/connected_components.hpp>
 #include <boost/graph/subgraph.hpp>

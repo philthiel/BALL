@@ -3,19 +3,19 @@
 //
 // $Id: slickEnergy.C,v 1.4 2006/05/21 18:15:29 anker Exp $
 
-#include <BALL/SCORING/FUNCTIONS/slickEnergy.h>
-#include <BALL/SCORING/COMPONENTS/CHPISlick.h>
-#include <BALL/SCORING/COMPONENTS/hydrogenBondSlick.h>
-#include <BALL/SCORING/COMPONENTS/vanDerWaalsSlick.h>
-#include <BALL/SCORING/COMPONENTS/nonpolarSolvation.h>
-#include <BALL/SCORING/COMPONENTS/polarSolvation.h>
+#include <BALL/core/scoring/functions/slickEnergy.h>
+#include <BALL/core/scoring/components/CHPISlick.h>
+#include <BALL/core/scoring/components/hydrogenBondSlick.h>
+#include <BALL/core/scoring/components/vanDerWaalsSlick.h>
+#include <BALL/core/scoring/components/nonpolarSolvation.h>
+#include <BALL/core/scoring/components/polarSolvation.h>
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/bondIterator.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/MOLMEC/PARAMETER/templates.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/bondIterator.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/molmec/parameter/templates.h>
 
 namespace BALL
 {

@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
 
 using namespace::std;
 namespace BALL

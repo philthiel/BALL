@@ -3,8 +3,8 @@
 //
 //
 
-#include <BALL/QSAR/kplsModel.h>
-#include <BALL/QSAR/mlrModel.h>
+#include <BALL/core/qsar/kplsModel.h>
+#include <BALL/core/qsar/mlrModel.h>
 
 #include <Eigen/Dense>
 

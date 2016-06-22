@@ -10,7 +10,7 @@
 #include <cstring>
 #include <cstdio>
 
-#include <BALL/COMMON/logStream.h>
+#include <BALL/core/common/logStream.h>
 
 #define BUFFER_LENGTH 32768
 
@@ -558,7 +558,7 @@ namespace BALL
 	BALL_EXPORT		LogStream	Log(new LogStreamBuf, true, true);
 
 #	ifdef	BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/COMMON/logStream.iC>
+#		include <BALL/core/common/logStream.iC>
 #	endif
 
 } // namespace BALL

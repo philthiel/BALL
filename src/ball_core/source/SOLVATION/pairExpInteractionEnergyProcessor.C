@@ -3,15 +3,15 @@
 //
 // $Id: pairExpInteractionEnergyProcessor.C,v 1.17 2002/02/27 12:24:05 sturm Exp $
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/surface.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
-#include <BALL/MOLMEC/PARAMETER/lennardJones.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/structure/numericalSAS.h>
 
-#include <BALL/SOLVATION/pairExpInteractionEnergyProcessor.h>
-#include <BALL/SOLVATION/solventParameter.h>
-#include <BALL/SOLVATION/claverieParameter.h>
+#include <BALL/core/solvation/pairExpInteractionEnergyProcessor.h>
+#include <BALL/core/solvation/solventParameter.h>
+#include <BALL/core/solvation/claverieParameter.h>
 
 using namespace std;
 

@@ -2,21 +2,21 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/solventExcludedSurface.h>
-#include <BALL/STRUCTURE/SESEdge.h>
-#include <BALL/STRUCTURE/SESFace.h>
-#include <BALL/STRUCTURE/SESVertex.h>
-#include <BALL/STRUCTURE/reducedSurface.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/MATHS/circle3.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/MATHS/sphere3.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/vector4.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL/core/structure/solventExcludedSurface.h>
+#include <BALL/core/structure/SESEdge.h>
+#include <BALL/core/structure/SESFace.h>
+#include <BALL/core/structure/SESVertex.h>
+#include <BALL/core/structure/reducedSurface.h>
+#include <BALL/core/maths/analyticalGeometry.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/quaternion.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/vector4.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/hashMap.h>
 #include <vector>
 #include <list>
 

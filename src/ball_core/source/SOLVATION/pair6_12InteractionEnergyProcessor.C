@@ -4,15 +4,15 @@
 // $Id: pair6_12InteractionEnergyProcessor.C,v 1.23.12.1 2007/03/25 22:00:32 oliver Exp $
 //
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/MATHS/surface.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
-#include <BALL/MOLMEC/PARAMETER/lennardJones.h>
-#include <BALL/STRUCTURE/numericalSAS.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/structure/numericalSAS.h>
 
-#include <BALL/SOLVATION/pair6_12InteractionEnergyProcessor.h>
-#include <BALL/SOLVATION/solventParameter.h>
+#include <BALL/core/solvation/pair6_12InteractionEnergyProcessor.h>
+#include <BALL/core/solvation/solventParameter.h>
 
 using namespace std;
 

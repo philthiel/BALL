@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/solventAccessibleSurface.h>
-#include <BALL/STRUCTURE/SASEdge.h>
-#include <BALL/STRUCTURE/SASFace.h>
-#include <BALL/STRUCTURE/SASVertex.h>
-#include <BALL/STRUCTURE/reducedSurface.h>
-#include <BALL/MATHS/sphere3.h>
+#include <BALL/core/structure/solventAccessibleSurface.h>
+#include <BALL/core/structure/SASEdge.h>
+#include <BALL/core/structure/SASFace.h>
+#include <BALL/core/structure/SASVertex.h>
+#include <BALL/core/structure/reducedSurface.h>
+#include <BALL/core/maths/sphere3.h>
 
 #include <vector>
 

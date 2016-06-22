@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/createSpectrumProcessor.h>
-#include <BALL/NMR/shiftModule.h>
-#include <BALL/DATATYPE/regularData1D.h>
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/nmr/createSpectrumProcessor.h>
+#include <BALL/core/nmr/shiftModule.h>
+#include <BALL/core/datatype/regularData1D.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atom.h>
 
 using namespace std;
 

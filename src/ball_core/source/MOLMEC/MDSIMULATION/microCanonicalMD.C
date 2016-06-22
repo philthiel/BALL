@@ -4,11 +4,11 @@
 // $Id: microCanonicalMD.C,v 1.14 2005/03/01 10:07:54 oliver Exp $
 //
 
-#include <BALL/MOLMEC/MDSIMULATION/microCanonicalMD.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/molmec/mdsimulation/microCanonicalMD.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/molmec/common/atomVector.h>
+#include <BALL/core/kernel/PTE.h>
 
 namespace BALL
 {

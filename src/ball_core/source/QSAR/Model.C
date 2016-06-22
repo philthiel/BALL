@@ -3,9 +3,9 @@
 //
 //
 
-#include <BALL/QSAR/Model.h>
-#include <BALL/QSAR/kernelModel.h>
-#include <BALL/QSAR/registry.h>
+#include <BALL/core/qsar/Model.h>
+#include <BALL/core/qsar/kernelModel.h>
+#include <BALL/core/qsar/registry.h>
 
 using namespace std;
 

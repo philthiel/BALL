@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DATATYPE/bitVector.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/datatype/bitVector.h>
+#include <BALL/core/maths/common.h>
 
 #include <algorithm>
 
@@ -11,7 +11,7 @@ namespace BALL
 {
 
 	#	ifdef BALL_NO_INLINE_FUNCTIONS
-	#		include <BALL/DATATYPE/bitVector.iC>
+	#		include <BALL/core/datatype/bitVector.iC>
 	#	endif
 
 	const Size BitVector::BlockSize = BALL_BLOCK_BITS;

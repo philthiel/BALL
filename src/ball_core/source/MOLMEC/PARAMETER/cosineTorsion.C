@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/PARAMETER/cosineTorsion.h>
-#include <BALL/MOLMEC/PARAMETER/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/cosineTorsion.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 using namespace std;
 

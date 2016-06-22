@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/SESEdge.h>
-#include <BALL/STRUCTURE/SESFace.h>
-#include <BALL/STRUCTURE/SESVertex.h>
-#include <BALL/STRUCTURE/RSEdge.h>
-#include <BALL/STRUCTURE/RSFace.h>
-#include <BALL/STRUCTURE/RSVertex.h>
+#include <BALL/core/structure/SESEdge.h>
+#include <BALL/core/structure/SESFace.h>
+#include <BALL/core/structure/SESVertex.h>
+#include <BALL/core/structure/RSEdge.h>
+#include <BALL/core/structure/RSFace.h>
+#include <BALL/core/structure/RSVertex.h>
 
 
 namespace BALL

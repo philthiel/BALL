@@ -5,7 +5,7 @@
 //
 
 
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
 
 using namespace std;
 

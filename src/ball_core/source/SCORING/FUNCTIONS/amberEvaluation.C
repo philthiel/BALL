@@ -1,4 +1,4 @@
-#include <BALL/SCORING/FUNCTIONS/amberEvaluation.h>
+#include <BALL/core/scoring/functions/amberEvaluation.h>
 
 using namespace BALL;
 

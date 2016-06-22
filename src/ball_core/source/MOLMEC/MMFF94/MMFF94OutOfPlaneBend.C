@@ -4,12 +4,12 @@
 // $Id: MMFF94OutOfPlaneBend.C,v 1.1.8.3 2007/05/13 00:06:08 amoll Exp $
 //
 
-#include <BALL/MOLMEC/MMFF94/MMFF94OutOfPlaneBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/SYSTEM/path.h>
+#include <BALL/core/molmec/mmff94/MMFF94OutOfPlaneBend.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/system/path.h>
 
 #include <cmath>
 

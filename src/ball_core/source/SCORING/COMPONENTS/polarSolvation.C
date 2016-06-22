@@ -1,17 +1,17 @@
 // $Id: polarSolvation.C,v 1.3 2006/05/27 09:05:23 anker Exp $
 
-#include <BALL/SCORING/COMPONENTS/polarSolvation.h>
+#include <BALL/core/scoring/components/polarSolvation.h>
 
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atomIterator.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/ENERGY/distanceCoulomb.h>
-#include <BALL/SYSTEM/timer.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/energy/distanceCoulomb.h>
+#include <BALL/core/system/timer.h>
 
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/format/PDBFile.h>
 
 using namespace std;
 

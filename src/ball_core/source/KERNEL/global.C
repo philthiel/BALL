@@ -3,8 +3,8 @@
 //
 // $Id: global.C,v 1.5 2002/02/27 12:21:24 sturm Exp $
 
-#include <BALL/KERNEL/global.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/kernel/global.h>
+#include <BALL/core/maths/vector3.h>
 namespace BALL 
 {
 

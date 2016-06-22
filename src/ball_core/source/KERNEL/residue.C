@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/COMMON/exception.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/common/exception.h>
 
 using namespace::std;
 

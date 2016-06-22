@@ -3,12 +3,12 @@
 //
 
 
-#include <BALL/DOCKING/COMMON/conformationSet.h>
+#include <BALL/core/docking/common/conformationSet.h>
 
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/molmec/common/forceField.h>
 
 #include <stdlib.h>
 #include <iostream>

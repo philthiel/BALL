@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 // 
-#include <BALL/QSAR/classificationValidation.h>
-#include <BALL/QSAR/statistics.h>
-#include <BALL/QSAR/classificationModel.h>
-#include <BALL/QSAR/registry.h>
+#include <BALL/core/qsar/classificationValidation.h>
+#include <BALL/core/qsar/statistics.h>
+#include <BALL/core/qsar/classificationModel.h>
+#include <BALL/core/qsar/registry.h>
 
 #include <boost/random/mersenne_twister.hpp>
 

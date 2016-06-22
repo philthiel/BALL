@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/NMR/peakList.h>
+#include <BALL/core/nmr/peakList.h>
 
 namespace BALL
 {

@@ -3,12 +3,12 @@
 //
 // $Id: assignTypes.C,v 1.15 2004/12/17 15:29:37 amoll Exp $
 
-#include <BALL/MOLMEC/COMMON/assignTypes.h>
+#include <BALL/core/molmec/common/assignTypes.h>
 
 #include <iostream>
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/fragment.h>
 
 using namespace std;
 

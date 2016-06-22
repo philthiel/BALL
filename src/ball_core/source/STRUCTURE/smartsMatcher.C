@@ -2,8 +2,8 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/smartsMatcher.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
+#include <BALL/core/structure/smartsMatcher.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
 
 #include <stack>
 

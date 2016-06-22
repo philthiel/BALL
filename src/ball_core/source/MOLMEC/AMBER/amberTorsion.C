@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/MOLMEC/AMBER/amberTorsion.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MOLMEC/COMMON/forceField.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/molmec/amber/amberTorsion.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 
 #include <algorithm>
 

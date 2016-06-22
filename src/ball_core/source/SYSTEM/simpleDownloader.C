@@ -1,4 +1,4 @@
-#include <BALL/SYSTEM/simpleDownloader.h>
+#include <BALL/core/system/simpleDownloader.h>
 
 #include <QtCore/QCoreApplication>
 #include <QtNetwork/QSslError>

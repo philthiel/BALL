@@ -3,7 +3,7 @@
 //
 //
 
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/kernel/PTE.h>
 #include <cctype>			// toupper, tolower
 #include <cstdlib>			// bsearch
 
@@ -571,7 +571,7 @@ namespace BALL
 	PTE_ PTE; // not conform to naming convention but fakes operator[] and operator() to be static functions.
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/KERNEL/PTE.iC>
+#		include <BALL/core/kernel/PTE.iC>
 #	endif
 
 } // namespace BALL

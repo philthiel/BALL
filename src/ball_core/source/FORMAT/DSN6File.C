@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/FORMAT/DSN6File.h>
+#include <BALL/core/format/DSN6File.h>
 
 namespace BALL
 {

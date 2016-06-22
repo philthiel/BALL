@@ -3,9 +3,9 @@
 // $Authors: Slick-development Team, Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/lipophilic.h>
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/scoring/components/lipophilic.h>
+#include <BALL/core/system/timer.h>
+#include <BALL/core/format/HINFile.h>
 
 using namespace std;
 using namespace BALL;

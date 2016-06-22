@@ -1,6 +1,6 @@
 %{
 #include <math.h>
-#include <BALL/MATHS/parsedFunction.h>
+#include <BALL/core/maths/parsedFunction.h>
 
 using namespace BALL;
 using namespace std;

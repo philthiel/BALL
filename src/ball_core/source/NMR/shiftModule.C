@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include<BALL/NMR/shiftModule.h>
+#include<BALL/core/nmr/shiftModule.h>
 
 using namespace std;
 

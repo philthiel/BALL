@@ -2,7 +2,7 @@
 // vi: set ts=2:
 //
 
-#include <BALL/DOCKING/COMMON/result.h>
+#include <BALL/core/docking/common/result.h>
 
 namespace BALL
 {

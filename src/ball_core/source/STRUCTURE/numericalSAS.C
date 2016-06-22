@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/STRUCTURE/numericalSAS.h>
-#include <BALL/STRUCTURE/triangulatedSurface.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/DATATYPE/hashGrid.h>
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/MATHS/surface.h>
+#include <BALL/core/structure/numericalSAS.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/maths/surface.h>
 
 namespace BALL
 {

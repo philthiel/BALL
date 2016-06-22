@@ -7,13 +7,13 @@
 // Specifics, in particular those records which are truly interpreted,
 // are handled in PDBFileDetails.
 
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/format/PDBFile.h>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/COMMON/logStream.h>
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/common/logStream.h>
+#include <BALL/core/datatype/regularExpression.h>
 
 #include <cctype>
 #include <cstdarg>
@@ -1674,7 +1674,7 @@ namespace BALL
 	}
 
 #	ifdef BALL_NO_INLINE_FUNCTIONS
-#		include <BALL/FORMAT/PDBFile.iC>
+#		include <BALL/core/format/PDBFile.iC>
 #	endif
 
 } // namespace BALL

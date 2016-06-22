@@ -3,9 +3,9 @@
 // $Authors: Marcel Schumann $
 // ----------------------------------------------------
 
-#include <BALL/SCORING/COMPONENTS/electrostatic.h>
-#include <BALL/SCORING/COMPONENTS/vanDerWaals.h>
-#include <BALL/SCORING/COMMON/scoringFunction.h>
+#include <BALL/core/scoring/components/electrostatic.h>
+#include <BALL/core/scoring/components/vanDerWaals.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 
 
 using namespace BALL;

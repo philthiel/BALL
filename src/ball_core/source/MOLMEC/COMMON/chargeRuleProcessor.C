@@ -3,7 +3,7 @@
 //
 // $Id: chargeRuleProcessor.C,v 1.3 2002/02/27 12:21:34 sturm Exp $
 
-#include <BALL/MOLMEC/COMMON/chargeRuleProcessor.h>
+#include <BALL/core/molmec/common/chargeRuleProcessor.h>
 
 namespace BALL
 {

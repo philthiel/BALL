@@ -1,6 +1,6 @@
-#include <BALL/DATATYPE/GRAPH/treeWidth.h>
+#include <BALL/core/datatype/graph/treeWidth.h>
 
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/kernel/atom.h>
 
 namespace BALL
 {
