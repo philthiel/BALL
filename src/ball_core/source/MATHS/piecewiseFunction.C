@@ -2,9 +2,13 @@
 // vi: set ts=2:
 //
 
+
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/maths/piecewiseFunction.h>
 
 using namespace std;
+
 
 namespace BALL
 {

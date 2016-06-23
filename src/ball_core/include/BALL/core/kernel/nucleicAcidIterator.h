@@ -7,10 +7,6 @@
 #ifndef BALL_KERNEL_NUCLEICACIDITERATOR_H
 #define BALL_KERNEL_NUCLEICACIDITERATOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_NUCLEOTIDE_H
 #	include <BALL/core/kernel/nucleicAcid.h>
 #endif

@@ -7,10 +7,6 @@
 #ifndef BALL_SYSTEM_FILESYSTEM_H
 #define BALL_SYSTEM_FILESYSTEM_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifdef BALL_HAS_SYS_PARAM_H
 #	include <sys/param.h>
 #endif

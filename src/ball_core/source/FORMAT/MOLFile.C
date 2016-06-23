@@ -2,6 +2,7 @@
 // vi: set ts=2:
 //
 
+#include <BALL/version.h>
 #include <BALL/core/format/MOLFile.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>

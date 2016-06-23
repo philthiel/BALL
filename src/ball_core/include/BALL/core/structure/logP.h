@@ -5,11 +5,8 @@
 #ifndef BALL_LOGP_H
 #define BALL_LOGP_H
 
-#ifndef BALL_COMMON_H
-#       include <BALL/core/common.h>
-#endif
-
 #include <BALL/core/structure/molecularSimilarity.h>
+
 
 namespace BALL
 {

@@ -1,12 +1,9 @@
 #ifndef BALL_MATHS_CUBICSPLINE1D_H
 #define BALL_MATHS_CUBICSPLINE1D_H
 
-#include <set>
 #include <map>
-
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#include <set>
+#include <vector>
 
 #ifndef BALL_DATATYPE_OPTIONS_H
 # include <BALL/core/datatype/options.h>

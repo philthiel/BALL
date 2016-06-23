@@ -7,6 +7,7 @@
 #define BALL_DOCKING_GENETICDOCK_GENETICALGORITHM_H
 
 #include <vector>
+
 #include <BALL/core/maths/randomNumberGenerator.h>
 #include <utility>
 #include "geneticIndividual.h"
@@ -94,7 +95,7 @@ namespace BALL
 
       double calculate(GeneticIndividual*);
 
-      vector<GenericParameter*> parameters_;
+	  std::vector<GenericParameter*> parameters_;
 
       /** select individuals for mating
        */
@@ -113,7 +114,7 @@ namespace BALL
       void cleanUp();
 
       /** sorts the given pool according to the fitness values of its members and keeps only the best survivors_>ones (#best ones = survivors_) */
-      void cleanPool(vector<GeneticIndividual>& pool);
+	  void cleanPool(std::vector<GeneticIndividual>& pool);
 
       /** check for migration between populations
        */

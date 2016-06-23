@@ -4,6 +4,8 @@
 
 #include <BALL/core/structure/RDFIntegrator.h>
 
+#include <BALL/core/common/logStream.h>
+
 using namespace std;
 
 namespace BALL

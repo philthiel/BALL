@@ -17,8 +17,11 @@
 #include <BALL/core/maths/sphere3.h>
 #include <BALL/core/maths/vector3.h>
 #include <BALL/core/maths/vector4.h>
+
 #include <list>
 #include <vector>
+
+using namespace std;
 
 
 namespace BALL

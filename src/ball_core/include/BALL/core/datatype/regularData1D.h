@@ -5,10 +5,6 @@
 #ifndef BALL_DATATYPE_REGULARDATA1D_H
 #define BALL_DATATYPE_REGULARDATA1D_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_SYSTEM_FILE_H
 # include <BALL/core/system/file.h>
 #endif

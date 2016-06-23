@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_GRAPHVERTEX_H
 #define BALL_STRUCTURE_GRAPHVERTEX_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_HASHSET_H
 #	include <BALL/core/datatype/hashSet.h>
 #endif

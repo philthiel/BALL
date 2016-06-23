@@ -6,6 +6,7 @@
 
 #include <BALL/core/system/fileSystem.h>
 
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
 #ifdef BALL_HAS_PWD_H
 #include <pwd.h> // 'getpwnam'

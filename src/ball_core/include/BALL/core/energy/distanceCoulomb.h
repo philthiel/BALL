@@ -7,9 +7,8 @@
 #ifndef BALL_ENERGY_DISTANCE_COULOMB_H
 #define BALL_ENERGY_DISTANCE_COULOMB_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/macros.h>
+
 
 namespace BALL 
 {

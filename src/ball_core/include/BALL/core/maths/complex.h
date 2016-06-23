@@ -6,10 +6,6 @@
 #ifndef BALL_MATHS_COMPLEX_H
 #define BALL_MATHS_COMPLEX_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #include <complex>
 
 #ifdef BALL_HAS_FFTW_H

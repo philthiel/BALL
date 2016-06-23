@@ -5,10 +5,6 @@
 #ifndef BALL_MATHS_FFTWCOMMON_H
 #define BALL_MATHS_FFTWCOMMON_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #include <fftw3.h>
 
 namespace BALL

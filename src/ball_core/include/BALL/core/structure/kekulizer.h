@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_KEKULIZER_H
 #define BALL_STRUCTURE_KEKULIZER_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_HASHMAP_H
 # include <BALL/core/datatype/hashMap.h>
 #endif 

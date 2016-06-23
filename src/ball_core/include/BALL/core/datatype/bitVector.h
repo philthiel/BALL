@@ -5,9 +5,6 @@
 #ifndef BALL_DATATYPE_BITVECTOR_H
 #define BALL_DATATYPE_BITVECTOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
 
 #ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
 #	include <BALL/core/concept/persistenceManager.h>

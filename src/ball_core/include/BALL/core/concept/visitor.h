@@ -5,9 +5,8 @@
 #ifndef BALL_CONCEPT_VISITOR_H
 #define BALL_CONCEPT_VISITOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/debug.h>
+
 
 namespace BALL 
 {

@@ -7,10 +7,6 @@
 
 #include <list>
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_TRIPLE_H
 #	include <BALL/core/datatype/triple.h>
 #endif

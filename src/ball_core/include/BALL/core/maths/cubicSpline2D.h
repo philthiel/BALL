@@ -1,8 +1,9 @@
 #ifndef BALL_MATHS_CUBICSPLINE2D_H
 #define BALL_MATHS_CUBICSPLINE2D_H
 
-#include <set>
 #include <map>
+#include <set>
+#include <vector>
 
 #ifndef BALL_MATHS_CUBICSPLINE1D_H
 #	include <BALL/core/maths/cubicSpline1D.h>
@@ -191,7 +192,7 @@ namespace BALL
 			float getYDefaultValue() const {return y_default_value_;}
 
 			// Set the default values in x direction.
-			void setXDefaultValues(vector<float> x_default_values) {x_default_values_ = x_default_values;}
+			void setXDefaultValues(std::vector<float> x_default_values) {x_default_values_ = x_default_values;}
 
 			// Set the default values in y direction.
 			void setYDefaultValue(float y_default_value) {y_default_value_ = y_default_value;} 
@@ -204,16 +205,16 @@ namespace BALL
 			float getYLowerBound() {return y_lower_bound_;}
 			float getYUpperBound() {return y_upper_bound_;}
 			// Set the lower/upper bounds in x direction
-			void  setXLowerBounds(vector<float> lb) {x_lower_bounds_ = lb;}
-			void  setXUpperBounds(vector<float> ub) {x_upper_bounds_ = ub;}
+			void  setXLowerBounds(std::vector<float> lb) {x_lower_bounds_ = lb;}
+			void  setXUpperBounds(std::vector<float> ub) {x_upper_bounds_ = ub;}
 
 			/** Returns all lower bounds in x direction.
 			 */
-			const vector<float>&  getXLowerBounds() const {return x_lower_bounds_ ;}  
+			const std::vector<float>&  getXLowerBounds() const {return x_lower_bounds_ ;}
 
 			/** Returns all upper bounds in x direction.
 			 */
-			const vector<float>&  getXUpperBounds() const {return x_upper_bounds_;}  
+			const std::vector<float>&  getXUpperBounds() const {return x_upper_bounds_;}
 
 			/** Get the lower bounds in x direction  
 			 *	@throw Exception::OutOfRange if x  >= x_lower_bounds_.size()
@@ -228,7 +229,7 @@ namespace BALL
 			/** Returns true if the x-th spline in x direction is natural.
 			 *  If x is out of bound,  <tt> std::numeric_limits<float>::min() </tt> is returned.*/ 
 			bool isXNatural(Index x);
-			vector<bool> isXNatural() const {return x_is_natural_;}
+			std::vector<bool> isXNatural() const {return x_is_natural_;}
 
 			/** Sets the flag {\tt is_natural_} for the x-th spline to true. 
 			 *  By default the method recomputes the spline. 
@@ -251,8 +252,8 @@ namespace BALL
 			bool isYNatural() {return y_is_natural_;}
 			
 			// Set the lower/upper derivatives in x direction
-			void  setXLowerDerivatives(vector<float> ld, bool recompute = true); 
-			void  setXUpperDerivatives(vector<float> ud, bool recompute = true); 
+			void  setXLowerDerivatives(std::vector<float> ld, bool recompute = true);
+			void  setXUpperDerivatives(std::vector<float> ud, bool recompute = true);
 
 			/** Get the lower derivatives in x direction  
 			 *  @throw Exception::OutOfRange if x >= x_lower_derivatives_.size()
@@ -264,8 +265,8 @@ namespace BALL
 			 */
 			float getXUpperDerivatives(Index x); 
 
-			vector<float>& getXLowerDerivatives() {return x_lower_derivatives_;}
-			vector<float>& getXUpperDerivatives() {return x_upper_derivatives_;}
+			std::vector<float>& getXLowerDerivatives() {return x_lower_derivatives_;}
+			std::vector<float>& getXUpperDerivatives() {return x_upper_derivatives_;}
 
 			// Set the lower/upper derivative in y direction
 			void setYLowerDerivative (float ld, bool recompute = true); 
@@ -340,10 +341,10 @@ namespace BALL
 			float default_value_;
 			
 			// Lower bounds of the spline in x direction.
-			vector<float>	 				x_lower_bounds_;
+			std::vector<float>	 				x_lower_bounds_;
 
 			// Upper bounds of the spline in x direction.	
-			vector<float> 				x_upper_bounds_;
+			std::vector<float> 				x_upper_bounds_;
 			
 			// Lower bound of the splines in y direction.
 			float 								y_lower_bound_;
@@ -353,17 +354,17 @@ namespace BALL
 			
 			
 			// Flag to denote, if the splines in x direction is natural.
-			vector<bool> 					x_is_natural_;
+			std::vector<bool> 					x_is_natural_;
 			
 			// Flag to denote, if the splines in y direction are natural.
 			bool 									y_is_natural_;
 
 			
 			// Values of the first derivatives of the lower x sample position
-			vector<float> 				x_lower_derivatives_;
+			std::vector<float> 				x_lower_derivatives_;
 			
 			// Values of the first derivatives of the upper x sample position
-			vector<float> 				x_upper_derivatives_;
+			std::vector<float> 				x_upper_derivatives_;
 			
 			// Value of the first derivatives of the lower y sample position
 			float 								y_lower_derivative_;

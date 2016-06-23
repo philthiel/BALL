@@ -7,9 +7,7 @@
 #ifndef BALL_DATATYPE_OPTIONS_H
 #define BALL_DATATYPE_OPTIONS_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <list>
 
 #ifndef BALL_DATATYPE_STRING_H
 #	include <BALL/core/datatype/string.h>
@@ -28,6 +26,7 @@
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
 #	include <BALL/core/concept/persistentObject.h>
 #endif
+
 
 namespace BALL 
 {
@@ -145,7 +144,7 @@ namespace BALL
 		//@{
 
 
-		void addParameterDescription(const String& key, String description, ParameterType type, list<String>* allowed_values = NULL);
+		void addParameterDescription(const String& key, String description, ParameterType type, std::list<String>* allowed_values = NULL);
 
 		/* Return the description that was registered for the parameter identified by the given key */
 		const ParameterDescription* getParameterDescription(const String& key) const;

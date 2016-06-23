@@ -5,11 +5,12 @@
 #ifndef BALL_MATHS_PIECEWISEFUNCTION_H
 #define BALL_MATHS_PIECEWISEFUNCTION_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
+#include <iostream>
 #include <limits>
+#include <vector>
+
+#include <BALL/core/common/macros.h>
+
 
 namespace BALL
 {
@@ -109,7 +110,7 @@ namespace BALL
 				Note that this method does <b>not</b> check the vector of coefficients
 				for sanity.
 		 */
-		void setCoefficients(const vector<Coefficients>& coefficients) ;
+		void setCoefficients(const std::vector<Coefficients>& coefficients) ;
 
 		/** */
 		const std::vector<Coefficients>& getCoefficients() const ;

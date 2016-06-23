@@ -308,7 +308,7 @@ namespace BALL
 				 const TVector3<double>&			p0,
 				 const TAngle<double>&				phi,
 				 Size								number_of_segments,
-				 vector< TVector3<double> >&	partition,
+				 std::vector< TVector3<double> >&	partition,
 				 bool								on_surface = true)
 			;
 

@@ -5,9 +5,6 @@
 #ifndef BALL_CONCEPT_COMPARATOR_H
 #define BALL_CONCEPT_COMPARATOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
 
 namespace BALL 
 {

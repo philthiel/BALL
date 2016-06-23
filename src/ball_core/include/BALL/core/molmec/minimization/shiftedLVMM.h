@@ -7,6 +7,8 @@
 #ifndef BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
 #define BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
 
+#include <vector>
+
 #ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
 #	include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
 #endif
@@ -274,33 +276,33 @@ namespace BALL
 			
 			/** Shifted previous step.
 			*/
-			vector<Vector3> shift_s_;
+			std::vector<Vector3> shift_s_;
 			
 			/** Current gradient difference.
 			*/
-			vector<Vector3> grad_diff_;
+			std::vector<Vector3> grad_diff_;
 			
 			/** Needed vector for the update.
 			*/
-			vector<float> updt_u_;
+			std::vector<float> updt_u_;
 			
 			/** Needed vector for the update.
 			 */
-			vector<float> updt_v_;
+			std::vector<float> updt_v_;
 			
 			/** Direction of the shifted step, i.\ e.\ \f$-U_k \cdot U_k^T \cdot g_k\f$.
 			*/
-			vector<Vector3> shifted_direction_;
+			std::vector<Vector3> shifted_direction_;
 			
 			/** Factor of the shifted inverse hessian approximation
 			 *  in column order, \f$U_k\f$ in [3].
 			 */
-			vector<Vector3> hess_factor_;
+			std::vector<Vector3> hess_factor_;
 			
 			/** Positions of the movable atoms when we start an iteration.
 			 *  This is used to reduce slightly rounding errors
 			 */
-			vector<Vector3> initial_atoms_;
+			std::vector<Vector3> initial_atoms_;
 			
 			//@}
 			

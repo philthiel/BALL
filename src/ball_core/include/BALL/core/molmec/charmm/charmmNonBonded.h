@@ -9,10 +9,6 @@
 #ifndef BALL_MOLMEC_CHARMM_NONBONDED_H
 #define BALL_MOLMEC_CHARMM_NONBONDED_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_PARAMETER_LENNARDJONES_H
 #	include <BALL/core/molmec/parameter/lennardJones.h>
 #endif

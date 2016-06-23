@@ -3,6 +3,7 @@
 //
 // $Id: object.C,v 1.11 2002/02/27 12:21:09 sturm Exp $
 
+#include <BALL/core/common/macros.h>
 #include <BALL/core/concept/object.h>
 
 

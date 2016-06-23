@@ -4,7 +4,6 @@
 
 #include <BALL/core/solvation/ooiEnergy.h>
 
-#include <BALL/core/common.h>
 #include <BALL/core/system/path.h>
 #include <BALL/core/common/exception.h>
 #include <BALL/core/datatype/hashGrid.h>

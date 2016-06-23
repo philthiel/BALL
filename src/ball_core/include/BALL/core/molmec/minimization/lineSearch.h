@@ -9,9 +9,9 @@
 #ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
 #define BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+
+#include <BALL/core/common/macros.h>
+
 
 namespace BALL 
 {

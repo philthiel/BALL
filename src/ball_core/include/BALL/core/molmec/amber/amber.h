@@ -6,10 +6,6 @@
 #ifndef BALL_MOLMEC_AMBER_AMBER_H
 #define BALL_MOLMEC_AMBER_AMBER_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
 #	include <BALL/core/molmec/common/forceField.h>
 #endif

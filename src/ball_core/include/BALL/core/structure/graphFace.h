@@ -5,9 +5,9 @@
 #ifndef BALL_STRUCTURE_GRAPHFACE_H
 #define BALL_STRUCTURE_GRAPHFACE_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/global.h>
 
 #include <list>
 #include <vector>

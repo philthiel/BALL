@@ -7,10 +7,6 @@
 #ifndef BALL_MOLMEC_AMBER_AMBERTORSION_H
 #define BALL_MOLMEC_AMBER_AMBERTORSION_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_PARAMETER_COSINETORSION_H
 #	include <BALL/core/molmec/parameter/cosineTorsion.h>
 #endif

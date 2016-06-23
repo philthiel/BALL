@@ -13,8 +13,10 @@
 # include <BALL/core/format/paramFile.h>
 #endif
 
+#include <list>
 #include <map>
 #include <set>
+#include <vector>
 
 namespace BALL
 {
@@ -51,7 +53,7 @@ namespace BALL
 			void setToolManual(const String& manual);
 
 			static const String NOT_FOUND;
-			static const list<String> EMTPY_LIST;
+			static const std::list<String> EMTPY_LIST;
 
 			void registerMandatoryIntegerParameter(const String& name, const String& description);
 
@@ -79,23 +81,23 @@ namespace BALL
 
 			void registerOptionalIntegerParameter(const String& name, const String& description, int default_value = 0);
 
-			void registerOptionalIntegerListParameter(const String& name, const String& description, const std::vector<int>& default_values = vector<int>());
+			void registerOptionalIntegerListParameter(const String& name, const String& description, const std::vector<int>& default_values = std::vector<int>());
 
 			void registerOptionalDoubleParameter(const String& name, const String& description, double default_value = 0.0);
 
-			void registerOptionalDoubleListParameter(const String& name, const String& description, const std::vector<double>& default_values = vector<double>());
+			void registerOptionalDoubleListParameter(const String& name, const String& description, const std::vector<double>& default_values = std::vector<double>());
 
 			void registerOptionalStringParameter(const String& name, const String& description, const String& default_value = "");
 
-			void registerOptionalStringListParameter(const String& name, const String& description, const std::vector<String>& default_values = vector<String>());
+			void registerOptionalStringListParameter(const String& name, const String& description, const std::vector<String>& default_values = std::vector<String>());
 
 			void registerOptionalInputFile(const String& name, const String& description, const String& default_value = "");
 
 			void registerOptionalOutputFile(const String& name, const String& description, const String& default_value = "");
 
-			void registerOptionalInputFileList(const String& name, const String& description, const std::vector<String>& default_values = vector<String>());
+			void registerOptionalInputFileList(const String& name, const String& description, const std::vector<String>& default_values = std::vector<String>());
 
-			void registerOptionalOutputFileList(const String& name, const String& description, const std::vector<String>& default_values = vector<String>());
+			void registerOptionalOutputFileList(const String& name, const String& description, const std::vector<String>& default_values = std::vector<String>());
 
 			void registerOptionalGalaxyOutputFolder(const String& name, const String& description, const String& default_value = "");
 
@@ -119,8 +121,8 @@ namespace BALL
 			void setParameterRestrictions(String par_name, int min_value, int max_value);
 
 			/** Register the allowed values for a string-parameter. */
-			void setParameterRestrictions(String category, String par_name, list<String>& allowed_values);
-			void setParameterRestrictions(String par_name, list<String>& allowed_values);
+			void setParameterRestrictions(String category, String par_name, std::list<String>& allowed_values);
+			void setParameterRestrictions(String par_name, std::list<String>& allowed_values);
 
 			/** Register the supported formats for input-/output-files.			  
 					@param supported_formats supported file-formats separated by commas 			
@@ -152,7 +154,7 @@ namespace BALL
 				
 					Example: For "-i infile1.sdf infile2.sdf", CommandlineParser::getList("i") 
 					will return a vector containing 'infile1.sdf' and infile2.sdf'. */
-			const list<String>& getList(String name);
+			const std::list<String>& getList(String name);
 
 			/** Print information about about all registered parameters.\n
 			  
@@ -188,7 +190,7 @@ namespace BALL
 
 			/** map escaped characters to the original characters */
 			std::list<std::pair<String, String> > escaped_chars_;
-			std::map<String, list<String> > parameter_map_;
+			std::map<String, std::list<String> > parameter_map_;
 			std::map<String, ParameterDescription> registered_parameters_;
 
 			std::map<String, ParameterDescription> registered_flags_;

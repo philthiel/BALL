@@ -7,10 +7,6 @@
 #ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H 
 #define BALL_MOLMEC_COMMON_ATOMVECTOR_H 
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MATHS_VECTOR3_H
 #	include <BALL/core/maths/vector3.h>
 #endif

@@ -7,9 +7,7 @@
 #ifndef BALL_ENERGY_ATOMICCONTACTENERGY_H
 #define BALL_ENERGY_ATOMICCONTACTENERGY_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/macros.h>
 
 namespace BALL 
 {
@@ -29,10 +27,8 @@ namespace BALL
 
     	\ingroup EnergyMiscellaneous 
 	*/ 
-  BALL_EXPORT double calculateACE
-    (const AtomContainer& atom_container,
-     const string& type_filename = "energy/ACE_types.dat", 
-		 const string& parameter_filename = "energy/ACE_parameters.dat");
+	BALL_EXPORT double calculateACE(const AtomContainer& atom_container, const string& type_filename = "energy/ACE_types.dat",
+									const string& parameter_filename = "energy/ACE_parameters.dat");
 
 } // namespace BALL
 

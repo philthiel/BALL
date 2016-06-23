@@ -1,4 +1,7 @@
 #include <BALL/core/maths/cubicSpline1D.h>
+
+#include <BALL/core/common/logStream.h>
+
 #include <map>
 #include <set>
 

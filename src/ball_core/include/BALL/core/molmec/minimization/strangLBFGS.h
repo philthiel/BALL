@@ -7,6 +7,8 @@
 #ifndef BALL_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
 #define BALL_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
 
+#include <vector>
+
 #ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
 #	include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
 #endif
@@ -205,21 +207,21 @@ namespace BALL
 			
 			/** Old and new scaling values. Also used in the Strang recurrence formula.
 			*/
-			vector<float> rho_;
+			std::vector<float> rho_;
 			
 			/** Stored former steps. Vectors stored in column order.
 			*/
-			vector<Vector3> stored_s_;
+			std::vector<Vector3> stored_s_;
 			
 			/** Stored former changes in gradients.
 			 *  Vectors stored in column order.
 			 */
-			vector<Vector3> stored_y_;
+			std::vector<Vector3> stored_y_;
 			
 			/** Temporarily used memory for saving scalars associated with
 			 *  the stored vector pairs.
 			 */
-			vector<float> work_val_;
+			std::vector<float> work_val_;
 			
 			/** Index of the vector pair which will be used for saving the data
 			 *  of the current step (usually by replacing old data).

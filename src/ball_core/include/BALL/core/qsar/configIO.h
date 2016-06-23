@@ -11,6 +11,8 @@
 
 #include <istream>
 #include <set>
+#include <vector>
+
 
 namespace BALL
 {
@@ -30,11 +32,11 @@ namespace BALL
 			double validation_fraction;
 			bool separate_activity_file;
 			bool within_section;
-			vector<String> csv_file;
-			vector<int> csv_no_response;
-			vector<bool> csv_desc_labels;
-			vector<bool> csv_compound_labels;
-			vector<String> csv_separator;
+			std::vector<String> csv_file;
+			std::vector<int> csv_no_response;
+			std::vector<bool> csv_desc_labels;
+			std::vector<bool> csv_compound_labels;
+			std::vector<String> csv_separator;
 			bool nonnumeric_class_names;
 			bool done;
 		};
@@ -59,7 +61,7 @@ namespace BALL
 			String data_file;
 			String output;
 			String descriptor_source_model;
-			vector<double> model_parameters;
+			std::vector<double> model_parameters;
 			int model_no; 
 			int kernel_type;
 			double kernel_par1;
@@ -113,7 +115,7 @@ namespace BALL
 			int no_of_permutation_tests;
 			int statistic;
 			String statistic_name;
-			vector<String> external_predictions;
+			std::vector<String> external_predictions;
 			bool for_visualization_only;
 			bool done;
 		};

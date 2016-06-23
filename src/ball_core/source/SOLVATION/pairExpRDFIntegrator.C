@@ -8,6 +8,8 @@
 
 #include <limits>
 
+#include <BALL/core/common/logStream.h>
+
 using namespace std;
 
 namespace BALL

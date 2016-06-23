@@ -5,9 +5,8 @@
 
 #include <BALL/core/datatype/regularExpression.h>
 
-using std::endl;
-using std::istream;
-using std::ostream;
+using namespace std;
+
 
 namespace BALL 
 {

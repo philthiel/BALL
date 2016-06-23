@@ -7,10 +7,6 @@
 #ifndef BALL_SYSTEM_TIMER_H
 #define BALL_SYSTEM_TIMER_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifdef BALL_HAS_SYS_TIME_H
 #	include <sys/time.h>
 #endif
@@ -18,9 +14,11 @@
 #	include <time.h>
 #endif
 
-
-
 #include <iostream>
+
+#include <BALL/core/common/debug.h>
+#include <BALL/core/common/macros.h>
+
 
 namespace BALL
 {

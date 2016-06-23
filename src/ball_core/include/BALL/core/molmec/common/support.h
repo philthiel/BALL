@@ -8,10 +8,6 @@
 #ifndef BALL_MOLMEC_COMMON_SUPPORT_H
 #define BALL_MOLMEC_COMMON_SUPPORT_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MATHS_SIMPLEBOX3_H
 #	include <BALL/core/maths/simpleBox3.h>
 #endif

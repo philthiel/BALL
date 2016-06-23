@@ -7,13 +7,10 @@
 #ifndef BALL_ENERGY_COMPOSEDENERGYPROCESSOR
 #define BALL_ENERGY_COMPOSEDENERGYPROCESSOR
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_ENERGY_ENERGYPROCESSOR_H
 # include <BALL/core/energy/energyProcessor.h>
 #endif
+
 
 namespace BALL
 {

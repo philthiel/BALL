@@ -4,6 +4,8 @@
 
 #include <BALL/core/format/resourceFile.h>
 
+#include <BALL/core/common/logStream.h>
+
 #include <stack>
 
 using std::istream;

@@ -4,9 +4,12 @@
 
 #include <BALL/core/docking/geneticdock/genes.h>
 #include <BALL/core/maths/randomNumberGenerator.h>
+
 #include <time.h>
 #include <iostream>
+#include <vector>
 
+using namespace std;
 
 namespace BALL
 {
@@ -58,7 +61,7 @@ namespace BALL
      */
     if (partner == 0)
       {
-	std::cerr << "gene mismatch while mating" << std::endl;
+	cerr << "gene mismatch while mating" << endl;
 	exit(1);
       }
 
@@ -66,7 +69,7 @@ namespace BALL
      */
     if (values_.size() != partner->values_.size())
       {
-	std::cerr << "vector mismatch while mating double gene" << std::endl;
+	cerr << "vector mismatch while mating double gene" << endl;
 	exit(1);
       }
 
@@ -222,7 +225,7 @@ namespace BALL
       }
     else
       {
-	std::cerr << "mating failed" << std::endl;
+	cerr << "mating failed" << endl;
 	exit(1);
       }
   }

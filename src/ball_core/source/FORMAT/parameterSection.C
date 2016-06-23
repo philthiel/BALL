@@ -4,6 +4,8 @@
 // $Id: parameterSection.C,v 1.25 2002/02/27 12:21:20 sturm Exp $
 
 #include <BALL/core/format/parameterSection.h>
+
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/format/parameters.h>
 
 using namespace std;

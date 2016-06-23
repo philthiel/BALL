@@ -7,10 +7,6 @@
 #ifndef BALL_SOLVATION_OOIENERGY_H
 #define BALL_SOLVATION_OOIENERGY_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
 #	include <BALL/core/molmec/common/typeRuleProcessor.h>
 #endif

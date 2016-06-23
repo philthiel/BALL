@@ -7,9 +7,10 @@
 #ifndef BALL_DATATYPE_TRIPLE_H
 #define BALL_DATATYPE_TRIPLE_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/debug.h>
+
 
 namespace BALL 
 {

@@ -4,9 +4,6 @@
 // $Id: johnsonBoveyShiftProcessor.h,v 1.18 2005/12/23 17:01:56 amoll Exp $
 //
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
 
 #ifndef BALL_KERNEL_EXPRESSION_H
 #	include <BALL/core/kernel/expression.h>

@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_RINGANALYSER_H
 #define BALL_STRUCTURE_RINGANALYSER_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
 # include <BALL/core/kernel/atomContainer.h>
 #endif

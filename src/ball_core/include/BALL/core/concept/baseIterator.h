@@ -17,6 +17,9 @@
 #	include <BALL/core/common/exception.h>
 #endif
 
+#include <BALL/core/common/debug.h>
+
+
 namespace BALL 
 {
 

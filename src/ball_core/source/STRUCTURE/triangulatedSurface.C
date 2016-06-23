@@ -7,6 +7,9 @@
 #include <iterator>
 #include <map>
 
+#include <BALL/core/common/logStream.h>
+
+
 namespace BALL
 {
 	TriangulatedSurface::TriangulatedSurface()

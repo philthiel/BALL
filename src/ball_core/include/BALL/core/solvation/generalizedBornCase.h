@@ -7,10 +7,6 @@
 #ifndef BALL_SOLVATION_GENERALIZED_BORN_H
 #define BALL_SOLVATION_GENERALIZED_BORN_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_PTE_H
 #	include <BALL/core/kernel/PTE.h>
 #endif

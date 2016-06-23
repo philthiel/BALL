@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_SMILES_PARSER_H
 #define BALL_STRUCTURE_SMILES_PARSER_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_ATOM_H
 #	include <BALL/core/kernel/atom.h>
 #endif

@@ -66,11 +66,11 @@ namespace BALL
 		ParameterType type;
 
 		/** If this list is empty, then there are no restrictions on the value of the parameter */
-		list<String> allowed_values;
+		std::list<String> allowed_values;
 
 		/** In case of input-/output-files, this list should contain the supported file-extensions. \n
 		If the list is empty, no format restrictions are set. */
-		list<String> supported_formats;
+		std::list<String> supported_formats;
 
 		// if parameters shall be hidden in galaxy
 		bool hidden;
@@ -102,7 +102,7 @@ namespace BALL
 			@param value values of all parameters to be saved */
 			void writeSection(String section_name, String section_description, String version, const String& section_helptext,
 					              const String& category, const std::list<std::pair<String,ParameterDescription> >& descriptions,
-												const std::map<String,list<String> >& values);
+												const std::map<String, std::list<String> >& values);
 
 			/** Read a section from input file (e.g. parameters for one tool)
 			@param descriptions descriptions of parameters will be stored here 
@@ -110,7 +110,7 @@ namespace BALL
 			@param overwrite_existing if set to true, entries already existing in 'descriptions' and 'values' will be overwritten. */
 			void readSection(String& tool_name, String& section_description, String& version, String& section_helptext,
 					             String& category, std::list<std::pair<String, ParameterDescription> >& descriptions,
-											 std::map<String,list<String> >& values,
+											 std::map<String, std::list<String> >& values,
 											 bool overwrite_existing=false);
 
 			void close();

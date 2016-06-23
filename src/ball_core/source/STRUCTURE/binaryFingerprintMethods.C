@@ -5,6 +5,7 @@
 #include <BALL/core/structure/binaryFingerprintMethods.h>
 
 #include <BALL/core/common/limits.h>
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/system/file.h>
 #include <BALL/core/system/sysinfo.h>
 #include <BALL/core/system/timer.h>

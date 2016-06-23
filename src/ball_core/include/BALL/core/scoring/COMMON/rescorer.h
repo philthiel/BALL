@@ -6,10 +6,6 @@
 #ifndef BALL_SCORING_COMMON_RESCORER_H
 #define BALL_SCORING_COMMON_RESCORER_H
 
-#ifndef BALL_COMMON_H
-#       include <BALL/core/common.h>
-#endif
-
 #include <BALL/core/format/commandlineParser.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/scoring/functions/rescoring.h>

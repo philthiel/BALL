@@ -5,12 +5,14 @@
 #ifndef BALL_STRUCTURE_SMARTES_PARSER_H
 #define BALL_STRUCTURE_SMARTES_PARSER_H
 
-#ifndef BALL_COMMON_H
-	#	include <BALL/core/common.h>
-#endif
-
 #include <map>
 #include <set>
+#include <vector>
+
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/macros.h>
+#include <BALL/core/datatype/string.h>
+
 
 // needed for MSVC:
 #undef CW_DEFAULT
@@ -741,7 +743,7 @@ namespace BALL
 			bool component_grouping_;
 
 			/// the sssr 
-			static vector<std::set<const Atom*> >* sssr_;
+			static std::vector<std::set<const Atom*> >* sssr_;
 
 			/// dump method for the tree
 			void dumpTreeRecursive_(SPNode* node, Size depth);

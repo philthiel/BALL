@@ -7,9 +7,6 @@
 #ifndef BALL_DATATYPE_QUADRUPLE_H
 #define BALL_DATATYPE_QUADRUPLE_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
 
 namespace BALL 
 {

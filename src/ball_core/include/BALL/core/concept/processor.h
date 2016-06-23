@@ -5,10 +5,6 @@
 #ifndef BALL_CONCEPT_PROCESSOR_H
 #define BALL_CONCEPT_PROCESSOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_BASEFUNCTOR_H
 #	include <BALL/core/concept/baseFunctor.h>
 #endif
@@ -16,6 +12,8 @@
 #ifndef BALL_COMMON_GLOBAL_H
 # include <BALL/core/common/global.h>
 #endif
+
+#include <BALL/core/common/create.h>
 
 namespace BALL 
 {

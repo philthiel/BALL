@@ -4,6 +4,8 @@
 
 
 #include <BALL/core/format/JCAMPFile.h>
+
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
 #include <BALL/core/maths/common.h>
 

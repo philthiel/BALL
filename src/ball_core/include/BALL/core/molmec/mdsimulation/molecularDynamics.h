@@ -10,10 +10,6 @@
 #ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
 #define BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_OPTIONS_H
 # include <BALL/core/datatype/options.h>
 #endif
@@ -22,7 +18,6 @@
 # include <BALL/core/molmec/common/atomVector.h>
 #endif
 
-#include <vector>
 
 namespace BALL
 {

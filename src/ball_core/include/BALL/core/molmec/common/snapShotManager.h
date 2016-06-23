@@ -7,6 +7,8 @@
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
 #define BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
 
+#include <vector>
+
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
 # include <BALL/core/molmec/common/snapShot.h>
 #endif
@@ -253,7 +255,7 @@ class BALL_EXPORT SnapShotManager
 	const ForceField* force_field_ptr_;
 
 	//_ A vector containing those snapshot objects currently in memory
-	vector<SnapShot> snapshot_buffer_;
+	std::vector<SnapShot> snapshot_buffer_;
 
 	//_ The trajectory file where the data is saved in
 	TrajectoryFile* trajectory_file_ptr_;

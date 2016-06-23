@@ -4,6 +4,7 @@
 // $Id: embeddable.C,v 1.18 2005/12/23 17:02:33 amoll Exp $
 //
 
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/concept/embeddable.h>
 
 #undef BALL_DEBUG

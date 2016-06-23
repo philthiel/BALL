@@ -7,9 +7,9 @@
 #ifndef BALL_SYSTEM_SYSINFO_H
 #define BALL_SYSTEM_SYSINFO_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/macros.h>
+
 
 namespace BALL
 {

@@ -5,6 +5,7 @@
 //
 
 #include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/common/logStream.h>
 
 // #define BALL_DEBUG_PERSISTENCE
 

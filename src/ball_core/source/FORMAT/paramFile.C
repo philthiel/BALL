@@ -4,6 +4,8 @@
 
 #include <BALL/core/format/paramFile.h>
 
+#include <BALL/core/common/logStream.h>
+
 using namespace BALL;
 using namespace std;
 

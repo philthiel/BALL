@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_ATOMBIJECTION_H
 #define BALL_STRUCTURE_ATOMBIJECTION_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_ATOMCONTAINER_H
 #	include <BALL/core/kernel/atomContainer.h>
 #endif

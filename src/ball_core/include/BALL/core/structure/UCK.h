@@ -86,7 +86,7 @@ namespace BALL
 		
 		/* compute concatenated strings [lambda(a)nlambda(b)] for every pair of nodes
 		*/
-		void makePairs(const std::vector<String>& lambda_map, std::vector<String>& pairs, const std::vector<vector<Size> >& sp);
+		void makePairs(const std::vector<String>& lambda_map, std::vector<String>& pairs, const std::vector<std::vector<Size> >& sp);
 		
 		/* compute lambda-map
 		*/

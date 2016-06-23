@@ -5,9 +5,10 @@
 #ifndef BALL_MATHS_FUNCTION_H
 #define BALL_MATHS_FUNCTION_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/debug.h>
+#include <BALL/core/common/exception.h>
+
 
 namespace BALL
 {

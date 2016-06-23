@@ -7,10 +7,6 @@
 #ifndef BALL_DATATYPE_STRINGHASHMAP_H
 #define BALL_DATATYPE_STRINGHASHMAP_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_COMMON_HASH_H
 #	include <BALL/core/common/hash.h>
 #endif

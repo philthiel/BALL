@@ -4,8 +4,15 @@
 // $Id: randomNumberGenerator.C,v 1.1 2005/11/25 14:20:55 anker Exp $
 //
 
+
 #include <BALL/core/maths/randomNumberGenerator.h>
-#include <BALL/core/common.h>
+
+#include <cmath>
+
+#include <BALL/core/common/logStream.h>
+
+using namespace std;
+
 
 namespace BALL
 {

@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_GEOMETRICPROPERTIES_H
 #define BALL_STRUCTURE_GEOMETRICPROPERTIES_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MATHS_VECTOR3_H
 #	include <BALL/core/maths/vector3.h>
 #endif

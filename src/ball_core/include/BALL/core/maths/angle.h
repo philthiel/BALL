@@ -5,6 +5,8 @@
 #ifndef BALL_MATHS_ANGLE_H
 #define BALL_MATHS_ANGLE_H
 
+#include <iostream>
+
 #ifndef BALL_COMMON_EXCEPTION_H
 # include <BALL/core/common/exception.h>
 #endif

@@ -5,6 +5,7 @@
 //
 
 #include <BALL/core/concept/XDRPersistenceManager.h>
+#include <BALL/core/common/logStream.h>
 
 #include <rpc/types.h>
 #include <rpc/xdr.h>

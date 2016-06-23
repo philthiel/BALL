@@ -7,10 +7,6 @@
 #ifndef BALL_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
 #define BALL_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_OPTIONS_H
 # include <BALL/core/datatype/options.h>
 #endif

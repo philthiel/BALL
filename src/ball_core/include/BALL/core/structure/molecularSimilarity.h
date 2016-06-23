@@ -10,9 +10,7 @@
 #ifndef BALL_STRUCTURE_MOLECULARSIMILARITY_H
 #define BALL_STRUCTURE_MOLECULARSIMILARITY_H
 
-#ifndef BALL_COMMON_H
-	   #include <BALL/core/common.h>
-#endif
+#include <vector>
 
 #ifndef BALL_CONFIG_CONFIG_H
 		#include <BALL/config.h>
@@ -34,11 +32,11 @@ namespace BALL
 
 			MolecularSimilarity(String smarts_file);
 
-			void generateFingerprints(System& molecules, vector<vector<Size> >& fingerprints);
+			void generateFingerprints(System& molecules, std::vector<std::vector<Size> >& fingerprints);
 
-			void generateFingerprints(const list<Molecule*>& molecules, vector<vector<Size> >& fingerprints);
+			void generateFingerprints(const list<Molecule*>& molecules, std::vector<std::vector<Size> >& fingerprints);
 
-			void generateFingerprint(Molecule& molecule, vector<Size>& fingerprint);
+			void generateFingerprint(Molecule& molecule, std::vector<Size>& fingerprint);
 
 
 			#ifdef BALL_HAS_OPENBABEL
@@ -61,10 +59,10 @@ namespace BALL
 				void matchSmarts(const String& usmile, const String& smarts, Size& no_matches, Size max_matches=0);
 			#endif
 
-			void generatePathFingerprint(Molecule& mol, vector<bool>& fingerprint);
+			void generatePathFingerprint(Molecule& mol, std::vector<bool>& fingerprint);
 
 			/** Calculate Tanimoto coefficient for two given binary fingerprints. */
-			float calculateSimilarity(vector<bool>& fingerprint1, vector<bool>& fingerprint2);
+			float calculateSimilarity(std::vector<bool>& fingerprint1, std::vector<bool>& fingerprint2);
 
 			void filterRedundantMolecules(const list<Molecule*>& molecules, float similarity_threshold);
 
@@ -73,23 +71,23 @@ namespace BALL
 			/** Calculate similarity between two fingerprints.\n
 			If stddev for function-group counts are specified, then the similarity of position i in the fingerprint-vectors is defined as zero if their absolute difference is larger than the the standard deviation, else as 1-abs(difference_i/stddev_i).
 			If no stddev for function-group counts are given, the calculated similarity-value is equal to Tanimoto. */
-			float calculateSimilarity(vector<Size>& fingerprint1, vector<Size>& fingerprint2, vector<float>* stddev);
+			float calculateSimilarity(std::vector<Size>& fingerprint1, std::vector<Size>& fingerprint2, std::vector<float>* stddev);
 
 			/** Returns the names of the functional groups that have been read from the SMARTS-file */
-			const vector<String>& getFunctionalGroupNames();
+			const std::vector<String>& getFunctionalGroupNames();
 
 
 		protected:
 
-			vector<vector<Size> > fingerprints_;
-			vector<String> smarts_;
-			vector<String> smart_names_;
+			std::vector<std::vector<Size> > fingerprints_;
+			std::vector<String> smarts_;
+			std::vector<String> smart_names_;
 
 			SmartsMatcher matcher_;
 
 			/** Generate a hash-ID for a given molecule-path. \n
 			This function was adapted from OpenBabel (finger2.cpp). */
-			void generatePathHash_(vector<Size>& path, Size& hash);
+			void generatePathHash_(std::vector<Size>& path, Size& hash);
 
 			bool generatePathFingerprint_(const Atom* atom, std::vector<Size>& path, std::set<const Bond*>& path_bonds, 
 			                              std::vector<bool>& fingerprint);

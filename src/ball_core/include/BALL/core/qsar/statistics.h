@@ -52,39 +52,39 @@ namespace BALL
 				/** centers the given vector to a variance of 1 and mean of 0  
 				@param mean the mean of v will be saved here
 				@param std the standart deviation of v will be saved here */ 
-				static void centering(vector<double>& v, double& mean, double& std);
+				static void centering(std::vector<double>& v, double& mean, double& std);
 				
 				/** calculate variance of a given vector */
 				static double getVariance(const std::vector<double>& v, double mean=-1);
 				
 				/** calculate standart deviation of a given vector */
-				static double getStddev(const vector<double>& v, double mean=-1);
+				static double getStddev(const std::vector<double>& v, double mean=-1);
 				
 				/** calculate covariance between two given vectors */
-				static double getCovariance(const vector<double>& v1, const vector<double>& v2, double mean1, double mean2);
+				static double getCovariance(const std::vector<double>& v1, const std::vector<double>& v2, double mean1, double mean2);
 	
 				/** calculate mean of given vector */
 				static double getMean(const std::vector<double>& v);
 				
 				/** calculate Spearman's rank correlation */
-				static double calculateRankCorrelation(vector<double>& observed_values, vector<double>& expected_values);
+				static double calculateRankCorrelation(std::vector<double>& observed_values, std::vector<double>& expected_values);
 				//--- methods for calculating mean, covar, var of matrix-ROWS ---
 				
 				/** calculates covarianve between two rows of the given matrix 
 				@param features_to_use if specified, only the contained features are used for calculation of the covariance */
-				static double getRowCovariance(const vector<vector<double> >& v, int row1, int row2, double mean1=-1, double mean2=-1, std::multiset<int>* features_to_use=0);
+				static double getRowCovariance(const std::vector<std::vector<double> >& v, int row1, int row2, double mean1=-1, double mean2=-1, std::multiset<int>* features_to_use=0);
 				
 				/** calculates mean of a row of the given matrix 
 				@param features_to_use if specified, only the contained features are used for calculation of the mean */
-				static double getRowMean(const vector<vector<double> >& v, int row, std::multiset<int>* features_to_use=0);
+				static double getRowMean(const std::vector<std::vector<double> >& v, int row, std::multiset<int>* features_to_use=0);
 				
 				/** calculates variance of a row of the given matrix 
 				@param features_to_use if specified, only the contained features are used for calculation of the variance */
-				static double getRowVariance(const vector<vector<double> >& v, int row, double mean=-1, std::multiset<int>* features_to_use=0);
+				static double getRowVariance(const std::vector<std::vector<double> >& v, int row, double mean=-1, std::multiset<int>* features_to_use=0);
 				
 				/** calculates standard deviation of a row of the given matrix 
 				@param features_to_use if specified, only the contained features are used for calculation of the standard deviation */
-				static double getRowStddev(const vector<vector<double> >& v, int row, double mean=-1, std::multiset<int>* features_to_use=0);
+				static double getRowStddev(const std::vector<std::vector<double> >& v, int row, double mean=-1, std::multiset<int>* features_to_use=0);
 								
 				//  ------------------------
 				

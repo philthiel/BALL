@@ -7,6 +7,8 @@
 #ifndef BALL_MOLMEC_MINIMIZATION_CONJUGATEGRADIENT_H 
 #define BALL_MOLMEC_MINIMIZATION_CONJUGATEGRADIENT_H 
 
+#include <vector>
+
 #ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
 #	include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
 #endif
@@ -213,27 +215,27 @@ namespace BALL
 			
 			/** Variable needed for the Shanno direction calculation
 			*/
-			vector<Vector3> a_i_;
+			std::vector<Vector3> a_i_;
 			
 			/** Variable needed for the Shanno direction calculation
 			 */
-			vector<Vector3> b_i_;
+			std::vector<Vector3> b_i_;
 			 
 			/** Variable needed for the Shanno direction calculation
 				*/
-			vector<Vector3> p_t_;
+			std::vector<Vector3> p_t_;
 			 
 			 /** Variable needed for the Shanno direction calculation
 				*/
-			vector<Vector3> y_t_;
+			std::vector<Vector3> y_t_;
 			 
 			/** Variable needed for the Shanno direction calculation
 				*/
-			vector<Vector3> p_i_;
+			std::vector<Vector3> p_i_;
 								 
 			/** Variable needed for the Shanno direction calculation
 				*/
-			vector<Vector3> y_i_;
+			std::vector<Vector3> y_i_;
 			
 			/** Variable needed for the Shanno direction calculation
 			 */

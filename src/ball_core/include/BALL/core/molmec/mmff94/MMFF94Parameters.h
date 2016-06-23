@@ -9,10 +9,6 @@
 #ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
 #define BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_HASHMAP_H
 # include <BALL/core/datatype/hashMap.h>
 #endif 

@@ -5,10 +5,6 @@
 #ifndef BALL_DATATYPE_CONTOURSURFACE_H
 #define BALL_DATATYPE_CONTOURSURFACE_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
 # include <BALL/core/datatype/regularData3D.h>
 #endif

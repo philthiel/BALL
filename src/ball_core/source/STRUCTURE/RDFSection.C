@@ -3,6 +3,8 @@
 //
 
 #include <BALL/core/structure/RDFSection.h>
+
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/format/parameters.h>
 
 #include <limits>

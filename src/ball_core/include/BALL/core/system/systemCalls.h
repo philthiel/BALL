@@ -7,9 +7,7 @@
 #ifndef BALL_SYSTEM_SYSTEM_CALLS
 #define BALL_SYSTEM_SYSTEM_CALLS
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/macros.h>
 
 namespace BALL
 {

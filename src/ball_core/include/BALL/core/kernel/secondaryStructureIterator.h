@@ -7,10 +7,6 @@
 #ifndef BALL_KERNEL_SECONDARYSTRUCTUREITERATOR_H
 #define BALL_KERNEL_SECONDARYSTRUCTUREITERATOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_SECONDARY_STRUCTURE_H
 #	include <BALL/core/kernel/secondaryStructure.h>
 #endif

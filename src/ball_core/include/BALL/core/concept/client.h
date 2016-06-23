@@ -5,10 +5,6 @@
 #ifndef BALL_CONCEPT_CLIENT_H
 #define BALL_CONCEPT_CLIENT_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_COMPOSITE_H
 #	include <BALL/core/concept/composite.h>
 #endif

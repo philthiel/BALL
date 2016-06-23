@@ -7,9 +7,12 @@
 #ifndef BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
 #define BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
 
+#include <vector>
+
 #ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
 #	include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
 #endif
+
 
 namespace BALL 
 {
@@ -128,7 +131,7 @@ namespace BALL
 
     /*_  This vector contains special, precomputed factors 
     */
-    vector<AuxFactors> mass_factor_; 
+	std::vector<AuxFactors> mass_factor_;
 
     //_@} 
 

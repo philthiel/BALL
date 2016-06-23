@@ -5,6 +5,9 @@
 //
 
 #include <BALL/core/format/INIFile.h>
+
+#include <BALL/core/common/logStream.h>
+
 #include <fstream>
 
 #include <iostream>

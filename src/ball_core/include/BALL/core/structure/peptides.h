@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_PEPTIDES_H
 #define BALL_STRUCTURE_PEPTIDES_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_PROTEIN_H
 #	include <BALL/core/kernel/protein.h>
 #endif

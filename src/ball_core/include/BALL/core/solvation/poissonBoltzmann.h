@@ -9,10 +9,6 @@
 #ifndef BALL_SOLVATION_POISSONBOLTZMANN_H
 #define BALL_SOLVATION_POISSONBOLTZMANN_H
 
-#ifndef BALL_COMMON_H_
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_REGULARDATA3D_H
 #	include <BALL/core/datatype/regularData3D.h>
 #endif
@@ -26,7 +22,7 @@
 #endif
 
 #include <vector>
-using std::vector;
+
 
 namespace BALL 
 {
@@ -908,7 +904,7 @@ namespace BALL
 		/**	An array containing a fast representation of all atoms in the system.
 				@see		FastAtom
 		*/
-		vector<FDPB::FastAtom>*	atom_array;
+		std::vector<FDPB::FastAtom>*	atom_array;
 		
 		//@}
 
@@ -931,7 +927,7 @@ namespace BALL
 		// the indices of the boundary points,
 		// i.e., the points that have at least one neighbouring
 		// grid point that is inside the solute
-		vector<Position>	boundary_points_;
+		std::vector<Position>	boundary_points_;
 
 		// number of iterations of the last calculation
 		Size number_of_iterations_;

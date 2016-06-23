@@ -3,7 +3,7 @@
 //
 
 BALL_INLINE
-const vector<Size>& EnumeratorIndex::getModulus() const
+const std::vector<Size>& EnumeratorIndex::getModulus() const
 	
 {
 	return modulus_;

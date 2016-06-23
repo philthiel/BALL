@@ -1,6 +1,5 @@
 // $Id: fermiBaseFunction.C,v 1.1 2005/11/21 19:27:08 anker Exp $
 
-#include <BALL/core/common.h>
 #include <BALL/core/scoring/common/fermiBaseFunction.h>
 
 namespace BALL 

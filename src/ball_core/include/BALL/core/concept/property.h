@@ -7,10 +7,6 @@
 #ifndef BALL_CONCEPT_PROPERTY_H
 #define BALL_CONCEPT_PROPERTY_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_BITVECTOR_H
 #	include <BALL/core/datatype/bitVector.h>
 #endif
@@ -18,6 +14,8 @@
 #ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
 #	include <BALL/core/concept/persistentObject.h>
 #endif
+
+#include <BALL/core/common/logStream.h>
 
 #include <iostream>
 

@@ -7,10 +7,6 @@
 #ifndef BALL_KERNEL_PDBATOMITERATOR_H
 #define BALL_KERNEL_PDBATOMITERATOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_KERNEL_PDBATOM_H
 #	include <BALL/core/kernel/PDBAtom.h>
 #endif

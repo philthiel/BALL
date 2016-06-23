@@ -4,6 +4,8 @@
 
 #include <BALL/core/format/trajectoryFile.h>
 
+#include <BALL/core/common/logStream.h>
+
 using namespace std;
 
 namespace BALL

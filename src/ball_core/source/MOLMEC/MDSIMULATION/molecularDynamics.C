@@ -5,9 +5,13 @@
 //
 
 #include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
+
+#include <vector>
+
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
 #include <BALL/core/kernel/PTE.h>
+
 
 namespace BALL
 {

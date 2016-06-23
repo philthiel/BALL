@@ -4,10 +4,13 @@
 // $Id: pair6_12RDFIntegrator.C,v 1.20 2003/08/26 09:18:26 oliver Exp $
 //
 
-#include <BALL/core/maths/common.h>
+
 #include <BALL/core/solvation/pair6_12RDFIntegrator.h>
 
 #include <limits>
+
+#include <BALL/core/common/logStream.h>
+#include <BALL/core/maths/common.h>
 
 using namespace std;
 

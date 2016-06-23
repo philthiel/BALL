@@ -5,9 +5,7 @@
 #ifndef BALL_DATATYPE_REGULAREXPRESSION_H
 #define BALL_DATATYPE_REGULAREXPRESSION_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <vector>
 
 #include <boost/regex.h>
 
@@ -193,7 +191,7 @@ namespace BALL
 		 *  @throw Exception::IndexUnderflow if from < 0
 		 *  @throw Exception::IndexOverflow if from >= text.size()
 		 */
-		bool find(const String& text, vector<Substring>& subexpressions,
+		bool find(const String& text, std::vector<Substring>& subexpressions,
 							Index from = 0, int execute_flags = 0) const;
 						
 		//@}

@@ -9,9 +9,8 @@
 #	include <BALL/config.h>
 #endif
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/macros.h>
 
 #include <string>
 #include <typeinfo>

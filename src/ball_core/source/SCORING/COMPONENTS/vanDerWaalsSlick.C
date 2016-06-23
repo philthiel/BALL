@@ -4,7 +4,6 @@
 // $Id: vanDerWaals.C,v 1.4 2006/05/27 09:05:23 anker Exp $
 
 
-#include <BALL/core/common.h>
 #include <BALL/core/scoring/components/vanDerWaalsSlick.h>
 #include <BALL/core/molmec/common/assignTypes.h>
 #include <BALL/core/molmec/common/support.h>

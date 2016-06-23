@@ -1,10 +1,6 @@
 #ifndef BALL_DATATYPE_LISTSORT_MAC
 #define BALL_DATATYPE_LISTSORT_MAC
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_COMPARATOR_H
 #	include <BALL/core/concept/comparator.h>
 #endif

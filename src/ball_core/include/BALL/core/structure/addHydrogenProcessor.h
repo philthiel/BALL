@@ -107,7 +107,7 @@ namespace BALL
 			 * \param rings A set of rings. A suitable input for this method can be computed
 			 *              by using \ref RingPerceptionProcessor::calculateSSSR
 			 */
-			void setRings(const vector<vector<Atom*> >& rings);
+			void setRings(const std::vector<std::vector<Atom*> >& rings);
 
 			/**
 			 * Returns the number of added hydrogen atoms. This value will accumulate
@@ -156,7 +156,7 @@ namespace BALL
 			 * @param atom the atom for which the binding partners should be determined
 			 * @returns A std::vector containing all \ref Atoms that have a bond to the specified \ref Atom
 			 */
-			vector<Atom*> getPartners_(Atom& atom) const;
+			std::vector<Atom*> getPartners_(Atom& atom) const;
 
 			/**
 			 * Computes a vector orthogonal to the input. It uses the x-axis as reference. If the input

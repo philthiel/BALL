@@ -5,6 +5,8 @@
 #ifndef BALL_CONCEPT_OBJECT_H
 #define BALL_CONCEPT_OBJECT_H
 
+#include <BALL/core/common/create.h>
+
 #ifndef BALL_CONCEPT_AUTODELETABLE_H
 #	include <BALL/core/concept/autoDeletable.h>
 #endif

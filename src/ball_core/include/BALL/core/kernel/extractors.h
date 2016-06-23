@@ -10,9 +10,7 @@
 #ifndef BALL_KERNEL_EXTRACTORS_H
 #define BALL_KERNEL_EXTRACTORS_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#include <list>
 
 #ifndef BALL_DATATYPE_STRING_H
 #	include <BALL/core/datatype/string.h>

@@ -6,10 +6,6 @@
 #ifndef BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
 #define BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
 # include <BALL/core/molmec/common/forceFieldComponent.h>
 #endif
@@ -17,6 +13,7 @@
 #ifndef BALL_MOLMEC_PARAMETER_QUADRATICBONDSTRETCH_H
 # include <BALL/core/molmec/parameter/quadraticBondStretch.h>
 #endif
+
 
 namespace BALL
 {

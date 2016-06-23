@@ -6,6 +6,8 @@
 #ifndef BALL_DOCKING_GENETICDOCK_PARAMETER_H
 #define BALL_DOCKING_GENETICDOCK_PARAMETER_H
 
+#include <vector>
+
 #include <BALL/core/maths/quaternion.h>
 
 namespace BALL
@@ -65,7 +67,7 @@ namespace BALL
 
     /** parameter values
      */
-    vector<double> values;
+	std::vector<double> values;
 
   };
 

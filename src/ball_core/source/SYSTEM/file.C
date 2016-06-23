@@ -5,6 +5,7 @@
 #include <BALL/core/system/file.h>
 //#include <BALL/core/system/simpleDownloader.h>
 
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
 
 #include <BALL/core/datatype/regularExpression.h>

@@ -5,10 +5,6 @@
 #ifndef BALL_STRUCTURE_STRUCTUREMAPPER_H
 #define BALL_STRUCTURE_STRUCTUREMAPPER_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_PROCESSOR_H
 #	include <BALL/core/concept/processor.h>
 #endif

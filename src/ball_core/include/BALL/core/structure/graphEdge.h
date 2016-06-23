@@ -5,11 +5,12 @@
 #ifndef BALL_STRUCTURE_GRAPHEDGE_H
 #define BALL_STRUCTURE_GRAPHEDGE_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #include <vector>
+
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/global.h>
+
 
 namespace BALL
 {

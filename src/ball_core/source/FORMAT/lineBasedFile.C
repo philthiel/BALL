@@ -3,7 +3,9 @@
 //
 
 #include <BALL/core/format/lineBasedFile.h>
+
 #include <BALL/core/common/exception.h>
+#include <BALL/core/common/logStream.h>
 #include <cstdio>
 
 using namespace std;

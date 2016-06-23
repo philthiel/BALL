@@ -2,7 +2,6 @@
 #include <cstdlib>
 
 // BALL includes
-#include <BALL/core/kernel.h>
 #include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/structure/sideChainPlacementProcessor.h>

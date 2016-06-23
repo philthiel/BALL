@@ -3,6 +3,7 @@
 #ifndef BALL_SCORING_COMMON_LINEARBASEFUNCTION_H
 #define BALL_SCORING_COMMON_LINEARBASEFUNCTION_H
 
+#include <BALL/core/common/macros.h>
 #include <BALL/core/scoring/common/baseFunction.h>
 
 namespace BALL

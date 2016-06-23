@@ -5,10 +5,6 @@
 #ifndef BALL_CONCEPT_RANDOMACCESSITERATOR_H
 #define BALL_CONCEPT_RANDOMACCESSITERATOR_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
 #	include <BALL/core/concept/bidirectionalIterator.h>
 #endif

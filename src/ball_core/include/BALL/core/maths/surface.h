@@ -5,9 +5,12 @@
 #ifndef BALL_MATHS_SURFACE_H
 #define BALL_MATHS_SURFACE_H
 
+#include <vector>
+
 #ifndef BALL_MATHS_VECTOR3_H
 #	include <BALL/core/maths/vector3.h>
 #endif
+
 
 namespace BALL 
 {
@@ -182,13 +185,13 @@ namespace BALL
 		//@{
 
 		/// the vertices
-		vector<Vertex>		vertex;
+		std::vector<Vertex>		vertex;
 
 		/// the normals for each vertex
-		vector<Normal>		normal;
+		std::vector<Normal>		normal;
 
 		/// the triangles
-		vector<Triangle>	triangle;
+		std::vector<Triangle>	triangle;
 		//@}
 	};
 	//@}

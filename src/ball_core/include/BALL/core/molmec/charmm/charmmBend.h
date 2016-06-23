@@ -6,10 +6,6 @@
 #ifndef BALL_MOLMEC_CHARMM_CHARMMBEND_H
 #define BALL_MOLMEC_CHARMM_CHARMMBEND_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_COMMON_BENDCOMPONENT_H
 # include <BALL/core/molmec/common/bendComponent.h>
 #endif

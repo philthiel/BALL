@@ -3,10 +3,6 @@
 #ifndef BALL_SCORING_FUNCTIONS_SLICKENERGY_H
 #define BALL_SCORING_FUNCTIONS_SLICKENERGY_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_MOLMEC_COMMON_SCORING_FUNCTION_H
 #	include <BALL/core/scoring/common/scoringFunction.h>
 #endif

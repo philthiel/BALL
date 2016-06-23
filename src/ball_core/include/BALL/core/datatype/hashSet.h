@@ -5,10 +5,6 @@
 #ifndef BALL_DATATYPE_HASHSET_H
 #define BALL_DATATYPE_HASHSET_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_COMMON_HASH_H
 #	include <BALL/core/common/hash.h>
 #endif
@@ -34,7 +30,8 @@
 #endif
 
 #include <algorithm>
-
+#include <list>
+#include <vector>
 
 namespace BALL
 {
@@ -592,7 +589,7 @@ namespace BALL
 
 		/*_	Buckets are stored as a vector of linked lists of Nodes 
 		*/
-		vector<Node*>	bucket_;
+		std::vector<Node*>	bucket_;
 	};
 
 
@@ -724,7 +721,7 @@ namespace BALL
 		}
 
 		// erase all elements not part of the intersection
-		typename list<Key>::iterator list_it = erase_list.begin();
+		typename std::list<Key>::iterator list_it = erase_list.begin();
 		for (; list_it != erase_list.end(); ++list_it)
 		{
 			erase(*list_it);
@@ -1306,7 +1303,7 @@ namespace BALL
     rehash();
 
     // save the old contents
-    vector<Node*> old_buckets(bucket_);
+	std::vector<Node*> old_buckets(bucket_);
 
     // resize the bucket vector and initialize it with zero
     bucket_.clear();

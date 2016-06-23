@@ -5,10 +5,6 @@
 #ifndef BALL_DATATYPE_HASHGRID_H
 #define BALL_DATATYPE_HASHGRID_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_FORWARDITERATOR_H
 #	include <BALL/core/concept/forwardIterator.h>
 #endif
@@ -32,6 +28,8 @@
 #endif
 
 #include <algorithm>
+#include <vector>
+
 
 namespace BALL 
 {
@@ -1179,7 +1177,7 @@ namespace BALL
 		//_
 		Size dimension_z_;
 		//_
-		vector<HashGridBox3<Item> > box_;
+		std::vector<HashGridBox3<Item> > box_;
 	};
 
 		

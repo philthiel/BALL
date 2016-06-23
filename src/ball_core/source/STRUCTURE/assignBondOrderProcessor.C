@@ -6,12 +6,12 @@
 #include <map>
 
 // BALL includes
-#include <BALL/core/kernel.h>
 #include <BALL/core/structure/assignBondOrderProcessor.h>
 #include <BALL/core/structure/connectedComponentsProcessor.h>
 #include <BALL/core/system/timer.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/datatype/hashGrid.h>
 #include <BALL/core/system/path.h>
 #include <BALL/core/format/parameters.h>

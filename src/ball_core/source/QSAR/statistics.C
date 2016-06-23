@@ -4,8 +4,12 @@
 // 
 
 #include <BALL/core/qsar/statistics.h>
+
 #include <iostream>
 #include <map>
+
+using namespace std;
+
 
 namespace BALL
 {

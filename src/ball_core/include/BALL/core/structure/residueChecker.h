@@ -9,10 +9,6 @@
 #	include <BALL/core/maths/common.h>
 #endif
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_PROCESSOR_H
 # include <BALL/core/concept/processor.h>
 #endif

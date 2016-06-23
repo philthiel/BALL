@@ -11,7 +11,9 @@
 
 #ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
 #define BALL_MOLMEC_COMMON_SNAPSHOT_H
- 
+
+#include <vector>
+
 #ifndef BALL_MATHS_VECTOR3_H
 #	include <BALL/core/maths/vector3.h>
 #endif
@@ -97,22 +99,22 @@ namespace BALL
 		DoubleReal getKineticEnergy() const;
 
 		/// Specify all atom positions
-		void setAtomPositions(const ::std::vector<Vector3>& atom_postions);
+		void setAtomPositions(const std::vector<Vector3>& atom_postions);
 
 		/// Get the vector containing the atom postions
-		const ::std::vector<Vector3>& getAtomPositions() const;
+		const std::vector<Vector3>& getAtomPositions() const;
 
 		/// Specify all atom velocities
-		void setAtomVelocities(const ::std::vector<Vector3>& atom_velocities);
+		void setAtomVelocities(const std::vector<Vector3>& atom_velocities);
 
 		/// Get the vector containing the atom velocitites
-		const ::std::vector<Vector3>& getAtomVelocities() const;
+		const std::vector<Vector3>& getAtomVelocities() const;
 
 		/// Specify all atom forces
-		void setAtomForces(const ::std::vector<Vector3>& atom_forces);
+		void setAtomForces(const std::vector<Vector3>& atom_forces);
 
 		/// Get all atom forces
-		const ::std::vector<Vector3>& getAtomForces() const;
+		const std::vector<Vector3>& getAtomForces() const;
 
 		//@}
 		/// @name System interaction
@@ -200,13 +202,13 @@ namespace BALL
     double kinetic_energy_;
 
     //_ An STL vector with the positions of all atoms 
-    vector<Vector3> atom_positions_;
+	std::vector<Vector3> atom_positions_;
 
     //_ An STL vector with the velocities of all atoms 
-    vector<Vector3> atom_velocities_;
+	std::vector<Vector3> atom_velocities_;
 
     //_ An STL vector with the forces of all atoms 
-    vector<Vector3> atom_forces_;
+	std::vector<Vector3> atom_forces_;
 
     //@}
 

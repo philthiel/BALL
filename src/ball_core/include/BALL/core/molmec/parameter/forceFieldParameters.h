@@ -6,10 +6,6 @@
 #ifndef BALL_MOLMEC_FORCEFIELDPARAMETERS_H
 #define BALL_MOLMEC_FORCEFIELDPARAMETERS_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_FORMAT_PARAMETERS_H
 # include <BALL/core/format/parameters.h>
 #endif

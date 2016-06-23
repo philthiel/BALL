@@ -9,10 +9,6 @@
 #ifndef BALL_MOLMEC_FORCEFIELDCOMPONENT_H
 #define BALL_MOLMEC_FORCEFIELDCOMPONENT_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_DATATYPE_STRING_H
 #	include	<BALL/core/datatype/string.h>
 #endif

@@ -4,10 +4,6 @@
 // $Id: haighMallionShiftProcessor.h,v 1.16.10.6 2007-04-12 13:53:54 anne Exp $
 //
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
-
 #ifndef BALL_CONCEPT_PROCESSOR_H
 #	include <BALL/core/concept/processor.h>
 #endif
