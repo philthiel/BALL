@@ -1,22 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef SNBMODEL
-#define SNBMODEL
 
-#ifndef BALL_QSAR_COMMON_H
-	#include <BALL/core/qsar/common.h>
-#endif
+#ifndef BALL_CORE_QSAR_SNBMODEL_H
+#define BALL_CORE_QSAR_SNBMODEL_H
 
-#ifndef STATISTICS
-#include <BALL/core/qsar/statistics.h>
-#endif
-
-#ifndef BAYESMODEL
 #include <BALL/core/qsar/bayesModel.h>
-#endif
+#include <BALL/core/qsar/common.h>
+#include <BALL/core/qsar/statistics.h>
+
+#include <vector>
 
 
 namespace BALL{
@@ -40,21 +32,21 @@ namespace BALL{
 				//@{
 				void train();
 				
-				Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				void saveToFile(string filename);
+				void saveToFile(String filename);
 				
 				bool isTrained();
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				
 				/** calculate the probability for the specified feature to assume the given value for each class
 				@return a probability for each class */
-				vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value);
+				std::vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value);
 				
 				int getNoResponseVariables();
 				//@}
@@ -79,4 +71,4 @@ namespace BALL{
 	}
 }
 
-#endif //SNBMODEL
+#endif // BALL_CORE_QSAR_SNBMODEL_H

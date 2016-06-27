@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_LOGP_H
-#define BALL_LOGP_H
+
+#ifndef BALL_CORE_STRUCTURE_LOGP_H
+#define BALL_CORE_STRUCTURE_LOGP_H
 
 #include <BALL/core/structure/molecularSimilarity.h>
 
@@ -31,4 +30,5 @@ namespace BALL
 	};
 
 }
-#endif // BALL_LOGP_H
+
+#endif // BALL_CORE_STRUCTURE_LOGP_H

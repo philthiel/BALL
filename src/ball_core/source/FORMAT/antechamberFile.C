@@ -1,14 +1,19 @@
+//_new_file_header
+
+
 #include <BALL/core/format/antechamberFile.h>
+
 #include <BALL/core/datatype/hashMap.h>
 #include <BALL/core/kernel/atomContainer.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/residue.h>
 #include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/maths/common.h>
 
 #include <vector>
+
 
 namespace BALL
 {

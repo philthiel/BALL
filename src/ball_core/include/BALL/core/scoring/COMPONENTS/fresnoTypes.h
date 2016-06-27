@@ -1,13 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_FRESNOTYPES_H
-#define BALL_SCORING_COMPONENTS_FRESNOTYPES_H
 
-#include <BALL/core/scoring/common/scoringComponent.h>
+#ifndef BALL_CORE_SCORING_COMPONENTS_FRESNOTYPES_H
+#define BALL_CORE_SCORING_COMPONENTS_FRESNOTYPES_H
+
 #include <BALL/core/kernel/system.h>
+#include <BALL/core/scoring/common/scoringComponent.h>
 
 
 namespace BALL
@@ -117,5 +115,4 @@ namespace BALL
 	};
 }
 
-
-#endif // BALL_SCORING_COMPONENTS_FRESNOTYPES_H
+#endif // BALL_CORE_SCORING_COMPONENTS_FRESNOTYPES_H

@@ -1,16 +1,17 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_CHPI_H
-#define BALL_SCORING_COMPONENTS_CHPI_H
 
+#ifndef BALL_CORE_SCORING_COMPONENTS_CHPI_H
+#define BALL_CORE_SCORING_COMPONENTS_CHPI_H
+
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/datatype/options.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
-#include <BALL/core/qsar/aromaticityProcessor.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -228,7 +229,7 @@ namespace BALL
 
 			void setupLigand();
 
-			void update(const vector<std::pair<Atom*, Atom*> >&);
+			void update(const std::vector<std::pair<Atom*, Atom*> >&);
 
 			/**
 			* Calculates and returns the component's energy.
@@ -300,4 +301,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_SCORING_COMPONENTS_CHPI_H
+#endif // BALL_CORE_SCORING_COMPONENTS_CHPI_H

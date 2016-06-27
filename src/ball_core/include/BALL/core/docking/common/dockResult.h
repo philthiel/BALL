@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: dockResult.h,v 1.2.16.2 2007/08/07 16:16:15 bertsch Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_DOCKRESULT_H
-#define BALL_DOCKING_COMMON_DOCKRESULT_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_DOCKING_COMMON_DOCKRESULT_H
+#define BALL_CORE_DOCKING_COMMON_DOCKRESULT_H
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/core/docking/common/conformationSet.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/docking/common/conformationSet.h>
+
 
 namespace BALL
 {
@@ -116,7 +109,7 @@ namespace BALL
 
 				/** Returns the scores of \link DockResult::Scoring_ scoring \endlink i.
 				*/
-				const vector < ConformationSet::Conformation > getScores(Position i) const
+				const std::vector<ConformationSet::Conformation> getScores(Position i) const
 					throw(Exception::IndexOverflow);
 
 				/** Returns the name of scoring function of \link DockResult::Scoring_ scoring \endlink i.
@@ -139,7 +132,7 @@ namespace BALL
 				 *  @param			options options of the scoring function
 				 *  @param			scores scores calculated by the scoring function
 				*/
-				void addScoring(const String& name, const Options& options, vector < ConformationSet::Conformation > scores)
+				void addScoring(const String& name, const Options& options, std::vector<ConformationSet::Conformation> scores)
 					throw();
 
 				/** Deletes Scoring_ i of vector \link DockResult::scorings_ scorings_ \endlink.
@@ -224,7 +217,7 @@ namespace BALL
 
 						/** Constructor
 						*/
-						Scoring_(const String& name, const Options& options, const vector<float>& scores, const vector<Index>& snapshot_order) throw();
+						Scoring_(const String& name, const Options& options, const std::vector<float>& scores, const std::vector<Index>& snapshot_order) throw();
 
 						/** Destructor
 						*/
@@ -244,11 +237,11 @@ namespace BALL
 						/** Vector of scores
 							* The score at position i belongs to the snapshot i
 						*/
-						vector<float> scores_;
+						std::vector<float> scores_;
 						/** Vector of snapshot indices
 							* The indices are sorted by their scores
 						 */
-						vector<Index> snapshot_order_;
+						std::vector<Index> snapshot_order_;
 				};
 
 				/**
@@ -288,7 +281,7 @@ namespace BALL
 				/** Vector contains name, options and scores of each scoring function.
 				 *	The scores of each scoring are sorted.
 				 */
-				vector<Scoring_> scorings_;
+				std::vector<Scoring_> scorings_;
 				/** Flag that indicated by which scoring all scorings are sorted
 						-1 corresponds to a sorting by snapshot index
 						It is needed for the operator(i, j)
@@ -302,4 +295,5 @@ namespace BALL
 		std::istream& operator >>(std::istream& in, DockResult& dock_res)
 			throw();
 }
-#endif
+
+#endif // BALL_CORE_DOCKING_COMMON_DOCKRESULT_H

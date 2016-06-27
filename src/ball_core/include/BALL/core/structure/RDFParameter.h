@@ -1,25 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RDFPARAMETER_H
-#define BALL_STRUCTURE_RDFPARAMETER_H
 
-#ifndef BALL_KERNEL_ATOM_H
-# include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RDFPARAMETER_H
+#define BALL_CORE_STRUCTURE_RDFPARAMETER_H
 
-#ifndef BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
-# include <BALL/core/structure/radialDistributionFunction.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/structure/radialDistributionFunction.h>
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/core/format/parameterSection.h>
-#endif
-
-#ifndef BALL_MOLMEC_PARAMETERS_FORCEFIELDPARAMETERS_H
-# include <BALL/core/molmec/parameter/forceFieldParameters.h>
-#endif
 
 namespace BALL 
 {
@@ -149,4 +138,5 @@ namespace BALL
 	};
    
 } // namespace BALL
-#endif // BALL__RDFPARAMETER_H
+
+#endif // BALL_CORE_STRUCTURE_RDFPARAMETER_H

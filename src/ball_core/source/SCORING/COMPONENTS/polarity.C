@@ -1,17 +1,16 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/polarity.h>
-#include <BALL/core/scoring/components/fresnoTypes.h>
-#include <BALL/core/kernel/PTE.h>
 
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/scoring/components/fresnoTypes.h>
 #include <BALL/core/system/timer.h>
 
+#include <vector>
 
-using namespace std;
 using namespace BALL;
+using namespace std;
 
 
 const double Polarity::POL_ES_THRESHOLD = 0.2;
@@ -98,7 +97,7 @@ Size Polarity::getType_(const Atom* atom)
 }
 
 
-void Polarity::update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector)
+void Polarity::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 {
 	// nothing to be done here ...
 }

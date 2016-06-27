@@ -1,10 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/structure/triangleEdge.h>
-#include <BALL/core/structure/triangle.h>
+
 #include <BALL/core/structure/trianglePoint.h>
+
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+
 
 namespace BALL
 {

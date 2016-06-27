@@ -1,14 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: lineSearch.h,v 1.20.18.3 2007/08/07 09:12:34 aleru Exp $
-//
+//_new_file_header
 
-// Line Search Minimizer: A special class for the line search minimization algorithm
 
-#ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-#define BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-
+#ifndef BALL_CORE_MOLMEC_MINIMIZATION_LINESEARCH_H
+#define BALL_CORE_MOLMEC_MINIMIZATION_LINESEARCH_H
 
 #include <BALL/core/common/macros.h>
 
@@ -229,4 +223,4 @@ namespace BALL
 	
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MINIMIZATION/LINESEARCH_H
+#endif // BALL_CORE_MOLMEC_MINIMIZATION/LINESEARCH_H

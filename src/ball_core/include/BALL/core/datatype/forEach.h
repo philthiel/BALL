@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_FOREACH_H
-#define BALL_DATATYPE_FOREACH_H
+
+#ifndef BALL_CORE_DATATYPE_FOREACH_H
+#define BALL_CORE_DATATYPE_FOREACH_H
 
 
 /**	Container Iteration Macro.
@@ -29,4 +28,4 @@ for (element_iterator = container.begin(); \
      !element_iterator.isEnd(); \
      ++element_iterator)
 
-#endif // BALL_DATATYPE_FOREACH_H
+#endif // BALL_CORE_DATATYPE_FOREACH_H

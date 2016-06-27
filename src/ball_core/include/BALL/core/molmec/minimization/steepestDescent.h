@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: steepestDescent.h,v 1.24.20.4 2007/08/07 09:12:35 aleru Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H
-#define BALL_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H
 
-#ifndef BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
-# include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H
+#define BALL_CORE_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H
 
-#ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-# include <BALL/core/molmec/MINIMIZATION/lineSearch.h>
-#endif
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
+#include <BALL/core/molmec/minimization/lineSearch.h>
+
 
 namespace BALL 
 {
@@ -124,4 +117,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H
+#endif // BALL_CORE_MOLMEC_MINIMIZATION_STEEPESTDESCENT_H

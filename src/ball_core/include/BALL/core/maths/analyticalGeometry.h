@@ -1,40 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_ANALYTICALGEOMETRY_H
-#define BALL_MATHS_ANALYTICALGEOMETRY_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_ANALYTICALGEOMETRY_H
+#define BALL_CORE_MATHS_ANALYTICALGEOMETRY_H
 
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
-
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_LINE3_H
-#	include <BALL/core/maths/line3.h>
-#endif
-
-#ifndef BALL_MATHS_PLANE3_H
-#	include <BALL/core/maths/plane3.h>
-#endif
-
-#ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/line3.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
 
 #define BALL_MATRIX_CELL(m, dim, row, col)   *((m) + (row) * (dim) + (col))
 #define BALL_CELL(x, y)                      *((m) + (y) * (dim) + (x))
+
 
 namespace BALL 
 {
@@ -1398,4 +1378,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_MATHS_ANALYTICALGEOMETRY_H
+#endif // BALL_CORE_MATHS_ANALYTICALGEOMETRY_H

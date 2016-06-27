@@ -1,29 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_PEPTIDECAPPROCESSOR_H
-#define BALL_STRUCTURE_PEPTIDECAPPROCESSOR_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/core/concept/composite.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_PEPTIDECAPPROCESSOR_H
+#define BALL_CORE_STRUCTURE_PEPTIDECAPPROCESSOR_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/atomBijection.h>
 
-#ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/core/kernel/residue.h>
-#endif
-
-#ifndef BALL_KERNEL_CHAIN_H
-# include <BALL/core/kernel/chain.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-# include <BALL/core/structure/atomBijection.h>
-#endif
 
 namespace BALL
 {
@@ -63,4 +49,4 @@ namespace BALL
 
 } //namespace BALL
 
-#endif // BALL_STRUCTURE_PEPTIDECAPPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_PEPTIDECAPPROCESSOR_H

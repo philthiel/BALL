@@ -1,13 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/format/dockResultFile.h>
-#include <BALL/core/structure/fragmentDB.h>
+
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/fragmentDB.h>
 
 using namespace std;
+
 
 namespace BALL
 {

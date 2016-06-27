@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: INIFile.h,v 1.41.20.1 2007/08/09 17:11:53 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_INIFILE_H
-#define BALL_FORMAT_INIFILE_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_FORMAT_INIFILE_H
+#define BALL_CORE_FORMAT_INIFILE_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/stringHashMap.h>
+
 
 namespace BALL 
 {
@@ -535,4 +528,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_INIFILE_H
+#endif // BALL_CORE_FORMAT_INIFILE_H

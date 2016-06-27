@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94Parameters.h,v 1.1.8.1 2007/03/25 21:25:17 oliver Exp $ 
-//
+//_new_file_header
 
-// Molecular Mechanics: MMFF94 force field class
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#define BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
+#ifndef BALL_CORE_MOLMEC_MMFF94_MMFF94PARAMETERS_H
+#define BALL_CORE_MOLMEC_MMFF94_MMFF94PARAMETERS_H
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif 
+#include <BALL/core/datatype/hashMap.h>
+
 
 namespace BALL 
 {
@@ -567,4 +561,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
+#endif // BALL_CORE_MOLMEC_MMFF94_MMFF94PARAMETERS_H

@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_BRUKER1DFILE_H
-#define BALL_FORMAT_BRUKER1DFILE_H
+#ifndef BALL_CORE_FORMAT_BRUKER1DFILE_H
+#define BALL_CORE_FORMAT_BRUKER1DFILE_H
 
-#ifndef BALL_FORMAT_JCAMPFILE_H
-# include <BALL/core/format/JCAMPFile.h>
-#endif
+#include <BALL/core/datatype/regularData1D.h>
+#include <BALL/core/format/JCAMPFile.h>
 
-#ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/core/datatype/regularData1D.h>
-#endif
 
 namespace BALL
 {
@@ -81,4 +75,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_FORMAT_BRUKER1DFILE_H
+#endif // BALL_CORE_FORMAT_BRUKER1DFILE_H

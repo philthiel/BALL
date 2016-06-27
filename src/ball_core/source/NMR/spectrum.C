@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/nmr/spectrum.h>
+
 #include <BALL/core/datatype/regularData1D.h>
 #include <BALL/core/datatype/regularData2D.h>
 #include <BALL/core/datatype/regularData3D.h>
+
 
 namespace BALL
 {

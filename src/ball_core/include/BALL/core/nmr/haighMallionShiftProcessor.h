@@ -1,22 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: haighMallionShiftProcessor.h,v 1.16.10.6 2007-04-12 13:53:54 anne Exp $
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include<BALL/core/nmr/shiftModule.h>
-#endif
+#ifndef BALL_CORE_NMR_HAIGHMALLIONSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_HAIGHMALLIONSHIFTPROCESSOR_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/nmr/shiftModule.h>
 
 #include <list>
+
 
 namespace BALL 
 {
@@ -228,3 +221,4 @@ namespace BALL
   
 } // namespace BALL
 
+#endif // BALL_CORE_NMR_HAIGHMALLIONSHIFTPROCESSOR_H

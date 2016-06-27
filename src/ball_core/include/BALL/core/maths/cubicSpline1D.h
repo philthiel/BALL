@@ -1,13 +1,15 @@
-#ifndef BALL_MATHS_CUBICSPLINE1D_H
-#define BALL_MATHS_CUBICSPLINE1D_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_MATHS_CUBICSPLINE1D_H
+#define BALL_CORE_MATHS_CUBICSPLINE1D_H
 
 #include <map>
 #include <set>
 #include <vector>
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+
 
 namespace BALL 
 {
@@ -267,4 +269,5 @@ namespace BALL
 	};
 
 }
-#endif
+
+#endif // BALL_CORE_MATHS_CUBICSPLINE1D_H

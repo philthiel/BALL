@@ -1,13 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#include <BALL/core/system/path.h>
+
 #include <BALL/core/xray/crystalInfo.h>
+
 #include <BALL/core/format/lineBasedFile.h>
 #include <BALL/core/format/parameters.h>
 #include <BALL/core/format/parameterSection.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL
 {

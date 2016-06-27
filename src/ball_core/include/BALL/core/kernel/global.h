@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: global.h,v 1.25 2005/10/23 12:02:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_GLOBAL_H
-#define BALL_KERNEL_GLOBAL_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_GLOBAL_H
+#define BALL_CORE_KERNEL_GLOBAL_H
 
-#ifndef BALL_KERNEL_BOND_H
-#	include <BALL/core/kernel/bond.h>
-#endif
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+
 
 namespace BALL 
 {
@@ -114,4 +107,4 @@ namespace BALL
 	extern bool clone_bonds;
 } // namespace BALL  
 
-#endif // BALL_KERNEL_GLOBAL_H
+#endif // BALL_CORE_KERNEL_GLOBAL_H

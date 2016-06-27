@@ -1,17 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
- 
-#ifndef BALL_MOLMEC_PARAMETER_COSINETORSION_H
-#define BALL_MOLMEC_PARAMETER_COSINETORSION_H
+//_new_file_header
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_PARAMETER_COSINETORSION_H
+#define BALL_CORE_MOLMEC_PARAMETER_COSINETORSION_H
+
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+
+#include <vector>
+
 
 namespace BALL 
 {
@@ -230,11 +227,11 @@ namespace BALL
 
 		Size									number_of_atom_types_;
 
-		vector<Values>				torsions_;
+		std::vector<Values>				torsions_;
 		
 		HashMap<Size, Size>		torsion_hash_map_;
 	};
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_COSINETORSION_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_COSINETORSION_H

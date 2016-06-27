@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: embeddable.C,v 1.18 2005/12/23 17:02:33 amoll Exp $
-//
+//_new_file_header
 
-#include <BALL/core/common/logStream.h>
+
 #include <BALL/core/concept/embeddable.h>
 
+#include <BALL/core/common/logStream.h>
+
 #undef BALL_DEBUG
+
+using namespace std;
 
 namespace BALL
 {

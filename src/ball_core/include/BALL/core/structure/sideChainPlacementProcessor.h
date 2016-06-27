@@ -1,17 +1,13 @@
-#ifndef BALL_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H
-#define BALL_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-	#include <BALL/core/concept/processor.h>
-#endif
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H
+#define BALL_CORE_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/atomContainer.h>
+
 
 namespace BALL 
 {
@@ -224,5 +220,4 @@ namespace BALL
 
 } // namespace BALL 
 
-
-#endif // BALL_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_SIDECHAINPLACEMENTPROCESSOR_H

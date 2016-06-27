@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: rombergIntegrator.h,v 1.12 2003/08/26 08:04:22 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_ROMBERGINTEGRATOR_H
-#define BALL_MATHS_ROMBERGINTEGRATOR_H
 
-#ifndef BALL_MATHS_NUMERICALINTERGRATOR_H
-# include <BALL/core/maths/numericalIntegrator.h>
-#endif
+#ifndef BALL_CORE_MATHS_ROMBERGINTEGRATOR_H
+#define BALL_CORE_MATHS_ROMBERGINTEGRATOR_H
+
+#include <BALL/core/maths/numericalIntegrator.h>
+
 
 namespace BALL
 {
@@ -207,4 +203,4 @@ namespace BALL
 	}
 } // namespace BALL
 	
-#endif // BALL_MATHS_ROMBERGINTEGRATOR_H
+#endif // BALL_CORE_MATHS_ROMBERGINTEGRATOR_H

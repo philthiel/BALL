@@ -1,27 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ringPerceptionProcessor.h,v 1.17.4.2 2007/04/03 13:29:45 bertsch Exp $
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
-#define BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_QSAR_RINGPERCEPTIONPROCESSOR_H
+#define BALL_CORE_QSAR_RINGPERCEPTIONPROCESSOR_H
 
-#ifndef BALL_STRUCTURE_SIMPLEMOLECULARGRAPH_H
-#include <BALL/core/structure/simpleMolecularGraph.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
 #include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/structure/simpleMolecularGraph.h>
 
-
-#include <stack>
 #include <vector>
+
 
 namespace BALL
 {
@@ -73,13 +61,13 @@ public:
 					@param SSSR, vector of rings, where the rings are stored in vector<Atom*>
 					@param AtomContiner, from which AtomContainer the rings are to be percepted
 			*/
-	Size calculateSSSR(vector<vector<Atom*> >& sssr, AtomContainer& ac);
+	Size calculateSSSR(std::vector<std::vector<Atom*> >& sssr, AtomContainer& ac);
 	//@}
 
 	/** Getter which returns all the 3 - 6 membered rings, calculateSSSR with
 			 *  the Balducci-Pearlman Algorithm (defalt) is needed prior this call.
 			 */
-	const vector<vector<Atom*> >& getAllSmallRings() const;
+	const std::vector<std::vector<Atom*> >& getAllSmallRings() const;
 
 	/** @name Processor-related methods
 			*/
@@ -197,4 +185,4 @@ public:
 
 } // namespace BALL
 
-#endif // BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
+#endif // BALL_CORE_QSAR_RINGPERCEPTIONPROCESSOR_H

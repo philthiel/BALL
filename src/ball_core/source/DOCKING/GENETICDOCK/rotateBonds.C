@@ -1,23 +1,20 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/structure/geometricTransformations.h>
-#include <BALL/core/maths/matrix44.h>
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/common/constants.h>
-
-#include <iostream>
 
 #include <BALL/core/docking/geneticdock/rotateBonds.h>
 
-#include <BALL/core/docking/geneticdock/rotateBond.h>
 #include <BALL/core/common/constants.h>
+#include <BALL/core/docking/geneticdock/rotateBond.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/structure/geometricTransformations.h>
+
+#include <iostream>
 
 using namespace std;
+
 
 namespace BALL
 {

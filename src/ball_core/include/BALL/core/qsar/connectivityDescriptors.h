@@ -1,14 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_CONNECTIVITYDESCRIPTORS_H
-#define BALL_QSAR_CONNECTIVITYDESCRIPTORS_H
 
-#ifndef BALL_QSAR_CONNECTIVITYBASE_H
-# include <BALL/core/qsar/connectivityBase.h>
-#endif
+#ifndef BALL_CORE_QSAR_CONNECTIVITYDESCRIPTORS_H
+#define BALL_CORE_QSAR_CONNECTIVITYDESCRIPTORS_H
+
+#include <BALL/core/qsar/connectivityBase.h>
+
 
 namespace BALL
 {
@@ -96,5 +93,5 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_QSAR_CONNECTIVITYDESCRIPTORS_H
+#endif // BALL_CORE_QSAR_CONNECTIVITYDESCRIPTORS_H
 

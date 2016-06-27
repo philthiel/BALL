@@ -1,16 +1,16 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
+
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
+
 // forward declaration for lp_solve
 struct _lprec;
 typedef struct _lprec lprec;
+
 
 namespace BALL
 {
@@ -55,4 +55,5 @@ namespace BALL
 			lprec* ilp_;
 	};
 }
-#endif // BALL_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H
+
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_ILPBONDORDERSTRATEGY_H

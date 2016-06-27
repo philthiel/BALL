@@ -1,20 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_MOLMEC_AMBER_GAFFCESPARSER_H
-#define BALL_MOLMEC_AMBER_GAFFCESPARSER_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_AMBER_GAFFCESPARSER_H
+#define BALL_CORE_MOLMEC_AMBER_GAFFCESPARSER_H
 
-#ifndef BALL_DATATYPE_STRING_H
 #include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/kernel/atom.h>
 
-#include <set>
 #include <map>
+#include <set>
 #include <vector>
+
 
 namespace BALL
 {
@@ -330,4 +326,4 @@ namespace BALL
 	
 }
 
-#endif
+#endif // BALL_CORE_MOLMEC_AMBER_GAFFCESPARSER_H

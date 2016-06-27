@@ -1,9 +1,13 @@
-#ifndef BALL_STRUCTURE_NUCLEOTIDEMAPPING_H
-#define BALL_STRUCTURE_NUCLEOTIDEMAPPING_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_STRUCTURE_NUCLEOTIDEMAPPING_H
+#define BALL_CORE_STRUCTURE_NUCLEOTIDEMAPPING_H
 
 #include <string>
 
 #include <BALL/core/datatype/hashMap.h>
+
 
 namespace BALL
 {
@@ -114,5 +118,5 @@ namespace BALL
 	};
 }
 
-#endif //BALL_STRUCTURE_NUCLEOTIDEMAPPING_H
+#endif // BALL_STRUCTURE_NUCLEOTIDEMAPPING_H
 

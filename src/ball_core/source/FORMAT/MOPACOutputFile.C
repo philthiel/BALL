@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/MOPACOutputFile.h>
-#include <BALL/core/datatype/string.h>
-#include <BALL/core/kernel/PTE.h>
 
-#include <BALL/core/kernel/system.h>
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/PDBAtom.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PDBAtom.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+
 
 namespace BALL
 {

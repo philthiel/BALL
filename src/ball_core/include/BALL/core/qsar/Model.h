@@ -1,31 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-#ifndef BALL_QSAR_MODEL_H
-#define BALL_QSAR_MODEL_H
+//_new_file_header
 
 
-#ifndef BALL_QSAR_VALIDATION_H
-#include <BALL/core/qsar/validation.h>
-#endif
+#ifndef BALL_CORE_QSAR_MODEL_H
+#define BALL_CORE_QSAR_MODEL_H
 
-#ifndef BALL_QSAR_QSARDATA_H
-#include <BALL/core/qsar/QSARData.h>
-#endif
-
-#ifndef BALL_QSAR_EXCEPTION_H
-#include <BALL/core/qsar/exception.h>
-#endif
-
-#ifndef BALL_MATHS_PARSEDFUNCTION_H
 #include <BALL/core/maths/parsedFunction.h>
-#endif
+#include <BALL/core/qsar/exception.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/validation.h>
 
-#include <vector>
 #include <set>
+#include <string>
+#include <vector>
 
 #include <Eigen/Core>
+
 
 namespace BALL
 {
@@ -73,7 +62,7 @@ namespace BALL
 				If (transform==1): each descriptor value is transformed according to the centering of the respective column of QSARData.descriptor_matrix used to train this model. \n
 				If the substance to be predicted is part of the same input data (e.g. same SD-file) as the training data (as is the case during cross validation), transform should therefore be set to 0. 
 				@return a RowVector containing one value for each predicted activity*/
-				virtual Eigen::VectorXd predict(const vector<double>& substance, bool transform) =0; 
+				virtual Eigen::VectorXd predict(const std::vector<double>& substance, bool transform) =0;
 				
 				/** removes all entries from descriptor_IDs */
 				void deleteDescriptorIDs();
@@ -94,9 +83,9 @@ namespace BALL
 				{return -1.0;};
 				
 				/** sets the model parameters according to the given values. */
-				virtual void setParameters(vector<double>& /*v*/){};
+				virtual void setParameters(std::vector<double>& /*v*/){};
 				
-				virtual vector<double> getParameters() const;
+				virtual std::vector<double> getParameters() const;
 
 				/** returns a const pointer to the descriptor IDs of this model */
 				std::multiset<unsigned int>* getDescriptorIDs();
@@ -104,19 +93,19 @@ namespace BALL
 				void setDataSource(const QSARData* q);
 				
 				/** save Model to a file */
-				virtual void saveToFile(string filename) = 0;
+				virtual void saveToFile(String filename) = 0;
 				
 				/** reconstruct a saved Model from a file */
-				virtual void readFromFile(string filename) = 0;
+				virtual void readFromFile(String filename) = 0;
 				
 				/** returns a const pointer to the descriptor matrix of this model */
 				const Eigen::MatrixXd* getDescriptorMatrix();
 				
 				/** returns a const pointer to the names of the substances of this model */
-				const vector<string>* getSubstanceNames();
+				const std::vector<std::string>* getSubstanceNames();
 				
 				/** returns a const pointer to the names of the descriptors of this model */
-				const vector<string>* getDescriptorNames();
+				const std::vector<std::string>* getDescriptorNames();
 
 				/** returns descriptor transformations **/
 				const Eigen::MatrixXd getDescriptorTransformations();
@@ -130,7 +119,7 @@ namespace BALL
 				void setDescriptorIDs(const std::multiset<unsigned int>& sl);
 				
 				/** returns the type of the current model, e.g. "MLR", "PLS", ... */
-				const string* getType();
+				const std::string* getType();
 				
 				/** Fetches the un-normalized value for the specified feature of the desired compound (instance) from the data that this Model currently contains. This method is needed for visualization purposes only. */ 
 				void getUnnormalizedFeatureValue(int compound, int feature, double& return_value);
@@ -163,7 +152,7 @@ namespace BALL
 				//@{
 				/** returns a Row-Vector containing only the values for these descriptors, that have been selected for this model \n
 				@param substance a vector of *all* descriptor values for the substance to be predicted */
-				Eigen::VectorXd getSubstanceVector(const vector<double>& substance, bool transform);
+				Eigen::VectorXd getSubstanceVector(const std::vector<double>& substance, bool transform);
 				
 				Eigen::VectorXd getSubstanceVector(const Eigen::VectorXd& substance, bool transform);
 				
@@ -206,10 +195,10 @@ namespace BALL
 				Eigen::MatrixXd descriptor_matrix_;
 					
 				/** names of all substances */
-				vector<string> substance_names_;
+				std::vector<std::string> substance_names_;
 	
 				/** names of all descriptors */
-				vector<string> descriptor_names_;
+				std::vector<std::string> descriptor_names_;
 				
 				/** 2xm dimensional matrix (m=no of descriptors) containing mean and stddev of each selected descriptor. \n
 				The content of this matrix is updated only by Model.readTrainingData() */
@@ -245,4 +234,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_QSAR_MODEL_H
+#endif // BALL_CORE_QSAR_MODEL_H

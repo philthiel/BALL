@@ -1,25 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_ENUMERATOR_H
-#define BALL_CONCEPT_ENUMERATOR_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_ENUMERATOR_H
+#define BALL_CORE_CONCEPT_ENUMERATOR_H
 
-#ifndef BALL_COMMON_RTTI_H
-# include <BALL/core/common/rtti.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/forwardIterator.h>
+#include <BALL/core/common/rtti.h>
 
-#ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/core/concept/forwardIterator.h>
-#endif
-
-#include <vector>
-#include <list>
 #include <algorithm>
+#include <list>
+#include <vector>
+
 
 namespace BALL
 {
@@ -680,4 +672,4 @@ namespace BALL
 
 }
 
-#endif // BALL_CONCEPT_ENUMERATOR_H
+#endif // BALL_CORE_CONCEPT_ENUMERATOR_H

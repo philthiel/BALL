@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: timeStamp.C,v 1.21 2005/12/23 17:02:33 amoll Exp $
+//_new_file_header
+
 
 #include <BALL/core/concept/timeStamp.h>
 
@@ -22,6 +20,7 @@
 #endif
 
 using namespace std;
+
 
 namespace BALL 
 {

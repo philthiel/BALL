@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: simpleBox3.h,v 1.9 2004/05/27 19:49:42 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_SIMPLEBOX3_H
-#define BALL_MATHS_SIMPLEBOX3_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_MATHS_SIMPLEBOX3_H
+#define BALL_CORE_MATHS_SIMPLEBOX3_H
+
+#include <BALL/core/maths/vector3.h>
+
 
 namespace BALL 
 {
@@ -612,4 +608,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_SimpleBox3_H
+#endif // BALL_CORE_MATHS_SimpleBox3_H

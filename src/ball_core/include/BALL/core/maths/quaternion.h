@@ -1,19 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_MATHS_QUATERNION_H
-#define BALL_MATHS_QUATERNION_H
 
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
+#ifndef BALL_CORE_MATHS_QUATERNION_H
+#define BALL_CORE_MATHS_QUATERNION_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/vector3.h>
 
 #include <boost/math/quaternion.hpp>
 #include <iostream>
+
 
 namespace BALL
 {
@@ -674,4 +670,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_QUATERNION_H
+#endif // BALL_CORE_MATHS_QUATERNION_H

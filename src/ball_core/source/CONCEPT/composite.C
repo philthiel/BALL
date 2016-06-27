@@ -1,17 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: composite.C,v 1.43 2005/12/23 17:02:33 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/composite.h>
+
 #include <BALL/core/concept/persistenceManager.h>
 #include <BALL/core/datatype/listSort.mac>
+#include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/predicate.h>
 
-#include <BALL/core/kernel/atom.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

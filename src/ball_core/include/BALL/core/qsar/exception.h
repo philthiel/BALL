@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_EXCEPTION_H
-#define BALL_QSAR_EXCEPTION_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
+#ifndef BALL_CORE_QSAR_EXCEPTION_H
+#define BALL_CORE_QSAR_EXCEPTION_H
+
 #include <BALL/core/common/exception.h>
-#endif
 
 
 namespace BALL
@@ -111,6 +108,5 @@ namespace BALL
 	}
 }
 
-
-#endif // QSAR_EXCEPTION
+#endif // BALL_CORE_QSAR_EXCEPTION_H
 

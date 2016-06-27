@@ -1,10 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: electrostaticPotentialCalculator.C,v 1.4 2004/05/10 11:47:17 amoll Exp $
+//_new_file_header
+
 
 #include <BALL/core/solvation/electrostaticPotentialCalculator.h>
+
 #include <BALL/core/structure/fragmentDB.h>
+
 
 namespace BALL
 {

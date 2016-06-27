@@ -1,14 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_SURFACEDESCRIPTORS_H
-#define BALL_QSAR_SURFACEDESCRIPTORS_H
 
-#ifndef BALL_QSAR_SURFACEBASE_H
-# include <BALL/core/qsar/surfaceBase.h>
-#endif
+#ifndef BALL_CORE_QSAR_SURFACEDESCRIPTORS_H
+#define BALL_CORE_QSAR_SURFACEDESCRIPTORS_H
+
+#include <BALL/core/qsar/surfaceBase.h>
+
 
 namespace BALL
 {
@@ -606,5 +603,5 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_QSAR_SURFACEDESCRIPTORS_H
+#endif // BALL_CORE_QSAR_SURFACEDESCRIPTORS_H
 

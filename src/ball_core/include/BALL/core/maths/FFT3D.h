@@ -1,27 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-#ifndef BALL_MATHS_TFFT3D_H
-#define BALL_MATHS_TFFT3D_H
-
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+//_new_file_header
 
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/core/datatype/regularData3D.h>
-#endif
+#ifndef BALL_CORE_MATHS_TFFT3D_H
+#define BALL_CORE_MATHS_TFFT3D_H
 
-//#ifndef BALL_MATHS_VECTOR2_H
-//# include <BALL/core/maths/vector3.h>
-//#endif
-
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/regularData3D.h>
 #include <BALL/core/maths/fftwCommon.h>
+
 #include <cmath>
 #include <complex>
 #include <fftw3.h>
+
 
 namespace BALL
 {
@@ -1167,4 +1157,4 @@ Vector3(from.getPhysSpaceMaxX(), from.getPhysSpaceMaxY(), from.getPhysSpaceMaxZ(
 	}	
 }
 
-#endif // BALL_MATHS_TFFT3D_H
+#endif // BALL_CORE_MATHS_TFFT3D_H

@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_TRRFILE_H
-#define BALL_FORMAT_TRRFILE_H
 
-#ifndef BALL_FORMAT_TRAJECTORYFILE_H
-#	include <BALL/core/format/trajectoryFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_TRRFILE_H
+#define BALL_CORE_FORMAT_TRRFILE_H
 
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/core/system/binaryFileAdaptor.h>
-#endif
+#include <BALL/core/format/trajectoryFile.h>
+#include <BALL/core/system/binaryFileAdaptor.h>
+
 
 namespace BALL
 {
@@ -320,4 +315,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_TRRFILE_H 
+#endif // BALL_CORE_FORMAT_TRRFILE_H 

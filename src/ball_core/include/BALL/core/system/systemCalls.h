@@ -1,17 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: systemCalls.h,v 1.1.6.1 2007/03/25 21:25:39 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_SYSTEM_CALLS
-#define BALL_SYSTEM_SYSTEM_CALLS
+
+#ifndef BALL_CORE_SYSTEM_SYSTEM_CALLS
+#define BALL_CORE_SYSTEM_SYSTEM_CALLS
 
 #include <BALL/core/common/macros.h>
+
 
 namespace BALL
 {
 	BALL_EXPORT void sleepFor(Size mseconds);
 }
 
-#endif // BALL_SYSTEM_SYSTEM_CALLS
+#endif // BALL_CORE_SYSTEM_SYSTEM_CALLS

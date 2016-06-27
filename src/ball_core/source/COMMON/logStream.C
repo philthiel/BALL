@@ -1,16 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: logStream.C,v 1.42.18.1 2007/03/25 22:00:03 oliver Exp $
-//
+//_new_file_header
+
+
+#include <BALL/core/common/logStream.h>
 
 #include <algorithm>
 #include <limits>
-#include <string>
-#include <cstring>
 #include <cstdio>
-
-#include <BALL/core/common/logStream.h>
+#include <cstring>
+#include <string>
 
 #define BUFFER_LENGTH 32768
 
@@ -21,6 +18,9 @@
 #	define BALL_IOS std::ios
 #	define BALL_OSTREAM std::ostream
 #endif
+
+using namespace std;
+
 
 namespace BALL 
 {

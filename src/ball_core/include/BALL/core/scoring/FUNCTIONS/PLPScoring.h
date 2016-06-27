@@ -1,13 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_PLPSCORING_H
-#define BALL_SCORING_FUNCTIONS_PLPSCORING_H
 
-#include <BALL/core/scoring/common/scoringFunction.h>
+#ifndef BALL_CORE_SCORING_FUNCTIONS_PLPSCORING_H
+#define BALL_CORE_SCORING_FUNCTIONS_PLPSCORING_H
+
 #include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
+
 
 namespace BALL
 {
@@ -34,4 +33,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_PLPSCORING_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_PLPSCORING_H

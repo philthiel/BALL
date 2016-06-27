@@ -1,29 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_GEOMETRICFIT_H
-#define BALL_DOCKING_GEOMETRICFIT_H
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
+#ifndef BALL_CORE_DOCKING_GEOMETRICFIT_H
+#define BALL_CORE_DOCKING_GEOMETRICFIT_H
+
 #include <BALL/core/datatype/regularData3D.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_MATHS_COMPLEX_H
-#include <BALL/core/maths/complex.h>
-#endif
-
-#ifndef BALL_MATHS_FFT3D_H
-#include <BALL/core/maths/FFT3D.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
 #include <BALL/core/docking/common/dockingAlgorithm.h>
-#endif
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/complex.h>
+#include <BALL/core/maths/FFT3D.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -244,9 +232,9 @@ namespace BALL
 					}
 
 					// TODO: This class is a bit strange...
-					vector<int> phi_;
-					vector<int> theta_;
-					vector<int> psi_;
+					std::vector<int> phi_;
+					std::vector<int> theta_;
+					std::vector<int> psi_;
 
 				private:
 					int ang_num_;
@@ -438,11 +426,11 @@ namespace BALL
 			System system_backup_b_;
 
 			// Vectors to store orientation and translation of the results in the ranked conformations
-			vector<Vector3> translations_;
-			vector<Vector3> orientations_;
+			std::vector<Vector3> translations_;
+			std::vector<Vector3> orientations_;
 
     }; // class GeometricFit
 
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_DOCKING_GEOMETRICFIT_H

@@ -1,10 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/trajectoryFile.h>
 
 #include <BALL/core/common/logStream.h>
+
+#include <vector>
 
 using namespace std;
 
@@ -85,7 +86,7 @@ namespace BALL
 		return number_of_atoms_;
 	}
 
-	bool TrajectoryFile::flushToDisk(const std::vector<SnapShot>& /* buffer */)
+	bool TrajectoryFile::flushToDisk(const vector<SnapShot>& /* buffer */)
 	{
 		if (!isOpen() || getOpenMode() != File::MODE_OUT)
 		{

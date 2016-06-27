@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_MOLECULE_H
-#define BALL_KERNEL_MOLECULE_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_KERNEL_MOLECULE_H
+#define BALL_CORE_KERNEL_MOLECULE_H
 
-#ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/core/kernel/fragment.h>
-#endif
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/fragmentIterator.h>
 
-#ifndef BALL_KERNEL_FRAGMENTITERATOR_H
-#	include <BALL/core/kernel/fragmentIterator.h>
-#endif
 
 namespace BALL 
 {
@@ -242,7 +234,7 @@ namespace BALL
 		bool operator != (const Molecule& molecule) const;
 
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Fragment)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Fragment)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(Molecule, Fragment, fragments)
 
 
@@ -272,4 +264,4 @@ namespace BALL
 	};
 } // namespace BALL 
 
-#endif // BALL_KERNEL_MOLECULE_H
+#endif // BALL_CORE_KERNEL_MOLECULE_H

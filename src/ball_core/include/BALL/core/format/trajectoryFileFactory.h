@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_TRAJECTORYFILEFACTORY_H
-#define BALL_FORMAT_TRAJECTORYFILEFACTORY_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_TRAJECTORYFILEFACTORY_H
+#define BALL_CORE_FORMAT_TRAJECTORYFILEFACTORY_H
+
+#include <BALL/core/system/file.h>
+
 
 namespace BALL
 {
@@ -61,4 +59,4 @@ namespace BALL
 
 }
 
-#endif // BALL_FORMAT_TRAJECTORYFILEFACTORY_H
+#endif // BALL_CORE_FORMAT_TRAJECTORYFILEFACTORY_H

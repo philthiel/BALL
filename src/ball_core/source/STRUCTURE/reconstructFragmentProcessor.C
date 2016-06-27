@@ -1,20 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/reconstructFragmentProcessor.h>
 
-#include <list>
-#include <vector>
-
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/system/path.h>
+#include <BALL/core/datatype/stringHashMap.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/maths/matrix44.h>
-#include <BALL/core/datatype/stringHashMap.h>
 #include <BALL/core/structure/fragmentDB.h>
 #include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/system/path.h>
+
+#include <list>
+#include <vector>
 	
 using namespace std;
 
@@ -25,6 +24,7 @@ using namespace std;
 #else
 #	define DEBUG(a)
 #endif
+
 
 namespace BALL 
 {

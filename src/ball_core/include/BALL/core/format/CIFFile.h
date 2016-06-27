@@ -1,25 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_CIFFILE_H
-#define BALL_FORMAT_CIFFILE_H
 
-#ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_CIFFILE_H
+#define BALL_CORE_FORMAT_CIFFILE_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/system/file.h>
 
-#ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/core/kernel/molecule.h>
-#endif
-
-#include <map>
+#include <vector>
 
 #define CIFPARSER_LINE_LENGTH 2550
+
 
 namespace BALL
 {
@@ -197,8 +189,8 @@ namespace BALL
 
 					Item dummy_data_item_; 
 					SaveFrame dummy_saveframe_; 
-					vector<SaveFrame> dummy_saveframes_; 
-					vector<Index> dummy_indices_; 
+					std::vector<SaveFrame> dummy_saveframes_;
+					std::vector<Index> dummy_indices_;
 
 			};
 
@@ -278,7 +270,7 @@ namespace BALL
 			String current_item_;
 			
 			StringHashMap<Index> datablocks_hash_;
-			vector<Datablock> datablocks_;
+			std::vector<Datablock> datablocks_;
 	};	
 }
-#endif // BALL_FORMAT_CIFFILE_H
+#endif // BALL_CORE_FORMAT_CIFFILE_H

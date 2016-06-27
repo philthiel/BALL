@@ -1,30 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-#ifndef BALL_DOCKING_COMMON_CONSTRAINTS
-#define BALL_DOCKING_COMMON_CONSTRAINTS
+//_new_file_header
 
 
-#ifndef BALL_MATHS_VECTOR3_H
-#include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_DOCKING_COMMON_CONSTRAINTS
+#define BALL_CORE_DOCKING_COMMON_CONSTRAINTS
 
-#ifndef BALL_MATHS_MATRIX44_H
-#include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_MATHS_PLANE3_H
-#include <BALL/core/maths/plane3.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHGRID_H
 #include <BALL/core/datatype/hashGrid.h>
-#endif
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/vector3.h>
+
+#include <list>
+#include <vector>
 
 
 namespace BALL
@@ -85,7 +72,7 @@ namespace BALL
 			/** Constructor that creates a ReferenceArea describing the area occupied by a given AtomContainer */
 			ReferenceArea(const AtomContainer* sys, bool atom_fraction, double atoms, double penalty);
 
-			ReferenceArea(list<const AtomContainer*>& container_list, const list<String>& interaction_types, double desired_interaction_score, double penalt);
+			ReferenceArea(std::list<const AtomContainer*>& container_list, const std::list<String>& interaction_types, double desired_interaction_score, double penalt);
 
 			/** calculates a penalty for the given AtomContainer */
 			double calculateScore(AtomContainer* mol);
@@ -125,7 +112,7 @@ namespace BALL
 			/** the number of atoms located within this ReferenceAreas as calculated by the last call of getScore() (respectively ScoringFunction::updateScore() )  */
 			double contained_atoms_;
 
-			vector<Vector3> input_points_;
+			std::vector<Vector3> input_points_;
 
 			/** the number of atoms of the reference ligand */
 			Size number_reflig_atoms_;
@@ -145,9 +132,9 @@ namespace BALL
 		: public Constraint
 	{
 		public:
-			PharmacophoreConstraint(list<const AtomContainer*>& container_list, const list<String>& interaction_types, double desired_interaction_score, double penalty);
+			PharmacophoreConstraint(std::list<const AtomContainer*>& container_list, const std::list<String>& interaction_types, double desired_interaction_score, double penalty);
 
-			PharmacophoreConstraint(const AtomContainer* container, const list<String>& interaction_types, double desired_interaction_score, double penalty);
+			PharmacophoreConstraint(const AtomContainer* container, const std::list<String>& interaction_types, double desired_interaction_score, double penalty);
 
 			PharmacophoreConstraint(const PharmacophoreConstraint& phC);
 
@@ -155,7 +142,7 @@ namespace BALL
 
 			/** Constructor for initializing a PharmacophoreConstraint with a list of residue-IDs. \n
 			If using this constructor, the ScoringFunction for this object must be set by setScoringFunction() _before_ calling calculateScore() for the first time. If the receptor that is used by this ScoringFunction is not a Protein or does not have residues for all the specified IDs, setScoringFunction() will throw an exception. */
-			PharmacophoreConstraint(vector<String>& residue_IDs, const list<String>& interaction_types, double desired_interaction_score, double penalty);
+			PharmacophoreConstraint(std::vector<String>& residue_IDs, const std::list<String>& interaction_types, double desired_interaction_score, double penalty);
 
 			void setScoringFunction(ScoringFunction* sf);
 
@@ -169,17 +156,17 @@ namespace BALL
 
 			AtomContainer* getGridContainer();
 
-			const list<String>* getInteractionTypes();
+			const std::list<String>* getInteractionTypes();
 
-			const list<const AtomContainer*>* getInteractionPartners();
+			const std::list<const AtomContainer*>* getInteractionPartners();
 
 		private:
 			/** only used in case of creation of an object of this class by constructor PharmacophoreConstraint(vector<String>& residue_IDs ...) */
-			vector<String> residue_IDs_;
-			vector<String> chain_IDs_;
+			std::vector<String> residue_IDs_;
+			std::vector<String> chain_IDs_;
 
-			list<const AtomContainer*> interaction_partners_;
-			list<String> interaction_types_;
+			std::list<const AtomContainer*> interaction_partners_;
+			std::list<String> interaction_types_;
 			double desired_interaction_score_;
 			double interaction_score_;
 			bool uses_receptor_residues_;
@@ -195,4 +182,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_COMMON_CONSTRAINTS
+#endif // BALL_CORE_DOCKING_COMMON_CONSTRAINTS

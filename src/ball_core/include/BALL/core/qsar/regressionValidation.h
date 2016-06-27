@@ -1,18 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_REGRESSIONVALIDATION_H
-#define BALL_QSAR_REGRESSIONVALIDATION_H
 
-#include <BALL/core/qsar/common.h>
-
-#include <BALL/core/qsar/QSARData.h>
-
-#include <BALL/core/qsar/validation.h>
+#ifndef BALL_CORE_QSAR_REGRESSIONVALIDATION_H
+#define BALL_CORE_QSAR_REGRESSIONVALIDATION_H
 
 #include <iterator>
+
+#include <BALL/core/qsar/common.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/validation.h>
+
 
 namespace BALL
 {	
@@ -114,11 +111,11 @@ namespace BALL
 				
 				void setCoefficientStdErrors(const Eigen::MatrixXd* stddev);
 				
-				void saveToFile(string filename) const;
+				void saveToFile(String filename) const;
 				
-				void saveToFile(string filename, const double& r2, const double& q2, const Eigen::MatrixXd& coefficient_stddev, const Eigen::MatrixXd& yRand_results) const;
+				void saveToFile(String filename, const double& r2, const double& q2, const Eigen::MatrixXd& coefficient_stddev, const Eigen::MatrixXd& yRand_results) const;
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				//@}
 				
 	
@@ -203,4 +200,4 @@ namespace BALL
 
 
 
-#endif // BALL_QSAR_REGRESSIONVALIDATION_H
+#endif // BALL_CORE_QSAR_REGRESSIONVALIDATION_H

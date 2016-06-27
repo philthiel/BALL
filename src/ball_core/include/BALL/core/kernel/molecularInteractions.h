@@ -1,8 +1,13 @@
-#ifndef BALL_KERNEL_MOLECULARINTERACTIONS_H
-#define BALL_KERNEL_MOLECULARINTERACTIONS_H
+//_new_file_header
 
-#include <BALL/core/kernel/atom.h>
+
+#ifndef BALL_CORE_KERNEL_MOLECULARINTERACTIONS_H
+#define BALL_CORE_KERNEL_MOLECULARINTERACTIONS_H
+
 #include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atom.h>
+
+#include <list>
 #include <map>
 
 
@@ -28,7 +33,7 @@ namespace BALL
 
 			double getInteractionEnergy(const Atom* atom, String interaction_type) const;
 
-			double getInteractionEnergy(const Atom* atom, const list<String>& interaction_types) const;
+			double getInteractionEnergy(const Atom* atom, const std::list<String>& interaction_types) const;
 
 			const std::map<const Atom*,double>* getInteractions(String interaction_type) const;
 
@@ -57,4 +62,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_KERNEL_MOLECULARINTERACTIONS_H
+#endif // BALL_CORE_KERNEL_MOLECULARINTERACTIONS_H

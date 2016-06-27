@@ -1,20 +1,20 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_SCOREGRIDSET
-#define BALL_SCORING_COMMON_SCOREGRIDSET
 
-#include <BALL/core/maths/vector3.h>
-#include <BALL/core/scoring/common/gridBasedScoring.h>
+#ifndef BALL_CORE_SCORING_COMMON_SCOREGRIDSET
+#define BALL_CORE_SCORING_COMMON_SCOREGRIDSET
+
 #include <BALL/core/datatype/regularData3D.h>
 #include <BALL/core/docking/common/constraints.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/scoring/common/gridBasedScoring.h>
+
+#include <vector>
 
 
 namespace BALL
 {
-	typedef vector<vector<vector<double> > > ScoreGrid;
+	typedef std::vector<std::vector<std::vector<double> > > ScoreGrid;
 
 	class GridBasedScoring;
 
@@ -178,4 +178,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMMON_SCOREGRIDSET
+#endif // BALL_CORE_SCORING_COMMON_SCOREGRIDSET

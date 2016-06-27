@@ -1,18 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#define BALL_KERNEL_ITERATOR_H
 
-#ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/core/concept/bidirectionalIterator.h>
-#endif
+#ifndef BALL_CORE_KERNEL_ITERATOR_H
+#define BALL_CORE_KERNEL_ITERATOR_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/core/concept/composite.h>
-#endif
-
+#include <BALL/core/concept/bidirectionalIterator.h>
+#include <BALL/core/concept/composite.h>
 
 /** A macro defining kernel iterators.
 		This macro allows th definition of arbitrary bidirectional
@@ -22,7 +15,7 @@
 		kernel objects. Each macro defines beginX()/endX() (const and mutable)
 		and rendX()/rbeginX() where X is the type of item to iterate over.
 */
-#define BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Type) \
+#define BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Type) \
 Type##Iterator \
 begin##Type () \
 { \
@@ -70,6 +63,7 @@ rend##Type () const \
 { \
   return Type##ConstReverseIterator(begin##Type ()); \
 }
+
 
 namespace BALL 
 {
@@ -386,4 +380,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_KERNEL_ITERATOR_H
+#endif // BALL_CORE_KERNEL_ITERATOR_H

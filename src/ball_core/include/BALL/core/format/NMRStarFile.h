@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_NMRSTARFILE_H
-#define BALL_FORMAT_NMRSTARFILE_H
 
-#ifndef BALL_FORMAT_CIFFILE_H
-# include <BALL/core/format/CIFFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_NMRSTARFILE_H
+#define BALL_CORE_FORMAT_NMRSTARFILE_H
 
-#ifndef BALL_KERNEL_PROTEIN_H
-# include <BALL/core/kernel/protein.h>
-#endif
-
-#ifndef BALL_STRUCTURE_PEPTIDES_H
-# include <BALL/core/structure/peptides.h>
-#endif
+#include <BALL/core/format/CIFFile.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/structure/peptides.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -143,7 +135,7 @@ namespace BALL
 					// Accoring to the NMRStarFile 2.1 documentation 
 					// the first entry MUST BE "_Variable_type".
 					// This is why we are allowed to map per type :-)
-					vector<String>         types;
+					std::vector<String>         types;
 					StringHashMap<float>   values;
 					StringHashMap<float>   errors;
 					StringHashMap<String>  units;
@@ -185,7 +177,7 @@ namespace BALL
 					String label;
 					String type;
 					String details;
-					vector <Component> components;
+					std::vector<Component> components;
 
 					std::ostream& operator >> (std::ostream& s);
 			};
@@ -347,7 +339,7 @@ namespace BALL
 					// we want to allow things like resid 137A, so we cannot use Index
 					// key: index -- value: aminoacidname
 					StringHashMap<String>   residues_by_index;
-					vector<HomologDB>       homolog_database_entries;
+					std::vector<HomologDB>       homolog_database_entries;
 
 					std::ostream& operator >> (std::ostream& s);
 					void clear();
@@ -404,7 +396,7 @@ namespace BALL
 					// Name of the molecular system
 					String                system_name;
 					String                abbreviation_common;
-					vector<ChemicalUnit>  chemical_units;
+					std::vector<ChemicalUnit>  chemical_units;
 					String                system_physical_state;
 					String                system_oligomer_state;
 					String                system_paramagnetic;
@@ -412,7 +404,7 @@ namespace BALL
 					/// The systems molecular weigth in dalton
 					float                 system_molecular_weight;
 					// related entries in various DB's
-					vector<RelatedDB>     related_database_entries;
+					std::vector<RelatedDB>     related_database_entries;
 
 					/// ligand information //TODO
 
@@ -819,7 +811,7 @@ namespace BALL
 			Size getNumberOfMonomericPolymers() const {return monomeric_polymers_.size();};
 
 			/// Get all Monomeric Polymers
-			vector<MonomericPolymer> getMonomericPolymers() const {return monomeric_polymers_;};
+			std::vector<MonomericPolymer> getMonomericPolymers() const {return monomeric_polymers_;};
 
 			///	Check if polymer name is already stored is a monomeric polymer
 			bool hasMonomericPolymer(String name) const;
@@ -969,7 +961,7 @@ namespace BALL
 			std::vector<NMRSpectrometer> nmr_spectrometers_;
 
 			/// Monomeric Polymer information 
-			vector<MonomericPolymer> monomeric_polymers_;
+			std::vector<MonomericPolymer> monomeric_polymers_;
 
 			/// stores, which shifts are given in the file
 			bool has_H_shifts_;
@@ -1002,4 +994,4 @@ namespace BALL
 	//@}
 } // Namespace BALL
 
-#endif // BALL_FORMAT_NMRSTARFILE_H
+#endif // BALL_CORE_FORMAT_NMRSTARFILE_H

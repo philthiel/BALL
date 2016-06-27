@@ -1,8 +1,13 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/bondorders/AStarBondOrderStrategy.h>
-#include <BALL/core/structure/assignBondOrderProcessor.h>
+
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
 
 #define INFINITE_PENALTY 1e5
+
 
 namespace BALL
 {

@@ -1,15 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef LOGITMODEL
-#define LOGITMODEL
 
-#ifndef CLASSIFICATION
+#ifndef BALL_CORE_QSAR_LOGITMODEL_H
+#define BALL_CORE_QSAR_LOGITMODEL_H
+
 #include <BALL/core/qsar/classificationModel.h>
-#endif
 
+#include <vector>
 
 
 namespace BALL{
@@ -35,11 +32,11 @@ namespace BALL{
 				//@{
 				void train();
 				
-				Eigen::VectorXd predict(const vector<double>& substance, bool transform);
+				Eigen::VectorXd predict(const std::vector<double>& substance, bool transform);
 				
-				void saveToFile(string filename);
+				void saveToFile(String filename);
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				//@}
 				
 				
@@ -54,4 +51,4 @@ namespace BALL{
 	}
 }
 
-#endif // LOGITMODEL
+#endif // BALL_CORE_QSAR_LOGITMODEL_H

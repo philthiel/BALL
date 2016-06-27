@@ -1,46 +1,34 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef QSARH
-#define QSARH
 
+#ifndef BALL_CORE_QSAR_QSAR_H
+#define BALL_CORE_QSAR_QSAR_H
+
+#include <cstring>
+#include <fstream>
 #include <iostream>
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/format/SDFile.h>
-#include <BALL/core/format/PDBFile.h>
-#include <BALL/core/format/HINFile.h>
-#include <BALL/core/format/MOLFile.h>
-#include <vector>
+#include <limits>
 #include <list>
-#include <set>
 #include <map>
 #include <math.h>
+#include <set>
 #include <sstream>
-#include <fstream>
-#include <limits>
-#include <fstream>
-#include <BALL/core/qsar/simpleDescriptors.h>
-#include <BALL/core/qsar/connectivityDescriptors.h>
-#include <BALL/core/qsar/partialChargeDescriptors.h>
-#include <BALL/core/qsar/surfaceDescriptors.h>
+#include <vector>
+
 #include <BALL/core/common/exception.h>
-#include <cstring>
-
-#ifndef STATISTICS
-#include <BALL/core/qsar/statistics.h>
-#endif
-
-#ifndef QSAR_EXCEPTION
-#include <BALL/core/qsar/exception.h>
-#endif
-
 #include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/qsar/connectivityDescriptors.h>
+#include <BALL/core/qsar/exception.h>
+#include <BALL/core/qsar/partialChargeDescriptors.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
+#include <BALL/core/qsar/statistics.h>
+#include <BALL/core/qsar/surfaceDescriptors.h>
 
-// #ifndef MODEL
-// #include "Model.h"
-// #endif
 
 namespace BALL
 {
@@ -48,8 +36,8 @@ namespace BALL
 
 	namespace QSAR
 	{
-		typedef vector<double> Column;
-		typedef vector<Column> VMatrix;
+		typedef std::vector<double> Column;
+		typedef std::vector<Column> VMatrix;
 		
 		/** QSAR */
 		class BALL_EXPORT QSARData 
@@ -72,7 +60,7 @@ namespace BALL
 				 */
 				//@{
 				/** reads the names of the properties from the first molecule in the given sd-file */
-				vector<String>* readPropertyNames(String sd_file);
+				std::vector<String>* readPropertyNames(String sd_file);
 
 				/** Fetches input from one sd-file containing all structures and from one file containing the activities of all structures sorted in ascending order. \n 
 				The latter file is assumed to have the same name as the first one, with only the extension changed to ".txt"
@@ -130,10 +118,10 @@ namespace BALL
 				std::vector<QSARData*> partitionInputData(int p);
 				
 				/** saves the current QSARData object to a text file */
-				void saveToFile(string filename) const;
+				void saveToFile(std::string filename) const;
 				
 				/** reconstructs a QSARData object from a text file */
-				void readFromFile(string filename);
+				void readFromFile(std::string filename);
 				
 				/** generates a training and an external validation set from the current QSARData object 
 				@param fraction the fraction of this current coumpounds that should be used as external validation set (by random drawing) */
@@ -154,7 +142,7 @@ namespace BALL
 				/** returns the number of response variables */
 				unsigned int getNoResponseVariables() const;
 				
-				const std::vector<string>* getSubstanceNames() const;
+				const std::vector<std::string>* getSubstanceNames() const;
 				
 				/** checks whether the response variables contain only discrete values. This can be used to check whether the current input data set is suitable for a ClassificationModel */
 				bool checkforDiscreteY() const;
@@ -233,10 +221,10 @@ namespace BALL
 				VMatrix y_transformations_;
 			
 				/** names of all descriptors */
-				vector<string> column_names_;
+				std::vector<std::string> column_names_;
 	
 				/** names of all substances */
-				vector<string> substance_names_;
+				std::vector<std::string> substance_names_;
 	
 				/** contains the numbers of external descriptors for which invalid values (e.g. strings instead numerical values) were encountered in some molecules */
 				std::multiset<int> invalidDescriptors_;
@@ -263,4 +251,4 @@ namespace BALL
 	}
 }
 
-#endif // QSARH
+#endif // BALL_CORE_QSAR_QSAR_H

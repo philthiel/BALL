@@ -1,11 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/oplsModel.h>
+
 #include <BALL/core/qsar/statistics.h>
- 
+
+#include <vector>
+
+using namespace std;
+
+
 namespace BALL
 {
 	namespace QSAR

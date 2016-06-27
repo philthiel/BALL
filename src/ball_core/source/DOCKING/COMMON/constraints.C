@@ -1,14 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/docking/common/constraints.h>
-#include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/scoring/common/gridBasedScoring.h>
-#include <BALL/core/structure/structureMapper.h>
+
 #include <BALL/core/kernel/molecularInteractions.h>
+#include <BALL/core/docking/common/constraints.h>
+#include <BALL/core/scoring/common/gridBasedScoring.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
+#include <BALL/core/structure/structureMapper.h>
 
 using namespace std;
+
 
 namespace BALL
 {

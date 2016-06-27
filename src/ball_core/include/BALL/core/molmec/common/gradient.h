@@ -1,22 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: gradient.h,v 1.20.20.1 2007/05/18 12:02:44 oliver Exp $ 
-//
-// Author:
-//   Oliver Kohlbacher
-//
+//_new_file_header
 
-// A conjugate gradient minimizer for geometry optimisation
 
-#ifndef BALL_MOLMEC_COMMON_GRADIENT_H 
-#define BALL_MOLMEC_COMMON_GRADIENT_H 
+#ifndef BALL_CORE_MOLMEC_COMMON_GRADIENT_H 
+#define BALL_CORE_MOLMEC_COMMON_GRADIENT_H 
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/vector3.h>
 
 #include <vector>
+
 
 namespace BALL 
 { 
@@ -203,4 +194,4 @@ namespace BALL
     };
   } // end of namespace BALL
 
-#endif // BALL_MOLMEC_COMMON_GRADIENT_H 
+#endif // BALL_CORE_MOLMEC_COMMON_GRADIENT_H 

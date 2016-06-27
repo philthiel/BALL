@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/system/networking.h>
 
+#include <BALL/core/common/logStream.h>
+
 #include <boost/bind.hpp>
 
-#include <BALL/core/common/logStream.h>
 
 namespace BALL
 {

@@ -1,8 +1,12 @@
-#ifndef BALL_STRUCTURE_MUTATOR_H
-#define BALL_STRUCTURE_MUTATOR_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_STRUCTURE_MUTATOR_H
+#define BALL_CORE_STRUCTURE_MUTATOR_H
 
 #include <BALL/core/common/debug.h>
 #include <BALL/core/common/global.h>
+
 
 namespace BALL
 {
@@ -90,5 +94,5 @@ namespace BALL
 
 }
 
-#endif //BALL_STRUCTURE_MUTATOR_H
+#endif // BALL_STRUCTURE_MUTATOR_H
 

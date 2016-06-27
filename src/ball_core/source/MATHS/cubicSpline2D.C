@@ -1,8 +1,13 @@
+//_new_file_header
+
+
 #include <BALL/core/maths/cubicSpline2D.h>
+
 #include <map>
 #include <set>
 
 using namespace std;
+
 
 namespace BALL 
 {

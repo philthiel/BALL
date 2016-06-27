@@ -1,24 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/structure/fragmentDB.h>
 
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/nucleotide.h>
-#include <BALL/core/kernel/nucleicAcid.h>
-#include <BALL/core/kernel/chain.h>
-#include <BALL/core/system/path.h>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/maths/matrix44.h>
-#include <BALL/core/format/resourceFile.h>
-	
 /*			Things still missing (among others)
 				===================================
 				- check for unique atom names
 				- dynamic import of databases
 */
 
+#include <BALL/core/structure/fragmentDB.h>
+
+#include <BALL/core/format/resourceFile.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/maths/matrix44.h>
+	
 //#define BALL_DEBUG_FRAGMENTDB
 
 #ifdef BALL_DEBUG_FRAGMENTDB
@@ -30,6 +29,7 @@
 #define FRAGMENT_DB_INCLUDE_TAG "#include:"
 
 using namespace std;
+
 
 namespace BALL 
 {

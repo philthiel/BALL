@@ -1,37 +1,30 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/docking/common/poseClustering.h>
 
-#include <BALL/core/structure/structureMapper.h>
-#include <BALL/core/structure/RMSDMinimizer.h>
-#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/format/lineBasedFile.h>
-
-// TEST
-//#include <BALL/core/maths/angle.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/RMSDMinimizer.h>
+#include <BALL/core/structure/structureMapper.h>
 
 #include <stack>
 #include <queue>
 
 #include <boost/version.hpp>
-
-#include <boost/graph/iteration_macros.hpp>
-#include <boost/graph/graphviz.hpp>
-#include <boost/graph/adj_list_serialize.hpp>
-
-#include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
-
-#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
-
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/graph/adj_list_serialize.hpp>
+#include <boost/graph/graphviz.hpp>
+#include <boost/graph/iteration_macros.hpp>
 #include <boost/serialization/set.hpp>
 #include <boost/serialization/variant.hpp>
 
 using namespace std;
 using namespace Eigen;
+
 
 namespace BALL
 {

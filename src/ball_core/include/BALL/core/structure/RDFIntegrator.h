@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RDFINTEGRATOR_H
-#define BALL_STRUCTURE_RDFINTEGRATOR_H
 
-#ifndef BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
-# include <BALL/core/structure/radialDistributionFunction.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RDFINTEGRATOR_H
+#define BALL_CORE_STRUCTURE_RDFINTEGRATOR_H
+
+#include <BALL/core/structure/radialDistributionFunction.h>
+
 
 namespace BALL
 {
@@ -125,4 +123,5 @@ namespace BALL
 	};
    
 }
-#endif // BALL_STRUCTURE_RDFINTEGRATOR_H
+
+#endif // BALL_CORE_STRUCTURE_RDFINTEGRATOR_H

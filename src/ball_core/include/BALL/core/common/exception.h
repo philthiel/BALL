@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
    
-#ifndef BALL_COMMON_EXCEPTION_H
-#define BALL_COMMON_EXCEPTION_H
+#ifndef BALL_CORE_COMMON_EXCEPTION_H
+#define BALL_CORE_COMMON_EXCEPTION_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
-
-#ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/core/common/global.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/global.h>
 
 #ifdef BALL_COMPILER_MSVC
 	#pragma warning(push)
@@ -20,6 +14,7 @@
 
 #include <new>
 #include <string>
+
 
 namespace BALL 
 {
@@ -584,4 +579,4 @@ namespace BALL
 	#pragma warning(pop)
 #endif
 
-#endif // BALL_COMMON_EXCEPTION_H
+#endif // BALL_CORE_COMMON_EXCEPTION_H

@@ -1,15 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/numericalSAS.h>
-#include <BALL/core/structure/triangulatedSurface.h>
-#include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/datatype/hashMap.h>
+
 #include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/atomContainer.h>
 #include <BALL/core/maths/surface.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+
 
 namespace BALL
 {

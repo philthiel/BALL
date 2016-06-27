@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_NUCLEICACID_H
-#define BALL_KERNEL_NUCLEICACID_H
 
-#ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/core/kernel/molecule.h>
-#endif
+#ifndef BALL_CORE_KERNEL_NUCLEICACID_H
+#define BALL_CORE_KERNEL_NUCLEICACID_H
 
-#ifndef BALL_KERNEL_NUCLEOTIDE_H
-#	include <BALL/core/kernel/nucleotide.h>
-#endif
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/nucleotide.h>
 
 #define BALL_NUCLEICACID_DEFAULT_ID   ""
+
 
 namespace BALL 
 {
@@ -221,7 +216,7 @@ namespace BALL
 
 		// --- EXTERNAL ITERATORS
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Nucleotide)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Nucleotide)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(NucleicAcid, Nucleotide, nucleotides)
 
 		private:
@@ -232,4 +227,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_KERNEL_NUCLEICACID_H
+#endif // BALL_CORE_KERNEL_NUCLEICACID_H

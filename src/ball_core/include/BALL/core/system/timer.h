@@ -1,11 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: timer.h,v 1.17 2005/07/29 12:38:15 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_TIMER_H
-#define BALL_SYSTEM_TIMER_H
+
+#ifndef BALL_CORE_SYSTEM_TIMER_H
+#define BALL_CORE_SYSTEM_TIMER_H
 
 #ifdef BALL_HAS_SYS_TIME_H
 #	include <sys/time.h>
@@ -240,4 +237,4 @@ namespace BALL
   
 }
 
-#endif // BALL_SYSTEM_TIMER_H
+#endif // BALL_CORE_SYSTEM_TIMER_H

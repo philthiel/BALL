@@ -1,22 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef NBMODEL
-#define NBMODEL
 
-#ifndef BALL_QSAR_COMMON_H
-#include <BALL/core/qsar/common.h>
-#endif
+#ifndef BALL_CORE_QSAR_NBMODEL_H
+#define BALL_CORE_QSAR_NBMODEL_H
 
-#ifndef BAYESMODEL
 #include <BALL/core/qsar/bayesModel.h>
-#endif
-
-#ifndef STATISTICS
+#include <BALL/core/qsar/common.h>
 #include <BALL/core/qsar/statistics.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -43,19 +36,19 @@ namespace BALL
 				//@{
 				void train();
 				
-				Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 				
-				void saveToFile(string filename);
+				void saveToFile(String filename);
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
 				bool isTrained();
 				
-				vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value);
+				std::vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value);
 				
 				int getNoResponseVariables();	
 				//@}
@@ -74,7 +67,7 @@ namespace BALL
 				
 				/** One probability Matrix for each modelled activity and each class. \n
 				Each Matrix stores in each cell the probability for a feature lying within a specific range to be in a specific class  */
-				vector<MatrixVector, Eigen::aligned_allocator<MatrixVector> > probabilities_;
+				std::vector<MatrixVector, Eigen::aligned_allocator<MatrixVector> > probabilities_;
 							
 
 				
@@ -83,4 +76,4 @@ namespace BALL
 	}
 }
 
-#endif //NBMODEL
+#endif // BALL_CORE_QSAR_NBMODEL_H

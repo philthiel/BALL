@@ -1,22 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/MOL2File.h>
 
-#include <BALL/core/datatype/string.h>
 #include <BALL/core/datatype/regularExpression.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/forEach.h>
-
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/molmec/amber/GAFFTypeProcessor.h>
 
 using namespace std;
+
 
 namespace BALL
 {

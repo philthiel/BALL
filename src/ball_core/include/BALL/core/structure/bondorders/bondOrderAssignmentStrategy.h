@@ -1,15 +1,14 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
+
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/datatype/options.h>
 
 #include <boost/shared_ptr.hpp>
+
 
 namespace BALL
 {
@@ -39,4 +38,5 @@ namespace BALL
 
 	};
 }
-#endif // BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
+
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H

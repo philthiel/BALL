@@ -1,27 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_TIMESTAMP_H
-#define BALL_CONCEPT_TIMESTAMP_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_TIMESTAMP_H
+#define BALL_CORE_CONCEPT_TIMESTAMP_H
 
-#ifndef BALL_COMMON_CREATE_H
-#	include <BALL/core/common/create.h>
-#endif
-
-#ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/core/common/debug.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-# include <BALL/core/concept/persistenceManager.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/debug.h>
+#include <BALL/core/concept/persistenceManager.h>
 
 #include <iostream>
+
 
 namespace BALL 
 {
@@ -295,4 +284,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_TIMESTAMP_H
+#endif // BALL_CORE_CONCEPT_TIMESTAMP_H

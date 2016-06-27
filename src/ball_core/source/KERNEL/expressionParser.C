@@ -1,8 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/expressionParser.h>
+
+#include <list>
+
+using namespace std;
+
 
 // defined in the lexer (expressionParserLexer.l)
 extern void ExpressionParser_initBuffer(const char* buf);
@@ -85,7 +89,7 @@ namespace BALL
 		return children.end();
 	}
 
-	void ExpressionParser::SyntaxTree::dump(std::ostream& os, Size depth) const
+	void ExpressionParser::SyntaxTree::dump(ostream& os, Size depth) const
 	{
 		BALL_DUMP_STREAM_PREFIX(os);
 		BALL_DUMP_HEADER(os, this, this);
@@ -96,7 +100,7 @@ namespace BALL
 			<< "  evaluated = " << evaluated 
 			<< "  negate = " << negate 
 			<< "  type = " << type
-			<< "]" << ::std::endl;
+			<< "]" << ::endl;
 		list<ExpressionParser::SyntaxTree*>::const_iterator it = children.begin();
 		for (; it != children.end(); ++it)
 		{

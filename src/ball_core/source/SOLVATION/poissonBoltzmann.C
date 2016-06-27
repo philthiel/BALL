@@ -1,18 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: poissonBoltzmann.C,v 1.41 2004/11/07 08:25:36 oliver Exp $ 
-//
+//_new_file_header
 
-// FDPB: Finite Difference Poisson Solver
 
 #include <BALL/core/solvation/poissonBoltzmann.h>
 
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/maths/vector4.h>
 #include <BALL/core/solvation/molecularSurfaceGrid.h>
 #include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/datatype/hashGrid.h>
-#include <BALL/core/maths/vector4.h>
-#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/system/timer.h>
 
 // DEBUG
@@ -21,6 +16,7 @@
 // /DEBUG
 
 using namespace std;
+
 
 namespace BALL 
 {

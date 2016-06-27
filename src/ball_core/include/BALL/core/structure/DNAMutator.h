@@ -1,12 +1,8 @@
-/*
- * File: BALL/STRUCTURE/DNAMutator.h
- * Created: 23.10.2008
- *
- * Author: Daniel Stoeckel
- */
+//_new_file_header
 
-#ifndef DNAMUTATOR_H
-#define DNAMUTATOR_H
+
+#ifndef BALL_CORE_STRUCTURE_DNAMUTATOR_H
+#define BALL_CORE_STRUCTURE_DNAMUTATOR_H
 
 #include <BALL/core/common/exception.h>
 #include <BALL/core/maths/vector3.h>
@@ -15,6 +11,7 @@
 
 #include <deque>
 #include <map>
+
 
 namespace BALL
 {
@@ -245,5 +242,4 @@ namespace BALL
 	};
 }
 
-#endif
-
+#endif // BALL_CORE_STRUCTURE_DNAMUTATOR_H

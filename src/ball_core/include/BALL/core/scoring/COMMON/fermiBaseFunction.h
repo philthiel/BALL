@@ -1,10 +1,12 @@
-// $Id: fermiBaseFunction.h,v 1.1 2005/11/21 19:27:02 anker Exp $
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_FERMIBASEFUNCTION_H
-#define BALL_SCORING_COMMON_FERMIBASEFUNCTION_H
+
+#ifndef BALL_CORE_SCORING_COMMON_FERMIBASEFUNCTION_H
+#define BALL_CORE_SCORING_COMMON_FERMIBASEFUNCTION_H
 
 #include <BALL/core/common/macros.h>
 #include <BALL/core/scoring/common/baseFunction.h>
+
 
 namespace BALL
 {
@@ -60,4 +62,5 @@ namespace BALL
 	};
 
 }
-#endif // BALL_SCORING_COMMON_FERMIBASEFUNCTION_H
+
+#endif // BALL_CORE_SCORING_COMMON_FERMIBASEFUNCTION_H

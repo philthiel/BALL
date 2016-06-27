@@ -1,6 +1,10 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/logP.h>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,17 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT
-#define BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT
 
-#ifndef BALL_MATH_MATRIX44_H
-#include <BALL/core/maths/matrix44.h>
-#endif
+#ifndef BALL_CORE_DOCKING_COMMON_STATICLIGANDFRAGMENT_H
+#define BALL_CORE_DOCKING_COMMON_STATICLIGANDFRAGMENT_H
 
-#ifndef BALL_KERNEL_ATOM_H
 #include <BALL/core/kernel/atom.h>
-#endif
+#include <BALL/core/maths/matrix44.h>
+
+#include <list>
+#include <vector>
+
 
 namespace BALL
 {
@@ -24,9 +22,9 @@ namespace BALL
 			int ID;
 
 			/** all atoms of this ligand fragment */
-			list<Atom*> atoms;
+			std::list<Atom*> atoms;
 
-			vector<Connection> connections;
+			std::vector<Connection> connections;
 
 			/** the overall force of the entire fragment */
 			Vector3 force;
@@ -60,4 +58,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT
+#endif // BALL_CORE_DOCKING_COMMON_STATICLIGANDFRAGMENT_H

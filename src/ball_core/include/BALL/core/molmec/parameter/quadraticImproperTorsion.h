@@ -1,28 +1,22 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics Parameter: class describing the parameters required to
-// describe a harmonic improper torsion (out-of-plane) potential
- 
-#ifndef BALL_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
-#define BALL_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
+#define BALL_CORE_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+
+#include <vector>
+
 
 namespace BALL 
 {
     /**  \addtogroup  MolmecParameters
      *  @{
      */		
-	/** QuadraticImproperTorsion.
-			
+	/** Molecular Mechanics Parameter: class describing the parameters required to
+	 * describe a harmonic improper torsion (out-of-plane) potential
 	*/
 	class BALL_EXPORT QuadraticImproperTorsion 
 		:	public ParameterSection
@@ -147,11 +141,11 @@ namespace BALL
 
 		Size									number_of_atom_types_;
 
-		vector<Values>				torsions_;
+		std::vector<Values>				torsions_;
 		
 		HashMap<Size, Size>		torsion_hash_map_;
 	};
   /** @} */
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H

@@ -1,12 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_RESCORING1D_H
-#define BALL_SCORING_FUNCTIONS_RESCORING1D_H
+
+#ifndef BALL_CORE_SCORING_FUNCTIONS_RESCORING1D_H
+#define BALL_CORE_SCORING_FUNCTIONS_RESCORING1D_H
 
 #include <BALL/core/scoring/functions/rescoring.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -18,8 +19,8 @@ namespace BALL
 		protected:
 			void setup_();
 			const Protein* protein_;
-			void generateScoreContributions_(vector<vector<double> >* matrix, vector<double>* v);
+			void generateScoreContributions_(std::vector<std::vector<double> >* matrix, std::vector<double>* v);
 	};
 }
 
-#endif
+#endif // BALL_CORE_SCORING_FUNCTIONS_RESCORING1D_H

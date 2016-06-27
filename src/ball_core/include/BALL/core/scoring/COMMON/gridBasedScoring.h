@@ -1,16 +1,16 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_GRIDBASEDSCORING_H
-#define BALL_SCORING_COMMON_GRIDBASEDSCORING_H
 
-#include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/scoring/common/scoreGridSet.h>
+#ifndef BALL_CORE_SCORING_COMMON_GRIDBASEDSCORING_H
+#define BALL_CORE_SCORING_COMMON_GRIDBASEDSCORING_H
+
 #include <BALL/core/molmec/parameter/atomTypes.h>
-#include <set>
+#include <BALL/core/scoring/common/scoreGridSet.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
+
 #include <map>
+#include <set>
+
 
 namespace BALL
 {
@@ -161,4 +161,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMMON_GRIDBASEDSCORING_H
+#endif // BALL_CORE_SCORING_COMMON_GRIDBASEDSCORING_H

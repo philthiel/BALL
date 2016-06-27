@@ -1,16 +1,18 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/diffGridBasedScoring.h>
+
+#include <BALL/core/docking/common/structurePreparer.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/system/timer.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/docking/common/structurePreparer.h>
 
+#include <iostream>
+#include <vector>
 
 using namespace BALL;
+using namespace std;
 
 
 DiffGridBasedScoring::DiffGridBasedScoring(AtomContainer& receptor, AtomContainer& ligand, Options& options)
@@ -144,9 +146,9 @@ void DiffGridBasedScoring::testOverlaps(Vector3& position, HashGrid3 < Atom* > *
 	if (hashg == NULL) hashg = hashgrid_;
 	AtomPairVector* nonbonded_pairs = createNonbondedPairVector(hashg, overlaps, 1);
 
-	std::cout<<e.getVanDerWaalsRadius()<<std::endl;
-	std::cout<<overlaps<<" atom overlaps were found at the given position"<<std::endl;
-	std::cout<<"neighboring_target_atoms_ = "<<neighboring_target_atoms_<<std::endl;
+	cout<<e.getVanDerWaalsRadius()<<endl;
+	cout<<overlaps<<" atom overlaps were found at the given position"<<endl;
+	cout<<"neighboring_target_atoms_ = "<<neighboring_target_atoms_<<endl;
 
 // 	update();
 // 	updateScore();
@@ -211,7 +213,7 @@ double DiffGridBasedScoring::updateScore()
 {
 	if (!store_interactions_ && hasPharmacophoreConstraints_())
 	{
-		std::cout<<"[info:] enabling storing interaction with PharmacophoreConstraint-residues"<<std::endl;
+		cout<<"[info:] enabling storing interaction with PharmacophoreConstraint-residues"<<endl;
 		enableStoreInteractionsOnlyForPhContraints();
 	}
 	if (store_interactions_) clearStoredInteractions_();

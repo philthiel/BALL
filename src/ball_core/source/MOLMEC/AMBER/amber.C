@@ -1,19 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: Amber force field class
-//
+//_new_file_header
 
-#include <BALL/core/system/path.h>
+
 #include <BALL/core/molmec/amber/amber.h>
-#include <BALL/core/molmec/amber/amberStretch.h>
+
 #include <BALL/core/molmec/amber/amberBend.h>
-#include <BALL/core/molmec/amber/amberTorsion.h>
 #include <BALL/core/molmec/amber/amberNonBonded.h>
-#include <BALL/core/molmec/common/assignTypes.h>
+#include <BALL/core/molmec/amber/amberStretch.h>
+#include <BALL/core/molmec/amber/amberTorsion.h>
 #include <BALL/core/molmec/parameter/templates.h>
+#include <BALL/core/molmec/common/assignTypes.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

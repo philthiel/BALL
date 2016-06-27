@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: stringHashSet.h,v 1.11 2003/08/26 08:04:12 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_STRINGHASHSET_H
-#define BALL_DATATYPE_STRINGHASHSET_H
 
-#ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/core/datatype/hashSet.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_STRINGHASHSET_H
+#define BALL_CORE_DATATYPE_STRINGHASHSET_H
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL 
 {
@@ -26,4 +19,4 @@ namespace BALL
 	typedef HashSet<String> StringHashSet;
 } // namespace BALL
 
-#endif // BALL_DATATYPE_STRINGHASHSET_H
+#endif // BALL_CORE_DATATYPE_STRINGHASHSET_H

@@ -1,56 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
-#define BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-	#include <BALL/core/concept/processor.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
+#define BALL_CORE_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/core/kernel/atomContainer.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
+#include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
+#include <BALL/core/system/timer.h>
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-	#include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-	#include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-	#include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
-
-#ifndef BALL_SYSTEM_TIMER_H
-# include <BALL/core/system/timer.h>
-#endif
-
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
-
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
-
-#ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
-#endif
-
-#include <map>
 #include <vector>
+
 
 namespace BALL
 {
@@ -684,7 +651,7 @@ namespace BALL
 			Size num_of_virtual_bonds_;
 			//
 			// the virtual bond index assigned to this atom!
-			vector<Atom*> virtual_bond_index_to_atom_;
+			std::vector<Atom*> virtual_bond_index_to_atom_;
 			HashMap<Atom*, int> atom_to_virtual_bond_index_;
 			//
 			//
@@ -703,11 +670,11 @@ namespace BALL
 			std::vector<Position> fixed_val_;
 
 			// storing the solutions
-			vector<BondOrderAssignment> solutions_;
+			std::vector<BondOrderAssignment> solutions_;
 
 			// the original conformation before we computed anything
 			// this is a vector because we can have multiple molecules...
-			vector<BondOrderAssignment> starting_configuration_;
+			std::vector<BondOrderAssignment> starting_configuration_;
 
 			// the inverse of the atom type penalty normalization factor
 			float atom_type_normalization_factor_;
@@ -755,22 +722,22 @@ namespace BALL
 			//  block_to_length_[i], starting from 
 			//  block_to_start_idx_[i] associating 
 			//  block_to_start_valence_[i] to the start_idx
-			vector<int> penalties_;
-			vector<Position> block_to_start_idx_;
-			vector<Size> block_to_length_;
-			vector<int> block_to_start_valence_;
+			std::vector<int> penalties_;
+			std::vector<Position> block_to_start_idx_;
+			std::vector<Size> block_to_length_;
+			std::vector<int> block_to_start_valence_;
 			// stores the defining element and the SMART-string of each block
-			vector<std::pair<String, String> > block_definition_;
+			std::vector<std::pair<String, String> > block_definition_;
 
 
 			// Stores which atom belongs to which penalty block.
 			// The first vector element of each atom block denotes the penalty block 
 			// assigned to the atom without any additional VIRTUAL Hydrogens,
 			// the second element with one additional Hydrogen and so on. 
-			vector< vector<int> > atom_to_block_;
+			std::vector< std::vector<int> > atom_to_block_;
 
 			// Stores the possible bond lengths penalties per order.
-			HashMap<Bond*, vector<float> > bond_lengths_penalties_;
+			HashMap<Bond*, std::vector<float> > bond_lengths_penalties_;
 
 			Timer timer_;
 
@@ -784,4 +751,4 @@ namespace BALL
 } // namespace BALL 
 
 
-#endif // BALL_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_ASSIGNBONDORDERPROCESSOR_H

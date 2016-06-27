@@ -1,16 +1,15 @@
+//_new_file_header
 
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
 
 #include <BALL/core/scoring/components/PB.h>
+
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/system/timer.h>
-#include <BALL/core/kernel/PTE.h>
 
-using namespace BALL;
 using namespace std;
+using namespace BALL;
+
 
 PB::PB(ScoringFunction& sf)
 	: ScoringComponent(sf)
@@ -47,7 +46,7 @@ void PB::setupLigand()
 }
 
 
-void PB::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+void PB::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 {
 	// Clear-functions will automatically erase all data that was dynamically allocated by the last call of this function
 	receptor_atoms_.clear();
@@ -63,7 +62,7 @@ void PB::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
 
 	// At the moment we need to copy the relevant atoms and insert them into a dummy-system, because FDPB can only work on Systems (not an atom-list).
 	set<Atom*> copied_atoms;
-	for (vector < std::pair < Atom*, Atom* > > ::const_iterator it = pair_vector.begin(); it != pair_vector.end(); it++)
+	for (vector < pair < Atom*, Atom* > > ::const_iterator it = pair_vector.begin(); it != pair_vector.end(); it++)
 	{
 		if (copied_atoms.find(it->first) == copied_atoms.end())
 		{

@@ -1,20 +1,20 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
+
+#include <BALL/core/docking/geneticdock/geneticAlgorithm.h>
+
+#include <BALL/core/docking/common/dockingAlgorithm.h>
+#include <BALL/core/docking/geneticdock/dockProblem.h>
+#include <BALL/core/docking/geneticdock/genes.h>
+#include <BALL/core/docking/geneticdock/geneticIndividual.h>
+#include <BALL/core/docking/geneticdock/parameter.h>
 
 #include <iostream>
 #include <map>
-
-#include <BALL/core/docking/geneticdock/geneticAlgorithm.h>
-#include <BALL/core/docking/geneticdock/dockProblem.h>
-#include <BALL/core/docking/geneticdock/genes.h>
 #include <time.h>
-#include <BALL/core/docking/geneticdock/geneticIndividual.h>
-#include <BALL/core/docking/geneticdock/parameter.h>
-#include <BALL/core/docking/common/dockingAlgorithm.h>
 
 using namespace std;
+
 
 namespace BALL
 {

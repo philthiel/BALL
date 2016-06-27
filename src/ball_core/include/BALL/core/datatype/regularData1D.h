@@ -1,23 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_REGULARDATA1D_H
-#define BALL_DATATYPE_REGULARDATA1D_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_REGULARDATA1D_H
+#define BALL_CORE_DATATYPE_REGULARDATA1D_H
 
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/core/system/binaryFileAdaptor.h>
-#endif
+#include <BALL/core/system/binaryFileAdaptor.h>
+#include <BALL/core/system/file.h>
 
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <iterator>
 #include <algorithm>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <vector>
+
 
 namespace BALL
 {
@@ -922,4 +917,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_DATATYPE_REGULARDATA1D_H
+#endif // BALL_CORE_DATATYPE_REGULARDATA1D_H

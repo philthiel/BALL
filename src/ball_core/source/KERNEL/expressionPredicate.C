@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: expressionPredicate.C,v 1.6 2003/08/26 09:17:49 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/expressionPredicate.h>
+
 
 namespace BALL
 {

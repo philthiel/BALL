@@ -1,9 +1,8 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/docking/geneticdock/parameter.h>
+
 
 namespace BALL
 {

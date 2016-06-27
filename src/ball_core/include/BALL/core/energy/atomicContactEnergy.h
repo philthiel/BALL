@@ -1,13 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: atomicContactEnergy.h,v 1.15 2005/12/23 17:01:43 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_ENERGY_ATOMICCONTACTENERGY_H
-#define BALL_ENERGY_ATOMICCONTACTENERGY_H
+
+#ifndef BALL_CORE_ENERGY_ATOMICCONTACTENERGY_H
+#define BALL_CORE_ENERGY_ATOMICCONTACTENERGY_H
 
 #include <BALL/core/common/macros.h>
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL 
 {
@@ -27,9 +26,9 @@ namespace BALL
 
     	\ingroup EnergyMiscellaneous 
 	*/ 
-	BALL_EXPORT double calculateACE(const AtomContainer& atom_container, const string& type_filename = "energy/ACE_types.dat",
-									const string& parameter_filename = "energy/ACE_parameters.dat");
+	BALL_EXPORT double calculateACE(const AtomContainer& atom_container, const String& type_filename = "energy/ACE_types.dat",
+									const String& parameter_filename = "energy/ACE_parameters.dat");
 
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_ENERGY_ATOMICCONTACTENERGY_H

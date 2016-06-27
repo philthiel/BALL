@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 // This file contains the more or less implementation specific portion of PDBFile.
 // It covers the methods doing the specific parsing of all parsed records.
@@ -8,19 +7,20 @@
 
 #include <BALL/core/format/PDBFile.h>
 
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/xray/crystalInfo.h>
 
-#include <ctime> // time, asctime
 #include <cctype>
 #include <cstdarg>
 #include <cstdlib>
+#include <ctime> // time, asctime
 
 using namespace std;
+
 
 namespace BALL
 {

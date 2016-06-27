@@ -1,13 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/vanDerWaals.h>
-#include <BALL/core/scoring/components/electrostatic.h>
+
 #include <BALL/core/scoring/common/scoringFunction.h>
+#include <BALL/core/scoring/components/electrostatic.h>
 
+#include <vector>
 
+using namespace std;
 using namespace BALL;
 
 
@@ -35,7 +36,7 @@ VanDerWaals::~VanDerWaals()
 	if (do_calculations_) delete amber_nb_;
 }
 
-void VanDerWaals::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+void VanDerWaals::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 {
 	if (do_calculations_)
 	{

@@ -1,37 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_HASHSET_H
-#define BALL_DATATYPE_HASHSET_H
 
-#ifndef BALL_COMMON_HASH_H
-#	include <BALL/core/common/hash.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_HASHSET_H
+#define BALL_CORE_DATATYPE_HASHSET_H
 
-#ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/core/concept/forwardIterator.h>
-#endif
-
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/core/concept/visitor.h>
-#endif
-
-#ifndef BALL_DATATYPE_FOREACH_H
-#	include <BALL/core/datatype/forEach.h>
-#endif
-
-#ifndef BALL_CONCEPT_PREDICATE_H
-#	include <BALL/core/concept/predicate.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/common/hash.h>
+#include <BALL/core/concept/forwardIterator.h>
+#include <BALL/core/concept/predicate.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/visitor.h>
+#include <BALL/core/datatype/forEach.h>
 
 #include <algorithm>
 #include <list>
 #include <vector>
+
 
 namespace BALL
 {
@@ -1330,4 +1313,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_DATATYPE_HASHSET_H
+#endif // BALL_CORE_DATATYPE_HASHSET_H

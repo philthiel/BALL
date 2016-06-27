@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_MOLFILE_H
-#define BALL_FORMAT_MOLFILE_H
+#ifndef BALL_CORE_FORMAT_MOLFILE_H
+#define BALL_CORE_FORMAT_MOLFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
 
 namespace BALL 
 {
@@ -205,4 +199,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_MOLFILE_H
+#endif // BALL_CORE_FORMAT_MOLFILE_H

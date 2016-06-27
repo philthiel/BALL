@@ -1,16 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_SCORINGCOMPONENT_H
-#define BALL_SCORING_COMMON_SCORINGCOMPONENT_H
+
+#ifndef BALL_CORE_SCORING_COMMON_SCORINGCOMPONENT_H
+#define BALL_CORE_SCORING_COMMON_SCORINGCOMPONENT_H
 
 #include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atom.h>
 #include <BALL/core/scoring/common/baseFunction.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 
-#include <BALL/core/kernel/atom.h>
+#include <vector>
 
 
 namespace BALL
@@ -58,7 +57,7 @@ namespace BALL
 
 			/** Update this ScoringComponent using the given atom-pairs. \n
 			This function should be overloaded by all ScoringComponents */
-			virtual void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+			virtual void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 			/** Calculate the score for this component (for all interactions that have been set by the last call of update()) and return the score.\n
 			The coefficient assigned by the user to this component should be taken into account for the calculation, so that the weighted score is returned. */
@@ -142,4 +141,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMMON_SCORINGCOMPONENT_H
+#endif // BALL_CORE_SCORING_COMMON_SCORINGCOMPONENT_H

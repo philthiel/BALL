@@ -1,27 +1,23 @@
-#ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-#define BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
+//_new_file_header
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_GRAPH_GRAPHALGORITHMS_H
+#define BALL_CORE_DATATYPE_GRAPH_GRAPHALGORITHMS_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/string.h>
 
-#include <boost/graph/properties.hpp>
-#include <boost/graph/graph_traits.hpp>
 #include <boost/graph/adjacency_list.hpp>
-#include <boost/graph/tree_traits.hpp>
-#include <boost/graph/iteration_macros.hpp>
 #include <boost/graph/copy.hpp>
+#include <boost/graph/graph_traits.hpp>
+#include <boost/graph/iteration_macros.hpp>
+#include <boost/graph/properties.hpp>
+#include <boost/graph/tree_traits.hpp>
 #include <boost/shared_ptr.hpp>
 
 #include <iostream>
+
 
 namespace boost
 {
@@ -391,6 +387,6 @@ namespace BALL
 	}
 }
 
-#endif // BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
+#endif // BALL_CORE_DATATYPE_GRAPH_GRAPHALGORITHMS_H
 
 

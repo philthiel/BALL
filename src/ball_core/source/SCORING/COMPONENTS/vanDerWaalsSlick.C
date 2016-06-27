@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: vanDerWaals.C,v 1.4 2006/05/27 09:05:23 anker Exp $
+//_new_file_header
 
 
 #include <BALL/core/scoring/components/vanDerWaalsSlick.h>
+
 #include <BALL/core/molmec/common/assignTypes.h>
 #include <BALL/core/molmec/common/support.h>
 #include <BALL/core/molmec/parameter/templates.h>
@@ -20,6 +18,9 @@
 #endif
 
 // #define DEBUG 1
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -93,7 +94,7 @@ namespace BALL
 		if (getScoringFunction() == 0)
 		{
 			Log.error() << "VanDerWaalsSlick::setup(): Not bound to a ScoringFunction"
-				<< std::endl;
+				<< endl;
 			return(false);
 		}
 
@@ -101,7 +102,7 @@ namespace BALL
 				|| getScoringFunction()->getLigand() == 0)
 		{
 			Log.error() << "VanDerWaalsSlick::setup(): Receptor or ligand missing"
-				<< std::endl;
+				<< endl;
 			return(false);
 		}
 
@@ -178,7 +179,7 @@ namespace BALL
 					<< (*unassigned_it)->getFullName() << " with type "
 					<< (*unassigned_it)->getTypeName()
 					<<  " (" << (*unassigned_it)->getType() << ")"
-					<< std::endl;
+					<< endl;
 			}
 			getScoringFunction()->getUnassignedAtoms().insert(*unassigned_it);
 		}
@@ -203,7 +204,7 @@ namespace BALL
 				Log.info() << "type of "
 					<< it->getFullName() << " is "
 					<< it->getTypeName() <<  " (" << it->getType() << ")"
-					<< std::endl;
+					<< endl;
 			}
 		}
 
@@ -257,7 +258,7 @@ namespace BALL
 							<< "cannot find vdw parameters for types "
 							<< atom1->getTypeName() << "-" << atom2->getTypeName()
 							<< " (" << atom1->getFullName() << "-"
-							<< atom2->getFullName() << ")" << std::endl;
+							<< atom2->getFullName() << ")" << endl;
 
 						lj_tmp.values.A = 0;
 						lj_tmp.values.B = 0;
@@ -289,9 +290,9 @@ namespace BALL
 			{
 				lennard_jones_.assignParameters(lj_tmp.values, type_atom1, type_atom2);
 			#ifdef DEBUGDEFUNCT
-				std::cout << "Assigning: " << type_atom1 << "/" << type_atom2
+				cout << "Assigning: " << type_atom1 << "/" << type_atom2
 					<< " --> A = " << lj_tmp.values.A << ", B = " << lj_tmp.values.B
-					<< std::endl;
+					<< endl;
 			#endif
 			}
 			else
@@ -299,7 +300,7 @@ namespace BALL
 				Log.error() << "AmberNonBonded::setup(): "
 				<< "cannot find Lennard Jones parameters for types "
 				<< " (" << atom1->getFullName() << "-" << atom2->getFullName() << ")"
-				<< std::endl;
+				<< endl;
 
 				lj_tmp.atom1 = atom1;
 				lj_tmp.atom2 = atom2;
@@ -340,7 +341,7 @@ namespace BALL
 
 				// ...and swap it to the end of the pair list.
 				first_h_bond--;
-				std::swap(non_bonded_[i], non_bonded_[first_h_bond]);
+				swap(non_bonded_[i], non_bonded_[first_h_bond]);
 			}
 			else
 			{
@@ -371,17 +372,17 @@ namespace BALL
 
 #ifdef DEBUG
 		/*
-		std::cout << "S: ir6 = " << inv_dist_6
+		cout << "S: ir6 = " << inv_dist_6
 			<< ", dist = " << sqrt(1.0f/inverse_square_distance)
 			<< ", lim = " << pow(A/B, 1.0f/6.0f)
 			<< ", A = " << A << ", B = " << B
-			<< std::endl;
+			<< endl;
 			*/
 		float e = (inv_dist_6 * (inv_dist_6 * A - B));
-		std::cout << "e = " << e << std::endl;
+		cout << "e = " << e << endl;
 		if (fabs(e) > 100.0f)
 		{
-			std::cout << "ACHTUNG!" << std::endl;
+			cout << "ACHTUNG!" << endl;
 		}
 
 #endif
@@ -403,17 +404,17 @@ namespace BALL
 
 #ifdef DEBUG
 		/*
-		std::cout << "S: ir6 = " << inv_dist_6
+		cout << "S: ir6 = " << inv_dist_6
 			<< ", dist = " << sqrt(1.0f/inverse_square_distance)
 			<< ", lim = " << pow(A/B, 1.0f/6.0f)
 			<< ", A = " << A << ", B = " << B
-			<< std::endl;
+			<< endl;
 		*/
 		float e = (inv_dist_6 * (inv_dist_6 * A - B));
-		std::cout << "e = " << e << std::endl;
+		cout << "e = " << e << endl;
 		if (fabs(e) > 100.0f)
 		{
-			std::cout << "ACHTUNG!" << std::endl;
+			cout << "ACHTUNG!" << endl;
 		}
 
 #endif
@@ -439,17 +440,17 @@ namespace BALL
 
 #ifdef DEBUG
 		/*
-		std::cout << "S: ir6 = " << inv_dist_6
+		cout << "S: ir6 = " << inv_dist_6
 			<< ", dist = " << sqrt(1.0f/inverse_square_distance)
 			<< ", lim = " << pow(A/B, 1.0f/6.0f)
 			<< ", A = " << A << ", B = " << B
-			<< std::endl;
+			<< endl;
 		*/
 		float e = (inv_dist_6 * (inv_dist_6 * A - B));
-		std::cout << "e = " << e << std::endl;
+		cout << "e = " << e << endl;
 		if (fabs(e) > 100.0f)
 		{
-			std::cout << "ACHTUNG!" << std::endl;
+			cout << "ACHTUNG!" << endl;
 		}
 
 #endif
@@ -624,7 +625,7 @@ namespace BALL
 				else
 				{
 					Log.error() << "Unknown calculation method for VDW model"
-						<< std::endl;
+						<< endl;
 				}
 			}
 		}
@@ -633,8 +634,8 @@ namespace BALL
 			+ hbond_energy;
 
 #ifdef DEBUG
-		std::cout << "S: " << scaling_vdw_1_4_ * vdw_energy_1_4 << " + "
-			<< vdw_energy << " + " << hbond_energy << " = " << energy << std::endl;
+		cout << "S: " << scaling_vdw_1_4_ * vdw_energy_1_4 << " + "
+			<< vdw_energy << " + " << hbond_energy << " = " << energy << endl;
 #endif
 
 
@@ -642,7 +643,7 @@ namespace BALL
 	}
 
 
-	void VanDerWaalsSlick::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+	void VanDerWaalsSlick::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 	{
 	}
 
@@ -677,7 +678,7 @@ namespace BALL
 		double complex_energy = calculateVDWEnergy_(atom_vector);
 		if (verbosity_ > 1)
 		{
-			std::cout << "VDW energy of complex: " << complex_energy << std::endl;
+			cout << "VDW energy of complex: " << complex_energy << endl;
 		}
 
 		// Receptor:
@@ -691,7 +692,7 @@ namespace BALL
 		double receptor_energy = calculateVDWEnergy_(atom_vector);
 		if (verbosity_ > 1)
 		{
-			Log.info() << "VDW energy of receptor: " << receptor_energy << std::endl;
+			Log.info() << "VDW energy of receptor: " << receptor_energy << endl;
 		}
 
 		// Ligand:
@@ -705,7 +706,7 @@ namespace BALL
 		double ligand_energy = calculateVDWEnergy_(atom_vector);
 		if (verbosity_ > 1)
 		{
-			Log.info() << "VDW energy of ligand: " << ligand_energy << std::endl;
+			Log.info() << "VDW energy of ligand: " << ligand_energy << endl;
 		}
 
 		score_ = complex_energy - (receptor_energy + ligand_energy);
@@ -713,7 +714,7 @@ namespace BALL
 		if (verbosity_ > 1)
 		{
 			Log.info() << "VanDerWaalsSlick::calculateScore(): score_ is "
-				<< score_ << std::endl;
+				<< score_ << endl;
 		}
 
 		return score_;

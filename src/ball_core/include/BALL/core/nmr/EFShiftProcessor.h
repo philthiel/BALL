@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: EFShiftProcessor.h,v 1.23.10.5 2007-04-12 13:53:52 anne Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_EFSHIFTPROCESSOR_H
-#define BALL_NMR_EFSHIFTPROCESSOR_H
 
-#ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/core/nmr/shiftModule.h>
-#endif
+#ifndef BALL_CORE_NMR_EFSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_EFSHIFTPROCESSOR_H
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include<BALL/core/kernel/expression.h>
-#endif
+#include<BALL/core/kernel/expression.h>
+#include<BALL/core/nmr/shiftModule.h>
+
 
 namespace BALL 
 {
@@ -244,4 +237,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_EFSHIFTPROCESSOR_H
+#endif // BALL_CORE_NMR_EFSHIFTPROCESSOR_H

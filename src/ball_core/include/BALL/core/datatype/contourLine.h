@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_CONTOURLINE_H
-#define BALL_DATATYPE_CONTOURLINE_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_CONTOURLINE_H
+#define BALL_CORE_DATATYPE_CONTOURLINE_H
 
-#ifndef BALL_DATATYPE_REGULARDATA2D_H
-# include <BALL/core/datatype/regularData2D.h>
-#endif
+#include <BALL/core/datatype/regularData2D.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -324,4 +318,5 @@ namespace BALL
       index_ = 0;
     }
 }
-#endif
+
+#endif // BALL_CORE_DATATYPE_CONTOURLINE_H

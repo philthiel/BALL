@@ -1,15 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef BALL_QSAR_REGRESSIONMODEL_H
-#define BALL_QSAR_REGRESSIONMODEL_H
 
+#ifndef BALL_CORE_QSAR_REGRESSIONMODEL_H
+#define BALL_CORE_QSAR_REGRESSIONMODEL_H
+
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/qsar/Model.h>
 #include <BALL/core/qsar/regressionValidation.h>
 
 #include <fstream>
+
 
 namespace BALL
 {
@@ -44,9 +44,9 @@ namespace BALL
 				/** returns a const pointer to the matrix containing the coefficients obtained by Model.train() */
 				const Eigen::MatrixXd* getTrainingResult() const; 
 				
-				virtual void saveToFile(string filename);
+				virtual void saveToFile(String filename);
 				
-				virtual void readFromFile(string filename);
+				virtual void readFromFile(String filename);
 				
 				void show();
 				//@}
@@ -88,4 +88,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_QSAR_REGRESSIONMODEL_H
+#endif // BALL_CORE_QSAR_REGRESSIONMODEL_H

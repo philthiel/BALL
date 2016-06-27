@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/UCK.h>
 
@@ -10,6 +9,7 @@
 #include <QtCore/QCryptographicHash>
 
 using namespace std;
+
 
 namespace BALL
 {

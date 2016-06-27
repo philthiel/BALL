@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/ldaModel.h>
 
@@ -10,6 +8,7 @@
 #include <limits>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -158,7 +157,7 @@ namespace BALL
 		}
 
 
-		void LDAModel::saveToFile(string filename)
+		void LDAModel::saveToFile(String filename)
 		{
 			bool trained = 1;
 			if (sigma_.rows() == 0) trained = 0; 
@@ -208,7 +207,7 @@ namespace BALL
 
 
 
-		void LDAModel::readFromFile(string filename)
+		void LDAModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

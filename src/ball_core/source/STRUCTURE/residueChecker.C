@@ -1,18 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/residueChecker.h>
 
-#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/datatype/hashSet.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/chain.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/datatype/hashSet.h>
-#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/fragmentDB.h>
 
 using namespace std;
+
 
 namespace BALL
 {

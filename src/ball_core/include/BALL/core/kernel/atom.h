@@ -1,25 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_ATOM_H
-#define BALL_KERNEL_ATOM_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/core/concept/composite.h>
-#endif
+#ifndef BALL_CORE_KERNEL_ATOM_H
+#define BALL_CORE_KERNEL_ATOM_H
 
-#ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/core/concept/property.h>
-#endif
-
-#ifndef BALL_CONCEPT_RANDOMACCESSITERATOR_H
-#	include <BALL/core/concept/randomAccessIterator.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/property.h>
+#include <BALL/core/concept/randomAccessIterator.h>
+#include <BALL/core/maths/vector3.h>
 
 // Defines for default values for an atom
 #define BALL_ATOM_DEFAULT_ELEMENT &Element::UNKNOWN
@@ -32,6 +20,7 @@
 #define BALL_ATOM_DEFAULT_TYPE       Atom::UNKNOWN_TYPE
 #define BALL_ATOM_DEFAULT_VELOCITY   0,0,0
 #define BALL_ATOM_DEFAULT_FORCE      0,0,0
+
 
 namespace BALL
 {
@@ -1015,9 +1004,9 @@ template class BALL_EXPORT std::vector<Atom*>;
 # endif
 } // namespace BALL
 
-#ifndef BALL_KERNEL_BONDITERATOR_H
+#ifndef BALL_CORE_KERNEL_BONDITERATOR_H
 #	include <BALL/core/kernel/bondIterator.h>
 #endif
 
 
-#endif // BALL_KERNEL_ATOM_H
+#endif // BALL_CORE_KERNEL_ATOM_H

@@ -1,36 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H
-#define BALL_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/core/concept/composite.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H
+#define BALL_CORE_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/molmec/amber/GAFFCESParser.h>
 
-#ifndef BALL_MOLMEC_AMBER_GAFFCESPARSER_H
-# include <BALL/core/molmec/amber/GAFFCESParser.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
-
-#ifndef BALL_KERNEL_MOLECULE_H
-# include <BALL/core/kernel/molecule.h>
-#endif
-
-#include <vector>
 #include <map>
+#include <vector>
+
 
 namespace BALL
 {
@@ -144,4 +127,4 @@ namespace BALL
 	};
 }
 
-#endif
+#endif // BALL_CORE_MOLMEC_AMBER_GAFFTYPEPROCESSOR_H

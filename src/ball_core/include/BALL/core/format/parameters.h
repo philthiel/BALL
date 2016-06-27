@@ -1,16 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: parameters.h,v 1.18 2005/12/23 17:01:46 amoll Exp $
-// general parameter file class
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PARAMETERS_H
-#define BALL_FORMAT_PARAMETERS_H
+#ifndef BALL_CORE_FORMAT_PARAMETERS_H
+#define BALL_CORE_FORMAT_PARAMETERS_H
 
-#ifndef BALL_FORMAT_INIFILE_H
-# include <BALL/core/format/INIFile.h>
-#endif
+#include <BALL/core/format/INIFile.h>
+
 
 namespace BALL 
 {
@@ -117,4 +111,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_PARAMETERS_H
+#endif // BALL_CORE_FORMAT_PARAMETERS_H

@@ -1,13 +1,7 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: shiftedLVMM.C,v 1.1.4.6 2007/08/07 09:13:06 aleru Exp $
-//
-// Minimize the potential energy of a system using a shifted 
-// limited-memory variable metric method.
+//_new_file_header
 
 
-#include <BALL/core/molmec/MINIMIZATION/shiftedLVMM.h>
+#include <BALL/core/molmec/minimization/shiftedLVMM.h>
 #include <BALL/core/molmec/common/forceField.h>
 
 #include <limits>
@@ -24,6 +18,7 @@
 // The default number of columns of the factor of the shifted 
 // inverse hessian approximation.
 #define DEFAULT_NUMBER_OF_COLUMNS 5
+
 
 namespace BALL 
 {

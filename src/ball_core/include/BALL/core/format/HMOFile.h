@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_HMOFILE_H
-#define BALL_FORMAT_HMOFILE_H
+
+#ifndef BALL_CORE_FORMAT_HMOFILE_H
+#define BALL_CORE_FORMAT_HMOFILE_H
 
 #include <BALL/core/format/lineBasedFile.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/maths/surface.h>
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_MATHS_SURFACE_H
-# include <BALL/core/maths/surface.h>
-#endif
 
 namespace BALL
 {
@@ -209,4 +203,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_FORMAT_HMOFILE_H
+#endif // BALL_CORE_FORMAT_HMOFILE_H

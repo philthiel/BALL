@@ -1,31 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: johnsonBoveyShiftProcessor.h,v 1.18 2005/12/23 17:01:56 amoll Exp $
-//
+//_new_file_header
 
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/core/kernel/expression.h>
-#endif
+#ifndef BALL_CORE_NMR_JOHNSONBOVEYSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_JOHNSONBOVEYSHIFTPROCESSOR_H
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMETERS_H
-#	include <BALL/core/format/parameters.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/nmr/shiftModule.h>
 
 #include <list>
+
 
 namespace BALL 
 {		
@@ -124,3 +110,5 @@ namespace BALL
 	};
   
 } // namespace BALL 
+
+#endif // BALL_CORE_NMR_JOHNSONBOVEYSHIFTPROCESSOR_H

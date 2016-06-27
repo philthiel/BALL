@@ -1,15 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_RESCORING_H
-#define BALL_SCORING_FUNCTIONS_RESCORING_H
 
-#include <BALL/core/scoring/common/scoringFunction.h>
+#ifndef BALL_CORE_SCORING_FUNCTIONS_RESCORING_H
+#define BALL_CORE_SCORING_FUNCTIONS_RESCORING_H
+
 #include <BALL/core/format/genericMolFile.h>
 #include <BALL/core/qsar/QSARData.h>
 #include <BALL/core/qsar/regressionModel.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -58,7 +58,7 @@ namespace BALL
 
 				/** If the Rescoring-approach uses training and a QSAR-model, this function should be implemented in the derived class and should generate score-contributions for the given molecule and add them to 'matrix' or, if matrix == NULL, to 'v'.
 				The default function of this base-class does nothing. */
-				virtual void generateScoreContributions_(Molecule* /*mol*/, vector<vector<double> >* /*matrix*/, vector<double>* /*v*/) {};
+				virtual void generateScoreContributions_(Molecule* /*mol*/, std::vector<std::vector<double> >* /*matrix*/, std::vector<double>* /*v*/) {};
 
 				void setup_();
 
@@ -74,10 +74,10 @@ namespace BALL
 				bool use_calibration_;
 
 				/** vector containing one predicted affinity value for each molecule that was rescored by use of rescore(). */
-				vector<double> predicted_affinities_;
+				std::vector<double> predicted_affinities_;
 
 				/** vector containing one experimentally determined affinity value for each molecule that was rescored by use of rescore(). */
-				vector<double> experimental_affinities_;
+				std::vector<double> experimental_affinities_;
 
 				/** Determines whether an applicability domain check should be done before rescoring each ligand. If the ligand is outside of the applicability domain, the score obtained by use of the scoring function will be returned without any model-based rescoring. */
 				bool check_applicability_;
@@ -90,4 +90,4 @@ namespace BALL
 
 }
 
-#endif //BALL_SCORING_FUNCTIONS_RESCORING_H
+#endif // BALL_SCORING_FUNCTIONS_RESCORING_H

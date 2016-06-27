@@ -1,18 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef CLASVALIDATION
-#define CLASVALIDATION
 
-#ifndef QSARDATA
+#ifndef BALL_CORE_QSAR_CLASSIFICATIONVALIDATION_H
+#define BALL_CORE_QSAR_CLASSIFICATIONVALIDATION_H
+
 #include <BALL/core/qsar/QSARData.h>
-#endif
-
-#ifndef VALIDATION
 #include <BALL/core/qsar/validation.h>
-#endif
 
 #include <iterator>
 
@@ -73,11 +66,11 @@ namespace BALL
 				
 				void selectStat(int s);
 				
-				void saveToFile(string filename) const;
+				void saveToFile(String filename) const;
 				
-				void saveToFile(string filename, const double& quality_input_test, const double& predictive_quality) const;
+				void saveToFile(String filename, const double& quality_input_test, const double& predictive_quality) const;
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				
 				//@}
 				
@@ -136,6 +129,4 @@ namespace BALL
 	}
 }
 
-
-
-#endif // REGVALIDATION
+#endif // BALL_CORE_QSAR_CLASSIFICATIONVALIDATION_H

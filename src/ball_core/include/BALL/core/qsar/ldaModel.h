@@ -1,18 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef LDAMODEL
-#define LDAMODEL
 
-#ifndef CLASSIFICATION
+#ifndef BALL_CORE_QSAR_LDAMODEL_H
+#define BALL_CORE_QSAR_LDAMODEL_H
+
 #include <BALL/core/qsar/classificationModel.h>
-#endif
-
-#ifndef STATISTICS
 #include <BALL/core/qsar/statistics.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL{
 	namespace QSAR {
@@ -35,15 +31,15 @@ namespace BALL{
 				//@{
 				void train();
 				
-				Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				
-				void saveToFile(string filename);
+				void saveToFile(String filename);
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				//@}
 				
 				
@@ -58,10 +54,10 @@ namespace BALL{
 				double lambda_;				
 
 				/** vector containing one matrix for each modelled activity. Each matrix contains a mean vector of a class in each line */
-				vector<Eigen::MatrixXd > mean_vectors_;
+				std::vector<Eigen::MatrixXd > mean_vectors_;
 				//@}
 		};
 	}
 }
 
-#endif //LDAMODEL
+#endif // BALL_CORE_QSAR_LDAMODEL_H

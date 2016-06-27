@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: expressionPredicate.h,v 1.12 2005/10/23 12:02:18 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_EXPRESSIONPREDICATE_H
-#define BALL_KERNEL_EXPRESSIONPREDICATE_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_EXPRESSIONPREDICATE_H
+#define BALL_CORE_KERNEL_EXPRESSIONPREDICATE_H
+
+#include <BALL/core/kernel/atom.h>
+
 
 namespace BALL
 {
@@ -104,4 +100,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_KERNEL_EXPRESSIONPREDICATE_H
+#endif // BALL_CORE_KERNEL_EXPRESSIONPREDICATE_H

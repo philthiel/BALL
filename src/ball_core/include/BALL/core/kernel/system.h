@@ -1,31 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#define BALL_KERNEL_SYSTEM_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atomIterator.h>
-#endif
+#ifndef BALL_CORE_KERNEL_SYSTEM_H
+#define BALL_CORE_KERNEL_SYSTEM_H
 
-#ifndef BALL_KERNEL_MOLECULEITERATOR_H
-#	include <BALL/core/kernel/moleculeIterator.h>
-#endif
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/moleculeIterator.h>
+#include <BALL/core/kernel/nucleicAcidIterator.h>
+#include <BALL/core/kernel/nucleotideIterator.h>
+#include <BALL/core/kernel/proteinIterator.h>
 
-#ifndef BALL_KERNEL_PROTEINITERATOR_H
-#	include <BALL/core/kernel/proteinIterator.h>
-#endif
+#define BALL_CORE_SYSTEM_DEFAULT_NAME   ""
 
-#ifndef BALL_KERNEL_NUCLEICACIDITERATOR_H
-#	include <BALL/core/kernel/nucleicAcidIterator.h>
-#endif
-
-#ifndef BALL_KERNEL_NUCLEOTIDEIDITERATOR_H
-#	include <BALL/core/kernel/nucleotideIterator.h>
-#endif
-
-#define BALL_SYSTEM_DEFAULT_NAME   ""
 
 namespace BALL 
 {
@@ -252,16 +238,16 @@ namespace BALL
 		
 		// --- EXTERNAL ITERATORS ---
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Atom)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Fragment)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Molecule)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Protein)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Residue)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Chain)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(SecondaryStructure)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Nucleotide)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(NucleicAcid)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Atom)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Fragment)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Molecule)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Protein)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Residue)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Chain)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(SecondaryStructure)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Nucleotide)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(NucleicAcid)
 
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(System, Atom, atoms)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(System, AtomContainer, atomContainers)
@@ -276,4 +262,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_KERNEL_SYSTEM_H
+#endif // BALL_CORE_KERNEL_SYSTEM_H

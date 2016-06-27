@@ -1,17 +1,16 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/fresnoTypes.h>
+
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/standardPredicates.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
-
 
 using namespace BALL;
 using namespace std;
+
 
 FresnoTypes::FresnoTypes(AtomContainer* container)
 {

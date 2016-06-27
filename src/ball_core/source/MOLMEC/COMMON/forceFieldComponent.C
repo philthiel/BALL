@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: forceFieldComponent.C,v 1.12.26.1 2007/03/25 22:00:30 oliver Exp $
-//
+//_new_file_header
 
 
 #include <BALL/core/molmec/common/forceFieldComponent.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

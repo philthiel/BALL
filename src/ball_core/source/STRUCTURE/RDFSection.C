@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/RDFSection.h>
 
@@ -10,6 +9,7 @@
 #include <limits>
 
 using namespace std;
+
 
 namespace BALL
 {

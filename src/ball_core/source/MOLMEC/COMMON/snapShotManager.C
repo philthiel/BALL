@@ -1,17 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: snapShotManager.C,v 1.15.20.2 2007/06/09 16:08:08 anhi Exp $
-//
+//_new_file_header
 
-#include <BALL/core/kernel/PTE.h>
+
 #include <BALL/core/molmec/common/snapShotManager.h>
-#include <BALL/core/molmec/common/forceField.h>
+
 #include <BALL/core/format/trajectoryFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/common/forceField.h>
 
 #include <iostream>
 
 using namespace std;
+
 
 namespace BALL
 {

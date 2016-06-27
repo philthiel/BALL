@@ -1,11 +1,9 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_CREATE_H
-#define BALL_COMMON_CREATE_H
 
-//@{
+#ifndef BALL_CORE_COMMON_CREATE_H
+#define BALL_CORE_COMMON_CREATE_H
+
 
 /**	Virtual construction macro.
 		This macro is used to define the virtual <b>create</b> method.
@@ -95,6 +93,4 @@
 	virtual void* create(bool deep = true, bool empty = false) const;\
 	static void* createDefault();
 
-//@}
-
-#endif // BALL_COMMON_CREATE_H
+#endif // BALL_CORE_COMMON_CREATE_H

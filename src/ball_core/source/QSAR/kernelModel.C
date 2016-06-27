@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/kernelModel.h>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -84,7 +83,7 @@ namespace BALL
 		}
 
 
-		void KernelModel::saveToFile(string filename)
+		void KernelModel::saveToFile(String filename)
 		{
 			bool trained = 1;
 			if (training_result_.rows() == 0)
@@ -141,7 +140,7 @@ namespace BALL
 		}
 
 
-		void KernelModel::readFromFile(string filename)
+		void KernelModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

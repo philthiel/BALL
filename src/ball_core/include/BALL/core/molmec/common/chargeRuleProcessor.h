@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: chargeRuleProcessor.h,v 1.14 2005/12/23 17:01:51 amoll Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: rule-based assignment of charges 
 
-#ifndef BALL_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
-#define BALL_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
+#ifndef BALL_CORE_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
+#define BALL_CORE_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
 
-#ifndef BALL_MOLMEC_COMMON_RULEPROCESSOR_H
-#	include <BALL/core/molmec/common/ruleProcessor.h>
-#endif
+#include <BALL/core/molmec/common/ruleProcessor.h>
+
 
 namespace BALL 
 {
@@ -61,4 +55,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_MOLMEC_COMMON_CHARGERULEPROCESSOR_H
+#endif // BALL_CORE_MOLMEC_COMMON_CHARGERULEPROCESSOR_H

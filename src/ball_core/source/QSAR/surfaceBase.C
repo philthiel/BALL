@@ -1,22 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: surfaceBase.C,v 1.2.28.1 2007-03-16 00:06:50 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/surfaceBase.h>
-#include <BALL/core/qsar/partialChargeDescriptors.h>
-#include <BALL/core/qsar/simpleDescriptors.h>
+
+#include <BALL/core/concept/timeStamp.h>
 #include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/fragment.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/qsar/partialChargeDescriptors.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
 #include <BALL/core/structure/numericalSAS.h>
 
 #define BALL_QSAR_SURFACEBASE_DEBUG
 #undef  BALL_QSAR_SURFACEBASE_DEBUG
 
 using namespace std;
+
 
 namespace BALL
 {

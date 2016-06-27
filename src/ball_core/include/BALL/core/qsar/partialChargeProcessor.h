@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_PARTIALCHARGEPROCESSOR_H
-#define BALL_QSAR_PARTIALCHARGEPROCESSOR_H
 
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/datatype/hashSet.h>
+#ifndef BALL_CORE_QSAR_PARTIALCHARGEPROCESSOR_H
+#define BALL_CORE_QSAR_PARTIALCHARGEPROCESSOR_H
 
-#include <vector>
 #include <utility>
+#include <vector>
+
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/kernel/PTE.h>
+
 
 namespace BALL
 {
@@ -100,4 +99,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_QSAR_RINGFINDER_H
+#endif // BALL_CORE_QSAR_RINGFINDER_H

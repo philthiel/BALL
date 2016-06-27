@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/logitModel.h>
+
 #include <Eigen/Dense>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -103,7 +103,7 @@ namespace BALL
 		}
 
 
-		void LogitModel::saveToFile(string filename)
+		void LogitModel::saveToFile(String filename)
 		{
 			if (training_result_.rows() == 0)
 			{
@@ -202,7 +202,7 @@ namespace BALL
 		}
 
 
-		void LogitModel::readFromFile(string filename)
+		void LogitModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

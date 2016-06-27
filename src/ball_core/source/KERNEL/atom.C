@@ -1,20 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/atom.h>
+
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/fragment.h>
 #include <BALL/core/kernel/chain.h>
 #include <BALL/core/kernel/secondaryStructure.h>
 #include <BALL/core/kernel/residue.h>
 #include <BALL/core/kernel/molecule.h>
-#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/molecularInteractions.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <algorithm>
 
 using namespace::std;
+
 
 namespace BALL
 {

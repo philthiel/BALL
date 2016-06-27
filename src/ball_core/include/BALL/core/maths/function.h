@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_FUNCTION_H
-#define BALL_MATHS_FUNCTION_H
+
+#ifndef BALL_CORE_MATHS_FUNCTION_H
+#define BALL_CORE_MATHS_FUNCTION_H
 
 #include <BALL/core/common/create.h>
 #include <BALL/core/common/debug.h>
@@ -1345,4 +1344,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_MATHS_FUNCTION_H
+#endif // BALL_CORE_MATHS_FUNCTION_H

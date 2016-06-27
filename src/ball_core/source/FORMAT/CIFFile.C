@@ -1,12 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/CIFFile.h>
-#include <BALL/core/kernel/system.h>
+
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
 
 #include <utility>
+#include <vector>
+
+using namespace std;
+
 
 // defined in the lexer (CIFParserLexer.l)
 extern void CIFParser_initBuffer(const char* buf);
@@ -16,6 +20,7 @@ extern int  CIFParserparse();
 extern void CIFParserLexer_reset();
 
 //extern int CIFParserdebug;
+
 
 namespace BALL
 {

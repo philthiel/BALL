@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/TRRFile.h>
+
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/molmec/common/snapShot.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
-#include <BALL/core/kernel/system.h>
 
 using namespace std;
+
 
 namespace BALL
 {

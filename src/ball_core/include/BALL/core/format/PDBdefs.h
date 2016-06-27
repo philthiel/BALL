@@ -1,33 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PDBDEFS_H
-#define BALL_FORMAT_PDBDEFS_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_FORMAT_PDBDEFS_H
+#define BALL_CORE_FORMAT_PDBDEFS_H
 
-#ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-#	include <BALL/core/kernel/secondaryStructure.h>
-#endif
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+#include <BALL/core/maths/matrix44.h>
 
-#ifndef BALL_KERNEL_CHAIN_H
-#	include <BALL/core/kernel/chain.h>
-#endif
-
-#ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/core/kernel/residue.h>
-#endif
-
-#ifndef BALL_DATATYPES_HASHSET_H
-#	include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
 
 namespace BALL 
 {
@@ -1358,4 +1341,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_FORMAT_PDBDEFS_H
+#endif // BALL_CORE_FORMAT_PDBDEFS_H

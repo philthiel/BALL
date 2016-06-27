@@ -1,14 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_HYDROGENBOND_H
-#define BALL_SCORING_COMPONENTS_HYDROGENBOND_H
 
-#include <BALL/core/scoring/common/scoringComponent.h>
+#ifndef BALL_CORE_SCORING_COMPONENTS_HYDROGENBOND_H
+#define BALL_CORE_SCORING_COMPONENTS_HYDROGENBOND_H
+
 #include <BALL/core/datatype/options.h>
+#include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/components/fresnoTypes.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -164,8 +165,10 @@ namespace BALL
 			virtual double updateScore();
 
 			/** Update possible_hydrogen_bonds_ from the given AtomPairVector.\n
-			If intermolecular H-bonds are to be evaluated, the _first_ atom of each pair must be a ligand atom and the second one a receptor atom. This is automatically done this way by ScoringFunction::createNonbondedPairVector(). */
-			void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+			 * If intermolecular H-bonds are to be evaluated, the _first_ atom of each pair must be a ligand atom and the second one a receptor atom.
+			 * This is automatically done this way by ScoringFunction::createNonbondedPairVector().
+			 */
+			void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 			//@}
 
 		private:
@@ -207,4 +210,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_HYDROGENBOND_H
+#endif // BALL_CORE_SCORING_COMPONENTS_HYDROGENBOND_H

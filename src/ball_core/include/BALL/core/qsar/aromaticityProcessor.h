@@ -1,18 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_AROMATICITYPROCESSOR_H
-#define BALL_QSAR_AROMATICITYPROCESSOR_H
+#ifndef BALL_CORE_QSAR_AROMATICITYPROCESSOR_H
+#define BALL_CORE_QSAR_AROMATICITYPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/atomContainer.h>
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-	#include <BALL/core/datatype/options.h>
-#endif
+#include <vector>
+
 
 namespace BALL
 {
@@ -97,7 +92,7 @@ namespace BALL
 				@param SSSR ring set as vector<vector<Atom*> >, (vector of rings in vector<Atom*>) 
 				after the processing this variable holds all aromatic systems, which are not necessarily single rings!
 		*/
-  	void aromatize(const vector<vector<Atom*> >& sssr, AtomContainer& ac);
+	void aromatize(const std::vector<std::vector<Atom*> >& sssr, AtomContainer& ac);
 
 		/** Method to set aromaticity with the use of simple rules. Each ring from the given SSSR set
 		 * 	(which needs just to be a set of rings) is examined for itself. (needed for the implementation
@@ -106,7 +101,7 @@ namespace BALL
 		 * 	It does not set any aromaticity flags, neither at the atoms nor bonds to bond order aromatic!
 		 * 	@Param sssr is the set to be examined, only aromatic rings will stay 
 		 */
-		void aromatizeSimple(vector<vector<Atom*> >& sssr);
+		void aromatizeSimple(std::vector<std::vector<Atom*> >& sssr);
 		
 		//@}
 		/** @name Processor-related methods
@@ -146,7 +141,7 @@ namespace BALL
 				@param SSSR ring set as vector<HashSet<Atom*> >, (vector of rings in HashSet<Atom*>)
 				@param ring as HashSet<Atom*>, the ring to extended
 		*/		
-		void extendAromaticSystem_(vector<HashSet<Atom*> >& sssr, HashSet<Atom*> ring);
+		void extendAromaticSystem_(std::vector<HashSet<Atom*> >& sssr, HashSet<Atom*> ring);
 			
 		/*_ Predicate that return true if the ring has conjugated double bonds. The criterion 
 				is very weak, beacuse the predicate only considers carbon atoms, no hetero atoms
@@ -167,4 +162,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_QSAR_AROMATICITYPROCESSOR_H
+#endif // BALL_CORE_QSAR_AROMATICITYPROCESSOR_H

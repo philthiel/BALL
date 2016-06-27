@@ -1,9 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/docking/common/flexDefinition.h>
+
+#include <vector>
+
+using namespace std;
+
 
 namespace BALL
 {

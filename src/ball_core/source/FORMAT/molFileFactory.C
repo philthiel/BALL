@@ -1,21 +1,26 @@
+//_new_file_header
+
+
 #include <BALL/core/format/molFileFactory.h>
 
-#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/format/antechamberFile.h>
-#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/dockResultFile.h>
+#include <BALL/core/format/genericMolFile.h>
 #include <BALL/core/format/HINFile.h>
-#include <BALL/core/format/MOLFile.h>
 #include <BALL/core/format/MOL2File.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/format/PDBFile.h>
 #include <BALL/core/format/SDFile.h>
 #include <BALL/core/format/XYZFile.h>
-#include <BALL/core/format/dockResultFile.h>
 
+#include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filtering_stream.hpp>
-#include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
 
-#include <BALL/core/datatype/string.h>
+using namespace std;
+
 
 namespace BALL
 {
@@ -51,9 +56,9 @@ namespace BALL
     {
       compression = true;
     }
-    else if (open_mode == std::ios::in && !isFileExtensionSupported(filename)) // check whether file is zipped
+	else if (open_mode == ios::in && !isFileExtensionSupported(filename)) // check whether file is zipped
     {
-      std::ifstream zipped_file(filename.c_str(), std::ios_base::in | std::ios_base::binary);
+	  ifstream zipped_file(filename.c_str(), ios_base::in | ios_base::binary);
       boost::iostreams::filtering_istream in;
       in.push(boost::iostreams::gzip_decompressor());
       in.push(zipped_file);
@@ -61,7 +66,7 @@ namespace BALL
       try
       {
         string s;
-        ok = bool(std::getline(in,s));
+		ok = bool(getline(in,s));
       }
       catch (const boost::iostreams::gzip_error& e)
       {
@@ -85,13 +90,13 @@ namespace BALL
         File::createTemporaryFilename(unzipped_filename);
       }
 
-      if (open_mode == std::ios::in)
+	  if (open_mode == ios::in)
       {
-        std::ifstream zipped_file(name.c_str(), std::ios_base::in | std::ios_base::binary);
+		ifstream zipped_file(name.c_str(), ios_base::in | ios_base::binary);
         boost::iostreams::filtering_istream in;
         in.push(boost::iostreams::gzip_decompressor());
         in.push(zipped_file);
-        std::ofstream unzipped_file(unzipped_filename.c_str());
+		ofstream unzipped_file(unzipped_filename.c_str());
         boost::iostreams::copy(in, unzipped_file);
       }
 
@@ -134,7 +139,7 @@ namespace BALL
     }
     else
     {
-      if (open_mode == std::ios::in)
+	  if (open_mode == ios::in)
       {
         gmf = detectFormat(filename);
         // Make sure that temporary input-file is deleted when GenericMolFile is closed.
@@ -149,7 +154,7 @@ namespace BALL
 
     if (compression)
     {
-      if (open_mode == std::ios::in)
+	  if (open_mode == ios::in)
       {
         // Make sure that temporary input-file is deleted when GenericMolFile is closed.
         gmf->defineInputAsTemporary();
@@ -193,13 +198,13 @@ namespace BALL
       default_format = default_format.before(".gz");
       String unzipped_filename;
       File::createTemporaryFilename(unzipped_filename, default_format);
-      if (open_mode == std::ios::in)
+	  if (open_mode == ios::in)
         {
-          std::ifstream zipped_file(zipped_filename.c_str(), std::ios_base::in | std::ios_base::binary);
+		  ifstream zipped_file(zipped_filename.c_str(), ios_base::in | ios_base::binary);
           boost::iostreams::filtering_istream in;
           in.push(boost::iostreams::gzip_decompressor());
           in.push(zipped_file);
-          std::ofstream unzipped_file(unzipped_filename.c_str());
+		  ofstream unzipped_file(unzipped_filename.c_str());
           boost::iostreams::copy(in, unzipped_file);
         }
       filename = unzipped_filename;
@@ -242,7 +247,7 @@ namespace BALL
 
     if (compression)
     {
-      if (open_mode == std::ios::in)
+	  if (open_mode == ios::in)
       {
         // Make sure that temporary input-file is deleted when GenericMolFile is closed.
         file->defineInputAsTemporary();
@@ -266,7 +271,7 @@ namespace BALL
       return file;
     }
 
-    if (open_mode == std::ios::out)
+	if (open_mode == ios::out)
     {
       bool compression = false;
       String filename = name;
@@ -323,7 +328,7 @@ namespace BALL
 
   GenericMolFile* MolFileFactory::detectFormat(const String& name)
   {
-    LineBasedFile input(name, std::ios::in);
+	LineBasedFile input(name, ios::in);
     bool empty_file = true;
 
     // Read at most 400 lines.
@@ -338,32 +343,32 @@ namespace BALL
       if (line.hasPrefix("@<TRIPOS>MOLECULE"))
       {
         input.close();
-        return new MOL2File(name, std::ios::in);
+		return new MOL2File(name, ios::in);
       }
       else if (line.hasPrefix("$$$$") || line.hasPrefix("M  END"))
       {
         input.close();
-        return new SDFile(name, std::ios::in);
+		return new SDFile(name, ios::in);
       }
       else if (line.hasPrefix("<dockingfile>"))
       {
         input.close();
-        return new DockResultFile(name, std::ios::in);
+		return new DockResultFile(name, ios::in);
       }
       else if (line.hasPrefix("HEADER") || line.hasPrefix("ATOM") || line.hasPrefix("USER"))
       {
         input.close();
-        return new PDBFile(name, std::ios::in);
+		return new PDBFile(name, ios::in);
       }
     }
 
     if (empty_file)
     {
-      Log.error() << std::endl << "[Error:] Specified input file is empty!" << std::endl << std::endl;
+	  Log.error() << endl << "[Error:] Specified input file is empty!" << endl << endl;
     }
     else
     {
-      Log.error() << std::endl << "[Error:] Specified input file has unknown extension and its format could not be detected automatically!" << std::endl << std::endl;
+	  Log.error() << endl << "[Error:] Specified input file has unknown extension and its format could not be detected automatically!" << endl << endl;
     }
     
     input.close();

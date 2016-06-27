@@ -1,33 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: HBondShiftProcessor.h,v 1.14.10.5 2007-04-12 13:53:53 anne Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_HBONDSHIFTPROCESSOR_H
-#define BALL_NMR_HBONDSHIFTPROCESSOR_H
 
-#ifndef BALL_KERNEL_PTE_H
-# include <BALL/core/kernel/PTE.h>
-#endif
+#ifndef BALL_CORE_NMR_HBONDSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_HBONDSHIFTPROCESSOR_H
 
-#ifndef BALL_KERNEL_BOND_H
-# include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_KERNEL_ATOM_H
-# include <BALL/core/kernel/atom.h>
-#endif
-
-#ifndef BALL_NMR_SHIFT_MODULE_H
-# include <BALL/core/nmr/shiftModule.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/core/format/parameterSection.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/nmr/shiftModule.h>
 
 #include <map>
+
 
 namespace BALL
 {
@@ -232,4 +216,4 @@ namespace BALL
 };
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_NMR_HBONDSHIFTPROCESSOR_H

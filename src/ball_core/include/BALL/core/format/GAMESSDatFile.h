@@ -1,17 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_GAMESSDATFILE_H
-#define BALL_FORMAT_GAMESSDATFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_GAMESSDATFILE_H
+#define BALL_CORE_FORMAT_GAMESSDATFILE_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/datatype/stringHashMap.h>
+
+
 namespace BALL
 {
 	/** GAMESSDat file class.
@@ -145,4 +141,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_FORMAT_GAMESSDATFILE_H
+#endif // BALL_CORE_FORMAT_GAMESSDATFILE_H

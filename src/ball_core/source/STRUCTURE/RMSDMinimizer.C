@@ -1,25 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-//
-// Compute RMSD-optimal transformation for two structures
-// Coutsalis et al, J. Comput. Chem., 25(15), 1849 (2004)
-//
 
 #include <BALL/core/structure/RMSDMinimizer.h>
-#include <BALL/core/structure/structureMapper.h>
 
 #include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/maths/matrix44.h>
 #include <BALL/core/maths/quaternion.h>
-#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/structure/structureMapper.h>
 
 #include <Eigen/Core>
 #include <Eigen/Eigenvalues>
 
 using namespace std;
+
 
 namespace BALL
 {

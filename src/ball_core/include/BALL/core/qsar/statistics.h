@@ -1,18 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef STATISTICS
-#define STATISTICS
 
-#include <vector>
-#include <iostream>
+#ifndef BALL_CORE_QSAR_STATISTICS_H
+#define BALL_CORE_QSAR_STATISTICS_H
+
 #include <cmath>
+#include <iostream>
+#include <set>
+#include <vector>
+
+#include <Eigen/Core>
+
 #include <BALL/core/maths/parsedFunction.h>
 
-#include <set>
-#include <Eigen/Core>
 
 namespace BALL 
 {
@@ -143,4 +143,4 @@ namespace BALL
 }
 
 
-#endif // STATISTICS
+#endif // BALL_CORE_QSAR_STATISTICS_H

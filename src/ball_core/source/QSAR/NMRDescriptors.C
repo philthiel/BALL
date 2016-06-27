@@ -1,9 +1,14 @@
+//_new_file_header
+
+
 #include <BALL/core/qsar/NMRDescriptors.h>
+
 #include <BALL/core/kernel/atom.h>
-#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/maths/analyticalGeometry.h>
+#include <BALL/core/structure/geometricProperties.h>
 
 #define FLOAT_VALUE_NA 3600. //TODO
+
 
 namespace BALL
 {

@@ -1,15 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: gradient.C,v 1.8 2005/12/23 17:02:43 amoll Exp $
-// Atom gradient class: this class represents the gradient (i.e. the negative forces)
-// for a given system as a vector<Vector3>. THe gradient is stored in units of kJ/(mol A)
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/gradient.h>
-#include <BALL/core/molmec/common/atomVector.h>
+
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/molmec/common/atomVector.h>
 
 using namespace std;
+
 
 namespace BALL
 {

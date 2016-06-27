@@ -1,25 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: poissonBoltzmann.h,v 1.31 2005/12/23 17:02:00 amoll Exp $ 
-//
+//_new_file_header
 
-// Finite Difference Poisson Boltzmann Solver
 
-#ifndef BALL_SOLVATION_POISSONBOLTZMANN_H
-#define BALL_SOLVATION_POISSONBOLTZMANN_H
+#ifndef BALL_CORE_SOLVATION_POISSONBOLTZMANN_H
+#define BALL_CORE_SOLVATION_POISSONBOLTZMANN_H
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-#	include <BALL/core/datatype/regularData3D.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/datatype/regularData3D.h>
+#include <BALL/core/kernel/system.h>
 
 #include <vector>
 
@@ -941,4 +928,4 @@ namespace BALL
    
 } // namespace BALL 
 
-#endif 
+#endif // BALL_CORE_SOLVATION_POISSONBOLTZMANN_H

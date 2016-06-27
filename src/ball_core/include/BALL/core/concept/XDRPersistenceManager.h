@@ -1,16 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_XDRPERSISTENCEMANAGER_H
-#define BALL_CONCEPT_XDRPERSISTENCEMANAGER_H
 
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_XDRPERSISTENCEMANAGER_H
+#define BALL_CORE_CONCEPT_XDRPERSISTENCEMANAGER_H
+
+#include <BALL/core/concept/persistenceManager.h>
 
 #include <rpc/types.h>
 #include <rpc/xdr.h>
+
 
 namespace BALL 
 {
@@ -287,7 +285,7 @@ namespace BALL
 
 		/**	Write a string to the output.
 		*/
-		virtual void put(const string& s)
+		virtual void put(const std::string& s)
       ;
 
 		/**	Write a pointer to the output.
@@ -337,7 +335,7 @@ namespace BALL
 
 		/**	Read a string from the output stream.
 		*/
-		virtual void get(string& s)
+		virtual void get(std::string& s)
       ;
 
 		/**	Read a pointer from the input stream.
@@ -375,4 +373,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_XDRPERSISTENCEMANAGER_H
+#endif // BALL_CORE_CONCEPT_XDRPERSISTENCEMANAGER_H

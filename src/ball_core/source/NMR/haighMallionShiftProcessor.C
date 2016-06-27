@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/nmr/haighMallionShiftProcessor.h>
-#include <BALL/core/kernel/atomIterator.h>
+
 #include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/PTE.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

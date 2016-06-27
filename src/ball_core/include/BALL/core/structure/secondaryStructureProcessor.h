@@ -1,15 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
-#define BALL_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-# include <BALL/core/concept/composite.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
+#define BALL_CORE_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
+
+#include <BALL/core/concept/composite.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -78,4 +76,4 @@ namespace BALL
 
 } //namespace BALL
 
-#endif // BALL_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_SECONDARYSTRUCTUREPROCESSOR_H

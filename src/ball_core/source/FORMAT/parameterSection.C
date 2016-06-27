@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: parameterSection.C,v 1.25 2002/02/27 12:21:20 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/format/parameterSection.h>
 
@@ -9,6 +7,7 @@
 #include <BALL/core/format/parameters.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

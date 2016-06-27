@@ -1,12 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: solventDescriptor.C,v 1.10 2004/11/07 19:54:59 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/solventDescriptor.h>
 
 using namespace std;
+
 
 namespace BALL
 {

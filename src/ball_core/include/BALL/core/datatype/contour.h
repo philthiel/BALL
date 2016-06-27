@@ -1,19 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: contour.h,v 1.17 2004/04/22 10:08:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_CONTOUR_H
-#define BALL_DATATYPE_CONTOUR_H
 
-#ifndef BALL_DATATYPE_REGULARDATA2D_H
-#	include <BALL/core/datatype/regularData2D.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_CONTOUR_H
+#define BALL_CORE_DATATYPE_CONTOUR_H
 
-#ifndef BALL_DATATYPE_CONTOURLINE_H
-#	include <BALL/core/datatype/contourLine.h>
-#endif
+#include <BALL/core/datatype/contourLine.h>
+#include <BALL/core/datatype/regularData2D.h>
 
 #include <vector>
 
@@ -178,4 +170,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_DATATYPE_CONTOUR_H

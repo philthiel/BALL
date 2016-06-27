@@ -1,24 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H
-#define BALL_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H
+#define BALL_CORE_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H
+
 #include <BALL/core/datatype/regularData3D.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
 #include <BALL/core/docking/common/dockingAlgorithm.h>
-#endif
-
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
+
 
 namespace BALL
 {
@@ -71,7 +61,7 @@ namespace BALL
 
 	EvolutionaryDocking(System &system1, System &system2, Options& new_options);
 
-	EvolutionaryDocking(System& receptor, System& ligand, string config_file);
+	EvolutionaryDocking(System& receptor, System& ligand, String config_file);
 
       /** destructor
        */
@@ -135,4 +125,4 @@ namespace BALL
     };
 }
 
-#endif /* BALL_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_EVOLUTIONARYDOCKING_H

@@ -1,42 +1,28 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_GRAPH_TREEWIDTH_H
-#define BALL_DATATYPE_GRAPH_TREEWIDTH_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_GRAPH_TREEWIDTH_H
+#define BALL_CORE_DATATYPE_GRAPH_TREEWIDTH_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
-
-#ifndef BALL_CONCEPT_BASEFUNCTOR_H
-# include <BALL/core/concept/baseFunctor.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/core/datatype/graph/graphAlgorithms.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_MOLECULARGRAPH_H
-# include <BALL/core/datatype/graph/molecularGraph.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/concept/baseFunctor.h>
+#include <BALL/core/datatype/graph/graphAlgorithms.h>
+#include <BALL/core/datatype/graph/molecularGraph.h>
 
 #include <algorithm>
 #include <functional>
+#include <iostream>
 #include <map>
 #include <set>
 #include <vector>
-#include <iostream>
 
 #include <boost/graph/connected_components.hpp>
+#include <boost/graph/copy.hpp>
 #include <boost/graph/filtered_graph.hpp>
 #include <boost/graph/graph_as_tree.hpp>
 #include <boost/graph/graphviz.hpp>
-#include <boost/graph/copy.hpp>
+
 
 namespace boost
 {
@@ -508,4 +494,4 @@ namespace BALL
 
 #include <BALL/core/datatype/graph/treeWidth.iC>
 
-#endif // BALL_DATATYPE_GRAPH_TREEWIDTH_H
+#endif // BALL_CORE_DATATYPE_GRAPH_TREEWIDTH_H

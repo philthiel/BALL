@@ -1,10 +1,16 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/connectedComponentsProcessor.h>
-#include <BALL/core/kernel/bond.h>
+
 #include <BALL/core/kernel/atomContainer.h>
-#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/molecule.h>
+
 #include <map>
 #include <vector>
+
 
 namespace BALL
 {

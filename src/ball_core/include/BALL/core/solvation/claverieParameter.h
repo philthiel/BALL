@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: claverieParameter.h,v 1.15 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_CLAVERIEPARAMETER_H
-#define BALL_SOLVATION_CLAVERIEPARAMETER_H
 
-#ifndef BALL_FORMAT_PARAMETERS_H
-# include <BALL/core/format/parameters.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_CLAVERIEPARAMETER_H
+#define BALL_CORE_SOLVATION_CLAVERIEPARAMETER_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-# include <BALL/core/format/parameterSection.h>
-#endif
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_FORCEFIELDPARAMETERS_H
-# include <BALL/core/molmec/parameter/forceFieldParameters.h>
-#endif
 
 namespace BALL
 {
@@ -128,4 +118,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_SOLVATION_CLAVERIEPARAMETER_H
+#endif // BALL_CORE_SOLVATION_CLAVERIEPARAMETER_H

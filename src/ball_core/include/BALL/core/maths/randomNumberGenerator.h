@@ -1,17 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2 sw=2
-//
-// $Id: randomNumberGenerator.h,v 1.1.18.1 2007/03/25 21:23:46 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_RANDOMNUMBERGENERATOR_H
-#define BALL_MATHS_RANDOMNUMBERGENERATOR_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#ifndef BALL_CORE_MATHS_RANDOMNUMBERGENERATOR_H
+#define BALL_CORE_MATHS_RANDOMNUMBERGENERATOR_H
+
+#include <BALL/core/common/global.h>
 
 #include<vector>
+
 
 namespace BALL
 {
@@ -136,5 +132,5 @@ namespace BALL
 	};
 }
 
-#endif //  BALL_MATHS_RANDOMNUMBERGENERATOR_H
+#endif //  BALL_CORE_MATHS_RANDOMNUMBERGENERATOR_H
 

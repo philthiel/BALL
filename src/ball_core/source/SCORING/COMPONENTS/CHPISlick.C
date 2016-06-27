@@ -1,18 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: CHPI.C,v 1.2.10.1 2007/08/07 16:16:16 bertsch Exp $
+//_new_file_header
 
-// CH---pi interaction for the SLICK energy function
 
-#include <BALL/core/molmec/common/support.h>
 #include <BALL/core/scoring/components/CHPISlick.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/maths/vector3.h>
-#include <BALL/core/kernel/residueIterator.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/protein.h>
 
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/residueIterator.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/molmec/common/support.h>
 #include <BALL/core/system/timer.h>
 
 #define DEBUG 1
@@ -22,6 +18,7 @@
 #endif
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -45,7 +42,7 @@ namespace BALL
 	}
 
 	CHPISlick::AromaticRing::AromaticRing
-		(const std::vector<Atom*>& atoms)
+		(const vector<Atom*>& atoms)
 
 		:	ring_atoms_(),
 			centre_(0.0f),
@@ -58,7 +55,7 @@ namespace BALL
 	void CHPISlick::AromaticRing::computeCentre_()
 
 	{
-		std::vector<Atom*>::const_iterator iter = ring_atoms_.begin();
+		vector<Atom*>::const_iterator iter = ring_atoms_.begin();
 		Size x = 0;
 		for (; iter != ring_atoms_.end(); ++iter)
 		{
@@ -96,19 +93,19 @@ namespace BALL
 	void CHPISlick::AromaticRing::dump(ostream& s) const
 
 	{
-		std::vector<Atom*>::const_iterator it = ring_atoms_.begin();
+		vector<Atom*>::const_iterator it = ring_atoms_.begin();
 		for (; it != ring_atoms_.end(); ++it)
 		{
 			s << (*it)->getFullName() << endl;
 		}
-		s << "ring centre: " << centre_ << std::endl;
-		s << "ring normal: " << normal_vector_ << std::endl;
-		s << std::endl;
+		s << "ring centre: " << centre_ << endl;
+		s << "ring normal: " << normal_vector_ << endl;
+		s << endl;
 	}
 
 
 	void CHPISlick::AromaticRing::setRing
-		(const std::vector<Atom*>& atoms)
+		(const vector<Atom*>& atoms)
 
 	{
 		ring_atoms_ = atoms;
@@ -117,7 +114,7 @@ namespace BALL
 	}
 
 
-	const std::vector<Atom*>& CHPISlick::AromaticRing::getRing() const
+	const vector<Atom*>& CHPISlick::AromaticRing::getRing() const
 
 	{
 		return(ring_atoms_);
@@ -145,7 +142,7 @@ namespace BALL
 	}
 
 
-	void CHPISlick::CHGroup::dump(std::ostream& s) const
+	void CHPISlick::CHGroup::dump(ostream& s) const
 
 	{
 		s << "C: " << C_atom_ << endl;
@@ -328,8 +325,8 @@ namespace BALL
 		// Get the receptor from the scoring function
 		const Protein* protein = (const Protein*)(scoring_function)->getReceptor();
 
-		std::vector<Atom*> current_atoms;
-		std::vector<Atom*> current_atoms2;
+		vector<Atom*> current_atoms;
+		vector<Atom*> current_atoms2;
 		AromaticRing* current_ring = 0;
 
 		// Iterate over all residues and find aromatic ones
@@ -472,14 +469,14 @@ namespace BALL
 		if (verbosity_ > 9)
 		{
 			Log.info() << "CHPISlick::setup(): "
-				<< timer.getCPUTime() << " s" << std::endl;
+				<< timer.getCPUTime() << " s" << endl;
 		}
 
 		return(true);
 	}
 
 
-	void CHPISlick::update(const vector<std::pair<Atom*, Atom*> >&)
+	void CHPISlick::update(const vector<pair<Atom*, Atom*> >&)
 	{
 	}
 
@@ -587,14 +584,14 @@ namespace BALL
 								<< inter_it->second->getCAtom()->getResidue()->getFullName()
 								<< ":"
 								<< inter_it->second->getCAtom()->getResidue()->getID()
-								<< std::endl;
+								<< endl;
 							Log.info() << "CX:  " << CX_score << "(" << distance << " A)"
-								<< std::endl;
+								<< endl;
 							Log.info() << "CHX: " << CHX_score << "(" << angle_CHX
-								<< " deg)" << std::endl;
+								<< " deg)" << endl;
 							Log.info() << "HpX: " << HX_score << "("
-								<< projected_distance_XH << " A)" << std::endl << std::endl;
-							Log.info() << "Score: " << e << std::endl;
+								<< projected_distance_XH << " A)" << endl << endl;
+							Log.info() << "Score: " << e << endl;
 						}
 
 						if (write_interactions_file_ == true)
@@ -644,13 +641,13 @@ namespace BALL
 		if (verbosity_ > 9)
 		{
 			Log.info() << "CHPISlick::updateEnergy(): "
-				<< timer.getCPUTime() << " s" << std::endl;
+				<< timer.getCPUTime() << " s" << endl;
 			Log.info() << "CHPISlick: energy is " << score_ << endl;
 		}
 
 		if (write_interactions_file_ == true)
 		{
-			HINFile interactions_file("CHPISlick_interactions.hin", std::ios::out);
+			HINFile interactions_file("CHPISlick_interactions.hin", ios::out);
 			interactions_file << interactions_molecule;
 			interactions_file.close();
 		}

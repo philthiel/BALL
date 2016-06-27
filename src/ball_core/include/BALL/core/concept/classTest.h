@@ -1,27 +1,22 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_AUTODELETABLE_H
-# include <BALL/core/concept/autoDeletable.h>
-#endif
 
-#ifndef BALL_SYSTEM_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_CLASSTEST_H
+#define BALL_CORE_CONCEPT_CLASSTEST_H
 
-#ifndef BALL_DATATYPE_REGULAREXPRESSION_H
-# include <BALL/core/datatype/regularExpression.h>
-#endif
+#include <BALL/core/concept/autoDeletable.h>
+#include <BALL/core/datatype/regularExpression.h>
+#include <BALL/core/system/file.h>
 
-#include <string>
 #include <list>
+#include <string>
 
 #ifdef BALL_HAS_SSTREAM
 # include <sstream>
 #else
 # include <strstream>
 #endif
+
 
 /**	Define the precision for floating point comparisons.
 		The macro  \link #TEST_REAL_EQUAL TEST_REAL_EQUAL \endlink  checks whether the floating point number returned by
@@ -900,3 +895,5 @@ int main(int argc, char **argv)\
 	}
 
 #endif	
+
+#endif // BALL_CORE_CONCEPT_CLASSTEST_H

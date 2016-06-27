@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ooiEnergy.h,v 1.14 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_OOIENERGY_H
-#define BALL_SOLVATION_OOIENERGY_H
 
-#ifndef BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
-#	include <BALL/core/molmec/common/typeRuleProcessor.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_OOIENERGY_H
+#define BALL_CORE_SOLVATION_OOIENERGY_H
+
+#include <BALL/core/molmec/common/typeRuleProcessor.h>
+
 
 namespace BALL 
 {
@@ -37,4 +33,4 @@ namespace BALL
    	
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_SOLVATION_OOIENERGY_H

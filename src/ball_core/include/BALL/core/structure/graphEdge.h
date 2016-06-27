@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#define BALL_STRUCTURE_GRAPHEDGE_H
+
+#ifndef BALL_CORE_STRUCTURE_GRAPHEDGE_H
+#define BALL_CORE_STRUCTURE_GRAPHEDGE_H
 
 #include <vector>
 
@@ -576,4 +575,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_GRAPHEDGE_H
+#endif // BALL_CORE_STRUCTURE_GRAPHEDGE_H

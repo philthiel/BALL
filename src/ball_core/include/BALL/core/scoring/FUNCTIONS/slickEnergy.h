@@ -1,19 +1,13 @@
-// $Id: slickEnergy.h,v 1.4 2006/05/21 18:15:28 anker Exp $
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_SLICKENERGY_H
-#define BALL_SCORING_FUNCTIONS_SLICKENERGY_H
 
-#ifndef BALL_MOLMEC_COMMON_SCORING_FUNCTION_H
-#	include <BALL/core/scoring/common/scoringFunction.h>
-#endif
+#ifndef BALL_CORE_SCORING_FUNCTIONS_SLICKENERGY_H
+#define BALL_CORE_SCORING_FUNCTIONS_SLICKENERGY_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
 
 namespace BALL 
 {
@@ -177,4 +171,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_SCORING_FUNCTIONS_SLICKENERGY_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_SLICKENERGY_H

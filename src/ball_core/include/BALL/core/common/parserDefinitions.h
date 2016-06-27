@@ -1,5 +1,8 @@
-#ifndef BALL_COMMON_PARSERDEFINITIONS_H
-#define BALL_COMMON_PARSERDEFINITIONS_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_COMMON_PARSERDEFINITIONS_H
+#define BALL_CORE_COMMON_PARSERDEFINITIONS_H
 
 static void ball_fatal_error(yyconst char* msg)
 {
@@ -9,4 +12,4 @@ static void ball_fatal_error(yyconst char* msg)
 #undef YY_FATAL_ERROR
 #define YY_FATAL_ERROR(msg) ball_fatal_error( msg )
 
-#endif //BALL_COMMON_PARSERDEFINITIONS_H
+#endif // BALL_COMMON_PARSERDEFINITIONS_H

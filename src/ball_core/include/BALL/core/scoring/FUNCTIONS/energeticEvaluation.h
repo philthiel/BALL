@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
-#define BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/core/docking/common/conformationSet.h>
-#endif
+#ifndef BALL_CORE_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
+#define BALL_CORE_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
+
+#include <BALL/core/docking/common/conformationSet.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -28,8 +27,8 @@ namespace BALL
 
 			/** Operations
 			*/
-			virtual std::vector < ConformationSet::Conformation > operator () (ConformationSet& conformations);
+			virtual std::vector<ConformationSet::Conformation> operator () (ConformationSet& conformations);
 	};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_ENERGETICEVALUATION_H

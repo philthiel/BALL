@@ -1,12 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_ROTATIONALENTROPY_H
-#define BALL_SCORING_COMPONENTS_ROTATIONALENTROPY_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_ROTATIONALENTROPY_H
+#define BALL_CORE_SCORING_COMPONENTS_ROTATIONALENTROPY_H
 
 #include <BALL/core/scoring/common/scoringComponent.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -22,10 +22,9 @@ namespace BALL
 			/** Overloads ScoringComponent::setLigandIntraMolecular() in order to make sure that no one can set ligand_intra_molecular_ to false. **/
 			void setLigandIntraMolecular(bool b);
 
-			void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+			void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 	};
 }
 
-
-#endif // BALL_SCORING_COMPONENTS_ROTATIONALENTROPY_H
+#endif // BALL_CORE_SCORING_COMPONENTS_ROTATIONALENTROPY_H

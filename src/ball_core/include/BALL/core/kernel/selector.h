@@ -1,15 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: selector.h,v 1.29 2005/10/23 12:02:20 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_SELECTOR_H
-#define BALL_KERNEL_SELECTOR_H
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/core/kernel/expression.h>
-#endif
+#ifndef BALL_CORE_KERNEL_SELECTOR_H
+#define BALL_CORE_KERNEL_SELECTOR_H
+
+#include <BALL/core/kernel/expression.h>
 
 
 namespace BALL 
@@ -128,4 +123,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_KERNEL_SELECTOR_H
+#endif // BALL_CORE_KERNEL_SELECTOR_H

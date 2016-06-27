@@ -1,14 +1,11 @@
-// -*- Mode: C++; tab-width: 2: -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_SIMPLEBASE_H
-#define BALL_QSAR_SIMPLEBASE_H
 
-#ifndef BALL_QSAR_DESCRIPTOR_H
+#ifndef BALL_CORE_QSAR_SIMPLEBASE_H
+#define BALL_CORE_QSAR_SIMPLEBASE_H
+
 #include <BALL/core/qsar/descriptor.h>
-#endif
+
 
 namespace BALL
 {
@@ -126,4 +123,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif
+#endif // BALL_CORE_QSAR_SIMPLEBASE_H

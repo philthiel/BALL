@@ -1,49 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PDBFILE_H
-#define BALL_FORMAT_PDBFILE_H
 
-#ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/core/concept/property.h>
-#endif
+#ifndef BALL_CORE_FORMAT_PDBFILE_H
+#define BALL_CORE_FORMAT_PDBFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#include <BALL/core/concept/property.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/datatype/quadruple.h>
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/format/PDBdefs.h>
+#include <BALL/core/format/PDBInfo.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+#include <BALL/core/kernel/system.h>
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_DATATYPE_QUADRUPLE_H
-#	include <BALL/core/datatype/quadruple.h>
-#endif
-
-#ifndef BALL_FORMAT_PDBDEFS_H
-#	include <BALL/core/format/PDBdefs.h>
-#endif
-
-#ifndef BALL_FORMAT_PDBINFO_H
-#	include <BALL/core/format/PDBInfo.h>
-#endif
-
-#ifndef BALL_KERNEL_PDBAtom_H
-#	include <BALL/core/kernel/PDBAtom.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/core/kernel/residue.h>
-#endif
-
-#ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-#	include <BALL/core/kernel/secondaryStructure.h>
-#endif
 
 namespace BALL
 {
@@ -930,4 +901,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_FORMAT_PDBFILE_H
+#endif // BALL_CORE_FORMAT_PDBFILE_H

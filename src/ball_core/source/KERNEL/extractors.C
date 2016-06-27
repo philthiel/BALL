@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: extractors.C,v 1.2.8.2 2007/03/27 21:16:34 amoll Exp $
-//
-// Author:
-//   Oliver Kohlbacher
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/extractors.h>
 
-#include <BALL/core/kernel/expression.h>
 #include <BALL/core/kernel/atomContainer.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/expression.h>
 #include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/residue.h>
+
 
 namespace BALL
 {

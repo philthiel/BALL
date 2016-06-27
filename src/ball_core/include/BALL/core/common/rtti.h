@@ -1,20 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_RTTI_H
-#define BALL_COMMON_RTTI_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_RTTI_H
+#define BALL_CORE_COMMON_RTTI_H
 
+#include <BALL/config.h>
 #include <BALL/core/common/create.h>
 #include <BALL/core/common/macros.h>
 
 #include <string>
 #include <typeinfo>
-using std::string;
+
 
 namespace BALL 
 {
@@ -24,7 +20,7 @@ namespace BALL
 	// further interpretation
 	namespace GNUDemangling 
 	{
-		BALL_EXPORT string demangle(string s);
+		BALL_EXPORT std::string demangle(std::string s);
 	}
 #	endif
 
@@ -38,7 +34,7 @@ namespace BALL
 			
 			\ingroup Common
 	*/ 
-	BALL_EXPORT string streamClassName(const std::type_info& t);
+	BALL_EXPORT std::string streamClassName(const std::type_info& t);
 
 	/**	Simplified RunTime Type Identification.
 			ANSI C++ provides support for runtime type identification (RTTI). However, the support
@@ -165,7 +161,7 @@ namespace BALL
 			{
 				return "double";
 			}
-			static string s("");
+			static std::string s("");
 			static bool is_set = false;
 
 			if (!is_set)
@@ -230,4 +226,4 @@ namespace BALL
 	} // namespace RTTI
 } // namespace BALL
 
-#endif // BALL_COMMON_RTTI_H
+#endif // BALL_CORE_COMMON_RTTI_H

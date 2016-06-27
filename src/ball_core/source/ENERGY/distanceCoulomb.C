@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: distanceCoulomb.C,v 1.3 2002/02/27 12:21:13 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/energy/distanceCoulomb.h>
 
@@ -11,6 +9,7 @@
 #define EPSILON_0 8.85419e-12
 #define ELECTRON_CHARGE 1.60219e-19
 #define AVOGADRO_CONSTANT 6.02205e-23
+
 
 namespace BALL 
 {

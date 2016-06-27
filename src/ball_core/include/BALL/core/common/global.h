@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_GLOBAL_H
-#define BALL_COMMON_GLOBAL_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_GLOBAL_H
+#define BALL_CORE_COMMON_GLOBAL_H
+
+#include <BALL/config.h>
 
 #include <limits>
 #include <time.h>
@@ -65,6 +62,7 @@
 #else
     #define BALL_DEPRECATED
 #endif
+
 
 namespace BALL
 {
@@ -254,4 +252,4 @@ namespace BALL
 
 }
 
-#endif // BALL_COMMON_GLOBAL_H
+#endif // BALL_CORE_COMMON_GLOBAL_H

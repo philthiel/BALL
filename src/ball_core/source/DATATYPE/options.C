@@ -1,23 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: options.C,v 1.27.14.2 2007/05/17 00:02:42 amoll Exp $ 
-//
+//_new_file_header
+
 
 #include <BALL/core/datatype/options.h>
 
-#include <cstdlib>
+#include <algorithm>
 #include <cerrno>
-#include <cstdio>
 #include <cmath>
-
+#include <cstdlib>
+#include <cstdio>
 #include <fstream>
 #include <list>
-#include <algorithm>
+
 
 using namespace std;
-using std::ofstream;
-using std::ios;
+
 
 namespace BALL 
 {

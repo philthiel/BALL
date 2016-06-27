@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SMARTES_PARSER_H
-#define BALL_STRUCTURE_SMARTES_PARSER_H
+
+#ifndef BALL_CORE_STRUCTURE_SMARTES_PARSER_H
+#define BALL_CORE_STRUCTURE_SMARTES_PARSER_H
 
 #include <map>
 #include <set>
@@ -13,9 +12,9 @@
 #include <BALL/core/common/macros.h>
 #include <BALL/core/datatype/string.h>
 
-
 // needed for MSVC:
 #undef CW_DEFAULT
+
 
 namespace BALL 
 {
@@ -775,5 +774,5 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_SMARTS_PARSER_H
+#endif // BALL_CORE_STRUCTURE_SMARTS_PARSER_H
 

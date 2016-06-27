@@ -1,10 +1,12 @@
-// $Id: linearBaseFunction.h,v 1.1 2005/11/21 19:27:03 anker Exp $
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_LINEARBASEFUNCTION_H
-#define BALL_SCORING_COMMON_LINEARBASEFUNCTION_H
+
+#ifndef BALL_CORE_SCORING_COMMON_LINEARBASEFUNCTION_H
+#define BALL_CORE_SCORING_COMMON_LINEARBASEFUNCTION_H
 
 #include <BALL/core/common/macros.h>
 #include <BALL/core/scoring/common/baseFunction.h>
+
 
 namespace BALL
 {
@@ -40,4 +42,4 @@ namespace BALL
 
 }
 
-#endif // BALL_SCORING_COMMON_LINEARBASEFUNCTION_H
+#endif // BALL_CORE_SCORING_COMMON_LINEARBASEFUNCTION_H

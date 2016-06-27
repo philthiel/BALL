@@ -1,23 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_TFFT1D_H
-#define BALL_MATHS_TFFT1D_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_TFFT1D_H
+#define BALL_CORE_MATHS_TFFT1D_H
 
-#ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/core/datatype/regularData1D.h>
-#endif
+#include <BALL/core/datatype/regularData1D.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/fftwCommon.h>
 
 #include <cmath>
 #include <complex>
 #include <fftw3.h>
 
-#include <BALL/core/maths/fftwCommon.h>
 
 namespace BALL
 {
@@ -747,4 +741,5 @@ namespace BALL
 		}
 	}
 }
-#endif // BALL_MATHS_TFFT1D_H
+
+#endif // BALL_CORE_MATHS_TFFT1D_H

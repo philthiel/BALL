@@ -1,17 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/charmm/charmmImproperTorsion.h>
+
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/molmec/charmm/charmm.h>
 #include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/molmec/common/forceField.h>
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/bond.h>
 
 #include <algorithm>
+#include <vector>
 
 using namespace std;
+
 
 namespace BALL 
 {
@@ -403,7 +405,7 @@ namespace BALL
 
 		energy_ = 0;
 
-		vector<QuadraticImproperTorsion::Data>::const_iterator it = impropers_.begin(); 
+		vector<QuadraticImproperTorsion::Data>::const_iterator it = impropers_.begin();
 
 		for ( ; it != impropers_.end(); it++) 
 		{
@@ -459,7 +461,7 @@ namespace BALL
 		Vector3 bcxbd;
 		Vector3 bcxba;
 
-		vector<QuadraticImproperTorsion::Data>::const_iterator it = impropers_.begin(); 
+		vector<QuadraticImproperTorsion::Data>::const_iterator it = impropers_.begin();
 
 		for (; it != impropers_.end(); it++) 
 		{

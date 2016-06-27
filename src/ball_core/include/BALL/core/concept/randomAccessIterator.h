@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_RANDOMACCESSITERATOR_H
-#define BALL_CONCEPT_RANDOMACCESSITERATOR_H
 
-#ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/core/concept/bidirectionalIterator.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_RANDOMACCESSITERATOR_H
+#define BALL_CORE_CONCEPT_RANDOMACCESSITERATOR_H
+
+#include <BALL/core/concept/bidirectionalIterator.h>
+
 
 namespace BALL 
 {
@@ -528,4 +526,4 @@ namespace BALL
 
 } // namespace BALL 
 
-#endif // BALL_CONCEPT_RANDOMACCESSITERATOR_H
+#endif // BALL_CORE_CONCEPT_RANDOMACCESSITERATOR_H

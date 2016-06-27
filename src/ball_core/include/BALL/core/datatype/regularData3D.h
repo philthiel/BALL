@@ -1,30 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-#define BALL_DATATYPE_REGULARDATA3D_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_REGULARDATA3D_H
+#define BALL_CORE_DATATYPE_REGULARDATA3D_H
 
-#ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/core/system/file.h>
-#endif
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/binaryFileAdaptor.h>
+#include <BALL/core/maths/common.h>
 
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/core/system/binaryFileAdaptor.h>
-#endif
-
-#ifndef BALL_MATHS_COMMON_H
-# include <BALL/core/maths/common.h>
-#endif
-
-#include <iostream>
-#include <fstream>
-#include <iterator>
 #include <algorithm>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <vector>
+
 
 namespace BALL 
 {
@@ -193,7 +183,7 @@ namespace BALL
 
 
 		/// Get the full data
-		const vector<ValueType>& getData() const;
+		const std::vector<ValueType>& getData() const;
 
     /** Return a nonmutable reference to a specific data element.
      *  This is the range checking version of <tt>operator []</tt>.
@@ -874,7 +864,7 @@ namespace BALL
 
   template <class ValueType>
   BALL_INLINE
-  const vector<ValueType>& TRegularData3D<ValueType>::getData() const
+  const std::vector<ValueType>& TRegularData3D<ValueType>::getData() const
   {
     return data_;
 	}
@@ -1448,4 +1438,4 @@ namespace BALL
 	
  } // namespace BALL
 
-#endif // BALL_DATATYPE_REGULARDATA3D_H
+#endif // BALL_CORE_DATATYPE_REGULARDATA3D_H

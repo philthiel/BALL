@@ -1,18 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/QSARData.h>
 
 #include <BALL/core/structure/molecularSimilarity.h>
 
-#include <set>
 #include <algorithm>
+#include <set>
 
 #include <boost/random/mersenne_twister.hpp>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,14 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/structure/molecularSimilarity.h>
+
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/molecule.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/datatype/string.h>
 #include <BALL/core/system/path.h>
+
 #include <fstream>
 #include <sstream>
 

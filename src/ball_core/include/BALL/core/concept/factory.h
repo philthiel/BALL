@@ -1,9 +1,7 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_FACTORY_H
-#define BALL_CONCEPT_FACTORY_H
+#ifndef BALL_CORE_CONCEPT_FACTORY_H
+#define BALL_CORE_CONCEPT_FACTORY_H
 
 
 namespace BALL
@@ -36,4 +34,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_CONCEPT_FACTORY_H
+#endif // BALL_CORE_CONCEPT_FACTORY_H

@@ -1,17 +1,16 @@
-#ifndef BALL_MATHS_CUBICSPLINE2D_H
-#define BALL_MATHS_CUBICSPLINE2D_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_MATHS_CUBICSPLINE2D_H
+#define BALL_CORE_MATHS_CUBICSPLINE2D_H
 
 #include <map>
 #include <set>
 #include <vector>
 
-#ifndef BALL_MATHS_CUBICSPLINE1D_H
-#	include <BALL/core/maths/cubicSpline1D.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
+#include <BALL/core/maths/cubicSpline1D.h>
 #include <BALL/core/common/exception.h>
-#endif
+
 
 namespace BALL 
 {
@@ -379,4 +378,5 @@ namespace BALL
 
 
 }
-#endif
+
+#endif // BALL_CORE_MATHS_CUBICSPLINE2D_H

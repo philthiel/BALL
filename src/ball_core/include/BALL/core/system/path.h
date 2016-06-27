@@ -1,30 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: path.h,v 1.13.20.1 2007/06/21 19:38:10 oliver Exp $
-//
-// Author:
-//   Oliver Kohlbacher
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_PATH_H
-#define BALL_COMMON_PATH_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_PATH_H
+#define BALL_CORE_COMMON_PATH_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/string.h>
 
 #include <vector>
 
-using std::vector;
 
 namespace BALL 
 {
@@ -121,4 +106,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_COMMON_PATH_H
+#endif // BALL_CORE_COMMON_PATH_H

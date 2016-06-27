@@ -1,19 +1,16 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_ROTATEBONDS_H
-#define BALL_DOCKING_GENETICDOCK_ROTATEBONDS_H
 
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/atom.h>
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_ROTATEBONDS_H
+#define BALL_CORE_DOCKING_GENETICDOCK_ROTATEBONDS_H
+
 #include <BALL/core/datatype/hashSet.h>
-#include <BALL/core/kernel/protein.h>
 #include <BALL/core/docking/common/staticLigandFragment.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
 
 #include <vector>
-
 
 
 namespace BALL
@@ -24,7 +21,7 @@ namespace BALL
     {
     public:
 
-      RotateBonds(const vector<Bond*>* rotatable_bonds);
+	  RotateBonds(const std::vector<Bond*>* rotatable_bonds);
 
       /** copy constructor
        */
@@ -55,6 +52,4 @@ namespace BALL
     };
 }
 
-
-
-#endif /* BALL_DOCKING_GENETICDOCK_ROTATEBONDS_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_ROTATEBONDS_H

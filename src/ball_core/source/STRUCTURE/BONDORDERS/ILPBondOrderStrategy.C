@@ -1,8 +1,13 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/bondorders/ILPBondOrderStrategy.h>
-#include <BALL/core/structure/assignBondOrderProcessor.h>
+
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
 
 #include <lpsolve/lp_lib.h>
+
 
 namespace BALL
 {

@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_INIT_H
-#define BALL_COMMON_INIT_H
 
-#ifndef BALL_COMMON_GLOBAL_H
+#ifndef BALL_CORE_COMMON_INIT_H
+#define BALL_CORE_COMMON_INIT_H
+
 #include <BALL/core/common/global.h>
-#endif
+
 
 namespace BALL
 {
@@ -31,4 +29,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_COMMON_INIT_H
+#endif // BALL_CORE_COMMON_INIT_H

@@ -1,26 +1,26 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/support.h>
-#include <BALL/core/maths/common.h>
+
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/maths/common.h>
 #include <BALL/core/system/sysinfo.h>
 
-#include <cmath>
 #include <limits>
+#include <cmath>
 
-//   #define BALL_BENCHMARK
+// #define BALL_BENCHMARK
 
 #ifdef BALL_BENCHMARK
  #include <BALL/core/system/timer.h>
 #endif 
 
-
 using namespace std;
+
 
 namespace BALL 
 {

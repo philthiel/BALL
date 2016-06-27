@@ -1,12 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_FLEXDEFINITION_H
-#define BALL_DOCKING_COMMON_FLEXDEFINITION_H
+
+#ifndef BALL_CORE_DOCKING_COMMON_FLEXDEFINITION_H
+#define BALL_CORE_DOCKING_COMMON_FLEXDEFINITION_H
 
 #include <BALL/core/kernel/protein.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -46,7 +47,7 @@ namespace BALL
 				/** Get all fully-flexible residues.
 							@param vector of residue indices
 				 */
-				vector<Position> getFullyFlexibleResidues() const;
+				std::vector<Position> getFullyFlexibleResidues() const;
 
 				/** Add a rotamer-flexible residue.
 							@param residue index
@@ -56,12 +57,12 @@ namespace BALL
 				/** Get all rotamer-flexible residues.
 							@param vector of residue indices
 				 */
-				vector<Position> getRotamerFlexibleResidues() const;
+				std::vector<Position> getRotamerFlexibleResidues() const;
 
 			private:
-				vector<Position> fully_flexible_;
-				vector<Position> rotamer_flexible_;
+				std::vector<Position> fully_flexible_;
+				std::vector<Position> rotamer_flexible_;
 		};
 }
 
-#endif /* BALL_DOCKING_COMMON_FLEXDEFINITION_H */
+#endif // BALL_CORE_DOCKING_COMMON_FLEXDEFINITION_H

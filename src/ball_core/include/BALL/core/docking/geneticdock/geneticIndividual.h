@@ -1,14 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H
-#define BALL_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H
+
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H
+#define BALL_CORE_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H
 
 #include <vector>
 
 #include <BALL/core/docking/geneticdock/genes.h>
+
 
 namespace BALL
 {
@@ -100,4 +99,4 @@ namespace BALL
     };
 }
 
-#endif /* BALL_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_GENETICINDIVIDUAL_H

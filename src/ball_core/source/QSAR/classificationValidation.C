@@ -1,15 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
+
 #include <BALL/core/qsar/classificationValidation.h>
-#include <BALL/core/qsar/statistics.h>
+
 #include <BALL/core/qsar/classificationModel.h>
 #include <BALL/core/qsar/registry.h>
+#include <BALL/core/qsar/statistics.h>
 
 #include <boost/random/mersenne_twister.hpp>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -539,12 +540,12 @@ namespace BALL
 			return quality_input_test_;
 		}
 
-		void ClassificationValidation::saveToFile(string filename) const
+		void ClassificationValidation::saveToFile(String filename) const
 		{
 			saveToFile(filename, quality_input_test_, quality_cv_);	
 		}
 
-		void ClassificationValidation::saveToFile(string filename, const double& quality_input_test, const double& predictive_quality) const
+		void ClassificationValidation::saveToFile(String filename, const double& quality_input_test, const double& predictive_quality) const
 		{
 			ofstream out(filename.c_str());
 			
@@ -555,7 +556,7 @@ namespace BALL
 		}
 
 
-		void ClassificationValidation::readFromFile(string filename)
+		void ClassificationValidation::readFromFile(String filename)
 		{
 			ifstream in(filename.c_str()); 
 			

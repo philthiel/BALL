@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_SPHERE3_H
-#define BALL_MATHS_SPHERE3_H
+
+#ifndef BALL_CORE_MATHS_SPHERE3_H
+#define BALL_CORE_MATHS_SPHERE3_H
 
 #ifdef BALL_HAS_IEEEFP_H
 #	include <ieeefp.h>
@@ -11,13 +10,9 @@
 
 #include <iostream>
 
-#ifndef BALL_MATHS_PLANE3_H
-#	include <BALL/core/maths/plane3.h>
-#endif
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
 
 namespace BALL 
 {
@@ -300,4 +295,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_SPHERE3_H
+#endif // BALL_CORE_MATHS_SPHERE3_H

@@ -1,22 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/docking/common/dockingAlgorithm.h>
-#include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/format/molFileFactory.h>
-#include <BALL/core/format/genericMolFile.h>
-#include <BALL/core/format/dockResultFile.h>
-#include <BALL/core/format/INIFile.h>
+
 #include <BALL/core/docking/common/structurePreparer.h>
+#include <BALL/core/format/dockResultFile.h>
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/format/INIFile.h>
+#include <BALL/core/format/molFileFactory.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/structure/structureMapper.h>
 
-#include <stdlib.h>
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
+
 
 namespace BALL
 {

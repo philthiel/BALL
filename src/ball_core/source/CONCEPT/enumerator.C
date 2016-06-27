@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: enumerator.C,v 1.14 2003/08/26 09:17:44 oliver Exp $
-//
+//_new_file_header
 
-#include <BALL/core/common/global.h>
-#include <BALL/core/common/exception.h>
-#include <BALL/core/datatype/string.h>
+
 #include <BALL/core/concept/enumerator.h>
+
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/string.h>
 
 #include <algorithm>
 #include <functional>
+
 
 namespace BALL 
 {

@@ -1,27 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics: CHARMM force field, proper torsion component
 
-#ifndef BALL_MOLMEC_CHARMM_CHARMMTORSION_H
-#define BALL_MOLMEC_CHARMM_CHARMMTORSION_H
+#ifndef BALL_CORE_MOLMEC_CHARMM_CHARMMTORSION_H
+#define BALL_CORE_MOLMEC_CHARMM_CHARMMTORSION_H
 
-#ifndef BALL_MOLMEC_PARAMETER_COSINETORSION_H
-#	include <BALL/core/molmec/parameter/cosineTorsion.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/parameter/cosineTorsion.h>
+#include <BALL/core/molmec/parameter/residueTorsions.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_RESIDUETORSIONS_H
-#	include <BALL/core/molmec/parameter/residueTorsions.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/core/molmec/common/forceField.h>
-#endif
+#include <vector>
 
 
 namespace BALL 
@@ -135,7 +123,7 @@ namespace BALL
 
 		/*_	Vector containing the parameters for each torsion.
 		*/
-		vector<SingleCharmmTorsion> 	torsion_;
+		std::vector<SingleCharmmTorsion> 	torsion_;
 
 		/*_ Contents of the [Torsions] section of the parameter file.
 		*/
@@ -154,4 +142,4 @@ namespace BALL
 	};
 } // namespace BALL 
 
-#endif // BALL_MOLMEC_CHARMM_CHARMMTORSION_H
+#endif // BALL_CORE_MOLMEC_CHARMM_CHARMMTORSION_H

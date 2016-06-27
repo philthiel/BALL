@@ -1,13 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
-#define BALL_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
 
-#include <BALL/core/scoring/common/gridBasedScoring.h>
+#ifndef BALL_CORE_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
+#define BALL_CORE_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
+
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/scoring/common/gridBasedScoring.h>
 
 
 namespace BALL
@@ -43,4 +41,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMMON_DIFFGRIDBASEDSCORING_H
+#endif // BALL_CORE_SCORING_COMMON_DIFFGRIDBASEDSCORING_H

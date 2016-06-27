@@ -1,8 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/amber/amberNonBonded.h>
+
 #include <BALL/core/molmec/amber/amber.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/support.h>
@@ -19,6 +19,7 @@ using namespace std;
 #else
 #	define BALL_TPL_ARG_INLINE
 #endif
+
 
 namespace BALL 
 {

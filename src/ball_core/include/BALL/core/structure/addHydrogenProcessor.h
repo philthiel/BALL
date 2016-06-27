@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_ADDHYDROGENPROCESSOR_H
-#define BALL_STRUCTURE_ADDHYDROGENPROCESSOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
+#ifndef BALL_CORE_STRUCTURE_ADDHYDROGENPROCESSOR_H
+#define BALL_CORE_STRUCTURE_ADDHYDROGENPROCESSOR_H
+
 #include <BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
 #include <BALL/core/maths/vector3.h> 
-#endif
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -201,4 +196,4 @@ namespace BALL
 
 } //namespace BALL
 
-#endif // BALL_STRUCTURE_ADDHYDROGENPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_ADDHYDROGENPROCESSOR_H

@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: molecularSurfaceGrid.h,v 1.15 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_MOLECULARSURFACEGRID_H
-#define BALL_SOLVATION_MOLECULARSURFACEGRID_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_MOLECULARSURFACEGRID_H
+#define BALL_CORE_SOLVATION_MOLECULARSURFACEGRID_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
+#include <BALL/core/datatype/regularData3D.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/core/datatype/regularData3D.h>
-#endif
 
 namespace BALL 
 {
@@ -44,4 +34,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_SOLVATION_MOLECULARSURFACEGRID_H
+#endif // BALL_CORE_SOLVATION_MOLECULARSURFACEGRID_H

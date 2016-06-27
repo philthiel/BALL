@@ -1,15 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: expressionTree.h,v 1.12 2005/10/23 12:02:18 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_EXPRESSIONTREE_H
-#define BALL_KERNEL_EXPRESSIONTREE_H
 
-#ifndef BALL_KERNEL_EXPRESSIONPREDICATE_H
-#	include <BALL/core/kernel/expressionPredicate.h>
-#endif
+#ifndef BALL_CORE_KERNEL_EXPRESSIONTREE_H
+#define BALL_CORE_KERNEL_EXPRESSIONTREE_H
+
+#include <BALL/core/kernel/expressionPredicate.h>
+
+#include <list>
+
 
 namespace BALL
 {
@@ -75,7 +73,7 @@ namespace BALL
 
 		/**
 		*/
-		ExpressionTree(Type type, list<const ExpressionTree*> children, bool negate = false);
+		ExpressionTree(Type type, std::list<const ExpressionTree*> children, bool negate = false);
 
 		/**	Destructor
 		*/
@@ -133,7 +131,7 @@ namespace BALL
 
 		/** Get the list of children.
 		*/
-		const list<const ExpressionTree*>& getChildren() const;
+		const std::list<const ExpressionTree*>& getChildren() const;
 
 		//@}
 		/** @name Assignment 
@@ -177,10 +175,10 @@ namespace BALL
 		
 		/*_ A list containing pointers to the children of this node. 
 		*/
-		list<const ExpressionTree*>	children_;
+		std::list<const ExpressionTree*>	children_;
 
 	};
 
 }
 
-#endif // BALL_KERNEL_EXPRESSIONTREE_H
+#endif // BALL_CORE_KERNEL_EXPRESSIONTREE_H

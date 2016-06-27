@@ -1,26 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: property.h,v 1.40 2005/12/23 17:01:41 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROPERTY_H
-#define BALL_CONCEPT_PROPERTY_H
 
-#ifndef BALL_DATATYPE_BITVECTOR_H
-#	include <BALL/core/datatype/bitVector.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/core/concept/persistentObject.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_PROPERTY_H
+#define BALL_CORE_CONCEPT_PROPERTY_H
 
 #include <BALL/core/common/logStream.h>
+#include <BALL/core/concept/persistentObject.h>
+#include <BALL/core/datatype/bitVector.h>
 
 #include <iostream>
 
-#include <boost/shared_ptr.hpp>
 #include <boost/any.hpp>
+#include <boost/shared_ptr.hpp>
+
 
 namespace BALL 
 {
@@ -654,4 +646,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_PROPERTY_H
+#endif // BALL_CORE_CONCEPT_PROPERTY_H

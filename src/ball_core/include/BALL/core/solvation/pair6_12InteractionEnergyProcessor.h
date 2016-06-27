@@ -1,35 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: pair6_12InteractionEnergyProcessor.h,v 1.22 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
-#define BALL_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
+#define BALL_CORE_SOLVATION_PAIR6_12INTERACTIONENERGYPROCESSOR_H
 
-#ifndef BALL_MATHS_SURFACE_H
-# include <BALL/core/maths/surface.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/energy/energyProcessor.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/solvation/pair6_12RDFIntegrator.h>
+#include <BALL/core/solvation/solventDescriptor.h>
+#include <BALL/core/structure/RDFParameter.h>
 
-#ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/core/energy/energyProcessor.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RDFPARAMETER_H
-# include <BALL/core/structure/RDFParameter.h>
-#endif
-
-#ifndef BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
-# include <BALL/core/solvation/pair6_12RDFIntegrator.h>
-#endif
-
-#ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-# include <BALL/core/solvation/solventDescriptor.h>
-#endif
 
 namespace BALL
 {

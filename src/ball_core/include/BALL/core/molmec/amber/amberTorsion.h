@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics: Amber force field, bond stretch component
 
-#ifndef BALL_MOLMEC_AMBER_AMBERTORSION_H
-#define BALL_MOLMEC_AMBER_AMBERTORSION_H
+#ifndef BALL_CORE_MOLMEC_AMBER_AMBERTORSION_H
+#define BALL_CORE_MOLMEC_AMBER_AMBERTORSION_H
 
-#ifndef BALL_MOLMEC_PARAMETER_COSINETORSION_H
-#	include <BALL/core/molmec/parameter/cosineTorsion.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/parameter/cosineTorsion.h>
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#include <vector>
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/core/molmec/common/forceField.h>
-#endif
 
 namespace BALL 
 {
@@ -129,7 +121,7 @@ namespace BALL
 
 		/*_	array with the torsions
 		*/
-		vector<SingleAmberTorsion> 	torsion_;
+		std::vector<SingleAmberTorsion> 	torsion_;
 
 		CosineTorsion			torsion_parameters_;
 		
@@ -142,4 +134,4 @@ namespace BALL
 	};
 } // namespace BALL 
 
-#endif // BALL_MOLMEC_AMBER_AMBERTORSION_H
+#endif // BALL_CORE_MOLMEC_AMBER_AMBERTORSION_H

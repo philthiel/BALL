@@ -1,4 +1,8 @@
+//_new_file_header
+
+
 #include <BALL/core/xray/crystalGenerator.h>
+
 #include <BALL/core/kernel/system.h>
 
 using namespace std;
@@ -7,8 +11,8 @@ using namespace std;
 namespace BALL
 {
 
-	const string CrystalGenerator::Option::SPACE_GROUP_FILE= "filename";
-	const string CrystalGenerator::Default::SPACE_GROUP_FILE= "XRAY/spacegroups-details.ini";
+	const String CrystalGenerator::Option::SPACE_GROUP_FILE= "filename";
+	const String CrystalGenerator::Default::SPACE_GROUP_FILE= "XRAY/spacegroups-details.ini";
 	
 	CrystalGenerator::CrystalGenerator()
 		: center_processor_(),

@@ -1,58 +1,26 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#define BALL_STRUCTURE_REDUCEDSURFACE_H
 
-#ifndef BALL_MATHC_COMMON_H
-#	include <BALL/core/maths/common.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_REDUCEDSURFACE_H
+#define BALL_CORE_STRUCTURE_REDUCEDSURFACE_H
 
-#ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/core/maths/simpleBox3.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/maths/common.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/simpleBox3.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/RSEdge.h>
+#include <BALL/core/structure/RSFace.h>
+#include <BALL/core/structure/RSVertex.h>
 
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_SPHERE_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RSEDGE_H
-#	include <BALL/core/structure/RSEdge.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RSFACE_H
-#	include <BALL/core/structure/RSFace.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RSVERTEX_H
-#	include <BALL/core/structure/RSVertex.h>
-#endif
-
-#include <set>
-#include <list>
 #include <deque>
+#include <list>
+#include <set>
 #include <vector>
+
 
 namespace BALL
 {
@@ -894,4 +862,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif  // BALL_STRUCTURE_REDUCEDSURFACE_H
+#endif  // BALL_CORE_STRUCTURE_REDUCEDSURFACE_H

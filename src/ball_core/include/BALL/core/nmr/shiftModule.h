@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: shiftModule.h,v 1.18 2005/12/23 17:01:56 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#define BALL_NMR_SHIFTMODULE_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include<BALL/core/kernel/system.h>
-#endif
+#ifndef BALL_CORE_NMR_SHIFTMODULE_H
+#define BALL_CORE_NMR_SHIFTMODULE_H
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include<BALL/core/datatype/string.h>
-#endif
+#include<BALL/core/concept/processor.h>
+#include<BALL/core/datatype/string.h>
+#include<BALL/core/format/parameters.h>
+#include<BALL/core/kernel/system.h>
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include<BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMETERS_H
-#	include<BALL/core/format/parameters.h>
-#endif
 
 namespace BALL 
 {
@@ -177,4 +164,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_SHIFTMODULE_H
+#endif // BALL_CORE_NMR_SHIFTMODULE_H

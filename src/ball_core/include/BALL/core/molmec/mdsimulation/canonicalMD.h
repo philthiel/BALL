@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: canonicalMD.h,v 1.27 2005/12/23 17:01:52 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MDSIMULATION_CANONICALMD_H   
-#define BALL_MOLMEC_MDSIMULATION_CANONICALMD_H   
 
-#ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
-#	include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MDSIMULATION_CANONICALMD_H   
+#define BALL_CORE_MOLMEC_MDSIMULATION_CANONICALMD_H   
+
+#include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
+
 
 namespace BALL 
 {
@@ -167,4 +163,4 @@ namespace BALL
 
 } // namespace BALL 
 
-#endif // BALL_MOLMEC_MDSIMULATION_CANONICALMD_H
+#endif // BALL_CORE_MOLMEC_MDSIMULATION_CANONICALMD_H

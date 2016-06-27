@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_EXPRESSIONPARSER_H
-#define BALL_KERNEL_EXPRESSIONPARSER_H
 
-#ifndef BALL_KERNEL_EXPRESSION_TREE_H
-#	include <BALL/core/kernel/expressionTree.h>
-#endif
+#ifndef BALL_CORE_KERNEL_EXPRESSIONPARSER_H
+#define BALL_CORE_KERNEL_EXPRESSIONPARSER_H
+
+#include <BALL/core/kernel/expressionTree.h>
+
+#include <list>
+
 
 namespace BALL 
 {
@@ -37,10 +37,10 @@ namespace BALL
 			//@{
 
 			/// An iterator for the children of a given node
-			typedef	list<SyntaxTree*>::iterator				Iterator;
+			typedef	std::list<SyntaxTree*>::iterator				Iterator;
 
 			/// A const iterator for the children of a given node
-			typedef	list<SyntaxTree*>::const_iterator	ConstIterator;
+			typedef	std::list<SyntaxTree*>::const_iterator	ConstIterator;
 			
 			//@}
 
@@ -134,7 +134,7 @@ namespace BALL
 
 			/** ?????
 			*/
-			list<SyntaxTree*>			children;
+			std::list<SyntaxTree*>			children;
 			//@}			
 		};
 
@@ -185,4 +185,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_KERNEL_EXPRESSIONPARSER_H
+#endif // BALL_CORE_KERNEL_EXPRESSIONPARSER_H

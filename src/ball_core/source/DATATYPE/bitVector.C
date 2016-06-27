@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/datatype/bitVector.h>
+
 #include <BALL/core/maths/common.h>
 
 #include <algorithm>
+
 
 namespace BALL 
 {

@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-#define BALL_MATHS_PIECEWISEFUNCTION_H
+
+#ifndef BALL_CORE_MATHS_PIECEWISEFUNCTION_H
+#define BALL_CORE_MATHS_PIECEWISEFUNCTION_H
 
 #include <iostream>
 #include <limits>
@@ -187,4 +186,4 @@ namespace BALL
 	};
 }
 
-#endif
+#endif // BALL_CORE_MATHS_PIECEWISEFUNCTION_H

@@ -1,48 +1,22 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_TRIANGULATEDSES_H
-#define BALL_STRUCTURE_TRIANGULATEDSES_H
 
-#ifndef BALL_TRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#	include <BALL/core/structure/solventExcludedSurface.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_TRIANGULATEDSES_H
+#define BALL_CORE_STRUCTURE_TRIANGULATEDSES_H
 
-#ifndef BALL_STRUCTURE_TRIANGLE_H
-#	include <BALL/core/structure/triangle.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGLEEDGE_H
-#	include <BALL/core/structure/triangleEdge.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGLEPOINT_H
-#	include <BALL/core/structure/trianglePoint.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGULATEDSURFACE_H
-#	include <BALL/core/structure/triangulatedSurface.h>
-#endif
-
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
-
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/solventExcludedSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
+#include <BALL/core/structure/triangulatedSurface.h>
 
 #include <list>
 #include <vector>
+
 
 namespace BALL
 {
@@ -350,5 +324,4 @@ namespace BALL
    
 }	// namespace BALL
 
-
-#endif	// BALL_STRUCTURE_TRIANGULATEDSES_H
+#endif	// BALL_CORE_STRUCTURE_TRIANGULATEDSES_H

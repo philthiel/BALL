@@ -1,11 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: coulomb.C,v 1.3 2002/02/27 12:21:13 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/energy/coulomb.h>
-#include <BALL/core/kernel/forEach.h>
+
 #include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/forEach.h>
+
 
 namespace BALL 
 {

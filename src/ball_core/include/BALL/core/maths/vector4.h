@@ -1,21 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_VECTOR4_H
-#define BALL_MATHS_VECTOR4_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_VECTOR4_H
+#define BALL_CORE_MATHS_VECTOR4_H
 
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/angle.h>
 
 #ifdef BALL_HAS_IEEEFP_H
 #	include <ieeefp.h>
 #endif 
+
 
 namespace BALL 
 {
@@ -880,4 +875,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_MATHS_VECTOR4_H
+#endif // BALL_CORE_MATHS_VECTOR4_H

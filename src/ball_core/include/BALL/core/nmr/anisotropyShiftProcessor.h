@@ -1,25 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: anisotropyShiftProcessor.h,v 1.20.20.1 2007/08/07 17:22:59 aleru Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_ANISOTROPYSHIFTPROCESSOR_H
-#define BALL_NMR_ANISOTROPYSHIFTPROCESSOR_H
 
-#ifndef BALL_KERNEL_BOND_H
-# include <BALL/core/kernel/bond.h>
-#endif
+#ifndef BALL_CORE_NMR_ANISOTROPYSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_ANISOTROPYSHIFTPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOM_H
-# include<BALL/core/kernel/atom.h>
-#endif
-
-#ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/core/nmr/shiftModule.h>
-#endif
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/nmr/shiftModule.h>
 
 #include <list>
+
 
 namespace BALL 
 {		
@@ -154,4 +144,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_ANISOTROPYSHIFTPROCESSOR_H
+#endif // BALL_CORE_NMR_ANISOTROPYSHIFTPROCESSOR_H

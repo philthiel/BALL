@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_FRAGMENT_H
-#define BALL_KERNEL_FRAGMENT_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_KERNEL_FRAGMENT_H
+#define BALL_CORE_KERNEL_FRAGMENT_H
+
+#include <BALL/core/kernel/atomContainer.h>
+
 
 namespace BALL 
 {
@@ -122,4 +120,4 @@ template class BALL_EXPORT UnaryProcessor<Fragment>;
 #endif
 } // namespace BALL
 
-#endif // BALL_KERNEL_FRAGMENT_H
+#endif // BALL_CORE_KERNEL_FRAGMENT_H

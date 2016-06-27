@@ -1,12 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/RDFParameter.h>
-#include <BALL/core/structure/RDFSection.h>
+
 #include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/structure/RDFSection.h>
 
 using namespace std;
+
 
 namespace BALL
 {

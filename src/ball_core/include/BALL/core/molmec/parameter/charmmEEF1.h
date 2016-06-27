@@ -1,20 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics Parameter: class describing parameters needed 
-// for the EEF1 solvation component in the CHARMM force field
  
-#ifndef BALL_MOLMEC_PARAMETER_CHARMMEEF1_H
-#define BALL_MOLMEC_PARAMETER_CHARMMEEF1_H
+#ifndef BALL_CORE_MOLMEC_PARAMETER_CHARMMEEF1_H
+#define BALL_CORE_MOLMEC_PARAMETER_CHARMMEEF1_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
 
 namespace BALL 
 {
@@ -162,4 +154,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_CHARMMEEF1_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_CHARMMEEF1_H

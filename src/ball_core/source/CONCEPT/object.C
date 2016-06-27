@@ -1,16 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: object.C,v 1.11 2002/02/27 12:21:09 sturm Exp $
+//_new_file_header
 
-#include <BALL/core/common/macros.h>
+
 #include <BALL/core/concept/object.h>
 
+#include <BALL/core/common/macros.h>
 
-using std::endl;
-using std::cout;
-using std::istream;
-using std::ostream;
+using namespace std;
+
 
 namespace BALL 
 {

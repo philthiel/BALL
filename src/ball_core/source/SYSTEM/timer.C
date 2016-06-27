@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: timer.C,v 1.17 2005/02/14 17:06:45 amoll Exp $
+//_new_file_header
+
 
 #include <BALL/core/system/timer.h>
 
@@ -26,10 +24,8 @@
 #	include <sys/timeb.h>
 #endif
 
+using namespace std;
 
-using std::cout;
-using std::endl;
-using std::ostream;
 
 namespace BALL 
 {

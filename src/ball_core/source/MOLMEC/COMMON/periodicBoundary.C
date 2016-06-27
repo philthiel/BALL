@@ -1,20 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/periodicBoundary.h>
+
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/common.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/support.h>
 #include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/structure/geometricTransformations.h>
 #include <BALL/core/system/path.h>
-#include <BALL/core/concept/processor.h>
-#include <BALL/core/format/HINFile.h>
-#include <BALL/core/maths/common.h>
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/PTE.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

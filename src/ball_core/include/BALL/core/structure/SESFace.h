@@ -1,25 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SESFACE_H
-#define BALL_STRUCTURE_SESFACE_H
 
-#ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/core/structure/graphFace.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SESFACE_H
+#define BALL_CORE_STRUCTURE_SESFACE_H
 
-#ifndef BALL_STRUCTURE_RSEDGE_H
-#	include <BALL/core/structure/RSEdge.h>
-#endif
+#include <BALL/core/structure/graphFace.h>
+#include <BALL/core/structure/RSEdge.h>
+#include <BALL/core/structure/RSFace.h>
+#include <BALL/core/structure/RSVertex.h>
 
-#ifndef BALL_STRUCTURE_RSFACE_H
-#	include <BALL/core/structure/RSFace.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RSVERTEX_H
-#	include <BALL/core/structure/RSVertex.h>
-#endif
 
 namespace BALL
 {
@@ -302,4 +291,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_SESFACE_H
+#endif // BALL_CORE_STRUCTURE_SESFACE_H

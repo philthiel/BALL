@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: sysinfo.C,v 1.22 2005/12/23 17:03:06 amoll Exp $
+//_new_file_header
+
 
 #include <BALL/core/system/sysinfo.h>
 
@@ -31,6 +29,7 @@
 #   include <mach/mach.h>
 # endif
 #endif
+
 
 namespace BALL
 {

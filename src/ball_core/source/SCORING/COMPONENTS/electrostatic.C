@@ -1,14 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/electrostatic.h>
-#include <BALL/core/scoring/components/vanDerWaals.h>
-#include <BALL/core/scoring/common/scoringFunction.h>
 
+#include <BALL/core/scoring/common/scoringFunction.h>
+#include <BALL/core/scoring/components/vanDerWaals.h>
+
+#include <vector>
 
 using namespace BALL;
+using namespace std;
 
 
 Electrostatic::Electrostatic(Options& options, ForceFieldParameters& forcefield_parameters)
@@ -34,7 +35,7 @@ Electrostatic::~Electrostatic()
 	if (do_calculations_) delete amber_nb_;
 }
 
-void Electrostatic::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+void Electrostatic::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 {
 	if (do_calculations_)
 	{

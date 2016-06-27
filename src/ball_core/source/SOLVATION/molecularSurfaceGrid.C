@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: molecularSurfaceGrid.C,v 1.24 2005/12/23 17:03:03 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/molecularSurfaceGrid.h>
+
 #include <BALL/core/kernel/forEach.h>
+
 
 namespace BALL 
 {

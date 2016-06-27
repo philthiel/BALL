@@ -1,10 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/analyticalSES.h>
+
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/atomContainer.h>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -113,7 +116,7 @@ namespace BALL
 		atom_areas.clear();
 		for (Position i = 0; i < atoms.size(); ++i)
 		{
-			atom_areas.insert(std::pair<const Atom*, float>(atoms[i], tmp_atom_areas[i]));
+			atom_areas.insert(pair<const Atom*, float>(atoms[i], tmp_atom_areas[i]));
 		}
 
 		// free the input fields

@@ -1,25 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_NUCLEOTIDE_H
-#define BALL_KERNEL_NUCLEOTIDE_H
 
-#ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/core/kernel/fragment.h>
-#endif
+#ifndef BALL_CORE_KERNEL_NUCLEOTIDE_H
+#define BALL_CORE_KERNEL_NUCLEOTIDE_H
 
-#ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/core/kernel/residue.h>
-#endif
-
-#ifndef BALL_KERNEL_NUCLEOTIDEITERATOR_H
-#	include <BALL/core/kernel/nucleotideIterator.h>
-#endif
-
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/nucleotideIterator.h>
  
 #define BALL_NUCLEOTIDE_DEFAULT_ID               ""
 #define BALL_NUCLEOTIDE_DEFAULT_INSERTION_CODE   ' '
+
 
 namespace BALL 
 {
@@ -311,7 +302,7 @@ namespace BALL
 
 		bool isSuperAtomContainerOf(const AtomContainer& atom_container) const;
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(Nucleotide, AtomContainer, atomContainers)
 
 		// --- ATTRIBUTES
@@ -347,4 +338,4 @@ namespace BALL
  
 } // namespace BALL
 
-#endif // BALL_KERNEL_NUCLEOTIDE_H
+#endif // BALL_CORE_KERNEL_NUCLEOTIDE_H

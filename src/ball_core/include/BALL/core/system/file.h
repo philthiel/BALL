@@ -1,28 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_FILE_H
-#define BALL_SYSTEM_FILE_H
 
-#ifndef BALL_DATATYPE_REGULAREXPRESSION_H
-#	include <BALL/core/datatype/regularExpression.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_SYSTEM_FILESYSTEM_H
-#	include <BALL/core/system/fileSystem.h>
-#endif
+#ifndef BALL_CORE_SYSTEM_FILE_H
+#define BALL_CORE_SYSTEM_FILE_H
 
 #include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/regularExpression.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/system/fileSystem.h>
 
-#include <cstdlib>                   // 'getenv'
-#include <sys/stat.h>                 // 'stat', 'lstat'
-#include <cstdio>                    	// 'rename'
 #include <algorithm>                  // 'reverse'
+#include <cstdlib>                   // 'getenv'
+#include <cstdio>                    	// 'rename'
+#include <sys/stat.h>                 // 'stat', 'lstat'
 
 #ifdef BALL_COMPILER_MSVC
 #ifndef S_ISREG
@@ -39,9 +29,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <sys/types.h>
 #include <map>
-#include <algorithm>
+#include <sys/types.h>
+
 
 #ifdef BALL_HAS_UNISTD_H
 #	include <unistd.h>			// 'access', 'rename', 'truncate'
@@ -618,4 +608,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_SYSTEM_FILE_H
+#endif // BALL_CORE_SYSTEM_FILE_H

@@ -1,21 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/connectivityBase.h>
-#include <BALL/core/qsar/simpleDescriptors.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/bond.h>
 
-#include <queue>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
+
 #include <numeric>
+#include <queue>
 
 using namespace std;
 
 #define BALL_QSAR_CONNECTIVITYBASE_DEBUG
 #undef  BALL_QSAR_CONNECTIVITYBASE_DEBUG
+
 
 namespace BALL
 {

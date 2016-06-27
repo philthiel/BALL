@@ -1,27 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_ANGLE_H
-#define BALL_MATHS_ANGLE_H
+
+#ifndef BALL_CORE_MATHS_ANGLE_H
+#define BALL_CORE_MATHS_ANGLE_H
 
 #include <iostream>
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/debug.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/common.h>
 
-#ifndef BALL_COMMON_DEBUG_H
-# include <BALL/core/common/debug.h>
-#endif
-
-#ifndef BALL_COMMON_CREATE_H
-# include <BALL/core/common/create.h>
-#endif
-
-#ifndef BALL_MATHS_COMMON_H
-#	include <BALL/core/maths/common.h>
-#endif
 
 namespace BALL 
 {
@@ -762,4 +751,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_ANGLE_H
+#endif // BALL_CORE_MATHS_ANGLE_H

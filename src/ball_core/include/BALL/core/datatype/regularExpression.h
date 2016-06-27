@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_REGULAREXPRESSION_H
-#define BALL_DATATYPE_REGULAREXPRESSION_H
+
+#ifndef BALL_CORE_DATATYPE_REGULAREXPRESSION_H
+#define BALL_CORE_DATATYPE_REGULAREXPRESSION_H
 
 #include <vector>
 
@@ -13,11 +12,10 @@
 #	pragma reset woff 1174
 #endif
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/datatype/string.h>
 
 #define BALL_REGULAR_EXPRESSION_DEFAULT_PATTERN   ""
+
 
 namespace BALL 
 {
@@ -277,4 +275,4 @@ namespace BALL
 #	endif
 } // namespace BALL
 
-#endif // BALL_DATATYPE_REGULAREXPRESSION_H
+#endif // BALL_CORE_DATATYPE_REGULAREXPRESSION_H

@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
-#define BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
 
-#ifndef BALL_MATHS_PPOLYNOMIAL_H
-# include <BALL/core/maths/piecewisePolynomial.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
+#define BALL_CORE_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
+
+#include <BALL/core/maths/piecewisePolynomial.h>
+
 
 namespace BALL
 {
@@ -135,4 +133,4 @@ namespace BALL
    
 }
 
-#endif // BALL_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H
+#endif // BALL_CORE_STRUCTURE_RADIALDISTRIBUTIONFUNCTION_H

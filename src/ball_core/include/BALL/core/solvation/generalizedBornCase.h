@@ -1,34 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: generalizedBornCase.h,v 1.1 2005/11/21 19:38:38 anker Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_GENERALIZED_BORN_H
-#define BALL_SOLVATION_GENERALIZED_BORN_H
 
-#ifndef BALL_KERNEL_PTE_H
-#	include <BALL/core/kernel/PTE.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_GENERALIZED_BORN_H
+#define BALL_CORE_SOLVATION_GENERALIZED_BORN_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_FORMAT_INIFILE_H
-#	include <BALL/core/format/INIFile.h>
-#endif
-
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/format/INIFile.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <map>
 #include <set>
+
 
 namespace BALL 
 {
@@ -313,4 +297,4 @@ namespace BALL
  
 } // namespace BALL
 
-#endif // BALL_SOLVATION_GENERALIZED_BORN_H
+#endif // BALL_CORE_SOLVATION_GENERALIZED_BORN_H

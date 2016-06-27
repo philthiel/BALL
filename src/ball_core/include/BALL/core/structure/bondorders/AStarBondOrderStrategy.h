@@ -1,23 +1,16 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
 
-#ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
+#include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
 
 #include <queue>
+
 
 namespace BALL
 {
@@ -86,4 +79,5 @@ namespace BALL
 	};
 
 }
-#endif // BALL_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
+
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H

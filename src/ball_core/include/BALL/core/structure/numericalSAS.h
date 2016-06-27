@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_NUMERICALSAS_H
-#define BALL_STRUCTURE_NUMERICALSAS_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_NUMERICALSAS_H
+#define BALL_CORE_STRUCTURE_NUMERICALSAS_H
 
-#ifndef BALL_MATHS_SURFACE_H
-# include <BALL/core/maths/surface.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
 
 namespace BALL 
 {
@@ -305,4 +297,4 @@ namespace BALL
    /** @} */
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_NUMERICALSAS_H
+#endif // BALL_CORE_STRUCTURE_NUMERICALSAS_H

@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-#define BALL_STRUCTURE_ATOMBIJECTION_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_ATOMBIJECTION_H
+#define BALL_CORE_STRUCTURE_ATOMBIJECTION_H
+
+#include <BALL/core/kernel/atomContainer.h>
+
 
 namespace BALL 
 {
@@ -196,4 +194,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_ATOMBIJECTION_H
+#endif // BALL_CORE_STRUCTURE_ATOMBIJECTION_H

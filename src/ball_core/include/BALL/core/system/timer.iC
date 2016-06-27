@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: timer.iC,v 1.7 2005/12/23 17:02:07 amoll Exp $
+//_new_file_header
+
 
 BALL_INLINE 
 bool Timer::isValid() const
@@ -50,5 +48,3 @@ bool Timer::operator >= (const Timer& timer) const
 {
   return (getCPUTime() >= timer.getCPUTime());
 }
-
-

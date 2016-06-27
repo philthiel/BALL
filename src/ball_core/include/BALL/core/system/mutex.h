@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_MUTEX_H
-#define BALL_SYSTEM_MUTEX_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#ifndef BALL_CORE_SYSTEM_MUTEX_H
+#define BALL_CORE_SYSTEM_MUTEX_H
+
+#include <BALL/core/common/global.h>
 
 #include <QtCore/QMutex>
 #include <QtCore/QReadWriteLock>
@@ -27,6 +24,7 @@
 #define BALL_DEFAULT_READWRITELOCK_TYPE QReadWriteLock
 #define BALL_DEFAULT_READLOCKER_TYPE QReadLocker
 #define BALL_DEFAULT_WRITELOCKER_TYPE QWriteLocker
+
 
 namespace BALL
 {
@@ -228,5 +226,5 @@ namespace BALL
 	typedef TWriteLocker<BALL_DEFAULT_WRITELOCKER_TYPE, BALL_DEFAULT_READWRITELOCK_TYPE> WriteLocker;
 }
 
-#endif // BALL_SYSTEM_MUTEX_H
+#endif // BALL_CORE_SYSTEM_MUTEX_H
 

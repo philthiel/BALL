@@ -1,14 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: Charmm force field, bond stretch component
+//_new_file_header
 
-#ifndef BALL_MOLMEC_CHARMM_CHARMMSTRETCH_H
-#define BALL_MOLMEC_CHARMM_CHARMMSTRETCH_H
 
-#ifndef BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
-# include <BALL/core/molmec/common/stretchComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_CHARMM_CHARMMSTRETCH_H
+#define BALL_CORE_MOLMEC_CHARMM_CHARMMSTRETCH_H
+
+#include <BALL/core/molmec/common/stretchComponent.h>
+
 
 namespace BALL
 {
@@ -54,4 +51,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_CHARMM_CHARMMSTRETCH_H
+#endif // BALL_CORE_MOLMEC_CHARMM_CHARMMSTRETCH_H

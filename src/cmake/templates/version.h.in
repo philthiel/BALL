@@ -1,22 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_VERSION_H
-#define BALL_COMMON_VERSION_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_VERSION_H
+#define BALL_VERSION_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/global.h>
 
 //
 //  master data for all revisions is stored in this define!
 //
 #define BALL_RELEASE_STRING             "@BALL_PACKAGE_VERSION_MAJOR@.@BALL_PACKAGE_VERSION_MINOR@.@BALL_PACKAGE_VERSION_PATCH@"
+
 
 namespace BALL
 {
@@ -77,4 +72,4 @@ namespace BALL
 	
 }
 
-#endif // BALL_COMMON_VERSION_H
+#endif // BALL_VERSION_H

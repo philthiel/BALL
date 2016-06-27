@@ -1,12 +1,14 @@
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-#define BALL_SYSTEM_BINARYFILEADAPTOR_H
+//_new_file_header
 
-#include <iostream>
+
+#ifndef BALL_CORE_SYSTEM_BINARYFILEADAPTOR_H
+#define BALL_CORE_SYSTEM_BINARYFILEADAPTOR_H
+
 #include <algorithm>
+#include <iostream>
 
-#ifndef BALL_COMMON_LOGSTREAM_H
-# include <BALL/core/common/logStream.h>
-#endif
+#include <BALL/core/common/logStream.h>
+
 
 namespace BALL
 {
@@ -185,4 +187,4 @@ namespace BALL
 	#include <BALL/core/system/binaryFileAdaptor.iC>
 #endif
 
-#endif //BALL_SYSTEM_BINARYFILEADAPTOR_H
+#endif // BALL_SYSTEM_BINARYFILEADAPTOR_H

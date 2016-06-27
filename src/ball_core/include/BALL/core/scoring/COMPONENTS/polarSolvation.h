@@ -1,12 +1,15 @@
-// $Id: polarSolvation.h,v 1.2 2006/05/21 17:49:46 anker Exp $
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_POLARSOLVATION_H
-#define BALL_SCORING_COMPONENTS_POLARSOLVATION_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_POLARSOLVATION_H
+#define BALL_CORE_SCORING_COMPONENTS_POLARSOLVATION_H
 
 #include <BALL/core/scoring/common/scoringComponent.h>
-
-#include <BALL/core/solvation/poissonBoltzmann.h>
 #include <BALL/core/solvation/generalizedBornCase.h>
+#include <BALL/core/solvation/poissonBoltzmann.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -232,7 +235,7 @@ namespace BALL
 		*/
 		virtual bool setup();
 
-		void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+		void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 		/**
 		 * Calculates and returns the component's energy.
@@ -333,4 +336,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_SCORING_COMPONENTS_POLARSOLVATION_H
+#endif // BALL_CORE_SCORING_COMPONENTS_POLARSOLVATION_H

@@ -1,22 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef PCRMODEL
-#define PCRMODEL
 
-#ifndef LMODEL
-#include <BALL/core/qsar/linearModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_PCRMODEL_H
+#define BALL_CORE_QSAR_PCRMODEL_H
 
-#ifndef QSAR_EXCEPTION
 #include <BALL/core/qsar/exception.h>
-#endif
-
+#include <BALL/core/qsar/latentVariableModel.h>
+#include <BALL/core/qsar/linearModel.h>
 #include <BALL/core/qsar/rrModel.h>
 
-#include <BALL/core/qsar/latentVariableModel.h>
+#include <vector>
 
 
 namespace BALL 
@@ -48,9 +41,9 @@ namespace BALL
 				/** set the fraction of the variance that should be explained by the latente variables. */
 				void setFracVar(double frac_var);
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				
 				/** calculates the first eigenvectors of the given matrix 'data' and saves them as columns of matrix 'output' 
 				@param frac_var the fraction of the variance that is to the covered the selected eigenvectors */
@@ -72,4 +65,4 @@ namespace BALL
 	}
 }
 
-#endif // PCRMODEL
+#endif // BALL_CORE_QSAR_PCRMODEL_H

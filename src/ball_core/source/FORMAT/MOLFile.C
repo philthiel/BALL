@@ -1,15 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
+
+#include <BALL/core/format/MOLFile.h>
 
 #include <BALL/version.h>
-#include <BALL/core/format/MOLFile.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/molecule.h>
 #include <BALL/core/kernel/system.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/forEach.h>
+
+using namespace std;
 
 #define MOLFILE_VERSION_STRING_2 "V2000"
 #define MOLFILE_VERSION_STRING_3 "V3000"
@@ -17,6 +19,7 @@
 // enable/disable some debug output
 #define DEBUG
 #undef DEBUG
+
 
 namespace BALL 
 {
@@ -74,7 +77,7 @@ namespace BALL
 
 	bool MOLFile::write(const Molecule& molecule)
 	{
-		if (!isOpen() || getOpenMode() != std::ios::out)
+		if (!isOpen() || getOpenMode() != ios::out)
 		{
 			throw File::CannotWrite(__FILE__, __LINE__, name_);
 		}
@@ -83,7 +86,7 @@ namespace BALL
 		String name = molecule.getName();
 		if ((name.size() > 80) || (name.has('\n')))
 		{
-			Log.warn() << "MOLFile::write: truncating illegal molecule name ('" << name << "')." << std::endl;
+			Log.warn() << "MOLFile::write: truncating illegal molecule name ('" << name << "')." << endl;
 			if (name.size() > 80)
 			{
 				name = name(0, 80);
@@ -99,9 +102,9 @@ namespace BALL
 			}
 		}
 
-		getFileStream() << name << std::endl;
-		getFileStream() << "      " << "BALL " << VersionInfo::getVersion() << std::endl;
-		getFileStream() << std::endl;
+		getFileStream() << name << endl;
+		getFileStream() << "      " << "BALL " << VersionInfo::getVersion() << endl;
+		getFileStream() << endl;
 		
 
 		// write counts line
@@ -154,7 +157,7 @@ namespace BALL
 			atom.exact_change = false;
 
 			// store the atom index in a hash map
-			atom_map.insert(std::pair<const Atom*, Position>(&*it, atom_number++));
+			atom_map.insert(pair<const Atom*, Position>(&*it, atom_number++));
 
 			writeAtomLine_(atom);
 		}
@@ -172,7 +175,7 @@ namespace BALL
 			else
 			{
 				Log.warn() << "MOLFile::write: ignoring bond between " << bond_it->getFirstAtom()->getFullName() 
-									 << " and " << bond_it->getSecondAtom()->getFullName() << std::endl;
+									 << " and " << bond_it->getSecondAtom()->getFullName() << endl;
 				continue;
 			}
 			if (atom_map.has(bond_it->getSecondAtom()))
@@ -182,7 +185,7 @@ namespace BALL
 			else
 			{
 				Log.warn() << "MOLFile::write: ignoring bond between " << bond_it->getFirstAtom()->getFullName() 
-									 << " and " << bond_it->getSecondAtom()->getFullName() << std::endl;
+									 << " and " << bond_it->getSecondAtom()->getFullName() << endl;
 				continue;
 			}
 				
@@ -205,7 +208,7 @@ namespace BALL
 		}
 
 		// write propery section
-		getFileStream() << "M  END" << std::endl;
+		getFileStream() << "M  END" << endl;
 		
 		return true;
 	}
@@ -217,7 +220,7 @@ namespace BALL
 		mol++;
 		if (mol != system.endMolecule())
 		{
-			Log.warn() << "MOLFile::write: found more than one molecule in system while writing -- all molecules after the first one are ignored!" << std::endl;
+			Log.warn() << "MOLFile::write: found more than one molecule in system while writing -- all molecules after the first one are ignored!" << endl;
 		}
 		return true;
 	}
@@ -226,7 +229,7 @@ namespace BALL
 	{
 
 		#ifdef DEBUG
-			Log.info() << "entering MOLFile::readCTAB_(current line = " << getLineNumber() << ")" << std::endl;
+			Log.info() << "entering MOLFile::readCTAB_(current line = " << getLineNumber() << ")" << endl;
 		#endif
 		// read the counts line
 		CountsStruct counts;
@@ -239,7 +242,7 @@ namespace BALL
 		}
 		#ifdef DEBUG
 			Log.info() << "Counts line: " << counts.number_of_atoms 
-				<< " atoms and " << counts.number_of_bonds << " bonds." << std::endl;
+				<< " atoms and " << counts.number_of_bonds << " bonds." << endl;
 		#endif
 
 		// resize the array to the number of atoms
@@ -470,14 +473,14 @@ namespace BALL
 				}
 				else
 				{
-					Log.warn() << "MOLFile::readCTAB_: ignoring property entry " << tag << std::endl;
+					Log.warn() << "MOLFile::readCTAB_: ignoring property entry " << tag << endl;
 				}
 			}
 		}
 		catch (Exception::GeneralException& e)
 		{
 			#ifdef DEBUG
-				Log.info() << "MOLFile::readCTAB_: caught exception while parsing line " << getLineNumber() << ": " << e << std::endl;
+				Log.info() << "MOLFile::readCTAB_: caught exception while parsing line " << getLineNumber() << ": " << e << endl;
 			#endif
 			// clean up: delete all atoms we just constructed
 			delete molecule;
@@ -487,7 +490,7 @@ namespace BALL
 		}
 		
 		#ifdef DEBUG
-			Log.info() << "MOLFile::readCTAB_ = " << (void*)molecule << std::endl;
+			Log.info() << "MOLFile::readCTAB_ = " << (void*)molecule << endl;
 		#endif
 
 		return molecule;
@@ -504,7 +507,7 @@ namespace BALL
 		catch (Exception::ParseError& e)
 		{
 			#ifdef DEBUG
-				Log.info() << "MOLFile::read(System&): caught exception while parsing line " << getLineNumber() << ": " << e << std::endl;
+				Log.info() << "MOLFile::read(System&): caught exception while parsing line " << getLineNumber() << ": " << e << endl;
 			#endif
 
 			// clean up and rethrow

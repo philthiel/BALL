@@ -1,22 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94OutOfPlaneBend.C,v 1.1.8.3 2007/05/13 00:06:08 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/mmff94/MMFF94OutOfPlaneBend.h>
-#include <BALL/core/molmec/mmff94/MMFF94.h>
+
+#include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/atom.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
 #include <BALL/core/system/path.h>
 
 #include <cmath>
 
-//     #define BALL_DEBUG_MMFF
-//   #define BALL_MMFF94_TEST
+// #define BALL_DEBUG_MMFF
+// #define BALL_MMFF94_TEST
 
 using namespace std;
+
 
 namespace BALL 
 {

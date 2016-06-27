@@ -1,10 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/nucleicAcid.h>
 
-using namespace::std;
+using namespace std;
+
 
 namespace BALL 
 {

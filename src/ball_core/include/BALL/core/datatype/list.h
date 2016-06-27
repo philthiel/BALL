@@ -1,27 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_LIST_H
-#define BALL_DATATYPE_LIST_H
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_LIST_H
+#define BALL_CORE_DATATYPE_LIST_H
 
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/core/concept/visitor.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/visitor.h>
 
 #include <list>
 
 #ifdef BALL_COMPILER_GXX || BALL_COMPILER_LLVM
 #warning "This header file is deprecated and should not be used in new code! As a replacement for BALL::List the use of std::list is strongly suggested."
 #endif
+
 
 namespace BALL 
 {
@@ -250,4 +241,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_DATATYPE_LIST_H
+#endif // BALL_CORE_DATATYPE_LIST_H

@@ -1,14 +1,14 @@
+//_new_file_header
 
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
 
 #include <BALL/core/nmr/shiftModel1D.h>
-#include <BALL/core/nmr/shiftModel.h>
-#include <BALL/core/kernel/PTE.h>
+
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/nmr/shiftModel.h>
 
 using namespace std;
+
 
 namespace BALL
 {

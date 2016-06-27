@@ -1,22 +1,25 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#define BALL_SCORING_COMMON_SCORINGFUNCTION_H
 
-#include <set>
+#ifndef BALL_CORE_SCORING_COMMON_SCORINGFUNCTION_H
+#define BALL_CORE_SCORING_COMMON_SCORINGFUNCTION_H
 
-#include <BALL/core/kernel/system.h>
+
+#include <BALL/core/datatype/hashGrid.h>
 #include <BALL/core/datatype/options.h>
 #include <BALL/core/datatype/string.h>
-#include <BALL/core/datatype/hashGrid.h>
-#include <BALL/core/kernel/atomContainer.h>
-#include <BALL/core/docking/common/staticLigandFragment.h>
 #include <BALL/core/docking/common/constraints.h>
+#include <BALL/core/docking/common/staticLigandFragment.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/scoring/common/baseFunction.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/structure/residueRotamerSet.h>
+
+#include <list>
+#include <set>
+#include <vector>
+
 
 namespace BALL
 {
@@ -326,7 +329,7 @@ namespace BALL
 			 */
 			virtual void printResult(bool detail = 0);
 
-			void getScoreContributions(vector<double>& score_contributions, vector<String>& names);
+			void getScoreContributions(std::vector<double>& score_contributions, std::vector<String>& names);
 
 			/**
 			 * Stores the default options of this ScoringFunction in the given Option object.
@@ -409,9 +412,9 @@ namespace BALL
 			 */
 			void createStaticLigandFragments();
 
-			const vector<Bond*>* getRotatableLigandBonds() const;
+			const std::vector<Bond*>* getRotatableLigandBonds() const;
 
-			const vector<StaticLigandFragment*>* getStaticLigandFragments() const;
+			const std::vector<StaticLigandFragment*>* getStaticLigandFragments() const;
 
 			bool hasFlexibleResidues();
 
@@ -443,7 +446,7 @@ namespace BALL
 							   bool onePerCell = 0,
 							   int* number_of_overlaps = 0) const;
 
-			void resetResiduePositions(Residue* residue, list<Vector3>& old_positions);
+			void resetResiduePositions(Residue* residue, std::list<Vector3>& old_positions);
 
 			/**
 			 * Return the previously calculated score.
@@ -457,7 +460,7 @@ namespace BALL
 			 * ReferenceAreas can be added/deleted/modified directly by the user and will be used
 			 * during all future calls of updateScore().
 			 */
-			list<Constraint*> constraints;
+			std::list<Constraint*> constraints;
 
 		protected:
 			/* @name Protected structs */
@@ -476,7 +479,7 @@ namespace BALL
 				/**
 				 * One penalty value for each ReferenceArea.
 				 */
-				vector<double> refArea_penalties;
+				std::vector<double> refArea_penalties;
 			};
 
 			/**
@@ -550,7 +553,7 @@ namespace BALL
 			 * Enabled the ScoringComponents of the given types and disables all other ScoringComponents.
 			 * Components that evaluate the intramolecular energy of the ligand will be disabled.
 			 */
-			void enableInteractionComponents_(const list<String>& type_names);
+			void enableInteractionComponents_(const std::list<String>& type_names);
 
 			virtual double getES();
 
@@ -628,7 +631,7 @@ namespace BALL
 			/**
 			* The scoring components used by a particular scoring function (e.g. HBonds, VDW, etc.)
 			*/
-			vector<ScoringComponent*> scoring_components_;
+			std::vector<ScoringComponent*> scoring_components_;
 
 			/**
 			* Atoms, for which the setup of the force field fails
@@ -753,7 +756,7 @@ namespace BALL
 			 * will automatically search only for inter-fragment atom-pairs and ligand-receptor pairs,
 			 * but not for intra-fragment pairs.
 			 */
-			vector<StaticLigandFragment*> static_ligand_fragments_;
+			std::vector<StaticLigandFragment*> static_ligand_fragments_;
 
 			/**
 			 * Determines whether interactions calculated by this ScoringFunction should be saved
@@ -812,16 +815,16 @@ namespace BALL
 			 * Rotatable bonds of the current ligand molecule.
 			 * They are calculated by the function createStaticLigandFragments().
 			 */
-			vector<Bond*> rotatable_ligand_bonds_;
+			std::vector<Bond*> rotatable_ligand_bonds_;
 
 			/**
 			 * Original positions of all atoms of all flexible residues,
 			 * i.e. as they appear in the input receptor object.
 			 */
-			list<list<Vector3> > flexres_org_positions_;
+			std::list<std::list<Vector3> > flexres_org_positions_;
 
 	};
 
 } // namespace BALL
 
-#endif // BALL_SCORING_COMMON_SCORINGFUNCTION_H
+#endif // BALL_CORE_SCORING_COMMON_SCORINGFUNCTION_H

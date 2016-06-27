@@ -1,15 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_SURFACE_H
-#define BALL_MATHS_SURFACE_H
+
+#ifndef BALL_CORE_MATHS_SURFACE_H
+#define BALL_CORE_MATHS_SURFACE_H
 
 #include <vector>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/vector3.h>
 
 
 namespace BALL 
@@ -492,4 +489,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_SURFACE_H
+#endif // BALL_CORE_MATHS_SURFACE_H

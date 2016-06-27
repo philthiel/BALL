@@ -1,35 +1,22 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_STRING_H
-#define BALL_DATATYPE_STRING_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
-#ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/core/common/global.h>
-#endif
-#ifndef BALL_COMMON_CREATE_H
-#	include <BALL/core/common/create.h>
-#endif
-#ifndef BALL_COMMON_MACROS_H
-#	include <BALL/core/common/macros.h>
-#endif
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
-#ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/core/common/debug.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_STRING_H
+#define BALL_CORE_DATATYPE_STRING_H
 
-#include <string>
+#include <BALL/config.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/macros.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/common/debug.h>
+
 #include <cctype>
 #include <cerrno>
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <string>
 #include <vector>
 
 #ifdef BALL_HAS_SSTREAM
@@ -38,10 +25,9 @@
 # include <strstream>
 #endif
 
-using std::string;
-
 class QString;
 class QByteArray;
+
 
 namespace BALL 
 {
@@ -154,7 +140,7 @@ namespace BALL
 		String();
 
 		/// STL string copy constructor
-		String(const string& string);
+		String(const std::string& string);
 
 		/// Copy constructor
 		String(const String& s);
@@ -164,13 +150,13 @@ namespace BALL
 		String(String&& s);
 
 		/// Move constructor for STL string
-		String(string&& s);
+		String(std::string&& s);
 
 		/// Move assigment operator
 		String& operator=(String&& s);
 
 		/// Move assignment operator for STL string
-		String& operator=(string&& s);
+		String& operator=(std::string&& s);
 #endif
 
 		/// QString copy constructor
@@ -260,10 +246,10 @@ namespace BALL
 		String(double d);
 
 		/// Cast the String to a std::string reference
-		operator string&();
+		operator std::string&();
 
 		/// Cast the String to a std::string reference, const version
-		operator string const&() const;
+		operator std::string const&() const;
 
 		/// Destructor
 		virtual ~String();
@@ -647,11 +633,11 @@ namespace BALL
     //       (dstoeckel & anhi)
 		///	Concatenates two strings
 		BALL_EXPORT
-		friend String operator + (const String& s1, const string& s2);
+		friend String operator + (const String& s1, const std::string& s2);
 		
 		///	Concatenates two strings
 		BALL_EXPORT
-		friend String operator + (const string& s1, const String& s2);
+		friend String operator + (const std::string& s1, const String& s2);
 
 		///	Concatenates two strings
 		BALL_EXPORT
@@ -676,7 +662,7 @@ namespace BALL
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 		///	Concatenates two strings
 		BALL_EXPORT
-		friend String operator + (String&& s1, const string& s2);
+		friend String operator + (String&& s1, const std::string& s2);
 	
 		///	Concatenates two strings
 		BALL_EXPORT
@@ -687,13 +673,13 @@ namespace BALL
 		friend String operator + (String&& s1, String&& s2);
 
 		BALL_EXPORT
-		friend String operator + (const String& s1, string&& s2);
+		friend String operator + (const String& s1, std::string&& s2);
 
 		BALL_EXPORT
-		friend String operator + (string&& s1, const String& s2);
+		friend String operator + (std::string&& s1, const String& s2);
 
 		BALL_EXPORT
-		friend String operator + (const string& s1, String&& s2);
+		friend String operator + (const std::string& s1, String&& s2);
 
 		///	Concatenates two strings
 		BALL_EXPORT
@@ -1031,19 +1017,19 @@ namespace BALL
 		/** name typedefs
 		 */
 		//@{
-		typedef string::value_type             valuetype;
-		typedef string::traits_type            traits_type;
-		typedef string::allocator_type         allocator_type;
-		typedef string::reference              reference;
-		typedef string::const_reference        const_reference;
-		typedef string::pointer                pointer;
-		typedef string::const_pointer          const_pointer;
-		typedef string::iterator               iterator;
-		typedef string::const_iterator         const_iterator;
-		typedef string::reverse_iterator       reverse_iterator;
-		typedef string::const_reverse_iterator const_reverse_iterator;
-		typedef string::difference_type        difference_type;
-		typedef string::size_type              size_type;
+		typedef std::string::value_type             valuetype;
+		typedef std::string::traits_type            traits_type;
+		typedef std::string::allocator_type         allocator_type;
+		typedef std::string::reference              reference;
+		typedef std::string::const_reference        const_reference;
+		typedef std::string::pointer                pointer;
+		typedef std::string::const_pointer          const_pointer;
+		typedef std::string::iterator               iterator;
+		typedef std::string::const_iterator         const_iterator;
+		typedef std::string::reverse_iterator       reverse_iterator;
+		typedef std::string::const_reverse_iterator const_reverse_iterator;
+		typedef std::string::difference_type        difference_type;
+		typedef std::string::size_type              size_type;
 		//@}
 
 		/** @name Iterators
@@ -1141,7 +1127,7 @@ namespace BALL
 		///
 		String& operator += (const String& str);
 		///
-		String& operator += (const string& str);
+		String& operator += (const std::string& str);
 		///
 		String& operator += (const char* s);
 		///
@@ -1153,9 +1139,9 @@ namespace BALL
 		///
 		String& append(const String& str);
 		///
-		String& append(const string& str);
+		String& append(const std::string& str);
 		///
-		String& append(const string& str, size_t subpos, size_t sublen);
+		String& append(const std::string& str, size_t subpos, size_t sublen);
 		///
 		String& append(const char* s);
 		///
@@ -1174,9 +1160,9 @@ namespace BALL
 		///
 		String& assign(const String& str);
 		///
-		String& assign(const string& str);
+		String& assign(const std::string& str);
 		///
-		String& assign(const string& str, size_t subpos, size_t sublen);
+		String& assign(const std::string& str, size_t subpos, size_t sublen);
 		///
 		String& assign(const char* s);
 		///
@@ -1192,13 +1178,13 @@ namespace BALL
 #endif
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 		///
-		String& assign(string&& str) BALL_NOEXCEPT;
+		String& assign(std::string&& str) BALL_NOEXCEPT;
 #endif
 
 		///
-		String& insert(size_t pos, const string& str);
+		String& insert(size_t pos, const std::string& str);
 		///
-		String& insert(size_t pos, const string& str, size_t subpos, size_t sublen);
+		String& insert(size_t pos, const std::string& str, size_t subpos, size_t sublen);
 		///
 		String& insert(size_t pos, const char* s);
 		///
@@ -1239,9 +1225,9 @@ namespace BALL
 #endif
 
 		///
-		String& replace(size_t pos, size_t len, const string& str);
+		String& replace(size_t pos, size_t len, const std::string& str);
 		///
-		String& replace(size_t pos, size_t len, const string& str, size_t subpos, size_t sublen);
+		String& replace(size_t pos, size_t len, const std::string& str, size_t subpos, size_t sublen);
 		///
 		String& replace(size_t pos, size_t len, const char* s);
 		///
@@ -1250,7 +1236,7 @@ namespace BALL
 		String& replace(size_t pos, size_t len, size_t n, char c);
 #ifdef BALL_HAS_STD_STRING_CONST_ITERATOR_FUNCTIONS
 		///
-		String& replace(const_iterator i1, const_iterator i2, const string& str);
+		String& replace(const_iterator i1, const_iterator i2, const std::string& str);
 		///
 		String& replace(const_iterator i1, const_iterator i2, const char* s);
 		///
@@ -1262,7 +1248,7 @@ namespace BALL
 		String& replace(const_iterator i1, const_iterator i2, InputIterator first, InputIterator last);
 #else
 		///
-		String& replace(iterator i1, iterator i2, const string& str);
+		String& replace(iterator i1, iterator i2, const std::string& str);
 		///
 		String& replace(iterator i1, iterator i2, const char* s);
 		///
@@ -1279,7 +1265,7 @@ namespace BALL
 #endif
 
 		///
-		void swap(string& str);
+		void swap(std::string& str);
 
 #ifdef BALL_HAS_STD_STRING_POP_BACK
 		///
@@ -1301,7 +1287,7 @@ namespace BALL
 		size_t copy(char* s, size_t len, size_t pos = 0) const;
 
 		///
-		size_t find(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find(const std::string& str, size_t pos = 0) const BALL_NOEXCEPT;
 		///
 		size_t find(const char* s, size_t pos = 0) const;
 		///
@@ -1310,7 +1296,7 @@ namespace BALL
 		size_t find(char c, size_t pos = 0) const BALL_NOEXCEPT;
 
 		///
-		size_t rfind(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t rfind(const std::string& str, size_t pos = npos) const BALL_NOEXCEPT;
 		///
 		size_t rfind(const char* s, size_t pos = npos) const;
 		///
@@ -1319,7 +1305,7 @@ namespace BALL
 		size_t rfind(char c, size_t pos = npos) const BALL_NOEXCEPT;
 		
 		///
-		size_t find_first_of(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_of(const std::string& str, size_t pos = 0) const BALL_NOEXCEPT;
 		///
 		size_t find_first_of(const char* s, size_t pos = 0) const;
 		///
@@ -1328,7 +1314,7 @@ namespace BALL
 		size_t find_first_of(char c, size_t pos = 0) const BALL_NOEXCEPT;
 
 		///
-		size_t find_last_of(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_of(const std::string& str, size_t pos = npos) const BALL_NOEXCEPT;
 		///
 		size_t find_last_of(const char* s, size_t pos = npos) const;
 		///
@@ -1337,7 +1323,7 @@ namespace BALL
 		size_t find_last_of(char c, size_t pos = npos) const BALL_NOEXCEPT;
 
 		///
-		size_t find_first_not_of(const string& str, size_t pos = 0) const BALL_NOEXCEPT;
+		size_t find_first_not_of(const std::string& str, size_t pos = 0) const BALL_NOEXCEPT;
 		///
 		size_t find_first_not_of(const char* s, size_t pos = 0) const;
 		///
@@ -1346,7 +1332,7 @@ namespace BALL
 		size_t find_first_not_of(char c, size_t pos = 0) const BALL_NOEXCEPT;
 
 		///
-		size_t find_last_not_of(const string& str, size_t pos = npos) const BALL_NOEXCEPT;
+		size_t find_last_not_of(const std::string& str, size_t pos = npos) const BALL_NOEXCEPT;
 		///
 		size_t find_last_not_of(const char* s, size_t pos = npos) const;
 		///
@@ -1355,14 +1341,14 @@ namespace BALL
 		size_t find_last_not_of(char c, size_t pos = npos) const BALL_NOEXCEPT;
 
 		///
-		string substr(size_t pos = 0, size_t len = npos) const;
+		std::string substr(size_t pos = 0, size_t len = npos) const;
 
 		///
-		int compare(const string& str) const BALL_NOEXCEPT;
+		int compare(const std::string& str) const BALL_NOEXCEPT;
 		///
-		int compare(size_t pos, size_t len, const string& str) const;
+		int compare(size_t pos, size_t len, const std::string& str) const;
 		///
-		int compare(size_t pos, size_t len, const string& str, size_t subpos, size_t sublen) const;
+		int compare(size_t pos, size_t len, const std::string& str, size_t subpos, size_t sublen) const;
 		///
 		//int compare(const char* s) const;
 		///
@@ -1393,7 +1379,7 @@ namespace BALL
 		private:
 
 		/// The encapsulated std::string
-		string str_;
+		std::string str_;
 
 		static int compareAscendingly_(const char* a,  const char* b);
 
@@ -1792,11 +1778,11 @@ namespace BALL
 
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (const String& s1, const string& s2);
+	String operator + (const String& s1, const std::string& s2);
 		
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (const string& s1, const String& s2);
+	String operator + (const std::string& s1, const String& s2);
 
 	///	Concatenates two strings
 	BALL_EXPORT
@@ -1821,7 +1807,7 @@ namespace BALL
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (String&& s1, const string& s2);
+	String operator + (String&& s1, const std::string& s2);
 	
 	///	Concatenates two strings
 	BALL_EXPORT
@@ -1833,15 +1819,15 @@ namespace BALL
 
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (const String& s1, string&& s2);
+	String operator + (const String& s1, std::string&& s2);
 
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (string&& s1, const String& s2);
+	String operator + (std::string&& s1, const String& s2);
 
 	///	Concatenates two strings
 	BALL_EXPORT
-	String operator + (const string& s1, String&& s2);
+	String operator + (const std::string& s1, String&& s2);
 
 	///	Concatenates two strings
 	BALL_EXPORT
@@ -1895,4 +1881,4 @@ namespace std
 #		include <BALL/core/datatype/string.iC>
 #	endif
 
-#endif // BALL_DATATYPE_STRING_H
+#endif // BALL_CORE_DATATYPE_STRING_H

@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SESVERTEX_H
-#define BALL_STRUCTURE_SESVERTEX_H
 
-#ifndef BALL_STRUCTURE_GRAPHVERTEX_H
-#	include <BALL/core/structure/graphVertex.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SESVERTEX_H
+#define BALL_CORE_STRUCTURE_SESVERTEX_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/graphVertex.h>
+
 
 namespace BALL
 {

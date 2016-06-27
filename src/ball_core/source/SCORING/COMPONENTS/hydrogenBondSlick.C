@@ -1,13 +1,13 @@
-// $Id: HydrogenBondSlick.C,v 1.4 2006/05/21 17:32:10 anker Exp $
-// hydrogen bond component
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/hydrogenBondSlick.h>
-#include <BALL/core/scoring/components/fresnoTypes.h>
-#include <BALL/core/molmec/common/support.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/datatype/hashMap.h>
 
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/scoring/components/fresnoTypes.h>
 #include <BALL/core/system/timer.h>
 
 // #define DEBUG 1
@@ -15,6 +15,9 @@
 #ifdef DEBUG
 #include <BALL/core/format/HINFile.h>
 #endif
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -94,7 +97,7 @@ namespace BALL
 		if (scoring_function == 0)
 		{
 			Log.error() << "HydrogenBondSlick::setup(): "
-				<< "component not bound to scoring function." << std::endl;
+				<< "component not bound to scoring function." << endl;
 			return false;
 		}
 
@@ -151,7 +154,7 @@ namespace BALL
 							if ((lig_fresno_types_[&*lig_it] == FresnoTypes::HBOND_ACCEPTOR_DONOR)
 									|| (lig_fresno_types_[&*lig_it] == FresnoTypes::HBOND_ACCEPTOR))
 							{
-								possible_hydrogen_bonds_.push_back(std::pair<const Atom*, const Atom*>(&*rec_it, &*lig_it));
+								possible_hydrogen_bonds_.push_back(pair<const Atom*, const Atom*>(&*rec_it, &*lig_it));
 								if (verbosity >= 90)
 								{
 									Log.info() << "found possible HB: "
@@ -161,7 +164,7 @@ namespace BALL
 										<< " (length: "
 										<< (rec_it->getPosition() - lig_it->getPosition()).getLength()
 										<< " A) "
-										<< std::endl;
+										<< endl;
 								}
 							}
 						}
@@ -183,7 +186,7 @@ namespace BALL
 							if ((rec_fresno_types_[&*rec_it] == FresnoTypes::HBOND_ACCEPTOR_DONOR)
 									|| (rec_fresno_types_[&*rec_it] == FresnoTypes::HBOND_ACCEPTOR))
 							{
-								possible_hydrogen_bonds_.push_back(std::pair<const Atom*, const Atom*>(&*lig_it, &*rec_it));
+								possible_hydrogen_bonds_.push_back(pair<const Atom*, const Atom*>(&*lig_it, &*rec_it));
 								if (verbosity >= 90)
 								{
 									Log.info() << "found possible HB: "
@@ -192,7 +195,7 @@ namespace BALL
 										<< " (length: "
 										<< (lig_it->getPosition() - rec_it->getPosition()).getLength()
 										<< " A) "
-										<< std::endl;
+										<< endl;
 								}
 							}
 						}
@@ -203,20 +206,20 @@ namespace BALL
 
 		if (verbosity > 8)
 		{
-			Log.info() << "HydrogenBondSlick setup statistics:" << std::endl;
+			Log.info() << "HydrogenBondSlick setup statistics:" << endl;
 			Log.info() << "Found " << possible_hydrogen_bonds_.size()
-				<< " possible hydrogen bonds" << std::endl << std::endl;
+				<< " possible hydrogen bonds" << endl << endl;
 		}
 
 		timer.stop();
 		Log.info() << "HydrogenBondSlick::setup(): "
-			<< timer.getCPUTime() << " s" << std::endl;
+			<< timer.getCPUTime() << " s" << endl;
 
 		return true;
 	}
 
 
-	void HydrogenBondSlick::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+	void HydrogenBondSlick::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 	{
 	}
 
@@ -240,8 +243,8 @@ namespace BALL
 		Vector3 h_bond;
 		Vector3 h_connection;
 
-		// iterate over all possible hydrogen bond std::pairs
-		vector< std::pair<const Atom*, const Atom*> >::const_iterator it;
+		// iterate over all possible hydrogen bond pairs
+		vector< pair<const Atom*, const Atom*> >::const_iterator it;
 		for (it = possible_hydrogen_bonds_.begin(); it != possible_hydrogen_bonds_.end(); ++it)
 		{
 			hydrogen = it->first;
@@ -276,9 +279,9 @@ namespace BALL
 				else
 				{
 					Log.error() << "HydrogenBondSlick::updateEnergy(): "
-						<< "black magic: hydrogen bond without hydrogens:" << std::endl
+						<< "black magic: hydrogen bond without hydrogens:" << endl
 						<< hydrogen->getFullName() << ":" << acceptor->getFullName()
-						<< std::endl;
+						<< endl;
 					continue;
 				}
 				// /PARANOIA
@@ -339,7 +342,7 @@ namespace BALL
 						}
 						Log.info() << " (delta d " << distance
 							<< ", delta phi " << angle << ")"
-							<< std::endl;
+							<< endl;
 					}
 					score_ += val;
 				}
@@ -348,11 +351,11 @@ namespace BALL
 
 		if (verbosity > 0)
 		{
-			Log.info() << "HB: energy is " << score_ << std::endl;
+			Log.info() << "HB: energy is " << score_ << endl;
 		}
 
 #ifdef DEBUG
-		HINFile debug_file("HB_debug.hin", std::ios::out);
+		HINFile debug_file("HB_debug.hin", ios::out);
 		debug_file << debug_molecule;
 		debug_file.close();
 #endif
@@ -360,7 +363,7 @@ namespace BALL
 		timer.stop();
 #ifdef DEBUG
 		Log.info() << "HydrogenBondSlick::updateEnergy(): "
-			<< timer.getCPUTime() << " s" << std::endl;
+			<< timer.getCPUTime() << " s" << endl;
 #endif
 
 		return score_;

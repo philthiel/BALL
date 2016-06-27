@@ -1,24 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SDGENERATOR_H
-#define BALL_STRUCTURE_SDGENERATOR_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SDGENERATOR_H
+#define BALL_CORE_STRUCTURE_SDGENERATOR_H
 
-#ifndef BALL_STRUCTURE_RINGANALYSER_H
-# include <BALL/core/structure/ringAnalyser.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/structure/ringAnalyser.h>
 
-#ifndef BALL_KERNEL_PDBATOM_H
-# include <BALL/core/kernel/PDBAtom.h>
-#endif
-
-#include <vector>
 #include <queue>
+#include <vector>
+
 
 namespace BALL
 {
@@ -227,7 +219,7 @@ namespace BALL
 			void computeAdjacencyMatrix_(std::vector<Atom*>& chain, std::vector<bool>& result);
 
 			/// Comparator for chains of atoms
-			static bool compareChains_(const vector<Atom*>& x, const vector<Atom*>& y);
+			static bool compareChains_(const std::vector<Atom*>& x, const std::vector<Atom*>& y);
 
 			/**
 			 * \brief cluster and arrange all chains in the system
@@ -272,4 +264,4 @@ namespace BALL
 
 } // namepspace BALL
 
-#endif
+#endif // BALL_CORE_STRUCTURE_SDGENERATOR_H

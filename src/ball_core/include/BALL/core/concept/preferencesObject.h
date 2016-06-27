@@ -1,11 +1,13 @@
-#ifndef BALL_CONCEPT_PREFERENCESOBJECT_H
-#define BALL_CONCEPT_PREFERENCESOBJECT_H
+//_new_file_header
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+
+#ifndef BALL_CORE_CONCEPT_PREFERENCESOBJECT_H
+#define BALL_CORE_CONCEPT_PREFERENCESOBJECT_H
+
+#include <BALL/core/datatype/string.h>
 
 #include <QtCore/QObject>
+
 
 namespace BALL
 {
@@ -41,4 +43,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_CONCEPT_PREFERENCESOBJECT_H
+#endif // BALL_CORE_CONCEPT_PREFERENCESOBJECT_H

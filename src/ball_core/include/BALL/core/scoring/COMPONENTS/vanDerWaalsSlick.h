@@ -1,14 +1,17 @@
-// $Id: vanDerWaals.h,v 1.3 2006/05/21 17:35:26 anker Exp $
-// Molecular Mechanics: SLICK force field, modified van-der-Waals term
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_VANDERWAALSSLICK_H
-#define BALL_SCORING_COMPONENTS_VANDERWAALSSLICK_H
 
-#include <BALL/core/scoring/common/scoringComponent.h>
+#ifndef BALL_CORE_SCORING_COMPONENTS_VANDERWAALSSLICK_H
+#define BALL_CORE_SCORING_COMPONENTS_VANDERWAALSSLICK_H
+
 #include <BALL/core/molmec/amber/amberNonBonded.h>
-#include <BALL/core/molmec/parameter/lennardJones.h>
 #include <BALL/core/molmec/common/atomVector.h>
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/scoring/common/scoringComponent.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -109,7 +112,7 @@ namespace BALL
 		 */
 		virtual bool setup();
 
-		void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+		void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 		/**
 		 * Calculates and returns the component's energy.
@@ -173,4 +176,4 @@ namespace BALL
 
 }
 
-#endif // BALL_SCORING_COMPONENTS_VANDERWAALSSLICK_H
+#endif // BALL_CORE_SCORING_COMPONENTS_VANDERWAALSSLICK_H

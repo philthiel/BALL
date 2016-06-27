@@ -1,27 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MPISupport.h,v 1.1.2.4 2006/03/02 18:52:57 anhi Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_MPISUPPORT_H
-#define BALL_SYSTEM_MPISUPPORT_H
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
+#ifndef BALL_CORE_SYSTEM_MPISUPPORT_H
+#define BALL_CORE_SYSTEM_MPISUPPORT_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/maths/vector3.h>
 
 #include <iostream>
 
@@ -32,6 +17,7 @@
 #else
 # undef BALL_HAS_MPI2_SUPPORT
 #endif
+
 
 namespace BALL
 {
@@ -335,6 +321,5 @@ namespace BALL
 			MPI_Datatype  mpi_Vector3_double_type_;
 	};
 }
-#endif
 
-
+#endif // BALL_CORE_SYSTEM_MPISUPPORT_H

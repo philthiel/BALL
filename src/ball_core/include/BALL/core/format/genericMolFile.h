@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#define BALL_FORMAT_GENERICMOLFILE_H
 
-#ifndef BALL_FORMAT_LINEBASEDFILE_H
-#	include <BALL/core/format/lineBasedFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_GENERICMOLFILE_H
+#define BALL_CORE_FORMAT_GENERICMOLFILE_H
+
+#include <BALL/core/format/lineBasedFile.h>
+
 
 namespace BALL 
 {
@@ -199,4 +197,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_GENERICMOLFILE_H
+#endif // BALL_CORE_FORMAT_GENERICMOLFILE_H

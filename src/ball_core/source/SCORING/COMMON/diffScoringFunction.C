@@ -1,12 +1,10 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/diffScoringFunction.h>
+
 #include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/system/timer.h>
-
 
 using namespace BALL;
 

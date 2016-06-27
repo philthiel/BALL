@@ -1,14 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/residue.h>
+
+#include <BALL/core/common/exception.h>
 #include <BALL/core/kernel/chain.h>
 #include <BALL/core/kernel/protein.h>
 #include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/common/exception.h>
 
-using namespace::std;
+using namespace std;
+
 
 namespace BALL 
 {

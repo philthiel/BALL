@@ -1,31 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: matrix44.h,v 1.55.14.1 2007/03/25 21:23:45 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_MATRIX44_H
-#define BALL_MATHS_MATRIX44_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_MATRIX44_H
+#define BALL_CORE_MATHS_MATRIX44_H
 
 #include <cmath>
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/vector4.h>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR4_H
-#	include <BALL/core/maths/vector4.h>
-#endif
 
 namespace BALL 
 {
@@ -2185,4 +2172,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_MATRIX44_H
+#endif // BALL_CORE_MATHS_MATRIX44_H

@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_DEBUG_H
-#define BALL_COMMON_DEBUG_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_DEBUG_H
+#define BALL_CORE_COMMON_DEBUG_H
+
+#include <BALL/config.h>
 
 #ifdef BALL_NO_INLINE_FUNCTIONS
 #	define BALL_INLINE
@@ -15,8 +12,9 @@
 #	define BALL_INLINE inline
 #endif
 
-#include <string>
 #include <cstring>
+#include <string>
+
 
 #ifdef BALL_DEBUG
 
@@ -92,4 +90,4 @@
 
 #endif // BALL_DEBUG
 
-#endif // BALL_COMMON_DEBUG_H
+#endif // BALL_CORE_COMMON_DEBUG_H

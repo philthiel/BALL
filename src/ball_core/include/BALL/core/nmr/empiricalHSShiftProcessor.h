@@ -1,34 +1,20 @@
-#ifndef BALL_NMR_EMPIRICALHSSHIFTPROCESSOR_H
-#define BALL_NMR_EMPIRICALHSSHIFTPROCESSOR_H
-
-#ifndef BALL_MATHS_CUBICSPLINE2D_H
-#	include <BALL/core/maths/cubicSpline2D.h>
-#endif
-
-#ifndef BALL_MATHS_CUBICSPLINE1D_H
-#	include <BALL/core/maths/cubicSpline1D.h>
-#endif
+//_new_file_header
 
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-# include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_NMR_EMPIRICALHSSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_EMPIRICALHSSHIFTPROCESSOR_H
 
-#ifndef BALL_NMR_SHIFT_MODULE_H
-#	include<BALL/core/nmr/shiftModule.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/format/genericMolFile.h>
+#include<BALL/core/kernel/expression.h>
+#include <BALL/core/maths/cubicSpline1D.h>
+#include <BALL/core/maths/cubicSpline2D.h>
+#include<BALL/core/nmr/shiftModule.h>
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include<BALL/core/kernel/expression.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-
-#include <set>
 #include <map>
+#include <set>
+#include <vector>
+
 
 namespace BALL 
 {
@@ -398,7 +384,7 @@ namespace BALL
 				void parseDataFile_(BALL::File& file, String filename) ;
 
 				// Method to convert a vector of strings into a vector of floats {/tt output}.
-				void convertToReal_(const vector<String>& input, vector<float>& output);
+				void convertToReal_(const std::vector<String>& input, std::vector<float>& output);
 
 				/** Method to set the type of the hypersurface according to two input property types 
 				 * (see {\tt HYPERSURFACE__TYPE()} )
@@ -420,8 +406,8 @@ namespace BALL
 
 				// The averages of the hypersurface as read from the file.
 				// //TODO rename to row_defaults
-				std::map <String, float> 										row_averages_;
-				std::map <String, float>										col_averages_;
+				std::map<String, float> 										row_averages_;
+				std::map<String, float>										col_averages_;
 
 				// The spacing in x and y direction as read from the file.
 				float row_spacing_;
@@ -438,9 +424,9 @@ namespace BALL
 				int verbosity_;
 
 				// The underlying data of the hypersurface as read from the file.
-				vector<String> 					 y_axis_values_;
-				vector<vector<String> >  x_axis_values_;
-				vector<vector<float> >   sample_values_;
+				std::vector<String> 					 y_axis_values_;
+				std::vector<std::vector<String> >  x_axis_values_;
+				std::vector<std::vector<float> >   sample_values_;
 		};
 
 
@@ -453,14 +439,14 @@ namespace BALL
 		/*_ The target atom types stored as a vector of strings collected from the ini-file
 		 *  by {\tt init ()}.
 		 */
-		vector<String>											target_names_;	
+		std::vector<String>											target_names_;
 
 		/*_ The target properties used for determine the 
 		 * empirical hypersurface shifts. The properties are collected 
 		 * from the ini-file by {\tt init ()} and are stored per target atom
 		 * in the same order as the target_names.
 		 */
-		vector< std::set<String> >			target_property_names_;
+		std::vector<std::set<String> >			target_property_names_;
 
 		/*_ The file names of the files storing the property-data-splines for computing the
 		 * shift contributions are stored in a map, whose key is the pair of
@@ -469,12 +455,12 @@ namespace BALL
 		 * The files are specified in the section {\tt EmpiricalShiftHyperSurfaces} 
 		 * of the file {\tt ShiftX.ini} and are collected by {\tt init ()}.
 		 */
-		vector< std::map< std::pair<String, String>, String >	>		property_files_; 
+		std::vector<std::map<std::pair<String, String>, String >	>		property_files_;
 
 		/*_ The property pairs for each atom type are stored in this map.
 		 *  The map is created in {\tt init ()}.
 		 **/
-		std::map< String, vector< std::pair<String, String> > >  property_pairs_;
+		std::map<String, std::vector<std::pair<String, String> > >  property_pairs_;
 
 		/*_ The hypersurfaces are precomputed by {\tt init()}
 		 *  and then are stored per atom type in a  map with key atom_type of 
@@ -511,4 +497,5 @@ namespace BALL
 
 	};// end of class
 } // end of namespace
-#endif // BALL_NMR_EMPIRICALHSSHIFTPROCESSOR_H
+
+#endif // BALL_CORE_NMR_EMPIRICALHSSHIFTPROCESSOR_H

@@ -1,20 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
 
-#ifndef BALL_DOCKING_COMMON_STRUCTUREPREPARER_H
-#define BALL_DOCKING_COMMON_STRUCTUREPREPARER_H
+#ifndef BALL_CORE_DOCKING_COMMON_STRUCTUREPREPARER_H
+#define BALL_CORE_DOCKING_COMMON_STRUCTUREPREPARER_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
 #include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ADDHYDROGENSPROCESSOR_H
 #include <BALL/core/structure/addHydrogenProcessor.h>
-#endif
 
 #include <set>
+
 
 namespace BALL
 {
@@ -75,4 +69,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_COMMON_STRUCTUREPREPARER_H
+#endif // BALL_CORE_DOCKING_COMMON_STRUCTUREPREPARER_H

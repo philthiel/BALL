@@ -1,14 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/genericMolFile.h>
+
 #include <BALL/core/kernel/system.h>
 #include <BALL/core/kernel/molecule.h>
 
-#include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/copy.hpp>
+#include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
+
 
 namespace BALL 
 {

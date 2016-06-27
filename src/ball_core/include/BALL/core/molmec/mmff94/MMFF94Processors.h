@@ -1,33 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94Processors.h,v 1.1.8.1 2007/03/25 21:25:18 oliver Exp $ 
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MMFF94_PROCESSORS_H
-#define BALL_MOLMEC_MMFF94_PROCESSORS_H
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-# include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MMFF94_PROCESSORS_H
+#define BALL_CORE_MOLMEC_MMFF94_PROCESSORS_H
 
-#ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-# include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ATOMTYPER_H
-# include <BALL/core/structure/atomTyper.h>
-#endif
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
+#include <BALL/core/structure/atomTyper.h>
 
 #include <vector>
+
 
 namespace BALL 
 {
@@ -155,4 +139,4 @@ namespace BALL
 	
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_PROCESSORS_H
+#endif // BALL_CORE_MOLMEC_MMFF94_PROCESSORS_H

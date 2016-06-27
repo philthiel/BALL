@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/smilesParser.h>
+
 #include <BALL/core/kernel/PTE.h>
 
 #include <algorithm>
+
 
 // defined in the lexer (smilesParserLexer.l)
 extern void SmilesParser_initBuffer(const char* buf);

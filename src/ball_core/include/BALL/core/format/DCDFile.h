@@ -1,17 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_DCDFILE_H
-#define BALL_FORMAT_DCDFILE_H
 
-#ifndef BALL_FORMAT_TRAJECTORYFILE_H
-#	include <BALL/core/format/trajectoryFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_DCDFILE_H
+#define BALL_CORE_FORMAT_DCDFILE_H
 
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/core/system/binaryFileAdaptor.h>
-#endif
+#include <BALL/core/system/binaryFileAdaptor.h>
+#include <BALL/core/format/trajectoryFile.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -149,7 +146,7 @@ namespace BALL
 			 { *this << BinaryFileAdaptor<float>(data);}
 
 		//_
-		void writeVector_(const vector<Vector3>& v);
+		void writeVector_(const std::vector<Vector3>& v);
 		
 		//_
  		float readFloat_(); 
@@ -161,7 +158,7 @@ namespace BALL
 		bool readSize_(Size expected_size, const String& what);
 
 		//_
-		bool readVector_(vector<Vector3>& v);
+		bool readVector_(std::vector<Vector3>& v);
 
 		//_
 		Size verbosity_;
@@ -205,4 +202,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_DCDFILE_H 
+#endif // BALL_CORE_FORMAT_DCDFILE_H 

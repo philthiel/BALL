@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
-// not checked in
+//_new_file_header
 
-#ifndef BALL_QSAR_PARTIALCHARGEDESCRIPTORS_H
-#define BALL_QSAR_PARTIALCHARGEDESCRIPTORS_H
 
-#ifndef BALL_QSAR_PARTIALCHARGEBASE_H
-# include <BALL/core/qsar/partialChargeBase.h>
-#endif
+#ifndef BALL_CORE_QSAR_PARTIALCHARGEDESCRIPTORS_H
+#define BALL_CORE_QSAR_PARTIALCHARGEDESCRIPTORS_H
+
+#include <BALL/core/qsar/partialChargeBase.h>
+
 
 namespace BALL
 {
@@ -161,4 +157,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_QSAR_PARTIALCHARGEDESCRIPTORS_H
+#endif // BALL_CORE_QSAR_PARTIALCHARGEDESCRIPTORS_H

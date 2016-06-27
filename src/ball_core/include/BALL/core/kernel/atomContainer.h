@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#define BALL_KERNEL_ATOMCONTAINER_H
 
-#ifndef BALL_KERNEL_ATOMITERATOR_H
-#	include <BALL/core/kernel/atomIterator.h>
-#endif
+#ifndef BALL_CORE_KERNEL_ATOMCONTAINER_H
+#define BALL_CORE_KERNEL_ATOMCONTAINER_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINERITERATOR_H
-#	include <BALL/core/kernel/atomContainerIterator.h>
-#endif
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/atomContainerIterator.h>
 
 #define BALL_ATOMCONTAINER_DEFAULT_NAME   ""
+
 
 namespace BALL
 {
@@ -278,8 +273,8 @@ namespace BALL
 
 		Size removeHavingProperty(BALL::Property p);
 		Size removeNotHavingProperty(BALL::Property p);
-		Size removeHavingProperty(const string& name);
-		Size removeNotHavingProperty(const string& name);
+		Size removeHavingProperty(const std::string& name);
+		Size removeNotHavingProperty(const std::string& name);
 
 		/** Prepend an AtomContainer at position 0.
 				@param atom_container the AtomContainer to prepend
@@ -392,8 +387,8 @@ namespace BALL
 
 		// --- EXTERNAL ITERATORS
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Atom)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Atom)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
 
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(AtomContainer, Atom, atoms)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(AtomContainer, AtomContainer, atomContainers)
@@ -408,4 +403,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_KERNEL_ATOMCONTAINER_H
+#endif // BALL_CORE_KERNEL_ATOMCONTAINER_H

@@ -1,12 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/burialDepth.h>
+
 #include <BALL/core/kernel/atom.h>
 
+#include <vector>
+
 using namespace BALL;
+using namespace std;
 
 
 BurialDepth::BurialDepth(ScoringFunction& sf)

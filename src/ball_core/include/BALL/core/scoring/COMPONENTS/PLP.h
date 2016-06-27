@@ -1,13 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_PLP_H
-#define BALL_SCORING_COMPONENTS_PLP_H
 
-#include <BALL/core/molmec/common/forceFieldComponent.h>
+#ifndef BALL_CORE_SCORING_COMPONENTS_PLP_H
+#define BALL_CORE_SCORING_COMPONENTS_PLP_H
+
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/molmec/common/support.h>
 #include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
 
@@ -163,4 +161,4 @@ namespace BALL
 	};
 } //
 
-#endif // BALL_SCORING_COMPONENTS_PLP_H
+#endif // BALL_CORE_SCORING_COMPONENTS_PLP_H

@@ -1,21 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: shiftedLVMM.h,v 1.1.4.6 2007/08/07 09:12:35 aleru Exp $ 
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
-#define BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
+
+#ifndef BALL_CORE_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
+#define BALL_CORE_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
 
 #include <vector>
 
-#ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
-#	include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
-#endif
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
+#include <BALL/core/molmec/minimization/lineSearch.h>
 
-#ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-# include <BALL/core/molmec/MINIMIZATION/lineSearch.h>
-#endif
 
 namespace BALL 
 {
@@ -309,4 +302,4 @@ namespace BALL
 	};
 } // end of namespace BALL
 
-#endif // BALL_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 
+#endif // BALL_CORE_MOLMEC_MINIMIZATION_SHIFTEDLVMM_H 

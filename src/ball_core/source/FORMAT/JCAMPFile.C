@@ -1,6 +1,4 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
 
 #include <BALL/core/format/JCAMPFile.h>
@@ -8,6 +6,7 @@
 #include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
 #include <BALL/core/maths/common.h>
+
 
 namespace BALL
 {

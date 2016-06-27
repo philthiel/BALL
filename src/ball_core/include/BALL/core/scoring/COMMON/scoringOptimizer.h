@@ -1,12 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_SCORINGOPTIMIZER_H
-#define BALL_SCORING_COMMON_SCORINGOPTIMIZER_H
+
+#ifndef BALL_CORE_SCORING_COMMON_SCORINGOPTIMIZER_H
+#define BALL_CORE_SCORING_COMMON_SCORINGOPTIMIZER_H
 
 #include <BALL/core/scoring/common/scoringFunction.h>
+
+#include <list>
+#include <vector>
 
 
 namespace BALL
@@ -43,7 +44,7 @@ namespace BALL
 				double binding_free_energy;
 			};
 
-			list<Complex> complexes_;
+			std::list<Complex> complexes_;
 
 			Options options_;
 			String scoring_function_name_;
@@ -57,5 +58,4 @@ namespace BALL
 	};
 }
 
-
-#endif // BALL_SCORING_COMMON_SCORINGOPTIMIZER_H
+#endif // BALL_CORE_SCORING_COMMON_SCORINGOPTIMIZER_H

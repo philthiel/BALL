@@ -1,10 +1,8 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_ADVELECTROSTATIC_H
-#define BALL_SCORING_COMPONENTS_ADVELECTROSTATIC_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_ADVELECTROSTATIC_H
+#define BALL_CORE_SCORING_COMPONENTS_ADVELECTROSTATIC_H
 
 #include <BALL/core/scoring/components/electrostatic.h>
 
@@ -27,4 +25,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_ADVELECTROSTATIC_H
+#endif // BALL_CORE_SCORING_COMPONENTS_ADVELECTROSTATIC_H

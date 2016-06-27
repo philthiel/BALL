@@ -1,20 +1,17 @@
-/* TRANSLATOR BALL::STRUCTURE::DisulfidBondProcessor
+//_new_file_header
 
-		Necessary for lupdate.
-*/
-
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
 
 #include <BALL/core/structure/disulfidBondProcessor.h>
-#include <BALL/core/structure/peptides.h>
-#include <BALL/core/structure/fragmentDB.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/PTE.h>
+
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/peptides.h>
 
 using namespace std;
+
 
 namespace BALL
 {

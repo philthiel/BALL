@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PDBInfo.C,v 1.3 2005/02/16 14:09:40 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/PDBInfo.h>
+
 
 namespace BALL 
 {

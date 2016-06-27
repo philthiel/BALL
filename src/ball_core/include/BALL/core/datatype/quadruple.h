@@ -1,11 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: quadruple.h,v 1.13 2003/08/26 08:04:11 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_QUADRUPLE_H
-#define BALL_DATATYPE_QUADRUPLE_H
+
+#ifndef BALL_CORE_DATATYPE_QUADRUPLE_H
+#define BALL_CORE_DATATYPE_QUADRUPLE_H
+
+#include <BALL/core/common/create.h>
+#include <BALL/core/common/debug.h>
 
 
 namespace BALL 
@@ -277,4 +277,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_DATATYPE_QUADRUPLE_H
+#endif // BALL_CORE_DATATYPE_QUADRUPLE_H

@@ -1,24 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/datatype/string.h>
 
 #include <QtCore/QString>
 #include <QtCore/QByteArray>
 
+#include <algorithm>
 #include <cstdio>
 #include <cstdarg>
 #include <limits>
 
-#include <algorithm>
+using namespace std;
 
-using std::ostream;
-using std::istream;
-using std::stringstream;
-using std::endl;
-using std::ends;
-using std::vector;
 
 namespace BALL 
 {

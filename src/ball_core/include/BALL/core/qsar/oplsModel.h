@@ -1,15 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef OPLSMODEL
-#define OPLSMODEL
 
-#ifndef PLSMODEL
+#ifndef BALL_CORE_QSAR_OPLSMODEL_H
+#define BALL_CORE_QSAR_OPLSMODEL_H
+
 #include <BALL/core/qsar/plsModel.h>
-#endif
 
+#include <vector>
 
 
 namespace BALL
@@ -47,9 +44,9 @@ namespace BALL
 				bool optimizeParameters(int k, int no_steps);
 				//RowVector predict(const vector<double>& substance, bool transform);
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				//@}
 				
 				
@@ -67,4 +64,4 @@ namespace BALL
 }
 
 
-#endif // OPLSMODEL
+#endif // BALL_CORE_QSAR_OPLSMODEL_H

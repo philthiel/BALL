@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_DSN6FILE_H
-#define BALL_FORMAT_DSN6FILE_H
 
-#ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_DSN6FILE_H
+#define BALL_CORE_FORMAT_DSN6FILE_H
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/core/datatype/regularData3D.h>
-#endif
+#include <BALL/core/datatype/regularData3D.h>
+#include <BALL/core/system/file.h>
+
 
 namespace BALL
 {
@@ -126,4 +121,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_DCDFILE_H 
+#endif // BALL_CORE_FORMAT_DSN6FILE_H

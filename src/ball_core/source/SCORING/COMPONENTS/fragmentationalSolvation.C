@@ -1,10 +1,10 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/fragmentationalSolvation.h>
+
 #include <BALL/core/kernel/PTE.h>
+
 #include <map>
 
 using namespace BALL;

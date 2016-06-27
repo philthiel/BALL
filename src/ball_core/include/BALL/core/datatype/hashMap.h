@@ -1,28 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-#define BALL_DATATYPE_HASHMAP_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_HASHMAP_H
+#define BALL_CORE_DATATYPE_HASHMAP_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/quadruple.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/datatype/triple.h>
 
-#ifndef BALL_DATATYPE_TRIPLE_H
-# include <BALL/core/datatype/triple.h>
-#endif
-
-#ifndef BALL_DATATYPE_QUADRUPLE_H
-# include <BALL/core/datatype/quadruple.h>
-#endif
-
-#include <boost/unordered_map.hpp>
 #include <boost/functional/hash.hpp>
+#include <boost/unordered_map.hpp>
+
 
 namespace boost
 {
@@ -169,4 +158,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_DATATYPE_HASHMAP_H
+#endif // BALL_CORE_DATATYPE_HASHMAP_H

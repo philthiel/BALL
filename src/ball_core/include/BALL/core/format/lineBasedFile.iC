@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: lineBasedFile.iC,v 1.2 2002/02/27 12:18:41 sturm Exp $
+//_new_file_header
+
 
 BALL_INLINE
 const String& LineBasedFile::getLine() const

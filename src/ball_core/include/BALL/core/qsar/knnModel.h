@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_KNNMODEL_H
-#define BALL_QSAR_KNNMODEL_H
 
-#ifndef BALL_QSAR_ALLMODEL_H
+#ifndef BALL_CORE_QSAR_KNNMODEL_H
+#define BALL_CORE_QSAR_KNNMODEL_H
+
 #include <BALL/core/qsar/allModel.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -27,9 +26,9 @@ namespace BALL
 				
 				void calculateWeights(Eigen::MatrixXd& dist, Eigen::VectorXd& w);
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				
 				bool optimizeParameters(int k, int no_steps);
 				
@@ -39,4 +38,4 @@ namespace BALL
 	}
 }
 
-#endif // KNNMODEL
+#endif // BALL_CORE_QSAR_KNNMODEL_H

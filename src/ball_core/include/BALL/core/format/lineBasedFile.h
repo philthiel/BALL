@@ -1,15 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_LINEBASEDFILE_H
-#define BALL_FORMAT_LINEBASEDFILE_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_LINEBASEDFILE_H
+#define BALL_CORE_FORMAT_LINEBASEDFILE_H
+
+#include <BALL/core/system/file.h>
 
 #include <vector>
+
 
 namespace BALL 
 {
@@ -189,4 +187,4 @@ namespace BALL
 # endif
 } // namespace BALL
 
-#endif // BALL_FORMAT_LINEBASEDFILE_H
+#endif // BALL_CORE_FORMAT_LINEBASEDFILE_H

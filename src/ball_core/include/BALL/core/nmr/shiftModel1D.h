@@ -1,13 +1,11 @@
-#ifndef BALL_NMR_SHIFTMODEL1D_H
-#define BALL_NMR_SHIFTMODEL1D_H
+//_new_file_header
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
 
-#ifndef BALL_NMR_SPECTRUM_H
-	#include <BALL/core/nmr/spectrum.h>
-#endif
+#ifndef BALL_CORE_NMR_SHIFTMODEL1D_H
+#define BALL_CORE_NMR_SHIFTMODEL1D_H
+
+#include <BALL/core/nmr/shiftModule.h>
+#include <BALL/core/nmr/spectrum.h>
 
 
 namespace BALL 
@@ -239,4 +237,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_NMR_SHIFTMODEL1D_H
+#endif // BALL_CORE_NMR_SHIFTMODEL1D_H

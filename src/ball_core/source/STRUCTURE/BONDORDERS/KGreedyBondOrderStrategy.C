@@ -1,5 +1,14 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/bondorders/KGreedyBondOrderStrategy.h>
+
 #include <BALL/core/structure/assignBondOrderProcessor.h>
+
+#include <vector>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -35,7 +44,7 @@ namespace BALL
 		if (options.getReal(Option::GREEDY_K_SIZE) < 0)
 		{
 			Log.error() << __FILE__ << " " << __LINE__ 
-				          << " : Error in options! Please check the option Option::GREEDY_K_SIZE."  << std::endl;
+						  << " : Error in options! Please check the option Option::GREEDY_K_SIZE."  << endl;
 
 			return false;
 		}
@@ -82,7 +91,7 @@ namespace BALL
 			if (abop->bond_fixed_[abop->index_to_bond_[entry.last_bond]])
 			{
 				// Store this bond order in all nodes of our k-greedy-set
-				Size min_size = std::min((Size)greedy_set_.size(), greedy_k_);
+				Size min_size = min((Size)greedy_set_.size(), greedy_k_);
 
 				for (Size j=0; j < min_size; j++)
 				{
@@ -95,8 +104,8 @@ namespace BALL
 			}
 			else // Bond is free -> try all bond orders for all nodes in our greedy set
 			{	
-				queue_ = std::priority_queue<PartialBondOrderAssignment>();
-				Size min_size =  std::min(greedy_set_size, greedy_k_);
+				queue_ = priority_queue<PartialBondOrderAssignment>();
+				Size min_size =  min(greedy_set_size, greedy_k_);
 				for (Size j=0; j < min_size; j++)
 				{
 					greedy_node_expansions_++;

@@ -1,19 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: forceField.C,v 1.40.26.4 2007/05/18 12:06:00 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/forceField.h>
 
-#include <BALL/core/molmec/common/forceFieldComponent.h>
-#include <BALL/core/molmec/common/periodicBoundary.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/periodicBoundary.h>
 
 #include <limits>
 
 using namespace std;
+
 
 namespace BALL 
 {

@@ -1,23 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/system/file.h>
-//#include <BALL/core/system/simpleDownloader.h>
 
 #include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
+//#include <BALL/core/system/simpleDownloader.h>
 
-#include <BALL/core/datatype/regularExpression.h>
-
+#include <cstdio>      // 'rename'
 #include <cstdlib>     // 'getenv'
 #include <sys/types.h>
 #include <sys/stat.h>   // 'stat', 'lstat'
-#include <cstdio>      // 'rename'
 
 // maximum number of substitutions performed in TransformationManager::transform()
 // (in order to avoid infinite recursion)
 #define MAX_SUBSTITUTIONS 10
+
 
 namespace BALL 
 {

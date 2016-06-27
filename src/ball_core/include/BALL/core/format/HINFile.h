@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_HINFILE_H
-#define BALL_FORMAT_HINFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_HINFILE_H
+#define BALL_CORE_FORMAT_HINFILE_H
 
-#ifndef BALL_MATHS_SIMPLEBOX3_H
-# include <BALL/core/maths/simpleBox3.h>
-#endif
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/maths/simpleBox3.h>
+
 
 namespace BALL 
 {
@@ -122,4 +117,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_HINFILE_H
+#endif // BALL_CORE_FORMAT_HINFILE_H

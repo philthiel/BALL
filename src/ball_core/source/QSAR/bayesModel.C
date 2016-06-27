@@ -1,4 +1,8 @@
+//_new_file_header
+
+
 #include <BALL/core/qsar/bayesModel.h>
+
 
 namespace BALL
 {

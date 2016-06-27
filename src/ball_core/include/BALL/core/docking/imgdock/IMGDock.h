@@ -1,33 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_IMGDOCK_IMGDOCK_H
-#define BALL_DOCKING_IMGDOCK_IMGDOCK_H
 
-#ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHEM_H
+#ifndef BALL_CORE_DOCKING_IMGDOCK_IMGDOCK_H
+#define BALL_CORE_DOCKING_IMGDOCK_IMGDOCK_H
+
 #include <BALL/core/docking/common/dockingAlgorithm.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#include <BALL/core/molmec/common/forceField.h>
-#endif
-
-#ifndef BALL_MATH_MATRIX44_H
-#include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#include <BALL/core/scoring/common/scoringFunction.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_STATICLIGANDFRAGMENT_H
-#include <BALL/core/docking/common/staticLigandFragment.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_SIDECHAINOPTIMIZER_H
 #include <BALL/core/docking/common/sideChainOptimizer.h>
-#endif
+#include <BALL/core/docking/common/staticLigandFragment.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 
 #include <map>
 
@@ -44,7 +26,7 @@ namespace BALL
 
 			IMGDock(System& receptor, System& ligand);
 
-			IMGDock(System& receptor, System& ligand, string config_file);
+			IMGDock(System& receptor, System& ligand, String config_file);
 
 			~IMGDock();
 			//@}
@@ -157,7 +139,7 @@ namespace BALL
 
 			void postDockOptimization(double step_width, int no_steps);
 
-			void recursionPrint(string line);
+			void recursionPrint(String line);
 
 			void optimizeRotation(std::vector < int > & conf, PoseList& best_conformations, Size bond, bool ignore_original_angle);
 
@@ -250,4 +232,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_IMGDOCK_IMGDOCK_H
+#endif // BALL_CORE_DOCKING_IMGDOCK_IMGDOCK_H

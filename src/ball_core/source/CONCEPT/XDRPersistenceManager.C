@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: XDRPersistenceManager.C,v 1.31 2005/12/23 17:02:33 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/XDRPersistenceManager.h>
+
 #include <BALL/core/common/logStream.h>
 
 #include <rpc/types.h>
@@ -19,6 +17,7 @@
 #endif
 
 using namespace std;
+
 
 namespace BALL 
 {

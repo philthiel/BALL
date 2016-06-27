@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef LMODEL
-#define LMODEL
 
-#ifndef REGRESSION
+#ifndef BALL_CORE_QSAR_LMODEL_H
+#define BALL_CORE_QSAR_LMODEL_H
+
 #include <BALL/core/qsar/regressionModel.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -35,7 +34,7 @@ namespace BALL
 				/** @name Accessors
 				 */
 				//@{
-				virtual Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				virtual Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 	
 			protected:
 				void calculateOffsets();
@@ -44,4 +43,4 @@ namespace BALL
 	}
 }
 
-#endif // LMODEL
+#endif // BALL_CORE_QSAR_LMODEL_H

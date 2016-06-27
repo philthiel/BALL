@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ruleProcessor.C,v 1.8 2002/12/16 12:23:00 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/ruleProcessor.h>
+
 #include <BALL/core/format/INIFile.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

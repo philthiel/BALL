@@ -1,15 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: common.h,v 1.29.16.1 2007/03/25 21:23:45 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_COMMON_H
-#define BALL_MATHS_COMMON_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_MATHS_COMMON_H
+#define BALL_CORE_MATHS_COMMON_H
 
 #include <cmath>
 
@@ -21,17 +14,11 @@
 # include <float.h>
 #endif
 
-#ifndef BALL_COMMON_CONSTANTS_H
-#	include <BALL/core/common/constants.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/constants.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/common/macros.h>
 
-#ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/core/common/global.h>
-#endif
-
-#ifndef BALL_COMMON_MACROS_H
-#	include <BALL/core/common/macros.h>
-#endif
 
 namespace BALL 
 {
@@ -339,4 +326,4 @@ namespace BALL
 	} // namespace Maths
 } // namespace BALL
 
-#endif // BALL_MATHS_COMMON_H
+#endif // BALL_CORE_MATHS_COMMON_H

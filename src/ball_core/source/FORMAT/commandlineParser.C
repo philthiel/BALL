@@ -1,9 +1,9 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
+
+#include <BALL/core/format/commandlineParser.h>
 
 #include <BALL/core/common/logStream.h>
-#include <BALL/core/format/commandlineParser.h>
 
 #ifdef BALL_OS_WINDOWS
 	#include <winsock2.h>
@@ -11,6 +11,7 @@
 
 using namespace BALL;
 using namespace std;
+
 
 const String BALL::CommandlineParser::NOT_FOUND = "parameter_not_found";
 const list<String> BALL::CommandlineParser::EMTPY_LIST(0);

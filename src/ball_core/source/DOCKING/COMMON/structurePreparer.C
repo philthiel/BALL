@@ -1,25 +1,25 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/docking/common/structurePreparer.h>
-#include <BALL/core/structure/defaultProcessors.h>
-#include <BALL/core/qsar/partialChargeProcessor.h>
-#include <BALL/core/qsar/simpleDescriptors.h>
-#include <BALL/core/molmec/parameter/templates.h>
-#include <BALL/core/molmec/parameter/lennardJones.h>
-#include <BALL/core/molmec/parameter/forceFieldParameters.h>
-#include <BALL/core/structure/buildBondsProcessor.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
+
+#include <BALL/core/datatype/options.h>
 #include <BALL/core/molmec/mmff94/MMFF94.h>
 #include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#include <BALL/core/datatype/options.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/molmec/parameter/templates.h>
+#include <BALL/core/qsar/partialChargeProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
 #include <BALL/core/scoring/components/PLP.h>
+#include <BALL/core/structure/buildBondsProcessor.h>
+#include <BALL/core/structure/defaultProcessors.h>
 #include <BALL/core/structure/fragmentDB.h>
 #include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL
 {

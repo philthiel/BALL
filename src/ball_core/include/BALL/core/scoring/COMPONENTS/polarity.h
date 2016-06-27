@@ -1,14 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_POLARITY_H
-#define BALL_SCORING_COMPONENTS_POLARITY_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_POLARITY_H
+#define BALL_CORE_SCORING_COMPONENTS_POLARITY_H
 
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/scoring/components/fresnoTypes.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -73,7 +73,7 @@ namespace BALL
 			*/
 			double updateScore();
 
-			void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+			void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 			//@}
 
@@ -92,4 +92,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_SCORING_COMPONENTS_POLARITY_H
+#endif // BALL_CORE_SCORING_COMPONENTS_POLARITY_H

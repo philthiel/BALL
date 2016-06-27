@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/amber/amberBend.h>
-#include <BALL/core/molmec/amber/amber.h>
+
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/molmec/amber/amber.h>
 
 using namespace std;
+
 
 namespace BALL
 {

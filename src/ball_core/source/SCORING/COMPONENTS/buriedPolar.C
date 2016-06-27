@@ -1,15 +1,12 @@
-// Molecular Mechanics: Fresno force field, buried polar component
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/buriedPolar.h>
-#include <BALL/core/scoring/components/fresnoTypes.h>
+
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/scoring/components/fresnoTypes.h>
 
 #include <BALL/core/system/timer.h>
-
 
 using namespace std;
 using namespace BALL;

@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_EMBEDDABLE_H
-#define BALL_CONCEPT_EMBEDDABLE_H
+#ifndef BALL_CORE_CONCEPT_EMBEDDABLE_H
+#define BALL_CORE_CONCEPT_EMBEDDABLE_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/stringHashMap.h>
 
 #include <typeinfo>
+
 
 namespace BALL 
 {
@@ -184,9 +178,9 @@ namespace BALL
 
 		/**	A hash map to retrieve the class ID for each instance.
 		*/
-		static HashMap<Embeddable*, string>		instance_to_type_map_;
+		static HashMap<Embeddable*, std::string> instance_to_type_map_;
 	};
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_EMBEDDABLE_H
+#endif // BALL_CORE_CONCEPT_EMBEDDABLE_H

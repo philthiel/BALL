@@ -1,12 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_RESCORING4D_H
-#define BALL_SCORING_FUNCTIONS_RESCORING4D_H
+
+#ifndef BALL_CORE_SCORING_FUNCTIONS_RESCORING4D_H
+#define BALL_CORE_SCORING_FUNCTIONS_RESCORING4D_H
 
 #include <BALL/core/scoring/functions/rescoring3D.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -18,8 +18,8 @@ namespace BALL
 
 		protected:
 			/** Obtain score-contributions for a single atom. Overloaded by class Rescoring4D */
-			void generateAtomScoreContributions_(const Atom* atom, vector<double>& contributions);
+			void generateAtomScoreContributions_(const Atom* atom, std::vector<double>& contributions);
 	};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_RESCORING4D_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_RESCORING4D_H

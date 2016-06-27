@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94Torsion.h,v 1.1.8.1 2007/03/25 21:25:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94TORSION_H
-#define BALL_MOLMEC_MMFF94_MMFF94TORSION_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MMFF94_MMFF94TORSION_H
+#define BALL_CORE_MOLMEC_MMFF94_MMFF94TORSION_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/core/molmec/common/forceField.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
+#include <vector>
+
 
 namespace BALL 
 {
@@ -100,10 +92,10 @@ namespace BALL
 		virtual void updateForces();
 
 		///
-		Position getTorsionType(const vector<Atom*>& atoms) const;
+		Position getTorsionType(const std::vector<Atom*>& atoms) const;
 		
 		///
-		const vector<Torsion>& getTorsions() const { return torsions_;}
+		const std::vector<Torsion>& getTorsions() const { return torsions_;}
 
 		//@}
 
@@ -116,9 +108,9 @@ namespace BALL
 		double getV_(Position e);
 		bool calculateHeuristic_(const Atom& aj, const Atom& ak, double& v1, double& v2, double& v3);
 
-		vector<Torsion> torsions_;
+		std::vector<Torsion> torsions_;
 		MMFF94TorsionParameters parameters_;
 	};
 } // namespace BALL 
 
-#endif // BALL_MOLMEC_MMFF94_MMFF94TORSION_H
+#endif // BALL_CORE_MOLMEC_MMFF94_MMFF94TORSION_H

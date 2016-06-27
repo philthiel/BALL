@@ -1,20 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#define BALL_MOLMEC_PARAMETER_ATOMTYPES_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_PARAMETER_ATOMTYPES_H
+#define BALL_CORE_MOLMEC_PARAMETER_ATOMTYPES_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+
+#include <vector>
 
 #define	BALL_ATOM_WILDCARD_NAME "*"
 #define	BALL_ATOM_UNKNOWN_NAME "?"
+
 
 namespace BALL 
 {
@@ -108,8 +105,8 @@ namespace BALL
 
 		/*_ Contains the symbolic names of the atom types.
 		*/
-		vector<String>						names_;
+		std::vector<String> names_;
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_ATOMTYPES_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_ATOMTYPES_H

@@ -1,26 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_REGULARDATA2D_H
-#define BALL_DATATYPE_REGULARDATA2D_H
 
-#ifndef BALL_MATHS_VECTOR2_H
-# include <BALL/core/maths/vector2.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_REGULARDATA2D_H
+#define BALL_CORE_DATATYPE_REGULARDATA2D_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#include <BALL/core/maths/vector2.h>
+#include <BALL/core/system/binaryFileAdaptor.h>
+#include <BALL/core/system/file.h>
 
-#ifndef BALL_SYSTEM_BINARYFILEADAPTOR_H
-# include <BALL/core/system/binaryFileAdaptor.h>
-#endif
-
-#include <iostream>
-#include <fstream>
-#include <iterator>
 #include <algorithm>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+
 
 namespace BALL 
 {
@@ -1135,4 +1127,4 @@ namespace BALL
 	}	
  } // namespace BALL
 
-#endif // BALL_DATATYPE_TREGULARDATA2D_H
+#endif // BALL_CORE_DATATYPE_TREGULARDATA2D_H

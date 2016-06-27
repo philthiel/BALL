@@ -1,11 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: sysinfo.h,v 1.10 2005/12/23 17:02:07 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_SYSINFO_H
-#define BALL_SYSTEM_SYSINFO_H
+
+#ifndef BALL_CORE_SYSTEM_SYSINFO_H
+#define BALL_CORE_SYSTEM_SYSINFO_H
 
 #include <BALL/core/common/create.h>
 #include <BALL/core/common/macros.h>
@@ -60,4 +57,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_SYSTEM_SYSINFO_H
+#endif // BALL_CORE_SYSTEM_SYSINFO_H

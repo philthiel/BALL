@@ -1,15 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_RESULT_H
-#define BALL_DOCKING_RESULT_H
 
-#include <BALL/core/docking/common/receptor.h>
+#ifndef BALL_CORE_DOCKING_RESULT_H
+#define BALL_CORE_DOCKING_RESULT_H
+
 #include <BALL/core/docking/common/flexibleMolecule.h>
-#include <vector>
+#include <BALL/core/docking/common/receptor.h>
+
+#include <list>
 #include <map>
+#include <vector>
 
 
 namespace BALL
@@ -119,7 +119,7 @@ namespace BALL
 			/** Get the list of all input conformation UIDs.
 					@return vector of UIDs
 			 */
-			const vector < String > * getInputConformations();
+			const std::vector<String>* getInputConformations();
 
 			/** Get the input conformation of the result for a specific Ligand.
 					@param  pointer to Ligand
@@ -137,7 +137,7 @@ namespace BALL
 					@param  pointer to Ligand
 					@return  vector of ResultData for each output conformation
 			 */
-			vector < Result::ResultData > getOutputConformations(Ligand* lig);
+			std::vector<Result::ResultData> getOutputConformations(Ligand* lig);
 
 			const HashSet<String>* getInputIds();
 			HashSet<String> getOutputIds();
@@ -171,7 +171,7 @@ namespace BALL
 					@param  Ligand input conformation String
 					@return  ResultData
 			 */
-			const vector<Result::ResultData>* get(String inpose_id);
+			const std::vector<Result::ResultData>* get(String inpose_id);
 
 			static String toString(const ResultData &rd);
 
@@ -180,7 +180,7 @@ namespace BALL
 
 			void erase(const String& ID);
 
-			void sort(const list<String>& input_order, list<String>& output_order);
+			void sort(const std::list<String>& input_order, std::list<String>& output_order);
 
 			void setTimestamp(const String& timestamp);
 
@@ -194,20 +194,21 @@ namespace BALL
 
 			const String& getToolInfo();
 
-			const HashMap<String, vector<ResultData> >* getData();
+			const HashMap<String, std::vector<ResultData> >* getData();
 
 		protected:
 
 			String timestamp_;
 			String toolinfo_;
 			Result::Method method;
-			HashMap<String, vector<ResultData> >     result_data_;
+			HashMap<String, std::vector<ResultData> >     result_data_;
 			HashMap<String, ResultData> result_output_data_;
-			vector < String > input_conformations_;
-			HashSet < String > input_conformations_map_;
+			std::vector<String> input_conformations_;
+			HashSet<String> input_conformations_map_;
 
 			/** Optional String describing the method or approach that was use to generate this result (e.g. the name of the docking or rescoring algorithm) */
 			String description_;
 	};
 }
-#endif /* BALL_DOCKING_RESULT_H */
+
+#endif // BALL_CORE_DOCKING_RESULT_H

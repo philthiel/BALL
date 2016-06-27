@@ -1,18 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: Amber force field, bond stretch component
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
-#define BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-# include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_COMMON_STRETCHCOMPONENT_H
+#define BALL_CORE_MOLMEC_COMMON_STRETCHCOMPONENT_H
 
-#ifndef BALL_MOLMEC_PARAMETER_QUADRATICBONDSTRETCH_H
-# include <BALL/core/molmec/parameter/quadraticBondStretch.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/parameter/quadraticBondStretch.h>
 
 
 namespace BALL
@@ -79,4 +72,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_COMMON_STRETCHCOMPONENT_H
+#endif // BALL_CORE_MOLMEC_COMMON_STRETCHCOMPONENT_H

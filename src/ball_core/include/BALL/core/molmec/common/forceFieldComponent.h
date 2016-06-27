@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: forceFieldComponent.h,v 1.20.18.1 2007/03/25 21:23:49 oliver Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: general force field component class
 
-#ifndef BALL_MOLMEC_FORCEFIELDCOMPONENT_H
-#define BALL_MOLMEC_FORCEFIELDCOMPONENT_H
+#ifndef BALL_CORE_MOLMEC_FORCEFIELDCOMPONENT_H
+#define BALL_CORE_MOLMEC_FORCEFIELDCOMPONENT_H
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include	<BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_KERNEL_ATOM_H
-#	include	<BALL/core/kernel/atom.h>
-#endif
-
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atom.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
+
 
 namespace BALL 
 {
@@ -170,4 +160,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_FORCEFIELDCOMPONENT_H
+#endif // BALL_CORE_MOLMEC_FORCEFIELDCOMPONENT_H

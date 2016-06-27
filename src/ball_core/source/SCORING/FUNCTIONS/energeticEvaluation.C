@@ -1,7 +1,11 @@
+//_new_file_header
+
+
 #include <BALL/core/scoring/functions/energeticEvaluation.h>
 
-//using namespace::std;
+using namespace std;
 using namespace BALL;
+
 
 EnergeticEvaluation::EnergeticEvaluation()
 	throw()

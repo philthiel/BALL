@@ -1,9 +1,11 @@
+//_new_file_header
+
+
 #include <BALL/core/kernel/molecularInteractions.h>
 
 using namespace BALL;
+using namespace std;
 
-using std::map;
-using std::make_pair;
 
 bool MolecularInteractions::SAVE_ONLY_SUMS = 0;
 

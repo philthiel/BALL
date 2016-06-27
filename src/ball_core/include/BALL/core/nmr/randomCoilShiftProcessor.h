@@ -1,16 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: randomCoilShiftProcessor.h,v 1.16.10.2 2007-04-12 13:53:55 anne Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include<BALL/core/nmr/shiftModule.h>
-#endif
 
-#ifndef BALL_DATAYTPE_STRINGHASHMAP_H
-#	include<BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_NMR_RANDOMCOILSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_RANDOMCOILSHIFTPROCESSOR_H
+
+#include<BALL/core/datatype/stringHashMap.h>
+#include<BALL/core/nmr/shiftModule.h>
+
 
 namespace BALL 
 {	
@@ -92,3 +88,5 @@ namespace BALL
 	};
   
 } // namespace BALL
+
+#endif // BALL_CORE_NMR_RANDOMCOILSHIFTPROCESSOR_H

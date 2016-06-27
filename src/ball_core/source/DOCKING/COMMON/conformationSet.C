@@ -1,19 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
 
 #include <BALL/core/docking/common/conformationSet.h>
 
-#include <BALL/core/kernel/atomContainer.h>
 #include <BALL/core/format/DCDFile.h>
-#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/kernel/atomContainer.h>
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
 
-#include <stdlib.h>
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
+
 
 namespace BALL
 {

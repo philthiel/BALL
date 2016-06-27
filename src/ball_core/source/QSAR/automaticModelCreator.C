@@ -1,6 +1,9 @@
+//_new_file_header
+
+
 #include <BALL/core/qsar/automaticModelCreator.h>
-#include <BALL/core/qsar/registry.h>
 #include <BALL/core/qsar/featureSelection.h>
+#include <BALL/core/qsar/registry.h>
 
 using namespace BALL::QSAR;
 using namespace std;

@@ -1,9 +1,8 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/PBScoring.h>
+
 #include <BALL/core/scoring/components/PB.h>
 
 using namespace BALL;

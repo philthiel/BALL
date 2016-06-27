@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_ANTECHAMBERFILE_H
-#define BALL_FORMAT_ANTECHAMBERFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-# include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_ANTECHAMBERFILE_H
+#define BALL_CORE_FORMAT_ANTECHAMBERFILE_H
+
+#include <BALL/core/format/genericMolFile.h>
+
 
 namespace BALL
 {
@@ -79,4 +77,5 @@ namespace BALL
 			void ac_split_(const String& line, std::vector<String>& split);
 	};
 }
-#endif
+
+#endif // BALL_CORE_FORMAT_ANTECHAMBERFILE_H

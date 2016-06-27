@@ -1,41 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#define BALL_CONCEPT_COMPOSITE_H
 
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/core/concept/persistentObject.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_COMPOSITE_H
+#define BALL_CORE_CONCEPT_COMPOSITE_H
 
-#ifndef BALL_CONCEPT_COMPARATOR_H
-#	include <BALL/core/concept/comparator.h>
-#endif
+#include <BALL/core/concept/bidirectionalIterator.h>
+#include <BALL/core/concept/comparator.h>
+#include <BALL/core/concept/object.h>
+#include <BALL/core/concept/persistentObject.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/selectable.h>
+#include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/concept/visitor.h>
 
-#ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/core/concept/bidirectionalIterator.h>
-#endif
-
-#ifndef BALL_CONCEPT_OBJECT_H
-#	include <BALL/core/concept/object.h>
-#endif
-
-#ifndef BALL_CONCEPT_SELECTABLE_H
-#	include <BALL/core/concept/selectable.h>
-#endif
-
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/core/concept/visitor.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_CONCEPT_TIMESTAMP_H
-#	include <BALL/core/concept/timeStamp.h>
-#endif
 
 ///
 namespace BALL 
@@ -74,8 +51,8 @@ namespace BALL
 		*/
 		//@{
 
-#ifndef BALL_KERNEL_PREDICATE_TYPE
-#define BALL_KERNEL_PREDICATE_TYPE
+#ifndef BALL_CORE_KERNEL_PREDICATE_TYPE
+#define BALL_CORE_KERNEL_PREDICATE_TYPE
 		/**	Composite predicate type.
 				This type declares a predicate operating on composites.
 				As it is used as a predicate for all kernel classes,
@@ -2191,4 +2168,4 @@ B		*/
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_COMPOSITE_H
+#endif // BALL_CORE_CONCEPT_COMPOSITE_H

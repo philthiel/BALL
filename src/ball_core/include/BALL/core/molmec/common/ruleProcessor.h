@@ -1,26 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ruleProcessor.h,v 1.17 2005/12/23 17:01:52 amoll Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: rule-based assignment of properties (typenames, charges, radii, etc.)
 
-#ifndef BALL_MOLMEC_COMMON_RULEPROCESSOR_H
-#define BALL_MOLMEC_COMMON_RULEPROCESSOR_H
+#ifndef BALL_CORE_MOLMEC_COMMON_RULEPROCESSOR_H
+#define BALL_CORE_MOLMEC_COMMON_RULEPROCESSOR_H
 
-#ifndef BALL_MOLMEC_COMMON_RULEEVALUATOR_H
-#	include <BALL/core/molmec/common/ruleEvaluator.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/molmec/common/ruleEvaluator.h>
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
 
 namespace BALL 
 {
 	/**	Rule Processor class.
-			
+	 * Molecular Mechanics: rule-based assignment of properties (typenames, charges, radii, etc.)
     	\ingroup  MolmecAssignment
 	*/
 	class BALL_EXPORT RuleProcessor
@@ -121,4 +112,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_MOLMEC_COMMON_RULEPROCESSOR_H
+#endif // BALL_CORE_MOLMEC_COMMON_RULEPROCESSOR_H

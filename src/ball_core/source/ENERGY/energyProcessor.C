@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: energyProcessor.C,v 1.6 2002/02/27 12:21:14 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/energy/energyProcessor.h>
+
 
 namespace BALL
 {

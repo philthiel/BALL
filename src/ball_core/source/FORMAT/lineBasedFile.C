@@ -1,14 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/lineBasedFile.h>
 
 #include <BALL/core/common/exception.h>
 #include <BALL/core/common/logStream.h>
+
 #include <cstdio>
 
 using namespace std;
+
 
 namespace BALL
 {

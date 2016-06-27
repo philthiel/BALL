@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: molecularDynamics.C,v 1.22 2005/03/01 10:07:54 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
 
-#include <vector>
-
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
-#include <BALL/core/kernel/PTE.h>
+
+#include <vector>
+
+using namespace std;
 
 
 namespace BALL
@@ -84,7 +83,7 @@ namespace BALL
 		if (!valid_)
 		{
 			// The setup has failed for some reason. Output an error message.
-			Log.error() << "Setup of instance of class 'MolecularDynamics' has failed." << std::endl;
+			Log.error() << "Setup of instance of class 'MolecularDynamics' has failed." << endl;
 		}
 	}
 
@@ -181,8 +180,8 @@ namespace BALL
 		if (force_field.isValid() == false)
 		{
 			// The setup has failed for some reason. Output an error message.
-			Log.error() << "Setup of instance of class 'MolecularDynamics' has failed." << std::endl;
-			Log.error() << "ForceField is not valid!" << std::endl;
+			Log.error() << "Setup of instance of class 'MolecularDynamics' has failed." << endl;
+			Log.error() << "ForceField is not valid!" << endl;
 
 			valid_ = false;
 			return false;
@@ -330,7 +329,7 @@ namespace BALL
 		else
 	  {
 			Log.warn() << "Assigning a time step of zero is not allowed. "
-								 << "Using old value." << std::endl;
+								 << "Using old value." << endl;
 		}
   }
 
@@ -373,7 +372,7 @@ namespace BALL
     }
 		else
 		{
-			Log.warn() << "Assigning an energy_output_frequency of zero is not allowed. Using old value." << std::endl;
+			Log.warn() << "Assigning an energy_output_frequency of zero is not allowed. Using old value." << endl;
 		}
 	}
 
@@ -390,7 +389,7 @@ namespace BALL
 		else
 		{
 			Log.warn() << "Assigning a snapshot_frequency_ of zero is not allowed. "
-								 << "Using old value." << std::endl;
+								 << "Using old value." << endl;
 		}
 	}
 

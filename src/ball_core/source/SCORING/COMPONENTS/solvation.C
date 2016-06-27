@@ -1,14 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/solvation.h>
+
 #include <BALL/core/kernel/PTE.h>
 
 using namespace BALL;
 using namespace std;
-
 
 
 Solvation::Solvation(ScoringFunction& sf)

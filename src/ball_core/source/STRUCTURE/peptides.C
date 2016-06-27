@@ -1,18 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/peptides.h>
-#include <BALL/core/kernel/protein.h>
-
-#include <list>
-#include <vector>
-#include <algorithm>
 
 #include <BALL/core/format/lineBasedFile.h>
+#include <BALL/core/kernel/protein.h>
 #include <BALL/core/system/path.h>
+
+#include <algorithm>
+#include <list>
+#include <vector>
 	
 using namespace std;
+
+
 
 namespace BALL 
 {

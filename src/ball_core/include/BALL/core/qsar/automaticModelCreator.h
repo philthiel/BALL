@@ -1,3 +1,8 @@
+//_new_file_header
+
+#ifndef BALL_CORE_QSAR_AUTOMATICMODELCREATOR_H
+#define BALL_CORE_QSAR_AUTOMATICMODELCREATOR_H
+
 #include <BALL/core/common/global.h>
 #include <BALL/core/qsar/Model.h>
 #include <BALL/core/qsar/QSARData.h>
@@ -39,3 +44,4 @@ namespace BALL
 	}
 }
 
+#endif // BALL_CORE_QSAR_AUTOMATICMODELCREATOR_H

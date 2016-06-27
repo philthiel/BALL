@@ -1,22 +1,22 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/docking/imgdock/IMGDock.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
-#include <BALL/core/maths/plane3.h>
-#include <cmath>
-#include <sstream>
+
 #include <BALL/core/format/PDBFile.h>
 #include <BALL/core/format/SDFile.h>
-
-#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/scoring/functions/gridedMM.h>
 #include <BALL/core/scoring/functions/gridedPLP.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
 #include <BALL/core/scoring/functions/PLPScoring.h>
 
+#include <cmath>
+#include <sstream>
+
 using namespace std;
+
 
 namespace BALL
 {
@@ -59,7 +59,7 @@ namespace BALL
 		setup(receptor, ligand);
 	}
 
-	IMGDock::IMGDock(System& receptor, System& ligand, string config_file)
+	IMGDock::IMGDock(System& receptor, System& ligand, String config_file)
 	: DockingAlgorithm(receptor, ligand)
 	{
 		scoring_function_ = NULL;

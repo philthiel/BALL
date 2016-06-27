@@ -1,12 +1,15 @@
-// $Id: HydrogenBondSlick.h,v 1.3 2006/05/17 12:49:15 anker Exp $
-// Molecular Mechanics: Fresno force field, hydrogen bond component
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_HYDROGENBONDSLICK_H
-#define BALL_SCORING_COMPONENTS_HYDROGENBONDSLICK_H
 
+#ifndef BALL_CORE_SCORING_COMPONENTS_HYDROGENBONDSLICK_H
+#define BALL_CORE_SCORING_COMPONENTS_HYDROGENBONDSLICK_H
+
+#include <BALL/core/datatype/options.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/datatype/options.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -157,7 +160,7 @@ namespace BALL
 		*/
 		//@{
 
-		void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+		void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 		/**
 		 * Calculates and returns the component's energy.
@@ -221,4 +224,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_SCORING_COMPONENTS_HYDROGENBONDSLICK_H
+#endif // BALL_CORE_SCORING_COMPONENTS_HYDROGENBONDSLICK_H

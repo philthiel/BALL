@@ -1,17 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef LIBSVMMODELH
-#define LIBSVMMODELH
 
-#ifndef SVRMODEL
-#include <BALL/core/qsar/svrModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_LIBSVMMODEL_H
+#define BALL_CORE_QSAR_LIBSVMMODEL_H
 
 #include <fstream>
 #include <svm.h>
+
+#include <BALL/core/qsar/svrModel.h>
 
 
 namespace BALL
@@ -94,4 +90,4 @@ namespace BALL
 
 
 
-#endif // LIBSVMMODELH
+#endif // BALL_CORE_QSAR_LIBSVMMODEL_H

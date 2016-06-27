@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: nucleicAcidIterator.h,v 1.11 2005/10/23 12:02:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_NUCLEICACIDITERATOR_H
-#define BALL_KERNEL_NUCLEICACIDITERATOR_H
 
-#ifndef BALL_KERNEL_NUCLEOTIDE_H
-#	include <BALL/core/kernel/nucleicAcid.h>
-#endif
+#ifndef BALL_CORE_KERNEL_NUCLEICACIDITERATOR_H
+#define BALL_CORE_KERNEL_NUCLEICACIDITERATOR_H
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/core/kernel/iterator.h>
-#endif
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/predicate.h>
 
-#ifndef BALL_KERNEL_PREDICATE_H
-#	include <BALL/core/kernel/predicate.h>
-#endif
 
 namespace BALL 
 {
@@ -79,4 +69,4 @@ namespace BALL
 	ConstIteratorWrapper(NucleicAcid)
 } // namespace BALL
 
-#endif // BALL_KERNEL_NUCLEICACIDITERATOR_H
+#endif // BALL_CORE_KERNEL_NUCLEICACIDITERATOR_H

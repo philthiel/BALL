@@ -1,10 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/GAMESSLogFile.h>
-#include <BALL/core/kernel/system.h>
+
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+
 
 // defined in the lexer (GAMESSLogParserLexer.l)
 extern void GAMESSLogParser_initBuffer(const char* buf);

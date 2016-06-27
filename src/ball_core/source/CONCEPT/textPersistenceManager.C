@@ -1,15 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: textPersistenceManager.C,v 1.20 2005/02/06 09:45:00 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/textPersistenceManager.h>
+
 #include <BALL/core/common/logStream.h>
 
 // #define BALL_DEBUG_PERSISTENCE
 
 using namespace std;
+
 
 namespace BALL 
 {

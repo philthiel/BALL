@@ -1,18 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/HINFile.h>
+
 #include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/residue.h>
 #include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/PDBAtom.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/PTE.h>
 
+#include <list>
 #include <stack>
+#include <vector>
+
 
 namespace BALL
 {
@@ -146,7 +149,7 @@ namespace BALL
 
 		// the atom_vector contains the atoms in the order of
 		// the atom iterator
-		vector<const Atom*> atom_vector;
+		std::vector<const Atom*> atom_vector;
 
 		// create a vector containing pointers to the atoms
 		AtomConstIterator atom_it;
@@ -158,10 +161,10 @@ namespace BALL
 
 		// the index_vector contains the index of the connected component
 		// (HyperChem molecule) it is in and initialize it to zero
-		vector<Index>  index_vector(atom_vector.size(), -1);
+		std::vector<Index>  index_vector(atom_vector.size(), -1);
 
-		typedef list<Size> Component;
-		typedef	vector<Component> ComponentVector;
+		typedef std::list<Size> Component;
+		typedef	std::vector<Component> ComponentVector;
 
 		// now calculate all connected components in the graph
 		// formed by atoms and bonds of the system
@@ -734,7 +737,7 @@ namespace BALL
 					}
 
 					AtomIterator atom_it = molecule->beginAtom();
-					vector<Atom*>	tmp_atoms;
+					std::vector<Atom*>	tmp_atoms;
 					for (; +atom_it; ++atom_it)
 					{
 						tmp_atoms.push_back(&*atom_it);
@@ -984,7 +987,7 @@ namespace BALL
 		if (molecule != 0)
 		{
 			// a list to hold the lone pairs (for deletion)
-			list<Atom*> del_list;
+			std::list<Atom*> del_list;
 
 			// Iterate over all atoms
 			AtomIterator it = molecule->beginAtom();
@@ -1016,7 +1019,7 @@ namespace BALL
 			}
 
 			// remove the lone pairs
-			list<Atom*>::iterator list_it = del_list.begin();
+			std::list<Atom*>::iterator list_it = del_list.begin();
 			for (; list_it != del_list.end(); ++list_it)
 			{
 				if ((*list_it)->isAutoDeletable())

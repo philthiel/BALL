@@ -1,14 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/rescoring3D.h>
-#include <BALL/core/kernel/molecularInteractions.h>
 
+#include <BALL/core/kernel/molecularInteractions.h>
 
 using namespace BALL;
 using namespace std;
+
 
 Rescoring3D::Rescoring3D(AtomContainer& receptor, AtomContainer& reference_ligand, Options& options, String free_energy_label, ScoringFunction* sf)
     : Rescoring(receptor, reference_ligand, options, free_energy_label, sf)

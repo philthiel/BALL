@@ -1,40 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_STRUCTUREMAPPER_H
-#define BALL_STRUCTURE_STRUCTUREMAPPER_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_STRUCTUREMAPPER_H
+#define BALL_CORE_STRUCTURE_STRUCTUREMAPPER_H
 
-#ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#	include <BALL/core/structure/geometricTransformations.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/structure/atomBijection.h>
+#include <BALL/core/structure/geometricTransformations.h>
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_KERNEL_PROTEIN_H
-#	include <BALL/core/kernel/protein.h>
-#endif
-
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
-
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-#	include <BALL/core/structure/atomBijection.h>
-#endif
-
-#include <vector>
+#include <list>
 #include <map>
+#include <vector>
+
 
 namespace BALL 
 {
@@ -93,12 +74,12 @@ namespace BALL
 		/**	Calculates a bijection to map two arrays of fragments onto each other.
 		*/
 		AtomBijection calculateFragmentBijection
-			(const vector<Fragment*>& A, const vector<Fragment*>& B);
+			(const std::vector<Fragment*>& A, const std::vector<Fragment*>& B);
 
 		/**	Maps two fragments onto each other
 		*/
 		bool mapFragments
-			(const vector<Fragment*>& A, const vector<Fragment*>& B,
+			(const std::vector<Fragment*>& A, const std::vector<Fragment*>& B,
 			 Matrix4x4* transformation, double upper_bound = 8.0, double lower_bound = 2.5);
 
 		/**	Map three points onto each other.
@@ -119,12 +100,12 @@ namespace BALL
 
 		/**	
 		*/
-		Size mapResiduesByBackbone(const list<Residue*>& l1, const list<Residue*>& l2);
+		Size mapResiduesByBackbone(const std::list<Residue*>& l1, const std::list<Residue*>& l2);
 	 
 		/**
 		*/
-		vector<vector<Fragment*> >& searchPattern
-			(vector<Fragment*>& pattern, AtomContainer& composite,
+		std::vector<std::vector<Fragment*> >& searchPattern
+			(std::vector<Fragment*>& pattern, AtomContainer& composite,
 			 double max_rmsd = 4.0,	   double max_center_tolerance = 2.0,
 			 double upper_bound = 8.0, double lower_bound = 4.0);
 
@@ -164,5 +145,5 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_STRUCTUREMAPPER_H
+#endif // BALL_CORE_STRUCTURE_STRUCTUREMAPPER_H
 

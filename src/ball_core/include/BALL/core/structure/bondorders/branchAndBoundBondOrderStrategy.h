@@ -1,17 +1,13 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_BRANCHANDBOUNDBONDORDERSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_BRANCHANDBOUNDBONDORDERSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_BRANCHANDBOUNDBONDORDERSTRATEGY_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_BRANCHANDBOUNDBONDORDERSTRATEGY_H
 
-#ifndef BALL_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H
-# include <BALL/core/structure/bondorders/KGreedyBondOrderStrategy.h>
-#endif
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
+#include <BALL/core/structure/bondorders/KGreedyBondOrderStrategy.h>
+
 
 namespace BALL
 {
@@ -65,4 +61,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H

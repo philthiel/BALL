@@ -1,9 +1,13 @@
+//_new_file_header
+
+
+#include <BALL/core/structure/rGroupAssembler.h>
 
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/structure/rGroupAssembler.h>
 
 using namespace std;
+
 
 namespace BALL
 {

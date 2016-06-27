@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_MODELFACTORY_H
-#define BALL_QSAR_MODELFACTORY_H
 
-#ifndef BALL_CONCEPT_FACTORY_H
+#ifndef BALL_CORE_QSAR_MODELFACTORY_H
+#define BALL_CORE_QSAR_MODELFACTORY_H
+
 #include <BALL/core/concept/factory.h>
-#endif
-
-#ifndef MODEL
 #include <BALL/core/qsar/Model.h>
-#endif
-
-#ifndef QSARH
 #include <BALL/core/qsar/QSARData.h>
-#endif
+
 
 namespace BALL
 {
@@ -48,4 +40,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_QSAR_MODELFACTORY_H
+#endif // BALL_CORE_QSAR_MODELFACTORY_H

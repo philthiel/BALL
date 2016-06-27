@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SASFACE_H
-#define BALL_STRUCTURE_SASFACE_H
 
-#ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/core/structure/graphFace.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SASFACE_H
+#define BALL_CORE_STRUCTURE_SASFACE_H
 
-#ifndef BALL_STRUCTURE_SPHERE3_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/structure/graphFace.h>
 
 #include <list>
+
 
 namespace BALL
 {
@@ -188,4 +183,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_SASFACE_H
+#endif // BALL_CORE_STRUCTURE_SASFACE_H

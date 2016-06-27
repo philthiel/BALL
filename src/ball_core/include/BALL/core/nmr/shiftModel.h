@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: shiftModel.h,v 1.17 2005/12/23 17:01:56 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_SHIFTMODEL_H
-#define BALL_NMR_SHIFTMODEL_H
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
+#ifndef BALL_CORE_NMR_SHIFTMODEL_H
+#define BALL_CORE_NMR_SHIFTMODEL_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/nmr/shiftModule.h>
 
-#ifndef BALL_FORMAT_PARAMETERS_H
-#	include <BALL/core/format/parameters.h>
-#endif
 
 namespace BALL 
 {
@@ -216,4 +206,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_SHIFTMODEL_H
+#endif // BALL_CORE_NMR_SHIFTMODEL_H

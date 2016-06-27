@@ -1,21 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/kekulizer.h>
 
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/molecule.h>
 #include <BALL/core/kernel/PTE.h>
-//#include <BALL/core/datatype/hashSet.h>
 #include <BALL/core/structure/smartsMatcher.h>
 
 using namespace std;
 
 //  #define DEBUG_KEKULIZER
 //  #define BALL_MMFF94_TEST
+
 
 namespace BALL
 {

@@ -1,25 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_RESIDUE_H
-#define BALL_KERNEL_RESIDUE_H
 
-#ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/core/kernel/fragment.h>
-#endif
+#ifndef BALL_CORE_KERNEL_RESIDUE_H
+#define BALL_CORE_KERNEL_RESIDUE_H
 
-#ifndef BALL_KERNEL_PDBATOMITERATOR_H
-#	include <BALL/core/kernel/PDBAtomIterator.h>
-#endif
-
-#ifndef BALL_KERNEL_RESIDUEITERATOR_H
-#	include <BALL/core/kernel/residueIterator.h>
-#endif
-
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/PDBAtomIterator.h>
+#include <BALL/core/kernel/residueIterator.h>
  
 #define BALL_RESIDUE_DEFAULT_ID               ""
 #define BALL_RESIDUE_DEFAULT_INSERTION_CODE   ' '
+
 
 namespace BALL 
 {
@@ -411,7 +402,7 @@ namespace BALL
 
 		// --- EXTERNAL ITERATORS	
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(PDBAtom)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(PDBAtom)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(Residue, PDBAtom, pdbAtoms)
 
 
@@ -443,7 +434,7 @@ namespace BALL
 
 		bool isSuperAtomContainerOf(const AtomContainer& atom_container) const;
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(Residue, AtomContainer, atomContainers)
 
 		// --- ATTRIBUTES
@@ -486,4 +477,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_KERNEL_RESIDUE_H
+#endif // BALL_CORE_KERNEL_RESIDUE_H

@@ -1,12 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/advElectrostatic.h>
-#include <BALL/core/scoring/common/scoringFunction.h>
-#include <set>
 
+#include <BALL/core/scoring/common/scoringFunction.h>
+
+#include <set>
 
 using namespace BALL;
 

@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94NonBonded.h,v 1.1.8.4 2007/05/16 20:34:22 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MMFF94_NONBONDED_H
-#define BALL_MOLMEC_MMFF94_NONBONDED_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MMFF94_NONBONDED_H
+#define BALL_CORE_MOLMEC_MMFF94_NONBONDED_H
 
-#ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#	include <BALL/core/molmec/common/support.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
+#include <BALL/core/molmec/mmff94/MMFF94Processors.h>
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
-
-#ifndef BALL_MOLMEC_MMFF94_PROCESSORS_H
-# include <BALL/core/molmec/mmff94/MMFF94Processors.h>
-#endif
 
 namespace BALL 
 {
@@ -158,4 +145,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_MMFF94VDW_H
+#endif // BALL_CORE_MOLMEC_MMFF94_MMFF94VDW_H

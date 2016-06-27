@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PDBAtomIterator.h,v 1.25 2005/10/23 12:02:17 oliver Exp $ 
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_PDBATOMITERATOR_H
-#define BALL_KERNEL_PDBATOMITERATOR_H
 
-#ifndef BALL_KERNEL_PDBATOM_H
-#	include <BALL/core/kernel/PDBAtom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_PDBATOMITERATOR_H
+#define BALL_CORE_KERNEL_PDBATOMITERATOR_H
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/core/kernel/iterator.h>
-#endif
+#include <BALL/core/concept/stdIteratorWrapper.h>
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/predicate.h>
 
-#ifndef BALL_KERNEL_PREDICATE_H
-#	include <BALL/core/kernel/predicate.h>
-#endif
-
-#ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-# include <BALL/core/concept/stdIteratorWrapper.h>
-#endif
 
 namespace BALL 
 {
@@ -98,4 +85,4 @@ namespace BALL
 	ConstIteratorWrapper(PDBAtom)
 } // namespace BALL
 
-#endif // BALL_KERNEL_PDBATOMITERATOR_H
+#endif // BALL_CORE_KERNEL_PDBATOMITERATOR_H

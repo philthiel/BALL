@@ -1,20 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PDBRECORDS_H
-#define BALL_FORMAT_PDBRECORDS_H
 
-#include <vector>
+#ifndef BALL_CORE_FORMAT_PDBRECORDS_H
+#define BALL_CORE_FORMAT_PDBRECORDS_H
+
 #include <stdexcept>
+#include <vector>
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/datatype/hashMap.h>
 
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
 
 namespace BALL 
 {
@@ -176,4 +171,4 @@ namespace BALL
 	
 } // namespace BALL
 
-#endif // BALL_FORMAT_PDBRECORDS_H
+#endif // BALL_CORE_FORMAT_PDBRECORDS_H

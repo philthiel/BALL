@@ -1,10 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/pcrModel.h>
+
+#include <vector>
+
 #include <Eigen/Dense>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -37,7 +41,7 @@ namespace BALL
 
 			double explained_var = 0;
 			unsigned int cols = 0;
-			if (complete_var < 5*std::numeric_limits < double > ::epsilon())
+			if (complete_var < 5*numeric_limits < double > ::epsilon())
 			{
 				throw Exception::NoPCAVariance(__FILE__, __LINE__, "No variance present to be explained by PCA!");
 			}

@@ -1,5 +1,10 @@
+//_new_file_header
+
+
 #include <BALL/core/datatype/graph/graphAlgorithms.h>
+
 #include <BALL/core/datatype/string.h>
+
 
 namespace BALL
 {

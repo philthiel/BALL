@@ -1,22 +1,18 @@
-#ifndef BALL_FORMAT_COMMANDLINEPARSER_H
-#define BALL_FORMAT_COMMANDLINEPARSER_H
+//_new_file_header
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#ifndef BALL_CORE_FORMAT_COMMANDLINEPARSER_H
+#define BALL_CORE_FORMAT_COMMANDLINEPARSER_H
 
-#ifndef BALL_FORMAT_PARAMFILE_H
-# include <BALL/core/format/paramFile.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/format/paramFile.h>
 
 #include <list>
 #include <map>
 #include <set>
 #include <vector>
+
 
 namespace BALL
 {
@@ -211,4 +207,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_FORMAT_COMMANDLINEPARSER_H
+#endif // BALL_CORE_FORMAT_COMMANDLINEPARSER_H

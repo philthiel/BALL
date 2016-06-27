@@ -1,22 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_KPLSMODEL_H
-#define BALL_QSAR_KPLSMODEL_H
 
-#ifndef BALL_QSAR_KERNELMODEL_H
+#ifndef BALL_CORE_QSAR_KPLSMODEL_H
+#define BALL_CORE_QSAR_KPLSMODEL_H
+
 #include <BALL/core/qsar/kernelModel.h>
-#endif
-
-#ifndef BALL_QSAR_NONLINEARMODEL_H
-#include <BALL/core/qsar/nonlinearModel.h>
-#endif
-
-#ifndef BALL_QSAR_LATENTVARIABLEMODEL_H
 #include <BALL/core/qsar/latentVariableModel.h>
-#endif
+#include <BALL/core/qsar/nonlinearModel.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -60,9 +53,9 @@ namespace BALL
 				/** returns a pointer to the  PLS Y-scores matrix U */
 				const Eigen::MatrixXd* getU();
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				//@}
 				
 				
@@ -78,4 +71,4 @@ namespace BALL
 	}
 }
 
-#endif // KPLSMODEL
+#endif // BALL_CORE_QSAR_KPLSMODEL_H

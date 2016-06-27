@@ -1,11 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_ANALYTICALSES_H
-#define BALL_STRUCTURE_ANALYTICALSES_H
+
+#ifndef BALL_CORE_STRUCTURE_ANALYTICALSES_H
+#define BALL_CORE_STRUCTURE_ANALYTICALSES_H
 
 #include <BALL/core/common/macros.h>
+
 
 namespace BALL 
 {
@@ -53,4 +53,4 @@ namespace BALL
 		(const AtomContainer& fragment, float probe_radius = 1.5);
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_ANALYTICALSES_H
+#endif // BALL_CORE_STRUCTURE_ANALYTICALSES_H

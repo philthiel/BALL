@@ -1,25 +1,26 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/MMScoring.h>
-#include <BALL/core/molmec/common/forceFieldComponent.h>
+
 #include <BALL/core/molmec/amber/amberNonBonded.h>
-
-#include <BALL/core/scoring/components/aromaticRingStacking.h>
-#include <BALL/core/scoring/components/solvation.h>
-#include <BALL/core/scoring/components/fragmentationalSolvation.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/scoring/components/advElectrostatic.h>
-#include <BALL/core/scoring/components/electrostatic.h>
-#include <BALL/core/scoring/components/vanDerWaals.h>
-#include <BALL/core/scoring/components/hydrogenBond.h>
-#include <BALL/core/scoring/components/rotationalEntropy.h>
-#include <BALL/core/scoring/components/lipophilic.h>
+#include <BALL/core/scoring/components/aromaticRingStacking.h>
 #include <BALL/core/scoring/components/burialDepth.h>
+#include <BALL/core/scoring/components/electrostatic.h>
+#include <BALL/core/scoring/components/fragmentationalSolvation.h>
+#include <BALL/core/scoring/components/hydrogenBond.h>
+#include <BALL/core/scoring/components/lipophilic.h>
+#include <BALL/core/scoring/components/rotationalEntropy.h>
+#include <BALL/core/scoring/components/solvation.h>
+#include <BALL/core/scoring/components/vanDerWaals.h>
 
+#include <vector>
 
+using namespace std;
 using namespace BALL;
+
 
 
 MMScoring::MMScoring(AtomContainer& receptor, AtomContainer& reference_ligand, Options& options)

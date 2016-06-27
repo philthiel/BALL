@@ -1,22 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef SVMMODEL
-#define SVMMODEL
 
-#ifndef CLASSIFICATION
+#ifndef BALL_CORE_QSAR_SVMMODEL_H
+#define BALL_CORE_QSAR_SVMMODEL_H
+
 #include <BALL/core/qsar/classificationModel.h>
-#endif
-
-#ifndef KMODEL
 #include <BALL/core/qsar/kernelModel.h>
-#endif
-
-#ifndef NLMODEL
 #include <BALL/core/qsar/nonlinearModel.h>
-#endif
+
 
 namespace BALL{
 	namespace QSAR {
@@ -38,4 +29,4 @@ namespace BALL{
 	}
 }
 
-#endif //SVMMODEL
+#endif // BALL_CORE_QSAR_SVMMODEL_H

@@ -1,24 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: generalizedBornCase.C,v 1.3.10.1 2007/03/25 22:00:32 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/generalizedBornCase.h>
-// #include "generalizedBornCase.h"
 
+#include <BALL/core/common/exception.h>
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/residue.h>
 #include <BALL/core/system/path.h>
 #include <BALL/core/system/timer.h>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/format/parameters.h>
-#include <BALL/core/common/exception.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/bond.h>
 
 using namespace std;
 
 #define UNITED_ATOMS
 // #define TSUI true
+
 
 namespace BALL
 {

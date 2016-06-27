@@ -1,22 +1,21 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/scoringOptimizer.h>
-#include <BALL/core/docking/common/structurePreparer.h>
-#include <BALL/core/format/PDBFile.h>
-#include <BALL/core/format/MOLFile.h>
-#include <BALL/core/format/MOL2File.h>
-#include <BALL/core/format/SDFile.h>
 
+#include <BALL/core/docking/common/structurePreparer.h>
+#include <BALL/core/format/MOL2File.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/scoring/functions/MMScoring.h>
 #include <BALL/core/scoring/functions/PLPScoring.h>
 #include <BALL/core/scoring/functions/PBScoring.h>
-#include <BALL/core/kernel/PTE.h>
 
 using namespace BALL;
 using namespace std;
+
 
 static double getMean(const list<double>& v);
 static double getCovariance(const list<double>& v1, const list<double>& v2, double mean1, double mean2);

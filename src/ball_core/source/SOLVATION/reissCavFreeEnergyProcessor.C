@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: reissCavFreeEnergyProcessor.C,v 1.11 2002/02/27 12:24:07 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/solvation/reissCavFreeEnergyProcessor.h>
+
 #include <BALL/core/structure/numericalSAS.h>
 
 using namespace std;
+
 
 namespace BALL
 {

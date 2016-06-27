@@ -1,17 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/NMRStarFile.h>
+
 #include <BALL/core/format/lineBasedFile.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/nmr/shiftModule.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/system/path.h>
+
 #include <iostream>
 #include <fstream>
-
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/structure/peptides.h>
-#include <BALL/core/nmr/shiftModule.h>
-#include <BALL/core/system/path.h>
 
 //#define NMRSTAR_DEBUG 1
 #undef NMRSTAR_DEBUG
@@ -20,6 +20,7 @@
 #undef NMRSTAR_DEBUG_MAPPING
 
 using namespace std;
+
 
 namespace BALL
 {

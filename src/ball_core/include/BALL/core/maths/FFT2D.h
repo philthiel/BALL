@@ -1,27 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_TFFT2D_H
-#define BALL_MATHS_TFFT2D_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_TFFT2D_H
+#define BALL_CORE_MATHS_TFFT2D_H
 
-#ifndef BALL_DATATYPE_REGULARDATA2D_H
-# include <BALL/core/datatype/regularData2D.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR2_H
-# include <BALL/core/maths/vector2.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/regularData2D.h>
+#include <BALL/core/maths/fftwCommon.h>
+#include <BALL/core/maths/vector2.h>
 
 #include <cmath>
 #include <complex>
 #include <fftw3.h>
-
-#include <BALL/core/maths/fftwCommon.h>
 
 
 namespace BALL
@@ -985,4 +975,4 @@ namespace BALL
 	
 }
 
-#endif // BALL_MATHS_TFFT2D_H
+#endif // BALL_CORE_MATHS_TFFT2D_H

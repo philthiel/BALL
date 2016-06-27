@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SESEDGE_H
-#define BALL_STRUCTURE_SESEDGE_H
 
-#ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#	include <BALL/core/structure/graphEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SESEDGE_H
+#define BALL_CORE_STRUCTURE_SESEDGE_H
 
-#ifndef BALL_STRUCTURE_RSEDGE_H
-#	include <BALL/core/structure/RSEdge.h>
-#endif
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/structure/graphEdge.h>
+#include <BALL/core/structure/RSEdge.h>
 
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
 
 namespace BALL
 {
@@ -271,4 +263,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_SESEDGE_H
+#endif // BALL_CORE_STRUCTURE_SESEDGE_H

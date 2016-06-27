@@ -1,24 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_CONTOURSURFACE_H
-#define BALL_DATATYPE_CONTOURSURFACE_H
 
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-# include <BALL/core/datatype/regularData3D.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_CONTOURSURFACE_H
+#define BALL_CORE_DATATYPE_CONTOURSURFACE_H
 
-#ifndef BALL_MATHS_SURFACE_H
-# include <BALL/core/maths/surface.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/regularData3D.h>
+#include <BALL/core/maths/surface.h>
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
-
-#include <vector>
 #include <math.h>
+#include <vector>
+
 
 namespace BALL
 {
@@ -491,5 +483,6 @@ namespace BALL
 		}
 	}
 }
-#endif
+
+#endif // BALL_CORE_DATATYPE_CONTOURSURFACE_H
 

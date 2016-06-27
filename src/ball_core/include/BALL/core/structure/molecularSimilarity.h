@@ -1,23 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
 
-#ifndef BALL_STRUCTURE_MOLECULARSIMILARITY_H
-#define BALL_STRUCTURE_MOLECULARSIMILARITY_H
+#ifndef BALL_CORE_STRUCTURE_MOLECULARSIMILARITY_H
+#define BALL_CORE_STRUCTURE_MOLECULARSIMILARITY_H
 
-#include <vector>
-
-#ifndef BALL_CONFIG_CONFIG_H
-		#include <BALL/config.h>
-#endif
-
-#include <BALL/core/structure/smartsMatcher.h>
+#include <BALL/config.h>
 #include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/smartsMatcher.h>
+
+#include <list>
+#include <vector>
 
 #ifdef BALL_HAS_OPENBABEL
 	#include <openbabel/mol.h>
@@ -34,7 +26,7 @@ namespace BALL
 
 			void generateFingerprints(System& molecules, std::vector<std::vector<Size> >& fingerprints);
 
-			void generateFingerprints(const list<Molecule*>& molecules, std::vector<std::vector<Size> >& fingerprints);
+			void generateFingerprints(const std::list<Molecule*>& molecules, std::vector<std::vector<Size> >& fingerprints);
 
 			void generateFingerprint(Molecule& molecule, std::vector<Size>& fingerprint);
 
@@ -64,7 +56,7 @@ namespace BALL
 			/** Calculate Tanimoto coefficient for two given binary fingerprints. */
 			float calculateSimilarity(std::vector<bool>& fingerprint1, std::vector<bool>& fingerprint2);
 
-			void filterRedundantMolecules(const list<Molecule*>& molecules, float similarity_threshold);
+			void filterRedundantMolecules(const std::list<Molecule*>& molecules, float similarity_threshold);
 
 			void filterRedundantMolecules(System& molecules, float similarity_threshold);
 
@@ -95,4 +87,4 @@ namespace BALL
 	};
 }
 
-#endif
+#endif // BALL_CORE_STRUCTURE_MOLECULARSIMILARITY_H

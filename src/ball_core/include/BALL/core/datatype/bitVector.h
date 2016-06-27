@@ -1,19 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-#ifndef BALL_DATATYPE_BITVECTOR_H
-#define BALL_DATATYPE_BITVECTOR_H
+//_new_file_header
 
 
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_BITVECTOR_H
+#define BALL_CORE_DATATYPE_BITVECTOR_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
-
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/persistenceManager.h>
 
 #include <cstring>
 
@@ -22,7 +14,6 @@
 #define BALL_BLOCK_SHIFT              3
 #define BALL_BLOCK_ALL_BITS_SET       0xFF
 #define BALL_BLOCK_ALL_BITS_CLEARED   0x00
-
 
 #define BALL_BLOCK_SIZE(bits) (Size)(((bits) + BALL_BLOCK_BITS - 1) >> BALL_BLOCK_SHIFT)
 
@@ -591,4 +582,4 @@ namespace BALL
 } //namespace BALL
 
 
-#endif // BALL_DATATYPE_BITVECTOR_H
+#endif // BALL_CORE_DATATYPE_BITVECTOR_H

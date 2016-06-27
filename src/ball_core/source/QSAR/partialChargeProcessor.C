@@ -1,17 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: partialChargeProcessor.C,v 1.2.28.1 2007/03/16 00:06:47 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/partialChargeProcessor.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/fragment.h>
-#include <BALL/core/kernel/bondIterator.h>
-#include <BALL/core/kernel/atomIterator.h>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/PTE.h>
+
 #include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/bondIterator.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/system/file.h>
 #include <BALL/core/system/path.h>
 
@@ -21,6 +19,7 @@ using namespace std;
 
 #define BALL_QSAR_ATOMIC_IONIZATION_ENERGIES_FILE "/atomic_ionization_potentials.data"
 #define BALL_QSAR_ATOMIC_ELECTRON_AFFINITIES_FILE "/atomic_electron_affinities.data"
+
 
 namespace BALL
 {

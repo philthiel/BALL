@@ -1,24 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94Torsion.C,v 1.1.8.2 2007/05/13 00:06:10 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/mmff94/MMFF94Torsion.h>
-#include <BALL/core/molmec/mmff94/MMFF94.h>
-#include <BALL/core/molmec/common/forceFieldComponent.h>
-#include <BALL/core/molmec/common/forceField.h>
+
+#include <BALL/core/format/parameters.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
 #include <BALL/core/system/path.h>
-#include <BALL/core/format/parameters.h>
 
 #include <algorithm>
 
 #define BALL_DEBUG_TEST
 
 using namespace std;
+
 
 namespace BALL 
 {

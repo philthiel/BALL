@@ -1,12 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: descriptor.C,v 1.12.20.3 2007/08/07 16:16:16 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/descriptor.h>
 
 using namespace std;
+
 
 namespace BALL
 {

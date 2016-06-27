@@ -1,41 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_POSECLUSTERING_H
-#define BALL_DOCKING_POSECLUSTERING_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_DOCKING_POSECLUSTERING_H
+#define BALL_CORE_DOCKING_POSECLUSTERING_H
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/core/docking/common/conformationSet.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/core/molmec/common/snapShot.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ATOMBIJECTION_H
-# include <BALL/core/structure/atomBijection.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#       include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_MATHS_MATRIX44_H
-# include <BALL/core/maths/matrix44.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/docking/common/conformationSet.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/structure/atomBijection.h>
 
 #include <Eigen/Core>
 
@@ -63,6 +39,7 @@
 
 //#define POSECLUSTERING_DEBUG 1
 #undef POSECLUSTERING_DEBUG
+
 
 namespace BALL
 {
@@ -742,4 +719,4 @@ namespace BALL
 	}; //class PoseClustering
 } //namesspace BALL
 
-#endif // BALL_DOCKING_POSECLUSTERING_H
+#endif // BALL_CORE_DOCKING_POSECLUSTERING_H

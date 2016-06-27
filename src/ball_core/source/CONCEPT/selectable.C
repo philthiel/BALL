@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: selectable.C,v 1.7 2002/12/12 10:05:40 oliver Exp $
+//_new_file_header
+
 
 #include <BALL/core/concept/selectable.h>
+
 #include <BALL/core/concept/persistenceManager.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

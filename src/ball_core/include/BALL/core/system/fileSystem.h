@@ -1,11 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: fileSystem.h,v 1.14 2005/07/29 12:38:14 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_FILESYSTEM_H
-#define BALL_SYSTEM_FILESYSTEM_H
+
+#ifndef BALL_CORE_SYSTEM_FILESYSTEM_H
+#define BALL_CORE_SYSTEM_FILESYSTEM_H
 
 #ifdef BALL_HAS_SYS_PARAM_H
 #	include <sys/param.h>
@@ -20,9 +17,8 @@
 # define BALL_PATH_MAX PATH_MAX
 #endif
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL 
 {
@@ -112,4 +108,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_SYSTEM_FILESYSTEM_H
+#endif // BALL_CORE_SYSTEM_FILESYSTEM_H

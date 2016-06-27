@@ -1,19 +1,20 @@
-// $Id: polarSolvation.C,v 1.3 2006/05/27 09:05:23 anker Exp $
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/polarSolvation.h>
 
-#include <BALL/core/kernel/standardPredicates.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/atomIterator.h>
-#include <BALL/core/structure/defaultProcessors.h>
-#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/datatype/hashMap.h>
 #include <BALL/core/energy/distanceCoulomb.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/system/timer.h>
 
-#include <BALL/core/format/PDBFile.h>
-
 using namespace std;
+
 
 namespace BALL
 {
@@ -251,14 +252,14 @@ namespace BALL
 		if (verbosity_ > 1)
 		{
 			Log.info() << "PolarSolvation::setup(): "
-				<< timer.getCPUTime() << " s" << std::endl;
+				<< timer.getCPUTime() << " s" << endl;
 		}
 
 		return true;
 	}
 
 
-	void PolarSolvation::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+	void PolarSolvation::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 	{
 	}
 

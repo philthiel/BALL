@@ -1,17 +1,15 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-#define BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
+//_new_file_header
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
 
-#ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/structure/bondorders/partialBondOrderAssignment.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -62,8 +60,8 @@ namespace BALL
 
 			// the virtual atoms and bonds that should be deleted when the next 
 			// solution is applied
-			vector<Atom*> atoms_to_delete;
-			//vector<Bond*> bonds_to_delete;
+			std::vector<Atom*> atoms_to_delete;
+			//std::vector<Bond*> bonds_to_delete;
 
 			float total_charge;
 			int node_expansions;
@@ -72,5 +70,6 @@ namespace BALL
 			AtomContainer* ac;
 	};
 }
-#endif // BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
+
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
 

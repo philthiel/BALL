@@ -1,56 +1,31 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
 
-#ifndef BALL_MATHS_COMMON_H
-# include <BALL/core/maths/common.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-# include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_H
-# include <BALL/core/datatype/graph/molecularGraph.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/core/datatype/graph/graphAlgorithms.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_TREEWIDTH_H
-# include <BALL/core/datatype/graph/treeWidth.h>
-#endif
-
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
-
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/graph/graphAlgorithms.h>
+#include <BALL/core/datatype/graph/molecularGraph.h>
+#include <BALL/core/datatype/graph/treeWidth.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/maths/common.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
 
 #include <algorithm>
 #include <map>
-#include <set>
-#include <vector>
-#include <stack>
 #include <iterator>
 #include <queue>
+#include <set>
+#include <stack>
+#include <vector>
 
 #include <boost/shared_ptr.hpp>
 #include <boost/ref.hpp>
+
 
 namespace BALL
 {
@@ -526,7 +501,7 @@ namespace BALL
 					 * A vector of AdditionalBagProperties_. Contains the bonds and the dynamic programming tables for each vertex
 					 * in the nice tree decomposition
 					 */
-					vector<AdditionalBagProperties_> properties_;
+					std::vector<AdditionalBagProperties_> properties_;
 
 					/**
 					 * The algorithm will just compute solutions which are better than the upperbound (they have to be BETTER,
@@ -663,7 +638,7 @@ namespace BALL
 					/**
 					 * The bond assignments for each connection component of this molecule
 					 */
-					vector<FPTBondOrderAssignment_*> bond_assignments;
+					std::vector<FPTBondOrderAssignment_*> bond_assignments;
 
 					/**
 					 * the molecule graph
@@ -679,7 +654,7 @@ namespace BALL
 					 * a vector with pointers to the bonds of the atom container. The order of this bonds in the vector
 					 * is the same as the order of the bond values in the assignments.
 					 */
-					vector<Bond const *> bonds;
+					std::vector<Bond const *> bonds;
 			};
 
 			/**
@@ -1122,7 +1097,7 @@ namespace BALL
 					 */
 					Penalty upper_bound_;
 
-					typedef vector<TreeDecompositionBag> BagVector;
+					typedef std::vector<TreeDecompositionBag> BagVector;
 
 					/**
 					 * returns the dynamic programming table of the bag with the given pre-order index
@@ -1373,7 +1348,7 @@ namespace BALL
 			void initPenaltyData_();
 
 			/// Return penalty value for given vertex and valence
-	    Penalty getPenaltyFor_(MolecularGraphTraits::VertexType vertex, Valence valence) const;
+			Penalty getPenaltyFor_(MolecularGraphTraits::VertexType vertex, Valence valence) const;
 
 			/**
 			 * contains for each block-index the position in the penalties_ array where this block starts
@@ -1412,4 +1387,5 @@ namespace BALL
 			boost::shared_ptr<DPBackTrackingCombiner_> combiner_;
 	};
 }
-#endif // BALL_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H
+
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_FPTBONDORDERSTRATEGY_H

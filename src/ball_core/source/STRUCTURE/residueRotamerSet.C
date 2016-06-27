@@ -1,16 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/residueRotamerSet.h>
+
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/structure/geometricTransformations.h>
 #include <BALL/core/structure/structureMapper.h>
-#include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/kernel/bond.h>
 
 #include <algorithm>
 
 using namespace std;
+
 
 namespace BALL
 {

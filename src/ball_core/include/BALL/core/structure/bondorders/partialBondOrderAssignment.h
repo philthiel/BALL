@@ -1,20 +1,16 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
-#define BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
+//_new_file_header
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
 
-#ifndef BALL_KERNEL_ATOM_H
-# include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
 
-#ifndef BALL_KERNEL_BOND_H
-# include <BALL/core/kernel/bond.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 
 #include <boost/shared_ptr.hpp>
 #include <vector>
+
 
 namespace BALL
 {
@@ -88,7 +84,7 @@ namespace BALL
 			/// Estimates the bond length penalty for a given unclosed atom.
 			//  NOTE: virtual bonds are excluded!
 			float estimateBondLengthPenalty_(Index atom_index, // the atom index
-																			 const vector<Bond*>& free_bonds,
+																			 const std::vector<Bond*>& free_bonds,
 																			 int fixed_virtual_order,
 																			 int fixed_valence,
 																			 int num_free_bonds);
@@ -102,7 +98,7 @@ namespace BALL
 			// the bond orders 
 			// the i-th entry denotes the bondorder of the i-th bond
 			// unset bonds get the order 0
-			vector<short> bond_orders;
+			std::vector<short> bond_orders;
 
 			// the index of the bond last considered 
 			Position last_bond;
@@ -111,4 +107,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_PARTIALBONDORDERASSIGNMENT_H

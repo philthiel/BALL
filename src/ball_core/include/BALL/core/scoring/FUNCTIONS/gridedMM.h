@@ -1,14 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_GRIDEDMM_H
-#define BALL_SCORING_FUNCTIONS_GRIDEDMM_H
 
-#include <BALL/core/scoring/common/diffGridBasedScoring.h>
+#ifndef BALL_CORE_SCORING_FUNCTIONS_GRIDEDMM_H
+#define BALL_CORE_SCORING_FUNCTIONS_GRIDEDMM_H
+
 #include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/scoring/common/diffGridBasedScoring.h>
 #include <BALL/core/scoring/components/electrostatic.h>
+
 
 namespace BALL
 {
@@ -30,4 +29,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_GRIDEDMM_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_GRIDEDMM_H

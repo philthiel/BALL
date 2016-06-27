@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_CONFIGIO_H
-#define BALL_QSAR_CONFIGIO_H
 
-#ifndef BALL_DATATYPE_STRING_H
+#ifndef BALL_CORE_QSAR_CONFIGIO_H
+#define BALL_CORE_QSAR_CONFIGIO_H
+
 #include <BALL/core/datatype/string.h>
-#endif
 
 #include <istream>
 #include <set>
@@ -156,4 +153,4 @@ namespace BALL
 }
 
 
-#endif // BALL_QSAR_CONFIGIO_H
+#endif // BALL_CORE_QSAR_CONFIGIO_H

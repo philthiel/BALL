@@ -1,17 +1,17 @@
-#ifndef BALL_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
-#define BALL_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
 
-#ifndef BALL_KERNEL_MOLECULE_H
+#ifndef BALL_CORE_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
+#define BALL_CORE_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
+
+#include <BALL/core/concept/processor.h>
 #include <BALL/core/kernel/molecule.h>
-#endif
 
 #ifndef BOOST_PENDING_DISJOINT_SETS_HPP
 #include <boost/pending/disjoint_sets.hpp>
 #endif
+
+
 namespace BALL
 {
 	/** Connected Component Processor
@@ -137,4 +137,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_CONNECTEDCOMPONENTSPROCESSOR_H

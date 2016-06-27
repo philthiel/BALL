@@ -1,21 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94Parameters.C,v 1.1.8.1 2007/03/23 12:51:54 oliver Exp $
-//
-// Molecular Mechanics: MMFF94 force field parameters 
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#include <BALL/core/molmec/mmff94/MMFF94.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/system/path.h>
-#include <BALL/core/format/parameterSection.h>
+
 #include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/system/path.h>
 
 // #define BALL_DEBUG_MMFF
 using namespace std;
+
 
 namespace BALL 
 {

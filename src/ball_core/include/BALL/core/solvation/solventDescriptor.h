@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: solventDescriptor.h,v 1.19 2005/12/23 17:02:00 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-#define BALL_SOLVATION_SOLVENTDESCRIPTOR_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_SOLVENTDESCRIPTOR_H
+#define BALL_CORE_SOLVATION_SOLVENTDESCRIPTOR_H
+
+#include <BALL/core/kernel/atom.h>
+
 
 namespace BALL
 {
@@ -182,4 +178,4 @@ namespace BALL
    
 }
 
-#endif // BALL_SOLVATION_SOLVENTDESCRIPTOR_H
+#endif // BALL_CORE_SOLVATION_SOLVENTDESCRIPTOR_H

@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: claverieParameter.C,v 1.7 2002/02/27 12:24:03 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/solvation/claverieParameter.h>
 
 using namespace std;
+
 
 namespace BALL
 {

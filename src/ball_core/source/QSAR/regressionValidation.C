@@ -1,17 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
+
 #include <BALL/core/qsar/regressionValidation.h>
-#include <BALL/core/qsar/statistics.h>
-#include <BALL/core/qsar/regressionModel.h>
+
 #include <BALL/core/qsar/kernelModel.h>
 #include <BALL/core/qsar/latentVariableModel.h>
 #include <BALL/core/qsar/registry.h>
+#include <BALL/core/qsar/regressionModel.h>
+#include <BALL/core/qsar/statistics.h>
 
 #include <boost/random/mersenne_twister.hpp>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -527,12 +528,12 @@ namespace BALL
 		}
 
 
-		void RegressionValidation::saveToFile(string filename) const
+		void RegressionValidation::saveToFile(String filename) const
 		{
 			saveToFile(filename, R2_, Q2_, coefficient_stderr_, yRand_results_);	
 		}
 
-		void RegressionValidation::saveToFile(string filename, const double& r2, const double& q2, const Eigen::MatrixXd& coefficient_stddev, const Eigen::MatrixXd& yRand_results) const
+		void RegressionValidation::saveToFile(String filename, const double& r2, const double& q2, const Eigen::MatrixXd& coefficient_stddev, const Eigen::MatrixXd& yRand_results) const
 		{
 			ofstream out(filename.c_str());
 			
@@ -558,7 +559,7 @@ namespace BALL
 		}
 
 
-		void RegressionValidation::readFromFile(string filename)
+		void RegressionValidation::readFromFile(String filename)
 		{
 			ifstream in(filename.c_str()); 
 			

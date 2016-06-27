@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H
-#define BALL_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H
+
+#ifndef BALL_CORE_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H
+#define BALL_CORE_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H
+
+#include <BALL/core/datatype/triple.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/maths/matrix44.h>
 
 #include <list>
 
-#ifndef BALL_DATATYPE_TRIPLE_H
-#	include <BALL/core/datatype/triple.h>
-#endif
-
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_KERNEL_FRAGMENT_H
-#	include <BALL/core/kernel/fragment.h>
-#endif
 
 namespace BALL 
 {
@@ -84,7 +76,7 @@ namespace BALL
 		
 		/** Returns a list of inserted atoms.
 		*/
-		list<Atom*>& getInsertedAtoms();
+		std::list<Atom*>& getInsertedAtoms();
 
 		/** Returns number of recently inserted atoms.
 		*/
@@ -133,7 +125,7 @@ namespace BALL
 
 		/**
 		*/
-		static list<Atom*> reconstructFragment(Fragment& frag, const Fragment& tplate);
+		static std::list<Atom*> reconstructFragment(Fragment& frag, const Fragment& tplate);
 		//@}
 
 		protected:
@@ -148,10 +140,10 @@ namespace BALL
 		
 		/*_ List of atoms inserted during the last application of the processor.
 		*/
-		list<Atom*> inserted_atoms_;
+		std::list<Atom*> inserted_atoms_;
 		//_@}
 	};
   
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_RECONSTRUCFRAGMENTPROCESSOR_H

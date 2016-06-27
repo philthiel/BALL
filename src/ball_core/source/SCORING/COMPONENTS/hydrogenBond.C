@@ -1,15 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/hydrogenBond.h>
-#include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/molmec/common/support.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/datatype/hashMap.h>
 
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/system/timer.h>
 
 using namespace BALL;
@@ -134,7 +132,7 @@ bool HydrogenBond::setup()
 	if (scoring_function == 0)
 	{
 		Log.error() << "HydrogenBond::setup(): "
-			<< "component not bound to scoring function." << std::endl;
+			<< "component not bound to scoring function." << endl;
 		return false;
 	}
 
@@ -172,7 +170,7 @@ bool HydrogenBond::setup()
 
 	timer.stop();
 	Log.info() << "HydrogenBond::setup(): "
-		<< timer.getCPUTime() << " s" << std::endl;
+		<< timer.getCPUTime() << " s" << endl;
 
 	return true;
 }
@@ -203,11 +201,11 @@ Size HydrogenBond::getType(Atom* atom)
 
 // If intermolecular H-bonds are to be evaluated, the _first_ atom of each pair must be a ligand atom and the second one a receptor atom.
 // This is automatically done this way by ScoringFunction::createNonbondedPairVector()
-void HydrogenBond::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+void HydrogenBond::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 {
 	possible_hydrogen_bonds_.clear();
 
-	for (vector < std::pair < Atom*, Atom* > > ::const_iterator it = pair_vector.begin(); it != pair_vector.end(); it++)
+	for (vector < pair < Atom*, Atom* > > ::const_iterator it = pair_vector.begin(); it != pair_vector.end(); it++)
 	{
 		// is there exactly one hydrogen? (tested here for speed-up only)
 		bool h1 = (it->first->getElement().getSymbol() == "H");
@@ -258,9 +256,9 @@ void HydrogenBond::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
 
 	if (verbosity_ > 8)
 	{
-		Log.info() << "HydrogenBond update() statistics:" << std::endl;
+		Log.info() << "HydrogenBond update() statistics:" << endl;
 		Log.info() << "Found " << possible_hydrogen_bonds_.size()
-				<< " possible hydrogen bonds" << std::endl << std::endl;
+				<< " possible hydrogen bonds" << endl << endl;
 	}
 }
 
@@ -286,7 +284,7 @@ double HydrogenBond::updateScore()
 	Vector3 h_bond;
 	Vector3 h_connection;
 
-	// iterate over all possible hydrogen bond std::pairs
+	// iterate over all possible hydrogen bond pairs
 	vector<pair<const Atom*, const Atom*> >::const_iterator it;
 	for (it = possible_hydrogen_bonds_.begin(); it != possible_hydrogen_bonds_.end(); ++it)
 	{
@@ -376,7 +374,7 @@ double HydrogenBond::updateScore()
 
 	if (verbosity > 0)
 	{
-		Log.info() << "HB: energy is " << score_ << std::endl;
+		Log.info() << "HB: energy is " << score_ << endl;
 	}
 
 	// we want a negative score for a good pose, thus we will use the negative of the value computed above

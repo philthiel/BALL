@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RESIDUECHECKER_H
-#define BALL_STRUCTURE_RESIDUECHECKER_H
 
-#ifndef BALL_MATHS_COMMON_H
-#	include <BALL/core/maths/common.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RESIDUECHECKER_H
+#define BALL_CORE_STRUCTURE_RESIDUECHECKER_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/bitVector.h>
+#include <BALL/core/maths/common.h>
 
-#ifndef BALL_DATATYPE_BITVECTOR_H
-# include <BALL/core/datatype/bitVector.h>
-#endif
 
 namespace BALL
 {
@@ -284,4 +276,4 @@ namespace BALL
   					
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_RESIDUE_CHECKER
+#endif // BALL_CORE_STRUCTURE_RESIDUE_CHECKER

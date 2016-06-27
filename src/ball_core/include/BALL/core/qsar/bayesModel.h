@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_BAYESMODEL_H
-#define BALL_QSAR_BAYESMODEL_H
 
-#ifndef BALL_QSAR_CLASSIFICATIONMODEL_H
+#ifndef BALL_CORE_QSAR_BAYESMODEL_H
+#define BALL_CORE_QSAR_BAYESMODEL_H
+
 #include <BALL/core/qsar/classificationModel.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -25,7 +24,7 @@ namespace BALL
 
 				/** calculate the probability for the specified feature to assume the given value for each class
 				@return a probability for each class */
-				virtual vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value) = 0;
+				virtual std::vector<double> calculateProbabilities(int activitiy_index, int feature_index, double feature_value) = 0;
 
 				/** returns the number of response variables for which this model has been trained */
 				virtual int getNoResponseVariables() = 0;
@@ -42,4 +41,4 @@ namespace BALL
 	}
 }
 
-#endif //BAYESMODEL_H
+#endif // BALL_CORE_QSAR_BAYESMODEL_H

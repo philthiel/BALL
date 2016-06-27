@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 // This file contains the more or less "general" portion of PDBFile.
 // It covers the methods doing the generic parsing of records.
@@ -9,19 +8,18 @@
 
 #include <BALL/core/format/PDBFile.h>
 
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <cctype>
 #include <cstdarg>
 #include <cstdlib>
 
-using std::streampos;
-using std::ios;
-using std::endl;
+using namespace std;
+
 
 namespace BALL 
 {

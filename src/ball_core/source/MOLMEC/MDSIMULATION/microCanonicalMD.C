@@ -1,14 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: microCanonicalMD.C,v 1.14 2005/03/01 10:07:54 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/mdsimulation/microCanonicalMD.h>
+
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/molmec/common/atomVector.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
-#include <BALL/core/molmec/common/atomVector.h>
-#include <BALL/core/kernel/PTE.h>
+
+#include <vector>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -78,7 +81,7 @@ namespace BALL
 		if (my_force_field.isValid() == false)
 		{
 			// The setup has failed for some reason. Output an error message.
-			Log.error() << "MicroCanonicalMD::setup: setup failed because the force field was not valid!" << std::endl;
+			Log.error() << "MicroCanonicalMD::setup: setup failed because the force field was not valid!" << endl;
 
 			valid_ = false;
 			return false;
@@ -104,7 +107,7 @@ namespace BALL
 		// Precompute a factor involving each atom's mass 
 		mass_factor_.clear();
 
-		vector < Atom * >::iterator it;
+		vector<Atom*>::iterator it;
 		AuxFactors item;
 		Atom *atom_ptr;
 
@@ -192,7 +195,7 @@ namespace BALL
 		// are valid
 		if (!valid_ || force_field_ptr_ == 0 || !force_field_ptr_->isValid())
 		{
-			Log.error() << "MD simulation not possible! " << "MD class is  not valid." << std::endl;
+			Log.error() << "MD simulation not possible! " << "MD class is  not valid." << endl;
 			return false;
 		}
 
@@ -241,11 +244,11 @@ namespace BALL
 
 				Log.info()
 					<< "Microcanonical MD simulation System has potential energy "
-					<< current_energy << " kJ/mol at time " << current_time_ + (double) iteration *time_step_ << " ps " << std::endl;
+					<< current_energy << " kJ/mol at time " << current_time_ + (double) iteration *time_step_ << " ps " << endl;
 
 				Log.info()
 					<< "Microcanonical MD simulation System has kinetic energy "
-					<< kinetic_energy_ << " kJ/mol at time " << current_time_ + (double) iteration *time_step_ << " ps " << std::endl;        
+					<< kinetic_energy_ << " kJ/mol at time " << current_time_ + (double) iteration *time_step_ << " ps " << endl;
 			}
 
 			// Calculate new atomic positions and new tentative velocities 

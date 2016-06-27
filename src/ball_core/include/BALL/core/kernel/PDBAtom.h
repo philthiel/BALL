@@ -1,14 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_PDBATOM_H
-#define BALL_KERNEL_PDBATOM_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_PDBATOM_H
+#define BALL_CORE_KERNEL_PDBATOM_H
 
+#include <BALL/core/kernel/atom.h>
 
 #define BALL_PDBATOM_DEFAULT_BRANCH_DESIGNATOR              ' '
 #define BALL_PDBATOM_DEFAULT_REMOTENESS_INDICATOR           ' '
@@ -318,4 +314,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_KERNEL_PDBATOM_H
+#endif // BALL_CORE_KERNEL_PDBATOM_H

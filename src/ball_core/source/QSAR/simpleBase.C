@@ -1,21 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: simpleBase.C,v 1.2.28.2 2007-03-19 21:43:47 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/simpleBase.h>
+
 #include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/structure/smartsMatcher.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/structure/smartsMatcher.h>
 #include <BALL/core/system/file.h>
 #include <BALL/core/system/path.h>
 
 using namespace std;
 
 #define BALL_QSAR_ATOMIC_POLARIZABILITIES_FILE "/atomic_polarizabilities.data"
+
 
 namespace BALL
 {

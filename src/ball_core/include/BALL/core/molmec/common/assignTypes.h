@@ -1,27 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: assignTypes.h,v 1.16 2005/12/23 17:01:51 amoll Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: atom type assignment
 
-#ifndef BALL_MOLMEC_COMMON_ASSIGNTYPES_H
-#define BALL_MOLMEC_COMMON_ASSIGNTYPES_H
+#ifndef BALL_CORE_MOLMEC_COMMON_ASSIGNTYPES_H
+#define BALL_CORE_MOLMEC_COMMON_ASSIGNTYPES_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
 
 #include <vector>
 
+
 namespace BALL 
 {
-	/// Only used for deriving interface
+	/**	 Molecular Mechanics: atom type assignment
+		\ingroup  COMMON
+	*/
 	class	BALL_EXPORT AssignBaseProcessor
 		:	public UnaryProcessor<Atom>
 	{
@@ -127,4 +120,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_MOLMEC_COMMON_ASSIGNTYPES_H
+#endif // BALL_CORE_MOLMEC_COMMON_ASSIGNTYPES_H

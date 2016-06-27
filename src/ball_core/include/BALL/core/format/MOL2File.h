@@ -1,21 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_MOL2FILE_H
-#define BALL_FORMAT_MOL2FILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_MOL2FILE_H
+#define BALL_CORE_FORMAT_MOL2FILE_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
+#include <vector>
+
 
 namespace BALL
 {
@@ -43,7 +37,7 @@ namespace BALL
 			String			comment;
 			Size				number_of_members;
 
-			vector<Index>	 static_members;
+			std::vector<Index>	 static_members;
 			String         dynamic_rule;
 		};
 
@@ -185,11 +179,11 @@ namespace BALL
 		};
 
 
-		vector<AtomStruct>					atoms_;
-		vector<BondStruct>					bonds_;
-		vector<SetStruct>						sets_;
-		vector<SubstructureStruct>	substructures_;
-		vector<CommentStruct>	comments_;
+		std::vector<AtomStruct>					atoms_;
+		std::vector<BondStruct>					bonds_;
+		std::vector<SetStruct>						sets_;
+		std::vector<SubstructureStruct>	substructures_;
+		std::vector<CommentStruct>	comments_;
 		MoleculeStruct							molecule_;
 
 		Size	number_of_lines_;
@@ -200,4 +194,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_MOL2FILE_H
+#endif // BALL_CORE_FORMAT_MOL2FILE_H

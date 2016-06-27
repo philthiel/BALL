@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_XYZFILE_H
-#define BALL_FORMAT_XYZFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-#	include <BALL/core/format/genericMolFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_XYZFILE_H
+#define BALL_CORE_FORMAT_XYZFILE_H
+
+#include <BALL/core/format/genericMolFile.h>
+
 
 namespace BALL 
 {
@@ -101,4 +99,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_XYZFILE_H
+#endif // BALL_CORE_FORMAT_XYZFILE_H

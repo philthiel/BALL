@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_LOGSTREAM_H
-#define BALL_COMMON_LOGSTREAM_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_LOGSTREAM_H
+#define BALL_CORE_COMMON_LOGSTREAM_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/core/common/global.h>
-#endif
-
-#ifndef BALL_COMMON_DEBUG_H
-#	include <BALL/core/common/debug.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/debug.h>
+#include <BALL/core/common/global.h>
 
 #ifdef BALL_HAS_SYS_TIME_H
 #	include <sys/time.h>
@@ -33,13 +24,9 @@
 
 #include <iostream>
 #include <list>
-#include <vector>
 #include <string>
+#include <vector>
 
-
-using std::list;
-using std::vector;
-using std::string;
 
 namespace BALL 
 {
@@ -165,7 +152,7 @@ namespace BALL
 		struct BALL_EXPORT StreamStruct
 		{
 			std::ostream*				stream;
-			string							prefix;
+			 std::string							prefix;
 			int									min_level;
 			int									max_level;
 			LogStreamNotifier*	target;
@@ -191,7 +178,7 @@ namespace BALL
 		struct LoglineStruct 
 		{	
 			int     level;
-			string  text;
+			 std::string  text;
 			Time  time;
 
 			LoglineStruct()
@@ -205,19 +192,19 @@ namespace BALL
 
 
 		// interpret the prefix format string and return the expanded prefix
-		string expandPrefix_(const string& prefix, int level, Time time) const;
+		 std::string expandPrefix_(const  std::string& prefix, int level, Time time) const;
 
 		char* 									pbuf_;
 
-		vector<Logline> 				loglines_;
+		std::vector<Logline> 				loglines_;
 	
 		int											level_;
 
 		int											tmp_level_;
 		
-		list<StreamStruct>			stream_list_;
+		std::list<StreamStruct>			stream_list_;
 
-		string									incomplete_line_;
+		 std::string									incomplete_line_;
 	};
 
 
@@ -457,7 +444,7 @@ namespace BALL
 					- <b>%%</b>	percent sign (escape sequence)
 				
 		*/
-		void setPrefix(const std::ostream& s, const string& prefix);
+		void setPrefix(const std::ostream& s, const std::string& prefix);
 
 		/// Disable all output
 		void disableOutput() ;
@@ -503,7 +490,7 @@ namespace BALL
 				@return string the text of the message
 				@param	index the index of the line
 		*/
-		string getLineText(const Index& index) const;
+		std::string getLineText(const Index& index) const;
 
 		/**	Return the log time of a specific line
 				@param index the index of the messages
@@ -526,10 +513,10 @@ namespace BALL
 				@param latest (long) the time of messages to stop filtering
 				@param s a string to look for
 		*/
-		list<int>	filterLines
+		std::list<int>	filterLines
 			(int min_level = LogStreamBuf::MIN_LEVEL, int max_level = LogStreamBuf::MAX_LEVEL,
 			 Time earliest = 0, Time latest = LogStreamBuf::MAX_TIME, 
-			 const string& s = "") const;
+			 const std::string& s = "") const;
 		//@}
 
 		private:
@@ -563,4 +550,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_COMMON_LOGSTREAM_H
+#endif // BALL_CORE_COMMON_LOGSTREAM_H

@@ -1,28 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-#define BALL_DOCKING_COMMON_CONFORMATIONSET_H
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
+#ifndef BALL_CORE_DOCKING_COMMON_CONFORMATIONSET_H
+#define BALL_CORE_DOCKING_COMMON_CONFORMATIONSET_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/core/kernel/system.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/molmec/common/snapShot.h>
 
-#ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/core/molmec/common/snapShot.h>
-#endif
-
-#ifndef BALL_FORMAT_DCDFILE_H
-# include <BALL/core/format/DCDFile.h>
-#endif
-
-#include <vector>
 #include <set>
+#include <vector>
+
 
 namespace BALL
 {
@@ -58,11 +47,11 @@ namespace BALL
 
 				/** Use score as the new scoring information.
 				 */
-				void setScoring(std::vector < Conformation > & score);
+				void setScoring(std::vector<Conformation>& score);
 
 				/** Return the current scoring.
 				 */
-				const std::vector < Conformation > & getScoring() const;
+				const std::vector<Conformation> & getScoring() const;
 
 				/** Reset the scoring vector to the identity permutation with
 				 * 	identical scores of 0.
@@ -72,7 +61,7 @@ namespace BALL
 				/** Returns the _unranked_ list of conformations, i.e. the conformations
 				 *  in the order in which they were added.
 				 */
-				const std::vector < SnapShot > & getUnscoredConformations() const;
+				const std::vector<SnapShot>& getUnscoredConformations() const;
 
 				/** Returns the i-th snapshot using the current scoring information.
 				 * 	TODO: Exception handling
@@ -103,7 +92,7 @@ namespace BALL
 
 				// Indices of the conformations in the SnapShotManager.
 				// Sorted according to their score
-				std::vector < Conformation > snapshot_order_;
+				std::vector<Conformation> snapshot_order_;
 
 				/** The original system on which the SnapShots are based
 				*/
@@ -111,7 +100,7 @@ namespace BALL
 
 				/** The SnapShots
 				*/
-				vector<SnapShot> structures_;
+				std::vector<SnapShot> structures_;
 
 				/** the original ConformationSet on which this set is based
 				 */
@@ -119,4 +108,5 @@ namespace BALL
 		};
 
 }
-#endif
+
+#endif // BALL_CORE_DOCKING_COMMON_CONFORMATIONSET_H

@@ -1,14 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: conjugateGradient.C,v 1.38.8.7 2007/08/07 09:13:05 aleru Exp $
-//
-// Minimize the potential energy of a system using a nonlinear conjugate 
-// gradient method with  line search
+//_new_file_header
 
-#include <BALL/core/molmec/MINIMIZATION/conjugateGradient.h>
-#include <BALL/core/molmec/MINIMIZATION/lineSearch.h>
+
+#include <BALL/core/molmec/minimization/conjugateGradient.h>
+
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/minimization/lineSearch.h>
 
 #include <limits>
 
@@ -18,6 +14,7 @@
 // The default method to use for the CG direction update
 // (FLETCHER_REEVES | POLAK_RIBIERE | SHANNO)
 #define DEFAULT_METHOD SHANNO
+
 
 namespace BALL 
 {

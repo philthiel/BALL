@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/peptideCapProcessor.h>
-#include <BALL/core/kernel/system.h>
-//#include <BALL/core/kernel/protein.h>
+
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/structure/fragmentDB.h>
-#include <BALL/core/structure/peptides.h>
 #include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/structure/peptides.h>
 
 
 namespace BALL

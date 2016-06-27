@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: periodicBoundary.h,v 1.22 2005/12/23 17:01:51 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_PERIODICBOUNDARY_H
-#define BALL_MOLMEC_COMMON_PERIODICBOUNDARY_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_COMMON_PERIODICBOUNDARY_H
+#define BALL_CORE_MOLMEC_COMMON_PERIODICBOUNDARY_H
 
-#ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/core/maths/simpleBox3.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/maths/simpleBox3.h>
+
 
 namespace BALL 
 {
@@ -268,4 +261,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_COMMON_PERIODICBOUNDARY_H
+#endif // BALL_CORE_MOLMEC_COMMON_PERIODICBOUNDARY_H

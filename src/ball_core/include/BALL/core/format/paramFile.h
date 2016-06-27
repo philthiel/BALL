@@ -1,17 +1,11 @@
-/// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PARAMFILE_H
-#define BALL_FORMAT_PARAMFILE_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_PARAMFILE_H
+#define BALL_CORE_FORMAT_PARAMFILE_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/system/file.h>
+#include <BALL/core/datatype/string.h>
 
 #include <QtCore/QXmlStreamReader>
 #include <QtCore/QXmlStreamWriter>
@@ -140,4 +134,4 @@ namespace BALL
 	};
 }
 
-#endif
+#endif // BALL_CORE_FORMAT_PARAMFILE_H

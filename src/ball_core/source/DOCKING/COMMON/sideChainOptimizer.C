@@ -1,12 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/docking/common/sideChainOptimizer.h>
+
 #include <BALL/core/scoring/common/gridBasedScoring.h>
 #include <BALL/core/system/timer.h>
 
 using namespace std;
+
 
 namespace BALL
 {

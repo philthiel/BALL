@@ -1,5 +1,8 @@
-#ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-#define BALL_CONCEPT_STDITERATORWRAPPER_H
+//_new_file_header
+
+
+#ifndef BALL_CORE_CONCEPT_STDITERATORWRAPPER_H
+#define BALL_CORE_CONCEPT_STDITERATORWRAPPER_H
 
 #define IteratorWrapper(type)\
 	template<typename T>\
@@ -35,4 +38,4 @@
 		return type##ConstIteratorWrapper< container >(this);\
 	}
 
-#endif //BALL_CONCEPT_STDITERATORWRAPPER_H
+#endif // BALL_CONCEPT_STDITERATORWRAPPER_H

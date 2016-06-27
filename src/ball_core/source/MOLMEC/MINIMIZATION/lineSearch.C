@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: lineSearch.C,v 1.20.8.3 2007/08/17 09:22:31 anhi Exp $
-//
+//_new_file_header
 
-#include <BALL/core/molmec/MINIMIZATION/lineSearch.h>
-#include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
+
+#include <BALL/core/molmec/minimization/lineSearch.h>
+
 #include <BALL/core/molmec/common/atomVector.h>
 #include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
 
 // Parameter alpha for 'sufficient energy decrease'.
 #define LINESEARCH__DEFAULT_ALPHA 1.e-4
@@ -26,6 +24,7 @@
 
 //#define BALL_DEBUG
 #undef BALL_DEBUG
+
 
 namespace BALL 
 {

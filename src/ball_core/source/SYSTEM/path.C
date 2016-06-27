@@ -1,23 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: path.C,v 1.6.20.1 2007/06/21 19:38:11 oliver Exp $
-// 
-// Author:
-//   Oliver Kohlbacher
-//
+//_new_file_header
+
+
+#include <BALL/core/system/path.h>
 
 #include <BALL/core/common/global.h>
-#include <BALL/core/system/path.h>
 #include <BALL/core/system/file.h>
 #include <BALL/core/system/fileSystem.h>
+
 #include <fstream>
 
 #ifdef BALL_COMPILER_MSVC
 #include <windows.h>
 #endif
 
-using std::ifstream;
+using namespace std;
+
 
 namespace BALL 
 {

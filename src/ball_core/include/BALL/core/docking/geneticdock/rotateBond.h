@@ -1,19 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_ROTATE_BOND_H
-#define BALL_DOCKING_GENETICDOCK_ROTATE_BOND_H
+
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_ROTATE_BOND_H
+#define BALL_CORE_DOCKING_GENETICDOCK_ROTATE_BOND_H
 
 #include <BALL/core/datatype/hashSet.h>
 #include <BALL/core/maths/angle.h>
 #include <BALL/core/maths/matrix44.h>
-
-// This class changes the rotation angle(radians) around a defined axis, furthermore it is possible to select
-// 2 additional atoms to calculate and change the dihedral angle. The rotation axis must not be contained in a
-// ring system. If this condition holds true, the molecule is divided by the rotation axis. All atoms of the
-// lighter part rotate while the larger part of the molecule remains unchanged.
 
 
 namespace BALL
@@ -21,6 +14,12 @@ namespace BALL
   class Atom;
   class Bond;
 
+  /**     RotateBond class.
+   * This class changes the rotation angle(radians) around a defined axis, furthermore it is possible to select
+   * 2 additional atoms to calculate and change the dihedral angle. The rotation axis must not be contained in a
+   * ring system. If this condition holds true, the molecule is divided by the rotation axis. All atoms of the
+   * lighter part rotate while the larger part of the molecule remains unchanged.
+   */
   class BALL_EXPORT RotateBond
     {
     public:
@@ -105,4 +104,4 @@ namespace BALL
 }
 
 
-#endif /* BALL_DOCKING_GENETICDOCK_ROTATE_BOND_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_ROTATE_BOND_H

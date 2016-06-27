@@ -1,13 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: solventParameter.C,v 1.11 2003/08/26 09:18:26 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/solventParameter.h>
+
 #include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <iostream>
 #include <map>
@@ -63,6 +62,7 @@
 #define INFINITE_PENALTY 1e5
 
 using namespace std;
+
 
 namespace BALL
 {

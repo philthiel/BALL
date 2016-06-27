@@ -1,16 +1,26 @@
+//_new_file_header
+
+
 #include <BALL/core/molmec/amber/GAFFTypeProcessor.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
-#include <BALL/core/qsar/aromaticityProcessor.h>
+
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/selector.h>
-#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
 #include <BALL/core/system/path.h>
 #include <BALL/core/structure/assignBondOrderProcessor.h>
 
+#include <list>
+#include <map>
 #include <queue>
+#include <vector>
+
+using namespace std;
 
 //#define DEBUG
 #undef DEBUG
+
 
 namespace BALL
 {
@@ -65,7 +75,7 @@ namespace BALL
 				}
 				catch(...)
 				{
-					Log.error()<< "GAFFTypeProcessor: Atom type could not be assigned!" << std::endl;
+					Log.error()<< "GAFFTypeProcessor: Atom type could not be assigned!" << endl;
 				}
 			}	
 
@@ -79,14 +89,14 @@ namespace BALL
 		return Processor::CONTINUE;
 	}
 
-  std::set<String> GAFFTypeProcessor::getTypeNames() const
+  set<String> GAFFTypeProcessor::getTypeNames() const
   {
-    std::set<String> result;
-    for (std::map<Position, std::vector<TypeDefinition> >::const_iterator type_it = atom_types_.begin();
+	set<String> result;
+	for (map<Position, vector<TypeDefinition> >::const_iterator type_it = atom_types_.begin();
          type_it != atom_types_.end();
          ++type_it)
     {
-      std::vector<TypeDefinition> const& types = type_it->second;
+	  vector<TypeDefinition> const& types = type_it->second;
       for (Position i=0; i<types.size(); ++i)
       {
         result.insert(types[i].atom_type);
@@ -108,14 +118,14 @@ namespace BALL
 
 		ces_parsers_.clear();
 
-		std::ifstream atomfile;
+		ifstream atomfile;
 		Path path;
 		String filename = path.find(options.get(Option::ATOMTYPE_FILENAME));
 
 		atomfile.open(filename.c_str());
 		if (!atomfile)
 		{
-			Log.error() << "atomtype table could not be read!" << std::endl;
+			Log.error() << "atomtype table could not be read!" << endl;
 			throw(Exception::FileNotFound(__FILE__, __LINE__, filename));
 		}
 	
@@ -149,7 +159,7 @@ namespace BALL
 			// insert the type definition at the corresponding position
 			if (atom_types_.find(typeDefinition.atomic_number) == atom_types_.end())
 			{
-				std::vector<TypeDefinition> v;
+				vector<TypeDefinition> v;
 				atom_types_[typeDefinition.atomic_number] = v;
 			}
 			atom_types_[typeDefinition.atomic_number].push_back(typeDefinition);
@@ -237,8 +247,8 @@ namespace BALL
 	void GAFFTypeProcessor::annotateBondTypes_()
 	{
 		// store the old selection
-		std::list<Atom*> old_atom_selection;
-		std::list<Bond*> old_bond_selection;
+		list<Atom*> old_atom_selection;
+		list<Bond*> old_bond_selection;
 
 		// NOTE: we store each bond twice, but this does not really matter...
 		for (AtomIterator a_it = current_molecule_->beginAtom(); +a_it; ++a_it)
@@ -328,7 +338,7 @@ namespace BALL
 
 	void GAFFTypeProcessor::annotateRingSizes_()
 	{
-		std::vector<std::vector<Atom* > >::iterator ring_it = sssr_.begin();
+		vector<vector<Atom* > >::iterator ring_it = sssr_.begin();
 		for ( ; ring_it != sssr_.end(); ++ring_it)
 		{
 			String in_ring_property;
@@ -380,7 +390,7 @@ namespace BALL
 
 			// set property to current in ring for every atom
 			// note: we count the occurence of the property within an atom
-			std::vector<Atom*>::iterator atom_it = ring_it->begin();
+			vector<Atom*>::iterator atom_it = ring_it->begin();
 			for ( ; atom_it != ring_it->end(); ++atom_it)
 			{
 				 occurence = ((*atom_it)->getProperty(num_rings_property).getInt()) + occurence;
@@ -394,7 +404,7 @@ namespace BALL
 	// which is made of sp3 Carbon or a purely aromatic six-membered ring
 	void GAFFTypeProcessor::annotateAliphaticAndAromaticRingAtoms_()	
 	{
-		std::vector<std::vector<Atom* > >::iterator ring_it = sssr_.begin();
+		vector<vector<Atom* > >::iterator ring_it = sssr_.begin();
 		for ( ; ring_it != sssr_.end(); ++ring_it)
 		{
 			bool purely_aliphatic = true;
@@ -437,7 +447,7 @@ namespace BALL
 	// checks if current atom is in a planar ringsystem
 	void GAFFTypeProcessor::annotatePlanarRingAtoms_()
 	{
-		std::vector<std::vector<Atom* > >::iterator ring_it = sssr_.begin();
+		vector<vector<Atom* > >::iterator ring_it = sssr_.begin();
 		for( ; ring_it != sssr_.end(); ++ring_it)
 		{
 			bool is_planar = true;
@@ -521,20 +531,20 @@ namespace BALL
 		// can we match this atom at all?
 		if (atom_types_.find(atom.getElement().getAtomicNumber()) == atom_types_.end())
 		{
-			Log.error() << "GAFFTypeProcessor: could not assign atom type for " << atom.getFullName() << std::endl;
-			Log.error() << "                   Reason: no type definition for atomic number " << atom.getElement().getAtomicNumber() << " available!" << std::endl;
+			Log.error() << "GAFFTypeProcessor: could not assign atom type for " << atom.getFullName() << endl;
+			Log.error() << "                   Reason: no type definition for atomic number " << atom.getElement().getAtomicNumber() << " available!" << endl;
 			
 			return false;
 		}
 
-		std::vector<TypeDefinition>& type_defs = atom_types_[atom.getElement().getAtomicNumber()];
+		vector<TypeDefinition>& type_defs = atom_types_[atom.getElement().getAtomicNumber()];
 		for (Position i=0; i<type_defs.size(); i++)
 		{
 			TypeDefinition& typeDefinition = type_defs[i];
 #ifdef DEBUG
-			Log.info() << "GAFFTypeProcessor: match atom " << atom.getFullName() << " against type " << typeDefinition.atom_type << std::endl;
+			Log.info() << "GAFFTypeProcessor: match atom " << atom.getFullName() << " against type " << typeDefinition.atom_type << endl;
 			Log.info() << "GAFFTypeProcessor: connectivity is " << atom.getProperty("connectivity").getInt() << " but should be " << typeDefinition.connectivity
-								 << std::endl;
+								 << endl;
 #endif
 
 			// all fields with "*" are invalid and therefore considered as True
@@ -544,7 +554,7 @@ namespace BALL
 #ifdef DEBUG
 				Log.info() << "GAFFTypeProcessor: number of attached hydrogens is " << atom.getProperty("attached hydrogens").getString() 
 									 << " but should be " << typeDefinition.attached_hydrogens
-									 << std::endl;
+									 << endl;
 #endif
 				if (	 (atom.getProperty("attached hydrogens").getString() == typeDefinition.attached_hydrogens) 
 						 ||(typeDefinition.attached_hydrogens == "*"))
@@ -552,7 +562,7 @@ namespace BALL
 #ifdef DEBUG
 				Log.info() << "GAFFTypeProcessor: number of electron withdrawal atoms is " << atom.getProperty("electron withdrawal atoms").getString() 
 									 << " should be " << typeDefinition.electron_withdrawal_atoms
-									 << std::endl;
+									 << endl;
 #endif
 					if (	 (atom.getProperty("electron withdrawal atoms").getString() == typeDefinition.electron_withdrawal_atoms) 
 							 ||(typeDefinition.electron_withdrawal_atoms == "*"))
@@ -574,7 +584,7 @@ namespace BALL
 						to_match += typeDefinition.chemical_environment;
 
 #ifdef DEBUG
-						Log.info() << "GAFFTypeProcessor: combined APS/CES to match is " << to_match << std::endl;
+						Log.info() << "GAFFTypeProcessor: combined APS/CES to match is " << to_match << endl;
 #endif
 
 						if (	 (ces_parsers_.find(to_match) != ces_parsers_.end())
@@ -593,7 +603,7 @@ namespace BALL
 
 		// if no type could be assigned return false
 		Log.error() << "GAFFTypeProcessor: could not assing a type for atom " << atom.getFullName() 
-								<< "! Setting type to DU" << std::endl;
+								<< "! Setting type to DU" << endl;
 		atom.setProperty("atomtype", String("DU")); //ANNE 
 
 		return false;
@@ -607,8 +617,8 @@ namespace BALL
 		// try to achieve that the types differ along double bonds and are identical along single bonds.
 		//
 		// To this end, we will do a breadth-first search
-		std::queue<Atom*> search_queue;
-		std::map<Atom*, Index> new_type;
+		queue<Atom*> search_queue;
+		map<Atom*, Index> new_type;
 
 		for (AtomIterator at_it = molecule->beginAtom(); +at_it; ++at_it)
 		{
@@ -636,7 +646,7 @@ namespace BALL
 		while (number_to_cleanup > 0)
 		{
 			// start the search at the first non-fixed atom
-			std::map<Atom*, Index>::iterator map_it = new_type.begin();
+			map<Atom*, Index>::iterator map_it = new_type.begin();
 			while ((map_it != new_type.end() && (map_it->second != 0)))
 				++map_it;
 
@@ -665,7 +675,7 @@ namespace BALL
 							// nope => set its type and insert it into the queue
 							if (!bond_it->hasProperty("GAFFBondType"))
 							{
-								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: missing bond type information! aborting!" << std::endl;
+								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: missing bond type information! aborting!" << endl;
 								return;
 							}
 
@@ -687,7 +697,7 @@ namespace BALL
 							}
 							else
 							{
-								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: delocalized or conjugated bond not allowed for this atom type! aborting!" << std::endl;
+								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: delocalized or conjugated bond not allowed for this atom type! aborting!" << endl;
 								return;
 							}
 
@@ -699,7 +709,7 @@ namespace BALL
 		}
 
 		// now compute the new types for our atoms
-		std::map<Atom*, Index>::iterator map_it = new_type.begin();
+		map<Atom*, Index>::iterator map_it = new_type.begin();
 		for (; map_it != new_type.end(); ++map_it)
 		{
 			if (map_it->second == -1)
@@ -740,7 +750,7 @@ namespace BALL
 		while (number_to_cleanup > 0)
 		{
 			// start the search at the first non-fixed atom
-			std::map<Atom*, Index>::iterator map_it = new_type.begin();
+			map<Atom*, Index>::iterator map_it = new_type.begin();
 			while ((map_it != new_type.end() && (map_it->second != 0)))
 				++map_it;
 
@@ -769,7 +779,7 @@ namespace BALL
 							// nope => set its type and insert it into the queue
 							if (!bond_it->hasProperty("GAFFBondType"))
 							{
-								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: missing bond type information! aborting!" << std::endl;
+								Log.error() << "GAFFTypeProcessor::postProcessAtomTypes_: missing bond type information! aborting!" << endl;
 								return;
 							}
 

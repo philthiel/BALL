@@ -1,22 +1,27 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: standardPredicates.C,v 1.58.24.1 2007/03/25 22:00:23 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/standardPredicates.h>
 
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/chain.h>
-#include <BALL/core/kernel/secondaryStructure.h>
-#include <BALL/core/kernel/nucleotide.h>
 #include <BALL/core/kernel/nucleicAcid.h>
-#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+
+#include <iostream>
+#include <list>
+#include <set>
+#include <vector>
+
+using namespace std;
 
 // #define DEBUG
+
 
 namespace BALL 
 {
@@ -99,7 +104,7 @@ namespace BALL
 				catch(...)
 				{
 					Log.error() << "ResidueIDPredicate::operator () (): "
-						<< "argument could not be parsed: " << argument_ << std::endl;
+						<< "argument could not be parsed: " << argument_ << endl;
 					return(false);
 				}
 			}
@@ -229,7 +234,7 @@ namespace BALL
 				catch (Exception::InvalidFormat& e)
 				{
 					Log.error() << "InRingPredicate::operator () (): "
-						<< "argument format is broken: " << argument_ << std::endl;
+						<< "argument format is broken: " << argument_ << endl;
 					return(false);
 				}
 				// There are no rings with less than 3 atoms
@@ -241,7 +246,7 @@ namespace BALL
 			else
 			{
 				Log.error() << "InRingPredicate::operator () (): "
-					<< "Expected a number < 9: " << argument_ << std::endl;
+					<< "Expected a number < 9: " << argument_ << endl;
 				return false;
 			}
 		}
@@ -254,7 +259,7 @@ namespace BALL
 			else
 			{
 				Log.error() << "InRingPredicate::operator () (): "
-					<< "Expected a number < 9: " << argument_ << std::endl;
+					<< "Expected a number < 9: " << argument_ << endl;
 				return false;
 			}
 		}
@@ -295,7 +300,7 @@ namespace BALL
 		{
 			// There can only be an operator followed by a number < 9
 			Log.error() << "NumberOfBondsPredicate::testPredicate_(): "
-				<< "argument_ too long " << std::endl;
+				<< "argument_ too long " << endl;
 			return false;
 		}
 		
@@ -323,7 +328,7 @@ namespace BALL
 			catch (Exception::InvalidFormat& e)
 			{
 				Log.error() << "NumberOfBondsPredicate::testPredicate_(): "
-					<< "argument format is broken: " << argument_ << std::endl;
+					<< "argument format is broken: " << argument_ << endl;
 				return(false);
 			}
 			switch (s[0]) 
@@ -360,7 +365,7 @@ namespace BALL
 
 				default:
 					Log.error() << "NumberOfBondsPredicate::testPredicate_(): Illegal operator " 
-						<< s[0] << std::endl;
+						<< s[0] << endl;
 					return false;
 			}
 		}
@@ -373,7 +378,7 @@ namespace BALL
 			catch (Exception::InvalidFormat& e)
 			{
 				Log.error() << "NumberOfBondsPredicate::testPredicate_(): "
-					<< "argument format is broken: " << argument_ << std::endl;
+					<< "argument format is broken: " << argument_ << endl;
 				return(false);
 			}
 			if (count == n)
@@ -421,7 +426,7 @@ namespace BALL
 		{
 			// There can only be an operator followed by a number < 9
 			Log.error() << "AromaticBondsPredicate::operator () (): "
-				<< "argument_ too long " << std::endl;
+				<< "argument_ too long " << endl;
 			return false;
 		}
 		
@@ -445,7 +450,7 @@ namespace BALL
 			catch (Exception::InvalidFormat& e)
 			{
 				Log.error() << "AromaticBondsPredicate::testPredicate_(): "
-					<< "argument format is broken: " << argument_ << std::endl;
+					<< "argument format is broken: " << argument_ << endl;
 				return(false);
 			}
 			switch (s[0]) 
@@ -482,7 +487,7 @@ namespace BALL
 
 				default:
 					Log.error() << "AromaticBondsPredicate::testPredicate_(): Illegal operator " 
-						<< s[0] << std::endl;
+						<< s[0] << endl;
 					return false;
 			}
 		}
@@ -495,7 +500,7 @@ namespace BALL
 			catch (Exception::InvalidFormat& e)
 			{
 				Log.error() << "AromaticBondsPredicate::testPredicate_(): "
-					<< "argument format is broken: " << argument_ << std::endl;
+					<< "argument format is broken: " << argument_ << endl;
 				return(false);
 			}
 			if (count == n)
@@ -572,7 +577,7 @@ namespace BALL
 		if (parent == 0)
 		{
 			Log.error() << "ConnectedToPredicate::CTPNode::setParent(): "
-				<< "Trying to set NULL as parent. Ignoring." << std::endl;
+				<< "Trying to set NULL as parent. Ignoring." << endl;
 		}
 		else
 		{
@@ -590,7 +595,7 @@ namespace BALL
 		if (child == 0)
 		{
 			Log.error() << "ConnectedToPredicate::CTPNode::addChild(): "
-				<< "Trying to add NULL as child. Ignoring." << std::endl;
+				<< "Trying to add NULL as child. Ignoring." << endl;
 		}
 		else
 		{
@@ -620,14 +625,14 @@ namespace BALL
 
 	void ConnectedToPredicate::CTPNode::removeChild(CTPNode* child)
 	{
-		Iterator it = std::find(begin(), end(), child);
+		Iterator it = find(begin(), end(), child);
 		if (it != end())
 		{
 			children_.erase(it);
 		}
 	}
 
-	::std::list<ConnectedToPredicate::CTPNode*>& ConnectedToPredicate::CTPNode::getChildren()
+	list<ConnectedToPredicate::CTPNode*>& ConnectedToPredicate::CTPNode::getChildren()
 	{
 		return(children_);
 	}
@@ -668,7 +673,7 @@ namespace BALL
 
 			default:
 				Log.error() << "ConnectedToPredicate::CTPNode::setBondType(): "
-					<< "Unknown bond type character, defaulting to <any>." << std::endl;
+					<< "Unknown bond type character, defaulting to <any>." << endl;
 				bond_type_ = BONDTYPE__ANY;
 		}
 	}
@@ -753,7 +758,7 @@ namespace BALL
 		if (partner == 0)
 		{
 			Log.error() << "ConnectedToPredicate::CTPNode::linkWith(): "
-				<< "Trying to link with NULL. Ignoring." << std::endl;
+				<< "Trying to link with NULL. Ignoring." << endl;
 			return;
 		}
 		partner->link_set_.insert(this);
@@ -801,7 +806,7 @@ namespace BALL
 		if (node == 0)
 		{
 			Log.error() << "ConnectedToPredicate::createNewNode_: "
-				<< "got NULL as argument" << std::endl;
+				<< "got NULL as argument" << endl;
 			return(0);
 		}
 		// /PARANOIA
@@ -814,7 +819,7 @@ namespace BALL
 		if (child == 0)
 		{
 			Log.error() << "ConnectedToPredicate::createNewNode_: "
-				<< "Could not create a child node" << std::endl;
+				<< "Could not create a child node" << endl;
 			return(0);
 		}
 		// /PARANOIA
@@ -827,8 +832,8 @@ namespace BALL
 		// is still unknown.
 		if (link_mark_ != 0)
 		{
-			std::pair<CTPNode*, CTPNode*> tmp(child, (CTPNode*)0);
-			link_map_.insert(std::pair<char, std::pair<CTPNode*, CTPNode*> >(link_mark_, tmp));
+			pair<CTPNode*, CTPNode*> tmp(child, (CTPNode*)0);
+			link_map_.insert(pair<char, pair<CTPNode*, CTPNode*> >(link_mark_, tmp));
 			link_mark_ = 0;
 		}
 		return child;
@@ -846,8 +851,8 @@ namespace BALL
 		Size position = 0;
 		CTPNode* current = 0;
 		Size verbosity = 0;
-		std::list<CTPNode*> all_nodes;
-		std::vector<CTPNode*> bracket_stack;
+		list<CTPNode*> all_nodes;
+		vector<CTPNode*> bracket_stack;
 
 		CTPNode* root = new CTPNode;
 		
@@ -855,7 +860,7 @@ namespace BALL
 		if (root == 0)
 		{
 			Log.error() << "ConnectedToPredicate::parse_(): "
-				<< "could not create the root node" << std::endl;
+				<< "could not create the root node" << endl;
 			return(0);
 		}
 		// /PARANOIA
@@ -875,21 +880,21 @@ namespace BALL
 			if (current == 0)
 			{
 				Log.error() << ""
-					<< "current is NULL at beginning of for loop." << std::endl;
+					<< "current is NULL at beginning of for loop." << endl;
 			}
 			// /PARANOIA
 
 			if (verbosity > 90)
 			{
-				Log.info() << "Examining character " << input[position] << std::endl;
+				Log.info() << "Examining character " << input[position] << endl;
 			}
 
 			if (input[position] == '(')
 			{
 				if ((position > 0) && bond_chars.has(input[position - 1]))
 				{
-					Log.error() << "ConnectedToPredicate:parse_(): " << std::endl
-						<< "\tparse error: bond char before bracket." << std::endl;
+					Log.error() << "ConnectedToPredicate:parse_(): " << endl
+						<< "\tparse error: bond char before bracket." << endl;
 					return 0;
 				}
 				bracket_stack.push_back(current);
@@ -900,7 +905,7 @@ namespace BALL
 				if (verbosity > 90)
 				{
 					Log.info() << "Found (, created new node, new depth is " << depth
-						<< std::endl;
+						<< endl;
 				}
 			}
 			else
@@ -910,7 +915,7 @@ namespace BALL
 					if (current == 0)
 					{
 						Log.error() << "ConnectedToPredicate::parse_():\n"
-							<< "\ttried to access a NULL pointer. Aborting." << std::endl;
+							<< "\ttried to access a NULL pointer. Aborting." << endl;
 						return 0;
 					}
 					current->setFinished();
@@ -919,7 +924,7 @@ namespace BALL
 					if (verbosity > 90)
 					{
 						Log.info() << "Found ), new depth is " << depth
-							<< std::endl;
+							<< endl;
 					}
 					if (!bracket_stack.empty())
 					{
@@ -929,7 +934,7 @@ namespace BALL
 					else
 					{
 						Log.error() << "ConnectedToPredicate::parse_():\n"
-							<< "\tparse error: missing opening bracket." << std::endl;
+							<< "\tparse error: missing opening bracket." << endl;
 
 						// If the current node was already integrated into the tree,
 						// deleting the root will take care of it. Otherwise kill it
@@ -954,7 +959,7 @@ namespace BALL
 							depth++;
 							if (verbosity > 90)
 							{
-								Log.info() << "Tried to set bond type of finished node, created a new one, new depth is " << depth << std::endl;
+								Log.info() << "Tried to set bond type of finished node, created a new one, new depth is " << depth << endl;
 							}
 						}
 						current->setBondType(input[position]);
@@ -971,7 +976,7 @@ namespace BALL
 								if (verbosity > 90)
 								{
 									Log.info() << "Found uppercase letter without prior \"(\", created new node, new depth is " << depth
-										<< std::endl;
+										<< endl;
 								}
 							}
 							// We are in a fresh node.
@@ -989,7 +994,7 @@ namespace BALL
 								{
 									Log.error() << "ConnectedToPredicate::parse_():\n"
 										<< "\tparse error: trying to add a lowercase char to an already finished node." 
-										<< std::endl;
+										<< endl;
 									return(0);
 								}
 								String symbol = current->getSymbol();
@@ -997,14 +1002,14 @@ namespace BALL
 								{
 									Log.error() << "ConnectedToPredicate::parse_():\n"
 										<< "\tparse error: trying to add a lowercase char to a symbol with length != 1." 
-										<< std::endl;
+										<< endl;
 									return(0);
 								}
 								if (symbol == '*')
 								{
 									Log.error() << "ConnectedToPredicate::parse_():\n"
 										<< "\tparse error: trying to add a lowercase char to a \"*\"." 
-										<< std::endl;
+										<< endl;
 									return(0);
 								}
 								symbol += input[position];
@@ -1023,7 +1028,7 @@ namespace BALL
 											if (link_map_[link_mark_].second != 0)
 											{
 												Log.error() << "ConnectedToPredicate::parse_():\n"
-													<< "\tparse error: triple mark: " << link_mark_ << std::endl;
+													<< "\tparse error: triple mark: " << link_mark_ << endl;
 												return(0);
 											}
 											link_map_[link_mark_].second = current;
@@ -1035,7 +1040,7 @@ namespace BALL
 									else
 									{
 										Log.error() << "ConnectedToPredicate::parse_():\n"
-											<< "\tparse error: only numbers are allowed as marks." << std::endl;
+											<< "\tparse error: only numbers are allowed as marks." << endl;
 										return(0);
 									}
 								}
@@ -1050,7 +1055,7 @@ namespace BALL
 										{
 											Log.error() << "ConnectedToPredicate::parse_():\n"
 												<< "\tmultiplier without parent. Aborting."
-												<< std::endl;
+												<< endl;
 											return(0);
 										}
 										CTPNode* new_child = 0;
@@ -1069,7 +1074,7 @@ namespace BALL
 									{
 										Log.error() << "ConnectedToPredicate::parse_():\n"
 											<< "\tparse error: unknown input char: " 
-											<< input[position] << std::endl;
+											<< input[position] << endl;
 										return 0;
 									}
 								}
@@ -1085,7 +1090,7 @@ namespace BALL
 		if (bracket_count > 0)
 		{
 			Log.error() << "ConnectedToPredicate::parse_():\n"
-				<< "\tparse error: too many opening brackets." << std::endl;
+				<< "\tparse error: too many opening brackets." << endl;
 			if (current->getParent() == 0) delete current;
 			current = 0;
 			delete root;
@@ -1096,7 +1101,7 @@ namespace BALL
 		if (bracket_count < 0)
 		{
 			Log.error() << "ConnectedToPredicate::parse_():\n"
-				<< "\tparse error: Too many closing brackets." << std::endl;
+				<< "\tparse error: Too many closing brackets." << endl;
 			if (current->getParent() == 0) delete current;
 			current = 0;
 			delete root;
@@ -1105,16 +1110,16 @@ namespace BALL
 		}
 
 		// Sort the nodes in order to have 
-		std::list<CTPNode*>::iterator sort_it = all_nodes.begin();
+		list<CTPNode*>::iterator sort_it = all_nodes.begin();
 		for (; sort_it != all_nodes.end(); ++sort_it)
 		{
 
 			// This is absolutely low tech. But it works.
 
-			::std::list<CTPNode*> non_stars;
-			::std::list<CTPNode*> stars;
+			list<CTPNode*> non_stars;
+			list<CTPNode*> stars;
 
-			::std::list<CTPNode*>& children = (*sort_it)->getChildren();
+			list<CTPNode*>& children = (*sort_it)->getChildren();
 
 			CTPNode::Iterator child_it = children.begin();
 			for (; child_it != children.end(); ++child_it)
@@ -1170,7 +1175,7 @@ namespace BALL
 		{
 			case CTPNode::BONDTYPE__UNINITIALISED:
 				Log.error() << "ConnectedToPredicate::bondOrderMatch_():\n"
-					<< "\tuninitialized bond. Returning false." << std::endl;
+					<< "\tuninitialized bond. Returning false." << endl;
 				result = false;
 				break;
 
@@ -1205,7 +1210,7 @@ namespace BALL
 
 			default:
 				Log.error() << "ConnectedToPredicate::bondOrderMatch_():\n"
-					<< "\tunknown bond type " << node.getBondType() << std::endl;
+					<< "\tunknown bond type " << node.getBondType() << endl;
 				result = false;
 		}
 		return result;
@@ -1224,7 +1229,7 @@ namespace BALL
 		if (current == 0)
 		{
 			// Log.error() << "ConnectedToPredicate::find_():\n"
-			//	<< "\tencountered NULL as node pointer, aborting." << std::endl;
+			//	<< "\tencountered NULL as node pointer, aborting." << endl;
 			return(false);
 		}
 
@@ -1262,7 +1267,7 @@ namespace BALL
 								if (verbosity > 90)
 								{
 									Log.info() << "found " 
-										<< partner->getElement().getSymbol() << std::endl;
+										<< partner->getElement().getSymbol() << endl;
 								}
 								break;
 							}
@@ -1288,16 +1293,16 @@ namespace BALL
 
 	void ConnectedToPredicate::dump() const
 	{
-		Log.info() << std::endl;
+		Log.info() << endl;
 		dump(tree_);
-		Log.info() << std::flush << std::endl << std::endl;
+		Log.info() << flush << endl << endl;
 	}
 
 	void ConnectedToPredicate::dump(const ConnectedToPredicate::CTPNode* current) const
 	{
 		if (current == 0)
 		{
-			Log.error() << "ConnectedToPredicate::dump(): got 0" << std::endl;
+			Log.error() << "ConnectedToPredicate::dump(): got 0" << endl;
 			return;
 		}
 		if (current->isLinked())
@@ -1305,7 +1310,7 @@ namespace BALL
 			Log.info() << "@{" << current << "}";
 		}
 		Log.info() << current->getBondTypeChar() << current->getSymbol() 
-			<< std::flush;
+			<< flush;
 		HashSet<CTPNode*>::ConstIterator it = current->getLinkSet().begin();
 		for(; it != current->getLinkSet().end(); ++it)
 		{
@@ -1316,9 +1321,9 @@ namespace BALL
 		{
 			if (!current->getLinkSet().has(*child_it))
 			{
-				Log.info() << "(" << std::flush;
+				Log.info() << "(" << flush;
 				dump(*child_it);
-				Log.info() << ")" << std::flush;
+				Log.info() << ")" << flush;
 			}
 		}
 	}
@@ -1466,14 +1471,14 @@ namespace BALL
 	{
 
 #ifdef DEBUG
-		std::cout << "ATOM: " << atom.getFullName() << std::endl;
+		cout << "ATOM: " << atom.getFullName() << endl;
 #endif
 
 		// if it's not a carbon, go home.
 		if (atom.getElement() != PTE[Element::C]) 
 		{
 #ifdef DEBUG
-			std::cout << "No carbon." << std::endl;
+			cout << "No carbon." << endl;
 #endif
 			return(false);
 		}
@@ -1483,7 +1488,7 @@ namespace BALL
 		if (!is_sp3(atom)) 
 		{
 #ifdef DEBUG
-			std::cout << "Not sp3." << std::endl;
+			cout << "Not sp3." << endl;
 #endif
 			return(false);
 		}
@@ -1493,7 +1498,7 @@ namespace BALL
 		if (!in_ring(atom) == true)
 		{
 #ifdef DEBUG
-			std::cout << "Not in a ring." << std::endl;
+			cout << "Not in a ring." << endl;
 #endif
 			return(false);
 		}
@@ -1504,7 +1509,7 @@ namespace BALL
 		if ((ring_atoms.size() < 5) || (ring_atoms.size() > 6))
 		{
 #ifdef DEBUG
-			std::cout << "Wrong ring size " << ring_atoms.size() << "." << std::endl;
+			cout << "Wrong ring size " << ring_atoms.size() << "." << endl;
 #endif
 			return(false);
 		}
@@ -1535,8 +1540,8 @@ namespace BALL
 		C5 = ring_atoms[1];
 		c5 = C5->getPosition();
 #ifdef DEBUG
-		std::cout << "C3: " << C3->getFullName() << std::endl;
-		std::cout << "C5: " << C5->getFullName() << std::endl;
+		cout << "C3: " << C3->getFullName() << endl;
+		cout << "C5: " << C5->getFullName() << endl;
 #endif
 		
 		// This code takes the hydrogen as means of measuring the angle. This
@@ -1555,7 +1560,7 @@ namespace BALL
 					H = bond_it->getPartner(atom);
 					h = H->getPosition();
 #ifdef DEBUG
-					std::cout << "H: " << H->getFullName() << std::endl;
+					cout << "H: " << H->getFullName() << endl;
 #endif
 				}
 				else
@@ -1563,7 +1568,7 @@ namespace BALL
 					R = bond_it->getPartner(atom);
 					r = R->getPosition();
 #ifdef DEBUG
-					std::cout << "R: " << R->getFullName() << std::endl;
+					cout << "R: " << R->getFullName() << endl;
 #endif
 				}
 			}
@@ -1574,7 +1579,7 @@ namespace BALL
 		if (H == 0)
 		{
 #ifdef DEBUG
-			std::cout << "No hydrogen neighbour." << std::endl;
+			cout << "No hydrogen neighbour." << endl;
 #endif
 			return(false);
 		}
@@ -1592,17 +1597,17 @@ namespace BALL
 		}
 
 #ifdef DEBUG
-		std::cout << "c1: " << c1 << std::endl;
-		std::cout << "c3: " << c3 << std::endl;
-		std::cout << "c5: " << c5 << std::endl;
-		std::cout << "c1 - c3: " << c1 - c3 << std::endl;
-		std::cout << "c1 - c5: " << c1 - c5 << std::endl;
-		std::cout << "h: " << h << std::endl;
-		std::cout << "h - c1: " << h - c1 << std::endl;
-		std::cout << "Angle(C1, H): " << angle_C1_H << " " 
-			<< fabs(angle_C1_H) << std::endl;
-		std::cout << "Angle(C1, R): " << angle_C1_R << " "
-			<< fabs(angle_C1_R) - 109.5 << std::endl;
+		cout << "c1: " << c1 << endl;
+		cout << "c3: " << c3 << endl;
+		cout << "c5: " << c5 << endl;
+		cout << "c1 - c3: " << c1 - c3 << endl;
+		cout << "c1 - c5: " << c1 - c5 << endl;
+		cout << "h: " << h << endl;
+		cout << "h - c1: " << h - c1 << endl;
+		cout << "Angle(C1, H): " << angle_C1_H << " "
+			<< fabs(angle_C1_H) << endl;
+		cout << "Angle(C1, R): " << angle_C1_R << " "
+			<< fabs(angle_C1_R) - 109.5 << endl;
 #endif
 
 		if ((fabs(angle_C1_H) < 15.0) 
@@ -1676,17 +1681,17 @@ namespace BALL
 		Vector3 d = (c1 - o);
 
 #ifdef DEBUG
-		std::cout << "C1: " << ring_atoms[C1_index]->getFullName() << std::endl;
-		std::cout << "C2: " << ring_atoms[C2_index]->getFullName() << std::endl;
-		std::cout << "C5: " << ring_atoms[C5_index]->getFullName() << std::endl;
-		std::cout << "O: " << ring_atoms[O_index]->getFullName() << std::endl;
-		std::cout << "c1: " << c1 << std::endl;
-		std::cout << "c2: " << c2 << std::endl;
-		std::cout << "c5: " << c5 << std::endl;
-		std::cout << "o: " << o << std::endl;
-		std::cout << "n: " << n << std::endl;
-		std::cout << "d: " << d << std::endl;
-		std::cout << "d * n: " << d * n << std::endl;
+		cout << "C1: " << ring_atoms[C1_index]->getFullName() << endl;
+		cout << "C2: " << ring_atoms[C2_index]->getFullName() << endl;
+		cout << "C5: " << ring_atoms[C5_index]->getFullName() << endl;
+		cout << "O: " << ring_atoms[O_index]->getFullName() << endl;
+		cout << "c1: " << c1 << endl;
+		cout << "c2: " << c2 << endl;
+		cout << "c5: " << c5 << endl;
+		cout << "o: " << o << endl;
+		cout << "n: " << n << endl;
+		cout << "d: " << d << endl;
+		cout << "d * n: " << d * n << endl;
 #endif
 
 		if ((d * n) > 0)
@@ -1799,7 +1804,7 @@ namespace BALL
 				if (dfs(*descend, limit-1) == true)
 				{
 // #ifdef DEBUG
-// 					std::cout << "Pushing back " << atom.getFullName() << std::endl;
+// 					cout << "Pushing back " << atom.getFullName() << endl;
 // #endif
 					ring_atoms_.push_back(&atom);
 					return true;
@@ -1873,7 +1878,7 @@ namespace BALL
 
 		matches_.clear();
 		last_molecule_ = mol;
-		vector<std::set<const Atom*> > result;
+		vector<set<const Atom*> > result;
 
 		try
 		{
@@ -1881,13 +1886,13 @@ namespace BALL
 		}
 		catch(...)
 		{
-			Log.error() << "Problem in SMARTS expression: " << argument_ << std::endl;
+			Log.error() << "Problem in SMARTS expression: " << argument_ << endl;
 			return false;
 		}
 
 		for (Position p = 0; p < result.size(); p++)
 		{
-			std::set<const Atom*>::const_iterator it = result[p].begin();
+			set<const Atom*>::const_iterator it = result[p].begin();
 			for (; it != result[p].end(); ++it)
 			{
 				matches_.insert((Atom*)*it);

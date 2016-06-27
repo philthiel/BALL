@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: piecewisePolynomial.h,v 1.19 2005/12/23 17:01:48 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_PPOLYNOMIAL_H
-#define BALL_MATHS_PPOLYNOMIAL_H
 
-#ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-# include <BALL/core/maths/piecewiseFunction.h>
-#endif
+#ifndef BALL_CORE_MATHS_PPOLYNOMIAL_H
+#define BALL_CORE_MATHS_PPOLYNOMIAL_H
+
+#include <BALL/core/maths/piecewiseFunction.h>
+
 
 namespace BALL 
 {
@@ -114,4 +110,4 @@ namespace BALL
 
 }
 
-#endif // BALL_MATHS_PPPOLYNOMIAL_H
+#endif // BALL_CORE_MATHS_PPPOLYNOMIAL_H

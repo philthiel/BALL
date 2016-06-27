@@ -1,12 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/rotationalEntropy.h>
+
 #include <BALL/core/scoring/common/scoringFunction.h>
 
+using namespace std;
 using namespace BALL;
+
 
 RotationalEntropy::RotationalEntropy(ScoringFunction& sf)
 	: ScoringComponent(sf)
@@ -23,12 +24,12 @@ void RotationalEntropy::setLigandIntraMolecular(bool b)
 {
 	if (b == true)
 	{
-		std::cout<<"RotationalEntropy ScoringComponent can not be used to compute ligand conformation score !"<<std::endl;
+		cout<<"RotationalEntropy ScoringComponent can not be used to compute ligand conformation score !"<<endl;
 	}
 }
 
 
-void RotationalEntropy::update(const std::vector<std::pair<Atom*, Atom*> >& /*pair_vector*/)
+void RotationalEntropy::update(const vector<pair<Atom*, Atom*> >& /*pair_vector*/)
 {
 	// nothing needs to be done here
 }

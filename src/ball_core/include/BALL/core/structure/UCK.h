@@ -1,15 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_UCK_H
-#define BALL_STRUCTURE_UCK_H
 
-#ifndef BALL_DATATYPE_STRING_H
-	#include <BALL/core/datatype/string.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_UCK_H
+#define BALL_CORE_STRUCTURE_UCK_H
+
+#include <BALL/core/datatype/string.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -106,4 +104,5 @@ namespace BALL
 	};
 
 }//namespace
-#endif // BALL_STRUCTURE_UCK_H
+
+#endif // BALL_CORE_STRUCTURE_UCK_H

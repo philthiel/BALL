@@ -1,8 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: INIFile.C,v 1.38.18.1 2007/03/25 22:00:17 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/INIFile.h>
 
@@ -13,6 +10,7 @@
 #include <iostream>
 
 using namespace std;
+
 
 namespace BALL 
 {

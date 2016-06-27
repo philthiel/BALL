@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/docking/geneticdock/evolutionaryDocking.h>
-#include <BALL/core/docking/geneticdock/geneticAlgorithm.h>
+
 #include <BALL/core/docking/geneticdock/dockProblem.h>
-#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/docking/geneticdock/geneticAlgorithm.h>
 #include <BALL/core/scoring/functions/gridedMM.h>
 #include <BALL/core/scoring/functions/gridedPLP.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
 #include <BALL/core/scoring/functions/PLPScoring.h>
 
 #include <iostream>
@@ -15,6 +15,7 @@
 bool system_changed_;
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -56,7 +57,7 @@ namespace BALL
 		setup(system1, system2, new_options);
 	}
 
-	EvolutionaryDocking::EvolutionaryDocking(System& receptor, System& ligand, string config_file)
+	EvolutionaryDocking::EvolutionaryDocking(System& receptor, System& ligand, String config_file)
 		: DockingAlgorithm(receptor, ligand)
 	{
 		scoring_function_ = NULL;

@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94StretchBend.h,v 1.1.8.1 2007/03/25 21:25:18 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94STRETCHBEND_H
-#define BALL_MOLMEC_MMFF94_MMFF94STRETCHBEND_H
+#ifndef BALL_CORE_MOLMEC_MMFF94_MMFF94STRETCHBEND_H
+#define BALL_CORE_MOLMEC_MMFF94_MMFF94STRETCHBEND_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
+#include <vector>
+
 
 namespace BALL 
 {
@@ -135,13 +129,13 @@ namespace BALL
 		virtual void updateStretchBendForces();
 
 		///
-		const vector<Bend>& getBends() const { return bends_;}
+		const std::vector<Bend>& getBends() const { return bends_;}
 		
 		///
-		const vector<Stretch>& getStretches() const { return stretches_;}
+		const std::vector<Stretch>& getStretches() const { return stretches_;}
 
 		///
-		const vector<StretchBend>& getStretchBends() const { return stretch_bends_;}
+		const std::vector<StretchBend>& getStretchBends() const { return stretch_bends_;}
 		
 		///
 		Index calculateSBTIJK(Position angle_type, 
@@ -175,9 +169,9 @@ namespace BALL
 		void errorOccured_(const String& string, 
 											 const Atom& a1, const Atom& a2, const Atom& a3);
 
-		vector<Bend> bends_;
-		vector<Stretch> stretches_;
-		vector<StretchBend> stretch_bends_;
+		std::vector<Bend> bends_;
+		std::vector<Stretch> stretches_;
+		std::vector<StretchBend> stretch_bends_;
 
 		const MMFF94StretchParameters* stretch_parameters_;
 		MMFF94BendParameters bend_parameters_;
@@ -196,4 +190,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_MMFF94STRETCHBEND_H
+#endif // BALL_CORE_MOLMEC_MMFF94_MMFF94STRETCHBEND_H

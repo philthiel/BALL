@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: typeRuleProcessor.C,v 1.3 2002/02/27 12:21:36 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/typeRuleProcessor.h>
+
 
 namespace BALL
 {

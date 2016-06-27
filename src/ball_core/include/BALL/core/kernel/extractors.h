@@ -1,20 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: extractors.h,v 1.2.8.3 2007/03/27 22:41:31 amoll Exp $
-//
-// Author:
-//   Oliver Kohlbacher
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_EXTRACTORS_H
-#define BALL_KERNEL_EXTRACTORS_H
+
+#ifndef BALL_CORE_KERNEL_EXTRACTORS_H
+#define BALL_CORE_KERNEL_EXTRACTORS_H
 
 #include <list>
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL 
 {
@@ -158,4 +151,4 @@ namespace BALL
 	
 } // namespace BALL
 
-#endif // BALL_KERNEL_EXTRACTORS_H
+#endif // BALL_CORE_KERNEL_EXTRACTORS_H

@@ -1,7 +1,11 @@
+//_new_file_header
+
+
 #include <BALL/core/scoring/functions/randomEvaluation.h>
 
-//using namespace::std;
 using namespace BALL;
+using namespace std;
+
 
 RandomEvaluation::RandomEvaluation()
 	throw()
@@ -14,10 +18,10 @@ RandomEvaluation::~RandomEvaluation()
 {
 }
 
-vector < ConformationSet::Conformation > RandomEvaluation::operator () (ConformationSet& conformations)
+vector<ConformationSet::Conformation> RandomEvaluation::operator () (ConformationSet& conformations)
 	throw()
 {
-	Log.info() << "in RandomEvaluation::operator() " << std::endl;
+	Log.info() << "in RandomEvaluation::operator() " << endl;
 	vector < ConformationSet::Conformation > result;
 	for (Size i = 0; i < conformations.size(); i++)
 	{

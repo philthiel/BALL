@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: predicate.h,v 1.24 2005/10/23 12:02:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_PREDICATE_H
-#define BALL_KERNEL_PREDICATE_H
 
-#ifndef BALL_COMMON_RTTI_H
-#	include <BALL/core/common/rtti.h>
-#endif
+#ifndef BALL_CORE_KERNEL_PREDICATE_H
+#define BALL_CORE_KERNEL_PREDICATE_H
 
-#ifndef BALL_CONCEPT_PREDICATE_H
-#	include <BALL/core/concept/predicate.h>
-#endif
+#include <BALL/core/common/rtti.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/predicate.h>
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/core/concept/composite.h>
-#endif
 
 namespace BALL 
 {
@@ -54,8 +44,8 @@ namespace BALL
 	//@{
 	
 
-#ifndef BALL_KERNEL_PREDICATE_TYPE
-#define BALL_KERNEL_PREDICATE_TYPE
+#ifndef BALL_CORE_KERNEL_PREDICATE_TYPE
+#define BALL_CORE_KERNEL_PREDICATE_TYPE
 	typedef UnaryPredicate<Composite>	KernelPredicateType;
 #endif
 
@@ -178,4 +168,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_KERNEL_PREDICATE_H
+#endif // BALL_CORE_KERNEL_PREDICATE_H

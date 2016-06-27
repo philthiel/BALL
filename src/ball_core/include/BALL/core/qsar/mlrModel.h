@@ -1,18 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef MLRMODEL
-#define MLRMODEL
 
-#ifndef LMODEL
-#include <BALL/core/qsar/linearModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_MLRMODEL_H
+#define BALL_CORE_QSAR_MLRMODEL_H
 
-#ifndef QSAR_EXCEPTION
 #include <BALL/core/qsar/exception.h>
-#endif
+#include <BALL/core/qsar/linearModel.h>
 
 
 namespace BALL
@@ -44,4 +37,4 @@ namespace BALL
 	}
 }
 
-#endif // MLRMODEL
+#endif // BALL_CORE_QSAR_MLRMODEL_H

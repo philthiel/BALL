@@ -1,6 +1,10 @@
+//_new_file_header
+
+
 #include <BALL/core/molmec/common/bendComponent.h>
 
 #include <BALL/core/molmec/common/forceField.h>
+
 
 namespace BALL
 {

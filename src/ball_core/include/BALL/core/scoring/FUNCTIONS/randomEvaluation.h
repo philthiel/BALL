@@ -1,22 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_RANDOMEVALUATION_H
-#define BALL_SCORING_FUNCTIONS_RANDOMEVALUATION_H
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/core/docking/common/conformationSet.h>
-#endif
+#ifndef BALL_CORE_SCORING_FUNCTIONS_RANDOMEVALUATION_H
+#define BALL_CORE_SCORING_FUNCTIONS_RANDOMEVALUATION_H
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
-# include <BALL/core/scoring/functions/energeticEvaluation.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/docking/common/conformationSet.h>
+#include <BALL/core/scoring/functions/energeticEvaluation.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -41,4 +34,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_RANDOMEVALUATION_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_RANDOMEVALUATION_H

@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/structure/RSEdge.h>
+
 #include <BALL/core/structure/RSFace.h>
-#include <BALL/core/structure/RSVertex.h>
+
 #include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/RSEdge.h>
+#include <BALL/core/structure/RSVertex.h>
+
 
 namespace BALL
 {

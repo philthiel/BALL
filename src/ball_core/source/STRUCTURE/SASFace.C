@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/structure/SASEdge.h>
+
 #include <BALL/core/structure/SASFace.h>
-#include <BALL/core/structure/SASVertex.h>
+
 #include <BALL/core/maths/sphere3.h>
+#include <BALL/core/structure/SASEdge.h>
+#include <BALL/core/structure/SASVertex.h>
+
 #include <list>
 
 

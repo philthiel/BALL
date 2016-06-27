@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: clearShiftProcessor.h,v 1.13 2005/12/23 17:01:55 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_CLEARSHIFTPROCESSOR_H
-#define BALL_NMR_CLEARSHIFTPROCESSOR_H
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
+#ifndef BALL_CORE_NMR_CLEARSHIFTPROCESSOR_H
+#define BALL_CORE_NMR_CLEARSHIFTPROCESSOR_H
+
+#include <BALL/core/nmr/shiftModule.h>
+
 
 namespace BALL 
 {
@@ -55,4 +51,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_CLEARSHIFTPROCESSOR_H
+#endif // BALL_CORE_NMR_CLEARSHIFTPROCESSOR_H

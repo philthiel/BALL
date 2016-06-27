@@ -1,12 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 #include <BALL/core/qsar/validation.h>
-#include <BALL/core/qsar/statistics.h>
+
 #include <BALL/core/qsar/Model.h>
+#include <BALL/core/qsar/statistics.h>
+
+#include <set>
+#include <vector>
 
 #include <boost/random/mersenne_twister.hpp>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -36,7 +41,7 @@ namespace BALL
 			{
 				fs = 1;
 			}
-			std::multiset<unsigned int>::iterator it = model_->descriptor_IDs_.begin();
+			multiset<unsigned int>::iterator it = model_->descriptor_IDs_.begin();
 
 			int t = 0; // index in line of training data
 			

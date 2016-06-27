@@ -1,42 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: pairExpInteractionEnergyProcessor.h,v 1.20 2005/12/23 17:02:00 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
-#define BALL_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
+#define BALL_CORE_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOM_H
-# include <BALL/core/kernel/atom.h>
-#endif
-
-#ifndef BALL_MATHS_SURFACE_H
-# include <BALL/core/maths/surface.h>
-#endif
-
-#ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/core/energy/energyProcessor.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RDFPARAMETER_H
-# include <BALL/core/structure/RDFParameter.h>
-#endif
-
-#ifndef BALL_SOLVATION_PAIREXPRDFINTEGRATOR_H
-# include <BALL/core/solvation/pairExpRDFIntegrator.h>
-#endif
-
-#ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-# include <BALL/core/solvation/solventDescriptor.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/energy/energyProcessor.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/solvation/pairExpRDFIntegrator.h>
+#include <BALL/core/solvation/solventDescriptor.h>
+#include <BALL/core/structure/RDFParameter.h>
 
 // ?????: The constants alpha, C1 and C2 i.e. the K_ij have to be
 // embedded in a senseful way.
+
 
 namespace BALL
 {
@@ -265,4 +243,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H
+#endif // BALL_CORE_SOLVATION_PAIREXPINTERACTIONENERGYPROCESSOR_H

@@ -1,15 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: composedEnergyProcessor.h,v 1.13 2005/12/23 17:01:43 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_ENERGY_COMPOSEDENERGYPROCESSOR
-#define BALL_ENERGY_COMPOSEDENERGYPROCESSOR
 
-#ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-# include <BALL/core/energy/energyProcessor.h>
-#endif
+#ifndef BALL_CORE_ENERGY_COMPOSEDENERGYPROCESSOR_H
+#define BALL_CORE_ENERGY_COMPOSEDENERGYPROCESSOR_H
+
+#include <BALL/core/energy/energyProcessor.h>
 
 
 namespace BALL
@@ -123,4 +118,5 @@ namespace BALL
 
 	};
 } // namespace BALL
-#endif //  BALL_ENERGY_COMPOSEDENERGYPROCESSOR
+
+#endif // BALL_CORE_ENERGY_COMPOSEDENERGYPROCESSO_HR

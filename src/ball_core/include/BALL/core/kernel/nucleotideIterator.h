@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: nucleotideIterator.h,v 1.13 2005/10/23 12:02:19 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_NUCLEOTIDEITERATOR_H
-#define BALL_KERNEL_NUCLEOTIDEITERATOR_H
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/core/kernel/iterator.h>
-#endif
+#ifndef BALL_CORE_KERNEL_NUCLEOTIDEITERATOR_H
+#define BALL_CORE_KERNEL_NUCLEOTIDEITERATOR_H
 
-#ifndef BALL_KERNEL_PREDICATE_H
-# include <BALL/core/kernel/predicate.h>
-#endif
+#include <BALL/core/concept/stdIteratorWrapper.h>
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/kernel/predicate.h>
 
-#ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-# include <BALL/core/concept/stdIteratorWrapper.h>
-#endif
 
 namespace BALL 
 {
@@ -78,4 +68,4 @@ namespace BALL
 	ConstIteratorWrapper(Nucleotide)
 } // namespace BALL
 
-#endif // BALL_KERNEL_NUCLEOTIDEITERATOR_H
+#endif // BALL_CORE_KERNEL_NUCLEOTIDEITERATOR_H

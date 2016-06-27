@@ -1,11 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: selector.C,v 1.28 2003/12/20 16:00:53 amoll Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/selector.h>
+
 #include <BALL/core/kernel/atom.h>
+
+#include <list>
+
+using namespace std;
+
 
 namespace BALL 
 {

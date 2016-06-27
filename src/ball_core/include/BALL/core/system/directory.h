@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: directory.h,v 1.29.16.1 2007/03/25 21:25:38 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SYSTEM_DIRECTORY_H
-#define BALL_SYSTEM_DIRECTORY_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#ifndef BALL_CORE_SYSTEM_DIRECTORY_H
+#define BALL_CORE_SYSTEM_DIRECTORY_H
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/system/fileSystem.h>
 
-#ifndef BALL_SYSTEM_FILESYSTEM_H
-#	include <BALL/core/system/fileSystem.h>
-#endif
 
 #ifdef BALL_HAS_DIRENT_H
 #	include <dirent.h>
@@ -37,6 +27,7 @@
 #include <windows.h>
 #define mode_t int
 #endif
+
 
 namespace BALL 
 {
@@ -308,4 +299,4 @@ namespace BALL
   
 } // namespace BALL 
 
-#endif // BALL_SYSTEM_DIRECTORY_H 
+#endif // BALL_CORE_SYSTEM_DIRECTORY_H 

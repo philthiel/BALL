@@ -1,10 +1,9 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: baseFunction.h,v 1.1 2005/11/21 19:27:02 anker Exp $
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_BASEFUNCTION_H
-#define BALL_SCORING_COMMON_BASEFUNCTION_H
+
+#ifndef BALL_CORE_SCORING_COMMON_BASEFUNCTION_H
+#define BALL_CORE_SCORING_COMMON_BASEFUNCTION_H
+
 
 namespace BALL
 {
@@ -71,5 +70,4 @@ namespace BALL
 
 }
 
-
-#endif // BALL_SCORING_COMMON_BASEFUNCTION_H
+#endif // BALL_CORE_SCORING_COMMON_BASEFUNCTION_H

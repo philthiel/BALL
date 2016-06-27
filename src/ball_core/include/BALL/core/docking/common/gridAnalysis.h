@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_GRIDANALYSIS_H
-#define BALL_DOCKING_COMMON_GRIDANALYSIS_H
+#ifndef BALL_CORE_DOCKING_COMMON_GRIDANALYSIS_H
+#define BALL_CORE_DOCKING_COMMON_GRIDANALYSIS_H
 
-#ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
-#include <BALL/core/scoring/common/scoringFunction.h>
-#endif
-
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
 #include <BALL/core/datatype/regularData3D.h>
-#endif
+#include <BALL/core/scoring/common/scoringFunction.h>
 
 #include <map>
+
 
 namespace BALL
 {
@@ -61,4 +55,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_COMMON_GRIDANALYSIS_H
+#endif // BALL_CORE_DOCKING_COMMON_GRIDANALYSIS_H

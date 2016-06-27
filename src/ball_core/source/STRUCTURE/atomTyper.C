@@ -1,23 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/atomTyper.h>
 
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/molecule.h>
-#include <BALL/core/kernel/system.h>
 #include <BALL/core/format/lineBasedFile.h>
-#include <BALL/core/structure/smartsMatcher.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/forEach.h>
-
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/smartsMatcher.h>
 #include <BALL/core/system/timer.h>
-//    #define BALL_MMFF94_TEST
+
+// #define BALL_MMFF94_TEST
 #define BALL_DEBUG_TEST
 
 using namespace std;
+
 
 namespace BALL 
 {

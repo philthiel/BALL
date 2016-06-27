@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94OutOfPlaneBend.h,v 1.1.8.1 2007/03/25 21:25:17 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H
-#define BALL_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H
+#define BALL_CORE_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/core/molmec/common/forceField.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-#	include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
+#include <vector>
+
 
 namespace BALL 
 {
@@ -65,16 +57,16 @@ namespace BALL
 		virtual void updateForces();
 
 		///
-		const vector<OutOfPlaneBend>& getOutOfPlaneBends() const { return bends_;}
+		const std::vector<OutOfPlaneBend>& getOutOfPlaneBends() const { return bends_;}
 		
 		// Add a double precision TVector3 to a single precision Vector3
 		inline void AddDV3_(Vector3& f3, const TVector3<double> d3);
 
 		private:
-		vector<OutOfPlaneBend> bends_;
+		std::vector<OutOfPlaneBend> bends_;
 		MMFF94PlaneParameters parameters_;
 	};
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H
+#endif // BALL_CORE_MOLMEC_MMFF94_MMFF94OUTOFPLANEBEND_H

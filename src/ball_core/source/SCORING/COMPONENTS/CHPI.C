@@ -1,19 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#include <BALL/core/molmec/common/support.h>
+
 #include <BALL/core/scoring/components/CHPI.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/maths/vector3.h>
-#include <BALL/core/kernel/residueIterator.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/protein.h>
 
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/residueIterator.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/molmec/common/support.h>
 #include <BALL/core/system/timer.h>
 
 #define DEBUG 1
@@ -23,6 +18,7 @@
 #endif
 
 using namespace std;
+
 
 namespace BALL
 {

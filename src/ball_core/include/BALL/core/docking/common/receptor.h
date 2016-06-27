@@ -1,18 +1,18 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_RECEPTOR_H
-#define BALL_DOCKING_COMMON_RECEPTOR_H
 
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/PDBAtom.h>
+#ifndef BALL_CORE_DOCKING_COMMON_RECEPTOR_H
+#define BALL_CORE_DOCKING_COMMON_RECEPTOR_H
+
 #include <BALL/core/datatype/hashSet.h>
-
 #include <BALL/core/docking/common/conformation.h>
 #include <BALL/core/docking/common/flexibleMolecule.h>
 #include <BALL/core/docking/common/flexDefinition.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/protein.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -27,7 +27,7 @@ namespace BALL
 			virtual ~Receptor();
 			FlexDefinition getFlexDefinition(Position i);
 			void setFlexDefinition(Position i, FlexDefinition& fd);
-			vector<FlexDefinition> getFlexDefinitions();
+			std::vector<FlexDefinition> getFlexDefinitions();
 
 			/** Add a conformation with flexible side chains
 					@param conformation pointer
@@ -41,7 +41,8 @@ namespace BALL
 			void addConformation(Conformation* conf);
 
 		protected:
-			vector<FlexDefinition> flexinfo_;
+			std::vector<FlexDefinition> flexinfo_;
 	};
 }
-#endif /* BALL_DOCKING_COMMON_RECEPTOR_H */
+
+#endif // BALL_CORE_DOCKING_COMMON_RECEPTOR_H

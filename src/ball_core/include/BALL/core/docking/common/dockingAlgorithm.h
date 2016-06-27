@@ -1,34 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
 
-#ifndef BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
-#define BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
+#ifndef BALL_CORE_DOCKING_COMMON_DOCKINGALGORITHM_H
+#define BALL_CORE_DOCKING_COMMON_DOCKINGALGORITHM_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_CONFORMATIONSET_H
-# include <BALL/core/docking/common/conformationSet.h>
-#endif
-
-#ifndef BALL_MATHS_MATRIX44_H
-#include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_SYSTEM_TIMER_H
-#include <BALL/core/system/timer.h>
-#endif
-
-#ifndef BALL_DOCKING_COMMON_CONSTRAINTS_H
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/docking/common/conformationSet.h>
 #include <BALL/core/docking/common/constraints.h>
-#endif
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/system/timer.h>
+
+#include <list>
+#include <string>
+#include <vector>
 
 
 namespace BALL
@@ -80,9 +65,9 @@ namespace BALL
 			 */
 			virtual void setup(System& receptor, System& ligand);
 
-			static void readOptionFile(String filename, Options& output_options, list<Constraint*>& output_constraints, const AtomContainer* ref_ligand = 0);
+			static void readOptionFile(String filename, Options& output_options, std::list<Constraint*>& output_constraints, const AtomContainer* ref_ligand = 0);
 
-			static void writeOptionFile(String filename, Options& input_options, list<Constraint*>& input_constraints);
+			static void writeOptionFile(String filename, Options& input_options, std::list<Constraint*>& input_constraints);
 
 			/** dock the given ligand and return its score */
 			//virtual double dockLigand(AtomContainer& ligand, bool verbose = 0) = 0;
@@ -93,7 +78,7 @@ namespace BALL
 
 			void setScoringFunction(ScoringFunction* scoring) { scoring_function_ = scoring;}
 
-			void processMultiMoleculeFile(string input_filename, string output_filename, double score_cutoff, vector<double>* min_atoms_in_ref_areas = 0, String toolinfo="", String timestamp="");
+			void processMultiMoleculeFile(std::string input_filename, std::string output_filename, double score_cutoff, std::vector<double>* min_atoms_in_ref_areas = 0, String toolinfo="", String timestamp="");
 
 			void setLigand(AtomContainer* ligand);
 
@@ -210,4 +195,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_DOCKING_COMMON_DOCKINGALGORITHM_H
+#endif // BALL_CORE_DOCKING_COMMON_DOCKINGALGORITHM_H

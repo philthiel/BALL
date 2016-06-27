@@ -1,19 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SMARTSMATCHER_H
-#define BALL_STRUCTURE_SMARTSMATCHER_H
 
-#ifndef BALL_STRUCTURE_SMARTSPARSER_H
-# include <BALL/core/structure/smartsParser.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SMARTSMATCHER_H
+#define BALL_CORE_STRUCTURE_SMARTSMATCHER_H
 
-#include <vector>
-#include <set>
+#include <BALL/core/structure/smartsParser.h>
+
 #include <map>
+#include <set>
+#include <vector>
 
 #include <boost/shared_ptr.hpp>
+
 
 namespace BALL 
 {
@@ -278,5 +276,5 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_SMARTSMATCHER_H
+#endif // BALL_CORE_STRUCTURE_SMARTSMATCHER_H
 

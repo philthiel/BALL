@@ -1,16 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <algorithm>
 
 #include <BALL/core/system/fileSystem.h>
 
 #include <BALL/core/common/logStream.h>
 #include <BALL/core/datatype/regularExpression.h>
+
+#include <algorithm>
+
 #ifdef BALL_HAS_PWD_H
 #include <pwd.h> // 'getpwnam'
 #endif
+
 
 namespace BALL 
 {

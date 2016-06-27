@@ -1,8 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: directory.iC,v 1.17 2005/12/23 17:02:06 amoll Exp $
-//
+//_new_file_header
+
 
 BALL_INLINE
 String Directory::getcwd_()

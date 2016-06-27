@@ -1,36 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_XRAY_CRYSTALGENERATOR_H
-#define BALL_XRAY_CRYSTALGENERATOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-#include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_XRAY_CRYSTALGENERATOR_H
+#define BALL_CORE_XRAY_CRYSTALGENERATOR_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
 #include <BALL/core/datatype/regularData3D.h>
-#endif
-
-#ifndef BALL_XRAY_CRYSTALINFO_H
-#include <BALL/core/xray/crystalInfo.h>
-#endif
-
-#ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/box3.h>
+#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/structure/geometricTransformations.h>
-#endif
+#include <BALL/core/xray/crystalInfo.h>
 
-#ifndef BALL_STRUCTURE_GEOMETRICPROPERTIES_H
-# include <BALL/core/structure/geometricProperties.h>
-#endif
-
-#ifndef BALL_MATHS_BOX3_H
-# include <BALL/core/maths/box3.h>
-#endif
 
 namespace BALL
 {
@@ -61,7 +43,7 @@ namespace BALL
 			{
 				/** The file name for the space group to symmetry operations mappings file
 				 */
-				static const string SPACE_GROUP_FILE;
+				static const String SPACE_GROUP_FILE;
 			};
 			
 			/** Default Names
@@ -70,7 +52,7 @@ namespace BALL
 			{
 				/** The default filename for the space group mappings file
 				 */
-				static const string SPACE_GROUP_FILE;
+				static const String SPACE_GROUP_FILE;
 			};
 
 			/** @name constructors and Destructors
@@ -129,4 +111,4 @@ namespace BALL
 	};
 }	// namespace BALL
 
-#endif // BALL_XRAY_CRYSTALINFO_H
+#endif // BALL_CORE_XRAY_CRYSTALINFO_H

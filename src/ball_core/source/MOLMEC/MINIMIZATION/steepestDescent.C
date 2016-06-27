@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: steepestDescent.C,v 1.27.26.5 2007/05/18 10:58:39 aleru Exp $
-//
+//_new_file_header
 
-#include <BALL/core/molmec/MINIMIZATION/steepestDescent.h>
+
+#include <BALL/core/molmec/minimization/steepestDescent.h>
+
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
 
@@ -14,6 +12,7 @@
 #undef BALL_DEBUG
 
 using namespace std;
+
 
 namespace BALL
 {

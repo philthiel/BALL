@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2 sw=2
-//
-// $Id: randomNumberGenerator.C,v 1.1 2005/11/25 14:20:55 anker Exp $
-//
+//_new_file_header
 
 
 #include <BALL/core/maths/randomNumberGenerator.h>
 
-#include <cmath>
-
 #include <BALL/core/common/logStream.h>
+
+#include <cmath>
 
 using namespace std;
 

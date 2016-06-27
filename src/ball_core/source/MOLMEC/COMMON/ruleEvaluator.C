@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// $Id: ruleEvaluator.C,v 1.12 2002/02/27 12:21:35 sturm Exp $
 
 #include <BALL/core/molmec/common/ruleEvaluator.h>
+
 #include <BALL/core/format/INIFile.h>
 #include <BALL/core/kernel/PTE.h>
 
 //#define DEBUG_RULEEVALUATOR
 
 using namespace std;
+
 
 namespace BALL 
 {

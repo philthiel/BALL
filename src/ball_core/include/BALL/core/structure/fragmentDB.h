@@ -1,32 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_FRAGMENTDB_H
-#define BALL_STRUCTURE_FRAGMENTDB_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_FRAGMENTDB_H
+#define BALL_CORE_STRUCTURE_FRAGMENTDB_H
 
-#ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/core/kernel/residue.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/structure/reconstructFragmentProcessor.h>
 
-#ifndef BALL_KERNEL_MOLECULE_H
-#	include <BALL/core/kernel/molecule.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-#	include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_STRUCTURE_RECONSTRUCTFRAGMENTPROCESSOR_H
-#	include <BALL/core/structure/reconstructFragmentProcessor.h>
-#endif
-
-#include <vector>
 #include <list>
+#include <string>
+#include <vector>
+
 
 namespace BALL 
 {
@@ -88,11 +75,11 @@ namespace BALL
 			:	public Exception::GeneralException
 		{
 			public:
-			NoFragmentNode(const char* file, int line, const string& filename);
+			NoFragmentNode(const char* file, int line, const std::string& filename);
 			~NoFragmentNode() throw() {}
 
 			protected:
-			string filename_;
+			std::string filename_;
 		};
 
 		//@}
@@ -163,7 +150,7 @@ namespace BALL
 
 		/**	Return a list containing all variant names.
 		*/
-		list<String> getVariantNames(const String& name) const;
+		std::list<String> getVariantNames(const String& name) const;
 		
 		/**	Return a fragment.
 		*/
@@ -559,7 +546,7 @@ namespace BALL
 		StringHashMap<Position>					name_to_frag_index_;
 
 		// Maps all variants of a specific fragment back to array indices.
-		StringHashMap<list<Position> >	name_to_variants_;
+		StringHashMap<std::list<Position> >	name_to_variants_;
 
 		// Contains the naming standards as a nested map.
 		StringHashMap<NameMap>					standards_;
@@ -568,4 +555,4 @@ namespace BALL
 } // namespace BALL 
 
 
-#endif // BALL_STRUCTURE_FRAGMENTDB_H
+#endif // BALL_CORE_STRUCTURE_FRAGMENTDB_H

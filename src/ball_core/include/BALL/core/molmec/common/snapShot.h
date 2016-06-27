@@ -1,22 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-// This file contains the definitions of the classes 
-// SnapshotManager and Snapshot. 
-// They can be used to obtain snapshots from an MD simulation or an energy 
-// minimisation.
-// A snapshot contains atom positions, velocities, forces and potential energy. 
+//_new_file_header
 
 
-#ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-#define BALL_MOLMEC_COMMON_SNAPSHOT_H
+#ifndef BALL_CORE_MOLMEC_COMMON_SNAPSHOT_H
+#define BALL_CORE_MOLMEC_COMMON_SNAPSHOT_H
 
 #include <vector>
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/maths/vector3.h>
+
 
 namespace BALL
 {
@@ -222,4 +213,4 @@ namespace BALL
 
 } // end of namespace BALL  
 
-#endif // BALL_MOLMEC_COMMON_SNAPSHOT_H
+#endif // BALL_CORE_MOLMEC_COMMON_SNAPSHOT_H

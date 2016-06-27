@@ -1,9 +1,11 @@
-#ifndef BALL_DATATYPE_LISTSORT_MAC
-#define BALL_DATATYPE_LISTSORT_MAC
+//_new_file_header
 
-#ifndef BALL_CONCEPT_COMPARATOR_H
-#	include <BALL/core/concept/comparator.h>
-#endif
+
+#ifndef BALL_CORE_DATATYPE_LISTSORT_MAC
+#define BALL_CORE_DATATYPE_LISTSORT_MAC
+
+#include <BALL/core/concept/comparator.h>
+
 
 /* Sorts the null-terminated list that has head as the first */
 /* node. Passes back the new head, as well as a pointer      */
@@ -129,4 +131,4 @@
   tail = c; \
 }
 
-#endif // BALL_DATATYPE_LISTSORT_MAC
+#endif // BALL_CORE_DATATYPE_LISTSORT_MAC

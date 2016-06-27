@@ -1,31 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: options.h,v 1.26.14.1 2007/03/25 21:23:40 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#define BALL_DATATYPE_OPTIONS_H
+
+#ifndef BALL_CORE_DATATYPE_OPTIONS_H
+#define BALL_CORE_DATATYPE_OPTIONS_H
 
 #include <list>
 
-#ifndef BALL_DATATYPE_STRING_H
-#	include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
+#include <BALL/core/concept/persistentObject.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/datatype/stringHashMap.h>
 #include <BALL/core/format/paramFile.h>
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/core/concept/persistentObject.h>
-#endif
+#include <BALL/core/maths/vector3.h>
 
 
 namespace BALL 
@@ -386,4 +371,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_DATATYPE_OPTIONS_H
+#endif // BALL_CORE_DATATYPE_OPTIONS_H

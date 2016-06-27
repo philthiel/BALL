@@ -1,13 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_PARSEDFUNCTION_H
-#define BALL_MATHS_PARSEDFUNCTION_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-# include <BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_MATHS_PARSEDFUNCTION_H
+#define BALL_CORE_MATHS_PARSEDFUNCTION_H
+
+#include <BALL/core/datatype/stringHashMap.h>
 
 #include <numeric>
 
@@ -17,6 +14,7 @@ extern double ParsedFunctionResult;
 extern int ParsedFunctionparse();
 extern void ParsedFunction_initBuffer(const char*);
 extern void ParsedFunction_delBuffer();
+
 
 namespace BALL
 {
@@ -154,4 +152,4 @@ namespace BALL
   /** @} */
 }
 
-#endif // BALL_MATHS_PARSEDFUNCTION_H
+#endif // BALL_CORE_MATHS_PARSEDFUNCTION_H

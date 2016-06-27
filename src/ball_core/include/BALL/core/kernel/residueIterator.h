@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: residueIterator.h,v 1.15 2005/10/23 12:02:20 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_RESIDUEITERATOR_H
-#define BALL_KERNEL_RESIDUEITERATOR_H
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/core/kernel/iterator.h>
-#endif
+#ifndef BALL_CORE_KERNEL_RESIDUEITERATOR_H
+#define BALL_CORE_KERNEL_RESIDUEITERATOR_H
 
-#ifndef BALL_KERNEL_PREDICATE_H
-# include <BALL/core/kernel/predicate.h>
-#endif
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/kernel/predicate.h>
+
 
 namespace BALL 
 {
@@ -76,4 +69,4 @@ namespace BALL
 	ConstIteratorWrapper(Residue)
 } // namespace BALL
 
-#endif // BALL_KERNEL_RESIDUEITERATOR_H
+#endif // BALL_CORE_KERNEL_RESIDUEITERATOR_H

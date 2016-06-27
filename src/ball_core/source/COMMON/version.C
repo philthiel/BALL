@@ -1,12 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: version.C,v 1.14 2004/02/19 12:24:33 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/version.h>
+
 #include <BALL/core/datatype/string.h>
 #include <BALL/core/datatype/stringHashMap.h>
+
 
 namespace BALL
 {

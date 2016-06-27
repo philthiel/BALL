@@ -1,7 +1,11 @@
+//_new_file_header
+
+
 #include <cmath> 
 #include <vector>
 
 #include <BALL/core/nmr/peak.h>
+
 
 template <>
 BALL_INLINE
@@ -677,12 +681,12 @@ void Spectrum<RegularData2D, Peak2D>::computeHuInvariants()
 
 template <>
 BALL_INLINE	
-vector<float> Spectrum<RegularData2D, Peak2D>::computeHuInvariantsDifferences(vector<Spectrum<RegularData2D, Peak2D> >& spectra)
+std::vector<float> Spectrum<RegularData2D, Peak2D>::computeHuInvariantsDifferences(std::vector<Spectrum<RegularData2D, Peak2D> >& spectra)
 {
 	// compute the Invariants
 	computeHuInvariants();
-	vector<float> hu = getHuInvariants();
-	vector< vector<float> > hu_invariants(spectra.size());  
+	std::vector<float> hu = getHuInvariants();
+	std::vector<std::vector<float> > hu_invariants(spectra.size());
 	
 	for (Position s = 0; s < spectra.size(); s++)
 	{	
@@ -691,8 +695,8 @@ vector<float> Spectrum<RegularData2D, Peak2D>::computeHuInvariantsDifferences(ve
 	}
 	
 	// compute weighting factors
-	vector<float> factors(hu.size());
-	vector<float> averages(hu.size());
+	std::vector<float> factors(hu.size());
+	std::vector<float> averages(hu.size());
 
 	if (spectra.size() > 1)
 	{
@@ -732,7 +736,7 @@ vector<float> Spectrum<RegularData2D, Peak2D>::computeHuInvariantsDifferences(ve
 		}
 	}
 	
-	vector<float> distance(spectra.size()); 
+	std::vector<float> distance(spectra.size());
 	
 	// compute the distance using the weighted euclidean distance meassure
 	for (Position s=0; s < spectra.size(); s++)

@@ -1,21 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: typeRuleProcessor.h,v 1.12 2005/12/23 17:01:52 amoll Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: rule-based assignment of types 
 
-#ifndef BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
-#define BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
+#ifndef BALL_CORE_MOLMEC_COMMON_TYPERULEPROCESSOR_H
+#define BALL_CORE_MOLMEC_COMMON_TYPERULEPROCESSOR_H
 
-#ifndef BALL_MOLMEC_COMMON_RULEPROCESSOR_H
-#	include <BALL/core/molmec/common/ruleProcessor.h>
-#endif
+#include <BALL/core/molmec/common/ruleProcessor.h>
+
 
 namespace BALL 
 {
 	/**	Type Rule Processor.
+	 * Molecular Mechanics: rule-based assignment of types
 			
     	\ingroup  MolmecAssignment
 	*/
@@ -60,5 +55,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-
-#endif // BALL_MOLMEC_COMMON_TYPERULEPROCESSOR_H
+#endif // BALL_CORE_MOLMEC_COMMON_TYPERULEPROCESSOR_H

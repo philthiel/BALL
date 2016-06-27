@@ -1,6 +1,8 @@
-// $Id: baseFunction.C,v 1.2 2005/11/25 14:03:55 anker Exp $
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/baseFunction.h>
+
 
 namespace BALL
 {

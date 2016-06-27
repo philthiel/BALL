@@ -1,19 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/KCFFile.h>
 
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/molecule.h>
 #include <BALL/core/kernel/system.h>
 #include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/forEach.h>
+
+#include <vector>
+
+using namespace std;
 
 // enable/disable some debug output
 #define DEBUG
 #undef DEBUG
+
 
 namespace BALL 
 {
@@ -41,17 +45,17 @@ namespace BALL
 
 	bool KCFFile::write(const Molecule& molecule)
 	{
-		if (!isOpen() || getOpenMode() != std::ios::out)
+		if (!isOpen() || getOpenMode() != ios::out)
 		{
 			throw File::CannotWrite(__FILE__, __LINE__, name_);
 		}
 
 		// An alias for simplicity's sake...
-		std::ostream& os(getFileStream());
+		ostream& os(getFileStream());
 		
 		// Write ENTRY block
 		// number of blanks????  properties are not read, written??? Which ones are there?
-		os << ENTRY_TAG << "      " << molecule.getName() << std::endl;
+		os << ENTRY_TAG << "      " << molecule.getName() << endl;
 		
 		static vector<char> buffer_data(BALL_MAX_LINE_LENGTH);
 		char* buffer = &(buffer_data[0]);
@@ -64,7 +68,7 @@ namespace BALL
 		os << NODE_TAG << "      " << molecule.countAtoms() << "\n"; 
 		Size count = 1;
 		AtomConstIterator ai(molecule.beginAtom());
-		std::map<const Atom*, Position> atom_to_index;
+		map<const Atom*, Position> atom_to_index;
 		for (; +ai; ++ai, ++count)
 		{
 			// Write the atom line.
@@ -108,7 +112,7 @@ namespace BALL
 		}
 		
 		// Write the DELIMITER block
-		os << DELIMITER_TAG << std::endl;
+		os << DELIMITER_TAG << endl;
 		
 		return true;
 	}
@@ -148,7 +152,7 @@ namespace BALL
 		catch (Exception::ParseError& e)
 		{
 			#ifdef DEBUG
-				Log.info() << "KCFFile::read(System&): caught exception while parsing line " << getLineNumber() << ": " << e << std::endl;
+				Log.info() << "KCFFile::read(System&): caught exception while parsing line " << getLineNumber() << ": " << e << endl;
 			#endif
 
 			// clean up and rethrow

@@ -1,14 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_ALLMODEL_H
-#define  BALL_QSAR_ALLMODEL_H
 
-#ifndef BALL_QSAR_NONLINEARMODEL_H
+#ifndef BALL_CORE_QSAR_ALLMODEL_H
+#define BALL_CORE_QSAR_ALLMODEL_H
+
 #include <BALL/core/qsar/nonlinearModel.h>
-#endif
+
+#include <vector>
 
 
 namespace BALL
@@ -33,7 +31,7 @@ namespace BALL
 				//@{
 				void setKw(double kw);
 				
-				virtual Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				virtual Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 				
 				/** automated lazy learning does not have a seperate training step */
 				void train(){};
@@ -44,13 +42,13 @@ namespace BALL
 				/** returns the current kernel width */
 				double getKw();
 				
-				virtual void setParameters(vector<double>& v);
+				virtual void setParameters(std::vector<double>& v);
 				
-				virtual vector<double> getParameters() const;
+				virtual std::vector<double> getParameters() const;
 				
-				void saveToFile(string filename);
+				void saveToFile(String filename);
 				
-				void readFromFile(string filename);
+				void readFromFile(String filename);
 				//@}
 				
 				
@@ -83,4 +81,4 @@ namespace BALL
 	}
 }
 
-#endif // ALLMODEL
+#endif // BALL_CORE_QSAR_ALLMODEL_H

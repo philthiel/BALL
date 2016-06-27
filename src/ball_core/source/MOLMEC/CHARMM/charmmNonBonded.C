@@ -1,19 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/charmm/charmmNonBonded.h>
+
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/molmec/charmm/charmm.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/support.h>
-#include <BALL/core/kernel/PTE.h>
-
 
 // define square function
 #define SQR(a) ((a)*(a))
 
 using namespace std;
 using namespace BALL::Constants;
+
+
 namespace BALL 
 {
 

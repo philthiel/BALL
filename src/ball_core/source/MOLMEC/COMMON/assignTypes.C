@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: assignTypes.C,v 1.15 2004/12/17 15:29:37 amoll Exp $
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/assignTypes.h>
 
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/system/path.h>
+
 #include <iostream>
 
-#include <BALL/core/system/path.h>
-#include <BALL/core/kernel/fragment.h>
-
 using namespace std;
+
 
 namespace BALL 
 {

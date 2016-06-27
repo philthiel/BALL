@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 namespace BALL
 {
@@ -18,7 +17,7 @@ String::String(const String& s)
 }
 
 BALL_INLINE 
-String::String(const string& s)
+String::String(const std::string& s)
 	: str_(s)
 {
 }
@@ -31,7 +30,7 @@ String::String(String&& s)
 }
 
 BALL_INLINE
-String::String(string&& s)
+String::String(std::string&& s)
 	: str_(std::move(s))
 {
 }
@@ -48,7 +47,7 @@ String& String::operator=(String&& s)
 }
 
 BALL_INLINE
-String& String::operator=(string&& s)
+String& String::operator=(std::string&& s)
 {
 	str_.operator=(std::move(s));
 
@@ -166,7 +165,7 @@ Substring::operator string() const
 		throw UnboundSubstring(__FILE__, __LINE__);
 	}
 
-  return string(bound_->c_str(), from_, to_ - from_ + 1);
+  return std::string(bound_->c_str(), from_, to_ - from_ + 1);
 }
 */
 
@@ -542,15 +541,15 @@ Substring String::left(Size len) const
 BALL_INLINE 
 Substring String::instr(const String& patterns, Index from) const
 {
-  string::size_type found = find(patterns, from); 
+  std::string::size_type found = find(patterns, from);
 
-  return (found == string::npos)
+  return (found == std::string::npos)
          ? Substring(*this, 0, 0)
          : Substring(*this, (Index)found, (Size)patterns.size());
 }
 
 BALL_INLINE 
-String operator + (const String& s1, const string& s2)
+String operator + (const String& s1, const std::string& s2)
 {
   String result(s1);
   result.append(s2);
@@ -558,7 +557,7 @@ String operator + (const String& s1, const string& s2)
 }
 
 BALL_INLINE 
-String operator + (const string& s1, const String& s2)
+String operator + (const std::string& s1, const String& s2)
 {
   String result(s1);
   result.append(s2);
@@ -592,7 +591,7 @@ String operator + (const String& s1, char c)
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 ///	Concatenates two strings
 BALL_INLINE
-String operator + (String&& s1, const string& s2)
+String operator + (String&& s1, const std::string& s2)
 {
 	return std::move(s1.append(s2));
 }
@@ -610,7 +609,7 @@ String operator + (String&& s1, String&& s2)
 }
 
 BALL_INLINE
-String operator + (const String& s1, string&& s2)
+String operator + (const String& s1, std::string&& s2)
 {
 	return std::move(s2.insert(0, s1));
 }
@@ -622,13 +621,13 @@ String operator + (const String& s1, String&& s2)
 }
 
 BALL_INLINE
-String operator + (string&& s1, const String& s2)
+String operator + (std::string&& s1, const String& s2)
 {
 	return std::move(s1.append(s2));
 }
 
 BALL_INLINE
-String operator + (const string& s1, String&& s2)
+String operator + (const std::string& s1, String&& s2)
 {
 	return std::move(s2.insert(0, s1));
 }
@@ -674,7 +673,7 @@ void String::destroy()
 BALL_INLINE 
 bool String::has(char c) const
 {
-  return ((c != (char)0) && (find(c, 0) != string::npos));
+  return ((c != (char)0) && (find(c, 0) != std::string::npos));
 }
 
 BALL_INLINE 
@@ -685,7 +684,7 @@ bool String::hasSubstring(const String& s, Index from) const
 		return true;
 	}
 
-  return (find(s, from) != string::npos);
+  return (find(s, from) != std::string::npos);
 }
 
 BALL_INLINE 
@@ -1137,12 +1136,12 @@ const char& String::back() const
 BALL_INLINE
 String& String::operator += (const String& str)
 {
-	str_ += (string const&)str;
+	str_ += (std::string const&)str;
 	return *this;
 }
 
 BALL_INLINE
-String& String::operator += (const string& str)
+String& String::operator += (const std::string& str)
 {
 	str_ += str;
 	return *this;
@@ -1174,19 +1173,19 @@ String& String::operator += (std::initializer_list<char> il)
 BALL_INLINE
 String& String::append(const String& str)
 {
-	str_.append((string const&)str);
+	str_.append((std::string const&)str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::append(const string& str)
+String& String::append(const std::string& str)
 {
 	str_.append(str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::append(const string& str, size_t subpos, size_t sublen)
+String& String::append(const std::string& str, size_t subpos, size_t sublen)
 {
 	str_.append(str, subpos, sublen);
 	return *this;
@@ -1239,19 +1238,19 @@ void String::push_back(char c)
 BALL_INLINE
 String& String::assign(const String& str)
 {
-	str_.assign((string const&)str);
+	str_.assign((std::string const&)str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::assign(const string& str)
+String& String::assign(const std::string& str)
 {
 	str_.assign(str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::assign(const string& str, size_t subpos, size_t sublen)
+String& String::assign(const std::string& str, size_t subpos, size_t sublen)
 {
 	str_.assign(str, subpos, sublen);
 	return *this;
@@ -1297,7 +1296,7 @@ String& String::assign(std::initializer_list<char> li)
 
 #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
 BALL_INLINE
-String& String::assign(string&& str) BALL_NOEXCEPT
+String& String::assign(std::string&& str) BALL_NOEXCEPT
 {
 	str_.assign(str);
 	return *this;
@@ -1305,14 +1304,14 @@ String& String::assign(string&& str) BALL_NOEXCEPT
 #endif
 
 BALL_INLINE
-String& String::insert(size_t pos, const string& str)
+String& String::insert(size_t pos, const std::string& str)
 {
 	str_.insert(pos, str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::insert(size_t pos, const string& str, size_t subpos, size_t sublen)
+String& String::insert(size_t pos, const std::string& str, size_t subpos, size_t sublen)
 {
 	str_.insert(pos, str, subpos, sublen);
 	return *this;
@@ -1415,14 +1414,14 @@ String::iterator String::erase(iterator first, iterator last)
 #endif
 
 BALL_INLINE
-String& String::replace(size_t pos, size_t len, const string& str)
+String& String::replace(size_t pos, size_t len, const std::string& str)
 {
 	str_.replace(pos, len, str);
 	return *this;
 }
 
 BALL_INLINE
-String& String::replace(size_t pos, size_t len, const string& str, size_t subpos, size_t sublen)
+String& String::replace(size_t pos, size_t len, const std::string& str, size_t subpos, size_t sublen)
 {
 	str_.replace(pos, len, str, subpos, sublen);
 	return *this;
@@ -1451,7 +1450,7 @@ String& String::replace(size_t pos, size_t len, size_t n, char c)
 
 #ifdef BALL_HAS_STD_STRING_CONST_ITERATOR_FUNCTIONS
 BALL_INLINE
-String& String::replace(const_iterator i1, const_iterator i2, const string& str)
+String& String::replace(const_iterator i1, const_iterator i2, const std::string& str)
 {
 	str_.replace(i1, i2, str);
 	return *this;
@@ -1487,7 +1486,7 @@ String& String::replace(const_iterator i1, const_iterator i2, InputIterator firs
 }
 #else
 BALL_INLINE
-String& String::replace(iterator i1, iterator i2, const string& str)
+String& String::replace(iterator i1, iterator i2, const std::string& str)
 {
 	str_.replace(i1, i2, str);
 	return *this;
@@ -1533,7 +1532,7 @@ String& String::replace(const_iterator i1, const_iterator i2, std::initializer_l
 #endif
 
 BALL_INLINE
-void String::swap(string& str)
+void String::swap(std::string& str)
 {
 	str_.swap(str);
 }
@@ -1571,7 +1570,7 @@ size_t String::copy(char* s, size_t len, size_t pos) const
 }
 
 BALL_INLINE
-size_t String::find(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.find(str, pos);
 }
@@ -1595,7 +1594,7 @@ size_t String::find(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-size_t String::rfind(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::rfind(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.rfind(str, pos);
 }
@@ -1619,7 +1618,7 @@ size_t String::rfind(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-size_t String::find_first_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_of(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.find_first_of(str, pos);
 }
@@ -1643,7 +1642,7 @@ size_t String::find_first_of(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-size_t String::find_last_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_of(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.find_last_of(str, pos);
 }
@@ -1667,7 +1666,7 @@ size_t String::find_last_of(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-size_t String::find_first_not_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_first_not_of(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.find_first_not_of(str, pos);
 }
@@ -1691,7 +1690,7 @@ size_t String::find_first_not_of(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-size_t String::find_last_not_of(const string& str, size_t pos) const BALL_NOEXCEPT
+size_t String::find_last_not_of(const std::string& str, size_t pos) const BALL_NOEXCEPT
 {
 	return str_.find_last_not_of(str, pos);
 }
@@ -1715,25 +1714,25 @@ size_t String::find_last_not_of(char c, size_t pos) const BALL_NOEXCEPT
 }
 
 BALL_INLINE
-string String::substr(size_t pos, size_t len) const
+std::string String::substr(size_t pos, size_t len) const
 {
 	return str_.substr(pos, len);
 }
 
 BALL_INLINE
-int String::compare(const string& str) const BALL_NOEXCEPT
+int String::compare(const std::string& str) const BALL_NOEXCEPT
 {
 	return str_.compare(str);
 }
 
 BALL_INLINE
-int String::compare(size_t pos, size_t len, const string& str) const
+int String::compare(size_t pos, size_t len, const std::string& str) const
 {
 	return str_.compare(pos, len, str);
 }
 
 BALL_INLINE
-int String::compare(size_t pos, size_t len, const string& str, size_t subpos, size_t sublen) const
+int String::compare(size_t pos, size_t len, const std::string& str, size_t subpos, size_t sublen) const
 {
 	return str_.compare(pos, len, str, subpos, sublen);
 }

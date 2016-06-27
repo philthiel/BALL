@@ -1,39 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: createSpectrumProcessor.h,v 1.26 2005/12/23 17:01:55 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_CREATESPECTRUMPROCESSOR_H
-#define BALL_NMR_CREATESPECTRUMPROCESSOR_H
 
-#ifndef BALL_NMR_PEAK_H
-#	include <BALL/core/nmr/peak.h>
-#endif
+#ifndef BALL_CORE_NMR_CREATESPECTRUMPROCESSOR_H
+#define BALL_CORE_NMR_CREATESPECTRUMPROCESSOR_H
 
-#ifndef BALL_NMR_PEAKLIST_H
-#	include <BALL/core/nmr/peakList.h>
-#endif
+#include <BALL/core/datatype/regularData1D.h>
+#include <BALL/core/datatype/stringHashSet.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/nmr/peak.h>
+#include <BALL/core/nmr/peakList.h>
+#include <BALL/core/nmr/shiftModule.h>
 
-#ifndef BALL_KERNEL_ATOM_H
-# include <BALL/core/kernel/atom.h>
-#endif
+#include <vector>
 
-#ifndef BALL_DATATYPE_REGULARDATA1D_H
-# include <BALL/core/datatype/regularData1D.h>
-#endif
-
-#ifndef BALL_KERNEL_EXPRESSION_H
-# include <BALL/core/kernel/expression.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHSET_H
-# include <BALL/core/datatype/stringHashSet.h>
-#endif
-
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
 
 namespace BALL 
 {
@@ -160,8 +140,8 @@ namespace BALL
 
 		PeakList1D							peaklist_;
 		StringHashSet						ignore_atoms_;
-		vector<String>					equivalency_residues_;
-		vector<vector<String> >	equivalency_atoms_;
+		std::vector<String>					equivalency_residues_;
+		std::vector<std::vector<String> >	equivalency_atoms_;
 		float width_;
 		bool	use_averaging_;
 		bool	use_ignore_table_;
@@ -186,4 +166,4 @@ namespace BALL
   
 } //namespace BALL
 	 
-#endif // BALL_NMR_CREATESPECTRUMPROCESSOR_H
+#endif // BALL_CORE_NMR_CREATESPECTRUMPROCESSOR_H

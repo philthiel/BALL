@@ -1,10 +1,8 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H
-#define BALL_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H
+#define BALL_CORE_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H
 
 #include <BALL/core/scoring/components/solvation.h>
 
@@ -27,4 +25,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H
+#endif // BALL_CORE_SCORING_COMPONENTS_FRAGMENTATIONALSOLVATION_H

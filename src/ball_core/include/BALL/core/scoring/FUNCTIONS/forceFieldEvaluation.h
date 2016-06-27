@@ -1,16 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
-#define BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
 
-#ifndef BALL_SCORING_FUNCTIONS_ENERGETICEVALUATION_H
-# include <BALL/core/scoring/functions/energeticEvaluation.h>
-#endif
+#ifndef BALL_CORE_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
+#define BALL_CORE_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/core/molmec/common/forceField.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/scoring/functions/energeticEvaluation.h>
+
 
 namespace BALL
 {
@@ -72,4 +68,4 @@ namespace BALL
 		};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H

@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PDBdefs.C,v 1.5 2005/02/23 11:34:18 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/PDBdefs.h>
+
 
 namespace BALL
 {

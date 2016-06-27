@@ -1,8 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: directory.C,v 1.29.18.1 2007/03/25 22:00:35 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/system/directory.h>
 
@@ -29,6 +26,7 @@
 #	define chdir _chdir
 # define rmdir _rmdir
 #endif
+
 
 namespace BALL 
 {

@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/DCDFile.h>
+
 #include <BALL/core/molmec/common/snapShot.h>
 
 #undef BALL_DEBUG
 
 using namespace std;
+
 
 namespace BALL
 {

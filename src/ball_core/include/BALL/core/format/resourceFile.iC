@@ -1,7 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: resourceFile.iC,v 1.9 2002/02/27 12:18:42 sturm Exp $
+//_new_file_header
+
 
 BALL_INLINE 
 void ResourceEntry::set(const ResourceEntry& entry, bool deep)

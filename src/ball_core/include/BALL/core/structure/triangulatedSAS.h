@@ -1,56 +1,24 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_TRIANGULATEDSAS_H
-#define BALL_STRUCTURE_TRIANGULATEDSAS_H
 
-#ifndef BALL_STRUCTURE_SASEDGE_H
-#	include <BALL/core/structure/SASEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_TRIANGULATEDSAS_H
+#define BALL_CORE_STRUCTURE_TRIANGULATEDSAS_H
 
-#ifndef BALL_STRUCTURE_SASFACE_H
-#	include <BALL/core/structure/SASFace.h>
-#endif
-
-#ifndef BALL_TRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#	include <BALL/core/structure/solventAccessibleSurface.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGULATEDSURFACE_H
-#	include <BALL/core/structure/triangulatedSurface.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGLE_H
-#	include <BALL/core/structure/triangle.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGLEEDGE_H
-#	include <BALL/core/structure/triangleEdge.h>
-#endif
-
-#ifndef BALL_STRUCTURE_TRIANGLEPOINT_H
-#	include <BALL/core/structure/trianglePoint.h>
-#endif
-
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
-
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHGRID_H
-#	include <BALL/core/datatype/hashGrid.h>
-#endif
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/SASEdge.h>
+#include <BALL/core/structure/SASFace.h>
+#include <BALL/core/structure/solventAccessibleSurface.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
 
 #include <list>
 #include <vector>
+
 
 namespace BALL
 {
@@ -251,5 +219,4 @@ namespace BALL
 
 }	// namespace BALL
 
-
-#endif	// BALL_STRUCTURE_TRIANGULATEDSAS_H
+#endif	// BALL_CORE_STRUCTURE_TRIANGULATEDSAS_H

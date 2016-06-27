@@ -1,33 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#define BALL_CONCEPT_PERSISTENCEMANAGER_H
 
-#ifndef BALL_COMMON_RTTI_H
-#	include <BALL/core/common/rtti.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_PERSISTENCEMANAGER_H
+#define BALL_CORE_CONCEPT_PERSISTENCEMANAGER_H
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/core/concept/persistentObject.h>
-#endif
-
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/common/rtti.h>
+#include <BALL/core/concept/persistentObject.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/stringHashMap.h>
 
 #include <fstream>
 #include <iomanip>
@@ -36,6 +18,7 @@
 
 #define BALL_WRITE_PRIMITIVE_MEMBER(pm,x) pm.writePrimitive(x,#x)
 #define BALL_READ_PRIMITIVE_MEMBER(pm,x) pm.readPrimitive(x,#x)
+
 
 namespace BALL 
 {
@@ -667,7 +650,7 @@ namespace BALL
 
 		/**	Write a string to the output.
 		*/
-		virtual void put(const string& s) = 0;
+		virtual void put(const std::string& s) = 0;
 
 		/**	Write a pointer to the output.
 		*/
@@ -709,7 +692,7 @@ namespace BALL
 
 		/**	Read a string from the output stream.
 		*/
-		virtual void get(string& s) = 0;
+		virtual void get(std::string& s) = 0;
 
 		/**	Read a 64-bit pointer from the input stream.
 		*/
@@ -1033,4 +1016,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_PERSISTENCEMANAGER_H
+#endif // BALL_CORE_CONCEPT_PERSISTENCEMANAGER_H

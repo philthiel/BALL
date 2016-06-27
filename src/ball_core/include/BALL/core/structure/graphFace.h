@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_GRAPHFACE_H
-#define BALL_STRUCTURE_GRAPHFACE_H
+
+#ifndef BALL_CORE_STRUCTURE_GRAPHFACE_H
+#define BALL_CORE_STRUCTURE_GRAPHFACE_H
 
 #include <BALL/core/common/create.h>
 #include <BALL/core/common/exception.h>
@@ -1387,4 +1386,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_RSFACE_H
+#endif // BALL_CORE_STRUCTURE_RSFACE_H

@@ -1,25 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_VECTOR3_H
-#define BALL_MATHS_VECTOR3_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-#	include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_VECTOR3_H
+#define BALL_CORE_MATHS_VECTOR3_H
 
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
-
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
-
-#ifndef BALL_MATHS_COMMON_H
-#	include <BALL/core/maths/common.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/common.h>
 
 #ifdef BALL_HAS_IEEEFP_H
 #	include <ieeefp.h>
@@ -1155,4 +1143,4 @@ extern template class BALL_EXPORT TVector3<float>;
 
 }// namespace BALL
 
-#endif // BALL_MATHS_VECTOR3_H
+#endif // BALL_CORE_MATHS_VECTOR3_H

@@ -1,20 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_SIDECHAINOPTIMIZER
-#define BALL_DOCKING_COMMON_SIDECHAINOPTIMIZER
 
-#ifndef BALL_SCORING_COMMON_SCORINGFUNCTION_H
+#ifndef BALL_CORE_DOCKING_COMMON_SIDECHAINOPTIMIZER_H
+#define BALL_CORE_DOCKING_COMMON_SIDECHAINOPTIMIZER_H
+
 #include <BALL/core/scoring/common/scoringFunction.h>
-#endif
-
-#ifndef BALL_STRUCTURE_ROTAMERLIBRARY_H
 #include <BALL/core/structure/rotamerLibrary.h>
-#endif
 
-#include <set>
 #include <list>
+#include <set>
+
 
 namespace BALL
 {
@@ -38,8 +33,8 @@ namespace BALL
 
 			ScoringFunction* scoring_function_;
 
-			list<Residue*> residues_;
+			std::list<Residue*> residues_;
 	};
 }
 
-#endif
+#endif // BALL_CORE_DOCKING_COMMON_SIDECHAINOPTIMIZER_H

@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: electrostaticPotentialCalculator.h,v 1.10 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
-#define BALL_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
- # include <BALL/core/kernel/system.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
+#define BALL_CORE_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
- # include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/defaultProcessors.h>
 
-#ifndef BALL_STRUCTURE_DEFAULTPROCESSORS_H
- # include <BALL/core/structure/defaultProcessors.h>
-#endif
 
 namespace BALL
 {
@@ -131,5 +121,4 @@ namespace BALL
 	};
 }
 
-
-#endif // BALL_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H
+#endif // BALL_CORE_SOLVATION_ELECTROSTATICPOTENTIALCALCULATOR_H

@@ -1,15 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: rtti.C,v 1.14 2003/08/26 09:17:44 oliver Exp $
-//
+//_new_file_header
 
-#include <BALL/core/common/global.h>
+
 #include <BALL/core/common/rtti.h>
 
-#include <typeinfo>
-#include <ctype.h>
+#include <BALL/core/common/global.h>
 
+#include <ctype.h>
+#include <typeinfo>
 
 // Nasty hacks to demangle the stupid name mangling schemes 
 // of diverse compilers.
@@ -38,10 +35,13 @@
 	}
 #endif
 
+using namespace std;
+
+
 namespace BALL 
 {
 
-	string streamClassName(const std::type_info& t)
+	string streamClassName(const type_info& t)
 	{
 #if (defined(BALL_COMPILER_GXX) || defined(BALL_COMPILER_INTEL)|| defined(BALL_COMPILER_LLVM))
     #if defined(BALL_COMPILER_GXX) && (BALL_COMPILER_VERSION_MAJOR < 3)

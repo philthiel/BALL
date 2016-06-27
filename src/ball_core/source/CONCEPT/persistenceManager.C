@@ -1,17 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: persistenceManager.C,v 1.23 2005/02/06 09:45:00 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/persistenceManager.h>
-#include <BALL/core/kernel/system.h>
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/nucleicAcid.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/xray/crystalInfo.h>
-#include <BALL/core/format/PDBRecords.h>
+
 #include <BALL/core/format/PDBInfo.h>
+#include <BALL/core/format/PDBRecords.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/xray/crystalInfo.h>
 
 // #define BALL_DEBUG_PERSISTENCE
 
@@ -22,6 +20,7 @@
 #endif
 
 using namespace std;
+
 
 namespace BALL 
 {

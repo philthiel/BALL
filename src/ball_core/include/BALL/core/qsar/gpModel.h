@@ -1,18 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_GPMODEL_H
-#define BALL_QSAR_GPMODEL_H
 
-#ifndef BALL_QSAR_KERNELMODEL_H
+#ifndef BALL_CORE_QSAR_GPMODEL_H
+#define BALL_CORE_QSAR_GPMODEL_H
+
 #include <BALL/core/qsar/kernelModel.h>
-#endif
-
-#ifndef BALL_QSAR_NONLINEARMODEL_H
 #include <BALL/core/qsar/nonlinearModel.h>
-#endif
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -43,14 +39,14 @@ namespace BALL
 				//@{
 				void train();
 				
-				Eigen::VectorXd predict(const vector<double>& substance, bool transform=1);
+				Eigen::VectorXd predict(const std::vector<double>& substance, bool transform=1);
 				
 				/** calculates standart error for the last prediction as \f$ \sqrt{k(x_*,x_*)-\sum_{i=1}^n \sum_{j=1}^n k(x_*,x_i)*k(x_*,x_j)-L_{ij} } \f$*/
 				double calculateStdErr();
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				//@}
 				
 			private:
@@ -70,4 +66,4 @@ namespace BALL
 	}
 }
 
-#endif // GPMODEL
+#endif // BALL_CORE_QSAR_GPMODEL_H

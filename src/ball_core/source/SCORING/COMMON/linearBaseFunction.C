@@ -1,8 +1,10 @@
-// $Id: linearBaseFunction.C,v 1.1 2005/11/21 19:27:08 anker Exp $
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/linearBaseFunction.h>
 
 #include <BALL/core/common/logStream.h>
+
 
 namespace BALL
 {

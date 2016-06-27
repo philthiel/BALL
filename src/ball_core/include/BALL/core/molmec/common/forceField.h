@@ -1,41 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: forceField.h,v 1.33 2005/12/23 17:01:51 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#define BALL_MOLMEC_COMMON_FORCEFIELD_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_COMMON_FORCEFIELD_H
+#define BALL_CORE_MOLMEC_COMMON_FORCEFIELD_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_CONCEPT_TIMESTAMP_H
-#	include <BALL/core/concept/timeStamp.h>
-#endif
-
-#ifndef BALL_MOLMEC_PARAMETER_FORCEFIELDPARAMETERS_H
-#	include <BALL/core/molmec/parameter/forceFieldParameters.h>
-#endif
-
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_PERIODIC_BOUNDARY_H
-#	include <BALL/core/molmec/common/periodicBoundary.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-#	include <BALL/core/molmec/common/atomVector.h>
-#endif
+#include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/molmec/common/atomVector.h>
+#include <BALL/core/molmec/common/periodicBoundary.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
 
 #include <vector>
+
 
 namespace BALL 
 {
@@ -405,7 +383,7 @@ namespace BALL
 		
 		/*_	The components of the force field
 		*/
-		vector<ForceFieldComponent*>	components_;
+		std::vector<ForceFieldComponent*>	components_;
 
 		/*_	The number of movable atoms in the force field
 		*/
@@ -444,4 +422,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_COMMON_FORCEFIELD_H
+#endif // BALL_CORE_MOLMEC_COMMON_FORCEFIELD_H

@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: FFT1D.C,v 1.7 2005/02/02 10:50:48 anhi Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/maths/FFT1D.h>
+
 
 namespace BALL
 {

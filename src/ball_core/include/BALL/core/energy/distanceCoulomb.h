@@ -1,11 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: distanceCoulomb.h,v 1.12 2005/12/23 17:01:43 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_ENERGY_DISTANCE_COULOMB_H
-#define BALL_ENERGY_DISTANCE_COULOMB_H
+
+#ifndef BALL_CORE_ENERGY_DISTANCE_COULOMB_H
+#define BALL_CORE_ENERGY_DISTANCE_COULOMB_H
 
 #include <BALL/core/common/macros.h>
 
@@ -28,4 +25,4 @@ namespace BALL
 	BALL_EXPORT double calculateDistanceCoulomb(const AtomContainer& fragment);
 } // namespace BALL
 
-#endif //  BALL_ENERGY_DISTANCE_COULOMB_H
+#endif //  BALL_CORE_ENERGY_DISTANCE_COULOMB_H

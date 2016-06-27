@@ -1,8 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/nmr/johnsonBoveyShiftProcessor.h>
+
 #include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/system/path.h>
@@ -10,6 +10,7 @@
 #include <list>
 
 using namespace std;
+
 
 namespace BALL 
 {

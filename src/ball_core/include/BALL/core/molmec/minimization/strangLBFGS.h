@@ -1,21 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: strangLBFGS.h,v 1.1.4.6 2007/08/07 09:12:36 aleru Exp $ 
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
-#define BALL_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
+
+#ifndef BALL_CORE_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
+#define BALL_CORE_MOLMEC_MINIMIZATION_STRANGLBFGS_H 
 
 #include <vector>
 
-#ifndef	BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
-#	include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
-#endif
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
+#include <BALL/core/molmec/minimization/lineSearch.h>
 
-#ifndef BALL_MOLMEC_MINIMIZATION_LINESEARCH_H
-# include <BALL/core/molmec/MINIMIZATION/lineSearch.h>
-#endif
 
 namespace BALL 
 {
@@ -238,4 +231,4 @@ namespace BALL
 	};
 } // end of namespace BALL
 
-#endif // BALL_MOLMEC_MINIMIZATION_STRANGLBFGS_H
+#endif // BALL_CORE_MOLMEC_MINIMIZATION_STRANGLBFGS_H

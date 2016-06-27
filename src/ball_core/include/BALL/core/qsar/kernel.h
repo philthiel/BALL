@@ -1,29 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_KERNEL_H
-#define BALL_QSAR_KERNEL_H
 
-#ifndef BALL_QSAR_LINEARMODEL_H
-#include <BALL/core/qsar/linearModel.h>
-#endif
-
-#ifndef BALL_QSAR_MODEL_H
-#include <BALL/core/qsar/Model.h>
-#endif
-
-#ifndef BALL_QSAR_EXCEPTION_H
-#include <BALL/core/qsar/exception.h>
-#endif
-
-#ifndef BALL_QSAR_REGRESSIONMODEL_H
-#include <BALL/core/qsar/regressionModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_KERNEL_H
+#define BALL_CORE_QSAR_KERNEL_H
 
 #include <cmath>
 #include <sstream>
+
+#include <BALL/core/qsar/exception.h>
+#include <BALL/core/qsar/linearModel.h>
+#include <BALL/core/qsar/Model.h>
+#include <BALL/core/qsar/regressionModel.h>
+
 
 namespace BALL
 {
@@ -158,4 +146,4 @@ namespace BALL
 	}
 }
 
-#endif // KERNEL
+#endif // BALL_CORE_QSAR_KERNEL_H

@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef RIDGEMODEL
-#define RIDGEMODEL
 
-#ifndef MLRMODEL
-#include <BALL/core/qsar/mlrModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_RIDGEMODEL_H
+#define BALL_CORE_QSAR_RIDGEMODEL_H
 
-#ifndef QSAR_EXCEPTION
 #include <BALL/core/qsar/exception.h>
-#endif
+#include <BALL/core/qsar/mlrModel.h>
 
+#include <vector>
 
 
 namespace BALL
@@ -39,9 +33,9 @@ namespace BALL
 				/** Starts multiple linear regression with the current data and saves the resulting linear combination of descriptors to training_result. \n */
 				void train();
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				//@}
 		
 			private:
@@ -55,5 +49,5 @@ namespace BALL
 	}
 }
 
-#endif // RIDGEMODEL
+#endif // BALL_CORE_QSAR_RIDGEMODEL_H
 

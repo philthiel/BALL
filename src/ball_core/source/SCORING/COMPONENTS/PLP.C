@@ -1,18 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
 
 #include <BALL/core/scoring/components/PLP.h>
+
+#include <BALL/core/format/HINFile.h>
 #include <BALL/core/molmec/common/support.h>
-#include <BALL/core/system/path.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/system/path.h>
+
 #include <map>
-#include <BALL/core/format/HINFile.h>
 
 using namespace std;
 using namespace BALL;

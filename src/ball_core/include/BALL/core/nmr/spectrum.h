@@ -1,36 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: spectrum.h,v 1.14.18.6 2007-04-12 13:53:57 anne Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_SPECTRUM_H
-#define BALL_NMR_SPECTRUM_H
 
-#ifndef BALL_NMR_PEAKLIST_H
-#	include<BALL/core/nmr/peakList.h>
-#endif
+#ifndef BALL_CORE_NMR_SPECTRUM_H
+#define BALL_CORE_NMR_SPECTRUM_H
 
-#ifndef BALL_DATATYPE_REGULARDATA1D_H
-#	include<BALL/core/datatype/regularData1D.h>
-#endif
-
-#ifndef BALL_DATATYPE_REGULARDATA2D_H
-#	include<BALL/core/datatype/regularData2D.h>
-#endif
-
-#ifndef BALL_DATATYPE_REGULARDATA3D_H
-#	include<BALL/core/datatype/regularData3D.h>
-#endif
+#include<BALL/core/datatype/regularData1D.h>
+#include<BALL/core/datatype/regularData2D.h>
+#include<BALL/core/datatype/regularData3D.h>
+#include<BALL/core/nmr/peakList.h>
 
 #ifdef BALL_HAS_FFTW
-# include <BALL/core/maths/complex.h>
-#ifndef BALL_MATHS_FFT1D_H
-# include <BALL/core/maths/FFT1D.h>
-#endif
-#ifndef BALL_MATHS_FFT2D_H
-# include <BALL/core/maths/FFT2D.h>
-#endif
+#include <BALL/core/maths/complex.h>
+#include <BALL/core/maths/FFT1D.h>
+#include <BALL/core/maths/FFT2D.h>
 #endif
 
 
@@ -336,5 +318,4 @@ namespace BALL
 # endif
 } // namespace BALL
 
-
-#endif // BALL_NMR_SPECTRUM_H
+#endif // BALL_CORE_NMR_SPECTRUM_H

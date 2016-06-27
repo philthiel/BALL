@@ -1,12 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/expression.h>
-#include <BALL/core/kernel/standardPredicates.h>
-#include <BALL/core/concept/factory.h>
 
-using namespace::std;
+#include <BALL/core/concept/factory.h>
+#include <BALL/core/kernel/standardPredicates.h>
+
+using namespace std;
+
+
 namespace BALL
 {
 	// Expression class, frontend to ExpressionTree

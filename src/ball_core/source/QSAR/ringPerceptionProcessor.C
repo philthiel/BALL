@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ringPerceptionProcessor.C,v 1.22.4.2 2007/04/03 13:29:39 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/ringPerceptionProcessor.h>
+
 #include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/PTE.h>
 
@@ -20,6 +18,7 @@
 #define BALL_QSAR_RINGPERCEPTIONPROCESSOR_MAX_RUNS 1000
 
 using namespace std;
+
 
 namespace BALL
 {

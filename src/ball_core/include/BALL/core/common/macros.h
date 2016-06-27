@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_MACROS_H
-#define BALL_COMMON_MACROS_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_MACROS_H
+#define BALL_CORE_COMMON_MACROS_H
 
-#ifndef BALL_COMMON_CONSTANTS_H
-#	include <BALL/core/common/constants.h>
-#endif
-
-#ifndef BALL_COMMON_RTTI_H
-#	include <BALL/core/common/rtti.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/constants.h>
+#include <BALL/core/common/rtti.h>
 
 #include <math.h>     // needed for fabs
 #include <typeinfo>		// needed for typeid
@@ -87,4 +78,4 @@
 #define BALL_DUMP_CLASS_HEADER(os,cl,ob)         os << "Object: " << (void *)ob << " is instance of class: " << #cl << ::std::endl;
 #define BALL_DUMP_STREAM_SUFFIX(os)              
 
-#endif // BALL_COMMON_MACROS_H
+#endif // BALL_CORE_COMMON_MACROS_H

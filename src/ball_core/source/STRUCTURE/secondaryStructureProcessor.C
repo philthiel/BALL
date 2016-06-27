@@ -1,17 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/secondaryStructureProcessor.h>
+
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/secondaryStructure.h>
 #include <BALL/core/structure/HBondProcessor.h>
 
-#include <BALL/core/kernel/secondaryStructure.h>           
-#include <BALL/core/kernel/protein.h>
-#include <BALL/core/kernel/chain.h>
-#include <BALL/core/kernel/bond.h>
 #include <cmath>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,34 +1,20 @@
-#ifndef BALL_STRUCTURE_BINDINGPOCKETPROCESSOR_H
-#define BALL_STRUCTURE_BINDINGPOCKETPROCESSOR_H
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
 
-#ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/core/kernel/residue.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BINDINGPOCKETPROCESSOR_H
+#define BALL_CORE_STRUCTURE_BINDINGPOCKETPROCESSOR_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-# include <BALL/core/maths/vector3.h> 
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHGRID_H
-# include <BALL/core/datatype/hashGrid.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#include <vector>
-#include <string>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/system.h>
 
 #include <fstream>
+#include <string>
+#include <vector>
+
 
 namespace BALL
 {
@@ -140,11 +126,11 @@ namespace BALL
 
     /** Returns the position and burial counts of the calculated actice site points
      */
-    const vector<std::pair<Vector3,double> >& getActiveSitePoints() const;
+	const std::vector<std::pair<Vector3,double> >& getActiveSitePoints() const;
     
     /** Returns a vector of vectors, each containing one layer with position and probe weight of its spheres 
      */
-    const vector<vector<std::pair<Vector3,double> > >& getLayers() const;
+	const std::vector<std::vector<std::pair<Vector3,double> > >& getLayers() const;
 
     /** options for BALLPass 
      */
@@ -343,4 +329,4 @@ namespace BALL
   
 } //namesspace BALL
 
-#endif // BALL_STRUCTURE_BINDINGPOCKETPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_BINDINGPOCKETPROCESSOR_H

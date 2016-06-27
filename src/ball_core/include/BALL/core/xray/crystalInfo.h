@@ -1,35 +1,19 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_XRAY_CRYSTALINFO_H
-#define BALL_XRAY_CRYSTALINFO_H
 
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
+#ifndef BALL_CORE_XRAY_CRYSTALINFO_H
+#define BALL_CORE_XRAY_CRYSTALINFO_H
+
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/persistenceManager.h>
 #include <BALL/core/concept/persistentObject.h>
-#endif
-
-#ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#include <BALL/core/structure/geometricTransformations.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-#include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
 #include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
-
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/structure/geometricTransformations.h>
 
 #include <string>
+#include <vector>
+
 
 namespace BALL
 {
@@ -52,7 +36,7 @@ namespace BALL
 			{
 				/** The file name for the space group to symmetry operations mappings file
 				 */
-				static const string SPACE_GROUP_FILE;
+				static const std::string SPACE_GROUP_FILE;
 			};
 			
 			/** Default Names
@@ -61,7 +45,7 @@ namespace BALL
 			{
 				/** The default filename for the space group mappings file
 				 */
-				static const string SPACE_GROUP_FILE;
+				static const std::string SPACE_GROUP_FILE;
 			};
 
 			//@}
@@ -201,11 +185,11 @@ namespace BALL
 			Matrix4x4 cart2frac_;
 			Matrix4x4 frac2cart_;
 
-			vector<Matrix4x4> ncs_symops_;
-			vector<bool> ncs_isgiven_;
-			vector<Matrix4x4> sg_symops_;
+			std::vector<Matrix4x4> ncs_symops_;
+			std::vector<bool> ncs_isgiven_;
+			std::vector<Matrix4x4> sg_symops_;
 
 	};
 }	// namespace BALL
 
-#endif // BALL_XRAY_CRYSTALINFO_H
+#endif // BALL_CORE_XRAY_CRYSTALINFO_H

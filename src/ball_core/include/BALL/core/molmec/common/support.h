@@ -1,34 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: support.h,v 1.28 2005/12/23 17:01:52 amoll Exp $
-//
+//_new_file_header
 
 
-#ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#define BALL_MOLMEC_COMMON_SUPPORT_H
+#ifndef BALL_CORE_MOLMEC_COMMON_SUPPORT_H
+#define BALL_CORE_MOLMEC_COMMON_SUPPORT_H
 
-#ifndef BALL_MATHS_SIMPLEBOX3_H
-#	include <BALL/core/maths/simpleBox3.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/core/molmec/common/forceField.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-#	include <BALL/core/molmec/common/atomVector.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHGRID_H
-#	include <BALL/core/datatype/hashGrid.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-#     include <BALL/core/kernel/bond.h>
-#endif
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/maths/simpleBox3.h>
+#include <BALL/core/molmec/common/atomVector.h>
+#include <BALL/core/molmec/common/forceField.h>
 
 #include <vector>
+
 
 namespace BALL 
 {
@@ -237,4 +220,4 @@ namespace BALL
 	} // namespace MolmecSupport
 } // namespace BALL
 
-#endif // BALL_MOLMEC_COMMON_SUPPORT_H
+#endif // BALL_CORE_MOLMEC_COMMON_SUPPORT_H

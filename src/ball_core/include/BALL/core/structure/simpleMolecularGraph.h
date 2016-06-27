@@ -1,29 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SIMPLEMOLECULARGRAPH_H
-#define BALL_STRUCTURE_SIMPLEMOLECULARGRAPH_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SIMPLEMOLECULARGRAPH_H
+#define BALL_CORE_STRUCTURE_SIMPLEMOLECULARGRAPH_H
 
-#ifndef BALL_KERNEL_BOND_H
-#	include <BALL/core/kernel/bond.h>
-#endif
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/molecule.h>
 
-#ifndef BALL_STRUCTURE_MOLECULE_H
-#	include <BALL/core/kernel/molecule.h>
-#endif
-
-#ifndef BALL_STRUCTURE_FRAGMENT_H
-#	include <BALL/core/kernel/fragment.h>
-#endif
-
-#include <list>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
+#include <list>
+
 
 namespace BALL
 {
@@ -506,4 +495,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_MOLECULARGRAPH_H
+#endif // BALL_CORE_STRUCTURE_MOLECULARGRAPH_H

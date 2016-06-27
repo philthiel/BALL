@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: parameterSection.h,v 1.25 2005/12/23 17:01:46 amoll Exp $
-//
+//_new_file_header
 
-// Format: general  parameter section class
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#define BALL_FORMAT_PARAMETERSECTION_H
+#ifndef BALL_CORE_FORMAT_PARAMETERSECTION_H
+#define BALL_CORE_FORMAT_PARAMETERSECTION_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+
 
 namespace BALL 
 {
@@ -239,4 +233,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_PARAMETERSECTION_H
+#endif // BALL_CORE_FORMAT_PARAMETERSECTION_H

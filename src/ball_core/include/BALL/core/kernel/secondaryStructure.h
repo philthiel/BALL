@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_SECONDARYSTRUCTURE_H
-#define BALL_KERNEL_SECONDARYSTRUCTURE_H
 
-#ifndef BALL_KERNEL_RESIDUE_H
-#	include <BALL/core/kernel/residue.h>
-#endif
+#ifndef BALL_CORE_KERNEL_SECONDARYSTRUCTURE_H
+#define BALL_CORE_KERNEL_SECONDARYSTRUCTURE_H
 
-#ifndef BALL_KERNEL_RESIDUEITERATOR_H
-#	include <BALL/core/kernel/residueIterator.h>
-#endif
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/residueIterator.h>
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
 
 namespace BALL 
 {
@@ -314,8 +306,8 @@ namespace BALL
 			
 		// --- EXTERNAL ITERATORS
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(Residue)
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(PDBAtom)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(Residue)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(PDBAtom)
 
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(SecondaryStructure, Residue, residues)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(SecondaryStructure, PDBAtom, pdbAtoms)
@@ -365,10 +357,10 @@ namespace BALL
 
 		bool remove(AtomContainer& atom_container);
 
-		BALL_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
+		BALL_CORE_KERNEL_DEFINE_ITERATOR_CREATORS(AtomContainer)
 		BALL_DECLARE_STD_ITERATOR_WRAPPER(SecondaryStructure, AtomContainer, atomContainers)
 	};
 
 } // namespace BALL
 
-#endif // BALL_KERNEL_SECONDARYSTRUCTURE_H
+#endif // BALL_CORE_KERNEL_SECONDARYSTRUCTURE_H

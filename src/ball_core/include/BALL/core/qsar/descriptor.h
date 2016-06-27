@@ -1,18 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef BALL_QSAR_DESCRIPTOR_H
-#define BALL_QSAR_DESCRIPTOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
+#ifndef BALL_CORE_QSAR_DESCRIPTOR_H
+#define BALL_CORE_QSAR_DESCRIPTOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/core/kernel/atomContainer.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/kernel/atomContainer.h>
+
 
 namespace BALL
 {
@@ -127,5 +121,5 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_QSAR_DESCRIPTOR_H
+#endif // BALL_CORE_QSAR_DESCRIPTOR_H
  

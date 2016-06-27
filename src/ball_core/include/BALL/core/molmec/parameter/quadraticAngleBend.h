@@ -1,21 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
- 
-#ifndef BALL_MOLMEC_PARAMETER_QUADRATICANGLEBEND_H
-#define BALL_MOLMEC_PARAMETER_QUADRATICANGLEBEND_H
+//_new_file_header
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_PARAMETER_QUADRATICANGLEBEND_H
+#define BALL_CORE_MOLMEC_PARAMETER_QUADRATICANGLEBEND_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+
+#include <vector>
+
 
 namespace BALL 
 {
@@ -91,10 +85,10 @@ namespace BALL
 
 		Size						number_of_atom_types_;
 
-		vector<Values>	values_;
+		std::vector<Values>	values_;
 
-		vector<Index>		value_index_;
+		std::vector<Index>		value_index_;
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_QUADRATICBONDSTRETCH_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_QUADRATICBONDSTRETCH_H

@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: numericalIntegrator.h,v 1.18 2004/05/27 19:49:42 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_NUMERICALINTEGRATOR_H
-#define BALL_MATHS_NUMERICALINTEGRATOR_H
 
-#ifndef BALL_MATHS_FUNCTION_H
-# include <BALL/core/maths/function.h>
-#endif
+#ifndef BALL_CORE_MATHS_NUMERICALINTEGRATOR_H
+#define BALL_CORE_MATHS_NUMERICALINTEGRATOR_H
+
+#include <BALL/core/maths/function.h>
+
 
 namespace BALL
 { 
@@ -183,4 +179,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_MATHS_NUMERICALINTEGRATOR_H
+#endif // BALL_CORE_MATHS_NUMERICALINTEGRATOR_H

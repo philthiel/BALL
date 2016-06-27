@@ -1,15 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef NLMODEL
-#define NLMODEL
 
-#ifndef REGRESSION
+#ifndef BALL_CORE_QSAR_NLMODEL_H
+#define BALL_CORE_QSAR_NLMODEL_H
+
 #include <BALL/core/qsar/regressionModel.h>
-#endif
-
 
 
 namespace BALL
@@ -39,4 +34,4 @@ namespace BALL
 }
 
 
-#endif // NLMODEL
+#endif // BALL_CORE_QSAR_NLMODEL_H

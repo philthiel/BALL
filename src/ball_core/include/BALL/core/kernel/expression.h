@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#define BALL_KERNEL_EXPRESSION_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_KERNEL_EXPRESSION_H
+#define BALL_CORE_KERNEL_EXPRESSION_H
 
-#ifndef BALL_KERNEL_EXPRESSIONPARSER_H
-#	include <BALL/core/kernel/expressionParser.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/expressionParser.h>
+
 
 namespace BALL
 {
@@ -217,5 +212,5 @@ namespace BALL
 	};
 }
 
-#endif // BALL_KERNEL_EXPRESSION_H
+#endif // BALL_CORE_KERNEL_EXPRESSION_H
 

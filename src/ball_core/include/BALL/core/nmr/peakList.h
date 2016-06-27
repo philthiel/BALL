@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: peakList.h,v 1.17 2003/08/26 08:04:45 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_PEAKLIST_H
-#define BALL_NMR_PEAKLIST_H
 
-#ifndef BALL_NMR_PEAK_H
-#	include<BALL/core/nmr/peak.h>
-#endif
+#ifndef BALL_CORE_NMR_PEAKLIST_H
+#define BALL_CORE_NMR_PEAKLIST_H
+
+#include<BALL/core/nmr/peak.h>
+
 
 namespace BALL 
 {
@@ -134,4 +130,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_PEAKLIST_H
+#endif // BALL_CORE_NMR_PEAKLIST_H

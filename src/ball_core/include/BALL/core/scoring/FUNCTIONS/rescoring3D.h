@@ -1,13 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_RESCORING3D_H
-#define BALL_SCORING_FUNCTIONS_RESCORING3D_H
 
-#include <BALL/core/scoring/functions/rescoring.h>
+#ifndef BALL_CORE_SCORING_FUNCTIONS_RESCORING3D_H
+#define BALL_CORE_SCORING_FUNCTIONS_RESCORING3D_H
+
 #include <BALL/core/datatype/regularData3D.h>
+#include <BALL/core/scoring/functions/rescoring.h>
 
 
 namespace BALL
@@ -41,4 +39,5 @@ namespace BALL
 
     };
 }
-#endif
+
+#endif // BALL_CORE_SCORING_FUNCTIONS_RESCORING3D_H

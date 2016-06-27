@@ -1,16 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
+//_new_file_header
 
-#ifndef BALL_XRAY_SPACEGROUPPARAMETERS_H
-#define BALL_XRAY_SPACEGROUPPARAMETERS_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
+#ifndef BALL_CORE_XRAY_SPACEGROUPPARAMETERS_H
+#define BALL_CORE_XRAY_SPACEGROUPPARAMETERS_H
 
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/maths/matrix44.h>
+
 
 namespace BALL 
 {
@@ -39,4 +35,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_XRAY_SPACEGROUPPARAMETERS_H
+#endif // BALL_CORE_XRAY_SPACEGROUPPARAMETERS_H

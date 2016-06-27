@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-// $Id: amberEvaluation.h,v 1.3.18.2 2007/06/17 07:02:21 oliver Exp $
-//
-// Author:
-//
-//
+//_new_file_header
 
-#ifndef BALL_SCORING_FUNCTIONS_AMBEREVALUATION_H
-#define BALL_SCORING_FUNCTIONS_AMBEREVALUATION_H
 
-#ifndef BALL_SCORING_FUNCTIONS_FORCEFIELDEVALUATION_H
-# include <BALL/core/scoring/functions/forceFieldEvaluation.h>
-#endif
+#ifndef BALL_CORE_SCORING_FUNCTIONS_AMBEREVALUATION_H
+#define BALL_CORE_SCORING_FUNCTIONS_AMBEREVALUATION_H
 
-#ifndef BALL_MOLMEC_AMBER_AMBER_H
-# include <BALL/core/molmec/amber/amber.h>
-#endif
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/scoring/functions/forceFieldEvaluation.h>
+
 
 namespace BALL
 {
@@ -63,4 +54,4 @@ namespace BALL
 		};
 }
 
-#endif // BALL_SCORING_FUNCTIONS_AMBEREVALUATION_H
+#endif // BALL_CORE_SCORING_FUNCTIONS_AMBEREVALUATION_H

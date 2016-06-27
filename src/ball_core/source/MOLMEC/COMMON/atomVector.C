@@ -1,20 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: atomVector.C,v 1.13.30.1 2007/05/18 12:05:59 oliver Exp $
-//
-// Author:
-//   Oliver Kohlbacher
+//_new_file_header
+
 
 #include <BALL/core/molmec/common/atomVector.h>
-#include <BALL/core/molmec/common/gradient.h>
-#include <BALL/core/maths/vector3.h>
+
 #include <BALL/core/concept/composite.h>
+#include <BALL/core/maths/vector3.h>
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/molmec/common/gradient.h>
 
 #undef BALL_DEBUG
 
 using namespace std;
+
 
 namespace BALL
 {

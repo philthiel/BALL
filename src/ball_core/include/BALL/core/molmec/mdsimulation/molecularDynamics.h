@@ -1,22 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: molecularDynamics.h,v 1.33 2005/12/23 17:01:53 amoll Exp $
-//
+//_new_file_header
 
-// MolecularDynamics: A base class for molecular dynamics simulations    
-// Useful MD classes must be derived from this class.
 
-#ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
-#define BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
+#ifndef BALL_CORE_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
+#define BALL_CORE_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H
-# include <BALL/core/molmec/common/atomVector.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/molmec/common/atomVector.h>
 
 
 namespace BALL
@@ -424,4 +413,4 @@ namespace BALL
 	};	// end of class MolecularDynamics 
 }	 // end of namespace Ball
 
-#endif // BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
+#endif // BALL_CORE_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H

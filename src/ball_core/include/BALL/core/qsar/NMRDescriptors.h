@@ -1,25 +1,13 @@
-#ifndef BALL_QSAR_NMRDESCRIPTORS_H
-#define BALL_QSAR_NMRDESCRIPTORS_H
+//_new_file_header
 
-#ifndef BALL_COMMON_H
-#	include <BALL/core/common.h>
-#endif
+#ifndef BALL_CORE_QSAR_NMRDESCRIPTORS_H
+#define BALL_CORE_QSAR_NMRDESCRIPTORS_H
 
-#ifndef BALL_DATATYPE_H
-# include <BALL/core/datatype/hashMap.h>
-#endif
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/residue.h>
 
-#ifndef BALL_KERNEL_RESIDUE_H
-# include <BALL/core/kernel/residue.h>
-#endif
-
-#ifndef BALL_KERNEL_PROTEIN_H
-# include <BALL/core/kernel/protein.h>
-#endif
-
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
 
 namespace BALL
 {
@@ -76,4 +64,4 @@ namespace BALL
 
 }
 
-#endif
+#endif // BALL_CORE_QSAR_NMRDESCRIPTORS_H

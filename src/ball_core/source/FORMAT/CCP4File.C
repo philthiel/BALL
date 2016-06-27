@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: CCP4File.C,v 1.1.4.1 2007/03/25 22:00:16 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/CCP4File.h>
+
 
 namespace BALL
 {

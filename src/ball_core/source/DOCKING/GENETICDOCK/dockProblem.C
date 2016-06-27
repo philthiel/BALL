@@ -1,30 +1,31 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
+
+#include <BALL/core/docking/geneticdock/dockProblem.h>
+
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/docking/geneticdock/evolutionaryDocking.h>
+#include <BALL/core/docking/geneticdock/genes.h>
 #include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/MOL2File.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/molecule.h>
-#include <BALL/core/kernel/system.h>
 #include <BALL/core/kernel/selector.h>
-#include <BALL/core/format/MOL2File.h>
-#include <BALL/core/structure/geometricTransformations.h>
-#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/maths/matrix44.h>
-#include <BALL/core/datatype/options.h>
 #include <BALL/core/maths/quaternion.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/geometricTransformations.h>
 #include <BALL/core/system/path.h>
-#include <BALL/core/docking/geneticdock/genes.h>
-#include <BALL/core/docking/geneticdock/evolutionaryDocking.h>
-#include <BALL/core/docking/geneticdock/dockProblem.h>
-#include <BALL/core/concept/composite.h>
 
 #include <cmath>
+#include <fstream>
 #include <iostream>
 #include <string>
-#include <fstream>
 
 using namespace std;
+
 
 namespace BALL
 {

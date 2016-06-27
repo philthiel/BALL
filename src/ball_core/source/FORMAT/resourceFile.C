@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/resourceFile.h>
 
@@ -8,12 +7,9 @@
 
 #include <stack>
 
-using std::istream;
-using std::ostream;
-using std::endl;
-using std::ios;
-using std::streampos;
-using std::stack;
+
+using namespace std;
+
 
 namespace BALL 
 {

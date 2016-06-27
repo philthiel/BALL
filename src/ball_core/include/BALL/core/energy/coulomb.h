@@ -1,11 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: coulomb.h,v 1.13 2005/12/23 17:01:43 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_ENERGY_COULOMB_H
-#define BALL_ENERGY_COULOMB_H
+
+#ifndef BALL_CORE_ENERGY_COULOMB_H
+#define BALL_CORE_ENERGY_COULOMB_H
 
 #include <BALL/core/common/macros.h>
 
@@ -25,4 +22,4 @@ namespace BALL
 	BALL_EXPORT double calculateCoulomb(const AtomContainer& atoms);
 } // namespace BALL
 
-#endif //  BALL_ENERGY_COULOMB_H
+#endif // BALL_CORE_ENERGY_COULOMB_H

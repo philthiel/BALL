@@ -1,14 +1,15 @@
-/// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/peptideBuilder.h>
 
-#include <BALL/core/maths/analyticalGeometry.h>
-#include <BALL/core/structure/geometricTransformations.h>
 #include <BALL/core/kernel/PTE.h>
-#include <cmath>
+#include <BALL/core/maths/analyticalGeometry.h>
 #include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/geometricTransformations.h>
+
+#include <cmath>
+
 
 namespace BALL
 {

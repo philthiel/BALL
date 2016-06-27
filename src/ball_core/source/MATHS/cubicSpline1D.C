@@ -1,3 +1,6 @@
+//_new_file_header
+
+
 #include <BALL/core/maths/cubicSpline1D.h>
 
 #include <BALL/core/common/logStream.h>
@@ -6,6 +9,7 @@
 #include <set>
 
 using namespace std;
+
 
 namespace BALL 
 {

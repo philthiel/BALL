@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_MOLFILEFACTORY_H
-#define BALL_FORMAT_MOLFILEFACTORY_H
 
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
+#ifndef BALL_CORE_FORMAT_MOLFILEFACTORY_H
+#define BALL_CORE_FORMAT_MOLFILEFACTORY_H
+
+#include <BALL/core/system/file.h>
+
 
 namespace BALL
 {
@@ -59,5 +57,5 @@ class BALL_EXPORT MolFileFactory
 
 }
 
-#endif //BALL_FORMAT_MOLFILEFACTORY_H
+#endif // BALL_FORMAT_MOLFILEFACTORY_H
 

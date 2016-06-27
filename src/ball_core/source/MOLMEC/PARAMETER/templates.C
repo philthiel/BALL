@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/parameter/templates.h>
+
 #include <BALL/core/kernel/residue.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

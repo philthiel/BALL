@@ -1,31 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics Parameter: class describing the atom type section of a parameter file
 
-#ifndef BALL_MOLMEC_PARAMETER_TEMPLATES_H
-#define BALL_MOLMEC_PARAMETER_TEMPLATES_H
+#ifndef BALL_CORE_MOLMEC_PARAMETER_TEMPLATES_H
+#define BALL_CORE_MOLMEC_PARAMETER_TEMPLATES_H
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/core/datatype/hashset.h>
-#endif
-
+#include <BALL/core/datatype/hashset.h>
+#include <BALL/core/format/parameterSection.h>
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/system.h>
+
 
 namespace BALL 
 {
 	class Atom;
 
-	/**	Force Field Residue Template Class.	
+	/**	Force Field Residue Template Class.
+	 * Molecular Mechanics Parameter: class describing the atom type section of a parameter file
     	\ingroup  MolmecParameters
 	*/
 	class BALL_EXPORT Templates 
@@ -139,4 +129,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_TEMPLATES_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_TEMPLATES_H

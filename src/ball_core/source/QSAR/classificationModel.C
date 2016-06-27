@@ -1,9 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/classificationModel.h>
+
+#include <BALL/core/qsar/classificationValidation.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -54,7 +57,7 @@ namespace BALL
 			}
 		}
 
-		vector < int > ClassificationModel::getClassLabels()
+		std::vector<int> ClassificationModel::getClassLabels()
 		{
 			return labels_;	
 		}

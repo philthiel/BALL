@@ -1,19 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#define BALL_CONCEPT_PROCESSOR_H
 
-#ifndef BALL_CONCEPT_BASEFUNCTOR_H
-#	include <BALL/core/concept/baseFunctor.h>
-#endif
-
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_PROCESSOR_H
+#define BALL_CORE_CONCEPT_PROCESSOR_H
 
 #include <BALL/core/common/create.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/concept/baseFunctor.h>
+
 
 namespace BALL 
 {
@@ -253,4 +247,4 @@ template class BALL_EXPORT UnaryProcessor<Atom>;
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_PROCESSOR_H
+#endif // BALL_CORE_CONCEPT_PROCESSOR_H

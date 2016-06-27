@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
- 
-#ifndef BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
-#define BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
+//_new_file_header
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-#	include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_PARAMETER_POTENTIAL1210_H
+#define BALL_CORE_MOLMEC_PARAMETER_POTENTIAL1210_H
+
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+
 
 namespace BALL 
 {
@@ -134,4 +129,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
+#endif // BALL_CORE_MOLMEC_PARAMETER_POTENTIAL1210_H

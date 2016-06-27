@@ -1,43 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SURFACE_PROCESSOR_H
-#define BALL_STRUCTURE_SURFACE_PROCESSOR_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
-#ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/core/structure/reducedSurface.h>
-#endif
-#ifndef BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#	include <BALL/core/structure/solventExcludedSurface.h>
-#endif
-#ifndef BALL_STRUCTURE_TRIANGULATEDSES_H
-#	include <BALL/core/structure/triangulatedSES.h>
-#endif
-#ifndef BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
-#	include <BALL/core/structure/solventAccessibleSurface.h>
-#endif
-#ifndef BALL_STRUCTURE_TRIANGULATEDSAS_H
-#	include <BALL/core/structure/triangulatedSAS.h>
-#endif
-#ifndef BALL_STRUCTURE_TRIANGULATEDSURFACE_H
-#	include <BALL/core/structure/triangulatedSurface.h>
-#endif
-#ifndef BALL_MATHS_SURFACE_H
-#	include <BALL/core/maths/surface.h>
-#endif
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
-#ifndef BALL_KERNEL_PTE_H
-#	include <BALL/core/kernel/PTE.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SURFACE_PROCESSOR_H
+#define BALL_CORE_STRUCTURE_SURFACE_PROCESSOR_H
+
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/structure/reducedSurface.h>
+#include <BALL/core/structure/solventAccessibleSurface.h>
+#include <BALL/core/structure/solventExcludedSurface.h>
+#include <BALL/core/structure/triangulatedSAS.h>
+#include <BALL/core/structure/triangulatedSES.h>
+#include <BALL/core/structure/triangulatedSurface.h>
+
 
 namespace BALL
 {
@@ -153,4 +131,4 @@ namespace BALL
 
 }
 
-#endif //  BALL_STRUCTURE_SURFACE_PROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_SURFACE_PROCESSOR_H

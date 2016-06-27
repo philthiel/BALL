@@ -1,19 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-#include <iostream>
+//_new_file_header
+
 
 #include <BALL/core/structure/hybridisationProcessor.h>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/system/path.h>
+
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
 #include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/residue.h>
+#include <BALL/core/maths/common.h>
 #include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/format/parameters.h>
-#include <BALL/core/format/parameterSection.h>
-#include <BALL/core/maths/common.h>
+#include <BALL/core/system/path.h>
+
+#include <iostream>
 
 // Qt
 #include <QtXml/QtXml>
@@ -23,6 +24,7 @@
 #undef DEBUG
 
 using namespace std;
+
 
 namespace BALL 
 {
@@ -647,8 +649,8 @@ if (!openNbr)
 		QFile file((filepath.c_str()));
 		if (!file.open(QFile::ReadOnly | QFile::Text)) 
 		{
-			Log.error() << "HybridisationProcessor: cannot read file " << filename << std::endl;
-			Log.error() << "Reason was: " << file.errorString().toStdString() << std::endl;
+			Log.error() << "HybridisationProcessor: cannot read file " << filename << endl;
+			Log.error() << "Reason was: " << file.errorString().toStdString() << endl;
 			return 1;
 		}
 
@@ -659,7 +661,7 @@ if (!openNbr)
 		{
 			Log.error() << "Parse error in line " << errorLine << " column " << errorColumn 
 									<<  " of file " << filename << endl;
-			Log.error() << "Reason was: " << errorStr.toStdString() << std::endl;
+			Log.error() << "Reason was: " << errorStr.toStdString() << endl;
 			return 1;
 		}
 		// get the root element...

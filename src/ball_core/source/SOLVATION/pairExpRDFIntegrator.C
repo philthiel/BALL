@@ -1,16 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: pairExpRDFIntegrator.C,v 1.18 2004/11/07 19:54:59 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/pairExpRDFIntegrator.h>
 
-#include <limits>
-
 #include <BALL/core/common/logStream.h>
 
+#include <limits>
+
 using namespace std;
+
 
 namespace BALL
 {

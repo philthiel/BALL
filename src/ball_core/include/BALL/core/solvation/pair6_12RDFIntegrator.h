@@ -1,25 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: pair6_12RDFIntegrator.h,v 1.24 2005/12/23 17:01:59 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
-#define BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
 
-#ifndef BALL_STRUCTURE_RDFINTEGRATOR_H
-# include <BALL/core/structure/RDFIntegrator.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_PAIR6_12RDFINTEGRATOR_H
+#define BALL_CORE_SOLVATION_PAIR6_12RDFINTEGRATOR_H
 
-#ifndef BALL_MATHS_PIECEWISEFUNCTION_H
-# include <BALL/core/maths/piecewiseFunction.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/maths/piecewiseFunction.h>
+#include <BALL/core/structure/RDFIntegrator.h>
 
 // ?????: DOCU ... documentation for constants
+
 
 namespace BALL
 {
@@ -283,4 +273,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif //  BALL_SOLVATION_PAIR6_12RDFINTEGRATOR_H
+#endif //  BALL_CORE_SOLVATION_PAIR6_12RDFINTEGRATOR_H

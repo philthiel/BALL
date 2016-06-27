@@ -1,24 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef PLSMODEL
-#define PLSMODEL
 
-#ifndef LMODEL
-#include <BALL/core/qsar/linearModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_PLSMODEL_H
+#define BALL_CORE_QSAR_PLSMODEL_H
 
-#ifndef STATISTICS
-#include <BALL/core/qsar/statistics.h>
-#endif
-
-#ifndef QSAR_EXCEPTION
 #include <BALL/core/qsar/exception.h>
-#endif
-
 #include <BALL/core/qsar/latentVariableModel.h>
+#include <BALL/core/qsar/linearModel.h>
+#include <BALL/core/qsar/statistics.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -60,9 +51,9 @@ namespace BALL
 				/** returns a pointer to the  PLS Y-scores matrix U */
 				const Eigen::MatrixXd* getU();
 				
-				void setParameters(vector<double>& v);
+				void setParameters(std::vector<double>& v);
 				
-				vector<double> getParameters() const;
+				std::vector<double> getParameters() const;
 				//@}
 		
 				
@@ -80,4 +71,4 @@ namespace BALL
 }
 
 
-#endif // PLSMODEL
+#endif // BALL_CORE_QSAR_PLSMODEL_H

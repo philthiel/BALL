@@ -1,16 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_H
-# include <BALL/core/common.h>
-#endif
 
-#ifndef BALL_SYSTEM_TIMER_H
-# include <BALL/core/system/timer.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_BENCHMARK_H
+#define BALL_CORE_CONCEPT_BENCHMARK_H
+
+#include <BALL/core/system/timer.h>
 
 #include <string>
+
 
 /**	Start a new benchmark section.
 		The argument weight determines the weighting factor of the section.
@@ -176,3 +173,4 @@ int main(int argc, char **argv)\
 	}\
 }\
 
+#endif // BALL_CORE_CONCEPT_BENCHMARK_H

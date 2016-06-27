@@ -1,12 +1,15 @@
-// $Id: CHPI.h,v 1.2.10.1 2007/08/07 16:16:15 bertsch Exp $
-// Molecular Mechanics: SLICK force field, CH---pi interaction
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_CHPISLICK_H
-#define BALL_SCORING_COMPONENTS_CHPISLICK_H
 
+#ifndef BALL_CORE_SCORING_COMPONENTS_CHPISLICK_H
+#define BALL_CORE_SCORING_COMPONENTS_CHPISLICK_H
+
+#include <BALL/core/datatype/options.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/datatype/options.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -261,7 +264,7 @@ namespace BALL
 			virtual bool setup()
 				;
 
-			void update(const vector<std::pair<Atom*, Atom*> >&);
+			void update(const std::vector<std::pair<Atom*, Atom*> >&);
 
 			/**
 			 * Calculate CH_PI interaction score
@@ -318,4 +321,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_SCORING_COMPONENTS_CHPISLICK_H
+#endif // BALL_CORE_SCORING_COMPONENTS_CHPISLICK_H

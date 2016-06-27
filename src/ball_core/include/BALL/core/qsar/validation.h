@@ -1,16 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef VALIDATION
-#define VALIDATION
 
-#ifndef QSARDATA
+#ifndef BALL_CORE_QSAR_VALIDATION_H
+#define BALL_CORE_QSAR_VALIDATION_H
+
 #include <BALL/core/qsar/QSARData.h>
-#endif
 
 #include <iterator>
+#include <string>
+#include <vector>
 
 
 namespace BALL
@@ -73,10 +71,10 @@ namespace BALL
 				int getStat() const;
 				
 				/** save the result of the applied validation methods to a file */
-				virtual void saveToFile(string filename) const = 0;
+				virtual void saveToFile(String filename) const = 0;
 				
 				/** restore validation-results from a file */
-				virtual void readFromFile(string filename) = 0;
+				virtual void readFromFile(String filename) = 0;
 				//@}
 				
 				
@@ -101,13 +99,13 @@ namespace BALL
 				 */
 				//@{
 				/** contains all substances whose activities are to be predicted by the next call of testAllSubstances() */ 
-				vector<vector<double> > test_substances_;
+				std::vector<std::vector<double> > test_substances_;
 				
 				/** contains the experimentally determined results (activities) for all current test-substances in one column for each activity */
 				Eigen::MatrixXd test_Y_;
 				
 				/** contains the names of all current test-substances */
-				vector<string> substances_names_;
+				std::vector<std::string> substances_names_;
 				
 				
 				/** pointer to the model, which the object of this class should test */
@@ -123,6 +121,4 @@ namespace BALL
 	}
 }
 
-
-
-#endif // VALIDATION
+#endif // BALL_CORE_QSAR_VALIDATION_H

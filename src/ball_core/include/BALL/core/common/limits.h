@@ -1,17 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_COMMON_LIMITS_H
-#define BALL_COMMON_LIMITS_H
 
-#ifndef BALL_CONFIG_CONFIG_H
-#	include <BALL/config.h>
-#endif
+#ifndef BALL_CORE_COMMON_LIMITS_H
+#define BALL_CORE_COMMON_LIMITS_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#include <BALL/config.h>
+#include <BALL/core/common/global.h>
 
 #ifdef BALL_HAS_NUMERIC_LIMITS
 #	include <limits>
@@ -27,6 +21,7 @@
 #	ifdef BALL_HAS_FLOAT_H
 #		include <float.h>
 #	endif
+
 
 namespace BALL 
 {
@@ -276,4 +271,4 @@ namespace BALL
 
 }	// namespace BALL
 
-#endif // BALL_COMMON_LIMITS_H
+#endif // BALL_CORE_COMMON_LIMITS_H

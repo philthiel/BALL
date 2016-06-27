@@ -1,22 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
 
-#ifndef BALL_QSAR_CLASSIFICATIONMODEL_H
-#define BALL_QSAR_CLASSIFICATIONMODEL_H
 
-#ifndef BALL_QSAR_MODEL_H
-#include <BALL/core/qsar/Model.h>
-#endif
+#ifndef BALL_CORE_QSAR_CLASSIFICATIONMODEL_H
+#define BALL_CORE_QSAR_CLASSIFICATIONMODEL_H
 
-#ifndef BALL_QSAR_CLASSIFICATIONVALIDATION_H
 #include <BALL/core/qsar/classificationValidation.h>
-#endif
-
-#ifndef BALL_QSAR_EXCEPTION_H
 #include <BALL/core/qsar/exception.h>
-#endif
+#include <BALL/core/qsar/Model.h>
 
 
 namespace BALL
@@ -110,4 +100,4 @@ namespace BALL
 	}
 }
 
-#endif // CLASSIFICATION
+#endif // BALL_CORE_QSAR_CLASSIFICATIONMODEL_H

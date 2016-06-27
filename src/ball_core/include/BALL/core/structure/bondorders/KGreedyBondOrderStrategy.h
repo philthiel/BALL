@@ -1,17 +1,15 @@
-#ifndef BALL_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H
-#define BALL_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENTSTRATEGY_H
-# include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
-#endif
 
-#ifndef BALL_STRUCTURE_BONDORDERS_BONDORDERASSIGNMENT_H
-# include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BONDORDERS_KGREEDYBOS_H
+#define BALL_CORE_STRUCTURE_BONDORDERS_KGREEDYBOS_H
 
-#ifndef BALL_STRUCTURE_BONDORDERS_ASTARBONDORDERSTRATEGY_H
-# include <BALL/core/structure/bondorders/AStarBondOrderStrategy.h>
-#endif
+#include <BALL/core/structure/bondorders/AStarBondOrderStrategy.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignment.h>
+#include <BALL/core/structure/bondorders/bondOrderAssignmentStrategy.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -67,7 +65,7 @@ namespace BALL
 
 			Size greedy_k_;
 
-			vector<PartialBondOrderAssignment> greedy_set_;
+			std::vector<PartialBondOrderAssignment> greedy_set_;
 
 			Position current_solution_;
 
@@ -75,4 +73,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_STRUCTURE_BONDORDERS_KGREEDYBONDORDERSTRATEGY_H
+#endif // BALL_CORE_STRUCTURE_BONDORDERS_KGREEDYBOS_H

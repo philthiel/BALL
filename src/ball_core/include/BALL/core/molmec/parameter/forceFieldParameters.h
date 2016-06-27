@@ -1,18 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: general force field parameter class
+//_new_file_header
 
-#ifndef BALL_MOLMEC_FORCEFIELDPARAMETERS_H
-#define BALL_MOLMEC_FORCEFIELDPARAMETERS_H
 
-#ifndef BALL_FORMAT_PARAMETERS_H
-# include <BALL/core/format/parameters.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_FORCEFIELDPARAMETERS_H
+#define BALL_CORE_MOLMEC_FORCEFIELDPARAMETERS_H
 
-#ifndef BALL_MOLMEC_PARAMETER_ATOMTYPES_H
-# include <BALL/core/molmec/parameter/atomTypes.h>
-#endif
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+
 
 namespace BALL 
 {
@@ -112,4 +106,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_FORCEFIELDPARAMETERS_H
+#endif // BALL_CORE_MOLMEC_FORCEFIELDPARAMETERS_H

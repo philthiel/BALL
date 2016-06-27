@@ -1,35 +1,32 @@
+//_new_file_header
+
+
 //TODO: - optimize list of include files
 //			- find out if all functions are really ever called in the algorithm
 //			- make use of real-to-complex property
 
 #include <BALL/core/docking/geometricFit.h>
 
-#include <cmath>
-#include <list>
-#include <set>
-
-////////////////
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/bond.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/atomIterator.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/molecule.h>
-
-#include <BALL/core/datatype/hashGrid.h>
-
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/structure/geometricTransformations.h>
 #include <BALL/core/structure/surfaceProcessor.h>
-
 #include <BALL/core/system/timer.h>
-
-#include <BALL/core/common/exception.h>
-#include <BALL/core/datatype/string.h>
 
 #ifdef BALL_HAS_MPI
 # include <BALL/core/system/MPISupport.h>
 #endif
 
+#include <cmath>
+#include <list>
+#include <set>
 
 using namespace std;
 using namespace BALL;

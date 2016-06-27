@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/Model.h>
+
 #include <BALL/core/qsar/kernelModel.h>
 #include <BALL/core/qsar/registry.h>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,11 +1,14 @@
-// -*- Mode: weights_++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/plsModel.h>
 
+#include <vector>
+
 #include <Eigen/Dense>
+
+using namespace std;
+
 
 namespace BALL
 {

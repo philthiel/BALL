@@ -1,24 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: ruleEvaluator.h,v 1.16 2005/12/23 17:01:52 amoll Exp $
-//
+//_new_file_header
 
-// Molecular Mechanics: rule-based assignment of properties (typenames, charges, radii, etc.)
 
-#ifndef BALL_MOLMEC_COMMON_RULEEVALUATOR_H
-#define BALL_MOLMEC_COMMON_RULEEVALUATOR_H
+#ifndef BALL_CORE_MOLMEC_COMMON_RULEEVALUATOR_H
+#define BALL_CORE_MOLMEC_COMMON_RULEEVALUATOR_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
-
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/core/kernel/expression.h>
-#endif
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/expression.h>
 
 #include <list>
 #include <utility>
+
 
 namespace BALL 
 {
@@ -153,4 +144,4 @@ namespace BALL
 } // namespace BALL
 
 
-#endif // BALL_MOLMEC_COMMON_RULEEVALUATOR_H
+#endif // BALL_CORE_MOLMEC_COMMON_RULEEVALUATOR_H

@@ -1,14 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_CONFORMATION_H
-#define BALL_DOCKING_COMMON_CONFORMATION_H
 
-#include <BALL/core/kernel/atomContainer.h>
+#ifndef BALL_CORE_DOCKING_COMMON_CONFORMATION_H
+#define BALL_CORE_DOCKING_COMMON_CONFORMATION_H
+
 #include <BALL/core/concept/property.h>
+#include <BALL/core/kernel/atomContainer.h>
 
 #include <QtCore/QCryptographicHash>
+
 
 namespace BALL
 {
@@ -121,4 +121,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_DOCKING_COMMON_CONFORMATION_H
+#endif // BALL_CORE_DOCKING_COMMON_CONFORMATION_H

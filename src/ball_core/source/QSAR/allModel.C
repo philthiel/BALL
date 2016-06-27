@@ -1,11 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/allModel.h>
 
+#include <vector>
+
 #include <Eigen/Dense>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -194,9 +197,9 @@ namespace BALL
 		}
 
 
-		void ALLModel::saveToFile(string filename)
+		void ALLModel::saveToFile(String filename)
 		{
-			std::ofstream out(filename.c_str());
+			ofstream out(filename.c_str());
 			
 			const Eigen::MatrixXd* coeffErrors = validation->getCoefficientStdErrors();
 			bool sterr = 0;
@@ -224,22 +227,22 @@ namespace BALL
 			int no_y = training_result_.cols();
 			if (no_y == 0) no_y = y_transformations_.cols(); // correct no because transformation information will have to by read anyway when reading this model later ...
 			
-			out<<"# model-type_\tno of featues in input data\tselected featues\tno of response variables\tcentered descriptors?\tcentered response?\tno of substances"<<std::endl;
+			out<<"# model-type_\tno of featues in input data\tselected featues\tno of response variables\tcentered descriptors?\tcentered response?\tno of substances"<<endl;
 			out<<type_<<"\t"<<data->getNoDescriptors()<<"\t"<<sel_features<<"\t"<<no_y<<"\t"<<centered_data<<"\t"<<centered_y<<"\t"<<descriptor_matrix_.rows()<<"\n\n";
 				
 			saveModelParametersToFile(out);
 			saveResponseTransformationToFile(out); 
 			saveDescriptorInformationToFile(out); 
-			out<<descriptor_matrix_<<std::endl;
-			out<<Y_<<std::endl;
+			out<<descriptor_matrix_<<endl;
+			out<<Y_<<endl;
 			
 			out.close();
 		}
 
 
-		void ALLModel::readFromFile(string filename)
+		void ALLModel::readFromFile(String filename)
 		{
-			std::ifstream input(filename.c_str()); 
+			ifstream input(filename.c_str());
 			if (!input)
 			{
 				throw BALL::Exception::FileNotFound(__FILE__, __LINE__, filename);

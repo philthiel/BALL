@@ -1,17 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: selectable.h,v 1.20 2005/12/23 17:01:41 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_SELECTABLE_H
-#define BALL_CONCEPT_SELECTABLE_H
 
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H
-#	include <BALL/core/concept/persistentObject.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_SELECTABLE_H
+#define BALL_CORE_CONCEPT_SELECTABLE_H
+
+#include <BALL/core/concept/persistentObject.h>
 
 #define BALL_SELECTABLE_DEFAULT_SELECTION   false
+
 
 namespace BALL 
 {
@@ -186,4 +182,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_SELECTABLE_H
+#endif // BALL_CORE_CONCEPT_SELECTABLE_H

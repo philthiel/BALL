@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PUBCHEMDOWNLOADER_H
-#define BALL_FORMAT_PUBCHEMDOWNLOADER_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#ifndef BALL_CORE_FORMAT_PUBCHEMDOWNLOADER_H
+#define BALL_CORE_FORMAT_PUBCHEMDOWNLOADER_H
+
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL
 {
@@ -64,4 +62,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_FORMAT_PUBCHEMDOWNLOADER_H
+#endif // BALL_CORE_FORMAT_PUBCHEMDOWNLOADER_H

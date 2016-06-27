@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_PEPTIDEBUILDER_H
-#define BALL_STRUCTURE_PEPTIDEBUILDER_H
 
-#ifndef BALL_STRUCTURE_PEPTIDES_H
-#	include <BALL/core/structure/peptides.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_PEPTIDEBUILDER_H
+#define BALL_CORE_STRUCTURE_PEPTIDEBUILDER_H
+
+#include <BALL/core/structure/peptides.h>
+
 
 namespace BALL
 {
@@ -178,4 +176,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_PEPTIDEBUILDER_H
+#endif // BALL_CORE_STRUCTURE_PEPTIDEBUILDER_H

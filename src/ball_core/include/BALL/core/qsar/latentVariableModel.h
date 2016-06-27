@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef LVMODEL
-#define LVMODEL
+
+#ifndef BALL_CORE_QSAR_LVMODEL_H
+#define BALL_CORE_QSAR_LVMODEL_H
 
 #include <Eigen/Core>
 
 #include <BALL/core/common/global.h>
+
 
 namespace BALL
 {
@@ -49,5 +48,5 @@ namespace BALL
 	}
 }
 
-#endif // LVMODEL
+#endif // BALL_CORE_QSAR_LVMODEL_H
 

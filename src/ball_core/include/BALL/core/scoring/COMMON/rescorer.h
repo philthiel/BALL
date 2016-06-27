@@ -1,17 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $id$
+//_new_file_header
 
-#ifndef BALL_SCORING_COMMON_RESCORER_H
-#define BALL_SCORING_COMMON_RESCORER_H
 
+#ifndef BALL_CORE_SCORING_COMMON_RESCORER_H
+#define BALL_CORE_SCORING_COMMON_RESCORER_H
+
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/docking/common/structurePreparer.h>
 #include <BALL/core/format/commandlineParser.h>
+#include <BALL/core/format/genericMolFile.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 #include <BALL/core/scoring/functions/rescoring.h>
-#include <BALL/core/docking/common/structurePreparer.h>
-#include <BALL/core/format/genericMolFile.h>
-#include <BALL/core/datatype/string.h>
+
 
 namespace BALL
 {
@@ -36,4 +35,4 @@ namespace BALL
 
 }
 
-#endif // BALL_SCORING_COMMON_RESCORER_H
+#endif // BALL_CORE_SCORING_COMMON_RESCORER_H

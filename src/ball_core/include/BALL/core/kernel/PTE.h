@@ -1,23 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PTE.h,v 1.30.16.1 2007/03/25 21:23:42 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_PTE_H
-#define BALL_KERNEL_PTE_H
 
-#ifndef BALL_COMMON_CREATE_H
-# include <BALL/core/common/create.h>
-#endif
+#ifndef BALL_CORE_KERNEL_PTE_H
+#define BALL_CORE_KERNEL_PTE_H
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/common/create.h>
+#include <BALL/core/concept/processor.h>
 
 #define BALL_ELEMENT_NAME_DEFAULT                "Unknown"
 #define BALL_ELEMENT_SYMBOL_DEFAULT              "?"
@@ -800,4 +789,4 @@ namespace BALL
 } //namespace BALL 
 
 
-#endif // BALL_KERNEL_PTE_H
+#endif // BALL_CORE_KERNEL_PTE_H

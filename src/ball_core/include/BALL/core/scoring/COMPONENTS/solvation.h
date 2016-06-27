@@ -1,12 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_SOLVATION_H
-#define BALL_SCORING_COMPONENTS_SOLVATION_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_SOLVATION_H
+#define BALL_CORE_SCORING_COMPONENTS_SOLVATION_H
 
 #include <BALL/core/scoring/common/scoringFunction.h>
+
 #include <map>
 
 
@@ -30,4 +29,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_SOLVATION_H
+#endif // BALL_CORE_SCORING_COMPONENTS_SOLVATION_H

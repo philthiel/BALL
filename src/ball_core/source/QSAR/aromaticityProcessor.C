@@ -1,18 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: aromaticityProcessor.C,v 1.13.20.1 2007/03/16 00:06:45 bertsch Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/aromaticityProcessor.h>
 
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
 
 #include <limits>
 
 using namespace std;
+
 
 namespace BALL
 {

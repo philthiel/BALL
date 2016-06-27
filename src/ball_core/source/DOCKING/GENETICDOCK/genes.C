@@ -1,15 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/docking/geneticdock/genes.h>
+
 #include <BALL/core/maths/randomNumberGenerator.h>
 
-#include <time.h>
 #include <iostream>
+#include <time.h>
 #include <vector>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: box3.h,v 1.46 2005/12/23 17:01:48 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_BOX3_H
-#define BALL_MATHS_BOX3_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_MATHS_BOX3_H
+#define BALL_CORE_MATHS_BOX3_H
+
+#include <BALL/core/maths/vector3.h>
+
 
 namespace BALL 
 {
@@ -493,4 +489,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MATHS_BOX3_H
+#endif // BALL_CORE_MATHS_BOX3_H

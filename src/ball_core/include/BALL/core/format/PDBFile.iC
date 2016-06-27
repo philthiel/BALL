@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 BALL_INLINE 
 PDBFile& PDBFile::operator >> (Protein& protein)

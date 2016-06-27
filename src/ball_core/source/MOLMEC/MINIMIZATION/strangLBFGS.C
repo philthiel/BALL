@@ -1,12 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: strangLBFGS.C,v 1.1.4.7 2007/08/17 09:22:32 anhi Exp $
-//
-// Minimize the potential energy of a system using an improved version
-// of the limited memory BFGS with Strang recurrences.
+//_new_file_header
 
-#include <BALL/core/molmec/MINIMIZATION/strangLBFGS.h>
+
+#include <BALL/core/molmec/minimization/strangLBFGS.h>
+
 #include <BALL/core/molmec/common/forceField.h>
 
 #include <limits>
@@ -19,6 +15,7 @@
 
 // The default "improved" flag
 #define DEFAULT_IMPROVED true
+
 
 namespace BALL 
 {

@@ -1,16 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: connectivityDescriptors.C,v 1.1.28.1 2007/03/16 00:06:46 bertsch Exp $
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/connectivityDescriptors.h>
-#include <BALL/core/kernel/forEach.h>
+
+#include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/bondIterator.h>
-#include <BALL/core/kernel/atomIterator.h>
-#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/PTE.h>
+
 
 namespace BALL
 {

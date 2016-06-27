@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: hashGrid.C,v 1.2 2002/02/27 12:21:11 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/datatype/hashGrid.h>
+
 
 namespace BALL
 {

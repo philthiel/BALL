@@ -1,25 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RINGANALYSER_H
-#define BALL_STRUCTURE_RINGANALYSER_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RINGANALYSER_H
+#define BALL_CORE_STRUCTURE_RINGANALYSER_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/property.h>
+#include <BALL/core/kernel/atomContainer.h>
 
-#ifndef BALL_CONCEPT_PROPERTY_H
-# include <BALL/core/concept/property.h>
-#endif
-
-#include <vector>
-#include <set>
 #include <deque>
+#include <set>
+#include <vector>
+
 
 namespace BALL
 {
@@ -190,4 +182,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_RINGANALYSER_H
+#endif // BALL_CORE_STRUCTURE_RINGANALYSER_H

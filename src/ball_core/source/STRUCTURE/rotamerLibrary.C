@@ -1,15 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/rotamerLibrary.h>
+
 #include <BALL/core/format/SCWRLRotamerFile.h>
-#include <BALL/core/system/path.h>
 #include <BALL/core/maths/common.h>
+#include <BALL/core/system/path.h>
 
 #include <algorithm>
 
 using namespace std;
+
 
 namespace BALL
 {

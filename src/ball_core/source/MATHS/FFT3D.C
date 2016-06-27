@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: FFT3D.C,v 1.7.10.2 2006/03/01 19:04:24 anhi Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/maths/FFT3D.h>
+
 
 namespace BALL
 {

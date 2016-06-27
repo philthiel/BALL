@@ -1,56 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
-#define BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
 
-#ifndef BALL_STRUCTURE_SESEDGE_H
-#	include <BALL/core/structure/SESEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
+#define BALL_CORE_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
 
-#ifndef BALL_STRUCTURE_SESFACE_H
-#	include <BALL/core/structure/SESFace.h>
-#endif
+#include <BALL/core/datatype/hashGrid.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/vector4.h>
+#include <BALL/core/structure/reducedSurface.h>
+#include <BALL/core/structure/SESEdge.h>
+#include <BALL/core/structure/SESFace.h>
+#include <BALL/core/structure/SESVertex.h>
 
-#ifndef BALL_STRUCTURE_SESVERTEX_H
-#	include <BALL/core/structure/SESVertex.h>
-#endif
-
-#ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/core/structure/reducedSurface.h>
-#endif
-
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
-
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR4_H
-#	include <BALL/core/maths/vector4.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHGRID_H
-#	include <BALL/core/datatype/hashGrid.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
-
-#include <vector>
 #include <list>
+#include <vector>
 
 
 namespace BALL
@@ -643,4 +610,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif  // BALL_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H
+#endif  // BALL_CORE_STRUCTURE_SOLVENTEXCLUDEDSURFACE_H

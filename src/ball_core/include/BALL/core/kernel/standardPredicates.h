@@ -1,39 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: standardPredicates.h,v 1.52.16.2 2007/03/29 10:34:59 bertsch Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_STANDARDPREDICATES_H
-#define BALL_KERNEL_STANDARDPREDICATES_H
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#	include <BALL/core/datatype/stringHashMap.h>
-#endif
+#ifndef BALL_CORE_KERNEL_STANDARDPREDICATES_H
+#define BALL_CORE_KERNEL_STANDARDPREDICATES_H
 
-#ifndef BALL_DATATYPE_HASHSET_H
-#	include <BALL/core/datatype/hashSet.h>
-#endif
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/structure/smartsMatcher.h>
 
-#ifndef BALL_KERNEL_BOND_H
-#	include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/core/kernel/expression.h>
-#endif
-
-#ifndef BALL_STRUCTURE_SMARTSMATCHER_H
-# include <BALL/core/structure/smartsMatcher.h>
-#endif
-
-#ifndef BALL_QSAR_AROMATICITYPROCESSOR_H
-# include <BALL/core/qsar/aromaticityProcessor.h>
-#endif
-
-#ifndef BALL_QSAR_RINGPERCEPTIONPROCESSOR_H
-# include <BALL/core/qsar/ringPerceptionProcessor.h>
-#endif
 
 namespace BALL 
 {
@@ -932,4 +910,4 @@ namespace BALL
 	//@}	
 } // namespace BALL
 
-#endif // BALL_KERNEL_STANDARDPREDICATES_H
+#endif // BALL_CORE_KERNEL_STANDARDPREDICATES_H

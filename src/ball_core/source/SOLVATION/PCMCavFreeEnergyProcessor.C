@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PCMCavFreeEnergyProcessor.C,v 1.11 2002/02/27 12:24:03 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/solvation/PCMCavFreeEnergyProcessor.h>
-#include <BALL/core/structure/numericalSAS.h>
+
 #include <BALL/core/structure/analyticalSES.h>
+#include <BALL/core/structure/numericalSAS.h>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,25 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: Amber force field, bond stretch component
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_BENDCOMPONENT_H
-#define BALL_MOLMEC_COMMON_BENDCOMPONENT_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-# include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_COMMON_BENDCOMPONENT_H
+#define BALL_CORE_MOLMEC_COMMON_BENDCOMPONENT_H
 
-#ifndef BALL_MOLMEC_PARAMETER_QUADRATICANGLEBEND_H
-# include <BALL/core/molmec/parameter/quadraticAngleBend.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/parameter/quadraticAngleBend.h>
+
+#include <vector>
+
 
 namespace BALL
 {
 	class ForceField;
 	/**	Amber bond stretch component
 			
-    	\ingroup  AMBER
+		\ingroup  COMMON
 	*/
 	class BALL_EXPORT BendComponent : public ForceFieldComponent
 	{
@@ -71,7 +67,7 @@ namespace BALL
 
 			/*_	pointer to the array of bends
 			*/
-			vector<QuadraticAngleBend::Data> bend_;
+			std::vector<QuadraticAngleBend::Data> bend_;
 
 			QuadraticAngleBend bend_parameters_;
 
@@ -79,4 +75,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif //BALL_MOLMEC_COMMON_BENDCOMPONENT_H
+#endif // BALL_MOLMEC_COMMON_BENDCOMPONENT_H

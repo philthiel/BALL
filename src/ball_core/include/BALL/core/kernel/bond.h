@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_BOND_H
-#define BALL_KERNEL_BOND_H
 
-#ifndef BALL_CONCEPT_PROPERTY_H
-#	include <BALL/core/concept/property.h>
-#endif
+#ifndef BALL_CORE_KERNEL_BOND_H
+#define BALL_CORE_KERNEL_BOND_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/core/concept/composite.h>
-#endif
-
-#ifndef BALL_CONCEPT_ATOMCONTAINER_H
-#	include <BALL/core/kernel/atomContainer.h>
-#endif
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/property.h>
+#include <BALL/core/kernel/atomContainer.h>
 
 #define BALL_BOND_DEFAULT_FIRST_ATOM    0
 #define BALL_BOND_DEFAULT_SECOND_ATOM   0
@@ -469,5 +460,5 @@ namespace BALL
 # endif
 } // namespace BALL
 
-#endif // BALL_KERNEL_BOND_H
+#endif // BALL_CORE_KERNEL_BOND_H
 

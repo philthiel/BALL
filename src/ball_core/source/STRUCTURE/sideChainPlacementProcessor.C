@@ -1,21 +1,25 @@
-#include <iostream>
-#include <cstdlib>
+//_new_file_header
 
-// BALL includes
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/atom.h>
+
 #include <BALL/core/structure/sideChainPlacementProcessor.h>
-#include <BALL/core/structure/peptides.h>
+
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/forEach.h>
 #include <BALL/core/structure/atomBijection.h> 
 #include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/peptides.h>
 #include <BALL/core/system/file.h>
 #include <BALL/core/system/path.h>
-#include <BALL/core/format/PDBFile.h>
+
+#include <cstdlib>
+#include <iostream>
 
 //#define DEBUG 1
 #undef DEBUG
 
 using namespace std;
+
 
 namespace BALL 
 {	

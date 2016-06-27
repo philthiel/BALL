@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/snBModel.h>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -226,7 +225,7 @@ namespace BALL
 		}
 
 
-		void SNBModel::saveToFile(string filename)
+		void SNBModel::saveToFile(String filename)
 		{
 			bool trained = !mean_.empty();
 			ofstream out(filename.c_str());
@@ -276,7 +275,7 @@ namespace BALL
 
 
 
-		void SNBModel::readFromFile(string filename)
+		void SNBModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

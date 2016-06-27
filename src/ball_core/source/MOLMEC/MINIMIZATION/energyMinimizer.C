@@ -1,10 +1,7 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: energyMinimizer.C,v 1.29.28.3 2007/05/18 10:58:37 aleru Exp $
-//
+//_new_file_header
 
-#include <BALL/core/molmec/MINIMIZATION/energyMinimizer.h>
+
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
 
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
@@ -15,6 +12,7 @@ using namespace std;
 
 //#define BALL_DEBUG
 #undef BALL_DEBUG
+
 
 namespace BALL 
 {

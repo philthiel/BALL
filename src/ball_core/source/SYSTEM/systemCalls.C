@@ -1,8 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: systemCalls.C,v 1.1.6.2 2007/08/08 09:21:34 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/system/systemCalls.h>
 
@@ -13,6 +10,7 @@
 #include <unistd.h>
 #endif
 #endif
+
 
 namespace BALL
 {

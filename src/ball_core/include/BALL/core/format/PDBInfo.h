@@ -1,24 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_PDBINFO_H
-#define BALL_FORMAT_PDBINFO_H
 
-#include <vector>
+#ifndef BALL_CORE_FORMAT_PDBINFO_H
+#define BALL_CORE_FORMAT_PDBINFO_H
+
 #include <stdexcept>
+#include <vector>
 
-#ifndef BALL_FORMAT_PDBRECORDS_H
-#	include <BALL/core/format/PDBRecords.h>
-#endif
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/format/PDBdefs.h>
+#include <BALL/core/format/PDBRecords.h>
 
-#ifndef BALL_FORMAT_PDBDEFS_H
-#	include <BALL/core/format/PDBdefs.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENCEMANAGER_H
-#	include <BALL/core/concept/persistenceManager.h>
-#endif
 
 namespace BALL 
 {
@@ -163,4 +155,4 @@ namespace BALL
 	
 } // namespace BALL
 
-#endif // BALL_FORMAT_PDBINFO_H
+#endif // BALL_CORE_FORMAT_PDBINFO_H

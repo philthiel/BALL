@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics: Amber force field, non-bonded component
 
-#ifndef BALL_MOLMEC_AMBER_NONBONDED_H
-#define BALL_MOLMEC_AMBER_NONBONDED_H
+#ifndef BALL_CORE_MOLMEC_AMBER_NONBONDED_H
+#define BALL_CORE_MOLMEC_AMBER_NONBONDED_H
 
-#ifndef BALL_MOLMEC_PARAMETER_LENNARDJONES_H
-#	include <BALL/core/molmec/parameter/lennardJones.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/molmec/parameter/potential1210.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
-#	include <BALL/core/molmec/parameter/potential1210.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#	include <BALL/core/molmec/common/support.h>
-#endif
 
 namespace BALL 
 {
@@ -268,4 +255,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_AMBER_AMBERVDW_H
+#endif // BALL_CORE_MOLMEC_AMBER_AMBERVDW_H

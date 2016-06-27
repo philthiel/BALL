@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: bondIterator.h,v 1.9 2003/08/26 08:04:17 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_BONDITERATOR_H
-#define BALL_KERNEL_BONDITERATOR_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_BONDITERATOR_H
+#define BALL_CORE_KERNEL_BONDITERATOR_H
+
+#include <BALL/core/kernel/atom.h>
+
 
 namespace BALL
 {
@@ -37,4 +33,4 @@ namespace BALL
 	//@}
 }
 
-#endif // BALL_KERNEL_BONDITERATOR_H
+#endif // BALL_CORE_KERNEL_BONDITERATOR_H

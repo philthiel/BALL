@@ -1,25 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RSEDGE_H
-#define BALL_STRUCTURE_RSEDGE_H
 
-#ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#	include <BALL/core/structure/graphEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_RSEDGE_H
+#define BALL_CORE_STRUCTURE_RSEDGE_H
 
-#ifndef BALL_MATHS_ANGLE_H
-#	include <BALL/core/maths/angle.h>
-#endif
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/graphEdge.h>
 
-#ifndef BALL_MATHS_CIRCLE3_H
-#	include <BALL/core/maths/circle3.h>
-#endif
-
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
 
 namespace BALL
 {
@@ -402,4 +391,4 @@ namespace BALL
    
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_RSEDGE_H
+#endif // BALL_CORE_STRUCTURE_RSEDGE_H

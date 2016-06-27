@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: PDBRecords.C,v 1.1 2005/02/08 17:32:37 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/PDBRecords.h>
+
 
 namespace BALL 
 {

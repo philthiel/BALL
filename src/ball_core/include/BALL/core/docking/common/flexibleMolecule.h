@@ -1,17 +1,18 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_COMMON_FLEXIBLEMOLECULE_H
-#define BALL_DOCKING_COMMON_FLEXIBLEMOLECULE_H
 
-#include <BALL/core/kernel/molecule.h>
-#include <BALL/core/kernel/forEach.h>
+#ifndef BALL_CORE_DOCKING_COMMON_FLEXIBLEMOLECULE_H
+#define BALL_CORE_DOCKING_COMMON_FLEXIBLEMOLECULE_H
+
+#include <BALL/core/common/exception.h>
 #include <BALL/core/datatype/hashMap.h>
 #include <BALL/core/docking/common/conformation.h>
-#include <BALL/core/common/exception.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/molecule.h>
+
 #include <iostream>
+#include <vector>
+
 
 namespace BALL
 {
@@ -57,7 +58,7 @@ namespace BALL
 				/** Get a vector of all  stored conformations.
 						@return vector of conformation pointers
 				 */
-				const vector < Conformation* > & getConformations() const;
+				const std::vector<Conformation*>& getConformations() const;
 
 				/** Get the ID  of the i-th conformation.
 						@return ID of i-th conformation
@@ -110,7 +111,7 @@ namespace BALL
 				String id;
 				bool checkCompatibility(Conformation* conf);
 				Molecule* molecule;
-				vector < Conformation* > conformations;
+				std::vector<Conformation*> conformations;
 				HashMap < String, Conformation* > conf_ids_;
 				bool molecule_ownership_;
 
@@ -121,4 +122,4 @@ namespace BALL
 		typedef FlexibleMolecule Ligand;
 }
 
-#endif /* BALL_DOCKING_COMMON_FLEXIBLEMOLECULE_H */
+#endif // BALL_CORE_DOCKING_COMMON_FLEXIBLEMOLECULE_H

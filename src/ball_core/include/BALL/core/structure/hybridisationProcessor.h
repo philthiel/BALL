@@ -1,36 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_HYBRIDISATIONPROCESSOR_H
-#define BALL_STRUCTURE_HYBRIDISATIONPROCESSOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-	#include <BALL/core/concept/processor.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_HYBRIDISATIONPROCESSOR_H
+#define BALL_CORE_STRUCTURE_HYBRIDISATIONPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-	#include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-	#include <BALL/core/datatype/hashMap.h>
-#endif
-
-#ifndef BALL_KERNEL_BOND_H
-	#include <BALL/core/kernel/bond.h>
-#endif
-
-#ifndef BALL_DATATYPE_OPTIONS_H
-	#include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-	#include <BALL/core/datatype/stringHashMap.h>
-#endif
-
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/datatype/stringHashMap.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/bond.h>
 
 #include <map>
+#include <vector>
 
 
 namespace BALL 
@@ -143,7 +125,7 @@ namespace BALL
 			void setAtomTypeSmarts(const String& file_name) throw(Exception::FileNotFound);
 
 			/// Return the atom_types--hybridisation  Hashmap 
-			vector< std::pair<String, Size> > getHybridisationMap() { return atom_type_smarts_;};
+			std::vector<std::pair<String, Size> > getHybridisationMap() { return atom_type_smarts_;};
 			//@}
 
 			/** @name Assignment
@@ -195,7 +177,7 @@ namespace BALL
 			Size num_hybridisation_states_;
 
 			/// structure where atom type smarts and the corresponding hybridisation states are stored in
-			vector< std::pair<String, Size> > atom_type_smarts_;
+			std::vector<std::pair<String, Size> > atom_type_smarts_;
 			
 			/** Contains the bond angles and their atom types. The bond angles 
 			 *  are stored in 'rad'.
@@ -220,5 +202,4 @@ namespace BALL
 
 } // namespace BALL 
 
-
-#endif // BALL_STRUCTURE_HYBRIDISATIONPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_HYBRIDISATIONPROCESSOR_H

@@ -1,39 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94.h,v 1.1.8.3 2007/06/15 09:24:20 amoll Exp $ 
-//
+//_new_file_header
 
-// Molecular Mechanics: MMFF94 force field class
 
-#ifndef BALL_MOLMEC_MMFF94_MMFF94_H
-#define BALL_MOLMEC_MMFF94_MMFF94_H
+#ifndef BALL_CORE_MOLMEC_MMFF94_MMFF94_H
+#define BALL_CORE_MOLMEC_MMFF94_MMFF94_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/core/molmec/common/forceField.h>
-#endif
-
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
-
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PARAMETERS_H
-# include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
-#endif
-
-#ifndef BALL_MOLMEC_MMFF94_MMFF94PROCESSORS_H
-# include <BALL/core/molmec/mmff94/MMFF94Processors.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHSET_H
-# include <BALL/core/datatype/hashSet.h>
-#endif
-
-#ifndef BALL_STRUCTURE_KEKULIZER_H
-# include <BALL/core/structure/kekulizer.h>
-#endif
+#include <BALL/core/datatype/hashSet.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
+#include <BALL/core/molmec/mmff94/MMFF94Processors.h>
+#include <BALL/core/structure/kekulizer.h>
 
 #include <vector>
+
 
 namespace BALL 
 {
@@ -324,4 +303,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_MOLMEC_MMFF94_H
+#endif // BALL_CORE_MOLMEC_MMFF94_H

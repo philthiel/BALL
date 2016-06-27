@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_VISITOR_H
-#define BALL_CONCEPT_VISITOR_H
+
+#ifndef BALL_CORE_CONCEPT_VISITOR_H
+#define BALL_CORE_CONCEPT_VISITOR_H
 
 #include <BALL/core/common/debug.h>
 
@@ -76,4 +75,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_CONCEPT_VISITOR_H
+#endif // BALL_CORE_CONCEPT_VISITOR_H

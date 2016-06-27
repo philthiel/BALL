@@ -1,15 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Marc Röttig, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_FORMAT_DOCKRESULTFILE_H
-#define BALL_FORMAT_DOCKRESULTFILE_H
 
-#include <BALL/core/format/PDBFile.h>
+#ifndef BALL_CORE_FORMAT_DOCKRESULTFILE_H
+#define BALL_CORE_FORMAT_DOCKRESULTFILE_H
+
 #include <BALL/core/datatype/hashMap.h>
-#include <BALL/core/docking/common/result.h>
 #include <BALL/core/docking/common/receptor.h>
+#include <BALL/core/docking/common/result.h>
+#include <BALL/core/format/PDBFile.h>
 
 #include <QtXml/QXmlDefaultHandler>
 #include <QtCore/QXmlStreamReader>
@@ -17,7 +15,9 @@
 #include <QtCore/QFile>
 #include <QtCore/QTemporaryFile>
 
+#include <list>
 #include <vector>
+
 
 namespace BALL
 {
@@ -62,17 +62,17 @@ namespace BALL
 				/** Write vector of Result objects (directly).
 							@param vector of pointers to Result objects
 				 */
-				void writeResults(vector<Result*>& res);
+				void writeResults(std::vector<Result*>& res);
 
 				/** Read result objects.
 							@return vector of Result pointers
 				 */
-				vector<Result*> readResults() throw(Exception::ParseError);
+				std::vector<Result*> readResults() throw(Exception::ParseError);
 
 				/**	Close file.  */
 				void close();
 
-				const vector<Result*>* getResults();
+				const std::vector<Result*>* getResults();
 				void addResult(Result* res);
 
 				/** Return the number of unique conformations currently stored in the result-sections of this DockResultFile. */
@@ -89,7 +89,7 @@ namespace BALL
 
 				void setToolInfo(const String& toolinfo, const String& timestamp);
 
-				void setInputParameters(list<Size>& selected_results);
+				void setInputParameters(std::list<Size>& selected_results);
 
 				void selectAllResultsForInput();
 
@@ -116,7 +116,7 @@ namespace BALL
 				String toolinfo_;
 
 				// --- for use of GenericMolFile interface functions ---
-				vector<Conformation*> gmf_input_conformations_;
+				std::vector<Conformation*> gmf_input_conformations_;
 				static FlexibleMolecule* gmf_current_ligand_;
 				static FlexibleMolecule* gmf_last_ligand_;
 				static bool gmf_new_ligand_read_;
@@ -147,16 +147,16 @@ namespace BALL
 				QXmlStreamWriter* xmlOutLigand_;
 				QXmlStreamWriter* xmlOutResult_;
 
-				vector<Result*> results_;
+				std::vector<Result*> results_;
 				Receptor* receptor_;
-				vector<Ligand*>  ligands_;
+				std::vector<Ligand*>  ligands_;
 
 				// receptors
 				Protein*  current_protein_;
 				Chain*    current_chain_;
 				Residue*  current_residue_;
 
-				vector<PDBAtom*>  current_PDB_atoms_;
+				std::vector<PDBAtom*>  current_PDB_atoms_;
 				HashMap<String,Vector3> pdb_atom_coords_;
 
 				Position  flexdef_idx;
@@ -172,10 +172,10 @@ namespace BALL
 				String    current_protein_name_;
 				Atom*     current_atom_;
 				Vector3   current_coords_;
-				vector<Atom*> current_atoms_;
-				vector<int> bonds_from_;
-				vector<int> bonds_to_;
-				vector<int> bonds_order_;
+				std::vector<Atom*> current_atoms_;
+				std::vector<int> bonds_from_;
+				std::vector<int> bonds_to_;
+				std::vector<int> bonds_order_;
 				HashMap<Size,Vector3> current_conformation_data_;
 
 				// results
@@ -303,4 +303,4 @@ namespace BALL
 		};
 }
 
-#endif
+#endif // BALL_CORE_FORMAT_DOCKRESULTFILE_H

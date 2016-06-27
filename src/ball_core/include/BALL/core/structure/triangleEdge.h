@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_TRIANGLEEDGE_H
-#define BALL_STRUCTURE_TRIANGLEEDGE_H
 
-#ifndef BALL_STRUCTURE_GRAPHEDGE_H
-#	include <BALL/core/structure/graphEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_TRIANGLEEDGE_H
+#define BALL_CORE_STRUCTURE_TRIANGLEEDGE_H
 
-#ifndef BALL_STRUCTURE_GRAPHFACE_H
-#	include <BALL/core/structure/graphFace.h>
-#endif
-
-#ifndef BALL_STRUCTURE_GRAPHVERTEX_H
-#	include <BALL/core/structure/graphVertex.h>
-#endif
+#include <BALL/core/structure/graphEdge.h>
+#include <BALL/core/structure/graphFace.h>
+#include <BALL/core/structure/graphVertex.h>
 
 
 namespace BALL
@@ -166,5 +157,4 @@ namespace BALL
 
 }	// namespace BALL
 
-
-#endif	// BALL_STRUCTURE_TRIANGLEEDGE_H
+#endif	// BALL_CORE_STRUCTURE_TRIANGLEEDGE_H

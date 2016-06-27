@@ -1,15 +1,15 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/scoringComponent.h>
+
 #include <BALL/core/scoring/common/fermiBaseFunction.h>
 #include <BALL/core/scoring/common/linearBaseFunction.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
 
 using namespace std;
 using namespace BALL;
+
 
 ScoringComponent::ScoringComponent()
 	:	scoring_function_(0),

@@ -1,18 +1,18 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_AROMATICRINGSTACKING_H
-#define BALL_SCORING_COMPONENTS_AROMATICRINGSTACKING_H
 
+#ifndef BALL_CORE_SCORING_COMPONENTS_AROMATICRINGSTACKING_H
+#define BALL_CORE_SCORING_COMPONENTS_AROMATICRINGSTACKING_H
+
+#include <BALL/core/datatype/options.h>
 #include <BALL/core/qsar/aromaticityProcessor.h>
 #include <BALL/core/qsar/ringPerceptionProcessor.h>
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
-#include <BALL/core/datatype/options.h>
-
 #include <BALL/core/scoring/components/CHPI.h>
+
+#include <vector>
+
 
 namespace BALL
 {
@@ -59,7 +59,7 @@ namespace BALL
 			/** This function needs to be called once for every new ligand */
 			void setupLigand();
 
-			void update(const vector<std::pair<Atom*, Atom*> >& /*atom_pairs*/);
+			void update(const std::vector<std::pair<Atom*, Atom*> >& /*atom_pairs*/);
 
 			virtual double updateScore();
 
@@ -98,4 +98,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_AROMATICRINGSTACKING_H
+#endif // BALL_CORE_SCORING_COMPONENTS_AROMATICRINGSTACKING_H

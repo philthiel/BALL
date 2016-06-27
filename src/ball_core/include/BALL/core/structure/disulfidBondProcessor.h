@@ -1,15 +1,14 @@
-#ifndef BALL_STRUCTURE_DISULFIDBONDPROCESSOR_H
-#define BALL_STRUCTURE_DISULFIDBONDPROCESSOR_H
+//_new_file_header
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
 
-#ifndef BALL_KERNEL_SYSTEM_H
-# include <BALL/core/kernel/system.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_DISULFIDBONDPROCESSOR_H
+#define BALL_CORE_STRUCTURE_DISULFIDBONDPROCESSOR_H
+
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/kernel/system.h>
 
 #include <set>
+
 
 namespace BALL
 {
@@ -103,4 +102,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_STRUCTURE_DISULFIDBONDPROCESSOR_H
+#endif // BALL_CORE_STRUCTURE_DISULFIDBONDPROCESSOR_H

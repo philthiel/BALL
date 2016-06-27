@@ -1,27 +1,27 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/solvation/ooiEnergy.h>
 
-#include <BALL/core/system/path.h>
 #include <BALL/core/common/exception.h>
 #include <BALL/core/datatype/hashGrid.h>
 #include <BALL/core/datatype/string.h>
 #include <BALL/core/datatype/stringHashMap.h>
-#include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/kernel/atom.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/structure/numericalSAS.h>
 #include <BALL/core/format/parameters.h>
 #include <BALL/core/format/parameterSection.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/molmec/common/typeRuleProcessor.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/numericalSAS.h>
+#include <BALL/core/system/path.h>
 
 #define OOI_PARAMETER_FILENAME "solvation/Ooi.ini"
 
 //#define BALL_DEBUG_OOI
 
 using namespace std;
+
 
 namespace BALL 
 {

@@ -1,14 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_PARAMETER_H
-#define BALL_DOCKING_GENETICDOCK_PARAMETER_H
+
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_PARAMETER_H
+#define BALL_CORE_DOCKING_GENETICDOCK_PARAMETER_H
 
 #include <vector>
 
 #include <BALL/core/maths/quaternion.h>
+
 
 namespace BALL
 {
@@ -97,4 +96,4 @@ namespace BALL
   };
 }
 
-#endif /* BALL_DOCKING_GENETICDOCK_PARAMETER_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_PARAMETER_H

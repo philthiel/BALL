@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: line3.h,v 1.48 2004/07/05 20:57:28 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MATHS_LINE3_H
-#define BALL_MATHS_LINE3_H
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
+#ifndef BALL_CORE_MATHS_LINE3_H
+#define BALL_CORE_MATHS_LINE3_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/maths/vector3.h>
+
 
 namespace BALL 
 {
@@ -387,4 +380,4 @@ namespace BALL
 	}
 } // namespace BALL
 
-#endif // BALL_MATHS_LINE3_H
+#endif // BALL_CORE_MATHS_LINE3_H

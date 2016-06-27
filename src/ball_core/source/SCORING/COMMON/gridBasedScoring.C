@@ -1,23 +1,22 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/gridBasedScoring.h>
-#include <BALL/core/system/timer.h>
+
 #include <BALL/core/format/PDBFile.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/residue.h>
-#include <BALL/core/structure/structureMapper.h>
 #include <BALL/core/structure/residueRotamerSet.h>
+#include <BALL/core/structure/structureMapper.h>
 #include <BALL/core/system/path.h>
+#include <BALL/core/system/timer.h>
 
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
 
-
 using namespace BALL;
 using namespace std;
+
 
 const char* GridBasedScoring ::Option::SCOREGRID_RESOLUTION = "scoregrid_resolution";
 const char* GridBasedScoring ::Option::SCOREGRID_INTERPOLATION="scoregrid_interpolation";

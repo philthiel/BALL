@@ -1,19 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/nmr/shiftModel.h>
+
 #include <BALL/core/concept/factory.h>
 #include <BALL/core/format/parameterSection.h>
-#include <BALL/core/nmr/johnsonBoveyShiftProcessor.h>
-#include <BALL/core/nmr/haighMallionShiftProcessor.h>
-#include <BALL/core/nmr/EFShiftProcessor.h>
 #include <BALL/core/nmr/anisotropyShiftProcessor.h>
-#include <BALL/core/nmr/randomCoilShiftProcessor.h>
-#include <BALL/core/nmr/HBondShiftProcessor.h>
 #include <BALL/core/nmr/empiricalHSShiftProcessor.h>
+#include <BALL/core/nmr/EFShiftProcessor.h>
+#include <BALL/core/nmr/haighMallionShiftProcessor.h>
+#include <BALL/core/nmr/HBondShiftProcessor.h>
+#include <BALL/core/nmr/johnsonBoveyShiftProcessor.h>
+#include <BALL/core/nmr/randomCoilShiftProcessor.h>
 
 using namespace std;
+
 
 namespace BALL
 {	

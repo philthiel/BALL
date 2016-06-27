@@ -1,11 +1,10 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/aromaticRingStacking.h>
 
 using namespace std;
+
 
 namespace BALL
 {

@@ -1,20 +1,19 @@
-#ifndef BALL_DATATYPE_MOLECULARGRAPH_H
-#define BALL_DATATYPE_MOLECULARGRAPH_H
+//_new_file_header
 
-#include <boost/graph/properties.hpp>
-#include <boost/graph/graph_traits.hpp>
+
+#ifndef BALL_CORE_DATATYPE_MOLECULARGRAPH_H
+#define BALL_CORE_DATATYPE_MOLECULARGRAPH_H
+
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/graph/graphAlgorithms.h>
+
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/copy.hpp>
+#include <boost/graph/graph_traits.hpp>
+#include <boost/graph/properties.hpp>
 
 #include <list>
 
-#ifndef BALL_COMMON_GLOBAL_H
-#	include <BALL/core/common/global.h>
-#endif
-
-#ifndef BALL_DATATYPE_GRAPH_GRAPHALGORITHMS_H
-# include <BALL/core/datatype/graph/graphAlgorithms.h>
-#endif
 
 namespace BALL
 {
@@ -78,4 +77,4 @@ namespace BALL
 	typedef MolecularGraph::EditableGraph EditableMolecularGraph;
 }
 
-#endif //BALL_DATATYPE_MOLECULARGRAPH_H
+#endif // BALL_DATATYPE_MOLECULARGRAPH_H

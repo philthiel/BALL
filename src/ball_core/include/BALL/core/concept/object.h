@@ -1,27 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_OBJECT_H
-#define BALL_CONCEPT_OBJECT_H
+
+#ifndef BALL_CORE_CONCEPT_OBJECT_H
+#define BALL_CORE_CONCEPT_OBJECT_H
 
 #include <BALL/core/common/create.h>
+#include <BALL/core/common/global.h>
+#include <BALL/core/common/rtti.h>
+#include <BALL/core/concept/autoDeletable.h>
+#include <BALL/core/concept/bidirectionalIterator.h>
 
-#ifndef BALL_CONCEPT_AUTODELETABLE_H
-#	include <BALL/core/concept/autoDeletable.h>
-#endif
-
-#ifndef BALL_COMMON_RTTI_H
-#	include <BALL/core/common/rtti.h>
-#endif
-
-#ifndef BALL_CONCEPT_BIDIRECTIONALITERATOR_H
-#	include <BALL/core/concept/bidirectionalIterator.h>
-#endif
-
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
 
 namespace BALL 
 {
@@ -193,4 +181,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_CONCEPT_OBJECT_H
+#endif // BALL_CORE_CONCEPT_OBJECT_H

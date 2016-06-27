@@ -1,22 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// Molecular Mechanics: Amber force field class
+//_new_file_header
 
-#ifndef BALL_MOLMEC_AMBER_AMBER_H
-#define BALL_MOLMEC_AMBER_AMBER_H
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-#	include <BALL/core/molmec/common/forceField.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_AMBER_AMBER_H
+#define BALL_CORE_MOLMEC_AMBER_AMBER_H
 
-#ifndef BALL_KERNEL_SYSTEM_H
-#	include <BALL/core/kernel/system.h>
-#endif
+#include <BALL/core/common/exception.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/molmec/common/forceField.h>
 
-#ifndef BALL_COMMON_EXCEPTION_H
-# include <BALL/core/common/exception.h>
-#endif
 
 namespace BALL 
 {
@@ -267,4 +258,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_AMBER_H
+#endif // BALL_CORE_MOLMEC_AMBER_H

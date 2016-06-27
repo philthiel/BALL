@@ -1,14 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-
-#ifndef BALL_COMMON_HASH_H
-#define BALL_COMMON_HASH_H
+//_new_file_header
 
 
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
+#ifndef BALL_CORE_COMMON_HASH_H
+#define BALL_CORE_COMMON_HASH_H
+
+#include <BALL/core/datatype/string.h>
+
 
 namespace BALL 
 {
@@ -50,7 +47,7 @@ namespace BALL
 			This method is optimized for the hashing of STL strings.
 			In fact, it is only an inline wrapper around  \link hashString hashString \endlink .
 	*/
-	BALL_EXPORT inline HashIndex Hash(const string& s)
+	BALL_EXPORT inline HashIndex Hash(const std::string& s)
 	{
 		return hashString(s.c_str());
 	}
@@ -86,4 +83,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_COMMON_HASH_H
+#endif // BALL_CORE_COMMON_HASH_H

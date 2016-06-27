@@ -1,25 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: snapShotManager.h,v 1.19.20.1 2007/05/10 10:51:04 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
-#define BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
+
+#ifndef BALL_CORE_MOLMEC_COMMON_SNAPSHOTMANAGER_H
+#define BALL_CORE_MOLMEC_COMMON_SNAPSHOTMANAGER_H
 
 #include <vector>
 
-#ifndef BALL_MOLMEC_COMMON_SNAPSHOT_H
-# include <BALL/core/molmec/common/snapShot.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/system/file.h>
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
-
-#ifndef BALL_SYSTEM_FILE_H
-# include <BALL/core/system/file.h>
-#endif
 
 namespace BALL
 {
@@ -285,4 +275,5 @@ class BALL_EXPORT SnapShotManager
 }; // end of class SnapshotManager 
 
 } // namespace
-#endif //  BALL_MOLMEC_COMMON_SNAPSHOTMANAGER_H
+
+#endif //  BALL_CORE_MOLMEC_COMMON_SNAPSHOTMANAGER_H

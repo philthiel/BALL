@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_SDFILE_H
-#define BALL_FORMAT_SDFILE_H
 
-#ifndef BALL_FORMAT_MOLFILE_H
-#	include <BALL/core/format/MOLFile.h>
-#endif
+#ifndef BALL_CORE_FORMAT_SDFILE_H
+#define BALL_CORE_FORMAT_SDFILE_H
+
+#include <BALL/core/format/MOLFile.h>
+
 
 namespace BALL 
 {
@@ -118,4 +116,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_FORMAT_SDFILE_H
+#endif // BALL_CORE_FORMAT_SDFILE_H

@@ -1,11 +1,18 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/bondorders/FPTBondOrderStrategy.h>
-#include <BALL/core/structure/assignBondOrderProcessor.h>
+
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
 
 #include <boost/graph/connected_components.hpp>
-#include <boost/graph/subgraph.hpp>
 #include <boost/graph/copy.hpp>
 #include <boost/graph/iteration_macros.hpp>
+#include <boost/graph/subgraph.hpp>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -53,8 +60,8 @@ namespace BALL
 		computing_data_->tw = boost::shared_ptr<TreeWidth<MolecularGraph> >(new TreeWidth<MolecularGraph>(*mol_graph));
 
 		// compute BondAssignments
-		std::vector<boost::shared_ptr<TreeDecomposition> > & ntds = computing_data_->tw->getNiceTreeDecompositions();
-		std::vector<FPTBondOrderAssignment_*>& bond_assignments   = computing_data_->bond_assignments;
+		vector<boost::shared_ptr<TreeDecomposition> > & ntds = computing_data_->tw->getNiceTreeDecompositions();
+		vector<FPTBondOrderAssignment_*>& bond_assignments   = computing_data_->bond_assignments;
 
 		int max_penalty = abop->max_penalty_;
 		if (max_penalty == -1)
@@ -166,7 +173,7 @@ namespace BALL
 	{
 	}
 
-	FPTBondOrderStrategy::DPConfig_::DPConfig_(std::vector<Valence> const& v, std::vector<BondOrder> const& bo)
+	FPTBondOrderStrategy::DPConfig_::DPConfig_(vector<Valence> const& v, vector<BondOrder> const& bo)
 		: consumed_valences(v),
 		  bond_assignments(bo)
 	{
@@ -298,7 +305,7 @@ namespace BALL
 
 		for (const_iterator iter = begin(); iter != end(); ++iter)
 		{
-			pen = std::min(pen, iter->second);
+			pen = min(pen, iter->second);
 		}
 
 		return pen;
@@ -337,9 +344,9 @@ namespace BALL
 		if (penalty == FPTBondOrderStrategy::infinite_penalty)
 			return false;
 
-		std::pair<DPConfig_, Penalty> entry(config, penalty);
+		pair<DPConfig_, Penalty> entry(config, penalty);
 
-		std::pair<DPMap_::iterator, bool> insertion = table.insert(entry);
+		pair<DPMap_::iterator, bool> insertion = table.insert(entry);
 
 		if (insertion.second)
 		{
@@ -422,13 +429,13 @@ namespace BALL
 	}
 
 	FPTBondOrderStrategy::DPTable_* FPTBondOrderStrategy::FPTBondOrderAssignment_::operator() (TreeDecompositionBag& bag,
-	                                                                                           std::vector<DPTable_*>::const_iterator begin,
-																																														 std::vector<DPTable_*>::const_iterator end)
+																							   vector<DPTable_*>::const_iterator begin,
+																																														 vector<DPTable_*>::const_iterator end)
 	{
 		AdditionalBagProperties_& bag_properties = properties_[boost::get(boost::vertex_index, *ntd_, bag)];
 
-		std::vector<DPTable_*>::const_iterator first  = begin;
-		std::vector<DPTable_*>::const_iterator second = begin;
+		vector<DPTable_*>::const_iterator first  = begin;
+		vector<DPTable_*>::const_iterator second = begin;
 		++second;
 
 		// check the pointers
@@ -529,8 +536,8 @@ namespace BALL
 				cout << ov << " " << atom->getFullName() << "\t\t";
 			}
 			cout << "\t|\t";
-			std::vector<MolecularGraphTraits::EdgeType> bonds (bag_properties.bonds);
-			for (std::vector<MolecularGraphTraits::EdgeType>::const_iterator iter = bonds.begin(); iter != bonds.end(); ++iter)
+			vector<MolecularGraphTraits::EdgeType> bonds (bag_properties.bonds);
+			for (vector<MolecularGraphTraits::EdgeType>::const_iterator iter = bonds.begin(); iter != bonds.end(); ++iter)
 			{
 				MolecularGraphTraits::EdgeType e = *iter;
 
@@ -577,13 +584,13 @@ namespace BALL
 		}
 	}
 
-	std::vector<MolecularGraphTraits::EdgeType> FPTBondOrderStrategy::FPTBondOrderAssignment_::getBondsInBag(TreeDecompositionBag& bag)
+	vector<MolecularGraphTraits::EdgeType> FPTBondOrderStrategy::FPTBondOrderAssignment_::getBondsInBag(TreeDecompositionBag& bag)
 	{
 		typedef TreeWidth<MolecularGraph>::TreeDecompositionContent TreeDecompositionContent;
 
 		TreeDecompositionContent vertices = boost::get(boost::vertex_bag_content, *ntd_, bag);
 
-		std::vector<MolecularGraphTraits::EdgeType> bonds;
+		vector<MolecularGraphTraits::EdgeType> bonds;
 		bonds.reserve((vertices.size()-1 * vertices.size())/2);
 
 		for (TreeDecompositionContent::const_iterator iter = vertices.begin(); iter != vertices.end(); ++iter)
@@ -603,7 +610,7 @@ namespace BALL
 	}
 	
 #define	convertToCRow(tmp)\
-		std::make_pair(boost::reference_wrapper<const DPConfig_>((tmp).first), (tmp).second)
+		make_pair(boost::reference_wrapper<const DPConfig_>((tmp).first), (tmp).second)
 
 	void FPTBondOrderStrategy::FPTBondOrderAssignment_::computeIntroduceBag(TreeDecompositionBag& bag, DPTable_& child,
 	                                                                        AdditionalBagProperties_& property)
@@ -617,7 +624,7 @@ namespace BALL
 		TreeDecompositionContent vertices = boost::get(boost::vertex_bag_content, *ntd_, bag);
 		Size num_valences = vertices.size();
 
-		std::vector<MolecularGraphTraits::EdgeType>& bonds = property.bonds;
+		vector<MolecularGraphTraits::EdgeType>& bonds = property.bonds;
 		Size num_bonds = bonds.size();
 
 		// for each entry in child table, copy this entry 3^n times, where n is the number of introduced bonds. Then fill each
@@ -666,7 +673,7 @@ namespace BALL
 			// if there are any introduced bonds we have to fill them with each possible value
 			if (!indices.empty())
 			{
-				std::vector<int> bond_values(indices.size());
+				vector<int> bond_values(indices.size());
 
 				Size current_index = 0;
 				while (current_index < bond_values.size())
@@ -696,7 +703,7 @@ namespace BALL
 	}
 
 	FPTBondOrderStrategy::Penalty FPTBondOrderStrategy::FPTBondOrderAssignment_::forgetInnerVertexIn(TreeDecompositionBag & bag,
-			                                         DPConstRow_ child_row, DPConfig_& entry, std::vector<Edge>& child_bonds, Size forgotten_index)
+													 DPConstRow_ child_row, DPConfig_& entry, vector<Edge>& child_bonds, Size forgotten_index)
 	{
 		typedef TreeWidth<MolecularGraph>::TreeDecompositionContent TreeDecompositionContent;
 
@@ -709,7 +716,7 @@ namespace BALL
 		Size child_bond_index = 0;
 
 		Size forgotten_valence = child_entry.consumed_valences[forgotten_index];
-		Size max_forgotten_valence = std::min(static_cast<BondOrder>(max_valence_-1),
+		Size max_forgotten_valence = min(static_cast<BondOrder>(max_valence_-1),
 																					static_cast<BondOrder>(boost::out_degree(forgotten_vertex, *molecule_) * max_bond_order_));
 
 		// copy valence values in child entry into new entry
@@ -737,14 +744,14 @@ namespace BALL
 
 				BondOrder bond_value = child_entry.bond_assignments[child_bond_index] + 1;
 
-				Size atom_index = distance(vertices.begin(), std::find(vertices.begin(), vertices.end(), kept_atom));
+				Size atom_index = distance(vertices.begin(), find(vertices.begin(), vertices.end(), kept_atom));
 				Size new_valence = entry.consumed_valences[atom_index] + bond_value;
 				forgotten_valence += bond_value;
 
 				// if valence is greater than maximal possible valence (< 8, < number of neighbours * max bond value per neighbour)
 				// then don't add this entry
 				if ((forgotten_valence <= max_forgotten_valence) &&
-						(new_valence <= std::min((Size)boost::out_degree(kept_atom, *molecule_) * (Size)(max_bond_order_), (Size)(max_valence_))))
+						(new_valence <= min((Size)boost::out_degree(kept_atom, *molecule_) * (Size)(max_bond_order_), (Size)(max_valence_))))
 				{
 					entry.consumed_valences[atom_index] = new_valence;
 				} 
@@ -785,7 +792,7 @@ namespace BALL
 
 		DPConfig_ new_entry(vertices.size()-1, property.bonds.size());
 
-		Size forgotten_index = distance(vertices.begin(), std::find(vertices.begin(), vertices.end(), forgotten_vertex));
+		Size forgotten_index = distance(vertices.begin(), find(vertices.begin(), vertices.end(), forgotten_vertex));
 
 		for (DPTable_::const_iterator entry_iterator = child.begin(); entry_iterator != child.end(); ++entry_iterator)
 		{
@@ -801,12 +808,12 @@ namespace BALL
 	                                                                   DPTable_& child, AdditionalBagProperties_& bag_properties)
 	{
 		DPConfig_ empty(0, 0);
-		std::vector<Edge> empty_list;
+		vector<Edge> empty_list;
 
 		Penalty min_penalty = FPTBondOrderStrategy::infinite_penalty;
 		for (DPTable_::const_iterator iter = child.begin(); iter != child.end(); ++iter)
 		{
-			min_penalty = std::min(min_penalty, forgetInnerVertexIn(bag, convertToCRow(*iter), empty, empty_list, 0));
+			min_penalty = min(min_penalty, forgetInnerVertexIn(bag, convertToCRow(*iter), empty, empty_list, 0));
 
 			if (Maths::isEqual(0, min_penalty))
 			{
@@ -824,7 +831,7 @@ namespace BALL
 		typedef TreeWidth<MolecularGraph>::TreeDecompositionContent TreeDecompositionContent;
 
 		TreeDecompositionContent inner_vertices = boost::get(boost::vertex_bag_content, *ntd_, bag);
-		std::vector<MolecularGraphTraits::VertexType> vertices(inner_vertices.begin(), inner_vertices.end());
+		vector<MolecularGraphTraits::VertexType> vertices(inner_vertices.begin(), inner_vertices.end());
 		Size num_valences = vertices.size();
 
 		DPTable_& table(*property.table);
@@ -834,7 +841,7 @@ namespace BALL
 		for (DPTable_::const_iterator left_iter = left_child.begin(); left_iter != left_child.end(); ++left_iter)
 		{
 			DPConstRow_ left_entry = convertToCRow(*left_iter);
-			map.insert(std::pair<DPConfig_ const*, Penalty> (left_entry.first.get_pointer(), left_entry.second));
+			map.insert(pair<DPConfig_ const*, Penalty> (left_entry.first.get_pointer(), left_entry.second));
 		}
 
 		// find for each entry of the right child's table appropiate entries in the DPJoinMap (which have the same bondvalues)
@@ -843,7 +850,7 @@ namespace BALL
 			DPConstRow_ right_entry = convertToCRow(*r_iter);
 			DPConfig_ const* right_conf = right_entry.first.get_pointer();
 
-			std::pair<DPJoinMap_::const_iterator, DPJoinMap_::const_iterator> matching_range(map.equal_range(right_conf));
+			pair<DPJoinMap_::const_iterator, DPJoinMap_::const_iterator> matching_range(map.equal_range(right_conf));
 
 			for (DPJoinMap_::const_iterator match  = matching_range.first;
 					                            match != matching_range.second; ++match)
@@ -858,7 +865,7 @@ namespace BALL
 					config.consumed_valences[index] += right_entry.first.get().consumed_valences[index];
 					{
 						MolecularGraphTraits::VertexType vertex = vertices[index];
-						if (config.consumed_valences[index] > (int) (std::min(static_cast<BondOrder>(max_valence_-1),
+						if (config.consumed_valences[index] > (int) (min(static_cast<BondOrder>(max_valence_-1),
 															max_bond_order_ * static_cast<BondOrder>(boost::out_degree(vertex, *molecule_)))))
 						{
 							do_insert = false;
@@ -890,7 +897,7 @@ namespace BALL
 
 	FPTBondOrderStrategy::ComputingData_::~ComputingData_()
 	{
-		for (std::vector<FPTBondOrderAssignment_*>::iterator iter  = bond_assignments.begin(); 
+		for (vector<FPTBondOrderAssignment_*>::iterator iter  = bond_assignments.begin();
 		                                                     iter != bond_assignments.end(); ++iter)
 		{
 			delete *iter;
@@ -921,7 +928,7 @@ namespace BALL
 	{
 	}
 
-	FPTBondOrderStrategy::Assignment_::Assignment_(std::vector<BondOrder> const& bonds, Penalty penalty)
+	FPTBondOrderStrategy::Assignment_::Assignment_(vector<BondOrder> const& bonds, Penalty penalty)
 		: penalty(penalty),
 		  bonds_(bonds)
 	{
@@ -962,7 +969,7 @@ namespace BALL
 		}
 	}
 
-	std::vector<FPTBondOrderStrategy::BondOrder> const& FPTBondOrderStrategy::Assignment_::getBondOrders() const
+	vector<FPTBondOrderStrategy::BondOrder> const& FPTBondOrderStrategy::Assignment_::getBondOrders() const
 	{
 		return bonds_;
 	}
@@ -976,7 +983,7 @@ namespace BALL
 
 		for (Size i = 0; i < bonds_.size(); ++i)
 		{
-			bonds_[i] = std::max(bonds_[i], other.bonds_[i]);
+			bonds_[i] = max(bonds_[i], other.bonds_[i]);
 		}
 
 		penalty += other.penalty;
@@ -1047,23 +1054,23 @@ namespace BALL
 		Valence max_valence      = parent.max_valence;
 		BondOrder max_bond_order = parent.abop->max_bond_order_;
 
-		std::vector<Valence> valences(boost::num_vertices(graph)+1, 0);
-		std::vector<MolecularGraphTraits::VertexType> sorted_neighbours;
+		vector<Valence> valences(boost::num_vertices(graph)+1, 0);
+		vector<MolecularGraphTraits::VertexType> sorted_neighbours;
 		sorted_neighbours.reserve(10);
 
-		std::vector<BondOrder>::const_iterator bond_iterator = bonds_.begin();
+		vector<BondOrder>::const_iterator bond_iterator = bonds_.begin();
 		BGL_FORALL_VERTICES(left, graph, MolecularGraph)
 		{
-			std::vector<MolecularGraphTraits::VertexType> neighbours;
+			vector<MolecularGraphTraits::VertexType> neighbours;
 
 			BGL_FORALL_ADJ(left, neighbour, graph, MolecularGraph)
 			{
 				neighbours.push_back(neighbour);
 			}
 
-			std::sort(neighbours.begin(), neighbours.end());
+			sort(neighbours.begin(), neighbours.end());
 
-			for (std::vector<MolecularGraphTraits::VertexType>::const_iterator iter2  = neighbours.begin(); 
+			for (vector<MolecularGraphTraits::VertexType>::const_iterator iter2  = neighbours.begin();
 					                                                               iter2 != neighbours.end();   ++iter2)
 			{
 				MolecularGraphTraits::VertexType right = *iter2;
@@ -1091,7 +1098,7 @@ namespace BALL
 		}
 
 		Size vertex_id = 0;
-		for (std::vector<Valence>::const_iterator iter = valences.begin(); iter != valences.end(); ++iter, ++vertex_id)
+		for (vector<Valence>::const_iterator iter = valences.begin(); iter != valences.end(); ++iter, ++vertex_id)
 		{
 			Valence valence = *iter;
 
@@ -1166,12 +1173,12 @@ namespace BALL
 		VertexType left        = boost::source(e1, *graph_);
 		VertexType right       = boost::target(e1, *graph_);
 
-		if (left > right) std::swap(left, right);
+		if (left > right) swap(left, right);
 
 		VertexType other_left  = boost::source(e2, *graph_);
 		VertexType other_right = boost::target(e2, *graph_);
 
-		if (other_left > other_right) std::swap(other_left, other_right);
+		if (other_left > other_right) swap(other_left, other_right);
 
 		if (left < other_left)
 			return true;
@@ -1272,13 +1279,13 @@ namespace BALL
 	//*****************************************************************************************************
 
 	FPTBondOrderStrategy::DPBackTracking_::DPBackTracking_(FPTBondOrderAssignment_& bond_assignment, Size max_num_solutions,
-                                                         std::vector<MolecularGraphTraits::EdgeType> const& bonds, Penalty upper_bound)
+														 vector<MolecularGraphTraits::EdgeType> const& bonds, Penalty upper_bound)
 		: bond_assignment_(&bond_assignment),
 			current_state_(NULL),
 			queue_(),
 			max_num_solutions_(max_num_solutions),
 			bonds_(&bonds),
-			bags_(boost::shared_ptr<std::vector<TreeDecompositionBag> >(new std::vector<TreeDecompositionBag>)),
+			bags_(boost::shared_ptr<vector<TreeDecompositionBag> >(new vector<TreeDecompositionBag>)),
 			max_heap_size_(1e6),
 			num_computed_solutions_(0),
 			upper_bound_(upper_bound)
@@ -1323,7 +1330,7 @@ namespace BALL
 			current_state_ = new BackTrackingState_(*copy.current_state_);
 		}
 
-		std::multiset<BackTrackingState_*, StateComparator_>::const_iterator iter = copy.queue_.begin();
+		multiset<BackTrackingState_*, StateComparator_>::const_iterator iter = copy.queue_.begin();
 		for (; iter != copy.queue_.end(); ++iter)
 		{
 			queue_.insert(new BackTrackingState_(**iter));
@@ -1340,7 +1347,7 @@ namespace BALL
 			current_state_   = copy.current_state_;
 
 			queue_.clear();
-			std::multiset<BackTrackingState_*, StateComparator_>::const_iterator iter = copy.queue_.begin();
+			multiset<BackTrackingState_*, StateComparator_>::const_iterator iter = copy.queue_.begin();
 			for (; iter != copy.queue_.end(); ++iter)
 			{
 				queue_.insert(new BackTrackingState_(**iter));
@@ -1369,11 +1376,11 @@ namespace BALL
 			delete current_state_;
 		}
 
-		std::vector<BackTrackingState_*> copy(queue_.begin(), queue_.end());
+		vector<BackTrackingState_*> copy(queue_.begin(), queue_.end());
 		queue_.clear();
 		num_computed_solutions_ = 0;
 
-		for (std::vector<BackTrackingState_*>::iterator iter = copy.begin(); iter != copy.end(); ++iter)
+		for (vector<BackTrackingState_*>::iterator iter = copy.begin(); iter != copy.end(); ++iter)
 		{
 			delete *iter;
 		}
@@ -1399,7 +1406,7 @@ namespace BALL
 
 	FPTBondOrderStrategy::AdditionalBagProperties_& FPTBondOrderStrategy::DPBackTracking_::getProperties(Size order)
 	{
-		std::vector<AdditionalBagProperties_>& properties = bond_assignment_->properties_;
+		vector<AdditionalBagProperties_>& properties = bond_assignment_->properties_;
 
 		if (order < properties.size())
 		{
@@ -1448,7 +1455,7 @@ namespace BALL
 			delete current_state_;
 		}
 
-		std::multiset<BackTrackingState_*, StateComparator_>::iterator first = queue_.begin();
+		multiset<BackTrackingState_*, StateComparator_>::iterator first = queue_.begin();
 		current_state_ = *first;
 		queue_.erase(first);
 		++num_computed_solutions_;
@@ -1513,7 +1520,7 @@ namespace BALL
 		TreeDecomposition tree = *bond_assignment_->ntd_;
 
 		TreeDecompositionContent content = boost::get(boost::vertex_bag_content, tree, bag);
-		std::vector<MolecularGraphTraits::EdgeType>& bag_bonds = 
+		vector<MolecularGraphTraits::EdgeType>& bag_bonds =
 												getProperties(boost::get(boost::vertex_index, tree, bag)).bonds;
 
 		MolecularGraphTraits::VertexType iv = boost::get(boost::vertex_bag_special, tree, bag);
@@ -1567,7 +1574,7 @@ namespace BALL
 		else
 		{
 			{
-				std::pair<DPConfig_, Size> const& right_child = state.join_branches.top();
+				pair<DPConfig_, Size> const& right_child = state.join_branches.top();
 
 				state.config = right_child.first;
 				state.index  = right_child.second;
@@ -1588,10 +1595,10 @@ namespace BALL
 	{
 		TreeDecomposition tree = *bond_assignment_->ntd_;
 
-		std::vector<DPPairIt_> possible_antecessors;
+		vector<DPPairIt_> possible_antecessors;
 
-		std::vector<DPTable_::const_iterator> left_entries;
-		std::vector<DPTable_::const_iterator> right_entries;
+		vector<DPTable_::const_iterator> left_entries;
+		vector<DPTable_::const_iterator> right_entries;
 
 		DPJoinMapComparator_ comp;
 		DPConfig_ const& successor = state.config;
@@ -1624,10 +1631,10 @@ namespace BALL
 		// now search possible pairs of antecessors from vectors
 		Size n = successor.consumed_valences.size();
 
-		for (std::vector<DPTable_::const_iterator>::const_iterator left = left_entries.begin(); left != left_entries.end(); ++left)
+		for (vector<DPTable_::const_iterator>::const_iterator left = left_entries.begin(); left != left_entries.end(); ++left)
 		{
 			DPConstRow_ left_entry = convertToCRow(**left);
-			for (std::vector<DPTable_::const_iterator>::const_iterator right = right_entries.begin(); right != right_entries.end(); ++right)
+			for (vector<DPTable_::const_iterator>::const_iterator right = right_entries.begin(); right != right_entries.end(); ++right)
 			{
 				DPConstRow_ right_entry = convertToCRow(**right);
 
@@ -1653,7 +1660,7 @@ namespace BALL
 
 		sort(possible_antecessors.begin(), possible_antecessors.end(), FPTBondOrderStrategy::compareJoinTablePairs_);
 
-		std::vector<DPPairIt_>::const_iterator iter = possible_antecessors.begin();
+		vector<DPPairIt_>::const_iterator iter = possible_antecessors.begin();
 
 		// follow best left entry, add the right entry into join branch stack
 		DPPairIt_ best = *iter;
@@ -1703,7 +1710,7 @@ namespace BALL
 	{
 		TreeDecomposition tree = *bond_assignment_->ntd_;
 
-		std::vector<DPPointerRow_> possible_antecessors;
+		vector<DPPointerRow_> possible_antecessors;
 
 		TreeDecomposition::children_iterator c_i, c_end;
 		boost::tie(c_i, c_end) = children(bag, tree);
@@ -1712,11 +1719,11 @@ namespace BALL
 
 		TreeDecompositionContent child_vertices = boost::get(boost::vertex_bag_content, tree, child); 
 
-		std::vector<MolecularGraphTraits::EdgeType>& child_bonds = getProperties(boost::get(boost::vertex_index, tree, child)).bonds;
+		vector<MolecularGraphTraits::EdgeType>& child_bonds = getProperties(boost::get(boost::vertex_index, tree, child)).bonds;
 
 		MolecularGraphTraits::VertexType fv = boost::get(boost::vertex_bag_special, tree, bag);
 
-		Size forgotten_index = distance(child_vertices.begin(), std::find(child_vertices.begin(), child_vertices.end(), fv));
+		Size forgotten_index = distance(child_vertices.begin(), find(child_vertices.begin(), child_vertices.end(), fv));
 		DPConfig_ &successor = state.config;
 		DPConfig_ test_entry = successor;
 
@@ -1732,8 +1739,8 @@ namespace BALL
 		}
 
 		// remember each found antecessors
-		std::sort(possible_antecessors.begin(), possible_antecessors.end(), compareTablePointerEntries_);
-		std::vector<DPPointerRow_>::iterator iter = possible_antecessors.begin();
+		sort(possible_antecessors.begin(), possible_antecessors.end(), compareTablePointerEntries_);
+		vector<DPPointerRow_>::iterator iter = possible_antecessors.begin();
 
 		// follow this antecessor
 		Penalty best_penalty = iter->second;
@@ -1790,7 +1797,7 @@ namespace BALL
 		{
 			while (queue_.size() > max_heap_size_)
 			{
-				std::multiset<BackTrackingState_*, StateComparator_>::iterator pos = queue_.end();
+				multiset<BackTrackingState_*, StateComparator_>::iterator pos = queue_.end();
 				--pos;
 				delete *pos;
 				queue_.erase(pos);
@@ -1812,10 +1819,10 @@ namespace BALL
 	{
 		TreeDecomposition tree = *bond_assignment_->ntd_;
 
-		std::vector<MolecularGraphTraits::EdgeType> bonds = getProperties(boost::get(boost::vertex_index, tree, bag)).bonds;
-		std::vector<MolecularGraphTraits::EdgeType>::iterator begin = bonds.begin();
+		vector<MolecularGraphTraits::EdgeType> bonds = getProperties(boost::get(boost::vertex_index, tree, bag)).bonds;
+		vector<MolecularGraphTraits::EdgeType>::iterator begin = bonds.begin();
 
-		for (std::vector<MolecularGraphTraits::EdgeType>::iterator iter = begin; iter != bonds.end(); ++iter)
+		for (vector<MolecularGraphTraits::EdgeType>::iterator iter = begin; iter != bonds.end(); ++iter)
 		{
 			MolecularGraphTraits::EdgeType bond = *iter;
 
@@ -1825,7 +1832,7 @@ namespace BALL
 			if (source == forgotten_vertex || target == forgotten_vertex)
 			{
 				Size bondIndex(bondIndexFor(bond));
-				state.assignment[bondIndex] = antecessor.bond_assignments[std::distance(begin, iter)];
+				state.assignment[bondIndex] = antecessor.bond_assignments[distance(begin, iter)];
 			}
 		}
 	}
@@ -1840,10 +1847,10 @@ namespace BALL
 	void FPTBondOrderStrategy::DPBackTracking_::branchState(BackTrackingState_& state, TreeDecompositionBag const& child, 
 	                                                        DPConfig_ const& antecessor)
 	{
-		std::pair<DPConfig_, Size> right_state;
+		pair<DPConfig_, Size> right_state;
 
 		right_state.first  = antecessor;
-		right_state.second = distance(bags_->begin(), std::find(bags_->begin() + state.index, bags_->end(), child));
+		right_state.second = distance(bags_->begin(), find(bags_->begin() + state.index, bags_->end(), child));
 
 		state.join_branches.push(right_state);
 	}
@@ -1875,7 +1882,7 @@ namespace BALL
 	{
 	}
 
-	FPTBondOrderStrategy::DPBackTrackingCombiner_::DPBackTrackingCombiner_(std::vector<FPTBondOrderAssignment_*>& bond_assignments,
+	FPTBondOrderStrategy::DPBackTrackingCombiner_::DPBackTrackingCombiner_(vector<FPTBondOrderAssignment_*>& bond_assignments,
 		                                                                     Size solution_number, Penalty upper_bound)
 		: backtrackers_(),
 		  priority_queue_(),
@@ -1902,9 +1909,9 @@ namespace BALL
 
 		// sort bonds - the second vertex could be in false order
 		FPTBondOrderStrategy::EdgeComparator_ ec(&graph);
-		std::sort(sorted_edges.begin(), sorted_edges.end(), ec);
+		sort(sorted_edges.begin(), sorted_edges.end(), ec);
 
-		for (std::vector<FPTBondOrderAssignment_*>::const_iterator iter  = bond_assignments.begin();
+		for (vector<FPTBondOrderAssignment_*>::const_iterator iter  = bond_assignments.begin();
 		                                                           iter != bond_assignments.end();   ++iter)
 		{
 			backtrackers_.push_back(new DPBackTracking_(**iter, solution_number_, sorted_edges, upper_bound_));
@@ -1920,7 +1927,7 @@ namespace BALL
 
 	void FPTBondOrderStrategy::DPBackTrackingCombiner_::clear()
 	{
-		for (std::vector<DPBackTracking_*>::iterator iter  = backtrackers_.begin();
+		for (vector<DPBackTracking_*>::iterator iter  = backtrackers_.begin();
 		                                             iter != backtrackers_.end();   ++iter)
 		{
 			delete *iter;
@@ -1946,15 +1953,15 @@ namespace BALL
 		return *this;
 	}
 
-	std::pair<Size, FPTBondOrderStrategy::Penalty>
+	pair<Size, FPTBondOrderStrategy::Penalty>
 	FPTBondOrderStrategy::DPBackTrackingCombiner_::getNextMinimumBackTracker_() const
 	{
 		if (backtrackers_.size() == 1)
 		{
-			return std::pair<Size, Penalty>(0, backtrackers_.front()->penaltyOfNextSolution());
+			return pair<Size, Penalty>(0, backtrackers_.front()->penaltyOfNextSolution());
 		}
 
-		typedef std::vector<DPBackTracking_*>::const_iterator iterator;
+		typedef vector<DPBackTracking_*>::const_iterator iterator;
 
 		iterator min = backtrackers_.begin();
 
@@ -1980,7 +1987,7 @@ namespace BALL
 			}
 		}
 
-		return std::pair<Size, Penalty>(distance(backtrackers_.begin(), min), min_diff);
+		return pair<Size, Penalty>(distance(backtrackers_.begin(), min), min_diff);
 	}
 
 	void FPTBondOrderStrategy::DPBackTrackingCombiner_::applyAssignment_(Size backtracker_index, Size solution_index)
@@ -1991,7 +1998,7 @@ namespace BALL
 
 	bool FPTBondOrderStrategy::DPBackTrackingCombiner_::hasMoreSolutions() const
 	{
-		std::pair<Size, Penalty> next_min = getNextMinimumBackTracker_();
+		pair<Size, Penalty> next_min = getNextMinimumBackTracker_();
 
 		return (backtrackers_[next_min.first]->hasMoreSolutions() && (!priority_queue_.empty() || (next_min.second) < upper_bound_));
 	}
@@ -2018,7 +2025,7 @@ namespace BALL
 		}
 
 		// compute next minimal Solution
-		std::pair<Size, Penalty> next_min = getNextMinimumBackTracker_();
+		pair<Size, Penalty> next_min = getNextMinimumBackTracker_();
 
 		if ((next_min.second < upper_bound_) && (priority_queue_.empty() || (next_min.second < priority_queue_.top().penalty)))
 		{
@@ -2046,7 +2053,7 @@ namespace BALL
 
 	void FPTBondOrderStrategy::DPBackTrackingCombiner_::combineEachSolution_(Size mindex)
 	{
-		std::vector<Size> indices(backtrackers_.size() - 1, 0);
+		vector<Size> indices(backtrackers_.size() - 1, 0);
 
 		DPBackTracking_& min = *backtrackers_[mindex];
 
@@ -2127,13 +2134,13 @@ namespace BALL
 		return assignment_;
 	}
 
-	std::vector<FPTBondOrderStrategy::DPBackTracking_*>
+	vector<FPTBondOrderStrategy::DPBackTracking_*>
 	FPTBondOrderStrategy::DPBackTrackingCombiner_::deepCopyOfBacktrackers_() const
 	{
-		std::vector<DPBackTracking_*> ts;
+		vector<DPBackTracking_*> ts;
 		ts.reserve(backtrackers_.size());
 
-		for (std::vector<DPBackTracking_*>::const_iterator iter  = backtrackers_.begin();
+		for (vector<DPBackTracking_*>::const_iterator iter  = backtrackers_.begin();
 				                                               iter != backtrackers_.end();   ++iter)
 		{
 			ts.push_back(new DPBackTracking_(**iter));

@@ -1,17 +1,22 @@
-#include <BALL/core/format/molFileFactory.h>
-#include <BALL/core/format/dockResultFile.h>
+//_new_file_header
+
+
 #include <BALL/core/scoring/common/rescorer.h>
+
 #include <BALL/core/docking/common/dockingAlgorithm.h>
+#include <BALL/core/format/dockResultFile.h>
+#include <BALL/core/format/molFileFactory.h>
 #include <BALL/core/scoring/functions/gridedMM.h>
+#include <BALL/core/scoring/functions/gridedPLP.h>
 #include <BALL/core/scoring/functions/MMScoring.h>
 #include <BALL/core/scoring/functions/PBScoring.h>
-#include <BALL/core/scoring/functions/gridedPLP.h>
 #include <BALL/core/scoring/functions/PLPScoring.h>
+#include <BALL/core/scoring/functions/rescoring1D.h>
 #include <BALL/core/scoring/functions/rescoring3D.h>
 #include <BALL/core/scoring/functions/rescoring4D.h>
-#include <BALL/core/scoring/functions/rescoring1D.h>
 
 using namespace std;
+
 
 namespace BALL
 {

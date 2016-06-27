@@ -1,14 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: property.C,v 1.31 2003/08/26 09:17:45 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/property.h>
+
 #include <BALL/core/concept/persistenceManager.h>
 #include <BALL/core/concept/textPersistenceManager.h>
 
 using namespace std;
+
 
 namespace BALL 
 {

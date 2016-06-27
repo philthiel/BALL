@@ -1,23 +1,26 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/addHydrogenProcessor.h>
-#include <BALL/core/kernel/bond.h>
-#include <BALL/core/kernel/residue.h>
-#include <BALL/core/kernel/atom.h>
+
 #include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/residue.h>
 #include <BALL/core/maths/matrix44.h>
 #include <BALL/core/molmec/mmff94/MMFF94Parameters.h>
 
 //    #define DEBUG
 
 #ifdef DEBUG
-#define DEBUG_LINE Log.error() << "AddHydrogen: " << __LINE__ << std::endl;
+#define DEBUG_LINE Log.error() << "AddHydrogen: " << __LINE__ << endl;
 #else
 #define DEBUG_LINE
 #endif
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -80,7 +83,7 @@ namespace BALL
 		if (partners.size() < atom->countBonds())
 		{
 			Log.error() << "Could not find partner in AddHydrogenProcessor: "
-									<< atom->getFullName(Atom::ADD_RESIDUE_ID) << std::endl;
+									<< atom->getFullName(Atom::ADD_RESIDUE_ID) << endl;
 			return Processor::CONTINUE;
 		}
 
@@ -409,7 +412,7 @@ namespace BALL
 		float l = v.getLength();
 		if (Maths::isZero(l)) 
 		{
-			Log.error() << "Warning in AddHydrogens: found 2 atoms with same positions!" << std::endl;
+			Log.error() << "Warning in AddHydrogens: found 2 atoms with same positions!" << endl;
 			return false;
 		}
 		v /= l;
@@ -514,7 +517,7 @@ namespace BALL
 		if (electrons < 0) 
 		{
 			Log.error() << "Could not calculate number of electrons for "
-			            << atom.getFullName(Atom::ADD_RESIDUE_ID) << std::endl;
+						<< atom.getFullName(Atom::ADD_RESIDUE_ID) << endl;
 			return 0;
 		}
 

@@ -1,29 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: stringHashMap.h,v 1.25 2004/05/06 21:39:37 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_DATATYPE_STRINGHASHMAP_H
-#define BALL_DATATYPE_STRINGHASHMAP_H
 
-#ifndef BALL_COMMON_HASH_H
-#	include <BALL/core/common/hash.h>
-#endif
+#ifndef BALL_CORE_DATATYPE_STRINGHASHMAP_H
+#define BALL_CORE_DATATYPE_STRINGHASHMAP_H
 
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/core/concept/visitor.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_DATATYPE_HASHMAP_H
-#	include <BALL/core/datatype/hashMap.h>
-#endif
+#include <BALL/core/common/hash.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/visitor.h>
+#include <BALL/core/datatype/hashMap.h>
 
 #include <algorithm>
+
 
 namespace BALL 
 {
@@ -237,4 +224,4 @@ template class BALL_EXPORT StringHashMap<String>;
 
 }// namespace BALL
 
-#endif // BALL_DATATYPE_HASHMAP_H
+#endif // BALL_CORE_DATATYPE_HASHMAP_H

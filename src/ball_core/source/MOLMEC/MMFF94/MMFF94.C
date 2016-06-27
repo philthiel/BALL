@@ -1,25 +1,22 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: MMFF94.C,v 1.1.8.2 2007/03/26 13:47:50 amoll Exp $
-//
-// Molecular Mechanics: MMFF94 force field class
-//
+//_new_file_header
 
-#include <BALL/core/system/path.h>
-#include <BALL/core/system/fileSystem.h>
+
 #include <BALL/core/molmec/mmff94/MMFF94.h>
-#include <BALL/core/molmec/mmff94/MMFF94StretchBend.h>
-#include <BALL/core/molmec/mmff94/MMFF94Torsion.h>
+
 #include <BALL/core/molmec/mmff94/MMFF94NonBonded.h>
 #include <BALL/core/molmec/mmff94/MMFF94OutOfPlaneBend.h>
-#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/molmec/mmff94/MMFF94StretchBend.h>
+#include <BALL/core/molmec/mmff94/MMFF94Torsion.h>
 #include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/system/fileSystem.h>
+#include <BALL/core/system/path.h>
 
 // #define BALL_DEBUG_MMFF
 // #define BALL_DEBUG_TEST
 
 using namespace std;
+
 
 namespace BALL
 {

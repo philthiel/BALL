@@ -1,25 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: peak.h,v 1.18 2003/08/26 08:04:45 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_PEAK_H
-#define BALL_NMR_PEAK_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include	<BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_NMR_PEAK_H
+#define BALL_CORE_NMR_PEAK_H
 
-#ifndef BALL_MATHS_VECTOR2_H
-#	include	<BALL/core/maths/vector2.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROPERTY_H
-#	include	<BALL/core/concept/property.h>
-#endif
+#include <BALL/core/concept/property.h>
+#include <BALL/core/maths/vector2.h>
+#include <BALL/core/maths/vector3.h>
 
 #include <iostream>
+
 
 namespace BALL 
 {
@@ -266,4 +256,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_NMR_PEAK_H
+#endif // BALL_CORE_NMR_PEAK_H

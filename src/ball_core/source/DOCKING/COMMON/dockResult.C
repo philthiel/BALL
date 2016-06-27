@@ -1,12 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: dockResult.C,v 1.3.16.2 2007/08/07 16:16:17 bertsch Exp $
-//
+//_new_file_header
+
+
+#include <BALL/core/docking/common/dockResult.h>
 
 #include <BALL/core/format/INIFile.h>
 #include <BALL/core/format/PDBFile.h>
-#include <BALL/core/docking/common/dockResult.h>
+
+#include <vector>
+
+using namespace std;
+
 
 //#define BALL_VIEW_DEBUG
 namespace BALL

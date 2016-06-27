@@ -1,23 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: experiment.h,v 1.11 2005/12/23 17:01:56 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_NMR_EXPERIMENT_H
-#define BALL_NMR_EXPERIMENT_H
 
-#ifndef BALL_NMR_PEAKLIST_H
-#	include <BALL/core/nmr/peakList.h>
-#endif
+#ifndef BALL_CORE_NMR_EXPERIMENT_H
+#define BALL_CORE_NMR_EXPERIMENT_H
 
-#ifndef BALL_NMR_SHIFTMODULE_H
-#	include <BALL/core/nmr/shiftModule.h>
-#endif
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/nmr/peakList.h>
+#include <BALL/core/nmr/shiftModule.h>
 
-#ifndef BALL_KERNEL_EXPRESSION_H
-#	include <BALL/core/kernel/expression.h>
-#endif
 
 namespace BALL 
 {
@@ -211,4 +201,4 @@ namespace BALL
   
 } //namespace BALL
 	 
-#endif // BALL_NMR_EXPERIMENT_H
+#endif // BALL_CORE_NMR_EXPERIMENT_H

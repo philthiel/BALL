@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: atomIterator.h,v 1.21 2005/10/23 12:02:17 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_ATOMITERATOR_H
-#define BALL_KERNEL_ATOMITERATOR_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_KERNEL_ATOMITERATOR_H
+#define BALL_CORE_KERNEL_ATOMITERATOR_H
 
-#ifndef BALL_KERNEL_ITERATOR_H
-#	include <BALL/core/kernel/iterator.h>
-#endif
+#include <BALL/core/concept/stdIteratorWrapper.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/kernel/predicate.h>
 
-#ifndef BALL_KERNEL_PREDICATE_H
-#	include <BALL/core/kernel/predicate.h>
-#endif
-
-#ifndef BALL_CONCEPT_STDITERATORWRAPPER_H
-#	include <BALL/core/concept/stdIteratorWrapper.h>
-#endif
 
 namespace BALL
 {
@@ -101,5 +88,5 @@ namespace BALL
 	ConstIteratorWrapper(Atom)
 } // namespace BALL
 
-#endif // BALL_KERNEL_ATOMITERATOR_H
+#endif // BALL_CORE_KERNEL_ATOMITERATOR_H
 

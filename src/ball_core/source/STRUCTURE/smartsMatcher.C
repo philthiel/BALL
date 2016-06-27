@@ -1,8 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/smartsMatcher.h>
+
 #include <BALL/core/qsar/ringPerceptionProcessor.h>
 
 #include <stack>
@@ -17,6 +17,7 @@ using namespace std;
 
 #define REC_DEBUG
 #undef REC_DEBUG
+
 
 namespace BALL
 {

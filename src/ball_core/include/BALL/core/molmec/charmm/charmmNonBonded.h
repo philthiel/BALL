@@ -1,33 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics: Charmm force field, non-bonded component
-// (van der Waals, electrostatics, EEF1 solvation)
-//
 
-#ifndef BALL_MOLMEC_CHARMM_NONBONDED_H
-#define BALL_MOLMEC_CHARMM_NONBONDED_H
+#ifndef BALL_CORE_MOLMEC_CHARMM_NONBONDED_H
+#define BALL_CORE_MOLMEC_CHARMM_NONBONDED_H
 
-#ifndef BALL_MOLMEC_PARAMETER_LENNARDJONES_H
-#	include <BALL/core/molmec/parameter/lennardJones.h>
-#endif
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/molmec/parameter/charmmEEF1.h>
+#include <BALL/core/molmec/parameter/lennardJones.h>
+#include <BALL/core/molmec/parameter/potential1210.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_POTENTIAL1210_H
-#	include <BALL/core/molmec/parameter/potential1210.h>
-#endif
+#include <vector>
 
-#ifndef BALL_MOLMEC_PARAMETER_CHARMMEEF1_H
-#	include <BALL/core/molmec/parameter/charmmEEF1.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_SUPPORT_H
-#	include <BALL/core/molmec/common/support.h>
-#endif
 
 namespace BALL 
 {
@@ -184,12 +168,12 @@ namespace BALL
 
 		/*_	Vector array with all atom pairs whose distance is smaller than cut_off
 		*/
-		vector<LennardJones::Data>	non_bonded_;
+		std::vector<LennardJones::Data>	non_bonded_;
 		
 		/*_ A helper array for buildVectorOfNonBondedAtomPairs(). This is
 				declared here to save the ctor within the method.
 		*/
-		vector<bool> is_torsion_;
+		std::vector<bool> is_torsion_;
 
 		/*_	Number of 1-4 interactions in the vector non_bonded
 		*/
@@ -260,7 +244,7 @@ namespace BALL
 
 		CharmmEEF1									solvation_parameters_;
 
-		vector<CharmmEEF1::Values>	solvation_;
+		std::vector<CharmmEEF1::Values>	solvation_;
 
 		bool use_solvation_component_;
 
@@ -269,4 +253,4 @@ namespace BALL
 	};
 } // namespace BALL
 
-#endif // BALL_MOLMEC_CHARMM_CHARMMVDW_H
+#endif // BALL_CORE_MOLMEC_CHARMM_CHARMMVDW_H

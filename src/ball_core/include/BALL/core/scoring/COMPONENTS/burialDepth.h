@@ -1,13 +1,13 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_SCORING_COMPONENTS_BURIALDEPTH_H
-#define BALL_SCORING_COMPONENTS_BURIALDEPTH_H
+
+#ifndef BALL_CORE_SCORING_COMPONENTS_BURIALDEPTH_H
+#define BALL_CORE_SCORING_COMPONENTS_BURIALDEPTH_H
 
 #include <BALL/core/scoring/common/scoringComponent.h>
 #include <BALL/core/scoring/common/scoringFunction.h>
+
+#include <vector>
 
 
 namespace BALL
@@ -19,10 +19,10 @@ namespace BALL
 
 			~BurialDepth();
 
-			void update(const vector<std::pair<Atom*, Atom*> >& pair_vector);
+			void update(const std::vector<std::pair<Atom*, Atom*> >& pair_vector);
 
 			double updateScore();
 	};
 }
 
-#endif // BALL_SCORING_COMPONENTS_BURIALDEPTH_H
+#endif // BALL_CORE_SCORING_COMPONENTS_BURIALDEPTH_H

@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// 
+//_new_file_header
+
 
 #include <BALL/core/qsar/regressionModel.h>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -112,7 +111,7 @@ namespace BALL
 
 		}
 
-		void RegressionModel::saveToFile(string filename)
+		void RegressionModel::saveToFile(String filename)
 		{
 			if (data == 0)
 			{
@@ -164,7 +163,7 @@ namespace BALL
 		}
 
 
-		void RegressionModel::readFromFile(string filename)
+		void RegressionModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

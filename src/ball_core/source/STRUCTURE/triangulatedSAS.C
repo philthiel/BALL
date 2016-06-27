@@ -1,28 +1,28 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#	include <BALL/core/kernel/atom.h>
-#	include <BALL/core/kernel/molecule.h>
-#	include <BALL/core/kernel/system.h>
-#	include <BALL/core/kernel/PTE.h>
-#	include <BALL/core/datatype/string.h>
 
-#include <BALL/core/structure/solventAccessibleSurface.h>
-#include <BALL/core/structure/triangle.h>
-#include <BALL/core/structure/triangleEdge.h>
-#include <BALL/core/structure/trianglePoint.h>
 #include <BALL/core/structure/triangulatedSAS.h>
-#include <BALL/core/structure/triangulatedSurface.h>
+
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
 #include <BALL/core/maths/angle.h>
 #include <BALL/core/maths/matrix44.h>
 #include <BALL/core/maths/plane3.h>
 #include <BALL/core/maths/quaternion.h>
 #include <BALL/core/maths/vector3.h>
 #include <BALL/core/maths/vector4.h>
+#include <BALL/core/structure/solventAccessibleSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
+#include <BALL/core/structure/triangulatedSurface.h>
 
 #include <list>
 #include <vector>
+
 
 namespace BALL
 {

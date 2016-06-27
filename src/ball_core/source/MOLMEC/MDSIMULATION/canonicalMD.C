@@ -1,13 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: canonicalMD.C,v 1.22 2005/03/01 10:07:54 oliver Exp $
+//_new_file_header
+
 
 #include <BALL/core/molmec/mdsimulation/canonicalMD.h>
+
+#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/molmec/common/atomVector.h>
 #include <BALL/core/molmec/common/forceField.h>
 #include <BALL/core/molmec/common/snapShotManager.h>
-#include <BALL/core/kernel/PTE.h>
+
+#include <vector>
+
+using namespace std;
+
 
 namespace BALL
 {
@@ -154,7 +158,7 @@ namespace BALL
 	{
 		if (!valid_)	
 		{
-			Log.error() << "CanonicalMD::specificSetup(): "	<< "Instance is not valid." << std::endl;
+			Log.error() << "CanonicalMD::specificSetup(): "	<< "Instance is not valid." << endl;
 			return false;
 		}
 
@@ -223,7 +227,7 @@ namespace BALL
 		if ((!valid_) || (force_field_ptr_ == 0) || (!force_field_ptr_->isValid ()))
 		{
 			Log.error() << "CanonicalMD::simulateIterations(): "
-									<< "MD simulation not possible, class is not valid." << std::endl;
+									<< "MD simulation not possible, class is not valid." << endl;
 			return false;
 		}
 
@@ -279,10 +283,10 @@ namespace BALL
 
 				Log.info() << "Canonical MD simulation System has potential energy "
 									 << current_energy << " kJ/mol at time " 
-									 << current_time_ + (double) iteration *time_step_ << " ps" << std::endl;
+									 << current_time_ + (double) iteration *time_step_ << " ps" << endl;
 				Log.info() << "Canonical MD simulation System has temperature  "
 									 << current_temperature_ << " at time " 
-									 << current_time_ + (double) iteration *time_step_ << " ps " << std::endl;
+									 << current_time_ + (double) iteration *time_step_ << " ps " << endl;
 			}
 
 			// check whether the rescaling will be successful

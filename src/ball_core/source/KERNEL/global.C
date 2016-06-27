@@ -1,10 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: global.C,v 1.5 2002/02/27 12:21:24 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/kernel/global.h>
 #include <BALL/core/maths/vector3.h>
+
+
 namespace BALL 
 {
 

@@ -1,14 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_BINARYFINGERPRINTMETHODS_H
-#define BALL_STRUCTURE_BINARYFINGERPRINTMETHODS_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#       include <BALL/core/datatype/options.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_BINARYFINGERPRINTMETHODS_H
+#define BALL_CORE_STRUCTURE_BINARYFINGERPRINTMETHODS_H
 
+#include <BALL/core/datatype/options.h>
 
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graph_traits.hpp>
@@ -16,7 +12,6 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/thread.hpp>
 #include <boost/unordered_set.hpp>
-
 
 #include <map>
 #include <set>
@@ -1024,4 +1019,4 @@ namespace BALL
 	};
 } // namespace BALL 
 
-#endif // BALL_STRUCTURE_BINARYFINGERPRINTMETHODS_H
+#endif // BALL_CORE_STRUCTURE_BINARYFINGERPRINTMETHODS_H

@@ -1,15 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: atomVector.h,v 1.24.20.1 2007/05/18 12:02:43 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_COMMON_ATOMVECTOR_H 
-#define BALL_MOLMEC_COMMON_ATOMVECTOR_H 
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#ifndef BALL_CORE_MOLMEC_COMMON_ATOMVECTOR_H 
+#define BALL_CORE_MOLMEC_COMMON_ATOMVECTOR_H 
+
+#include <BALL/core/maths/vector3.h>
+
 
 namespace BALL 
 { 
@@ -181,4 +177,4 @@ namespace BALL
   };
 } // end of namespace BALL
 
-#endif // BALL_MOLMEC_MINIMIZATION_GRADIENT_H 
+#endif // BALL_CORE_MOLMEC_MINIMIZATION_GRADIENT_H 

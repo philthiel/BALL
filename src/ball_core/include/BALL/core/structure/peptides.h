@@ -1,21 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_PEPTIDES_H
-#define BALL_STRUCTURE_PEPTIDES_H
 
-#ifndef BALL_KERNEL_PROTEIN_H
-#	include <BALL/core/kernel/protein.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_PEPTIDES_H
+#define BALL_CORE_STRUCTURE_PEPTIDES_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-# include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/concept/embeddable.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/protein.h>
 
-#ifndef BALL_CONCEPT_EMBEDDABLE_H
-# include <BALL/core/concept/embeddable.h>
-#endif
 
 namespace BALL 
 {
@@ -269,6 +261,6 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_PEPTIDES_H_
+#endif // BALL_CORE_STRUCTURE_PEPTIDES_H_
 
 

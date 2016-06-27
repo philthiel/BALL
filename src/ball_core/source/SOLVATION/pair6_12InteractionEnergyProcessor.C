@@ -1,20 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: pair6_12InteractionEnergyProcessor.C,v 1.23.12.1 2007/03/25 22:00:32 oliver Exp $
-//
+//_new_file_header
 
-#include <BALL/core/system/path.h>
+
+#include <BALL/core/solvation/pair6_12InteractionEnergyProcessor.h>
+
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/maths/surface.h>
 #include <BALL/core/molmec/parameter/forceFieldParameters.h>
 #include <BALL/core/molmec/parameter/lennardJones.h>
-#include <BALL/core/structure/numericalSAS.h>
-
-#include <BALL/core/solvation/pair6_12InteractionEnergyProcessor.h>
 #include <BALL/core/solvation/solventParameter.h>
+#include <BALL/core/structure/numericalSAS.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL
 {

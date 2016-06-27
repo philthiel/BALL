@@ -1,23 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_QSAR_FEATURESELECTION_H
-#define BALL_QSAR_FEATURESELECTION_H
 
-#ifndef BALL_QSAR_MODEL_H
-#include <BALL/core/qsar/Model.h>
-#endif
-
-#ifndef BALL_QSAR_KERNELMODEL_H
-#include <BALL/core/qsar/kernelModel.h>
-#endif
-
-#ifndef BALL_QSAR_LINEARMODEL_H
-#include <BALL/core/qsar/linearModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_FEATURESELECTION_H
+#define BALL_CORE_QSAR_FEATURESELECTION_H
 
 #include <set>
+
+#include <BALL/core/qsar/kernelModel.h>
+#include <BALL/core/qsar/linearModel.h>
+#include <BALL/core/qsar/Model.h>
+
 
 namespace BALL 
 {
@@ -127,4 +119,4 @@ namespace BALL
 }
 
 
-#endif // FEATURESEL
+#endif // BALL_CORE_QSAR_FEATURESELECTION_H

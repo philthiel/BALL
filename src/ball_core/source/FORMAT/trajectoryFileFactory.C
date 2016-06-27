@@ -1,19 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/format/trajectoryFileFactory.h>
 
-#include <BALL/core/format/trajectoryFile.h>
+#include <BALL/core/datatype/string.h>
 #include <BALL/core/format/DCDFile.h>
+#include <BALL/core/format/trajectoryFile.h>
 #include <BALL/core/format/TRRFile.h>
 
+#include <iostream>
+#include <vector>
+
+#include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/filtering_stream.hpp>
-#include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filter/gzip.hpp>
 
-#include <BALL/core/datatype/string.h>
+using namespace std;
+
 
 // TODO: - this shares a lot of code with MolFileFactory. We should probably put the shared stuff into a base class.
 //       - also, we currently do not handle automatic compression/decompression into a temporary. I am not even sure
@@ -36,7 +40,7 @@ namespace BALL
 		}
 		else
 		{
-			if (open_mode == std::ios::in)
+			if (open_mode == ios::in)
 			{
 				tf = detectFormat(name);
 
@@ -57,7 +61,7 @@ namespace BALL
 			return file;
 		}
 
-		if (open_mode == std::ios::out)
+		if (open_mode == ios::out)
 		{
 			if (default_format == "dcd")
 			{
@@ -102,7 +106,7 @@ namespace BALL
 
 	TrajectoryFile* TrajectoryFileFactory::detectFormat(const String& name)
 	{
-		Log.error() << std::endl << "[Error:] Format detection not yet implemented for trajectory files!" << std::endl << std::endl;
+		Log.error() << endl << "[Error:] Format detection not yet implemented for trajectory files!" << endl << endl;
 
 		return NULL;
 	}

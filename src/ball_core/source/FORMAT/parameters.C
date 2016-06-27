@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: parameters.C,v 1.12 2003/08/26 09:17:47 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/format/parameters.h>
+
 
 namespace BALL 
 {

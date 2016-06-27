@@ -1,21 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: energyMinimizer.h,v 1.44.20.3 2007/08/07 09:12:33 aleru Exp $
-//
+//_new_file_header
 
-// Energy Minimizer: A class for minimizing the energy of molecular systems
 
-#ifndef BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
-#define BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
+#ifndef BALL_CORE_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
+#define BALL_CORE_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
 
-#ifndef BALL_DATATYPE_OPTIONS_H
-#	include <BALL/core/datatype/options.h>
-#endif
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/molmec/common/gradient.h>
 
-#ifndef BALL_MOLMEC_COMMON_GRADIENT_H
-#	include <BALL/core/molmec/common/gradient.h>
-#endif
 
 namespace BALL 
 {
@@ -555,4 +546,4 @@ namespace BALL
 	
 } // namespace Ball
 
-#endif // BALL_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H
+#endif // BALL_CORE_MOLMEC_MINIMIZATION_ENERGYMINIMIZER_H

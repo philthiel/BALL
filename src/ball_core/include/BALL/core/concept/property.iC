@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 BALL_INLINE 
 PropertyManager::PropertyManager()
@@ -86,12 +85,12 @@ NamedProperty::NamedProperty(const std::string& name, double value)
 }
 
 BALL_INLINE 
-NamedProperty::NamedProperty(const std::string& name, const string& str)
+NamedProperty::NamedProperty(const std::string& name, const std::string& str)
 	:	PersistentObject(),
 		type_(STRING),
 		name_(name)
 {
-	data_ = new string(str);
+	data_ = new std::string(str);
 }
 
 BALL_INLINE 

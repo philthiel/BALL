@@ -1,25 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_MOPACINPUTFILE_H
-#define BALL_FORMAT_MOPACINPUTFILE_H
 
-#ifndef BALL_COMMON_GLOBAL_H
-# include <BALL/core/common/global.h>
-#endif
+#ifndef BALL_CORE_FORMAT_MOPACINPUTFILE_H
+#define BALL_CORE_FORMAT_MOPACINPUTFILE_H
 
-#ifndef BALL_FORMAT_GENERICMOLFILE_H
-# include <BALL/core/format/genericMolFile.h>
-#endif
+#include <BALL/core/common/global.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/kernel/atomContainer.h>
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
-
-#ifndef BALL_DATATYPE_STRING_H
-# include <BALL/core/datatype/string.h>
-#endif
 
 namespace BALL
 {
@@ -99,5 +88,5 @@ namespace BALL
 			String default_mopac_keywords_;
 	};
 }
-#endif // BALL_FORMAT_MOPACINPUTFILE_H
+#endif // BALL_CORE_FORMAT_MOPACINPUTFILE_H
 

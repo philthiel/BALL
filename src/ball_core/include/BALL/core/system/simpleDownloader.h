@@ -1,16 +1,17 @@
-#ifndef BALL_SYSTEM_SIMPLEDOWNLOADER_H
-#define BALL_SYSTEM_SIMPLEDOWNLOADER_H
+//_new_file_header
 
-#ifndef BALL_DATATYPE_STRING_H
-	#include <BALL/core/datatype/string.h>
-#endif
 
-#include <QtCore/QThread>
+#ifndef BALL_CORE_SYSTEM_SIMPLEDOWNLOADER_H
+#define BALL_CORE_SYSTEM_SIMPLEDOWNLOADER_H
+
+#include <BALL/core/datatype/string.h>
+
 #include <QtCore/QFile>
-
+#include <QtCore/QThread>
 #include <QtNetwork/QNetworkReply>
 
 class QByteArray;
+
 
 namespace BALL
 {
@@ -245,4 +246,4 @@ namespace BALL
 	}
 }
 
-#endif //BALL_SYSTEM_SIMPLEDOWNLOADER_H
+#endif // BALL_SYSTEM_SIMPLEDOWNLOADER_H

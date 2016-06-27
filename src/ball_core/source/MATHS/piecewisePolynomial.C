@@ -1,12 +1,9 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: piecewisePolynomial.C,v 1.9 2003/08/26 09:17:51 oliver Exp $
-//
+//_new_file_header
 
+
+#include <BALL/core/maths/piecewisePolynomial.h>
 
 #include <BALL/core/common/logStream.h>
-#include <BALL/core/maths/piecewisePolynomial.h>
 
 using namespace std;
 

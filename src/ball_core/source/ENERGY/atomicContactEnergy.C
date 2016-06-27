@@ -1,20 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: atomicContactEnergy.C,v 1.6 2003/08/26 09:17:45 oliver Exp $
-//
+//_new_file_header
+
 
 #include <BALL/core/energy/atomicContactEnergy.h>
 
-#include <BALL/core/system/file.h>
-#include <BALL/core/system/path.h>
 #include <BALL/core/datatype/hashGrid.h>
 #include <BALL/core/datatype/string.h>
 #include <BALL/core/datatype/stringHashMap.h>
-#include <BALL/core/maths/vector3.h>
-#include <BALL/core/structure/geometricProperties.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/path.h>
 
 #define ACE_FILENAME "energy/AtomicContactEnergy.dat"
 #define ACE_TYPES_FILENAME "energy/ACE_types.dat"
@@ -22,6 +19,7 @@
 // #define BALL_DEBUG_ACE
 
 using namespace std;
+
 
 namespace BALL 
 {
@@ -126,7 +124,7 @@ namespace BALL
 
 	double calculateACE
 		(const AtomContainer& atom_container, 
-		 const string& type_filename, const string& parameter_filename) 
+		 const String& type_filename, const String& parameter_filename)
 	{
 		// Retrieve the ACE types and parameters.
 		// We do this just once, unless different filenames are 

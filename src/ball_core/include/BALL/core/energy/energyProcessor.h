@@ -1,19 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: energyProcessor.h,v 1.17 2005/12/23 17:01:43 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_ENERGY_ENERGYPROCESSOR_H
-#define BALL_ENERGY_ENERGYPROCESSOR_H
 
-#ifndef BALL_KERNEL_ATOMCONTAINER_H
-# include <BALL/core/kernel/atomContainer.h>
-#endif
+#ifndef BALL_CORE_ENERGY_ENERGYPROCESSOR_H
+#define BALL_CORE_ENERGY_ENERGYPROCESSOR_H
 
-#ifndef BALL_CONCEPT_PROCESSOR_H
-# include <BALL/core/concept/processor.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/kernel/atomContainer.h>
+
 
 namespace BALL
 {
@@ -111,4 +104,4 @@ namespace BALL
 	};
 }
 
-#endif // BALL_ENERGY_ENERGYPROCESSOR_H
+#endif // BALL_CORE_ENERGY_ENERGYPROCESSOR_H

@@ -1,29 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_FORMAT_RESOURCEFILE_H
-#define BALL_FORMAT_RESOURCEFILE_H
 
-#ifndef BALL_CONCEPT_FORWARDITERATOR_H
-#	include <BALL/core/concept/forwardIterator.h>
-#endif
+#ifndef BALL_CORE_FORMAT_RESOURCEFILE_H
+#define BALL_CORE_FORMAT_RESOURCEFILE_H
 
-#ifndef BALL_CONCEPT_VISITOR_H
-#	include <BALL/core/concept/visitor.h>
-#endif
+#include <BALL/core/concept/autoDeletable.h>
+#include <BALL/core/concept/forwardIterator.h>
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/concept/visitor.h>
+#include <BALL/core/system/file.h>
 
-#ifndef BALL_CONCEPT_AUTODELETABLE_H
-#	include <BALL/core/concept/autoDeletable.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
-
-#ifndef BALL_SYSTEM_FILE_H
-#	include <BALL/core/system/file.h>
-#endif
 
 namespace BALL 
 {
@@ -810,4 +796,4 @@ namespace BALL
 #	endif
 } // namespace BALL
 
-#endif // BALL_FORMAT_RESOURCEFILE_H
+#endif // BALL_CORE_FORMAT_RESOURCEFILE_H

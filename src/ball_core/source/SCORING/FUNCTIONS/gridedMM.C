@@ -1,21 +1,20 @@
+//_new_file_header
 
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
 
 #include <BALL/core/scoring/functions/gridedMM.h>
 
 #include <BALL/core/scoring/components/advElectrostatic.h>
 #include <BALL/core/scoring/components/aromaticRingStacking.h>
-#include <BALL/core/scoring/components/solvation.h>
 #include <BALL/core/scoring/components/fragmentationalSolvation.h>
-#include <BALL/core/scoring/components/vanDerWaals.h>
 #include <BALL/core/scoring/components/hydrogenBond.h>
-#include <BALL/core/scoring/components/rotationalEntropy.h>
 #include <BALL/core/scoring/components/lipophilic.h>
+#include <BALL/core/scoring/components/rotationalEntropy.h>
+#include <BALL/core/scoring/components/solvation.h>
+#include <BALL/core/scoring/components/vanDerWaals.h>
 
+#include <vector>
 
+using namespace std;
 using namespace BALL;
 
 

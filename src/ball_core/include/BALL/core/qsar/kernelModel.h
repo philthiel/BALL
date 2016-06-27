@@ -1,23 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
 
-#ifndef KMODEL
-#define KMODEL
 
-#ifndef NLMODEL
-#include <BALL/core/qsar/nonlinearModel.h>
-#endif
+#ifndef BALL_CORE_QSAR_KERNELMODEL_H
+#define BALL_CORE_QSAR_KERNELMODEL_H
 
-#ifndef LMODEL
-#include <BALL/core/qsar/linearModel.h>
-#endif
-
-#ifndef KERNEL
 #include <BALL/core/qsar/kernel.h>
-#endif
+#include <BALL/core/qsar/linearModel.h>
+#include <BALL/core/qsar/nonlinearModel.h>
 
+#include <vector>
 
 
 namespace BALL
@@ -40,11 +31,11 @@ namespace BALL
 				
 				~KernelModel();
 				
-				virtual void saveToFile(string filename);
+				virtual void saveToFile(String filename);
 				
-				virtual void readFromFile(string filename);
+				virtual void readFromFile(String filename);
 				
-				virtual Eigen::VectorXd predict(const vector<double>& substance, bool transform);
+				virtual Eigen::VectorXd predict(const std::vector<double>& substance, bool transform);
 				
 				void operator=(const Model& m);
 
@@ -90,4 +81,4 @@ namespace BALL
 }
 
 
-#endif // NLMODEL
+#endif // BALL_CORE_QSAR_KERNELMODEL_H

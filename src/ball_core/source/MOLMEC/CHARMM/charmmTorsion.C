@@ -1,17 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/molmec/charmm/charmmTorsion.h>
-#include <BALL/core/molmec/charmm/charmm.h>
-#include <BALL/core/molmec/common/forceFieldComponent.h>
-#include <BALL/core/molmec/common/forceField.h>
+
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/bond.h>
+#include <BALL/core/molmec/charmm/charmm.h>
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
 
 #include <algorithm>
 
 using namespace std;
+
 
 namespace BALL 
 {

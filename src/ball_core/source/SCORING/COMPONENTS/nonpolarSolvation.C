@@ -1,22 +1,21 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: nonpolarSolvation.C,v 1.4 2006/05/27 09:05:23 anker Exp $
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/nonpolarSolvation.h>
-#include <BALL/core/kernel/standardPredicates.h>
+
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/datatype/string.h>
+#include <BALL/core/kernel/atomIterator.h>
 #include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/molmec/common/radiusRuleProcessor.h>
 #include <BALL/core/structure/defaultProcessors.h>
 #include <BALL/core/structure/geometricProperties.h>
-#include <BALL/core/datatype/hashMap.h>
-#include <BALL/core/kernel/atomIterator.h>
-#include <BALL/core/molmec/common/radiusRuleProcessor.h>
 #include <BALL/core/system/path.h>
-#include <BALL/core/datatype/string.h>
-
 #include <BALL/core/system/timer.h>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -225,7 +224,7 @@ namespace BALL
 			if (verbosity_ > 0)
 			{
 				Log.info() << "NonpolarSolvation: using radius rule file " << tmp
-					<< std::endl;
+					<< endl;
 			}
 		}
 		INIFile radius_rule_ini(tmp);
@@ -250,8 +249,8 @@ namespace BALL
 				// PARANOIA
 				if (scale_it->getRadius() < 0.1)
 				{
-					std::cout << "Found radius < 0.1: " << scale_it->getFullName()
-						<< std::endl;
+					cout << "Found radius < 0.1: " << scale_it->getFullName()
+						<< endl;
 				}
 				// PARANOIA
 			}
@@ -278,8 +277,8 @@ namespace BALL
 				// PARANOIA
 				if (scale_it->getRadius() < 0.1)
 				{
-					std::cout << "Found radius < 0.1: " << scale_it->getFullName()
-						<< std::endl;
+					cout << "Found radius < 0.1: " << scale_it->getFullName()
+						<< endl;
 				}
 				// PARANOIA
 			}
@@ -366,14 +365,14 @@ namespace BALL
 		if (verbosity_ > 1)
 		{
 			Log.info() << "NonpolarSolvation::setup() "
-				<< timer.getCPUTime() << " s" << std::endl;
+				<< timer.getCPUTime() << " s" << endl;
 		}
 
 		return(true);
 	}
 
 
-	void NonpolarSolvation::update(const vector<std::pair<Atom*, Atom*> >& pair_vector)
+	void NonpolarSolvation::update(const vector<pair<Atom*, Atom*> >& pair_vector)
 	{
 	}
 
@@ -434,7 +433,7 @@ namespace BALL
 		if (verbosity_ > 1)
 		{
 			Log.info() << "NonpolarSolvation::calculateScore() "
-				<< timer.getCPUTime() << " s" << std::endl;
+				<< timer.getCPUTime() << " s" << endl;
 		}
 
 		if (verbosity_ > 1)

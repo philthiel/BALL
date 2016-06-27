@@ -1,21 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: slickEnergy.C,v 1.4 2006/05/21 18:15:29 anker Exp $
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/slickEnergy.h>
-#include <BALL/core/scoring/components/CHPISlick.h>
-#include <BALL/core/scoring/components/hydrogenBondSlick.h>
-#include <BALL/core/scoring/components/vanDerWaalsSlick.h>
-#include <BALL/core/scoring/components/nonpolarSolvation.h>
-#include <BALL/core/scoring/components/polarSolvation.h>
 
-#include <BALL/core/system/path.h>
-#include <BALL/core/kernel/PTE.h>
-#include <BALL/core/kernel/standardPredicates.h>
 #include <BALL/core/kernel/bondIterator.h>
 #include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/standardPredicates.h>
 #include <BALL/core/molmec/parameter/templates.h>
+#include <BALL/core/scoring/components/hydrogenBondSlick.h>
+#include <BALL/core/scoring/components/CHPISlick.h>
+#include <BALL/core/scoring/components/nonpolarSolvation.h>
+#include <BALL/core/scoring/components/polarSolvation.h>
+#include <BALL/core/scoring/components/vanDerWaalsSlick.h>
+#include <BALL/core/system/path.h>
+
 
 namespace BALL
 {

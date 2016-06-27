@@ -1,25 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
-#define BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
 
-#ifndef BALL_KERNEL_ATOM_H
-#	include <BALL/core/kernel/atom.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
+#define BALL_CORE_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
 
-#ifndef BALL_MATHS_VECTOR3_H
-#	include <BALL/core/maths/vector3.h>
-#endif
+#include <BALL/core/concept/processor.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/vector3.h>
 
-#ifndef BALL_MATHS_MATRIX44_H
-#	include <BALL/core/maths/matrix44.h>
-#endif
-
-#ifndef BALL_CONCEPT_PROCESSOR_H
-#	include <BALL/core/concept/processor.h>
-#endif
 
 namespace BALL 
 {
@@ -131,4 +120,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_GEOMETRICTRANSFORMATIONS_H
+#endif // BALL_CORE_STRUCTURE_GEOMETRICTRANSFORMATIONS_H

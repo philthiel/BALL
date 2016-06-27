@@ -1,11 +1,10 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Slick-development Team, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/components/lipophilic.h>
-#include <BALL/core/system/timer.h>
+
 #include <BALL/core/format/HINFile.h>
+#include <BALL/core/system/timer.h>
 
 using namespace std;
 using namespace BALL;

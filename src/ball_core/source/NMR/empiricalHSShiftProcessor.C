@@ -1,20 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/format/PDBFile.h>
+
 #include <BALL/core/nmr/empiricalHSShiftProcessor.h>
-#include <BALL/core/kernel/bond.h>
+
 #include <BALL/core/format/parameterSection.h>
-#include <BALL/core/structure/peptides.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/bond.h>
 #include <BALL/core/kernel/PTE.h>
 #include <BALL/core/maths/analyticalGeometry.h>
-#include <map>
-#include <set>
-#include <BALL/core/system/path.h>
 #include <BALL/core/maths/cubicSpline1D.h>
 #include <BALL/core/maths/cubicSpline2D.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/system/path.h>
 
+#include <map>
+#include <set>
 
 #define FLOAT_VALUE_NA 3600.
 // This value signifies that the evaluation should return 0. This is a very ugly hack,
@@ -27,6 +27,7 @@
 #undef DEBUG 
 
 using namespace std;
+
 
 namespace BALL 
 {

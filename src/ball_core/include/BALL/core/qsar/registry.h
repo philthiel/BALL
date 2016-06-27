@@ -1,15 +1,18 @@
-#ifndef BALL_QSAR_REGISTRY_H
-#define BALL_QSAR_REGISTRY_H
+//_new_file_header
 
-#ifndef MODEL_FACTORY_H
+
+#ifndef BALL_CORE_QSAR_REGISTRY_H
+#define BALL_CORE_QSAR_REGISTRY_H
+
 #include <BALL/core/qsar/modelFactory.h>
-#endif
-
-#include <map>
 
 #ifdef BALL_HAS_LIBSVM
 # include <BALL/core/qsar/libsvmModel.h>
 #endif
+
+#include <map>
+#include <vector>
+
 
 namespace BALL
 {
@@ -56,8 +59,8 @@ namespace BALL
 				CreateMethod create;
 				CreateKernel1 createKernel1;
 				CreateKernel2 createKernel2;
-				vector<String> parameterNames;
-				vector<double> parameterDefaults;
+				std::vector<String> parameterNames;
+				std::vector<double> parameterDefaults;
 				Registry* getRegistry();
 				
 			private:
@@ -152,4 +155,4 @@ namespace BALL
 	}
 }
 
-#endif // BALL_QSAR_REGISTRY_H
+#endif // BALL_CORE_QSAR_REGISTRY_H

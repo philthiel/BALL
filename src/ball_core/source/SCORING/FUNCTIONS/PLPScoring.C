@@ -1,14 +1,14 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/PLPScoring.h>
+
 #include <BALL/core/molmec/common/forceFieldComponent.h>
 #include <BALL/core/scoring/components/PLP.h>
 
 using namespace BALL;
 using namespace std;
+
 
 PLPScoring::PLPScoring(AtomContainer& receptor, AtomContainer& ligand, Options& options)
 	: ScoringFunction(receptor, ligand, options)

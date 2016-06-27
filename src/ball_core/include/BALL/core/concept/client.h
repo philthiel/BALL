@@ -1,27 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_CONCEPT_CLIENT_H
-#define BALL_CONCEPT_CLIENT_H
 
-#ifndef BALL_CONCEPT_COMPOSITE_H
-#	include <BALL/core/concept/composite.h>
-#endif
+#ifndef BALL_CORE_CONCEPT_CLIENT_H
+#define BALL_CORE_CONCEPT_CLIENT_H
 
-#ifndef BALL_SYSTEM_NETWORKING_H
-#	include <BALL/core/system/networking.h>
-#endif
-
-#ifndef BALL_CONCEPT_PERSISTENTOBJECT_H       
-# include <BALL/core/concept/persistentObject.h>
-#endif
-
-#ifndef BALL_CONCET_TEXTPERSISTENCEMANAGER_H
-# include <BALL/core/concept/textPersistenceManager.h>
-#endif
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/persistentObject.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/system/networking.h>
 
 #define DEFAULT_PORT 20000
+
 
 namespace BALL
 {
@@ -193,4 +182,4 @@ namespace BALL
   
 } // namespace BALL
 
-#endif // BALL_CONCEPT_CLIENT_H
+#endif // BALL_CORE_CONCEPT_CLIENT_H

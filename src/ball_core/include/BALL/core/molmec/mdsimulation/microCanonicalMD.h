@@ -1,17 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: microCanonicalMD.h,v 1.25 2005/12/23 17:01:53 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
-#define BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
+
+#ifndef BALL_CORE_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
+#define BALL_CORE_MOLMEC_MDSIMULATION_MICROCANONICALMD_H   
 
 #include <vector>
 
-#ifndef BALL_MOLMEC_MDSIMULATION_MOLECULARDYNAMICS_H
-#	include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
-#endif
+#include <BALL/core/molmec/mdsimulation/molecularDynamics.h>
 
 
 namespace BALL 
@@ -138,4 +133,4 @@ namespace BALL
     };  // end of class MicroCanonicalMD  
   } // end of namespace BALL
 
-#endif // BALL_MOLMEC_MDSIMULATION_MICROCANONICALMD_H
+#endif // BALL_CORE_MOLMEC_MDSIMULATION_MICROCANONICALMD_H

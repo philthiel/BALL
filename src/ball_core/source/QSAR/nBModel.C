@@ -1,12 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-//
+//_new_file_header
+
 
 #include <BALL/core/qsar/nBModel.h>
+
 #include <limits>
 
 using namespace std;
+
 
 namespace BALL
 {
@@ -231,7 +231,7 @@ namespace BALL
 		}
 				
 
-		void NBModel::saveToFile(string filename)
+		void NBModel::saveToFile(String filename)
 		{
 			bool trained = 1;
 			if (probabilities_.size() == 0) trained = 0; 
@@ -284,7 +284,7 @@ namespace BALL
 
 
 
-		void NBModel::readFromFile(string filename)
+		void NBModel::readFromFile(String filename)
 		{
 			ifstream input(filename.c_str()); 
 			if (!input)

@@ -1,10 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: amiraMeshFile.C
-//
+//_new_file_header
+
 
 #include <BALL/core/format/amiraMeshFile.h>
+
 #include <cstdio>
 
 

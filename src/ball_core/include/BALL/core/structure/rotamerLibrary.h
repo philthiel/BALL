@@ -1,23 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_ROTAMERLIBRARY_H
-#define BALL_STRUCTURE_ROTAMERLIBRARY_H
 
-#ifndef BALL_STRUCTURE_FRAGMENT_DB_H
-#	include <BALL/core/structure/fragmentDB.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_ROTAMERLIBRARY_H
+#define BALL_CORE_STRUCTURE_ROTAMERLIBRARY_H
 
-#ifndef BALL_STRUCTURE_RESIDUEROTAMERSET_H
- #include <BALL/core/structure/residueRotamerSet.h>
-#endif
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/residueRotamerSet.h>
 
-#ifndef BALL_DATATYPE_HASHMAP_H
-	#include <BALL/core/datatype/hasMap.h>
-#endif
-
-//#include <map>
 
 namespace BALL
 {
@@ -152,4 +141,4 @@ namespace BALL
 
 } // namespace BALL
 
-#endif // BALL_STRUCTURE_ROTAMERLIBRARY_H
+#endif // BALL_CORE_STRUCTURE_ROTAMERLIBRARY_H

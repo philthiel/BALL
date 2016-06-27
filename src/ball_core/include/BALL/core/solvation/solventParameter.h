@@ -1,27 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: solventParameter.h,v 1.17 2005/12/23 17:02:00 amoll Exp $
-//
+//_new_file_header
 
-#ifndef BALL_SOLVATION_SOLVENTPARAMETER_H
-#define BALL_SOLVATION_SOLVENTPARAMETER_H
 
-#ifndef BALL_SOLVATION_SOLVENTDESCRIPTOR_H
-#	include <BALL/core/solvation/solventDescriptor.h>
-#endif
+#ifndef BALL_CORE_SOLVATION_SOLVENTPARAMETER_H
+#define BALL_CORE_SOLVATION_SOLVENTPARAMETER_H
 
-#ifndef BALL_FORMAT_PARAMETERS_H
-#	include <BALL/core/format/parameters.h>
-#endif
+#include <BALL/core/format/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/molmec/parameter/forceFieldParameters.h>
+#include <BALL/core/solvation/solventDescriptor.h>
 
-#ifndef BALL_FORMAT_PARAMETERSECTION_H
-#	include <BALL/core/format/parameterSection.h>
-#endif
-
-#ifndef BALL_MOLMEC_PARAMETER_FORCEFIELDPARAMETERS_H
-#	include <BALL/core/molmec/parameter/forceFieldParameters.h>
-#endif
 
 namespace BALL
 {
@@ -140,4 +127,4 @@ namespace BALL
 	}; 
 } // namespace BALL
 
-#endif // BALL_SOLVATION_SOLVENTPARAMETER_H
+#endif // BALL_CORE_SOLVATION_SOLVENTPARAMETER_H

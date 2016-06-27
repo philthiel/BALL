@@ -1,17 +1,16 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Jan Fuhrmann, Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_DOCKING_GENETICDOCK_GENETICALGORITHM_H
-#define BALL_DOCKING_GENETICDOCK_GENETICALGORITHM_H
 
+#ifndef BALL_CORE_DOCKING_GENETICDOCK_GENETICALGORITHM_H
+#define BALL_CORE_DOCKING_GENETICDOCK_GENETICALGORITHM_H
+
+#include <utility>
 #include <vector>
 
 #include <BALL/core/maths/randomNumberGenerator.h>
-#include <utility>
-#include "geneticIndividual.h"
+#include <BALL/core/docking/geneticdock/geneticIndividual.h>
 #include <BALL/core/docking/geneticdock/parameter.h>
+
 
 namespace BALL
 {
@@ -185,4 +184,4 @@ namespace BALL
     };
 }
 
-#endif /* BALL_DOCKING_GENETICDOCK_GENETICALGORITHM_H */
+#endif // BALL_CORE_DOCKING_GENETICDOCK_GENETICALGORITHM_H

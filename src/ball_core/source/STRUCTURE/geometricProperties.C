@@ -1,6 +1,5 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/structure/geometricProperties.h>
 
@@ -9,10 +8,13 @@
 #include <BALL/core/kernel/residue.h>
 #include <BALL/core/maths/matrix44.h>
 
-#include <cstdio>
 #include <cmath>
+#include <cstdio>
 #include <deque>
 #include <set>
+
+using namespace std;
+
 
 namespace BALL 
 {
@@ -20,16 +22,16 @@ namespace BALL
 	bool BoundingBoxProcessor::start()
 		
 	{
-		lower_.set(std::numeric_limits<float>::max(), std::numeric_limits<float>::max(), std::numeric_limits<float>::max());
-		upper_.set(-std::numeric_limits<float>::max(), -std::numeric_limits<float>::max(), -std::numeric_limits<float>::max());
+		lower_.set(numeric_limits<float>::max(), numeric_limits<float>::max(), numeric_limits<float>::max());
+		upper_.set(-numeric_limits<float>::max(), -numeric_limits<float>::max(), -numeric_limits<float>::max());
 		return true;
 	}
 
 	bool BoundingBoxProcessor::finish()
 		
 	{
-		if ((lower_.x == std::numeric_limits<float>::max()) && (lower_.y == std::numeric_limits<float>::max()) && (lower_.z == std::numeric_limits<float>::max())
-				&& (upper_.x == -std::numeric_limits<float>::max()) && (upper_.y == -std::numeric_limits<float>::max()) && (upper_.z == -std::numeric_limits<float>::max()))
+		if ((lower_.x == numeric_limits<float>::max()) && (lower_.y == numeric_limits<float>::max()) && (lower_.z == numeric_limits<float>::max())
+				&& (upper_.x == -numeric_limits<float>::max()) && (upper_.y == -numeric_limits<float>::max()) && (upper_.z == -numeric_limits<float>::max()))
 		{
 			lower_.set(0, 0, 0);
 			upper_.set(0, 0, 0);
@@ -334,10 +336,10 @@ Vector3 a23(a3.getPosition() - a2.getPosition());
 	{
 		//We first need to determine the part of the molecule which needs to be
 		//rotated. this will be done by a simple BFS.
-		std::deque<Atom*> bfs_queue;
+		deque<Atom*> bfs_queue;
 
 		//This set containes the atoms which should be rotated
-		std::set<Atom*> component;
+		set<Atom*> component;
 
 		//The starting point needs to be handled explicitly, as
 		//we may not consider a2
@@ -390,7 +392,7 @@ Vector3 a23(a3.getPosition() - a2.getPosition());
 		rotation = trans * rotation;
 
 
-		for(std::set<Atom*>::iterator it = component.begin(); it != component.end(); ++it)
+		for(set<Atom*>::iterator it = component.begin(); it != component.end(); ++it)
 		{
 			(*it)->setPosition(rotation * (*it)->getPosition());
 		}

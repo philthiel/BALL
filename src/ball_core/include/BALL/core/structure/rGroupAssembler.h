@@ -1,19 +1,18 @@
-// ----------------------------------------------------
-// $Maintainer: Marc Röttig $
-// $Authors: Michael Betz, Marc Röttig $
-// ----------------------------------------------------
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_RGROUP_ASSEMBLER_H
-#define BALL_STRUCTURE_RGROUP_ASSEMBLER_H
+
+#ifndef BALL_CORE_STRUCTURE_RGROUP_ASSEMBLER_H
+#define BALL_CORE_STRUCTURE_RGROUP_ASSEMBLER_H
 
 #include <map>
 #include <vector>
-#include <BALL/core/kernel/forEach.h>
-#include <BALL/core/structure/smilesParser.h>
-#include <BALL/core/kernel/molecule.h>
-#include <BALL/core/kernel/system.h>
+
 #include <BALL/core/datatype/string.h>
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/smilesParser.h>
 
 
 namespace BALL
@@ -45,4 +44,4 @@ namespace BALL
 		};
 }
 
-#endif /* BALL_STRUCTURE_RGROUP_ASSEMBLER_H */
+#endif // BALL_CORE_STRUCTURE_RGROUP_ASSEMBLER_H

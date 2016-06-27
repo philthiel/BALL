@@ -1,31 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#ifndef BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
-#define BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
 
-#ifndef BALL_STRUCTURE_SASEDGE_H
-#	include <BALL/core/structure/SASEdge.h>
-#endif
+#ifndef BALL_CORE_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
+#define BALL_CORE_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
 
-#ifndef BALL_STRUCTURE_SASFACE_H
-#	include <BALL/core/structure/SASFace.h>
-#endif
-
-#ifndef BALL_STRUCTURE_SASVERTEX_H
-#	include <BALL/core/structure/SASVertex.h>
-#endif
-
-#ifndef BALL_STRUCTURE_REDUCEDSURFACE_H
-#	include <BALL/core/structure/reducedSurface.h>
-#endif
-
-#ifndef BALL_MATHS_SPHERE3_H
-#	include <BALL/core/maths/sphere3.h>
-#endif
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/structure/reducedSurface.h>
+#include <BALL/core/structure/SASEdge.h>
+#include <BALL/core/structure/SASFace.h>
+#include <BALL/core/structure/SASVertex.h>
 
 #include <vector>
+
 
 namespace BALL
 {
@@ -186,5 +172,5 @@ namespace BALL
 
 } // namespace BALL
 
-#endif  // BALL_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
+#endif  // BALL_CORE_STRUCTURE_SOLVENTACCESSIBLESURFACE_H
 

@@ -1,15 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/nmr/createSpectrumProcessor.h>
-#include <BALL/core/nmr/shiftModule.h>
+
 #include <BALL/core/datatype/regularData1D.h>
-#include <BALL/core/system/path.h>
-#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/nmr/shiftModule.h>
+#include <BALL/core/system/path.h>
 
 using namespace std;
+
 
 namespace BALL
 {

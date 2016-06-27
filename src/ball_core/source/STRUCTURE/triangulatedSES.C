@@ -1,13 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/core/structure/solventExcludedSurface.h>
-#include <BALL/core/structure/triangle.h>
-#include <BALL/core/structure/triangleEdge.h>
-#include <BALL/core/structure/trianglePoint.h>
+
 #include <BALL/core/structure/triangulatedSES.h>
-#include <BALL/core/structure/triangulatedSurface.h>
+
 #include <BALL/core/maths/analyticalGeometry.h>
 #include <BALL/core/maths/angle.h>
 #include <BALL/core/maths/circle3.h>
@@ -17,6 +12,11 @@
 #include <BALL/core/maths/sphere3.h>
 #include <BALL/core/maths/vector3.h>
 #include <BALL/core/maths/vector4.h>
+#include <BALL/core/structure/solventExcludedSurface.h>
+#include <BALL/core/structure/triangle.h>
+#include <BALL/core/structure/triangleEdge.h>
+#include <BALL/core/structure/trianglePoint.h>
+#include <BALL/core/structure/triangulatedSurface.h>
 
 #include <list>
 #include <vector>

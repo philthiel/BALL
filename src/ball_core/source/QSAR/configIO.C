@@ -1,8 +1,13 @@
+//_new_file_header
+
+
 #include <BALL/core/qsar/configIO.h>
+
 #include <BALL/core/qsar/exception.h>
 #include <BALL/core/qsar/registry.h>
  
 using namespace std;
+
 
 namespace BALL
 {

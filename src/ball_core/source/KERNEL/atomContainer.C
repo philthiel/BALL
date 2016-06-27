@@ -1,12 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/kernel/atomContainer.h>
 #include <BALL/core/kernel/forEach.h>
 #include <BALL/core/kernel/global.h>
 
-using namespace::std;
+using namespace std;
+
+
 namespace BALL
 {
 

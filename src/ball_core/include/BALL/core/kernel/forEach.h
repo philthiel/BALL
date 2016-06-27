@@ -1,11 +1,9 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: forEach.h,v 1.16 2004/02/18 23:24:04 oliver Exp $
-//
+//_new_file_header
 
-#ifndef BALL_KERNEL_FOREACH_H
-#define BALL_KERNEL_FOREACH_H
+
+#ifndef BALL_CORE_KERNEL_FOREACH_H
+#define BALL_CORE_KERNEL_FOREACH_H
+
 
 // This is mostly to allow Doxygen to put the macros to where they belong
 namespace BALL
@@ -202,4 +200,4 @@ for (pdb_atom_iterator = (pdb_atom_container).beginPDBAtom(); \
 
 } // namespace BALL
 
-#endif // BALL_KERNEL_FOREACH_H
+#endif // BALL_CORE_KERNEL_FOREACH_H

@@ -1,27 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-// Molecular Mechanics: Charmm force field, bond stretch component
 
-#ifndef BALL_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
-#define BALL_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
+#ifndef BALL_CORE_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
+#define BALL_CORE_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
 
-#ifndef BALL_MOLMEC_PARAMETER_QUADRATICIMPROPERTORSION_H
-#	include <BALL/core/molmec/parameter/quadraticImproperTorsion.h>
-#endif
+#include <BALL/core/molmec/common/forceField.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/molmec/parameter/quadraticImproperTorsion.h>
+#include <BALL/core/molmec/parameter/residueTorsions.h>
 
-#ifndef BALL_MOLMEC_PARAMETER_RESIDUETORSIONS_H
-#	include <BALL/core/molmec/parameter/residueTorsions.h>
-#endif
+#include <vector>
 
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELDCOMPONENT_H
-#	include <BALL/core/molmec/common/forceFieldComponent.h>
-#endif
-
-#ifndef BALL_MOLMEC_COMMON_FORCEFIELD_H
-# include <BALL/core/molmec/common/forceField.h>
-#endif
 
 namespace BALL 
 {
@@ -101,7 +90,7 @@ namespace BALL
 
 		/*_	array with the torsions
 		*/
-		vector<QuadraticImproperTorsion::Data>	impropers_;
+		std::vector<QuadraticImproperTorsion::Data>	impropers_;
 
 		QuadraticImproperTorsion								improper_parameters_;
 
@@ -112,4 +101,4 @@ namespace BALL
 	};
 } // namespace BALL 
 
-#endif // BALL_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H
+#endif // BALL_CORE_MOLMEC_CHARMM_CHARMMIMPROPERTORSION_H

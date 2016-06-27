@@ -1,10 +1,11 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/functions/rescoring1D.h>
+
 #include <BALL/core/kernel/molecularInteractions.h>
+
+using namespace std;
 
 
 namespace BALL

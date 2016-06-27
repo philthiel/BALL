@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
-// $Id: composedEnergyProcessor.C,v 1.6 2002/02/27 12:21:13 sturm Exp $
+//_new_file_header
+
 
 #include <BALL/core/energy/composedEnergyProcessor.h>
+
 
 namespace BALL
 {

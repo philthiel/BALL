@@ -1,9 +1,18 @@
+//_new_file_header
+
+
 #include <BALL/core/structure/bondorders/bondOrderAssignment.h>
-#include <BALL/core/structure/assignBondOrderProcessor.h>
+
 #include <BALL/core/kernel/forEach.h>
-#include <BALL/core/kernel/PTE.h>
 #include <BALL/core/kernel/fragment.h>
 #include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/assignBondOrderProcessor.h>
+
+#include <vector>
+
+using namespace std;
+
 
 namespace BALL
 {

@@ -1,13 +1,12 @@
-// ----------------------------------------------------
-// $Maintainer: Marcel Schumann $
-// $Authors: Marcel Schumann $
-// ----------------------------------------------------
+//_new_file_header
+
 
 #include <BALL/core/scoring/common/scoreGridSet.h>
 
 
 using namespace BALL;
 using namespace std;
+
 
 ScoreGridSet::ScoreGridSet(GridBasedScoring* gbs, Vector3& v_origin_, Vector3& size, double& res)
 {
