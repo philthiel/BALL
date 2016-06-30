@@ -45,4 +45,3 @@ target_link_libraries(ball_core ${BALL_DEP_LIBS})
 set_target_properties(ball_core PROPERTIES SOVERSION "${BALL_PACKAGE_VERSION_MAJOR}.${BALL_PACKAGE_VERSION_MINOR}")
 set_target_properties(ball_core PROPERTIES INSTALL_NAME_DIR "@executable_path/../Frameworks")
 
-

@@ -4,6 +4,7 @@
 #ifndef BALL_CORE_CONCEPT_CLASSTEST_H
 #define BALL_CORE_CONCEPT_CLASSTEST_H
 
+#include <BALL/version.h>
 #include <BALL/core/concept/autoDeletable.h>
 #include <BALL/core/datatype/regularExpression.h>
 #include <BALL/core/system/file.h>

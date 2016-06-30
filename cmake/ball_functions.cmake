@@ -94,3 +94,43 @@ macro(BALL_MACRO_collect_sources)
 
 endmacro()
 
+
+# --------------------------------------------------------------------------
+# Function to add class tests
+#
+macro(BALL_MACRO_add_class_test_targets GROUP_PREFIX LINK_LIBRARIES)
+
+	# Disable optimization for gcc like compilers
+	if(CMAKE_COMPILER_IS_INTELCXX OR CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG)
+		set(BACKUP_CMAKE_CXX_FLAGS_RELEASE ${CMAKE_CXX_FLAGS_RELEASE})
+		set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+	endif()
+
+	SET(ALL_TESTS "")
+
+	get_cmake_property(cmake_variables VARIABLES)
+	foreach(v ${cmake_variables})
+		if(v MATCHES ${GROUP_PREFIX}*)
+			string(TOUPPER ${v} GROUP)
+			add_custom_target(${GROUP})
+			add_dependencies(${GROUP} ${${v}})
+
+			foreach(test ${${v}})
+				add_executable(${test} source/${test}.C)
+				target_link_libraries(${test} ${LINK_LIBRARIES})
+				set_property(TARGET ${test} PROPERTY FOLDER ${GROUP})
+				set_target_properties(${test} PROPERTIES COMPILE_FLAGS "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}")
+
+				add_test(${test} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${test})
+				list(APPEND ALL_TESTS ${test})
+			endforeach()
+		endif()
+	endforeach()
+
+	# Reset original compiler flags if they were changed
+	if(CMAKE_COMPILER_IS_INTELCXX OR CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG)
+		set(CMAKE_CXX_FLAGS_RELEASE ${BACKUP_CMAKE_CXX_FLAGS_RELEASE})
+	endif()
+
+endmacro()
+
