@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/VIEW/KERNEL/representationManager.h>
-#include <BALL/VIEW/KERNEL/mainControl.h>
-#include <BALL/VIEW/KERNEL/clippingPlane.h>
-#include <BALL/VIEW/DIALOGS/displayProperties.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/view/kernel/representationManager.h>
+#include <BALL/core/view/kernel/mainControl.h>
+#include <BALL/core/view/kernel/clippingPlane.h>
+#include <BALL/core/view/dialogs/displayProperties.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 /////////////////////////////////////////////////////////////
@@ -116,7 +116,7 @@ CHECK(RepresentationManager::dump(std::ostream& s, Size depth) const  throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	rm.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(RepresentationManager.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/RepresentationManager.txt))
 RESULT
 
 
@@ -220,12 +220,12 @@ CHECK(storeRepresentations(INIFile&))
 	INIFile file(filename);
 	mrm.storeRepresentations(file);
 	file.write();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(RepresentationManager2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/RepresentationManager2.txt))
 RESULT
 			
 CHECK(restoreRepresentations(const INIFile& in, const vector<const Composite*>& new_systems))
 	mrm.clear();
-	INIFile infile(BALL_TEST_DATA_PATH(RepresentationManager2.txt));
+	INIFile infile(TEST_DATA_PATH(ball_core/RepresentationManager2.txt));
 	infile.read();
 	vector<const Composite*> new_systems;
 	new_systems.push_back(system);

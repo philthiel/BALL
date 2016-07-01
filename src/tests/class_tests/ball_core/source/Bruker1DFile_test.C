@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/bruker1DFile.h>
+#include <BALL/core/format/bruker1DFile.h>
 
 ///////////////////////////
 

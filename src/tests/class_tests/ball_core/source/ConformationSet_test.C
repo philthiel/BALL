@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DOCKING/COMMON/conformationSet.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/DCDFile.h>
+#include <BALL/core/docking/common/conformationSet.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/DCDFile.h>
 
 ///////////////////////////
 
@@ -30,7 +30,7 @@ RESULT
 
 CHECK(readDCDFile())
 		ConformationSet cs;
-		cs.readDCDFile(BALL_TEST_DATA_PATH(ConformationSet_test.dcd));
+		cs.readDCDFile(TEST_DATA_PATH(ball_core/ConformationSet_test.dcd));
 		cs.resetScoring();
 		TEST_EQUAL(cs.size(), 10)
 RESULT
@@ -38,22 +38,22 @@ RESULT
 CHECK(writeDCDFile(const String& filename, const Size num = 0))
 		ConformationSet cs;
 
-		PDBFile pdb(BALL_TEST_DATA_PATH(ConformationSet_test.pdb));
+		PDBFile pdb(TEST_DATA_PATH(ball_core/ConformationSet_test.pdb));
 		System sys;
 		pdb.read(sys);
 		cs.setup(sys);
 
-		cs.readDCDFile(BALL_TEST_DATA_PATH(ConformationSet_test.dcd));
+		cs.readDCDFile(TEST_DATA_PATH(ball_core/ConformationSet_test.dcd));
 		cs.resetScoring();
 		String tmp_filename;
 		NEW_TMP_FILE(tmp_filename)
 
 		cs.writeDCDFile(tmp_filename);
-		TEST_FILE(tmp_filename.c_str(), BALL_TEST_DATA_PATH(ConformationSet_test.dcd))
+		TEST_FILE(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/ConformationSet_test.dcd))
 RESULT
 
 CHECK(setup())
-	PDBFile pdb(BALL_TEST_DATA_PATH(ConformationSet_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/ConformationSet_test.pdb));
 	System sys;
 	pdb.read(sys);
 

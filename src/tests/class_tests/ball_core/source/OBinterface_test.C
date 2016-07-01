@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/STRUCTURE/molecularSimilarity.h>
+#include <BALL/core/format/MOL2File.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/structure/molecularSimilarity.h>
 
 ///////////////////////////
 
@@ -28,7 +28,7 @@ PRECISION(1e-4)
 /// A Molecule is to be converted from BALL to OpenBabel and back to BALL. In the resulting molecule, all atoms must still have the correct position and all bonds must have the correct order (incl. aromaticity)
 
 CHECK(OpenBabel-interface)
-	MOL2File f(BALL_TEST_DATA_PATH(AssignBondOrderProcessor_test_AMPTRB10_arom_sol0.mol2), std::ios::in);
+	MOL2File f(TEST_DATA_PATH(ball_core/AssignBondOrderProcessor_test_AMPTRB10_arom_sol0.mol2), std::ios::in);
 
 	Molecule* original_mol = f.read();
 	OpenBabel::OBMol* obmol = MolecularSimilarity::createOBMol(*original_mol);

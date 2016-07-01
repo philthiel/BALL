@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#	include <BALL/MATHS/simpleBox3.h>
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL/core/maths/simpleBox3.h>
+#	include <BALL/core/maths/vector3.h>
 ///////////////////////////
 
 START_TEST(SimpleBox3)

@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/COMMON/ruleEvaluator.h>
-#include <BALL/FORMAT/INIFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL/core/molmec/common/ruleEvaluator.h>
+#include <BALL/core/format/INIFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
 
 ///////////////////////////
 
@@ -46,7 +46,7 @@ CHECK(RuleEvaluator::getPrefix() const )
   TEST_EQUAL(eval->getPrefix(), "")
 RESULT
 
-INIFile ini(BALL_TEST_DATA_PATH(RuleEvaluator_test.ini));
+INIFile ini(TEST_DATA_PATH(ball_core/RuleEvaluator_test.ini));
 ini.read();
 CHECK(RuleEvaluator::RuleEvaluator(INIFile& file, const String& prefix))
 	TEST_EQUAL(ini.isValid(), true)
@@ -89,7 +89,7 @@ RESULT
 
 CHECK(RuleEvaluator::String operator () (const Atom& atom) const )
 	RuleEvaluator eval(ini, "TEST1");
-	HINFile f(BALL_TEST_DATA_PATH(RuleEvaluator_test.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/RuleEvaluator_test.hin));
 	System S;
 	f >> S;
 	f.close();

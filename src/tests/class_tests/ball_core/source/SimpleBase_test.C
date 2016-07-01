@@ -3,15 +3,15 @@
 //
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/QSAR/simpleBase.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL/core/qsar/simpleBase.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
 
 ///////////////////////////
 START_TEST(SimpleBase)
@@ -21,7 +21,7 @@ START_TEST(SimpleBase)
 
 using namespace BALL;
 
-SDFile infile(BALL_TEST_DATA_PATH(descriptors_test.sdf));
+SDFile infile(TEST_DATA_PATH(ball_core/descriptors_test.sdf));
 System S;
 infile >> S;
 infile.close();

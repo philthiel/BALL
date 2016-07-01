@@ -1,10 +1,10 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DOCKING/COMMON/constraints.h>
+#include <BALL/core/docking/common/constraints.h>
 ///////////////////////////
 
 using namespace BALL;

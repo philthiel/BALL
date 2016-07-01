@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/residueRotamerSet.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/residueRotamerSet.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -163,7 +163,7 @@ RESULT
 
 CHECK(Rotamer ResidueRotamerSet::getRotamer(const Residue& residue))	
   System S;
-  HINFile ags_file(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+  HINFile ags_file(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	ags_file >> S;
 	ABORT_IF(S.countResidues() != 3)
 
@@ -210,7 +210,7 @@ RESULT
 
 CHECK(bool ResidueRotamerSet::setTemplateResidue(const Residue& residue, Size number_of_torsions))
   System S;
-  HINFile ags_file(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+  HINFile ags_file(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	ags_file >> S;
 	ABORT_IF(S.countResidues() != 3)
 

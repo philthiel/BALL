@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/COMMON/exception.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/common/exception.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 START_TEST(Bond)
@@ -393,7 +393,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	b1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Bond_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Bond_test.txt))
 RESULT
 
 CHECK(void finalize() throw(Exception::GeneralException))

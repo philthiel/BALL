@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/residue.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 START_TEST(Protein)
@@ -408,7 +408,7 @@ CHECK([EXTRA]Protein::dump(std::ostream& s = std::cout, Size depth = 0) const )
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	p1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Protein_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Protein_test.txt))
 RESULT
 
 TextPersistenceManager pm;

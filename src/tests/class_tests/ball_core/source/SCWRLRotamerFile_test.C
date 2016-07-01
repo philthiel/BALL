@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/SCWRLRotamerFile.h>
-#include <BALL/STRUCTURE/rotamerLibrary.h>
+#include <BALL/core/format/SCWRLRotamerFile.h>
+#include <BALL/core/structure/rotamerLibrary.h>
 
 ///////////////////////////
 
@@ -33,13 +33,13 @@ RESULT
 
 
 CHECK(SCWRLRotamerFile::SCWRLRotamerFile(const String& filename, File::OpenMode open_mode))
-	SCWRLRotamerFile* f = new SCWRLRotamerFile(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test1.lib)); // bb dep file
+	SCWRLRotamerFile* f = new SCWRLRotamerFile(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test1.lib)); // bb dep file
 	TEST_NOT_EQUAL(f, 0)
 	delete f;
 RESULT
 
 CHECK(void SCWRLRotamerFile::read >> (RotamerLibrary& library) throw() -- bbdep file)
-	SCWRLRotamerFile f(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test1.lib));// bb depep file
+	SCWRLRotamerFile f(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test1.lib));// bb depep file
 	RotamerLibrary lib;
 	lib.clear();
 	f >> lib;
@@ -48,14 +48,14 @@ RESULT
 
 
 CHECK(void readSCWRLBackboneIndependentLibraryFile(RotamerLibrary& library))
-	SCWRLRotamerFile f(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test2.lib)); //bb indndep file
+	SCWRLRotamerFile f(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test2.lib)); //bb indndep file
 	RotamerLibrary lib;
 	f.readSCWRLBackboneIndependentLibraryFile(lib);
 	TEST_EQUAL(lib.getNumberOfRotamers(), 110);
 RESULT
 
 CHECK(void readSCWRLBackboneDependentLibraryFile(RotamerLibrary& library))
-	SCWRLRotamerFile f(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test1.lib)); // bb depep file
+	SCWRLRotamerFile f(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test1.lib)); // bb depep file
 	RotamerLibrary lib;
 	lib.clear();
 	f.readSCWRLBackboneDependentLibraryFile(lib);
@@ -63,14 +63,14 @@ CHECK(void readSCWRLBackboneDependentLibraryFile(RotamerLibrary& library))
 RESULT
 
 CHECK(void SCWRLRotamerFile::operator >> (RotamerLibrary& library) throw() -- bbdep file)
-  SCWRLRotamerFile f(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test2.lib)); // bb indep file
+  SCWRLRotamerFile f(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test2.lib)); // bb indep file
   RotamerLibrary lib;
   f >> lib;
   TEST_EQUAL(lib.getNumberOfRotamers(), 110);
 RESULT
 
 CHECK(const SCWRLRotamerFile& SCWRLRotamerFile::operator = (const SCWRLRotamerFile& file))
-  SCWRLRotamerFile f(BALL_TEST_DATA_PATH(SCWRLRotamerFile_test2.lib)); // bb indep file
+  SCWRLRotamerFile f(TEST_DATA_PATH(ball_core/SCWRLRotamerFile_test2.lib)); // bb indep file
   SCWRLRotamerFile copy_of_f;
   copy_of_f = f;
   RotamerLibrary lib;

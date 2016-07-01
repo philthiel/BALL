@@ -1,23 +1,23 @@
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/dockResultFile.h>
-#include <BALL/DOCKING/COMMON/flexibleMolecule.h>
-#include <BALL/DOCKING/COMMON/conformation.h>
-#include <BALL/DOCKING/COMMON/result.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/bondIterator.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/STRUCTURE/geometricTransformations.h>
+#include <BALL/core/format/dockResultFile.h>
+#include <BALL/core/docking/common/flexibleMolecule.h>
+#include <BALL/core/docking/common/conformation.h>
+#include <BALL/core/docking/common/result.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/bondIterator.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/structure/geometricTransformations.h>
 
 #include <iostream>
 ///////////////////////////
@@ -109,7 +109,7 @@ CHECK(read/write DockResultFile)
 
 
 
-        SDFile f(BALL_TEST_DATA_PATH(QSAR_test.sdf));
+        SDFile f(TEST_DATA_PATH(ball_core/QSAR_test.sdf));
 		Molecule* mol;
 		String tmpfile;
 		File::createTemporaryFilename(tmpfile);

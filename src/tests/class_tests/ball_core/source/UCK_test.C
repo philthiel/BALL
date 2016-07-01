@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/UCK.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/structure/UCK.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/fragment.h>
 
 #include <fstream>
 #include <iostream>
@@ -31,7 +31,7 @@ START_TEST(UCK)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
-SDFile f(BALL_TEST_DATA_PATH(benzoic_acid.sdf));
+SDFile f(TEST_DATA_PATH(ball_core/benzoic_acid.sdf));
 Molecule* m = 0;
 CHECK([Extra] Structure initialization)
 	m = f.read();

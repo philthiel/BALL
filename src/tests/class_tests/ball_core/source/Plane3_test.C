@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/line3.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/line3.h>
 ///////////////////////////
 
 START_TEST(Plane3)
@@ -198,7 +198,7 @@ CHECK(bool isValid() const throw())
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TPlane3& plane))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Plane3_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Plane3_test2.txt));
 	v1 = Vector3(1.0, 2.0, 3.0);
 	v2 = Vector3(4.0, 5.0, 6.0);
 	p = Plane3();
@@ -216,7 +216,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TPlane3<T>& plane))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << p;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Plane3_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Plane3_test2.txt))
 RESULT
 
 CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
@@ -228,7 +228,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	p.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Plane3_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Plane3_test.txt))
 RESULT
 
 CHECK(TPlane3(const T& a, const T& b, const T& c, const T& d) throw(Exception::DivisionByZero))

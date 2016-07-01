@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/selectable.h>
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/concept/selectable.h>
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 
 ///////////////////////////
 
@@ -99,7 +99,7 @@ using namespace RTTI;
 TextPersistenceManager pm;
 
 CHECK(bool read(PersistenceManager& pm) throw())
-	ifstream ifile(BALL_TEST_DATA_PATH(Selectable_test2.txt));
+	ifstream ifile(TEST_DATA_PATH(ball_core/Selectable_test2.txt));
 	pm.setIstream(ifile);
 	se2.clear();
 	TEST_EQUAL(se2.read(pm), true)
@@ -113,7 +113,7 @@ CHECK(void write(PersistenceManager& pm) const throw())
 	pm.setOstream(ofile);
 	se.write(pm);
 	ofile.close();	
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Selectable_test2.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Selectable_test2.txt))
 RESULT
 
 CHECK(void dump(::std::ostream& s = std::cout, Size depth = 0) const throw())
@@ -122,7 +122,7 @@ CHECK(void dump(::std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	se.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Selectable_test3.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Selectable_test3.txt))
 RESULT	
 
 CHECK(bool operator != (const Selectable& selectable) const throw())

@@ -1,11 +1,10 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DATATYPE/string.h>
+#include <BALL/core/datatype/string.h>
 #include <cstring>
 #include <string>
 ///////////////////////////
@@ -15,8 +14,8 @@ START_TEST(String)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
-using std::string;
 
 String hall("Hall");
 String halloh("Halloh");

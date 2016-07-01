@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/contourSurface.h>
+#include <BALL/core/datatype/contourSurface.h>
 
 ///////////////////////////
 

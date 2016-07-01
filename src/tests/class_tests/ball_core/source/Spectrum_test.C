@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/residueChecker.h>
-#include <BALL/NMR/spectrum.h>
-#include <BALL/NMR/peak.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/residueChecker.h>
+#include <BALL/core/nmr/spectrum.h>
+#include <BALL/core/nmr/peak.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 START_TEST(Spectrum1D)

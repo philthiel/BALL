@@ -1,7 +1,7 @@
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/oplsModel.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/oplsModel.h>
 
 using namespace BALL;
 using namespace BALL::QSAR;

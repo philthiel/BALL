@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/MATHS/common.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/maths/common.h>
 ///////////////////////////
 
 START_TEST(Residue)
@@ -211,7 +211,7 @@ CHECK(bool hasTorsionPhi() const throw())
 RESULT
 
 CHECK(Angle getTorsionPhi() const throw())
-	HINFile infile(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile infile(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	System s;
 	infile >> s;
 	TEST_EQUAL(s.countResidues(), 3)
@@ -246,7 +246,7 @@ CHECK(bool hasTorsionPsi() const throw())
 RESULT
 
 CHECK(Angle getTorsionPsi() const throw())
-	HINFile infile(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile infile(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	System s;
 	infile >> s;
 	TEST_EQUAL(s.countResidues(), 3)
@@ -565,7 +565,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	r1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Residue_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Residue_test.txt))
 RESULT
 
 TextPersistenceManager pm;

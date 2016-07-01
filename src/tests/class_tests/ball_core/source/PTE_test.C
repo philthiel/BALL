@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/kernel/PTE.h>
 #include "ItemCollector.h"
 ///////////////////////////
 
@@ -270,7 +270,7 @@ CHECK(friend std::ostream& operator << (std::ostream& s, const Element& element)
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << e1;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(PTE_test.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/PTE_test.txt))
 RESULT
 
 

@@ -1,11 +1,11 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/KERNEL/atomContainer.h>
+#include <BALL/core/kernel/atomContainer.h>
 #include <algorithm>
 
 ///////////////////////////

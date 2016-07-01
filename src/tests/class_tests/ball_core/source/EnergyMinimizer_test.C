@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/MINIMIZATION/energyMinimizer.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/molmec/minimization/energyMinimizer.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/atom.h>
 
 ///////////////////////////
 

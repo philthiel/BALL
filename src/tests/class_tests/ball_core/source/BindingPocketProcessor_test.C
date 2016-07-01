@@ -1,9 +1,12 @@
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
-#include <BALL/FORMAT/PDBFile.h>
+//_new_file_header
+
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
+#include <BALL/core/format/PDBFile.h>
 ///////////////////////////
 
-#include <BALL/STRUCTURE/bindingPocketProcessor.h>
+#include <BALL/core/structure/bindingPocketProcessor.h>
 #include <vector>
 
 ///////////////////////////
@@ -13,6 +16,7 @@ START_TEST(BindingPocketProcessor)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 PRECISION(0.1)
@@ -30,7 +34,7 @@ RESULT
 
 CHECK(getActiveSitePoints())
 	System sys;
-	PDBFile pdbf(BALL_TEST_DATA_PATH(HSD1.pdb));
+	PDBFile pdbf(TEST_DATA_PATH(ball_core/HSD1.pdb));
 	pdbf >> sys;
 
 	BindingPocketProcessor bp;
@@ -43,7 +47,7 @@ RESULT
 
 CHECK(getLayers())
 	System sys;
-	PDBFile pdbf(BALL_TEST_DATA_PATH(HSD1.pdb));
+	PDBFile pdbf(TEST_DATA_PATH(ball_core/HSD1.pdb));
 	pdbf >> sys;
 
 	BindingPocketProcessor bp;

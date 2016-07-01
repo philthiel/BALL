@@ -2,20 +2,20 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PDBAtom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PDBAtom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/format/HINFile.h>
 
 ///////////////////////////
 
@@ -265,7 +265,7 @@ CHECK([EXTRA]NucleotidePredicate::operator () (const Atom& atom) const )
 	delete a1;
 RESULT
 
-HINFile f(BALL_TEST_DATA_PATH(L-Tryptophan.hin));
+HINFile f(TEST_DATA_PATH(ball_core/L-Tryptophan.hin));
 System S;
 f >> S;
 f.close();
@@ -748,7 +748,7 @@ CHECK([EXTRA]NumberOfBondsPredicate::operator () (const Atom& atom) const )
 RESULT
 
 S.destroy();
-HINFile g(BALL_TEST_DATA_PATH(Predicate_test.hin));
+HINFile g(TEST_DATA_PATH(ball_core/Predicate_test.hin));
 g >> S;
 g.close();
 
@@ -999,7 +999,7 @@ CHECK([EXTRA]ChargePredicate::operator ())
 RESULT
 
 S.clear();
-f.open(BALL_TEST_DATA_PATH(LacNAc.hin));
+f.open(TEST_DATA_PATH(ball_core/LacNAc.hin));
 f >> S;
 f.close();
 

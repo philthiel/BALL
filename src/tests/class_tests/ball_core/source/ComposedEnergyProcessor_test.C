@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/ENERGY/composedEnergyProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/energy/composedEnergyProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -67,7 +67,7 @@ CHECK(Preparations)
  	pep2 = new MyEnergyProcessor;
 	pep2->change = 2.0;
 
-	HINFile f(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.hin));   
+	HINFile f(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.hin));   
   f >> S; 
   f.close();
 

@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/SOLVATION/PCMCavFreeEnergyProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/ENERGY/energyProcessor.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/solvation/PCMCavFreeEnergyProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/energy/energyProcessor.h>
+#include <BALL/core/structure/fragmentDB.h>
 ///////////////////////////
 
 START_TEST(PCMCavFreeEnergyProcessor)
@@ -29,7 +29,7 @@ CHECK(PCMCavFreeEnergyProcessor::PCMCavFreeEnergyProcessor())
 RESULT 
 
 CHECK(PCMCavFreeEnergyProcessor::PCMCavFreeEnergyProcessor(const PCMCavFreeEnergyProcessor& proc))
-  HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+  HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
   System S;
   f >> S;
   f.close();
@@ -57,7 +57,7 @@ RESULT
 
 
 CHECK(PCMCavFreeEnergyProcessor::PCMCavFreeEnergyProcessor& operator = (const PCMCavFreeEnergyProcessor& proc) + operator ==)
-  HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+  HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
   System S;
   f >> S;
   f.close();
@@ -81,7 +81,7 @@ RESULT
 
 CHECK(PCMCavFreeEnergyProcessor / Methane)
 	PRECISION(0.001)
-	HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
 	System S;
 	f >> S;
 	f.close();

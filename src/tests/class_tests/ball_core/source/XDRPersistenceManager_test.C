@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/XDRPersistenceManager.h>
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/bond.h>
+#include <BALL/core/concept/XDRPersistenceManager.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/bond.h>
 
 ///////////////////////////
 
@@ -79,7 +79,7 @@ CHECK(void writeHeader(const char* type_name, const char* name, PointerSizeUInt 
 	Composite composite;
 	// composite >> pm;
 	os.close();
-	TEST_FILE_REGEXP(outfilename.c_str(), BALL_TEST_DATA_PATH(XDRPersistenceManager_test1.txt))
+	TEST_FILE_REGEXP(outfilename.c_str(), TEST_DATA_PATH(ball_core/XDRPersistenceManager_test1.txt))
 RESULT
 
 
@@ -522,7 +522,7 @@ RESULT
 
 CHECK([EXTRA] full_test2)
 	String filename;
-	PDBFile in(BALL_TEST_DATA_PATH(bpti.pdb));
+	PDBFile in(TEST_DATA_PATH(ball_core/bpti.pdb));
 	System s;
 	in >> s;
 
@@ -561,7 +561,7 @@ RESULT
 // this time with bonds and all properties !
 CHECK([Extra] full_test3)
 	String filename;
-	HINFile hin(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile hin(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	System s;
 	hin >> s;
 

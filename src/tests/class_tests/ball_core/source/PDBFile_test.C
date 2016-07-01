@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/structure/fragmentDB.h>
 
 ///////////////////////////
 
@@ -52,7 +52,7 @@ RESULT
 
 CHECK(void read(System& system))
 	PDBFile f;
-	f.open(BALL_TEST_DATA_PATH(PDBFile_test2.pdb));
+	f.open(TEST_DATA_PATH(ball_core/PDBFile_test2.pdb));
 	System S;
 	f.read(S);
 	TEST_EQUAL(S.countAtoms(), 892);
@@ -97,7 +97,7 @@ CHECK(void read(System& system))
 RESULT
 
 CHECK([EXTRA]PDBFile::selectModel())
-	PDBFile f(BALL_TEST_DATA_PATH(PDBFile_test_models.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/PDBFile_test_models.pdb));
 	System s;
 	f.read(s);
 	TEST_EQUAL(s.countAtoms(), 1)
@@ -143,7 +143,7 @@ CHECK([EXTRA]PDBFile::selectModel())
 	f.read(s);
 	TEST_EQUAL(s.countAtoms(), 0)
 
-	PDBFile g(BALL_TEST_DATA_PATH(PDBFile_test_no_model.pdb));
+	PDBFile g(TEST_DATA_PATH(ball_core/PDBFile_test_no_model.pdb));
 	s.clear();
 	g.read(s);
 	TEST_EQUAL(s.countAtoms(), 3)
@@ -162,7 +162,7 @@ CHECK([EXTRA]PDBFile::selectModel())
 RESULT
 
 CHECK([EXTRA]PDBFile strict line checking)
-	PDBFile f(BALL_TEST_DATA_PATH(PDBFile_test_line_checking.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/PDBFile_test_line_checking.pdb));
 	System s;
 	f.read(s);
 	TEST_EQUAL(s.countAtoms(), 3)
@@ -201,7 +201,7 @@ RESULT
 
 CHECK(bool write(const System& system) throw(File::CannotWrite))
 	PDBFile f;
-	f.open(BALL_TEST_DATA_PATH(PDBFile_test2.pdb));
+	f.open(TEST_DATA_PATH(ball_core/PDBFile_test2.pdb));
 	String tmp_filename;
 	NEW_TMP_FILE(tmp_filename)
 	System S;
@@ -213,13 +213,13 @@ CHECK(bool write(const System& system) throw(File::CannotWrite))
 	f.write(S);
 	f.close();
 
-	TEST_FILE_REGEXP(tmp_filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test2_2006.txt))
+	TEST_FILE_REGEXP(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test2_2006.txt))
 
 	f.open(tmp_filename, std::ios::out);
 	f.write(S);
 	f.close();
 
-	TEST_FILE_REGEXP(tmp_filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test2_2006.txt))
+	TEST_FILE_REGEXP(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test2_2006.txt))
 
 	PDBFile out(tmp_filename);
 	TEST_EXCEPTION(File::CannotWrite, out.write(S))
@@ -230,7 +230,7 @@ CHECK(bool write(const System& system) throw(File::CannotWrite) - PDBFormat 1996
 	PDBFile f;
 	f.options[PDBFile::Option::WRITE_PDBFORMAT_1996] = true;
 	
-	f.open(BALL_TEST_DATA_PATH(PDBFile_test2.pdb));
+	f.open(TEST_DATA_PATH(ball_core/PDBFile_test2.pdb));
 	String tmp_filename;
 	NEW_TMP_FILE(tmp_filename)
 	System S;
@@ -242,13 +242,13 @@ CHECK(bool write(const System& system) throw(File::CannotWrite) - PDBFormat 1996
 	f.write(S);
 	f.close();
 
-	TEST_FILE_REGEXP(tmp_filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test2.txt))
+	TEST_FILE_REGEXP(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test2.txt))
 
 	f.open(tmp_filename, std::ios::out);
 	f.write(S);
 	f.close();
 
-	TEST_FILE_REGEXP(tmp_filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test2.txt))
+	TEST_FILE_REGEXP(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test2.txt))
 
 	PDBFile out(tmp_filename);
 	TEST_EXCEPTION(File::CannotWrite, out.write(S))
@@ -263,7 +263,7 @@ CHECK([EXTRA]writing of Systems containing Atoms instead of PDBAtoms - PDBFormat
 	PDBFile outfile(filename, std::ios::out);
 	outfile.options[PDBFile::Option::WRITE_PDBFORMAT_1996] = true;
 	
-	HINFile methane(BALL_TEST_DATA_PATH(methane.hin));
+	HINFile methane(TEST_DATA_PATH(ball_core/methane.hin));
 	system->clear();
 	methane.read(*system);
 	TEST_EQUAL(system->countAtoms(), 5)
@@ -271,7 +271,7 @@ CHECK([EXTRA]writing of Systems containing Atoms instead of PDBAtoms - PDBFormat
 	outfile.open(filename, std::ios::out);
 	outfile << *system;
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test_write_methane.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test_write_methane.txt))
 	
 	delete system;
 RESULT
@@ -288,7 +288,7 @@ CHECK([EXTRA]writing of Systems containing Atoms instead of PDBAtoms)
 	PDBFile outfile(filename, std::ios::out);
 	outfile << *system;
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test_write_empty.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test_write_empty.txt))
 	
 	system->insert(*protein);
 	protein->insert(*chain);
@@ -303,9 +303,9 @@ CHECK([EXTRA]writing of Systems containing Atoms instead of PDBAtoms)
 	outfile.open(filename, std::ios::out);
 	outfile << *system;
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test3.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test3.txt))
 
-	HINFile methane(BALL_TEST_DATA_PATH(methane.hin));
+	HINFile methane(TEST_DATA_PATH(ball_core/methane.hin));
 	system->clear();
 	methane.read(*system);
 	TEST_EQUAL(system->countAtoms(), 5)
@@ -313,13 +313,13 @@ CHECK([EXTRA]writing of Systems containing Atoms instead of PDBAtoms)
 	outfile.open(filename, std::ios::out);
 	outfile << *system;
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PDBFile_test_write_methane_2006.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PDBFile_test_write_methane_2006.txt))
 	
 	delete system;
 RESULT
 
 CHECK(PDBFile sets HETATM property)
-	PDBFile pdb_file(BALL_TEST_DATA_PATH(PDBFile_test_write_methane.txt));
+	PDBFile pdb_file(TEST_DATA_PATH(ball_core/PDBFile_test_write_methane.txt));
 
 	System sys;
 	pdb_file >> sys;
@@ -429,7 +429,7 @@ RESULT
 
 CHECK(bool hasFormat())
   TEST_EQUAL(empty.hasFormat(), false)
-	PDBFile f(BALL_TEST_DATA_PATH(PDBFile_test2.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/PDBFile_test2.pdb));
 	TEST_EQUAL(f.hasFormat(), true)
 RESULT
 

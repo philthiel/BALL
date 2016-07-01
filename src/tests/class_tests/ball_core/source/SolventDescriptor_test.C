@@ -1,11 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/SOLVATION/solventDescriptor.h>
+
+#include <BALL/core/solvation/solventDescriptor.h>
+
 ///////////////////////////
 
 START_TEST(SolventDescriptor)
@@ -13,6 +14,7 @@ START_TEST(SolventDescriptor)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 SolventDescriptor* s_ptr;

@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/COMMON/logStream.h>
+#include <BALL/core/common/logStream.h>
 #ifdef BALL_HAS_SYS_TIME_H
 #	include <sys/time.h>
 #endif
-#include <BALL/MATHS/common.h>
+#include <BALL/core/maths/common.h>
 
 ///////////////////////////
 
@@ -136,7 +136,7 @@ CHECK(insert(std::ostream& s, int min_level = LogStreamBuf::MIN_LEVEL, int max_l
 	l1.info(99)  << "2" << endl;
 	l1.level(100)<< "X" << endl;
 	TEST_EQUAL(l1.getNumberOfLines(), 4)
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(LogStream_test_general.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/LogStream_test_general.txt))
 RESULT
 
 CHECK(remove(std::ostream& s))
@@ -185,7 +185,7 @@ CHECK(setMinLevel(const std::ostream& s, int min_level))
 	l1.info(98) << "1" << endl;
 	l1.info(99) << "2" << endl;
 	TEST_EQUAL(l1.getNumberOfLines(), 3)
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(LogStream_test_general.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/LogStream_test_general.txt))
 RESULT
 
 CHECK(setMaxLevel(const std::ostream& s, int max_level))
@@ -198,7 +198,7 @@ CHECK(setMaxLevel(const std::ostream& s, int max_level))
 	l1.info(98) << "2" << endl;
 	l1.info(99) << "X" << endl;
 	TEST_EQUAL(l1.getNumberOfLines(), 3)
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(LogStream_test_general.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/LogStream_test_general.txt))
 RESULT
 
 CHECK(setPrefix(const std::ostream& s, const string& prefix))
@@ -227,7 +227,7 @@ CHECK(setPrefix(const std::ostream& s, const string& prefix))
 	l1.setPrefix(s, ""); //no prefix
 	l1.info(10) << " 10." << endl;
 	TEST_EQUAL(l1.getNumberOfLines(), 10)
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(LogStream_test_setPrefix.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/LogStream_test_setPrefix.txt))
 RESULT
 
 CHECK(clear())

@@ -1,6 +1,9 @@
-#include <BALL/CONCEPT/classTest.h>
+//_new_file_header
 
-#include <BALL/DOCKING/COMMON/dockResult.h>
+
+#include <BALL/core/concept/classTest.h>
+
+#include <BALL/core/docking/common/dockResult.h>
 ///////////////////////////
 
 START_TEST(DockResult)
@@ -8,6 +11,7 @@ START_TEST(DockResult)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 DockResult* dr;

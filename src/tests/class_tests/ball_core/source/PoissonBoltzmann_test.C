@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/SOLVATION/poissonBoltzmann.h>
+#include <BALL/core/solvation/poissonBoltzmann.h>
 
 START_TEST(FDPB)
 

@@ -2,15 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/kernel/atom.h>
 
 ///////////////////////////
+
+using namespace std;
 
 
 namespace BALL

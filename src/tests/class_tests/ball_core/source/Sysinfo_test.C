@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/SYSTEM/sysinfo.h>
+#include <BALL/core/system/sysinfo.h>
 #include <new>
 #include <utility>
 ///////////////////////////

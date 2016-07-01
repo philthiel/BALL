@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/genericMolFile.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/format/genericMolFile.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -33,11 +33,11 @@ RESULT
 
 
 CHECK(GenericMolFile(const String& filename, File::OpenMode open_mode = std::ios::in) throw(Exception::FileNotFound))
-  GenericMolFile mol(BALL_TEST_DATA_PATH(GenericMolFile_test.dat));
+  GenericMolFile mol(TEST_DATA_PATH(ball_core/GenericMolFile_test.dat));
   TEST_EQUAL(mol.isValid(), true)
 RESULT
 
-GenericMolFile mol(BALL_TEST_DATA_PATH(GenericMolFile_test.dat));
+GenericMolFile mol(TEST_DATA_PATH(ball_core/GenericMolFile_test.dat));
 System system;
 CHECK(bool read(System& system) throw(Exception::ParseError))
   TEST_EQUAL(mol.read(system), false)

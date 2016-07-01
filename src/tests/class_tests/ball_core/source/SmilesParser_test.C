@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/smilesParser.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/structure/smilesParser.h>
+#include <BALL/core/kernel/PTE.h>
 
 #include <fstream>
 #include <iostream>
@@ -100,7 +100,7 @@ CHECK(parse errors)
 RESULT
 	
 CHECK(example library)
-	std::ifstream is(BALL_TEST_DATA_PATH(SmilesParser_test.txt));
+	std::ifstream is(TEST_DATA_PATH(ball_core/SmilesParser_test.txt));
 	std::pair<String, Formula> smiles;
 	while (is.good())
 	{

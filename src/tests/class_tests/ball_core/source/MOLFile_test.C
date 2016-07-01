@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/maths/vector3.h>
 
 ///////////////////////////
 
@@ -39,7 +39,7 @@ RESULT
 
 
 CHECK(bool read(System& system) throw(Exception::ParseError))
-	MOLFile f(BALL_TEST_DATA_PATH(MOLFile_test1.mol));
+	MOLFile f(TEST_DATA_PATH(ball_core/MOLFile_test1.mol));
 	System system;
 	f.read(system);
 	TEST_EQUAL(system.countAtoms(), 23)
@@ -50,16 +50,16 @@ CHECK(bool read(System& system) throw(Exception::ParseError))
 	TEST_REAL_EQUAL(atom.getPosition().y, -3.1475)
 	TEST_REAL_EQUAL(atom.getPosition().z,  0.0000)
 	system.clear();
-	MOLFile f2(BALL_TEST_DATA_PATH(../MOLFile_test.C));	
+	MOLFile f2(TEST_DATA_PATH(ball_core/../MOLFile_test.C));	
 	TEST_EXCEPTION(Exception::ParseError, f2.read(system))
-	MOLFile f3(BALL_TEST_DATA_PATH(Selectable_test.txt));
+	MOLFile f3(TEST_DATA_PATH(ball_core/Selectable_test.txt));
 	bool result = f3.read(system);
 	TEST_EQUAL(result, false)
 RESULT
 
 
 CHECK(MOLFile(const String& filename, File::OpenMode open_mode = std::ios::in) throw(Exception::FileNotFound))
-	MOLFile f(BALL_TEST_DATA_PATH(MOLFile_test1.mol), std::ios::in);
+	MOLFile f(TEST_DATA_PATH(ball_core/MOLFile_test1.mol), std::ios::in);
 	System system;
 	f.read(system);
 	TEST_EQUAL(system.countAtoms(), 23)
@@ -100,15 +100,15 @@ CHECK(bool write(const System& system) throw(File::CannotWrite))
 	f.write(S);
 	f.close();
 	
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(MOLFile_test2.mol))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/MOLFile_test2.mol))
 
-	MOLFile f2(BALL_TEST_DATA_PATH(../MOLFile_test.C), std::ios::in);
+	MOLFile f2(TEST_DATA_PATH(ball_core/../MOLFile_test.C), std::ios::in);
 	TEST_EXCEPTION(File::CannotWrite, f2.write(S))
 RESULT
 
 
 CHECK([EXTRA]MOLFile::MOLFile& operator >> (System& system))
-  MOLFile f(BALL_TEST_DATA_PATH(MOLFile_test1.mol));
+  MOLFile f(TEST_DATA_PATH(ball_core/MOLFile_test1.mol));
 	System S;
 	f >> S;
 	f.close();
@@ -116,7 +116,7 @@ CHECK([EXTRA]MOLFile::MOLFile& operator >> (System& system))
 	TEST_EQUAL(S.countBonds(), 26)
 	TEST_EQUAL(S.countMolecules(), 1)
 
-	MOLFile f2(BALL_TEST_DATA_PATH(MOLFile_test3.mol));
+	MOLFile f2(TEST_DATA_PATH(ball_core/MOLFile_test3.mol));
 	S.destroy();
 	f2 >> S;
 	TEST_EQUAL(S.countAtoms(), 49)
@@ -131,7 +131,7 @@ CHECK([EXTRA]MOLFile::MOLFile& operator >> (System& system))
 
 	// check whether we handle file with only 
 	// 48 columns in the atom lines correctly
-	MOLFile f3(BALL_TEST_DATA_PATH(MOLFile_test4.mol));
+	MOLFile f3(TEST_DATA_PATH(ball_core/MOLFile_test4.mol));
 	S.destroy();
 	f3 >> S;
 	TEST_EQUAL(S.countAtoms(), 23)
@@ -140,7 +140,7 @@ CHECK([EXTRA]MOLFile::MOLFile& operator >> (System& system))
 RESULT
 
 CHECK(Molecule* read() throw(Exception::ParseError))
-  MOLFile f(BALL_TEST_DATA_PATH(MOLFile_test1.mol));
+  MOLFile f(TEST_DATA_PATH(ball_core/MOLFile_test1.mol));
 	Molecule* m = f.read();
 	f.close();
 	TEST_EQUAL(m->countAtoms(), 23)
@@ -178,7 +178,7 @@ CHECK([EXTRA]MOLFile::MOLFile& operator << (const System& system))
 	MOLFile f(filename, std::ios::out);
 	f << S;	
 	f.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(MOLFile_test2.mol))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/MOLFile_test2.mol))
 RESULT
 
 CHECK(bool write(const Molecule& molecule) throw(File::CannotWrite))
@@ -186,11 +186,11 @@ CHECK(bool write(const Molecule& molecule) throw(File::CannotWrite))
 	MOLFile f(filename, std::ios::out);
 	f.write(*m);
 	f.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(MOLFile_test2.mol))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/MOLFile_test2.mol))
 RESULT
 
 CHECK([EXTRA]bool read(System& system) throw(Exception::ParseError))
-	MOLFile f(BALL_TEST_DATA_PATH(MOLFile_test5.mol));
+	MOLFile f(TEST_DATA_PATH(ball_core/MOLFile_test5.mol));
 	System system;
 	f.read(system);
 	TEST_EQUAL(system.countAtoms(), 30)

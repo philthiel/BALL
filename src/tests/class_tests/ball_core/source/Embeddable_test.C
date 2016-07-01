@@ -1,13 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/embeddable.h>
-#include <BALL/common.h>
+#include <BALL/core/concept/embeddable.h>
 
 using namespace BALL;
 

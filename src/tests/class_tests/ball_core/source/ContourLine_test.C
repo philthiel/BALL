@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DATATYPE/contourLine.h>
+#include <BALL/core/datatype/contourLine.h>
 ///////////////////////////
 
 START_TEST(TContourLine)

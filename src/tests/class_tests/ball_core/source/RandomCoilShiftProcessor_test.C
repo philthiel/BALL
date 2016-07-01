@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/randomCoilShiftProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
+#include <BALL/core/nmr/randomCoilShiftProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/defaultProcessors.h>
 
 ///////////////////////////
 
@@ -57,11 +57,11 @@ CHECK(RandomCoilShiftProcessor::finish() throw())
   //?????
 RESULT
 
-HINFile f(BALL_TEST_DATA_PATH(RandomCoilShiftProcessor_test.hin));
+HINFile f(TEST_DATA_PATH(ball_core/RandomCoilShiftProcessor_test.hin));
 System S;
 f >> S;
 
-Parameters parameters(BALL_TEST_DATA_PATH(RandomCoilShiftProcessor_test.ini));
+Parameters parameters(TEST_DATA_PATH(ball_core/RandomCoilShiftProcessor_test.ini));
 
 CHECK(chemical shifts)
 	PRECISION(0.0001)

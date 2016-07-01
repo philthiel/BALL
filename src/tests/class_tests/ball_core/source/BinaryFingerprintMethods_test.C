@@ -2,20 +2,20 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 /////////////////////////////////////////////////////////////
 
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/SYSTEM/file.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/system/file.h>
 
 #include <boost/unordered_map.hpp>
 
 /////////////////////////////////////////////////////////////
 // To be tested ...
-#include <BALL/STRUCTURE/binaryFingerprintMethods.h>
+#include <BALL/core/structure/binaryFingerprintMethods.h>
 /////////////////////////////////////////////////////////////
 
 using namespace BALL;
@@ -50,7 +50,7 @@ CHECK(parseFingerprintBitstring())
 	
 	Molecule* m;
 	vector<unsigned short> tmp;
-	SDFile f(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_test.sdf), File::MODE_IN);
+	SDFile f(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_test.sdf), File::MODE_IN);
 	while ((m = f.read()))
 	{
 		BinaryFingerprintMethods::parseBinaryFingerprint(m->getProperty("ECFP4_1024").getString(), tmp, 1);
@@ -106,7 +106,7 @@ CHECK(parseFingerprintFeatureList())
 	
 	Molecule* m;
 	vector<unsigned short> tmp;
-	SDFile f(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_test.sdf), File::MODE_IN);
+	SDFile f(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_test.sdf), File::MODE_IN);
 	while ((m = f.read()))
 	{
 		cmpd_ids.push_back(m->getProperty(("CMPD_ID")).getString());
@@ -332,7 +332,7 @@ CHECK(cutoffSearch())
 	float sim;
 	String key;
 	boost::unordered_map<string, float> results;
-	LineBasedFile lbf(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_SimSearchResults.csv), File::MODE_IN);
+	LineBasedFile lbf(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_SimSearchResults.csv), File::MODE_IN);
 	while(lbf.readLine())
 	{
 		sim = lbf.getField(2).toFloat();
@@ -395,7 +395,7 @@ CHECK(connectedComponents(store_nns=true))
 	boost::unordered_map<unsigned int, map<string, float> >::iterator ccs_it;
 	boost::unordered_map<unsigned int, boost::unordered_map<unsigned int, map<string, float> > > all_ccs;
 	
-	LineBasedFile lbf(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_ConnectedComponents.csv), File::MODE_IN);
+	LineBasedFile lbf(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_ConnectedComponents.csv), File::MODE_IN);
 	while(lbf.readLine())
 	{
 		if (lbf.getField(0) == "#")
@@ -543,7 +543,7 @@ CHECK(connectedComponents(store_nns=false))
 	boost::unordered_map<unsigned int, map<string, float> >::iterator ccs_it;
 	boost::unordered_map<unsigned int, boost::unordered_map<unsigned int, map<string, float> > > all_ccs;
 	
-	LineBasedFile lbf(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_ConnectedComponents.csv), File::MODE_IN);
+	LineBasedFile lbf(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_ConnectedComponents.csv), File::MODE_IN);
 	while(lbf.readLine())
 	{
 		if (lbf.getField(0) == "#")
@@ -673,7 +673,7 @@ CHECK(calculateSelectionMedoid())
 	vector<float> lib_avg_sims;
 	vector<float> query_avg_sims;
 	
-	LineBasedFile lbf(BALL_TEST_DATA_PATH(BinaryFingerprintMethods_MedoidResults.csv), File::MODE_IN);
+	LineBasedFile lbf(TEST_DATA_PATH(ball_core/BinaryFingerprintMethods_MedoidResults.csv), File::MODE_IN);
 	while(lbf.readLine())
 	{
 		if (lbf.getField(0) == "#")

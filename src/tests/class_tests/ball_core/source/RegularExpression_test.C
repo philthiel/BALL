@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/regularExpression.h>
+#include <BALL/core/datatype/regularExpression.h>
+
+using namespace std;
 
 ///////////////////////////
 
@@ -238,7 +239,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	re2.dump(outfile);
 	outfile.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Regular_Expression.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Regular_Expression.txt))
 RESULT
 
 CHECK(friend std::ostream& operator << (std::ostream& s, const RegularExpression& regular_expression) throw())
@@ -246,11 +247,11 @@ CHECK(friend std::ostream& operator << (std::ostream& s, const RegularExpression
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << re2;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Regular_Expression2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Regular_Expression2.txt))
 RESULT
 
 CHECK(friend std::istream& operator >> (std::istream& s, RegularExpression& regular_expression) throw())
-	std::ifstream instr(BALL_TEST_DATA_PATH(Regular_Expression2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Regular_Expression2.txt));
 	re2.clear();
 	instr >> re2;
 	instr.close();

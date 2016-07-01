@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/chainBuilder.h>
-#include <BALL/STRUCTURE/sdGenerator.h>
-#include <BALL/FORMAT/MOLFile.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/chainBuilder.h>
+#include <BALL/core/structure/sdGenerator.h>
+#include <BALL/core/format/MOLFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -33,7 +33,7 @@ RESULT
 
 ChainBuilder cb_2;
 System molecule_sys;
-MOLFile infile(BALL_TEST_DATA_PATH(input_ChainBuilder_test.mol));
+MOLFile infile(TEST_DATA_PATH(ball_core/input_ChainBuilder_test.mol));
 infile >> molecule_sys;
 infile.close();
 

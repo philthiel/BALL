@@ -6,8 +6,8 @@
 
 ///////////////////////////
 
-#include <BALL/MATHS/common.h>
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/maths/common.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 

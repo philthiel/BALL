@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/sideChainPlacementProcessor.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/SYSTEM/file.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/sideChainPlacementProcessor.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 using namespace BALL;
@@ -67,8 +67,8 @@ RESULT
 
 CHECK( applied on empty System )
 	SideChainPlacementProcessor scpp;		
-	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_INPUT_FILE, BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_input_1.pdb));
-	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_1.pdb));
+	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_INPUT_FILE, TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_input_1.pdb));
+	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_1.pdb));
 
 	System sys;	
 	sys.apply(scpp); 
@@ -79,14 +79,14 @@ CHECK( operator() apply to a system )
 	SideChainPlacementProcessor scpp;
 	//TODO shouldn't we test the input file as well?
 	//scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_INPUT_FILE, 
-  //                 BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_input_1.pdb));
+  //                 TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_input_1.pdb));
 	//scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_SEQUENCE_FILE,
-	//                 BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_sequence_1.dat));
+	//                 TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_sequence_1.dat));
 	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, 
-	                 BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_1.pdb));
+	                 TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_1.pdb));
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 	mol >> sys;
 
 	sys.apply(scpp);
@@ -99,7 +99,7 @@ CHECK( operator() apply to a system )
 	PDB_temp.close();
 
 	// get the precomputed result 	
-	PDBFile PDB_pre( BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_pre_1.pdb), std::ios::out);	
+	PDBFile PDB_pre( TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_pre_1.pdb), std::ios::out);	
 
 	// compare
 	//////// does not work like this: TEST_EQUAL(PDB_temp==PDB_pre, true) //TODO	
@@ -114,7 +114,7 @@ CHECK(apply to a protein)
 	SideChainPlacementProcessor scpp;	
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 	mol >> sys;
 	Protein* prot = sys.getProtein(0);
 RESULT
@@ -123,7 +123,7 @@ CHECK(apply to a chain)
 	SideChainPlacementProcessor scpp;	
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 	mol >> sys;
 	Chain* chain3 = (sys.getProtein(0)->getChain(2));
 
@@ -134,7 +134,7 @@ CHECK( apply to a selection)
 	SideChainPlacementProcessor scpp;	
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 	mol >> sys;
 	Residue* res = (sys.getProtein(0)->getChain(1))->getResidue(0);
 	res->select();
@@ -145,10 +145,10 @@ RESULT
 CHECK(mutate)	
 	SideChainPlacementProcessor scpp;
  	scpp.options.set(SideChainPlacementProcessor::Option::MUTATE_SELECTED_SIDE_CHAINS, true);
-	//TODO   scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_mut1.pdb));
+	//TODO   scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_mut1.pdb));
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 	mol >> sys;
 	
 	//check if SCWRL path is set and the required file exists
@@ -167,10 +167,10 @@ CHECK(mutate)
 
 			scpp.options.set(SideChainPlacementProcessor::Option::MUTATE_SELECTED_SIDE_CHAINS, true);
 			scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, 
-											 BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_mut2.pdb));
+											 TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_mut2.pdb));
 
 			System sys2;	
-			PDBFile mol2(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test.pdb), std::ios::in); 
+			PDBFile mol2(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test.pdb), std::ios::in); 
 			mol2 >> sys2;
 			mutated_seq = "arCd";
 			scpp.setMutations(mutated_seq);
@@ -191,10 +191,10 @@ RESULT
 
 CHECK(check energy) //TODO
 /*	SideChainPlacementProcessor scpp;
-	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_output_AA.pdb));
+	scpp.options.set(SideChainPlacementProcessor::Option::SCWRL_OUTPUT_FILE, TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_output_AA.pdb));
 
 	System sys;	
-	PDBFile mol(BALL_TEST_DATA_PATH(SideChainPlacementProcessor_test_AA.pdb), std::ios::in); 
+	PDBFile mol(TEST_DATA_PATH(ball_core/SideChainPlacementProcessor_test_AA.pdb), std::ios::in); 
 	mol >> sys;
 	
 	// energy before

@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/timeStamp.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/concept/timeStamp.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 #include <fstream>
 
 ///////////////////////////
@@ -171,13 +171,13 @@ CHECK(PreciseTime::write(PersistenceManager& pm) const )
 	pm.setOstream(of);
 	t.write(pm);
 	of.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(PreciseTime_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/PreciseTime_test2.txt))
 RESULT
 
 
 CHECK(PreciseTime::read(PersistenceManager& pm))
 	PreciseTime t;
-	std::ifstream inf(BALL_TEST_DATA_PATH(PreciseTime_test2.txt));
+	std::ifstream inf(TEST_DATA_PATH(ball_core/PreciseTime_test2.txt));
 	pm.setIstream(inf);
 	t.read(pm);
 	inf.close();
@@ -192,7 +192,7 @@ CHECK(ostream& operator << (ostream& os, const PreciseTime& time))
 	ofstream of(filename.c_str(), std::ios::out);
 	of << t << std::endl;
 	of.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PreciseTime_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PreciseTime_test.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

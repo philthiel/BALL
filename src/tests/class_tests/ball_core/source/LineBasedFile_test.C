@@ -1,12 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/FORMAT/lineBasedFile.h>
+
+#include <BALL/core/format/lineBasedFile.h>
+
+#include <vector>
+
 ///////////////////////////
 
 START_TEST(LineBasedFile)
@@ -14,6 +17,7 @@ START_TEST(LineBasedFile)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 String PS = FileSystem::PATH_SEPARATOR;
@@ -31,7 +35,7 @@ RESULT
 
 CHECK(LineBasedFile(const String& filename, File::OpenMode open_mode = std::ios::in)
 			throw(Exception::FileNotFound))
-	LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test.txt));
+	LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test.txt));
 	TEST_EQUAL(f1.getLineNumber(), 0)
 	String line = f1.getLine();
 	TEST_EQUAL(line, "")
@@ -52,7 +56,7 @@ RESULT
 LineBasedFile fx;
 
 CHECK(LineBasedFile& operator = (const LineBasedFile& file) )
-	LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test.txt));
+	LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test.txt));
 	f1.readLine();
 	String line = f1.getLine();
 	TEST_EQUAL(line, "line1")
@@ -65,7 +69,7 @@ CHECK(LineBasedFile& operator = (const LineBasedFile& file) )
 RESULT
 
 CHECK(clear() )
-	LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test.txt));
+	LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test.txt));
 	f1.readLine();
 	f1.clear();
 	TEST_EQUAL(f1.getLineNumber(), 0)
@@ -76,14 +80,14 @@ CHECK(clear() )
 RESULT
 
 CHECK(getLineNumber() const )
-	LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test.txt));
+	LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test.txt));
 	TEST_EQUAL(f1.getLineNumber(), 0)
 	f1.readLine();
 	TEST_EQUAL(f1.getLineNumber(), 1)
 	TEST_EQUAL(fx.getLineNumber(), 0)
 RESULT
 
-LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test.txt));
+LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test.txt));
 
 CHECK(getLine() const )
 	String line = f1.getLine();
@@ -327,7 +331,7 @@ CHECK(gotoLine(Position line_number) throw(LineBasedFileError))
 RESULT
 
 CHECK([EXTRA] triming whitespaces)
-	LineBasedFile f1(BALL_TEST_DATA_PATH(LineBasedFile_test2.txt), File::MODE_IN, true);
+	LineBasedFile f1(TEST_DATA_PATH(ball_core/LineBasedFile_test2.txt), File::MODE_IN, true);
 	f1.readLine();
 	String line = f1.getLine();
 	TEST_EQUAL(line, "line1")

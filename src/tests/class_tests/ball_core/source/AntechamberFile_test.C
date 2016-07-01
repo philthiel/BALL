@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/antechamberFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/FORMAT/molFileFactory.h>
+#include <BALL/core/format/antechamberFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/format/molFileFactory.h>
 ///////////////////////////
 
 START_TEST(AntechamberFile)
@@ -35,13 +35,13 @@ RESULT
 
 CHECK(AntechamberFile::AntechamberFile(const String& filename, File::OpenMode open_mode))
 	// checking for default mode: reading
-	AntechamberFile f(BALL_TEST_DATA_PATH(AntechamberFile_test1.ac));
+	AntechamberFile f(TEST_DATA_PATH(ball_core/AntechamberFile_test1.ac));
 	TEST_EQUAL(f.isValid(), true)
 RESULT
 
 
 CHECK(AntechamberFile::read(System& system))
-  AntechamberFile f(BALL_TEST_DATA_PATH(AntechamberFile_test2.ac));
+  AntechamberFile f(TEST_DATA_PATH(ball_core/AntechamberFile_test2.ac));
 	System S;
 	f.read(S);
 	f.close();
@@ -61,7 +61,7 @@ RESULT
 
 
 CHECK(AntechamberFile::read(System& system))
-  AntechamberFile f(BALL_TEST_DATA_PATH(AntechamberFile_test1.ac));
+  AntechamberFile f(TEST_DATA_PATH(ball_core/AntechamberFile_test1.ac));
 	System S;
 	f.read(S);
 	f.close();
@@ -71,7 +71,7 @@ CHECK(AntechamberFile::read(System& system))
 RESULT
 
 CHECK(AntechamberFile::read(System& system))
-  AntechamberFile f(BALL_TEST_DATA_PATH(current.ac));
+  AntechamberFile f(TEST_DATA_PATH(ball_core/current.ac));
 	System S;
 	f.read(S);
 	f.close();
@@ -106,12 +106,12 @@ CHECK(AntechamberFile::write(const System& system))
 	f.write(S);
 	f.close();
 		
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(AntechamberFile_test3.ac))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/AntechamberFile_test3.ac))
 RESULT
 
 
 CHECK(AntechamberFile::AntechamberFile& operator >> (System& system))
-  AntechamberFile f(BALL_TEST_DATA_PATH(AntechamberFile_test2.ac));
+  AntechamberFile f(TEST_DATA_PATH(ball_core/AntechamberFile_test2.ac));
 	System S;
 	f >> S;
 	f.close();
@@ -146,11 +146,11 @@ CHECK(AntechamberFile::AntechamberFile& operator << (const System& system))
 	f << S;
 	f.close();
 		
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(AntechamberFile_test3.ac))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/AntechamberFile_test3.ac))
 RESULT
 
 CHECK(AntechamberFile read via MolFileFactory)
-	GenericMolFile* file = MolFileFactory::open(BALL_TEST_DATA_PATH(AntechamberFile_test2.ac));
+	GenericMolFile* file = MolFileFactory::open(TEST_DATA_PATH(ball_core/AntechamberFile_test2.ac));
 	System S;
 	*file >> S;
 	file->close();
@@ -188,7 +188,7 @@ CHECK(AntechamberFile write via MolFileFactory)
 	{
 		f->write(S);
 		f->close(); 
-		TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(AntechamberFile_test3.ac))
+		TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/AntechamberFile_test3.ac))
 	}
 
 RESULT

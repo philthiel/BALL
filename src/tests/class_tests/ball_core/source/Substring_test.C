@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/DATATYPE/string.h>
+#include <BALL/core/datatype/string.h>
 #include <cstring>
 #include <string>
 ///////////////////////////
@@ -399,7 +399,7 @@ CHECK(friend std::ostream& operator << (std::ostream& s, const Substring& substr
 	test_sub1.bind(ABCDEF, 1, 4);
 	outstr << test_sub1;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Substring_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Substring_test2.txt))
 	std::ofstream outstr2(filename.c_str(), std::ios::out);
 	outstr2 << empty_sub;
 	outstr2.close();
@@ -419,7 +419,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw(Substri
 	test_sub1.bind(ABCDEF, 1, 4);
 	test_sub1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Substring_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Substring_test.txt))
 	std::ofstream outfile2(filename.c_str(), ios::out);
 	TEST_EXCEPTION(Substring::UnboundSubstring, empty_sub.dump(outfile2))
 	outfile2.close();

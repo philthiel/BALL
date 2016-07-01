@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/STRUCTURE/analyticalSES.h>
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/structure/analyticalSES.h>
+#include <BALL/core/kernel/fragment.h>
 ///////////////////////////
 
 START_TEST(AnalyticalSES)

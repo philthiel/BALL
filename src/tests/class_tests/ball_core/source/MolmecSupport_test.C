@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/COMMON/support.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/molmec/common/support.h>
+#include <BALL/core/kernel/system.h>
 
 #include <set>
 

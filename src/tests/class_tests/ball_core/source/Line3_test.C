@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#	include <BALL/MATHS/vector3.h>
-#	include <BALL/MATHS/line3.h>
+#	include <BALL/core/maths/vector3.h>
+#	include <BALL/core/maths/line3.h>
 ///////////////////////////
 
 START_TEST(Line3)
@@ -146,7 +146,7 @@ CHECK(bool isValid() const throw())
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TLine3<T>& line))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Line_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Line_test2.txt));
 	line = Line3();
 	instr >> line;
 	instr.close();
@@ -164,7 +164,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TLine3<T>& line))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << line;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Line_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Line_test2.txt))
 RESULT
 
 CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
@@ -176,7 +176,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	line.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Line_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Line_test.txt))
 RESULT
 
 CHECK(TLine3(const TLine3& line) throw())

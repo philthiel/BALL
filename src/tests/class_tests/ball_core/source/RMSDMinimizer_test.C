@@ -1,12 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/RMSDMinimizer.h>
+#include <BALL/core/structure/RMSDMinimizer.h>
+
+#include <vector>
 
 ///////////////////////////
 
@@ -15,6 +16,7 @@ START_TEST(RMSDMinimizer)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 typedef RMSDMinimizer::PointVector Points;

@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/rotamerLibrary.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/STRUCTURE/residueChecker.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/rotamerLibrary.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/structure/residueChecker.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -79,7 +79,7 @@ RESULT
 
 CHECK(ResidueRotamerSet* getRotamerSet(const Residue& residue))
   System S;
-	HINFile ags_file(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile ags_file(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	ags_file >> S;
 	ABORT_IF(S.countResidues() != 3)
 
@@ -171,7 +171,7 @@ rc.disable(ResidueChecker::OVERLAPPING_ATOMS);
 
 CHECK(Side chain positions for Ser)
 	System S;
-	HINFile ags_file(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile ags_file(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	ags_file >> S;
 	ABORT_IF(S.countResidues() != 3)
 
@@ -219,7 +219,7 @@ RESULT
 
 CHECK(Side chain positions for Pro)
 	System S;
-	HINFile ags_file(BALL_TEST_DATA_PATH(GPG.hin));
+	HINFile ags_file(TEST_DATA_PATH(ball_core/GPG.hin));
 	ags_file >> S;
 	ABORT_IF(S.countResidues() != 3)
 
@@ -300,7 +300,7 @@ RESULT
 
 CHECK(Side chain conformations for Dunbrack library)
 	System S;
-	HINFile infile(BALL_TEST_DATA_PATH(all_amino.hin));
+	HINFile infile(TEST_DATA_PATH(ball_core/all_amino.hin));
 	infile >> S;
 	infile.close();
 	TEST_EQUAL(S.countResidues(), 20)

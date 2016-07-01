@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/STRUCTURE/addHydrogenProcessor.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/peptideBuilder.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/addHydrogenProcessor.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/peptideBuilder.h>
 
 START_TEST(class_name)
 

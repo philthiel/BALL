@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/shiftModel.h>
-#include <BALL/NMR/haighMallionShiftProcessor.h>
-#include <BALL/NMR/randomCoilShiftProcessor.h>
-#include <BALL/NMR/EFShiftProcessor.h>
-#include <BALL/NMR/anisotropyShiftProcessor.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/nmr/shiftModel.h>
+#include <BALL/core/nmr/haighMallionShiftProcessor.h>
+#include <BALL/core/nmr/randomCoilShiftProcessor.h>
+#include <BALL/core/nmr/EFShiftProcessor.h>
+#include <BALL/core/nmr/anisotropyShiftProcessor.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 
@@ -63,7 +63,7 @@ CHECK(ShiftModel::setFilename(const String& filename))
 	sm.setFilename("XXXXXX");
 	TEST_EQUAL(sm.isValid(), false)
 	TEST_EQUAL(sm.getParameters().isValid(), false)
-	sm.setFilename(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+	sm.setFilename(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.isValid(), true)
 	TEST_EQUAL(sm.getParameters().isValid(), true)
 RESULT
@@ -73,16 +73,16 @@ CHECK(ShiftModel::getFilename() const)
 	sm.setFilename("XXXXXX");
 	TEST_EQUAL(sm.isValid(), false)
 	TEST_EQUAL(sm.getFilename(), "XXXXXX")
-	sm.setFilename(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+	sm.setFilename(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.isValid(), true)
-	TEST_EQUAL(sm.getFilename(), BALL_TEST_DATA_PATH(ShiftModel_test.ini))
+	TEST_EQUAL(sm.getFilename(), TEST_DATA_PATH(ball_core/ShiftModel_test.ini))
 RESULT
 
 CHECK(ShiftModel::getModuleList())
 	ShiftModel sm;
 	TEST_EQUAL(sm.getModuleList().size(), 0)
 	
-	sm.setFilename(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+	sm.setFilename(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.getModuleList().size(), 4)
 
 	if (sm.getModuleList().size() == 4)
@@ -121,7 +121,7 @@ CHECK(ShiftModel::unregisterModule(const String& name))
 RESULT
 
 CHECK(ShiftModel::ShiftModel(const String& filename))
-  ShiftModel sm(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+  ShiftModel sm(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.isValid(), true)
 	ShiftModel::ModuleList mod_list = sm.getModuleList();
 	TEST_EQUAL(mod_list.size(), 4)
@@ -132,13 +132,13 @@ CHECK(ShiftModel::ShiftModel(const String& filename))
 RESULT
 
 CHECK(ShiftModel::clear())
-  ShiftModel sm(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+  ShiftModel sm(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	sm.clear();
 	TEST_EQUAL(sm.isValid(), false)
 	TEST_EQUAL(sm.getModuleList().size(), 0)
 RESULT
 
-const ShiftModel smx(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+const ShiftModel smx(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 
 CHECK(ShiftModel::ShiftModel(const ShiftModel& model))
 	ShiftModel sm(smx);
@@ -163,7 +163,7 @@ CHECK(ShiftModel::ShiftModel& operator = (const ShiftModel& model))
 RESULT
 
 CHECK(ShiftModel::ShiftModel& operator = (const String& filename))
-	ShiftModel sm = String(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+	ShiftModel sm = String(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.isValid(), true)
 	ShiftModel::ModuleList mod_list = sm.getModuleList();
 	TEST_EQUAL(mod_list.size(), 4)
@@ -175,7 +175,7 @@ RESULT
 
 PRECISION(0.0001)
 CHECK(chemical shift/BPTI)
-	PDBFile f(BALL_TEST_DATA_PATH(ShiftModel_test.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/ShiftModel_test.pdb));
 	System S;
 	f >> S;
 	TEST_EQUAL(S.countAtoms(), 892)
@@ -184,12 +184,12 @@ CHECK(chemical shift/BPTI)
 	bool result = S.apply(frag_db.build_bonds);
 	TEST_EQUAL(result, true)
 	
-	ShiftModel sm(BALL_TEST_DATA_PATH(ShiftModel_test.ini));
+	ShiftModel sm(TEST_DATA_PATH(ball_core/ShiftModel_test.ini));
 	TEST_EQUAL(sm.isValid(), true)
 	S.apply(sm);
 
   StringHashMap<float> shifts;
-  ifstream infile(BALL_TEST_DATA_PATH(ShiftModel_test.dat));
+  ifstream infile(TEST_DATA_PATH(ball_core/ShiftModel_test.dat));
   String name;
   float shift;
   while (infile.good())

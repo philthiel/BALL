@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/regularData1D.h>
-#include <BALL/COMMON/limits.h>
+#include <BALL/core/datatype/regularData1D.h>
+#include <BALL/core/common/limits.h>
 
 ///////////////////////////
 

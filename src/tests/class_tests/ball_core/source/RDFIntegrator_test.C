@@ -1,13 +1,14 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/STRUCTURE/RDFIntegrator.h>
+#include <BALL/core/structure/RDFIntegrator.h>
+
+#include <vector>
 
 ///////////////////////////
 
@@ -16,6 +17,7 @@ START_TEST(RDFIntegrator)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 ///  insert tests for each member function here         

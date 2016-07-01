@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/STRUCTURE/surfaceProcessor.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/structure/surfaceProcessor.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/HINFile.h>
 #include <list>
 
 ///////////////////////////
@@ -42,7 +42,7 @@ RESULT
 // ... all obvious test missing
 
 CHECK(SurfaceProcessor / single atom)
-	HINFile infile(BALL_TEST_DATA_PATH(SurfaceProcessor_test_single_atom.hin));
+	HINFile infile(TEST_DATA_PATH(ball_core/SurfaceProcessor_test_single_atom.hin));
 	System system;
 	infile >> system;
 	infile.close();
@@ -56,7 +56,7 @@ CHECK(SurfaceProcessor / single atom)
 RESULT
 
 CHECK(SurfaceProcessor / methane)
-	HINFile infile(BALL_TEST_DATA_PATH(methane.hin));
+	HINFile infile(TEST_DATA_PATH(ball_core/methane.hin));
 	System system;
 	infile >> system;
 	infile.close();

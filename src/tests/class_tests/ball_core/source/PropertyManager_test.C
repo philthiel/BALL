@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/CONCEPT/property.h>
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/KERNEL/protein.h>
+#include <BALL/core/concept/property.h>
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/kernel/protein.h>
 #include <fstream>
 
 ///////////////////////////
@@ -315,13 +315,13 @@ CHECK(void write(PersistenceManager& pm) const throw())
 	pm.setOstream(ofile);
 	m.write(pm);
 	ofile.close();	
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PropertyManager_test/PropertyManager_test_write.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PropertyManager_test/PropertyManager_test_write.txt))
 RESULT
 
 
 CHECK(bool read(PersistenceManager& pm) throw())
 	PropertyManager m;
-	ifstream  ifile(BALL_TEST_DATA_PATH(PropertyManager_test/PropertyManager_test_read.txt));
+	ifstream  ifile(TEST_DATA_PATH(ball_core/PropertyManager_test/PropertyManager_test_read.txt));
 	pm.setIstream(ifile);
 	TEST_EQUAL(m.read(pm), true)
 	TEST_EQUAL(m.hasProperty("PROP1"), true)
@@ -356,7 +356,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	NEW_TMP_FILE(filename)
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	m.dump(outstr); 
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(PropertyManager_test/PropertyManager_test_dump.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/PropertyManager_test/PropertyManager_test_dump.txt))
 RESULT
 
 

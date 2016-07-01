@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MATHS/piecewiseFunction.h>
+#include <BALL/core/maths/piecewiseFunction.h>
 
 ///////////////////////////
 
@@ -16,6 +16,7 @@ START_TEST(PiecewiseFunction)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 Coefficients coef;
@@ -61,7 +62,7 @@ RESULT
 
 CHECK(PiecewiseFunction(const std::vector<Interval>& intervals, const std::vector<Coefficients>& coeffs) throw())
 	PiecewiseFunction PWF2(intervals, coefs);
-	// Unter der Annahme, daÿ operator== für std::vector definiert ist und
+	// Unter der Annahme, daï¿½ operator== fï¿½r std::vector definiert ist und
 	// funktioniert.
 	bool test = (PWF2.getIntervals() == intervals);
 	TEST_EQUAL(test, true);
@@ -110,7 +111,7 @@ RESULT
 CHECK(void setIntervals(const std::vector<Interval>& intervals) throw())
 	PiecewiseFunction PWF2;
 	PWF2.setIntervals(intervals);
-	bool test = (PWF2.getIntervals() == intervals);  
+	bool test = (PWF2.getIntervals() == intervals);
 	TEST_EQUAL(test,true);
 RESULT
 
@@ -238,7 +239,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	PWF2.dump(outfile);
 	outfile.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(PiecewiseFunction_test.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/PiecewiseFunction_test.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

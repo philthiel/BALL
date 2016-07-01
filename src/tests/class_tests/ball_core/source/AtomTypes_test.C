@@ -1,14 +1,14 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/MOLMEC/PARAMETER/atomTypes.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL/core/molmec/parameter/atomTypes.h>
+#include <BALL/core/format/parameters.h>
 
 
 ///////////////////////////
@@ -24,7 +24,7 @@ using namespace BALL;
 ///
 	
 AtomTypes* at_ptr = 0;
-Parameters parm(BALL_TEST_DATA_PATH(AtomTypes_test.ini));
+Parameters parm(TEST_DATA_PATH(ball_core/AtomTypes_test.ini));
 parm.init();
 
 CHECK(AtomTypes::AtomTypes)

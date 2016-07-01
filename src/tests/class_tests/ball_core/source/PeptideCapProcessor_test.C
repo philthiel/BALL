@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/peptideCapProcessor.h>
-#include <BALL/STRUCTURE/peptideBuilder.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/structure/peptideCapProcessor.h>
+#include <BALL/core/structure/peptideBuilder.h>
+#include <BALL/core/structure/fragmentDB.h>
 #include <vector>
 
 ///////////////////////////

@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 ///////////////////////////
 
 START_TEST(NucleicAcid)
@@ -225,7 +225,7 @@ CHECK([EXTRA]NucleicAcid::dump(ostream&, Size))
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	na1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(NucleicAcid_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/NucleicAcid_test.txt))
 RESULT
 
 TextPersistenceManager pm;

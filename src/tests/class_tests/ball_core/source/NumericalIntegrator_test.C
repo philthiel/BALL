@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/MATHS/numericalIntegrator.h>
+#include <BALL/core/maths/numericalIntegrator.h>
 
 ///////////////////////////
 

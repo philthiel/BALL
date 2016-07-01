@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/SYSTEM/directory.h>
+#include <BALL/core/system/directory.h>
 ///////////////////////////
 
 #ifdef BALL_OS_WINDOWS
@@ -25,7 +25,7 @@ bool cleanup()
 {
 	if (test_dir == "")
 	{
-		test_dir = BALL_TEST_DATA_PATH(Directory_test);
+		test_dir = TEST_DATA_PATH(ball_core/Directory_test);
 		::chdir(test_dir.c_str());
 	}
 

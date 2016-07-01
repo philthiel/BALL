@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/createSpectrumProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/NMR/shiftModel.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
+#include <BALL/core/nmr/createSpectrumProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/nmr/shiftModel.h>
+#include <BALL/core/structure/defaultProcessors.h>
 
 ///////////////////////////
 

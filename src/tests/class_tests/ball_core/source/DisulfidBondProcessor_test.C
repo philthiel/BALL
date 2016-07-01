@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/disulfidBondProcessor.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/structure/disulfidBondProcessor.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
 ///////////////////////////
 
 using namespace BALL;
@@ -66,7 +66,7 @@ RESULT
 CHECK( operator() )
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;
 	sys.apply(dbp);
 RESULT
@@ -89,7 +89,7 @@ RESULT
 CHECK( getNumberOfDetectedDisulfidBonds() )
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_ACCQQCEECQEICH.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_ACCQQCEECQEICH.pdb), std::ios::in);
 	mol >> sys;
 	sys.apply(dbp);
 	TEST_EQUAL(dbp.getNumberOfDetectedDisulfidBonds(), 2)
@@ -99,7 +99,7 @@ RESULT
 CHECK( connect(Residue*) )
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;
 	sys.apply(dbp);
 	TEST_EQUAL(dbp.getNumberOfDetectedDisulfidBonds(), 1)
@@ -118,7 +118,7 @@ RESULT
 CHECK( connect(Atom*) )
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;;
 	sys.apply(dbp);
 	TEST_EQUAL(dbp.getNumberOfDetectedDisulfidBonds(), 1)
@@ -133,7 +133,7 @@ RESULT
 CHECK( disconnect())
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;
 
 	sys.apply(dbp);
@@ -150,7 +150,7 @@ RESULT
 CHECK( disconnect() / connect())
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;
 
 	sys.apply(dbp);
@@ -186,7 +186,7 @@ RESULT
 CHECK( getDisulfidBonds())
 	DisulfidBondProcessor dbp;
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/DisulfidBondProcessor_test_AACCQQQQCCRR.pdb), std::ios::in);
 	mol >> sys;
 
 	sys.apply(dbp);

@@ -1,13 +1,13 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/SOLVATION/claverieParameter.h>
+#include <BALL/core/solvation/claverieParameter.h>
 
 ///////////////////////////
 
@@ -35,7 +35,7 @@ RESULT
 
 CHECK(ClaverieParameter::(const ClaverieParameter& param)())
 	ClaverieParameter cp1;
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	cp1.extractSection(fffparam, "ClaverieParameters");
 	ClaverieParameter cp2;
 	bool test = (cp1 == cp2);
@@ -50,7 +50,7 @@ RESULT
 CHECK(ClaverieParameter::clear())
 	ClaverieParameter empty;
 	ClaverieParameter nonempty;
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	nonempty.extractSection(fffparam, "ClaverieParameters");
 	bool test = (empty == nonempty);
 	TEST_NOT_EQUAL(test, true)
@@ -63,7 +63,7 @@ RESULT
 
 CHECK(ClaverieParameter::ClaverieParameter& operator = (const ClaverieParameter& param))
 	ClaverieParameter cp1;
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	cp1.extractSection(fffparam, "ClaverieParameters");
 	ClaverieParameter cp2;
 	bool test = (cp1 == cp2);
@@ -77,7 +77,7 @@ RESULT
 
 CHECK(ClaverieParameter::hasParameters(Atom::Type solvent_type, Atom::Type solute_type) const )
 	ClaverieParameter cp;
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	cp.extractSection(fffparam, "ClaverieParameters");
 
 	Atom::Type type_HW = fffparam.getAtomTypes().getType("HW");
@@ -95,7 +95,7 @@ RESULT
 
 CHECK(ClaverieParameter::getParameters(Atom::Type solvent_type, Atom::Type solute_type) const )
 	ClaverieParameter cp;
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	cp.extractSection(fffparam, "ClaverieParameters");
 
 	Atom::Type type_HW = fffparam.getAtomTypes().getType("HW");
@@ -120,7 +120,7 @@ CHECK(ClaverieParameter::extractSection(ForceFieldParameters& parameters, const 
 	TEST_EQUAL(test, false)
 	cp.clear();
 	
-	ForceFieldParameters fffparam(BALL_TEST_DATA_PATH(ClaverieParameter_test.ini));
+	ForceFieldParameters fffparam(TEST_DATA_PATH(ball_core/ClaverieParameter_test.ini));
 	CAPTURE_OUTPUT_LEVEL(2000);
 	test = cp.extractSection(fffparam, "ClaverieParameters2");
 	COMPARE_OUTPUT("Variable missing.\n");

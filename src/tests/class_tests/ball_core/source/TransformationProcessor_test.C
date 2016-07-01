@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/STRUCTURE/geometricTransformations.h>
-#include <BALL/KERNEL/fragment.h>
+#include <BALL/core/structure/geometricTransformations.h>
+#include <BALL/core/kernel/fragment.h>
 
 START_TEST(TransformationApplictor)
 

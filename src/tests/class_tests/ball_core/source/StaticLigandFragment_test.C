@@ -1,10 +1,10 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DOCKING/COMMON/staticLigandFragment.h>
+#include <BALL/core/docking/common/staticLigandFragment.h>
 ///////////////////////////
 
 using namespace BALL;

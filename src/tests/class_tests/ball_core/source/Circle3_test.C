@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MATHS/circle3.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/vector3.h>
 
 ///////////////////////////
 
@@ -150,11 +150,11 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	c.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Circle3_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Circle3_test.txt))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TCircle3& circle))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Circle3_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Circle3_test2.txt));
 	v1 = Vector3(3.0, 4.0, 5.0);
 	v2 = Vector3(6.0, 7.0, 8.0);
 	c = Circle3();
@@ -174,7 +174,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TCircle3& circle))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << c;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Circle3_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Circle3_test2.txt))
 RESULT
 
 CHECK(TCircle3& operator = (const TCircle3& circle) throw())

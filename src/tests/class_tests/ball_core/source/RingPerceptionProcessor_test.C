@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/molecule.h>
 
 ///////////////////////////
 START_TEST(RingPerceptionProcessor)
@@ -22,9 +22,10 @@ START_TEST(RingPerceptionProcessor)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
-SDFile infile(BALL_TEST_DATA_PATH(descriptors_test.sdf));
+SDFile infile(TEST_DATA_PATH(ball_core/descriptors_test.sdf));
 System S;
 infile >> S;
 infile.close();
@@ -78,7 +79,7 @@ CHECK(DNA)
 	// atoms in each AtomContainer: thus there could not be any rings.
 	// HOWEVER: loading the file in BALLView and using "Count items"
 	// always gave the correct result.
-	PDBFile pdb(BALL_TEST_DATA_PATH(1BNA.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/1BNA.pdb));
 	System s2;
 	pdb >> s2;
 

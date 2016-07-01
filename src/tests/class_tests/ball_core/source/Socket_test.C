@@ -3,11 +3,11 @@
 //
 
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/SYSTEM/networking.h>
-#include <BALL/SYSTEM/systemCalls.h> // for sleepFor()
+#include <BALL/core/system/networking.h>
+#include <BALL/core/system/systemCalls.h> // for sleepFor()
 
 ///////////////////////////
 

@@ -1,10 +1,10 @@
-#include <BALL/STRUCTURE/geometricProperties.h>
+#include <BALL/core/structure/geometricProperties.h>
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/system.h>
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 START_TEST(GeometricProperties)
 

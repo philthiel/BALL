@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/PDBInfo.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/format/PDBInfo.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
 
 ///////////////////////////
 
@@ -137,7 +137,7 @@ CHECK(void setNumberOfRecords(Size n))
 RESULT
 
 CHECK([Extra] reading a PDB file)
-	PDBFile f(BALL_TEST_DATA_PATH(PDBInfo_test.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/PDBInfo_test.pdb));
 	System S;
 	f.read(S);
 	TEST_EQUAL(f.info.getSkippedRecords().size(), 154)

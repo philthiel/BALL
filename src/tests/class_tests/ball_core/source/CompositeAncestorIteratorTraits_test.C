@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/iterator.h>
-#include <BALL/CONCEPT/predicate.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/iterator.h>
+#include <BALL/core/concept/predicate.h>
 
 ///////////////////////////
 

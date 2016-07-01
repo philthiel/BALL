@@ -1,8 +1,8 @@
-#include <BALLTestConfig.h>
-#include <BALL/CONCEPT/classTest.h>
+#include <testConfig.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/kplsModel.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/kplsModel.h>
 
 using namespace BALL;
 using namespace BALL::QSAR;
@@ -13,7 +13,7 @@ START_TEST(KPLS-model)
 PRECISION(1E-5)
 
 QSARData data;
-data.readCSVFile(BALL_TEST_DATA_PATH(Regression_test.csv),1,1,1,"	",0,0);
+data.readCSVFile(TEST_DATA_PATH(ball_core/Regression_test.csv),1,1,1,"	",0,0);
 
 CHECK(KPLS-model)
 	KPLSModel model(data,2,0.005);

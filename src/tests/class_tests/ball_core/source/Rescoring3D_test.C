@@ -1,10 +1,10 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/SCORING/FUNCTIONS/rescoring3D.h>
+#include <BALL/core/scoring/functions/rescoring3D.h>
 ///////////////////////////
 
 using namespace BALL;

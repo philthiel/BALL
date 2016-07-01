@@ -3,13 +3,13 @@
 //
 
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/SYSTEM/path.h>
-#include <BALL/SYSTEM/directory.h>
+#include <BALL/core/system/path.h>
+#include <BALL/core/system/directory.h>
 
 ///////////////////////////
 
@@ -24,7 +24,7 @@ using namespace BALL;
 # define chdir _chdir
 #endif
 
-::chdir(BALL_TEST_DATA_PATH(..));
+::chdir(TEST_DATA_PATH(ball_core/..));
 
 CHECK(Path())
 	Path* p = new Path();

@@ -1,13 +1,13 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 // FIXME: This header cannot be included because the compiler reports that
 // SLICKScore contains a pure virtual function (getES()) inherited from
 // ScoringFunction!!!
-// #include <BALL/SCORING/FUNCTIONS/slickScore.h>
+// #include <BALL/core/scoring/functions/slickScore.h>
 ///////////////////////////
 
 using namespace BALL;

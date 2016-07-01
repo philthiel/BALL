@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/ringAnalyser.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/structure/ringAnalyser.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/format/PDBFile.h>
 
 ///////////////////////////
 
@@ -28,7 +28,7 @@ CHECK(RingAnalyser())
 RESULT
 
 System molecule_sys;
-PDBFile infile(BALL_TEST_DATA_PATH(input_RingAnalyser_test.pdb));
+PDBFile infile(TEST_DATA_PATH(ball_core/input_RingAnalyser_test.pdb));
 infile >> molecule_sys;
 infile.close();
 

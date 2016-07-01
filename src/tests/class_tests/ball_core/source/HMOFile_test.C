@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/HMOFile.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/molecule.h>
+#include <BALL/core/format/HMOFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/molecule.h>
 
 ///////////////////////////
 
@@ -33,21 +33,21 @@ RESULT
 
 
 CHECK(HMOFile(const String& filename, File::OpenMode open_mode = std::ios::in))
-	HMOFile f(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	HMOFile f(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	TEST_EXCEPTION(Exception::FileNotFound, HMOFile f2("invalid.hmo"))
 RESULT
 
 CHECK(bool open(const String& name, File::OpenMode open_mode))
 	HMOFile f2;
-	bool f2_result = f2.open(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	bool f2_result = f2.open(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	TEST_EQUAL(f2_result, true)
 
 	HMOFile f3;
-	TEST_EXCEPTION(Exception::FileNotFound, f3.open(BALL_TEST_DATA_PATH(file_does_not.exist), std::ios::in));
+	TEST_EXCEPTION(Exception::FileNotFound, f3.open(TEST_DATA_PATH(ball_core/file_does_not.exist), std::ios::in));
 RESULT
 
 CHECK(clear())
-	HMOFile f(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	HMOFile f(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	Surface S;
 	f.read(S);
 	f.clear();
@@ -58,8 +58,8 @@ CHECK(clear())
 RESULT
 
 CHECK(bool operator == (const HMOFile& file))
-	HMOFile f(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
-	HMOFile f2(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	HMOFile f(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
+	HMOFile f2(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	HMOFile f3;
 
 	TEST_EQUAL(f == f, true)
@@ -67,7 +67,7 @@ CHECK(bool operator == (const HMOFile& file))
 	TEST_EQUAL(f == f3, false)
 RESULT
 
-HMOFile f(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+HMOFile f(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 CHECK(virtual bool read(Surface& surface))
 	Surface S;
 
@@ -96,7 +96,7 @@ CHECK(virtual bool read(Surface& surface))
 	TEST_REAL_EQUAL(c.position.z, 0)
 
 	Surface S2;
-	HMOFile f_no_charge(BALL_TEST_DATA_PATH(HMOFile_test_no_charge.hmo), std::ios::in);
+	HMOFile f_no_charge(TEST_DATA_PATH(ball_core/HMOFile_test_no_charge.hmo), std::ios::in);
 	result = f_no_charge.read(S2);
 	TEST_EQUAL(result, true)
 
@@ -119,7 +119,7 @@ CHECK(virtual bool read(Surface& surface))
 RESULT
 
 f.clear();
-f.open(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+f.open(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 CHECK(bool hasCharges() const)
 	TEST_EQUAL(f.hasCharges(), false)
 	Surface S;
@@ -139,7 +139,7 @@ CHECK(std::vector<HMOFile::HMOCharge> const& getCharges() const)
 RESULT
 
 f.clear();
-f.open(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+f.open(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 CHECK(bool hasComments() const)
 	TEST_EQUAL(f.hasComments(), false)
 	Surface S;
@@ -159,7 +159,7 @@ CHECK(std::vector<String> const& getComments() const)
 RESULT
 
 CHECK(virtual bool write(Surface const& surface))
-	HMOFile f_in(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	HMOFile f_in(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	Surface S;
 	f_in.read(S);
 
@@ -170,11 +170,11 @@ CHECK(virtual bool write(Surface const& surface))
 	f_out.write(S);
 	f_out.close();
 
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(HMOFile_test_no_charge.hmo))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/HMOFile_test_no_charge.hmo))
 RESULT
 
 CHECK(virtual bool write(Surface const& surface, AtomContainer const& ac))
-	HMOFile f_in(BALL_TEST_DATA_PATH(HMOFile_test.hmo), std::ios::in);
+	HMOFile f_in(TEST_DATA_PATH(ball_core/HMOFile_test.hmo), std::ios::in);
 	Surface S;
 	f_in.read(S);
 
@@ -194,7 +194,7 @@ CHECK(virtual bool write(Surface const& surface, AtomContainer const& ac))
 	f_out.write(S, m);
 	f_out.close();
 
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(HMOFile_test.hmo))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/HMOFile_test.hmo))
 RESULT
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////

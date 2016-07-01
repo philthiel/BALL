@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/COMMON/snapShot.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/format/PDBFile.h>
 
 ///////////////////////////
 
@@ -79,11 +79,11 @@ RESULT
 
 CHECK(full_test)
 	System system;
-	PDBFile pfile(BALL_TEST_DATA_PATH(DCDFile_test.pdb));
+	PDBFile pfile(TEST_DATA_PATH(ball_core/DCDFile_test.pdb));
 	Size nr_of_atoms = system.countAtoms();
 	pfile.read(system);
 	system.getAtom(0)->setPosition(Vector3(1,2,1111));
-	DCDFile dcd(BALL_TEST_DATA_PATH(DCD_test2.dcd), std::ios::in);
+	DCDFile dcd(TEST_DATA_PATH(ball_core/DCD_test2.dcd), std::ios::in);
 	SnapShotManager sm(&system, 0, &dcd);
 	sm.applyFirstSnapShot();
 	TEST_EQUAL(system.getAtom(0)->getPosition(), Vector3(11.936, 104.294, 10.149))

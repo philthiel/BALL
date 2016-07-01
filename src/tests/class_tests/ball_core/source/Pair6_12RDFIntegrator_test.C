@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/SOLVATION/pair6_12RDFIntegrator.h>
+#include <BALL/core/solvation/pair6_12RDFIntegrator.h>
 
 ///////////////////////////
 

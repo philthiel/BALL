@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/parameterSection.h>
-#include <BALL/FORMAT/parameters.h>
+#include <BALL/core/format/parameterSection.h>
+#include <BALL/core/format/parameters.h>
 
 ///////////////////////////
 
@@ -19,7 +19,7 @@ START_TEST(Parameters)
 
 using namespace BALL;
 
-Parameters param(BALL_TEST_DATA_PATH(ParameterSection_test.ini));
+Parameters param(TEST_DATA_PATH(ball_core/ParameterSection_test.ini));
 param.init();
 
 {
@@ -55,7 +55,7 @@ CHECK(ParameterSection::extractSection(Parameters& parameters, const String& sec
   bool result;
 	CAPTURE_OUTPUT_LEVEL(2000)
 		result = ps.extractSection(param, "Section1");
-	COMPARE_OUTPUT("ParameterSection::extractSection: error reading section Section1 of file " BALL_TEST_DATA_PATH(ParameterSection_test.ini) ":\nWrong number of fields in the format line: 0. FORMAT:\n")
+	COMPARE_OUTPUT("ParameterSection::extractSection: error reading section Section1 of file " TEST_DATA_PATH(ball_core/ParameterSection_test.ini) ":\nWrong number of fields in the format line: 0. FORMAT:\n")
 	TEST_EQUAL(result, false)
 	TEST_EQUAL(ps.getSectionName(), "Section1")
 

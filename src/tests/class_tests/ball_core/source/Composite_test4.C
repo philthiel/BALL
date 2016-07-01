@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/CONCEPT/visitor.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/concept/visitor.h>
 ///////////////////////////
 
 using namespace BALL;

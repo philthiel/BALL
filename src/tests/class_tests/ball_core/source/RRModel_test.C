@@ -1,8 +1,8 @@
-#include <BALLTestConfig.h>
-#include <BALL/CONCEPT/classTest.h>
+#include <testConfig.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/rrModel.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/rrModel.h>
 
 
 using namespace BALL;
@@ -14,7 +14,7 @@ START_TEST(RR-model)
 PRECISION(1E-7)
 
 QSARData data;
-data.readCSVFile(BALL_TEST_DATA_PATH(Regression_test.csv),1,1,1,"	",0,0);
+data.readCSVFile(TEST_DATA_PATH(ball_core/Regression_test.csv),1,1,1,"	",0,0);
 
 CHECK(RR-model training)
 	RRModel model(data);

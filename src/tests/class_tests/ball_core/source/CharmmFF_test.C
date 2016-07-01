@@ -2,21 +2,21 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MOLMEC/CHARMM/charmm.h>
-#include <BALL/MOLMEC/CHARMM/charmmNonBonded.h>
-#include <BALL/MOLMEC/CHARMM/charmmBend.h>
-#include <BALL/MOLMEC/CHARMM/charmmStretch.h>
-#include <BALL/MOLMEC/CHARMM/charmmTorsion.h>
-#include <BALL/MOLMEC/CHARMM/charmmImproperTorsion.h>
+#include <BALL/core/molmec/charmm/charmm.h>
+#include <BALL/core/molmec/charmm/charmmNonBonded.h>
+#include <BALL/core/molmec/charmm/charmmBend.h>
+#include <BALL/core/molmec/charmm/charmmStretch.h>
+#include <BALL/core/molmec/charmm/charmmTorsion.h>
+#include <BALL/core/molmec/charmm/charmmImproperTorsion.h>
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/structure/fragmentDB.h>
 ///////////////////////////
 
 START_TEST(CharmmFF)
@@ -49,7 +49,7 @@ RESULT
 FragmentDB frag_db("fragments/Fragments.db");
 {
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -141,7 +141,7 @@ FragmentDB frag_db("fragments/Fragments.db");
 
 {
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -220,7 +220,7 @@ FragmentDB frag_db("fragments/Fragments.db");
 
 CHECK(force test 2 (GLY, bend only) [EEF1])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -284,7 +284,7 @@ RESULT
 
 CHECK(force test 3 (GLY, torsion only) [EEF1])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -347,7 +347,7 @@ RESULT
 
 CHECK(force test 4 (GLY, improper torsion only) [EEF1])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -411,7 +411,7 @@ RESULT
 
 CHECK(force test 5 (GLY, VdW only) [EEF1])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_1.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_1.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -478,7 +478,7 @@ RESULT
 
 CHECK(force test 6 (2 atoms, electrostatic only) [EEF1/CDIEL])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -531,7 +531,7 @@ RESULT
 
 CHECK(force test 7 (2 atoms, electrostatic only) [EEF1/RDIEL])
 	// read the PDB file containing a single GLY
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -584,7 +584,7 @@ RESULT
 
 CHECK(force test 8 (2 atoms, ES switching function) [EEF1/RDIEL])
 	// read the PDB file containing two atoms
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -707,7 +707,7 @@ RESULT
 
 CHECK(force test 9 (2 atoms, ES switching function) [EEF1/CDIEL])
 	// read the PDB file containing two atoms
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -829,7 +829,7 @@ RESULT
 
 CHECK(force test 10 (2 atoms, vdW switching function) [EEF1])
 	// read the PDB file containing two atoms
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -950,7 +950,7 @@ RESULT
 
 CHECK(force test 11 (2 atoms, solvation switching function) [EEF1])
 	// read the PDB file containing two atoms
-	PDBFile f(BALL_TEST_DATA_PATH(CharmmFF_test_2.pdb));	
+	PDBFile f(TEST_DATA_PATH(ball_core/CharmmFF_test_2.pdb));	
 	System s;
 	f >> s;
 	f.close();
@@ -1167,7 +1167,7 @@ CHECK(void* CharmmNonBonded::create())
 RESULT
 
 CHECK([EXTRA] Additivity of energies w/ selection)
-	HINFile f(BALL_TEST_DATA_PATH(G4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/G4.hin));
 	System S;
 	f.read(S);
 

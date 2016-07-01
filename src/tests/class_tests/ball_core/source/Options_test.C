@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/options.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 
 START_TEST(Options)
 
@@ -167,7 +167,7 @@ RESULT
 
 CHECK(bool readOptionFile(const String& filename) throw())
 	Options o;
-	TEST_EQUAL(o.readOptionFile(BALL_TEST_DATA_PATH(OptionsFile1.txt)), true)
+	TEST_EQUAL(o.readOptionFile(TEST_DATA_PATH(ball_core/OptionsFile1.txt)), true)
 	TEST_EQUAL(o.getBool("BOOL"), true)
 	TEST_EQUAL(o.getBool("BOOL2"), false)
 	TEST_REAL_EQUAL(o.getReal("REAL"), 1.23456)
@@ -175,7 +175,7 @@ CHECK(bool readOptionFile(const String& filename) throw())
 	TEST_EQUAL(o.getInteger("INT"), 1234567890)
 
 	Options o2;
-	TEST_EQUAL(o2.readOptionFile(BALL_TEST_DATA_PATH(OptionsFile2.txt)), true)
+	TEST_EQUAL(o2.readOptionFile(TEST_DATA_PATH(ball_core/OptionsFile2.txt)), true)
 	TEST_EQUAL(o2.get("ABC"), "DEF")
 	TEST_EQUAL(o2.getBool("BOOL"), false)
 	TEST_EQUAL(o2.get("DEF"), "default")
@@ -190,7 +190,7 @@ CHECK(bool readOptionFile(const String& filename) throw())
 
 	//Test an options file with arbitrary deleimiters
 	Options o3;
-	TEST_EQUAL(o3.readOptionFile(BALL_TEST_DATA_PATH(OptionsFile4.txt)), true)
+	TEST_EQUAL(o3.readOptionFile(TEST_DATA_PATH(ball_core/OptionsFile4.txt)), true)
 	TEST_EQUAL(o3.getBool("BOOL"), true)
 	TEST_EQUAL(o3.getBool("BOOL2"), false)
 	TEST_REAL_EQUAL(o3.getReal("REAL"), 1.23456)
@@ -202,14 +202,14 @@ String filename;
 CHECK(bool writeOptionFile(const String& filename) const throw())
 	NEW_TMP_FILE(filename)
 	options->writeOptionFile(filename);
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(OptionsFile2.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/OptionsFile2.txt))
 RESULT
 
 
 TextPersistenceManager pm;
 Options o2;
 CHECK(bool read(PersistenceManager& pm) throw())
-	ifstream ifile(BALL_TEST_DATA_PATH(OptionsFile3.txt));
+	ifstream ifile(TEST_DATA_PATH(ball_core/OptionsFile3.txt));
 	pm.setIstream(ifile);
 
 	bool success = o2.read(pm);
@@ -235,7 +235,7 @@ CHECK(void write(PersistenceManager& pm) const throw())
 	pm.setOstream(ofile);
 	o2.write(pm);
 	ofile.close();	
-	TEST_FILE_REGEXP(tmpname.c_str(), BALL_TEST_DATA_PATH(OptionsFile3.txt))
+	TEST_FILE_REGEXP(tmpname.c_str(), TEST_DATA_PATH(ball_core/OptionsFile3.txt))
 RESULT
 
 CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
@@ -245,7 +245,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	options->dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Options_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Options_test.txt))
 RESULT
 delete options;
 delete options2;

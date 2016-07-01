@@ -1,14 +1,15 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 #include <BALL/core/concept/classTest.h>
 #include <testConfig.h>
 
 ///////////////////////////
+
 #include <BALL/core/system/file.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+
 ///////////////////////////
 
 using namespace BALL;

@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/MOLMEC/AMBER/amberNonBonded.h>
-#include <BALL/MOLMEC/AMBER/amberTorsion.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/molmec/amber/amberNonBonded.h>
+#include <BALL/core/molmec/amber/amberTorsion.h>
+#include <BALL/core/format/HINFile.h>
 
 ///////////////////////////
 
@@ -49,7 +49,7 @@ amber91.options[AmberFF::Option::ASSIGN_CHARGES] = "false";
 
 CHECK(energy test 1 (Single Stretch) [AMBER91])
 	// read a file containing a single stretch
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_1.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_1.hin));	
 
 	System s;
 	f >> s;
@@ -74,7 +74,7 @@ CHECK(energy test 1 (Single Stretch) [AMBER91])
 RESULT
 
 CHECK(energy test 2 (Bend) [AMBER91])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_2.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_2.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -95,7 +95,7 @@ CHECK(energy test 2 (Bend) [AMBER91])
 RESULT
 
 CHECK(energy test 3 (VdW) [AMBER91])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_3.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_3.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -116,7 +116,7 @@ CHECK(energy test 3 (VdW) [AMBER91])
 RESULT
 
 CHECK(energy test 4 (Torsion) [AMBER91])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_4.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_4.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -136,7 +136,7 @@ CHECK(energy test 4 (Torsion) [AMBER91])
 RESULT
 
 CHECK(energy test 5 (AlaGlySer) [AMBER91])
-	HINFile f(BALL_TEST_DATA_PATH(AlaGlySer.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AlaGlySer.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -168,7 +168,7 @@ amber94.options[AmberFF::Option::OVERWRITE_CHARGES] = "true";
 amber94.options[AmberFF::Option::OVERWRITE_TYPENAMES] = "true";
 
 CHECK(energy test 6 (AlaGlySer) [AMBER94])
-	HINFile f(BALL_TEST_DATA_PATH(AlaGlySer2.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AlaGlySer2.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -189,7 +189,7 @@ CHECK(energy test 6 (AlaGlySer) [AMBER94])
 RESULT
 
 CHECK(force test 1 (Torsion) [AMBER94])
-	HINFile f(BALL_TEST_DATA_PATH(AMBER_test_1.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AMBER_test_1.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -226,7 +226,7 @@ CHECK(force test 1 (Torsion) [AMBER94])
 RESULT
 
 CHECK(force test 2: ES switching function [AMBER91/CDIEL])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_3.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_3.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -272,7 +272,7 @@ CHECK(force test 2: ES switching function [AMBER91/CDIEL])
 RESULT
 
 CHECK(force test 3: ES switching function [AMBER91/RDIEL])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_3.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_3.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -319,7 +319,7 @@ CHECK(force test 3: ES switching function [AMBER91/RDIEL])
 RESULT
 
 CHECK(force test 4: VdW switching function [AMBER91])
-	HINFile f(BALL_TEST_DATA_PATH(AmberFF_test_3.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/AmberFF_test_3.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -365,7 +365,7 @@ CHECK(force test 4: VdW switching function [AMBER91])
 RESULT
 
 CHECK([EXTRA] Energies w/ selection)
-	HINFile f(BALL_TEST_DATA_PATH(AA.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AA.hin));
 	System S;
 	f.read(S);
 
@@ -396,7 +396,7 @@ CHECK([EXTRA] Energies w/ selection)
 RESULT
 
 CHECK([EXTRA] Additivity of energies w/ selection)
-	HINFile f(BALL_TEST_DATA_PATH(G4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/G4.hin));
 	System S;
 	f.read(S);
 

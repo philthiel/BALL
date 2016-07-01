@@ -1,14 +1,14 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/MOLMEC/COMMON/atomVector.h>
-#include <BALL/MOLMEC/COMMON/gradient.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/atom.h>
+#include <BALL/core/molmec/common/atomVector.h>
+#include <BALL/core/molmec/common/gradient.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/atom.h>
 ///////////////////////////
 
 START_TEST(AtomVector)

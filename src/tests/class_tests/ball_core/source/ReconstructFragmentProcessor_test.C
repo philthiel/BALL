@@ -1,22 +1,23 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/reconstructFragmentProcessor.h>
+#include <BALL/core/structure/reconstructFragmentProcessor.h>
 
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/STRUCTURE/residueChecker.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/structure/residueChecker.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/HINFile.h>
+
+#include <list>
 
 ///////////////////////////
 
@@ -25,6 +26,7 @@ START_TEST(ReconstructFragmentProcessor)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 ReconstructFragmentProcessor* ptr = 0;
@@ -80,7 +82,7 @@ CHECK(ReconstructFragmentProcessor::operator ())
 
 	// try to fix C and N-termini
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(ReconstructFragmentProcessor_test1.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/ReconstructFragmentProcessor_test1.hin));
 	f >> S;
 	TEST_EQUAL(S.countAtoms(), 27)
 	ABORT_IF(S.countAtoms() != 27)

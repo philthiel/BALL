@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/CONCEPT/randomAccessIterator.h>
+#include <BALL/core/concept/randomAccessIterator.h>
 #include <vector>
 ///////////////////////////
 

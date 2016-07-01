@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/secondaryStructureProcessor.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/structure/secondaryStructureProcessor.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
 
 ///////////////////////////
 
@@ -34,7 +34,7 @@ RESULT
 
 CHECK([EXTRA]assignment for BPTI)
 	System S;
-	PDBFile f(BALL_TEST_DATA_PATH(PDBFile_test2.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/PDBFile_test2.pdb));
 	f.read(S);
 	f.close();
 

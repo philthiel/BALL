@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/SOLVATION/solventParameter.h>
+#include <BALL/core/solvation/solventParameter.h>
 ///////////////////////////
 
 START_TEST(SolventParameter)
@@ -43,35 +43,35 @@ CHECK(extractSection(Parameters& parameters, const String& section_name))
  	bool result;
 	SolventParameter s_ptr;
 
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test1.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test1.ini));
 	param.init();
 	CAPTURE_OUTPUT_LEVEL(2000)	
 	result = s_ptr.extractSection(param,"SolventDescription");
 	COMPARE_OUTPUT("SolventParameter::extractSection(): Variable missing.\n")
 	TEST_EQUAL(result,false)
 	
-	param = Parameters(BALL_TEST_DATA_PATH(SolventParameter_test2.ini));
+	param = Parameters(TEST_DATA_PATH(ball_core/SolventParameter_test2.ini));
 	param.init();
 	CAPTURE_OUTPUT_LEVEL(2000)	
 	result = s_ptr.extractSection(param,"SolventDescription");
 	COMPARE_OUTPUT("SolventParameter::extractSection(): no name given.\n")
 	TEST_EQUAL(result,true)
 	
-	param = Parameters(BALL_TEST_DATA_PATH(SolventParameter_test3.ini));
+	param = Parameters(TEST_DATA_PATH(ball_core/SolventParameter_test3.ini));
 	param.init();
 	CAPTURE_OUTPUT_LEVEL(2000)	
 	result = s_ptr.extractSection(param,"SolventDescription");
 	COMPARE_OUTPUT("SolventParameter::extractSection(): no number density given.\n")
 	TEST_EQUAL(result,true)
 
-	param = Parameters(BALL_TEST_DATA_PATH(SolventParameter_test4.ini));
+	param = Parameters(TEST_DATA_PATH(ball_core/SolventParameter_test4.ini));
 	param.init();
 	CAPTURE_OUTPUT_LEVEL(2000)	
 	result = s_ptr.extractSection(param,"SolventDescription");
 	COMPARE_OUTPUT("SolventParameter::extractSection(): Cannot assign atom type.\n")
 	TEST_EQUAL(result,true)
 	
-	param = Parameters(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	param = Parameters(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	result = s_ptr.extractSection(param,"SolventDescription");
 	TEST_EQUAL(result,true)
@@ -80,7 +80,7 @@ RESULT
 
 CHECK(clear())	
 	SolventParameter s_ptr;
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	s_ptr.extractSection(param,"SolventDescription");
 	s_ptr.clear();
@@ -93,7 +93,7 @@ RESULT
 
 CHECK(SolventParameter& operator = (const SolventParameter& param))
 	SolventParameter s_ptr;
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	s_ptr.extractSection(param,"SolventDescription");
 	SolventParameter s_ptr2;
@@ -106,7 +106,7 @@ RESULT
 
 CHECK(SolventParameter(const SolventParameter& param))
 	SolventParameter s_ptr;
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	s_ptr.extractSection(param,"SolventDescription");
 	SolventParameter s_ptr2;
@@ -119,7 +119,7 @@ RESULT
 
 CHECK(getSolventDescriptor() const )
 	SolventParameter s_ptr;
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	s_ptr.extractSection(param,"SolventDescription");
 	const SolventDescriptor sd = s_ptr.getSolventDescriptor();
@@ -129,7 +129,7 @@ RESULT
 
 CHECK(getSolventDescriptor() )
 	SolventParameter s_ptr;
-	Parameters param(BALL_TEST_DATA_PATH(SolventParameter_test.ini));
+	Parameters param(TEST_DATA_PATH(ball_core/SolventParameter_test.ini));
 	param.init();
 	s_ptr.extractSection(param,"SolventDescription");
 	SolventDescriptor sd = s_ptr.getSolventDescriptor();

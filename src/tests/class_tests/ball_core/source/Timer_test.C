@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 #include <unistd.h>
 ///////////////////////////
-#include <BALL/SYSTEM/timer.h>
-#include <BALL/SYSTEM/file.h>
+#include <BALL/core/system/timer.h>
+#include <BALL/core/system/file.h>
 
 #ifdef BALL_COMPILER_MSVC
 #	include<windows.h>
@@ -156,12 +156,12 @@ CHECK(double getSystemTime() const)
 	t1.stop();
 	TEST_EQUAL(t1.getSystemTime() >= 0, true)	
 	t1.start();
-	File f(BALL_TEST_DATA_PATH(Timer_test1.txt));
+	File f(TEST_DATA_PATH(ball_core/Timer_test1.txt));
 	for (int i = 0; i < 200 ; i++)
 	{
-		TEST_EQUAL(f.copyTo(BALL_TEST_DATA_PATH(Timer_test1.bak)), true)
+		TEST_EQUAL(f.copyTo(TEST_DATA_PATH(ball_core/Timer_test1.bak)), true)
 	}
-	f.remove(BALL_TEST_DATA_PATH(Timer_test1.bak));
+	f.remove(TEST_DATA_PATH(ball_core/Timer_test1.bak));
 	t1.stop();
 	TEST_EQUAL(t1.getSystemTime() >= 0, true)	
 RESULT
@@ -319,7 +319,7 @@ CHECK(void dump(::std::ostream& s = ::std::cout, Size depth = 0L) const)
 
 	t1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Timer_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Timer_test.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

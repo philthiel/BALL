@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/factory.h>
+#include <BALL/core/concept/factory.h>
 
 ///////////////////////////
 

@@ -5,6 +5,7 @@
 #define BALL_CORE_CONCEPT_CLASSTEST_H
 
 #include <BALL/version.h>
+#include <BALL/core/common/logStream.h>
 #include <BALL/core/concept/autoDeletable.h>
 #include <BALL/core/datatype/regularExpression.h>
 #include <BALL/core/system/file.h>
@@ -52,10 +53,10 @@ namespace TEST {\
   bool					test = true;\
 	bool					this_test;\
 	int 					exception = 0;\
-	string 				exception_name = "";\
+	std::string 				exception_name = "";\
 	const char*		version_string = BALL_RELEASE_STRING;\
 	bool					newline = false;\
-	list<string>	tmp_file_list;\
+	std::list<std::string>	tmp_file_list;\
 	std::ifstream	infile;\
 	std::ifstream	templatefile;\
 	bool					equal_files;\

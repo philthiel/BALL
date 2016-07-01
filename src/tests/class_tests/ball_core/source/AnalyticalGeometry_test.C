@@ -1,22 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
+
 
 ///////////////////////////
 
-#include <BALL/MATHS/common.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL/core/maths/common.h>
+#include <BALL/core/maths/analyticalGeometry.h>
 
-#include <BALL/common.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/MATHS/circle3.h>
-#include <BALL/MATHS/line3.h>
-#include <BALL/MATHS/plane3.h>
-#include <BALL/MATHS/sphere3.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/maths/circle3.h>
+#include <BALL/core/maths/line3.h>
+#include <BALL/core/maths/plane3.h>
+#include <BALL/core/maths/sphere3.h>
+#include <BALL/core/maths/vector3.h>
 
 // reordered due to Darwin isnan problem (header clash)
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 

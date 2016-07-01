@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MOLMEC/MINIMIZATION/steepestDescent.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/MATHS/analyticalGeometry.h>
+#include <BALL/core/molmec/minimization/steepestDescent.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/maths/analyticalGeometry.h>
 
 ///////////////////////////
 
@@ -209,7 +209,7 @@ RESULT
 
 CHECK(SteepestDescentMinimizer::minimize(Size, bool) ethan)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(ethan.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/ethan.hin));
 	f >> S;
 	FF.options[AmberFF::Option::ASSIGN_CHARGES] = "false";
 	FF.setup(S);

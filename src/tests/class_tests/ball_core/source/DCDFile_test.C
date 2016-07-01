@@ -1,16 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/MOLMEC/COMMON/snapShotManager.h>
-#include <BALL/MOLMEC/COMMON/snapShot.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
+
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/molmec/common/snapShotManager.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/molmec/amber/amber.h>
+
 ///////////////////////////
 
 START_TEST(DCDFile)
@@ -18,10 +19,11 @@ START_TEST(DCDFile)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
-String dcd_test_file(BALL_TEST_DATA_PATH(DCD_test.dcd));
-String dcd_test_file1(BALL_TEST_DATA_PATH(DCD_test3.dcd));
+String dcd_test_file(TEST_DATA_PATH(ball_core/DCD_test.dcd));
+String dcd_test_file1(TEST_DATA_PATH(ball_core/DCD_test3.dcd));
 
 DCDFile* p = 0;
 CHECK(DCDFile() throw())
@@ -75,7 +77,7 @@ System system;
 Size nr_of_atoms;
 
 CHECK([EXTRA] full test writing)
-	PDBFile pfile(BALL_TEST_DATA_PATH(DCDFile_test.pdb));
+	PDBFile pfile(TEST_DATA_PATH(ball_core/DCDFile_test.pdb));
 	pfile.read(system);
 	nr_of_atoms = system.countAtoms();
 	TEST_EQUAL(nr_of_atoms, 892)
@@ -105,7 +107,7 @@ System system3;
 Size nr_of_atoms3;
 
 CHECK([EXTRA] full test writing)
-	PDBFile pfile3(BALL_TEST_DATA_PATH(DCDFile_test3.pdb));
+	PDBFile pfile3(TEST_DATA_PATH(ball_core/DCDFile_test3.pdb));
 	pfile3.read(system3);
 	nr_of_atoms3 = system3.countAtoms();
 	TEST_EQUAL(nr_of_atoms3, 2381)
@@ -182,7 +184,7 @@ CHECK(bool readHeader() throw())
 	bool test = one.readHeader();
 	TEST_EQUAL(test, false)
 	one.close();
-	DCDFile two(BALL_TEST_DATA_PATH(INIFile_test.ini), std::ios::in);
+	DCDFile two(TEST_DATA_PATH(ball_core/INIFile_test.ini), std::ios::in);
 	test = two.readHeader();
 	TEST_EQUAL(test, false)
 	DCDFile three(filename);
@@ -195,7 +197,7 @@ CHECK(bool readHeader() throw())
 	bool test = one.readHeader();
 	TEST_EQUAL(test, false)
 	one.close();
-	DCDFile two(BALL_TEST_DATA_PATH(INIFile_test.ini), std::ios::in);
+	DCDFile two(TEST_DATA_PATH(ball_core/INIFile_test.ini), std::ios::in);
 	test = two.readHeader();
 	TEST_EQUAL(test, false)
 	DCDFile three(filename3);

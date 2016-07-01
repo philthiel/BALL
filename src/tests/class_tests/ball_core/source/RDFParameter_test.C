@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/STRUCTURE/RDFParameter.h>
+#include <BALL/core/structure/RDFParameter.h>
 
 ///////////////////////////
 

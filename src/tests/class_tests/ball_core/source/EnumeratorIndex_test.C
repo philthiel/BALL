@@ -1,15 +1,18 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
+
+///////////////////////////
+
+#include <BALL/core/concept/enumerator.h>
+#include <BALL/core/datatype/string.h>
+
+#include <vector>
 
 ///////////////////////////
 
-#include <BALL/CONCEPT/enumerator.h>
-#include <BALL/DATATYPE/string.h>
-
-///////////////////////////
+using namespace std;
 
 void char_assign(char& c1, const char& c2)
 {

@@ -1,14 +1,12 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONFIG/config.h>
-// Make sure the debug flag is set, independent of what 
-// configure says
+
+#include <BALL/config.h>
+// Make sure the debug flag is set, independent of what configure says
 #define BALL_DEBUG
-#include <BALL/COMMON/debug.h>
+#include <BALL/core/common/debug.h>
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 

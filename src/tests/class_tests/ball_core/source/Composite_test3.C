@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
 #include "ItemCollector.h"
 ///////////////////////////
 
@@ -156,7 +156,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	a.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Composite_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Composite_test.txt))
 RESULT
 
 CHECK(void host(Visitor<Composite>& visitor) throw(Exception::GeneralException))

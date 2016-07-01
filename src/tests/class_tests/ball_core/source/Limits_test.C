@@ -2,10 +2,10 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/COMMON/limits.h>
+#include <BALL/core/common/limits.h>
 #ifdef BALL_HAS_NUMERIC_LIMITS
 # include <limits>
 #else

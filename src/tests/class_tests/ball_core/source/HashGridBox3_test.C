@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/hashGrid.h>
+#include <BALL/core/datatype/hashGrid.h>
 #include "HashGrid3_test.h"
 
 ///////////////////////////
@@ -224,7 +224,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	STATUS(tmp_filename)
 	dump_stream.clear();
 	dump_stream.close();
-	TEST_FILE_REGEXP(tmp_filename.c_str(), BALL_TEST_DATA_PATH(hashgrid3_test_dump0.txt))
+	TEST_FILE_REGEXP(tmp_filename.c_str(), TEST_DATA_PATH(ball_core/hashgrid3_test_dump0.txt))
 RESULT
 
 

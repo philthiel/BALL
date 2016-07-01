@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/EFShiftProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/nmr/EFShiftProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 
@@ -58,13 +58,13 @@ CHECK(EFShiftProcessor::finish() throw())
   //?????
 RESULT
 
-HINFile f(BALL_TEST_DATA_PATH(EFShiftProcessor_test.hin));
+HINFile f(TEST_DATA_PATH(ball_core/EFShiftProcessor_test.hin));
 System S;
 f >> S;
 ClearChargeProcessor clear_charge;
 S.apply(clear_charge);
 
-Parameters parameters(BALL_TEST_DATA_PATH(EFShiftProcessor_test.ini));
+Parameters parameters(TEST_DATA_PATH(ball_core/EFShiftProcessor_test.ini));
 
 CHECK(charge assignment)
 	EFShiftProcessor sp;

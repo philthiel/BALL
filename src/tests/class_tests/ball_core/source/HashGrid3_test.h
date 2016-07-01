@@ -1,7 +1,7 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/processor.h>
+#include <BALL/core/concept/processor.h>
 
 namespace BALL
 {

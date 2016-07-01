@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 ///////////////////////////
 
 #include <algorithm>
@@ -755,7 +755,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const)
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	ac1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(AtomContainer_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/AtomContainer_test.txt))
 RESULT
 
 CHECK(bool operator == (const AtomContainer& atom_container) const)

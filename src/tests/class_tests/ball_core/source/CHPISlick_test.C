@@ -1,10 +1,10 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/SCORING/COMPONENTS/CHPISlick.h>
+#include <BALL/core/scoring/components/CHPISlick.h>
 ///////////////////////////
 
 using namespace BALL;

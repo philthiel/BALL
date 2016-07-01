@@ -1,9 +1,9 @@
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/mlrModel.h>
-#include <BALL/QSAR/pcrModel.h>
-#include <BALL/QSAR/plsModel.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/mlrModel.h>
+#include <BALL/core/qsar/pcrModel.h>
+#include <BALL/core/qsar/plsModel.h>
 
 using namespace BALL;
 using namespace BALL::QSAR;

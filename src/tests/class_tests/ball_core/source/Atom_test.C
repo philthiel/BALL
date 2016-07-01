@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/secondaryStructure.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 
 #include "ItemCollector.h"
 ///////////////////////////
@@ -681,7 +681,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	a.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Atom_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Atom_test.txt))
 RESULT
 
 

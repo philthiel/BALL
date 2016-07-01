@@ -1,9 +1,9 @@
-#include <BALLTestConfig.h>
-#include <BALL/CONCEPT/classTest.h>
+#include <testConfig.h>
+#include <BALL/core/concept/classTest.h>
 
-#include <BALL/QSAR/QSARData.h>
-#include <BALL/QSAR/pcrModel.h>
-#include <BALL/QSAR/featureSelection.h>
+#include <BALL/core/qsar/QSARData.h>
+#include <BALL/core/qsar/pcrModel.h>
+#include <BALL/core/qsar/featureSelection.h>
 
 using namespace BALL;
 using namespace BALL::QSAR;
@@ -16,7 +16,7 @@ PRECISION(1E-5)
 QSARData data;
 std::multiset<int> activities;
 activities.insert(0);
-data.readSDFile(BALL_TEST_DATA_PATH(QSAR_test.sdf),activities,0,0);
+data.readSDFile(TEST_DATA_PATH(ball_core/QSAR_test.sdf),activities,0,0);
 data.centerData(true);
 PCRModel pcr(data,0.95);
 double cutoff = 0.001;

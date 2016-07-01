@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/global.h>
-#include <BALL/KERNEL/chain.h>
+#include <BALL/core/kernel/global.h>
+#include <BALL/core/kernel/chain.h>
 ///////////////////////////
 
 START_TEST(GlobalKernel)

@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 

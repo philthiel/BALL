@@ -1,17 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
 // insert includes here
-#include <BALL/KERNEL/selector.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/kernel/selector.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/HINFile.h>
 
 ///////////////////////////
 
@@ -20,6 +19,7 @@ START_TEST(Selector)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 Selector* ptr;
@@ -59,7 +59,7 @@ RESULT
 
 
 CHECK(Processor::Result operator () (Composite& composite) throw())
-	HINFile file(BALL_TEST_DATA_PATH(Selector_test.hin));
+	HINFile file(TEST_DATA_PATH(ball_core/Selector_test.hin));
 	System S;
 	file >> S;
 	file.close();
@@ -106,7 +106,7 @@ RESULT
 
 
 CHECK(Size getNumberOfSelectedAtoms() const throw())
-	HINFile file(BALL_TEST_DATA_PATH(Selector_test.hin));
+	HINFile file(TEST_DATA_PATH(ball_core/Selector_test.hin));
 	System S;
 	file >> S;
 	file.close();
@@ -138,7 +138,7 @@ CHECK(Size getNumberOfSelectedAtoms() const throw())
 RESULT
 
 CHECK(List& getSelectedAtoms() throw())
-	HINFile file(BALL_TEST_DATA_PATH(Selector_test.hin));
+	HINFile file(TEST_DATA_PATH(ball_core/Selector_test.hin));
 	System system;
 	file >> system;
 	file.close();

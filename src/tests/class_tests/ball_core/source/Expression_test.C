@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
 #include <list>
 
 /////////////////
@@ -97,7 +97,7 @@ RESULT
 
 
 CHECK(bool operator () (const Atom& atom) const throw())
-	PDBFile file(BALL_TEST_DATA_PATH(Expression_test.pdb));
+	PDBFile file(TEST_DATA_PATH(ball_core/Expression_test.pdb));
 	System S;
 	file >> S;
 	HashMap<String, Size> test_expressions;

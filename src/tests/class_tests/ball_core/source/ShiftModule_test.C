@@ -1,12 +1,12 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/shiftModule.h>
+#include <BALL/core/nmr/shiftModule.h>
 
 ///////////////////////////
 
@@ -46,7 +46,7 @@ CHECK(ShiftModule::getName() const  throw())
 RESULT
 
 
-Parameters parameters(BALL_TEST_DATA_PATH(ShiftModule_test.ini));
+Parameters parameters(TEST_DATA_PATH(ball_core/ShiftModule_test.ini));
 CHECK(ShiftModule::setParameters(Parameters& parameters) throw())
 	ShiftModule sm;
 	sm.setParameters(parameters);

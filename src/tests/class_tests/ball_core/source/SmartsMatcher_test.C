@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/smartsMatcher.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/structure/smartsMatcher.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/system.h>
 
 ///////////////////////////
 
@@ -33,14 +33,14 @@ RESULT
 
 CHECK(match(Molecule& mol, const String& smarts))
 
-	SDFile infile(BALL_TEST_DATA_PATH(SmartsMatcher_test.sdf));
+	SDFile infile(TEST_DATA_PATH(ball_core/SmartsMatcher_test.sdf));
 	System s;
 	infile >> s;
 	infile.close();
 
 	sm = new SmartsMatcher();
 
-	ifstream is(BALL_TEST_DATA_PATH(SmartsMatcher_test.txt));
+	ifstream is(TEST_DATA_PATH(ball_core/SmartsMatcher_test.txt));
 	String line;
 
 	while (line.getline(is))

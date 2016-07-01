@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/atomBijection.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/structure/atomBijection.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/format/HINFile.h>
 
 
 ///////////////////////////
@@ -70,17 +70,17 @@ CHECK(double calculateRMSD() const)
 RESULT
 
 Molecule benzene;
-HINFile f(BALL_TEST_DATA_PATH(benzene.hin));
+HINFile f(TEST_DATA_PATH(ball_core/benzene.hin));
 f >> benzene;
 f.close();
 
 Molecule pyrrole;
-f.open(BALL_TEST_DATA_PATH(pyrrole.hin));
+f.open(TEST_DATA_PATH(ball_core/pyrrole.hin));
 f >> pyrrole;
 f.close();
 
 Molecule indole;
-f.open(BALL_TEST_DATA_PATH(indole.hin));
+f.open(TEST_DATA_PATH(ball_core/indole.hin));
 f >> indole;
 f.close();
 

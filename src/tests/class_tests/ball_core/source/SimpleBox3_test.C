@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#	include <BALL/MATHS/simpleBox3.h>
-#	include <BALL/MATHS/vector3.h>
+#	include <BALL/core/maths/simpleBox3.h>
+#	include <BALL/core/maths/vector3.h>
 ///////////////////////////
 
 START_TEST(SimpleBox3)
@@ -263,11 +263,11 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	v.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(SimpleBox3_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/SimpleBox3_test.txt))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TSimpleBox3<T>& SimpleBox3))
-	std::ifstream instr(BALL_TEST_DATA_PATH(SimpleBox3_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/SimpleBox3_test2.txt));
 	SimpleBox3 b(10, 20, 30, 40, 50, 60);
 	instr >> b;
 	instr.close();
@@ -281,7 +281,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TSimpleBox3<T>& SimpleBo
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << v;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(SimpleBox3_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/SimpleBox3_test2.txt))
 RESULT
 
 CHECK(TSimpleBox3& operator = (const TSimpleBox3& box) throw())

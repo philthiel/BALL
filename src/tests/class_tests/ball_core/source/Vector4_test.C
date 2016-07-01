@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MATHS/vector4.h>
+#include <BALL/core/maths/vector4.h>
 ///////////////////////////
 
 START_TEST(TVector4)
@@ -128,7 +128,7 @@ CHECK(TVector4 operator * (const TVector4<T>& b) throw())
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TVector4<T>& vector))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Vector4_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Vector4_test2.txt));
 	Vector4 v(1, 2, 3, 4);
 	instr >> v;
 	instr.close();
@@ -145,7 +145,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TVector4<T>& vector))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << v;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Vector4_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Vector4_test2.txt))
 RESULT
 
 CHECK(BALL_CREATE(TVector4<T>))
@@ -369,7 +369,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	v.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Vector4_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Vector4_test.txt))
 RESULT
 
 CHECK(void set(const T* ptr) throw(Exception::NullPointer))
@@ -465,11 +465,11 @@ CHECK(dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	v.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Vector4_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Vector4_test.txt))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TVector4<T>& vector))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Vector4_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Vector4_test2.txt));
 	Vector4 v(1, 2, 3, 4);
 	instr >> v;
 	instr.close();
@@ -485,7 +485,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TVector4<T>& vector))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << v;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Vector4_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Vector4_test2.txt))
 RESULT
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////

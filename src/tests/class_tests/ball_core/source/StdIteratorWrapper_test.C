@@ -1,24 +1,24 @@
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/format/PDBFile.h>
 
-#include <BALL/KERNEL/atomContainer.h>
-#include <BALL/KERNEL/chain.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/residue.h>
-#include <BALL/KERNEL/secondaryStructure.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/kernel/atomContainer.h>
+#include <BALL/core/kernel/chain.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/residue.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+#include <BALL/core/kernel/system.h>
 
 using namespace BALL;
 
 START_TEST(StdIteratorWrapper)
 
 	PDBFile f;
-	f.open(BALL_TEST_DATA_PATH(1BNA.pdb));
+	f.open(TEST_DATA_PATH(ball_core/1BNA.pdb));
 	System s;
 
 	f >> s;

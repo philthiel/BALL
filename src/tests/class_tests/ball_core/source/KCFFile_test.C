@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/KCFFile.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/MATHS/vector3.h>
+#include <BALL/core/format/KCFFile.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/maths/vector3.h>
 
 ///////////////////////////
 
@@ -39,7 +39,7 @@ RESULT
 
 
 CHECK(bool read(System& system) throw(Exception::ParseError))
-	KCFFile f(BALL_TEST_DATA_PATH(KCFFile_test1.kcf));
+	KCFFile f(TEST_DATA_PATH(ball_core/KCFFile_test1.kcf));
 	System system;
 	f.read(system);
 	TEST_EQUAL(system.countAtoms(), 31 + 44 + 44)
@@ -51,14 +51,14 @@ CHECK(bool read(System& system) throw(Exception::ParseError))
 	TEST_REAL_EQUAL(atom.getPosition().y, -11.6324)
 	TEST_REAL_EQUAL(atom.getPosition().z,  0.0000)
 	system.clear();
-	KCFFile f3(BALL_TEST_DATA_PATH(Selectable_test.txt));
+	KCFFile f3(TEST_DATA_PATH(ball_core/Selectable_test.txt));
 	bool result = f3.read(system);
 	TEST_EQUAL(result, false)
 RESULT
 
 
 CHECK(KCFFile(const String& filename, File::OpenMode open_mode = std::ios::in) throw(Exception::FileNotFound))
-	KCFFile f(BALL_TEST_DATA_PATH(KCFFile_test1.kcf), std::ios::in);
+	KCFFile f(TEST_DATA_PATH(ball_core/KCFFile_test1.kcf), std::ios::in);
 	System system;
 	f.read(system);
 	TEST_EQUAL(system.countAtoms(), 31 + 44 + 44)
@@ -100,9 +100,9 @@ CHECK(bool write(const System& system) throw(File::CannotWrite))
 	f.write(S);
 	f.close();
 	
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(KCFFile_test2.kcf))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/KCFFile_test2.kcf))
 
-	KCFFile f2(BALL_TEST_DATA_PATH(../KCFFile_test.C), std::ios::in);
+	KCFFile f2(TEST_DATA_PATH(ball_core/../KCFFile_test.C), std::ios::in);
 	TEST_EXCEPTION(File::CannotWrite, f2.write(S))
 
 	// Make sure we can read that stuff back again and get the same result
@@ -129,7 +129,7 @@ RESULT
 
 
 CHECK(Molecule* read() throw(Exception::ParseError))
-  KCFFile f(BALL_TEST_DATA_PATH(KCFFile_test1.kcf));
+  KCFFile f(TEST_DATA_PATH(ball_core/KCFFile_test1.kcf));
 	Molecule* m = f.read();
 	f.close();
 	TEST_EQUAL(m->countAtoms(), 31)
@@ -169,7 +169,7 @@ CHECK([EXTRA]KCFFile::KCFFile& operator << (const System& system))
 	KCFFile f(filename, std::ios::out);
 	f << S;	
 	f.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(KCFFile_test2.kcf))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/KCFFile_test2.kcf))
 RESULT
 
 CHECK(bool write(const Molecule& molecule) throw(File::CannotWrite))
@@ -177,7 +177,7 @@ CHECK(bool write(const Molecule& molecule) throw(File::CannotWrite))
 	KCFFile f(filename, std::ios::out);
 	f.write(*m);
 	f.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(KCFFile_test2.kcf))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/KCFFile_test2.kcf))
 RESULT
 
 /////////////////////////////////////////////////////////////

@@ -1,17 +1,17 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/angle.h>
-#include <BALL/common.h>
-#include <BALL/COMMON/limits.h>
+
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/angle.h>
+#include <BALL/core/common/limits.h>
 #include <cmath>
+
 ///////////////////////////
 
 START_TEST(Matrix44)
@@ -941,11 +941,11 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	m.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Matrix4x4_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Matrix4x4_test.txt))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TMatrix4x4<T>& m))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Matrix4x4_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Matrix4x4_test2.txt));
 	instr >> m1;
 	instr.close();
 	TEST_EQUAL(m1.isEqual(m), true)
@@ -956,7 +956,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TMatrix4x4<T>& m))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << m;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Matrix4x4_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Matrix4x4_test2.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

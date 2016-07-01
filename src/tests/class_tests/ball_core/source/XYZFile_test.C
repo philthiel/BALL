@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/XYZFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/format/XYZFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 
@@ -35,13 +35,13 @@ RESULT
 
 CHECK(XYZFile::XYZFile(const String& filename, File::OpenMode open_mode))
 	// checking for default mode: reading
-	XYZFile f(BALL_TEST_DATA_PATH(XYZFile_test1.xyz));
+	XYZFile f(TEST_DATA_PATH(ball_core/XYZFile_test1.xyz));
 	TEST_EQUAL(f.isValid(), true)
 RESULT
 
 
 CHECK(XYZFile::read(System& system))
-  XYZFile f(BALL_TEST_DATA_PATH(XYZFile_test1.xyz));
+  XYZFile f(TEST_DATA_PATH(ball_core/XYZFile_test1.xyz));
 	System S;
 	f.read(S);
 	f.close();
@@ -61,7 +61,7 @@ CHECK(XYZFile::read(System& system))
 RESULT
 
 CHECK(XYZFile::read(System& system))
-  XYZFile f(BALL_TEST_DATA_PATH(current.xyz));
+  XYZFile f(TEST_DATA_PATH(ball_core/current.xyz));
 	System S;
 	f.read(S);
 	f.close();
@@ -96,12 +96,12 @@ CHECK(XYZFile::write(const System& system))
 	f.write(S);
 	f.close();
 		
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(XYZFile_test2.xyz))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/XYZFile_test2.xyz))
 RESULT
 
 
 CHECK(XYZFile::XYZFile& operator >> (System& system))
-  XYZFile f(BALL_TEST_DATA_PATH(XYZFile_test1.xyz));
+  XYZFile f(TEST_DATA_PATH(ball_core/XYZFile_test1.xyz));
 	System S;
 	f >> S;
 	f.close();
@@ -137,7 +137,7 @@ CHECK(XYZFile::XYZFile& operator << (const System& system))
 	f << S;
 	f.close();
 		
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(XYZFile_test2.xyz))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/XYZFile_test2.xyz))
 RESULT
 
 /////////////////////////////////////////////////////////////

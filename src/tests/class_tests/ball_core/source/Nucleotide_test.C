@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/kernel/PTE.h>
 ///////////////////////////
 
 START_TEST(Nucleotide)
@@ -409,7 +409,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	n1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Nucleotide_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Nucleotide_test.txt))
 RESULT
 
 TextPersistenceManager pm;

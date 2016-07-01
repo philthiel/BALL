@@ -1,16 +1,16 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/KERNEL/expression.h>
+#include <BALL/core/kernel/expression.h>
 
 /////////////////
 
+using namespace std;
 using namespace BALL;
 
 ///////////////////////////
@@ -293,7 +293,7 @@ CHECK(void dump(std::ostream& is = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	et1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(ExpressionTree_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/ExpressionTree_test.txt))
 RESULT
 
 ////////////////////////////////////////////////////////////

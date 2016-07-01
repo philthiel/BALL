@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/bitVector.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/datatype/bitVector.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 
 ///////////////////////////
 
@@ -659,7 +659,7 @@ BitVector bv4(4);
 bv4.setBit(2, true);
 
 CHECK(friend std::istream& operator >> (std::istream& s, BitVector& bit_vector) throw(Exception::OutOfMemory))
-	std::ifstream instr(BALL_TEST_DATA_PATH(BitVector_test.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/BitVector_test.txt));
 	BitVector bv4_2;
 	instr >> bv4_2;
 	instr.close();
@@ -672,7 +672,7 @@ RESULT
 
 
 CHECK(void read(std::istream& s) throw(Exception::OutOfMemory))
-	std::ifstream instr(BALL_TEST_DATA_PATH(BitVector_test.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/BitVector_test.txt));
 	BitVector bv4_2;
 	bv4_2.read(instr);
 	instr.close();
@@ -688,7 +688,7 @@ CHECK(friend std::ostream& operator << (std::ostream& s, const BitVector& bit_ve
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << bv4;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(BitVector_test.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/BitVector_test.txt))
 RESULT
 
 CHECK(void write(std::ostream& s) const throw())
@@ -696,11 +696,11 @@ CHECK(void write(std::ostream& s) const throw())
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	bv4.write(outstr);
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(BitVector_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/BitVector_test2.txt))
 RESULT
 
 CHECK(bool read(PersistenceManager& pm) throw(Exception::OutOfMemory))
-	ifstream	ifile(BALL_TEST_DATA_PATH(BitVector_test3.txt));
+	ifstream	ifile(TEST_DATA_PATH(ball_core/BitVector_test3.txt));
 	pm.setIstream(ifile);
 	BitVector bv;
 	TEST_NOT_EQUAL(bv.read(pm), false);
@@ -720,7 +720,7 @@ CHECK(void write(PersistenceManager& pm) const throw())
 	pm.registerClass(getStreamName<BitVector>(), BitVector::createDefault);
 	bv4.write(pm);
 	ofile.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(BitVector_test3.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/BitVector_test3.txt))
 RESULT
 
 END_TEST

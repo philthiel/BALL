@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/QSAR/simpleDescriptors.h>
-#include <BALL/QSAR/connectivityDescriptors.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/qsar/simpleDescriptors.h>
+#include <BALL/core/qsar/connectivityDescriptors.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
 #include <iostream>
 using std::cerr; using std::endl;
 
@@ -26,7 +26,7 @@ START_TEST(ConnectivityDescriptors)
 
 using namespace BALL;
 
-SDFile infile(BALL_TEST_DATA_PATH(descriptors_test.sdf));
+SDFile infile(TEST_DATA_PATH(ball_core/descriptors_test.sdf));
 System S;
 infile >> S;
 infile.close();

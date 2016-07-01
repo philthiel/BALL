@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/DATATYPE/bitVector.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/datatype/bitVector.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 
 ///////////////////////////
 

@@ -1,18 +1,20 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/FORMAT/NMRStarFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/NMR/shiftModule.h>
+
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/format/NMRStarFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/nmr/shiftModule.h>
+
 ///////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 START_TEST(String)
@@ -33,11 +35,11 @@ RESULT
 
 CHECK(NMRStarFile(const String& file_name) throw(Exception::FileNotFound, Exception::ParseError))
 	PRECISION(1e-3)
- 	NMRStarFile rs(BALL_TEST_DATA_PATH(NMRStarFile_test.bmr));
+ 	NMRStarFile rs(TEST_DATA_PATH(ball_core/NMRStarFile_test.bmr));
 RESULT
 
 
-NMRStarFile rs(BALL_TEST_DATA_PATH(NMRStarFile_test.bmr));
+NMRStarFile rs(TEST_DATA_PATH(ball_core/NMRStarFile_test.bmr));
 
 
 CHECK(EntryInformation)
@@ -157,7 +159,7 @@ RESULT
 
 CHECK(NMRAtomData) //NMRStarFile(const String& file_name) throw(Exception::FileNotFound, Exception::ParseError))
 	PRECISION(1e-3)
- 	//NMRStarFile rs(BALL_TEST_DATA_PATH(NMRStarFile_test.bmr));
+ 	//NMRStarFile rs(TEST_DATA_PATH(ball_core/NMRStarFile_test.bmr));
 
 	TEST_EQUAL(rs.getNMRData().size(), 1)
 	TEST_EQUAL(rs.getNumberOfAtoms(), 343)
@@ -277,7 +279,7 @@ CHECK(NMRSpectrometer)
 RESULT
 
 
-NMRStarFile f2(BALL_TEST_DATA_PATH(NMRStarFile_test.bmr));
+NMRStarFile f2(TEST_DATA_PATH(ball_core/NMRStarFile_test.bmr));
 
 CHECK(bool operator == (const NMRStarFile& f) )
 	NMRStarFile f1;
@@ -335,13 +337,13 @@ RESULT
 
 
 CHECK(BALLToBMRBMapper)
-	PDBFile pdb(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.pdb));
 
 	BALL::System S;
 	pdb >> S;
 	Chain& chain = *(S.beginChain());
 
-	NMRStarFile nmr_file(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.bmr));
+	NMRStarFile nmr_file(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.bmr));
 	
 	NMRStarFile::BALLToBMRBMapper mapper(chain, nmr_file, "AbrBN");
 //	NMRStarFile::BALLToBMRBMapper mapper(chain, nmr_file, "'AbrBN subunit 1'");
@@ -350,7 +352,7 @@ CHECK(BALLToBMRBMapper)
 	TEST_EQUAL(mapper.getNMRAtomDataSet() != NULL, true)
 	const NMRStarFile::NMRAtomDataSet* nmr_atom_data_set = mapper.getNMRAtomDataSet();
 
-	NMRStarFile nmr_file2(BALL_TEST_DATA_PATH(NMRStarFile_test.bmr));
+	NMRStarFile nmr_file2(TEST_DATA_PATH(ball_core/NMRStarFile_test.bmr));
 
 	Chain& chain2 = *(S.beginChain()++);
 	NMRStarFile::BALLToBMRBMapper mapper2(chain2, nmr_file2, "dockerin");
@@ -409,11 +411,11 @@ RESULT
 
 
 CHECK(read(AtomContainer& ac))	
-	PDBFile pdb(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.pdb));
 	BALL::System S;
 	pdb >> S;
 
-	NMRStarFile nmr_file(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.bmr));
+	NMRStarFile nmr_file(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.bmr));
 	TEST_EQUAL(nmr_file.read(S), true)
 	
 	NMRStarFile::NMRAtomData const& nmr_atom = nmr_file.getNMRData()[0].atom_data[18];
@@ -429,7 +431,7 @@ RESULT
 
  
 CHECK(bool assignShifts(BALLToBMRBMapper& ball_to_bmrb_mapping))
-	PDBFile pdb(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.pdb));
 	BALL::System S;
 	pdb >> S;
 
@@ -437,7 +439,7 @@ CHECK(bool assignShifts(BALLToBMRBMapper& ball_to_bmrb_mapping))
 	S.apply(fdb.normalize_names);
 	
 	Chain& chain = *(S.beginChain());
-	NMRStarFile nmr_file(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.bmr));
+	NMRStarFile nmr_file(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.bmr));
 	NMRStarFile::BALLToBMRBMapper mapper(chain, nmr_file, "AbrBN");
 
 	// NOTE: for testing, we artificially create a gap. this leads to a lower number of assigned shifts later on
@@ -484,14 +486,14 @@ RESULT
 
 CHECK(assignShifts(AtomContainer& ac, const String& aligned_ball_sequence,
 												const String& aligned_nmrstar_sequence))
-	PDBFile pdb(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.pdb));
 	BALL::System S;
 	pdb >> S;
 
 	FragmentDB fdb("");
 	S.apply(fdb.normalize_names);
 	
-	NMRStarFile nmr_file(BALL_TEST_DATA_PATH(NMRStarFile_test_1z0r.bmr));
+	NMRStarFile nmr_file(TEST_DATA_PATH(ball_core/NMRStarFile_test_1z0r.bmr));
 	
 	bool worked = nmr_file.assignShifts(S, "AbrBN",
 			"MKSTGIVRKVDELGR-VVIPIELRRTLGIAEKDALEIYVDDEKIILKKYKPNMT", 

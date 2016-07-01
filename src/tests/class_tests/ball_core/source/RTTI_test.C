@@ -2,17 +2,17 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/nucleotide.h>
-#include <BALL/KERNEL/nucleicAcid.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/secondaryStructure.h>
-#include <BALL/FORMAT/PDBRecords.h>
-#include <BALL/FORMAT/PDBInfo.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/nucleotide.h>
+#include <BALL/core/kernel/nucleicAcid.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/secondaryStructure.h>
+#include <BALL/core/format/PDBRecords.h>
+#include <BALL/core/format/PDBInfo.h>
 ///////////////////////////
 
 template <typename T>

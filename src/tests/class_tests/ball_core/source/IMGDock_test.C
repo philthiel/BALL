@@ -1,10 +1,10 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DOCKING/IMGDOCK/IMGDock.h>
+#include <BALL/core/docking/imgdock/IMGDock.h>
 ///////////////////////////
 
 using namespace BALL;

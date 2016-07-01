@@ -2,18 +2,18 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/rsConstructor.h>
-#include <BALL/STRUCTURE/sdGenerator.h>
-#include <BALL/STRUCTURE/ringAnalyser.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/MOLFile.h>
+#include <BALL/core/structure/rsConstructor.h>
+#include <BALL/core/structure/sdGenerator.h>
+#include <BALL/core/structure/ringAnalyser.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/MOLFile.h>
 
 ///////////////////////////
 
@@ -37,7 +37,7 @@ CHECK(RSConstructor())
 RESULT
 
 System molecule_sys;
-PDBFile infile(BALL_TEST_DATA_PATH(input_RSConstructor_test.mol));
+PDBFile infile(TEST_DATA_PATH(ball_core/input_RSConstructor_test.mol));
 infile >> molecule_sys;
 infile.close();
 
@@ -77,7 +77,7 @@ for(vector<vector<vector<Atom*> > >::size_type i = 0; i != ringsystems.size(); i
 }
 	
 System molecule_sys_2;
-MOLFile infile_2(BALL_TEST_DATA_PATH(input_RSConstructor_test_2.mol));
+MOLFile infile_2(TEST_DATA_PATH(ball_core/input_RSConstructor_test_2.mol));
 infile_2 >> molecule_sys_2;
 infile.close(); 
 

@@ -1,15 +1,15 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/anisotropyShiftProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
+#include <BALL/core/nmr/anisotropyShiftProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/defaultProcessors.h>
 
 ///////////////////////////
 
@@ -59,16 +59,16 @@ CHECK(AnisotropyShiftProcessor::finish() throw())
   // tested below
 RESULT
 
-HINFile f(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.hin));
+HINFile f(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.hin));
 System S;
 f >> S;
 
-Parameters parameters(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.ini));
+Parameters parameters(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.ini));
 
 CHECK(chemical shifts/with rings)
 	PRECISION(0.0001)
 	StringHashMap<float> aniso_shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.dat));
 	String name;
 	float shift;
 	while (infile.good())

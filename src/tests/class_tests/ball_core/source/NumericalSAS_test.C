@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/STRUCTURE/numericalSAS.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/MATHS/surface.h>
-#include <BALL/DATATYPE/hashMap.h>
+#include <BALL/core/structure/numericalSAS.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/maths/surface.h>
+#include <BALL/core/datatype/hashMap.h>
 ///////////////////////////
 
 START_TEST(NumericalSAS)

@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/johnsonBoveyShiftProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/nmr/johnsonBoveyShiftProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/PDBFile.h>
 
 ///////////////////////////
 
@@ -32,8 +32,8 @@ CHECK(JohnsonBoveyShiftProcessor::~JohnsonBoveyShiftProcessor() throw())
   delete sp;
 RESULT
 
-Parameters parameters(BALL_TEST_DATA_PATH(JohnsonBoveyShiftProcessor_test.ini));
-HINFile f(BALL_TEST_DATA_PATH(JohnsonBoveyShiftProcessor_test.hin));
+Parameters parameters(TEST_DATA_PATH(ball_core/JohnsonBoveyShiftProcessor_test.ini));
+HINFile f(TEST_DATA_PATH(ball_core/JohnsonBoveyShiftProcessor_test.hin));
 System S;
 f >> S;
 f.close();
@@ -107,11 +107,11 @@ RESULT
 
 
 S.destroy();
-f.open(BALL_TEST_DATA_PATH(JohnsonBoveyShiftProcessor_test2.hin));
+f.open(TEST_DATA_PATH(ball_core/JohnsonBoveyShiftProcessor_test2.hin));
 f >> S;
 CHECK(chemical shifts/with rings)
 	StringHashMap<float> rc_shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(JohnsonBoveyShiftProcessor_test.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/JohnsonBoveyShiftProcessor_test.dat));
 	String name;
 	float shift;
 	while (infile.good())

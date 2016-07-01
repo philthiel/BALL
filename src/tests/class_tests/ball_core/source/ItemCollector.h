@@ -1,13 +1,13 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/comparator.h>
-#include <BALL/KERNEL/fragment.h>
+
+#include <BALL/core/concept/comparator.h>
+#include <BALL/core/kernel/fragment.h>
 
 #include <list>
 #include <iostream>
 
+using namespace std;
 using namespace BALL;
 
 /** Helper class: a processor counting items.

@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/peptides.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/FORMAT/HINFile.h>
+#include <BALL/core/structure/peptides.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/format/HINFile.h>
 
 ///////////////////////////
 
@@ -166,7 +166,7 @@ CHECK(OneLetterToThreeLetter(const OneLetterAASequence& sequence))
 RESULT
 
 CHECK(GetSequence(const Protein& protein))
-	HINFile f(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	System S;
 	f >> S;
 	TEST_EQUAL(S.countResidues(), 3)
@@ -175,7 +175,7 @@ CHECK(GetSequence(const Protein& protein))
 RESULT
 
 CHECK(GetSequence(const Chain& chain))
-	HINFile f(BALL_TEST_DATA_PATH(AlaGlySer__CysHisMet.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AlaGlySer__CysHisMet.hin));
 	System S;
 	f >> S;
 	TEST_EQUAL(S.countResidues(), 6)

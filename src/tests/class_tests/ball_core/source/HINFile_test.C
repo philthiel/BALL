@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 
@@ -45,13 +45,13 @@ RESULT
 
 
 CHECK(HINFile(const String& filename, File::OpenMode open_mode = std::ios::in) throw(Exception::FileNotFound))
-  HINFile hin(BALL_TEST_DATA_PATH(HINFile_test.hin));
+  HINFile hin(TEST_DATA_PATH(ball_core/HINFile_test.hin));
   TEST_EQUAL(hin.isValid(), true)
 	TEST_EXCEPTION(Exception::FileNotFound, HINFile f2("asddasdcasdasdasddwad"))
 RESULT
 
 System system;
-HINFile hin(BALL_TEST_DATA_PATH(HINFile_test.hin));
+HINFile hin(TEST_DATA_PATH(ball_core/HINFile_test.hin));
 CHECK(bool read(System& system) throw(Exception::ParseError))
   hin.read(system);
 	hin.reopen();
@@ -79,7 +79,7 @@ CHECK(bool read(System& system) throw(Exception::ParseError))
 	PRECISION(1e-5)
 
 	System S2;
-	HINFile hin2(BALL_TEST_DATA_PATH(AlaGlySer.hin));
+	HINFile hin2(TEST_DATA_PATH(ball_core/AlaGlySer.hin));
 	hin2 >> S2;
 	TEST_EQUAL(S2.countAtoms(), 31)
 	TEST_EQUAL(S2.countProteins(), 1)
@@ -96,7 +96,7 @@ CHECK(bool write(const System& system) throw(File::CannotWrite))
   NEW_TMP_FILE(filename)
   HINFile hin2(filename, std::ios::out);
 	hin2.write(system);
-  TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(HINFile_test2.hin))
+  TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/HINFile_test2.hin))
 
 	TEST_EXCEPTION(File::CannotWrite, empty.write(system))
 RESULT
@@ -120,7 +120,7 @@ CHECK([EXTRA]HINFile::HINFile& operator << (const System& system))
   NEW_TMP_FILE(filename)
   HINFile hin2(filename, std::ios::out);
   hin2 << system;
-  TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(HINFile_test2.hin))
+  TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/HINFile_test2.hin))
 
 	// test whether the name truncation works: it should truncate
 	// the name of an atom containing whitespaces to the first field
@@ -130,20 +130,20 @@ CHECK([EXTRA]HINFile::HINFile& operator << (const System& system))
 	CAPTURE_OUTPUT_LEVEL(LogStream::WARNING_LEVEL)
 		hin3 << system;
 	COMPARE_OUTPUT("HINFile::write: truncated atom name 'NAME TEST' to 'NAME'.\n")
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(HINFile_test3.hin))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/HINFile_test3.hin))
 
 	TEST_EXCEPTION(File::CannotWrite, empty << system)
 RESULT
 
 CHECK([EXTRA]robust reading)	
-	HINFile f(BALL_TEST_DATA_PATH(HINFile_test4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/HINFile_test4.hin));
 	System S;
 	TEST_EXCEPTION(Exception::ParseError, f >> S)
 	f.close();
 RESULT
 
 CHECK(Molecule* read() throw(Exception::ParseError))
-	HINFile hin(BALL_TEST_DATA_PATH(HINFile_test.hin));
+	HINFile hin(TEST_DATA_PATH(ball_core/HINFile_test.hin));
 	Molecule* m = 0;
 	m = hin.read();
 	TEST_NOT_EQUAL(m, 0)
@@ -159,15 +159,15 @@ CHECK(Molecule* read() throw(Exception::ParseError))
 	delete m;
 
 
-	HINFile f(BALL_TEST_DATA_PATH(HINFile_test4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/HINFile_test4.hin));
 	TEST_EXCEPTION(Exception::ParseError, f.read())
 RESULT
 
 CHECK(const HINFile& operator = (const HINFile& rhs) throw(Exception::FileNotFound))
-	HINFile f(BALL_TEST_DATA_PATH(HINFile_test4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/HINFile_test4.hin));
 	HINFile f2;
 	f2 = f;
-	TEST_EQUAL(f2.getName(), BALL_TEST_DATA_PATH(HINFile_test4.hin))
+	TEST_EQUAL(f2.getName(), TEST_DATA_PATH(ball_core/HINFile_test4.hin))
 	HINFile f3;
 	TEST_EXCEPTION(Exception::FileNotFound, f2 = empty)
 	f3.setName("asddasddddddasdasdasdasd");

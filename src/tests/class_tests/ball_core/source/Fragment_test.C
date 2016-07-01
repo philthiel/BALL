@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 ///////////////////////////
 
 START_TEST(Fragment)
@@ -93,7 +93,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	f1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Fragment_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Fragment_test.txt))
 RESULT
 
 TextPersistenceManager pm;

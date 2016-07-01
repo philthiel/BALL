@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/SOLVATION/ooiEnergy.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/solvation/ooiEnergy.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/structure/fragmentDB.h>
 
 ///////////////////////////
 
@@ -25,7 +25,7 @@ using namespace BALL;
 PRECISION(2.0) // it's not THAT precise
 CHECK(calculateOoiEnergy() / BPTI)
 	System S;
-	PDBFile f(BALL_TEST_DATA_PATH(OoiEnergy_test.pdb));
+	PDBFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test.pdb));
 	f >> S;
 	f.close();
 
@@ -40,7 +40,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / ethanol)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test1.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test1.hin));
 	f >> S;
 	f.close();
 
@@ -54,7 +54,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / acetamide)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test2.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test2.hin));
 	f >> S;
 	f.close();
 
@@ -65,7 +65,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / butylamine)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test3.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test3.hin));
 	f >> S;
 	f.close();
 
@@ -76,7 +76,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / methanethiol)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test4.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test4.hin));
 	f >> S;
 	f.close();
 
@@ -87,7 +87,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / acetic acid)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test5.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test5.hin));
 	f >> S;
 	f.close();
 
@@ -98,7 +98,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / acetate)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test6.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test6.hin));
 	f >> S;
 	f.close();
 
@@ -109,7 +109,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / butylammonium)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test7.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test7.hin));
 	f >> S;
 	f.close();
 
@@ -120,7 +120,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / propionate)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test8.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test8.hin));
 	f >> S;
 	f.close();
 
@@ -131,7 +131,7 @@ RESULT
 
 CHECK(calculateOoiEnergy() / methylimidazolium)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(OoiEnergy_test9.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/OoiEnergy_test9.hin));
 	f >> S;
 	f.close();
 

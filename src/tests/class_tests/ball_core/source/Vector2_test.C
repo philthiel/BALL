@@ -2,14 +2,14 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MATHS/vector2.h>
+#include <BALL/core/maths/vector2.h>
 #include <cmath>
-#include <BALL/CONCEPT/persistenceManager.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
+#include <BALL/core/concept/persistenceManager.h>
+#include <BALL/core/concept/textPersistenceManager.h>
 ///////////////////////////
 
 START_TEST(TVector2)
@@ -328,7 +328,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	v.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Vector2_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Vector2_test.txt))
 RESULT
 
 CHECK(bool isValid() const throw())
@@ -367,7 +367,7 @@ CHECK(TVector2 operator * (const TVector2<T>& vector, const T& scalar))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TVector2<T>& vector))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Vector2_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Vector2_test2.txt));
 	Vector2 v(1, 2);
 	instr >> v;
 	instr.close();
@@ -381,7 +381,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TVector2<T>& vector))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << v;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Vector2_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Vector2_test2.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

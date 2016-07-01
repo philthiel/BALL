@@ -2,16 +2,16 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/NMR/haighMallionShiftProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/nmr/haighMallionShiftProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 
@@ -36,8 +36,8 @@ CHECK(HaighMallionShiftProcessor::~HaighMallionShiftProcessor() throw())
   delete sp;
 RESULT
 
-Parameters parameters(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test.ini));
-HINFile f(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test.hin));
+Parameters parameters(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test.ini));
+HINFile f(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test.hin));
 System S;
 f >> S;
 f.close();
@@ -105,11 +105,11 @@ CHECK(chemical shifts/without rings)
 RESULT
 
 S.destroy();
-f.open(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test2.hin));
+f.open(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test2.hin));
 f >> S;
 CHECK(chemical shifts/with rings)
 	StringHashMap<float> shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test.dat));
 	String name;
 	float shift;
 	while (infile.good())
@@ -174,13 +174,13 @@ CHECK(chemical shifts -- PHE)
 
 	// check the shift caused by PHE rings
 	S.destroy();
-	PDBFile pdb_file(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_PHE.pdb));
+	PDBFile pdb_file(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_PHE.pdb));
 	pdb_file >> S;
 	pdb_file.close();
 	S.apply(frag_db.build_bonds);
 
 	StringHashMap<float> shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_PHE.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_PHE.dat));
 	String name;
 	float shift;
 	while (infile.good())
@@ -235,13 +235,13 @@ CHECK(chemical shifts -- TRP)
 
 	// check the shift caused by TRP rings
 	S.destroy();
-	PDBFile pdb_file(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_TRP.pdb));
+	PDBFile pdb_file(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_TRP.pdb));
 	pdb_file >> S;
 	pdb_file.close();
 	S.apply(frag_db.build_bonds);
 
 	StringHashMap<float> shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_TRP.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_TRP.dat));
 	String name;
 	float shift;
 	while (infile.good())
@@ -296,13 +296,13 @@ CHECK(chemical shifts -- TYR)
 
 	// check the shift caused by TYR rings
 	S.destroy();
-	PDBFile pdb_file(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_TYR.pdb));
+	PDBFile pdb_file(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_TYR.pdb));
 	pdb_file >> S;
 	pdb_file.close();
 	S.apply(frag_db.build_bonds);
 
 	StringHashMap<float> shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_TYR.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_TYR.dat));
 	String name;
 	float shift;
 	while (infile.good())
@@ -357,13 +357,13 @@ CHECK(chemical shifts -- HIS)
 
 	// check the shift caused by HIS rings
 	S.destroy();
-	PDBFile pdb_file(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_HIS.pdb));
+	PDBFile pdb_file(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_HIS.pdb));
 	pdb_file >> S;
 	pdb_file.close();
 	S.apply(frag_db.build_bonds);
 
 	StringHashMap<float> shifts;
-	ifstream infile(BALL_TEST_DATA_PATH(HaighMallionShiftProcessor_test_HIS.dat));
+	ifstream infile(TEST_DATA_PATH(ball_core/HaighMallionShiftProcessor_test_HIS.dat));
 	String name;
 	float shift;
 	while (infile.good())

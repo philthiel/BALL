@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/MATHS/vector3.h>
-#include <BALL/MATHS/quaternion.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/maths/vector3.h>
+#include <BALL/core/maths/quaternion.h>
 ///////////////////////////
 
 START_TEST(Quaternion)
@@ -288,7 +288,7 @@ RESULT
 
 Quaternion q1;
 CHECK(std::istream& operator >>(std::istream& s, TQuaternion<T>& q))
-	std::ifstream instr(BALL_TEST_DATA_PATH(Quaternion_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Quaternion_test2.txt));
 	instr >> q1;
 	instr.close();
 	TEST_REAL_EQUAL(q1.w(), -0.416147)
@@ -302,7 +302,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TQuaternion<T>& q))
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << q1;
 	outstr.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Quaternion_test2.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Quaternion_test2.txt))
 RESULT
 
 CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
@@ -310,7 +310,7 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	q1.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Quaternion_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Quaternion_test.txt))
 RESULT		
 
 /////////////////////////////////////////////////////////////

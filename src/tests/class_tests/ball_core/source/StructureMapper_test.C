@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/fragment.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/MATHS/quaternion.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/fragment.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/maths/quaternion.h>
+#include <BALL/core/format/PDBFile.h>
 #include <vector>
 
 START_TEST(StructureMapper)
@@ -421,7 +421,7 @@ RESULT
 
 CHECK(RSMD for two bptis)
 	System s1, s2;
-	PDBFile pf(BALL_TEST_DATA_PATH(StructureMapper_test.pdb));
+	PDBFile pf(TEST_DATA_PATH(ball_core/StructureMapper_test.pdb));
 	pf >> s1;
 	pf >> s2;
 	StructureMapper sm(s1, s2);	

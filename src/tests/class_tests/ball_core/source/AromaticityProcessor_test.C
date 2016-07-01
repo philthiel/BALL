@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/QSAR/aromaticityProcessor.h>
-#include <BALL/FORMAT/SDFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/molecule.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/qsar/aromaticityProcessor.h>
+#include <BALL/core/format/SDFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/molecule.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 START_TEST(AromaticityProcessor)
@@ -24,7 +24,7 @@ START_TEST(AromaticityProcessor)
 
 using namespace BALL;
 
-SDFile infile(BALL_TEST_DATA_PATH(descriptors_test.sdf));
+SDFile infile(TEST_DATA_PATH(ball_core/descriptors_test.sdf));
 System S;
 infile >> S;
 infile.close();

@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#	include <BALL/MATHS/angle.h>
+#	include <BALL/core/maths/angle.h>
 ///////////////////////////
 
 START_TEST(Angle)
@@ -344,11 +344,11 @@ CHECK(void dump(std::ostream& s = std::cout, Size depth = 0) const throw())
 	std::ofstream outfile(filename.c_str(), std::ios::out);
 	a.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(Angle_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/Angle_test.txt))
 RESULT
 
 CHECK(std::istream& operator >> (std::istream& s, TAngle<T>& angle) throw())
-	std::ifstream instr(BALL_TEST_DATA_PATH(Angle_test2.txt));
+	std::ifstream instr(TEST_DATA_PATH(ball_core/Angle_test2.txt));
 	Angle a = Angle();
 	instr >> a;
 	instr.close();
@@ -361,7 +361,7 @@ CHECK(std::ostream& operator << (std::ostream& s, const TAngle<T>& angle) throw(
 	std::ofstream outstr(filename.c_str(), std::ios::out);
 	outstr << a;
 	outstr.close();
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(Angle_test2.txt))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/Angle_test2.txt))
 RESULT
 
 /////////////////////////////////////////////////////////////

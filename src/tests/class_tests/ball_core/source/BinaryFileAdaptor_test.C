@@ -1,16 +1,16 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/SYSTEM/file.h>
-#include <BALL/SYSTEM/binaryFileAdaptor.h>
+#include <BALL/core/system/file.h>
+#include <BALL/core/system/binaryFileAdaptor.h>
 
 //We need this to get some of the defines used in the implementation part
 #ifdef BALL_NO_INLINE_FUNCTIONS
-	#include <BALL/SYSTEM/binaryFileAdaptor.iC>
+	#include <BALL/core/system/binaryFileAdaptor.iC>
 #endif
 
 ///////////////////////////

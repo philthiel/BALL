@@ -1,23 +1,24 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/KERNEL/atom.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/expression.h>
-#include <BALL/KERNEL/expressionParser.h>
-#include <BALL/KERNEL/standardPredicates.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
+#include <BALL/core/kernel/atom.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/expression.h>
+#include <BALL/core/kernel/expressionParser.h>
+#include <BALL/core/kernel/standardPredicates.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
+
 #include <list>
 
 /////////////////
 
+using namespace std;
 using namespace BALL;
 
 ///////////////////////////
@@ -164,7 +165,7 @@ CHECK(void dump(std::ostream& is = std::cout, Size depth = 0) const throw())
 	tree.children.push_back(child1);
 	tree.dump(outfile);
 	outfile.close();
-	TEST_FILE_REGEXP(filename.c_str(), BALL_TEST_DATA_PATH(ExpressionParser_test.txt))
+	TEST_FILE_REGEXP(filename.c_str(), TEST_DATA_PATH(ball_core/ExpressionParser_test.txt))
 RESULT
 // tests for ExpressionParser
 

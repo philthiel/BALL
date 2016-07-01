@@ -2,20 +2,20 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/moleculeAssembler.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/QSAR/ringPerceptionProcessor.h>
-#include <BALL/STRUCTURE/ringAnalyser.h>
-#include <BALL/STRUCTURE/rsConstructor.h>
-#include <BALL/STRUCTURE/chainBuilder.h>
+#include <BALL/core/structure/moleculeAssembler.h>
+#include <BALL/core/kernel/selector.h>
+#include <BALL/core/qsar/ringPerceptionProcessor.h>
+#include <BALL/core/structure/ringAnalyser.h>
+#include <BALL/core/structure/rsConstructor.h>
+#include <BALL/core/structure/chainBuilder.h>
 
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/MOLFile.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/MOLFile.h>
 
 ///////////////////////////
 
@@ -36,7 +36,7 @@ RESULT
 
 SDGenerator sdg;
 System molecule_sys;
-PDBFile infile(BALL_TEST_DATA_PATH(input_MoleculeAssembler_test.pdb));
+PDBFile infile(TEST_DATA_PATH(ball_core/input_MoleculeAssembler_test.pdb));
 infile >> molecule_sys;
 infile.close();
 
@@ -166,7 +166,7 @@ for(AtomIterator atom_it = molecule_sys.beginAtom(); atom_it != molecule_sys.end
 
 
 System molecule_sys_2;
-PDBFile infile_2(BALL_TEST_DATA_PATH(input_MoleculeAssembler_test.pdb));
+PDBFile infile_2(TEST_DATA_PATH(ball_core/input_MoleculeAssembler_test.pdb));
 infile_2 >> molecule_sys_2;
 infile_2.close();
 
@@ -174,7 +174,7 @@ sdg.generateSD(molecule_sys_2);
 
 
 System molecule_sys_3;
-PDBFile infile_3(BALL_TEST_DATA_PATH(input_MoleculeAssembler_test.pdb));
+PDBFile infile_3(TEST_DATA_PATH(ball_core/input_MoleculeAssembler_test.pdb));
 infile_3 >> molecule_sys_3;
 infile_3.close();
 
@@ -182,7 +182,7 @@ sdg.generateSD(molecule_sys_3);
 
 
 System molecule_sys_4;
-PDBFile infile_4(BALL_TEST_DATA_PATH(input_MoleculeAssembler_test.pdb));
+PDBFile infile_4(TEST_DATA_PATH(ball_core/input_MoleculeAssembler_test.pdb));
 infile_4 >> molecule_sys_4;
 infile_4.close();
 

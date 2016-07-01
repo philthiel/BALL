@@ -2,13 +2,13 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/STRUCTURE/defaultProcessors.h>
-#include <BALL/KERNEL/system.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/structure/defaultProcessors.h>
+#include <BALL/core/kernel/system.h>
 ///////////////////////////
 
 START_TEST(DefaultProcessors)
@@ -51,9 +51,9 @@ RESULT
 
 CHECK(AssignRadiusProcessor::AssignRadiusProcessor(const String& filename))
 	AssignRadiusProcessor* arp = 0;
-	arp = new AssignRadiusProcessor(BALL_TEST_DATA_PATH(DefaultProcessor_test.1));
+	arp = new AssignRadiusProcessor(TEST_DATA_PATH(ball_core/DefaultProcessor_test.1));
 	ABORT_IF(arp == 0)
-	TEST_EQUAL(arp->getFilename(), BALL_TEST_DATA_PATH(DefaultProcessor_test.1))
+	TEST_EQUAL(arp->getFilename(), TEST_DATA_PATH(ball_core/DefaultProcessor_test.1))
 	delete arp;
 	arp = 0;
 	TEST_EXCEPTION(Exception::FileNotFound, arp = new AssignRadiusProcessor("XXX"))
@@ -62,7 +62,7 @@ RESULT
 
 AssignRadiusProcessor arp;
 CHECK(AssignRadiusProcessor::start())
-	arp.setFilename(BALL_TEST_DATA_PATH(DefaultProcessor_test.1));
+	arp.setFilename(TEST_DATA_PATH(ball_core/DefaultProcessor_test.1));
   TEST_EQUAL(arp.start(), true) 
 RESULT
 
@@ -72,13 +72,13 @@ RESULT
 
 
 CHECK(AssignRadiusProcessor::Processor::Result operator()(Atom& atom))
-	HINFile f(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.hin));
   System S;
 	f >> S;
 	S.insert(m1);
 	S.insert(m2);
 	StringHashMap<float> shm;
-	ifstream infile(BALL_TEST_DATA_PATH(DefaultProcessor_test.1));
+	ifstream infile(TEST_DATA_PATH(ball_core/DefaultProcessor_test.1));
 	String name;  
 	float radius;
 	while (infile.good())
@@ -116,12 +116,12 @@ a2.setName("a2");
 
 CHECK(AssignRadiusProcessor::setFilename(const String& filename))
 	TEST_EXCEPTION(Exception::FileNotFound, arp.setFilename("XXX"));
-	arp.setFilename(BALL_TEST_DATA_PATH(../DefaultProcessors_test.C));
+	arp.setFilename(TEST_DATA_PATH(ball_core/../DefaultProcessors_test.C));
 RESULT
 
 
 CHECK(AssignRadiusProcessor::getFilename())
-	TEST_EQUAL(arp.getFilename(), BALL_TEST_DATA_PATH(../DefaultProcessors_test.C));
+	TEST_EQUAL(arp.getFilename(), TEST_DATA_PATH(ball_core/../DefaultProcessors_test.C));
 RESULT
 
 AssignRadiusProcessor arp2;
@@ -147,8 +147,8 @@ RESULT
 AssignChargeProcessor acp;
 CHECK(AssignChargeProcessor::AssignChargeProcessor(const String& filename))
 	TEST_EXCEPTION(Exception::FileNotFound, AssignChargeProcessor acp("XXX"))
-	acp = AssignChargeProcessor(BALL_TEST_DATA_PATH(DefaultProcessor_test.1));
-	TEST_EQUAL(acp.getFilename(), BALL_TEST_DATA_PATH(DefaultProcessor_test.1))
+	acp = AssignChargeProcessor(TEST_DATA_PATH(ball_core/DefaultProcessor_test.1));
+	TEST_EQUAL(acp.getFilename(), TEST_DATA_PATH(ball_core/DefaultProcessor_test.1))
 RESULT
 
 
@@ -162,7 +162,7 @@ RESULT
 
 
 CHECK(AssignChargeProcessor::Processor::Result operator()(Atom& atom))
-	HINFile f(BALL_TEST_DATA_PATH(AnisotropyShiftProcessor_test.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AnisotropyShiftProcessor_test.hin));
   System S;
 	f >> S;
 	S.insert(m1);
@@ -171,7 +171,7 @@ CHECK(AssignChargeProcessor::Processor::Result operator()(Atom& atom))
 	m2.insert(a2);
 	TEST_EQUAL(S.countAtoms(), 33)
 	StringHashMap<float> shm;
-	ifstream infile(BALL_TEST_DATA_PATH(DefaultProcessor_test.1));
+	ifstream infile(TEST_DATA_PATH(ball_core/DefaultProcessor_test.1));
 	String name;  
 	float radius;
 	while (infile.good())
@@ -207,12 +207,12 @@ RESULT
 
 CHECK(AssignChargeProcessor::setFilename(const String& filename))
 	TEST_EXCEPTION(Exception::FileNotFound, acp.setFilename("XXX"));
-	acp.setFilename(BALL_TEST_DATA_PATH(../DefaultProcessors_test.C));
+	acp.setFilename(TEST_DATA_PATH(ball_core/../DefaultProcessors_test.C));
 RESULT
 
 
 CHECK(AssignRadiusProcessor::getFilename())
-	TEST_EQUAL(acp.getFilename(), BALL_TEST_DATA_PATH(../DefaultProcessors_test.C));
+	TEST_EQUAL(acp.getFilename(), TEST_DATA_PATH(ball_core/../DefaultProcessors_test.C));
 RESULT
 
 AssignRadiusProcessor acp2;

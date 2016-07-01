@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
-#include <BALL/DATATYPE/hashMap.h>
-#include <BALL/CONCEPT/visitor.h>
+#include <BALL/core/datatype/hashMap.h>
+#include <BALL/core/concept/visitor.h>
 #include "ItemCollector.h"
 ///////////////////////////
 

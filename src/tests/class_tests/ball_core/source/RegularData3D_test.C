@@ -2,9 +2,9 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
-#include <BALL/DATATYPE/regularData3D.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
+#include <BALL/core/datatype/regularData3D.h>
 
 START_TEST(RegularData3D)
 

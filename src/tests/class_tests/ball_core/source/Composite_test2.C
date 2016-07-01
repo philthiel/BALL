@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/CONCEPT/composite.h>
-#include <BALL/CONCEPT/textPersistenceManager.h>
-#include <BALL/KERNEL/protein.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/KERNEL/chain.h>
+#include <BALL/core/concept/composite.h>
+#include <BALL/core/concept/textPersistenceManager.h>
+#include <BALL/core/kernel/protein.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/kernel/chain.h>
 ///////////////////////////
 
 using namespace BALL;

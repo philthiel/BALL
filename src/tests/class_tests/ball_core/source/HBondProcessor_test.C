@@ -1,17 +1,17 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 //
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/HBondProcessor.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/KERNEL/bond.h>
-#include <BALL/KERNEL/forEach.h>
-#include <BALL/KERNEL/chainIterator.h>
+#include <BALL/core/structure/HBondProcessor.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/kernel/bond.h>
+#include <BALL/core/kernel/forEach.h>
+#include <BALL/core/kernel/chainIterator.h>
 ///////////////////////////
 
 START_TEST(HBondProcessor)
@@ -57,7 +57,7 @@ CHECK( PredictionMethod::KABSCH_SANDER)
 	hbond_pro.options.set(HBondProcessor::Option::ADD_HBONDS, true);
 
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
   sys.apply(hbond_pro);
@@ -82,7 +82,7 @@ CHECK(Option::ADD_HBONDS)
 	hbond_pro.options.set(HBondProcessor::Option::ADD_HBONDS, true);
 
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
   sys.apply(hbond_pro);
@@ -119,7 +119,7 @@ CHECK(Option::KABSCH_SANDER_ENERGY_CUTOFF)
 			                  HBondProcessor::PredictionMethod::KABSCH_SANDER);
   // Default energy is -0.5
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
   sys.apply(hbond_pro);
@@ -141,7 +141,7 @@ CHECK( PredictionMethod::WISHART_ET_AL)
 			                  HBondProcessor::PredictionMethod::WISHART_ET_AL);
 
  	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
  	sys.apply(hbond_pro);
@@ -162,7 +162,7 @@ CHECK( apply to protein)
 	hbond_pro.options.set(HBondProcessor::Option::ADD_HBONDS, true);
 
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
   sys.getProtein(0)->apply(hbond_pro);
 
@@ -181,7 +181,7 @@ CHECK( apply to chain)
 	hbond_pro.options.set(HBondProcessor::Option::ADD_HBONDS, true);
 
 	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 	ChainIterator cit = sys.beginChain();
   cit->apply(hbond_pro);
@@ -228,7 +228,7 @@ CHECK(getHBonds() PredictionMethod::WISHART_ET_AL)
 			                  HBondProcessor::PredictionMethod::WISHART_ET_AL);
 
  	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
  	sys.apply(hbond_pro);
@@ -270,7 +270,7 @@ CHECK(getHBonds() PredictionMethod::KABSCH_SANDER)
 			                  HBondProcessor::PredictionMethod::KABSCH_SANDER);
 
  	System sys;
-	PDBFile mol(BALL_TEST_DATA_PATH(2ptc_H.pdb), std::ios::in);
+	PDBFile mol(TEST_DATA_PATH(ball_core/2ptc_H.pdb), std::ios::in);
 	mol >> sys;
 
  	sys.apply(hbond_pro);

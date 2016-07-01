@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/STRUCTURE/smartsParser.h>
+#include <BALL/core/structure/smartsParser.h>
 
 #include <fstream>
 
@@ -33,7 +33,7 @@ CHECK(~SmartsParser())
 RESULT
 
 CHECK(parse(const String& s))
-	ifstream is(BALL_TEST_DATA_PATH(SmartsParser_test.txt));
+	ifstream is(TEST_DATA_PATH(ball_core/SmartsParser_test.txt));
 	sp = new SmartsParser();
 	String line;
 	while (line.getline(is))

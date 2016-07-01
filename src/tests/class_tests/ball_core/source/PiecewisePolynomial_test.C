@@ -1,12 +1,11 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
+
+#include <BALL/core/concept/classTest.h>
 
 ///////////////////////////
 
-#include <BALL/MATHS/piecewisePolynomial.h>
+#include <BALL/core/maths/piecewisePolynomial.h>
 
 ///////////////////////////
 
@@ -15,11 +14,12 @@ START_TEST(PiecewisePolynomial)
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+using namespace std;
 using namespace BALL;
 
-///  insert tests for each member function here         
+///  insert tests for each member function here
 ///
-	
+
 
 Coefficients coef;
 vector<Coefficients> coefs;
@@ -76,7 +76,7 @@ CHECK(PiecewisePolynomial(Size degree, const std::vector<Interval>& intervals, c
 	std::vector<Coefficients> naught;
 	test = (poly2.getCoefficients() == naught);
 	TEST_EQUAL(test, false)
-	// ?????: Spezialfälle
+	// ?????: Spezialfï¿½lle
 RESULT
 
 
@@ -91,7 +91,7 @@ CHECK(void clear() throw())
 	std::vector<Coefficients> c3;
 	test = (c2 == c3);
 	TEST_EQUAL(test, true);
-	// ?????: Spezialfälle
+	// ?????: Spezialfï¿½lle
 RESULT
 
 
@@ -106,7 +106,7 @@ CHECK(void set(Size degree, const std::vector<Interval>& intervals, const std::v
 	std::vector<Coefficients> naught;
 	test = (poly2.getCoefficients() == naught);
 	TEST_EQUAL(test, false)
-	// ?????: Spezialfälle
+	// ?????: Spezialfï¿½lle
 RESULT
 
 
@@ -114,7 +114,7 @@ CHECK(PiecewisePolynomial& operator = (const PiecewisePolynomial& poly) throw())
 	PiecewisePolynomial poly2;
 	PiecewisePolynomial poly3;
 	poly2 = poly3;
-	TEST_EQUAL(poly2.getDegree(), poly3.getDegree()) 
+	TEST_EQUAL(poly2.getDegree(), poly3.getDegree())
 	bool test = (poly2.getIntervals() == poly3.getIntervals());
 	TEST_EQUAL(test, true);
 	test = (poly2.getCoefficients() == poly3.getCoefficients());
@@ -141,7 +141,7 @@ RESULT
 CHECK(setIntervals(const std::vector<Interval>& intervals))
 	PiecewisePolynomial poly2;
 	poly2.setIntervals(intervals);
-	bool test = (poly2.getIntervals() == intervals);  
+	bool test = (poly2.getIntervals() == intervals);
 	TEST_EQUAL(test,true);
 RESULT
 

@@ -1,24 +1,25 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/DOCKING/COMMON/poseClustering.h>
-#include <BALL/FORMAT/DCDFile.h>
-#include <BALL/MOLMEC/COMMON/snapShot.h>
-#include <BALL/DOCKING/COMMON/conformationSet.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/STRUCTURE/geometricProperties.h>
-#include <BALL/STRUCTURE/structureMapper.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/KERNEL/selector.h>
-#include <BALL/CONCEPT/property.h>
+#include <BALL/core/docking/common/poseClustering.h>
+#include <BALL/core/format/DCDFile.h>
+#include <BALL/core/molmec/common/snapShot.h>
+#include <BALL/core/docking/common/conformationSet.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/structure/geometricProperties.h>
+#include <BALL/core/structure/structureMapper.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/kernel/selector.h>
+#include <BALL/core/concept/property.h>
+
 ///////////////////////////
 
+using namespace std;
 using namespace BALL;
 
 
@@ -69,7 +70,7 @@ RESULT
 
 
 CHECK(PoseClustering(ConformationSet* poses, float rmsd) ... )
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs(sys);
@@ -89,7 +90,7 @@ RESULT
 
 CHECK(set/getConformationSet())
 		ConformationSet cs;
-		cs.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test.dcd));
+		cs.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test.dcd));
 		cs.resetScoring();
 		TEST_EQUAL(cs.size(), 10)
 
@@ -97,7 +98,7 @@ CHECK(set/getConformationSet())
 		TEST_EQUAL(pc.getConformationSet(), &cs)
 
 		ConformationSet cs2;
-		cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+		cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 		cs2.resetScoring();
 		TEST_EQUAL(cs2.size(), 8)
 
@@ -108,12 +109,12 @@ RESULT
 
 
 CHECK(compute() - general)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	PoseClustering pc(&cs2, 10.00);
 
@@ -142,12 +143,12 @@ RESULT
 
 
 CHECK(PoseClustering::Option::CLUSTER_METHOD with RMSD_TYPE = SNAPSHOT_RMSD)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	PoseClustering pc;
 	pc.setConformationSet(&cs2);
@@ -244,12 +245,12 @@ CHECK(PoseClustering::Option::CLUSTER_METHOD with RMSD_TYPE = CENTER_OF_MASS_DIS
 	PoseClustering pc;
 	pc.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::CENTER_OF_MASS_DISTANCE);
 
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	pc.setConformationSet(&cs2);
 
@@ -344,12 +345,12 @@ RESULT
 
 
 CHECK(PoseClustering::Option::CLUSTER_METHOD with RMSD_TYPE = RIGID_RMSD)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
 	PoseClustering pc;
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 
 	//               - TRIVIAL_COMPLETE_LINKAGE
@@ -460,12 +461,12 @@ RESULT
 
 CHECK(PoseClustering::refineClustering)
 	// --------- TRIVIAL_COMPLETE_LINKAGE  --  SNAPSHOT_RMSD
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 
 	PoseClustering pc;
@@ -513,12 +514,12 @@ CHECK(PoseClustering::refineClustering)
 
 	// --------- TRIVIAL_COMPLETE_LINKAGE  --  RIGID_RMSD
 
-	PDBFile pdb2(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb2(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys2;
 	pdb2.read(sys2);
 
 	PoseClustering pc2;
-	pc2.setBaseSystemAndTransformations(sys2, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc2.setBaseSystemAndTransformations(sys2, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc2.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 
 	pc2.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
@@ -545,7 +546,7 @@ CHECK(PoseClustering::refineClustering)
 	// --------- NEAREST NEIGHBOR --  RIGID_RMSD
 
 	PoseClustering pc3;
-	pc3.setBaseSystemAndTransformations(sys2, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc3.setBaseSystemAndTransformations(sys2, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc3.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 
 	pc3.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
@@ -566,22 +567,22 @@ RESULT
 
 
 CHECK(setBaseSystemAndTransformations(System const& base_system, String filename))
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
 	PoseClustering pc2;
-	pc2.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc2.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	TEST_EQUAL(pc2.getNumberOfPoses(), 55)
 
-	pc2.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test2.txt));
+	pc2.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test2.txt));
 	TEST_EQUAL(pc2.getNumberOfPoses(), 3)
 
 RESULT
 
 
 CHECK(Eigen::Matrix3f computeCovarianceMatrix(System const& system, Index rmsd_level_of_detail))
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
@@ -604,7 +605,7 @@ RESULT
 
 
 CHECK(float getRigidRMSD(Eigen::Vector3f const& t_ab, Eigen::Matrix3f const& M_ab, Eigen::Matrix3f const& covariance_matrix))
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
@@ -666,12 +667,12 @@ RESULT
 
 CHECK(getReducedConformationSet())
 	//SNAPSHOT
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs;
 	cs.setup(sys);
-	cs.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs.resetScoring();
 
 	PoseClustering pc;
@@ -704,7 +705,7 @@ CHECK(getReducedConformationSet())
 
 	// RIGID
 	PoseClustering pc_rigid;
-	pc_rigid.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc_rigid.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc_rigid.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_rigid.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
 	pc_rigid.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 15.00);
@@ -733,7 +734,7 @@ CHECK(getReducedConformationSet())
 
 	// NearestNeighborChain
 	PoseClustering pc_nnw;
-	pc_nnw.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc_nnw.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc_nnw.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_nnw.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
 	pc_nnw.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 15.00);
@@ -765,12 +766,12 @@ RESULT
 
 CHECK(getClusterRepresentative(Index i))
 	//SNAPSHOT
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs;
 	cs.setup(sys);
-	cs.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs.resetScoring();
 	PoseClustering pc(&cs, 5.00);
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD,  PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
@@ -792,7 +793,7 @@ CHECK(getClusterRepresentative(Index i))
 
 	// RIGID
 	PoseClustering pc_rigid;
-	pc_rigid.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc_rigid.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc_rigid.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_rigid.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
 	pc_rigid.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 15.00);
@@ -828,7 +829,7 @@ CHECK(getClusterRepresentative(Index i))
 
 	// NearestNeighborChain
 	PoseClustering pc_nnw;
-	pc_nnw.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc_nnw.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc_nnw.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_nnw.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
 	pc_nnw.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 15.00);
@@ -850,12 +851,12 @@ RESULT
 
 CHECK(getClusterConformationSet(Index i))
 	//SNAPSHOT
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs;
 	cs.setup(sys);
-	cs.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs.resetScoring();
 	PoseClustering pc(&cs, 10.00);
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD,  PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
@@ -898,7 +899,7 @@ CHECK(getClusterConformationSet(Index i))
 	PRECISION(1e-5)
 
 	// RIGID
-	PoseClustering pc_rigid(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	PoseClustering pc_rigid(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc_rigid.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_rigid.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
 	pc_rigid.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 15.00);
@@ -976,7 +977,7 @@ RESULT
 
 
 CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL for SNAPSHOT_RMSD)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
@@ -1042,7 +1043,7 @@ RESULT
 
 
 CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL for RIGID_RMSD)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
@@ -1060,7 +1061,7 @@ CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL for RIGID_RMSD)
 	}
 
 	PoseClustering pc;
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test2.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test2.txt));
 
 	// Option::RMSD_LEVEL_OF_DETAIL::C_ALPHA	
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD,  PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD); //TRIVIAL_COMPLETE_LINKAGE);
@@ -1080,7 +1081,7 @@ CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL for RIGID_RMSD)
 	pc.options.set(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL, PoseClustering::BACKBONE);
 	TEST_EQUAL(pc.options.getInteger(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL), PoseClustering::BACKBONE)
 	pc.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 25);
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test2.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test2.txt));
 
 	pc.compute();
 	TEST_EQUAL(pc.getNumberOfClusters(), 2)
@@ -1089,7 +1090,7 @@ CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL for RIGID_RMSD)
 	pc.options.set(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL, PoseClustering::ALL_ATOMS);
 	TEST_EQUAL(pc.options.getInteger(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL), PoseClustering::ALL_ATOMS)
 	pc.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 25);
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test2.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test2.txt));
 
 	pc.compute();
 	TEST_EQUAL(pc.getNumberOfClusters(), 3)
@@ -1097,7 +1098,7 @@ RESULT
 
 
 CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL::PROPERTY_BASED_ATOM_BIJECTION)
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
@@ -1143,7 +1144,7 @@ CHECK(PoseClustering::Option::RMSD_LEVEL_OF_DETAIL::PROPERTY_BASED_ATOM_BIJECTIO
 	TEST_EQUAL(pc.getNumberOfClusters(), 1)
 
 	PoseClustering pc_rigid;
-	pc_rigid.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test2.txt));
+	pc_rigid.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test2.txt));
 	pc_rigid.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 	pc_rigid.options.set(PoseClustering::Option::CLUSTER_METHOD,   PoseClustering::TRIVIAL_COMPLETE_LINKAGE);
 	pc_rigid.options.set(PoseClustering::Option::DISTANCE_THRESHOLD, 25);
@@ -1176,12 +1177,12 @@ RESULT
 
 CHECK(computeCompleteLinkageRMSD())
 
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	PoseClustering pc(&cs2, 10.00);
 
@@ -1221,12 +1222,12 @@ RESULT
 
 
 CHECK(extractNBestClusters(Size n, Size i))
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs;
 	cs.setup(sys);
-	cs.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs.resetScoring();
 
 	PoseClustering pc;
@@ -1278,12 +1279,12 @@ RESULT
 
 
 CHECK(extractClustersForThreshold(Size n, Size i))
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
 	PoseClustering pc;
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 
 	//               - NEAREST_NEIGHBOR_CHAIN_WARD	
@@ -1365,12 +1366,12 @@ CHECK(serializeWardClusterTree(std::ostream& out))
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
 	pc.options.setReal(PoseClustering::Option::DISTANCE_THRESHOLD, 0.00);
 
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 
 	pc.setConformationSet(&cs2);
@@ -1423,7 +1424,7 @@ RESULT
 
 
 CHECK(deserializeWardClusterTree(std::istream& out))
-	File tree(BALL_TEST_DATA_PATH(PoseClustering_wardtree.dat));
+	File tree(TEST_DATA_PATH(ball_core/PoseClustering_wardtree.dat));
 	PoseClustering pc;
 	pc.options.set(PoseClustering::Option::RMSD_TYPE, PoseClustering::SNAPSHOT_RMSD);
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
@@ -1466,12 +1467,12 @@ CHECK(deserialize/serialize WardClusterTree(std::ostream& out))
   NEW_TMP_FILE(filename)
   File temp_tree(filename, std::ios::out);
 
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 
 	PoseClustering pc;
-	pc.setBaseSystemAndTransformations(sys, BALL_TEST_DATA_PATH(PoseClustering_test.txt));
+	pc.setBaseSystemAndTransformations(sys, TEST_DATA_PATH(ball_core/PoseClustering_test.txt));
 	pc.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::RIGID_RMSD);
 
 	pc.options.set(PoseClustering::Option::CLUSTER_METHOD, PoseClustering::NEAREST_NEIGHBOR_CHAIN_WARD);
@@ -1488,12 +1489,12 @@ CHECK(deserialize/serialize WardClusterTree(std::ostream& out))
 /*
 	PoseClustering pc;
 	pc.options.setInteger(PoseClustering::Option::RMSD_TYPE, PoseClustering::CENTER_OF_MASS_DISTANCE);
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	pc.setConformationSet(&cs2);
 
@@ -1580,12 +1581,12 @@ RESULT
 //CHECK convertTransformations2Snaphots_();
 
 CHECK (convertSnaphots2Transformations())
-	PDBFile pdb(BALL_TEST_DATA_PATH(PoseClustering_test.pdb));
+	PDBFile pdb(TEST_DATA_PATH(ball_core/PoseClustering_test.pdb));
 	System sys;
 	pdb.read(sys);
 	ConformationSet cs2;
 	cs2.setup(sys);
-	cs2.readDCDFile(BALL_TEST_DATA_PATH(PoseClustering_test2.dcd));
+	cs2.readDCDFile(TEST_DATA_PATH(ball_core/PoseClustering_test2.dcd));
 	cs2.resetScoring();
 	PoseClustering pc(&cs2, 10.00);
 
@@ -1607,7 +1608,7 @@ CHECK (convertSnaphots2Transformations())
 				 << std::endl;
 	}
 
-	TEST_FILE(filename.c_str(), BALL_TEST_DATA_PATH(PoseClustering_transformFile.dat))
+	TEST_FILE(filename.c_str(), TEST_DATA_PATH(ball_core/PoseClustering_transformFile.dat))
 
 
 RESULT

@@ -5,18 +5,18 @@
 // NOTE: we are still missing a test that triggers a restart in the minimization after
 //			 the line search fails
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/MOLMEC/MINIMIZATION/strangLBFGS.h>
-#include <BALL/MOLMEC/AMBER/amber.h>
-#include <BALL/DATATYPE/options.h>
-#include <BALL/KERNEL/PTE.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/MATHS/analyticalGeometry.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
-#include <BALL/STRUCTURE/residueChecker.h>
+#include <BALL/core/molmec/minimization/strangLBFGS.h>
+#include <BALL/core/molmec/amber/amber.h>
+#include <BALL/core/datatype/options.h>
+#include <BALL/core/kernel/PTE.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/maths/analyticalGeometry.h>
+#include <BALL/core/structure/fragmentDB.h>
+#include <BALL/core/structure/residueChecker.h>
 ///////////////////////////
 
 START_TEST(StrangLBFGSMinimizer)
@@ -293,7 +293,7 @@ RESULT
 
 CHECK(StrangLBFGSMinimizer::minimize(Size, bool, improved) AlaAla)	
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(AA.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AA.hin));
 	f >> S;
 	S.deselect();
 	
@@ -340,7 +340,7 @@ RESULT
 
 CHECK(StrangLBFGSMinimizer::minimize(Size, bool, not improved) AlaAla)	
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(AA.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/AA.hin));
 	f >> S;
 	S.deselect();
 	
@@ -388,7 +388,7 @@ RESULT
 
 CHECK(StrangLBFGSMinimizer::minimize(Size, bool, improved) Ethane)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(ethan.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/ethan.hin));
 	f >> S;
 	FF.options[AmberFF::Option::ASSIGN_CHARGES] = "false";
 	FF.setup(S);
@@ -457,7 +457,7 @@ RESULT
 
 CHECK(StrangLBFGSMinimizer::minimize(Size, bool, not improved) Ethane)
 	System S;
-	HINFile f(BALL_TEST_DATA_PATH(ethan.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/ethan.hin));
 	f >> S;
 	FF.options[AmberFF::Option::ASSIGN_CHARGES] = "false";
 	FF.setup(S);

@@ -2,15 +2,15 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/SOLVATION/reissCavFreeEnergyProcessor.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/KERNEL/system.h>
-#include <BALL/ENERGY/energyProcessor.h>
-#include <BALL/STRUCTURE/fragmentDB.h>
+#include <BALL/core/solvation/reissCavFreeEnergyProcessor.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/kernel/system.h>
+#include <BALL/core/energy/energyProcessor.h>
+#include <BALL/core/structure/fragmentDB.h>
 ///////////////////////////
 
 START_TEST(ReissCavFreeEnergyProcessor)
@@ -29,7 +29,7 @@ CHECK(ReissCavFreeEnergyProcessor::ReissCavFreeEnergyProcessor())
 RESULT 
 
 CHECK(ReissCavFreeEnergyProcessor::ReissCavFreeEnergyProcessor(const ReissCavFreeEnergyProcessor& proc))
-  HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+  HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
   System S;
   f >> S;
   f.close();
@@ -57,7 +57,7 @@ RESULT
 
 
 CHECK(ReissCavFreeEnergyProcessor::ReissCavFreeEnergyProcessor& operator = (const ReissCavFreeEnergyProcessor& proc) + operator ==)
-  HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+  HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
   System S;
   f >> S;
   f.close();
@@ -81,7 +81,7 @@ RESULT
 
 CHECK(ReissCavFreeEnergyProcessor / Methane)
 	PRECISION(0.05)
-	HINFile f(BALL_TEST_DATA_PATH(methane.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/methane.hin));
 	System S;
 	f >> S;
 	f.close();

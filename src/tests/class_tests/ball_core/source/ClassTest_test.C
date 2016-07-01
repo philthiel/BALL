@@ -1,9 +1,8 @@
-// -*- Mode: C++; tab-width: 2; -*-
-// vi: set ts=2:
-//
+//_new_file_header
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 using namespace BALL;
 
@@ -57,11 +56,11 @@ CHECK("STATUS(a)")
 RESULT
 
 CHECK("TEST_FILE(filename, templatename)")
-	TEST_FILE(BALL_TEST_DATA_PATH(class_test_infile.txt), BALL_TEST_DATA_PATH(class_test_template.txt))
+	TEST_FILE(TEST_DATA_PATH(ball_core/class_test_infile.txt), TEST_DATA_PATH(ball_core/class_test_template.txt))
 RESULT
 
 CHECK("TEST_FILE_REGEXP(filename, templatename)")
-	TEST_FILE_REGEXP(BALL_TEST_DATA_PATH(class_test_infile.txt), BALL_TEST_DATA_PATH(class_test_regexp_template.txt))
+	TEST_FILE_REGEXP(TEST_DATA_PATH(ball_core/class_test_infile.txt), TEST_DATA_PATH(ball_core/class_test_regexp_template.txt))
 RESULT
 
 CHECK("ABORT_IF(condition)")

@@ -2,19 +2,19 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/MOLMEC/MMFF94/MMFF94.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94StretchBend.h>
-#include <BALL/MOLMEC/MMFF94/MMFF94NonBonded.h>
-#include <BALL/MOLMEC/COMMON/forceFieldComponent.h>
-#include <BALL/MATHS/matrix44.h>
-#include <BALL/FORMAT/HINFile.h>
-#include <BALL/FORMAT/MOL2File.h>
-#include <BALL/KERNEL/PTE.h>
+#include <BALL/core/molmec/mmff94/MMFF94.h>
+#include <BALL/core/molmec/mmff94/MMFF94StretchBend.h>
+#include <BALL/core/molmec/mmff94/MMFF94NonBonded.h>
+#include <BALL/core/molmec/common/forceFieldComponent.h>
+#include <BALL/core/maths/matrix44.h>
+#include <BALL/core/format/HINFile.h>
+#include <BALL/core/format/MOL2File.h>
+#include <BALL/core/kernel/PTE.h>
 
 ///////////////////////////
 using namespace BALL;
@@ -83,7 +83,7 @@ mmff.options[MMFF94::Option::NONBONDED_CUTOFF] = 199;
 mmff.options[MMFF94::Option::DISTANCE_DEPENDENT_DIELECTRIC] = false;
 
 CHECK(forces and energies equal in two consecutive runs)
-	MOL2File f(BALL_TEST_DATA_PATH(MMFF94_test2.mol2));
+	MOL2File f(TEST_DATA_PATH(ball_core/MMFF94_test2.mol2));
 	System s;
 	f >> s;
 	f.close();
@@ -113,7 +113,7 @@ MMFF94StretchBend& sb = *((MMFF94StretchBend*) ffc);
 
 // optimal values and old values comared:
 CHECK(test 1.1: Stretches)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94_test1.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94_test1.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -145,7 +145,7 @@ RESULT
 
 // compare values to CHARMM:
 CHECK(test 1.2: Stretches compared to CHARMM implementation)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-stretch.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-stretch.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -172,7 +172,7 @@ RESULT
 
 
 CHECK(test 1.3: Stretches with finite difference)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94_test1.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94_test1.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -222,7 +222,7 @@ CHECK(test 1.3: Stretches with finite difference)
 RESULT
 
 CHECK(test 2.1: Bends)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-bend.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-bend.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -299,7 +299,7 @@ CHECK(test 2.1: Bends)
 RESULT
 
 CHECK(test 3.1: linear Bends)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-bend-lin.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-bend-lin.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -344,7 +344,7 @@ CHECK(test 3.1: linear Bends)
 RESULT
 
 CHECK(force test 4.1: StretchBends)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-bend.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-bend.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -384,7 +384,7 @@ CHECK(force test 4.1: StretchBends)
 RESULT
 
 CHECK(force test 4.2: StretchBends)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-bend2.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-bend2.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -437,7 +437,7 @@ RESULT
 
 
 CHECK(force test 4.3: StretchBends)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-bend3.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-bend3.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -475,7 +475,7 @@ CHECK(force test 4.3: StretchBends)
 RESULT
 
 CHECK(force test 5.1: Planes)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-plane.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-plane.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -522,7 +522,7 @@ CHECK(force test 5.1: Planes)
 RESULT
 
 CHECK(force test 5.2: Planes)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-plane2.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-plane2.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -578,7 +578,7 @@ CHECK(force test 5.2: Planes)
 RESULT
 
 CHECK(force test 6: Torsions)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-torsion.hin));
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-torsion.hin));
 	System s;
 	f >> s;
 	f.close();
@@ -626,7 +626,7 @@ RESULT
 
 
 CHECK(force test 7: VDW)
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-vdw2.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-vdw2.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -693,7 +693,7 @@ RESULT
 
 CHECK(force test 8: ES CDIE)
 	MMFF94NonBonded& nb = *(MMFF94NonBonded*)enableOneComponent("MMFF94 NonBonded", mmff);
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-vdw.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-vdw.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -763,7 +763,7 @@ CHECK(force test 8.2: ES RDIE)
 	mmff.options[MMFF94::Option::DISTANCE_DEPENDENT_DIELECTRIC] = true;
 
 	MMFF94NonBonded& nb = *(MMFF94NonBonded*)enableOneComponent("MMFF94 NonBonded", mmff);
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-vdw.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-vdw.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -818,7 +818,7 @@ CHECK(force test 9: ES SWITCH)
 	mmff.options[MMFF94_ES_ENABLED] = "true";
 
 	MMFF94NonBonded& nb = *(MMFF94NonBonded*)enableOneComponent("MMFF94 NonBonded", mmff);
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-vdw.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-vdw.hin));	
 	System s;
 	f >> s;
 	f.close();
@@ -904,7 +904,7 @@ CHECK(force test 10: ES SWITCH RDIE)
 	mmff.options[MMFF94::Option::DISTANCE_DEPENDENT_DIELECTRIC] = "true";
 
 	MMFF94NonBonded& nb = *(MMFF94NonBonded*)enableOneComponent("MMFF94 NonBonded", mmff);
-	HINFile f(BALL_TEST_DATA_PATH(MMFF94-vdw.hin));	
+	HINFile f(TEST_DATA_PATH(ball_core/MMFF94-vdw.hin));	
 	System s;
 	f >> s;
 	f.close();

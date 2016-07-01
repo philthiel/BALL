@@ -1,15 +1,15 @@
 // -*- Mode: C++; tab-width: 2; -*-
 // vi: set ts=2:
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
-#include <BALL/SCORING/COMMON/gridBasedScoring.h>
-#include <BALL/SCORING/FUNCTIONS/MMScoring.h>
-#include <BALL/DOCKING/COMMON/structurePreparer.h>
-#include <BALL/DOCKING/IMGDOCK/IMGDock.h>
-#include <BALL/FORMAT/PDBFile.h>
-#include <BALL/FORMAT/MOL2File.h>
+#include <BALL/core/scoring/common/gridBasedScoring.h>
+#include <BALL/core/scoring/functions/MMScoring.h>
+#include <BALL/core/docking/common/structurePreparer.h>
+#include <BALL/core/docking/imgdock/IMGDock.h>
+#include <BALL/core/format/PDBFile.h>
+#include <BALL/core/format/MOL2File.h>
 
 
 using namespace std;
@@ -27,8 +27,8 @@ PRECISION(1E-3)
 
 Log.remove(cout);
 
-PDBFile pdb(BALL_TEST_DATA_PATH(1b5i_pocket.pdb));
-MOL2File mol2(BALL_TEST_DATA_PATH(1b5i_ligand.mol2));
+PDBFile pdb(TEST_DATA_PATH(ball_core/1b5i_pocket.pdb));
+MOL2File mol2(TEST_DATA_PATH(ball_core/1b5i_ligand.mol2));
 System pocket; pdb >> pocket;
 System ligand; mol2 >> ligand;
 
@@ -121,7 +121,7 @@ CHECK(IMeedyDock)
 
 	docker.dockLigand(ligand2);
 	TEST_REAL_EQUAL(docker.getScoringFunction()->getScore(),-59.7147);
-	MOL2File mol2res(BALL_TEST_DATA_PATH(1b5i_ligand-dockOut.mol2));
+	MOL2File mol2res(TEST_DATA_PATH(ball_core/1b5i_ligand-dockOut.mol2));
 	System expected_dockres;
 	mol2res >> expected_dockres;
 

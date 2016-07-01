@@ -2,12 +2,12 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
 
-#include <BALL/FORMAT/JCAMPFile.h>
+#include <BALL/core/format/JCAMPFile.h>
 
 ///////////////////////////
 
@@ -30,11 +30,11 @@ RESULT
 
 CHECK(JCAMPFile(const String& name, OpenMode open_mode = std::ios::in) throw(Exception::FileNotFound))
 	TEST_EXCEPTION(Exception::FileNotFound, JCAMPFile("asddddddddddddaaaaaaaacasdd"))
-	JCAMPFile jcamp(BALL_TEST_DATA_PATH(JCAMPFile_test.dat));
+	JCAMPFile jcamp(TEST_DATA_PATH(ball_core/JCAMPFile_test.dat));
 RESULT
 
 CHECK(void read() throw(Exception::ParseError))
-	JCAMPFile jcamp(BALL_TEST_DATA_PATH(JCAMPFile_test.dat));
+	JCAMPFile jcamp(TEST_DATA_PATH(ball_core/JCAMPFile_test.dat));
 	jcamp.read();
 
 	/*
@@ -56,7 +56,7 @@ CHECK(void read() throw(Exception::ParseError))
 RESULT
 
 CHECK(bool write() throw(File::CannotWrite))
-	JCAMPFile jcamp(BALL_TEST_DATA_PATH(JCAMPFile_test.dat));
+	JCAMPFile jcamp(TEST_DATA_PATH(ball_core/JCAMPFile_test.dat));
 	jcamp.read();
 	jcamp.close();
 	String filename;

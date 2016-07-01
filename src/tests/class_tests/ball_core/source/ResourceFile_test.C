@@ -2,11 +2,11 @@
 // vi: set ts=2:
 //
 
-#include <BALL/CONCEPT/classTest.h>
-#include <BALLTestConfig.h>
+#include <BALL/core/concept/classTest.h>
+#include <testConfig.h>
 
 ///////////////////////////
-#include <BALL/FORMAT/resourceFile.h>
+#include <BALL/core/format/resourceFile.h>
 ///////////////////////////
 
 START_TEST(ResourceFile)
@@ -464,7 +464,7 @@ RESULT
 
 ResourceFile f;
 CHECK(ResourceFile::open(const String&))
-	TEST_EQUAL(f.open(BALL_TEST_DATA_PATH(test.db)), true)
+	TEST_EQUAL(f.open(TEST_DATA_PATH(ball_core/test.db)), true)
 	TEST_EQUAL(f.isValid(), true)
 	TEST_NOT_EQUAL(f.getEntry("/Node1"), 0)
 	TEST_EQUAL(f.getEntry("//Node1"), 0)
@@ -493,7 +493,7 @@ RESULT
 
 CHECK(ResourceFile::saveAs(const Entry&, const String&))
 	ResourceFile rf;
-	rf.open(BALL_TEST_DATA_PATH(test.db));
+	rf.open(TEST_DATA_PATH(ball_core/test.db));
 	TEST_EQUAL(rf.isValid(), true)
 	String filename;
 	NEW_TMP_FILE(filename);
