@@ -5,12 +5,9 @@ project("BALL_tests")
 
 
 # --------------------------------------------------------------------------
-# Configure root path for all test data
+# Test data path
 #
-configure_file(${PROJECT_SOURCE_DIR}/cmake/templates/testConfig.h.in ${PROJECT_BINARY_DIR}/include/testConfig.h)
-
-# Include header directories
-include_directories(${PROJECT_BINARY_DIR}/include)
+set(TEST_DATA_PATH ${PROJECT_SOURCE_DIR}/data)
 
 
 # --------------------------------------------------------------------------

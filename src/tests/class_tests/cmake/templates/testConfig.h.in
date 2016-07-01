@@ -1,0 +1,4 @@
+//_new_file_header
+
+
+#define TEST_DATA_PATH(filename) "@TEST_DATA_PATH@" #filename

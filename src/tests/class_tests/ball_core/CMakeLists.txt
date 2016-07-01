@@ -22,7 +22,7 @@ include_directories(${ball_core_INCLUDE_DIRECTORIES})
 # --------------------------------------------------------------------------
 # Include lists of test sources and add test groups as targets
 #
-include(sources.cmake)
+include(source/sources.cmake)
 BALL_MACRO_add_class_test_targets(tests_core_ ball_core)
 
 

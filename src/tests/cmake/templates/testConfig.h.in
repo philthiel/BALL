@@ -1,4 +1,0 @@
-//_new_file_header
-
-
-#define TEST_DATA_PATH(filename) "@PROJECT_SOURCE_DIR@/data/" #filename
