@@ -138,7 +138,7 @@ namespace BALL
 	int init, int pop, int surv, double mrate, int save,
 	int, double, int cstart)
   {
-    GenericGene::initializeRNG();
+	//GenericGene::initializeRNG();
 
     gp_ = gp;
 
@@ -146,9 +146,12 @@ namespace BALL
      */
     gp_->connectTo(this);
 
-    unsigned t = (unsigned) time(NULL);
+	//unsigned t = (unsigned) time(NULL);
 
-    rng_.setup((t+116)%21349, (t+4382)%31582);
+	//rng_.setup((t+116)%21349, (t+4382)%31582);
+
+	random_device r_dev;
+	mersenne_twister.seed(r_dev());
 
     max_iterations_ = iter;
     conv_start_ = cstart;
@@ -172,6 +175,8 @@ namespace BALL
 
   void GeneticAlgorithm::select(Size x)
   {
+	  uniform_real_distribution<double> rand_double_0_1(0.0,1.0);
+
     vector<GeneticIndividual>& gp = pools_[x];
 
     /** number of required offsprings
@@ -215,7 +220,7 @@ namespace BALL
       {
 	pair<GeneticIndividual*, GeneticIndividual*> gi_pair;
 
-	double prob = rng_.randomDouble(0.0, 1.0);
+	double prob = rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
 	for (Size y = 0; y < probabilities_.size(); y++)
 	  /** look for rank with rank < x < rank + 1
@@ -226,7 +231,7 @@ namespace BALL
 	      break;
 	    }
 
-	prob = rng_.randomDouble(0.0, 1.0);
+	prob = rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
 	for (Size y = 0; y < probabilities_.size(); y++)
 	  /** look for rank with rank < x < rank + 1
@@ -288,35 +293,39 @@ namespace BALL
 
   void GeneticAlgorithm::mutate()
   {
-    for (Size x = 0; x < pools_.size(); ++x)
-      {
-	vector<GeneticIndividual>& gp = pools_[x];
+	  uniform_int_distribution<int> rand_int_1;
+	  uniform_int_distribution<int> rand_int_2;
 
-	for (int y = 0; y < int(mutation_rate_*pools_[y].size()); ++y)
+	  for (Size x = 0; x < pools_.size(); ++x)
 	  {
-	    Size index = 0;
+		  vector<GeneticIndividual>& gp = pools_[x];
+		  rand_int_1 = uniform_int_distribution<int>(0, gp.size() - immune_ - 1);
 
-	    /** choose random individual
-	     */
-	    int i = 0;
-	    do
-	    {
-		index = rng_.randomInteger(0, gp.size()-immune_-1) + immune_;
-		i++;
-	    }
-	    while (gp[index].isMutated() && i < 100);
+		  for (int y = 0; y < int(mutation_rate_*pools_[y].size()); ++y)
+		  {
+			  Size index = 0;
 
-	    if (!gp[index].isMutated())
-	    {
-		gp[index].setAltered(true);
-		gp[index].setMutated(true);
+			  //choose random individual
+			  int i = 0;
+			  do
+			  {
+				  index = rand_int_1(mersenne_twister) + immune_; // rng_.randomInteger(0, gp.size()-immune_-1) + immune_;
+				  i++;
+			  }
+			  while (gp[index].isMutated() && i < 100);
 
-		/** mutate random gene
-		*/
-		gp[index].getGene(rng_.randomInteger(0, gp[index].numberOfGenes()-1))->mutate();
-	    }
+			  if (!gp[index].isMutated())
+			  {
+				  gp[index].setAltered(true);
+				  gp[index].setMutated(true);
+
+				  // mutate random gene
+				  //gp[index].getGene(rng_.randomInteger(0, gp[index].numberOfGenes()-1))->mutate();
+				  rand_int_2 = uniform_int_distribution<int>(0, gp[index].numberOfGenes() - 1);
+				  gp[index].getGene(rand_int_2(mersenne_twister))->mutate();
+			  }
+		  }
 	  }
-      }
   }
 
   void GeneticAlgorithm::cleanUp()

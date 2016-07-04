@@ -3,7 +3,7 @@
 
 #include <BALL/core/docking/geneticdock/genes.h>
 
-#include <BALL/core/maths/randomNumberGenerator.h>
+//#include <BALL/core/maths/randomNumberGenerator.h>
 
 #include <iostream>
 #include <time.h>
@@ -15,6 +15,7 @@ using namespace std;
 namespace BALL
 {
 
+/*
   RandomNumberGenerator GenericGene::rng_;
 
   void GenericGene::initializeRNG()
@@ -23,6 +24,11 @@ namespace BALL
 
     rng_.setup(t%31329, (t+3244)%30082);
   }
+*/
+
+	random_device r_dev;
+	mt19937 GenericGene::mersenne_twister = mt19937(r_dev());
+	uniform_real_distribution<double> GenericGene::rand_double_0_1 = uniform_real_distribution<double>(0.0, 1.0);
 
 
   DoubleGene::DoubleGene()
@@ -49,7 +55,7 @@ namespace BALL
     /** assign random number to each double variable
      */
     for (Size x = 0; x < values_.size(); ++x)
-      values_[x] = rng_.randomDouble(0.0, 1.0);
+      values_[x] = GenericGene::rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
   }
 
   GenericGene* DoubleGene::mate(GenericGene* gg)
@@ -111,7 +117,7 @@ namespace BALL
 
 	/** blend two values with respect to a random number
 	 */
-	offspring->values_[x] = v1 - 0.5*d + 2*d*rng_.randomDouble(0.0, 1.0);
+	offspring->values_[x] = v1 - 0.5*d + 2 * d * rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
 	if (offspring->values_[x] < 0)
 	  offspring->values_[x] += 1;
@@ -128,7 +134,9 @@ namespace BALL
   {
     /** set random variable to random number
      */
-    values_[rng_.randomInteger(0, values_.size()-1)] = rng_.randomDouble(0.0, 1.0);
+    uniform_int_distribution<int> rand_int(0, values_.size() - 1);
+    values_[rand_int(mersenne_twister)] = GenericGene::rand_double_0_1(mersenne_twister);
+    //values_[rng_.randomInteger(0, values_.size()-1)] = rng_.randomDouble(0.0, 1.0);
   }
 
 
@@ -167,12 +175,12 @@ namespace BALL
      */
     double pi = 3.14159;
 
-    double x = rng_.randomDouble(0.0, 1.0);
+    double x = GenericGene::rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
     double o = sqrt(1 - x);
     double b = sqrt(x);
-    double c = 2 * pi * rng_.randomDouble(0.0, 1.0);
-    double d = 2 * pi * rng_.randomDouble(0.0, 1.0);
+    double c = 2 * pi * GenericGene::rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
+    double d = 2 * pi * GenericGene::rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
 	 Vector3 axis(cos(d)*b, sin(c)*o, cos(c)*o);
     double angle = sin(d)*b;
@@ -205,10 +213,10 @@ namespace BALL
 	double k = fabs(qg->quat_.k()-quat_.k());
 	double angle = fabs(qg->quat_.getAngle() - quat_.getAngle());
 
-	i = quat_.i() - 0.5*i + 2 * i * rng_.randomDouble(0.0, 1.0);
-	j = quat_.j() - 0.5*j + 2 * j * rng_.randomDouble(0.0, 1.0);
-	k = quat_.k() - 0.5*k + 2 * k * rng_.randomDouble(0.0, 1.0);
-	angle = quat_.getAngle() - 0.5*angle + 2 * angle * rng_.randomDouble(0.0, 1.0);
+	i = quat_.i() - 0.5*i + 2 * i * rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
+	j = quat_.j() - 0.5*j + 2 * j * rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
+	k = quat_.k() - 0.5*k + 2 * k * rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
+	angle = quat_.getAngle() - 0.5*angle + 2 * angle * rand_double_0_1(mersenne_twister); // rng_.randomDouble(0.0, 1.0);
 
 	double t = sqrt(i*i + j*j + k*k + angle*angle);
 

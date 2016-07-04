@@ -4,14 +4,16 @@
 #ifndef BALL_CORE_DOCKING_GENETICDOCK_GENES_H
 #define BALL_CORE_DOCKING_GENETICDOCK_GENES_H
 
-#include <vector>
 
 #include <BALL/core/maths/quaternion.h>
+
+#include <random>
+#include <vector>
 
 
 namespace BALL
 {
-  class RandomNumberGenerator;
+  //class RandomNumberGenerator;
 
   /** pure virtual base class
    */
@@ -41,14 +43,16 @@ namespace BALL
 
     /** initilize random number generator
      */
-    static void initializeRNG();
+	//static void initializeRNG();
 
   protected:
 
     /** random number generator for all genes
      */
-    static RandomNumberGenerator rng_;
+	//static RandomNumberGenerator rng_;
+	static std::mt19937 mersenne_twister;
 
+	static std::uniform_real_distribution<double> rand_double_0_1;
   };
 
   /** gene with an arbitrary number of double values

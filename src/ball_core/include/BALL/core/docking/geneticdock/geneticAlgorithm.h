@@ -4,12 +4,14 @@
 #ifndef BALL_CORE_DOCKING_GENETICDOCK_GENETICALGORITHM_H
 #define BALL_CORE_DOCKING_GENETICDOCK_GENETICALGORITHM_H
 
-#include <utility>
-#include <vector>
 
-#include <BALL/core/maths/randomNumberGenerator.h>
+//#include <BALL/core/maths/randomNumberGenerator.h>
 #include <BALL/core/docking/geneticdock/geneticIndividual.h>
 #include <BALL/core/docking/geneticdock/parameter.h>
+
+#include <random>
+#include <utility>
+#include <vector>
 
 
 namespace BALL
@@ -173,9 +175,10 @@ namespace BALL
 
       DockingAlgorithm* docking_algorithm_;
 
-      /**
-       */
-      RandomNumberGenerator rng_;
+	/**
+	*/
+	//RandomNumberGenerator rng_;
+	std::mt19937 mersenne_twister;
 
       /** used to initialize new individuals
        */
