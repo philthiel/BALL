@@ -1,0 +1,27 @@
+set(SOURCES_LIST
+	AromaticityProcessor_test
+	ConnectivityBase_test
+	ConnectivityDescriptors_test
+	Descriptor_test
+	PartialChargeProcessor_test
+	PartialChargeBase_test
+	PartialChargeDescriptors_test
+	RingPerceptionProcessor_test
+	SimpleBase_test
+	SimpleDescriptors_test
+	SurfaceBase_test
+	SurfaceDescriptors_test
+	NBModel_test
+	ALLModel_test
+	FeatureSelection_test
+	GPModel_test
+	KNNModel_test
+	KPCRModel_test
+	KPLSModel_test
+	LDAModel_test
+	MLRModel_test
+	PCRModel_test
+	PLSModel_test
+	RRModel_test
+	SNBModel_test
+)

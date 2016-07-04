@@ -1,0 +1,34 @@
+set(SOURCES_LIST
+	PTE_test
+	Atom_test
+	Bond_test
+	AtomContainer_test
+	Fragment_test
+	Chain_test
+	Molecule_test
+	SecondaryStructure_test
+	System_test
+	Protein_test
+	PDBAtom_test
+	NucleicAcid_test
+	Nucleotide_test
+	Residue_test
+	Expression_test
+	ExpressionParser_test
+	ExpressionPredicate_test
+	ExpressionTree_test
+	KernelPredicate_test
+	Selector_test
+	RuleEvaluator_test
+	StandardPredicates_test
+	DefaultProcessors_test
+	FragmentDB_test
+	NormalizeNamesProcessor_test
+	ForEach_test
+	GlobalKernel_test
+	CompositeIteratorTraits_test
+	AtomIterator_test
+	AtomBondIteratorTraits_test
+	Extractors_test
+	StdIteratorWrapper_test
+)

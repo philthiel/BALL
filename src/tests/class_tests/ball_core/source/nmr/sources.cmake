@@ -1,0 +1,15 @@
+set(SOURCES_LIST
+	HBondProcessor_test
+	RandomCoilShiftProcessor_test
+	AnisotropyShiftProcessor_test
+	ClearShiftProcessor_test
+	CreateSpectrumProcessor_test
+	EFShiftProcessor_test
+	HaighMallionShiftProcessor_test
+	JohnsonBoveyShiftProcessor_test
+	ShiftModel_test
+	ShiftModule_test
+	Spectrum_test
+	Peak_test
+	PeakList_test
+)

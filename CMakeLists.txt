@@ -26,6 +26,13 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 include(ball_functions)
 
 
+#------------------------------------------------------------------------------
+# Include the standard Dart testing module
+#
+include(Dart)
+enable_testing()
+
+
 # --------------------------------------------------------------------------
 # Set default build type
 #

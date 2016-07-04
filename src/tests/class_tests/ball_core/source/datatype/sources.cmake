@@ -1,0 +1,25 @@
+set(SOURCES_LIST
+	Bit_test
+	BitVector_test
+	Contour_test
+	ContourLine_test
+	Hash_test
+	HashMap_test
+	StringHashMap_test
+	HashSet_test
+	HashGrid3_test
+	HashGridBox3_test
+	HashGrid3DataIteratorTraits_test
+	HashGrid3BoxIteratorTraits_test
+	HashGrid3DataItem_test
+	HashGrid3NeighborBoxItem_test
+	Options_test
+	Substring_test
+	Triple_test
+	Quadruple_test
+	RegularData1D_test
+	RegularData2D_test
+	RegularData3D_test
+	RegularExpression_test
+	ContourSurface_test
+)

@@ -1,0 +1,15 @@
+set(SOURCES_LIST
+	PoissonBoltzmann_test
+	SolventDescriptor_test
+	SolventParameter_test
+	ClaverieParameter_test
+	ReissCavFreeEnergyProcessor_test
+	UhligCavFreeEnergyProcessor_test
+	PCMCavFreeEnergyProcessor_test
+	PierottiCavFreeEnergyProcessor_test
+	Pair6_12RDFIntegrator_test
+	Pair6_12InteractionEnergyProcessor_test
+	PairExpInteractionEnergyProcessor_test
+	PairExpRDFIntegrator_test
+	PARSE_test
+)

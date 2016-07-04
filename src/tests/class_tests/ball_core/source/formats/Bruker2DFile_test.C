@@ -1,0 +1,33 @@
+//_new_file_header
+
+
+#include <BALL/core/concept/classTest.h>
+
+///////////////////////////
+
+#include <BALL/core/format/bruker2DFile.h>
+
+///////////////////////////
+
+START_TEST(Bruker2DFile)
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+using namespace BALL;
+
+Bruker2DFile* ptr = 0;
+CHECK(Bruker2DFile::Bruker2DFile() throw())
+	ptr = new Bruker2DFile;
+	TEST_NOT_EQUAL(ptr, 0)
+RESULT											
+
+CHECK(Bruker2DFile::~Bruker2DFile() throw())
+	delete ptr;
+RESULT											
+
+/// ????
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+END_TEST

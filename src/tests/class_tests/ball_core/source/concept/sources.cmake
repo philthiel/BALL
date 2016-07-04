@@ -1,0 +1,23 @@
+set(SOURCES_LIST
+	LogStream_test
+	AutoDeletable_test
+	Factory_test
+	Object_test
+	PersistentObject_test
+	PersistenceManager_test
+	TextPersistenceManager_test
+	Selectable_test
+	NamedProperty_test
+	PropertyManager_test
+	CompositeCompositeIteratorTraits_test
+	CompositeChildcompositeIteratorTraits_test
+	CompositeAncestorIteratorTraits_test
+	Embeddable_test
+	BaseIterator_test
+	ConstForwardIterator_test
+	ForwardIterator_test
+	ConstBidirectionalIterator_test
+	BidirectionalIterator_test
+	ConstRandomAccessIterator_test
+	RandomAccessIterator_test
+)

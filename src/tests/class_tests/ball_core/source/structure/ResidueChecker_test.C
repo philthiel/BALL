@@ -1,0 +1,35 @@
+//_new_file_header
+
+
+#include <BALL/core/concept/classTest.h>
+
+///////////////////////////
+
+#include <BALL/core/structure/residueChecker.h>
+
+using namespace BALL;
+
+///////////////////////////
+
+START_TEST(ResidueChecker)
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+ResidueChecker* rc_ptr = 0;
+CHECK(ResidueChecker())
+	rc_ptr = new ResidueChecker;
+	TEST_NOT_EQUAL(rc_ptr, 0)
+RESULT								
+
+CHECK(~ResidueChecker())
+	delete rc_ptr;
+	rc_ptr = 0;
+RESULT
+
+// ????
+// Real tests still missing
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+END_TEST

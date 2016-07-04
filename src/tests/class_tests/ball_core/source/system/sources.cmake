@@ -1,0 +1,12 @@
+set(SOURCES_LIST
+	Directory_test
+	FileSystem_test
+	File_test
+	Path_test
+	Precisetime_test
+	Socket_test
+	Sysinfo_test
+	Timer_test
+	TimeStamp_test
+	TransformationManager_test
+)

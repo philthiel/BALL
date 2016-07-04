@@ -2,3 +2,4 @@
 
 
 #define TEST_DATA_PATH(filename) "@TEST_DATA_PATH@" #filename
+#define TEST_SOURCES_PATH(filename) "@PROJECT_SOURCE_DIR@/" #filename

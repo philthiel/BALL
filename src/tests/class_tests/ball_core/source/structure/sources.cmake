@@ -1,0 +1,40 @@
+set(SOURCES_LIST
+	AddHydrogenProcessor_test
+	AnalyticalSES_test
+	AssignBondOrderProcessor_test
+	AtomBijection_test
+	BinaryFingerprintMethods_test
+	BindingPocketProcessor_test
+	ConnectedComponentsProcessor_test
+	DisulfidBondProcessor_test
+	Enumerator_test
+	EnumeratorIndex_test
+	GeometricProperties_test
+	SimpleMolecularGraph_test
+	PeptideBuilder_test
+	PeptideCapProcessor_test
+	Peptides_test
+	RadialDistributionFunction_test
+	RDFIntegrator_test
+	RDFParameter_test
+	RDFSection_test
+	ReconstructFragmentProcessor_test
+	ResidueChecker_test
+	RMSDMinimizer_test
+	SideChainPlacementProcessor_test
+	SmilesParser_test
+	SmartsParser_test
+	SmartsMatcher_test
+	StructureMapper_test
+	TransformationProcessor_test
+	TranslationProcessor_test
+	SurfaceProcessor_test
+	SecondaryStructureProcessor_test
+	UCK_test
+	BuildBondsProcessor_test
+	#	MoleculeAssembler_test
+	#	SDGenerator_test
+	#	RingAnalyser_test
+	ResidueRotamerSet_test
+	RotamerLibrary_test
+)

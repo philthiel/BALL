@@ -17,7 +17,7 @@ set(ball_sources CACHE INTERNAL "This variable should hold all BALL source files
 set(ball_headers CACHE INTERNAL "This variable should hold all BALL header files at the end of the config step")
 
 # Automatically collect header and source files
-BALL_MACRO_collect_headers()
+BALL_MACRO_collect_headers(${PROJECT_SOURCE_DIR} ball_headers)
 BALL_MACRO_collect_sources()
 
 # Mark header files

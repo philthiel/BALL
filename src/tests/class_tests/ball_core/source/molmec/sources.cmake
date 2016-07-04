@@ -1,0 +1,18 @@
+set(SOURCES_LIST
+	Gradient_test
+	AtomVector_test
+	MolmecSupport_test
+	SnapShot_test
+	SnapShotManager_test
+	ForceField_test
+	AmberFF_test
+	MMFF94_test
+	CharmmFF_test
+	EnergyMinimizer_test
+	LineSearch_test
+	SteepestDescentMinimizer_test
+	ConjugateGradientMinimizer_test
+	StrangLBFGSMinimizer_test
+	ShiftedLVMMMinimizer_test
+	AtomTypes_test
+)

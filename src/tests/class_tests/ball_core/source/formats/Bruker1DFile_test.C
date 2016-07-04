@@ -1,0 +1,33 @@
+//_new_file_header
+
+
+#include <BALL/core/concept/classTest.h>
+
+///////////////////////////
+
+#include <BALL/core/format/bruker1DFile.h>
+
+///////////////////////////
+
+START_TEST(Bruker1DFile)
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+
+using namespace BALL;
+
+Bruker1DFile* ptr = 0;
+CHECK(Bruker1DFile::Bruker1DFile() throw())
+	ptr = new Bruker1DFile;
+	TEST_NOT_EQUAL(ptr, 0)
+RESULT											
+
+CHECK(Bruker1DFile::~Bruker1DFile() throw())
+	delete ptr;
+RESULT											
+
+/// ????
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+END_TEST

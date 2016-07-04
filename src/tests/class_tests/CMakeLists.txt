@@ -7,7 +7,7 @@ project("BALL_class_tests")
 # --------------------------------------------------------------------------
 # Configure testConfig.h header file
 #
-configure_file(${PROJECT_SOURCE_DIR}/cmake/templates/testConfig.h.in ${PROJECT_BINARY_DIR}/include/testConfig.h)
+configure_file(${PROJECT_SOURCE_DIR}/cmake/templates/testConfig.h.in ${PROJECT_BINARY_DIR}/include/BALL/test/testConfig.h)
 
 # Include header directories
 include_directories(${PROJECT_BINARY_DIR}/include)
