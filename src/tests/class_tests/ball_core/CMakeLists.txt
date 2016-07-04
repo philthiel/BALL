@@ -13,9 +13,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/TEST)
 # --------------------------------------------------------------------------
 # Collect header files
 #
-set(HEADER_FILES_class_test_core CACHE INTERNAL "This variable should hold all BALL core test header files at the end of the config step")
-BALL_MACRO_collect_headers(${PROJECT_SOURCE_DIR} HEADER_FILES_class_test_core)
-set_property(SOURCE ${HEADER_FILES_class_test_core} APPEND PROPERTY HEADER_FILE_ONLY TRUE)
+set(class_test_core_HEADER_FILES CACHE INTERNAL "This variable should hold all BALL core test header files at the end of the config step")
+BALL_MACRO_collect_headers(class_test_core_HEADER_FILES)
+set_property(SOURCE ${class_test_core_HEADER_FILES} APPEND PROPERTY HEADER_FILE_ONLY TRUE)
 
 
 # --------------------------------------------------------------------------
