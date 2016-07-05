@@ -4,7 +4,7 @@
 #ifndef BALL_CORE_MOLMEC_PARAMETER_TEMPLATES_H
 #define BALL_CORE_MOLMEC_PARAMETER_TEMPLATES_H
 
-#include <BALL/core/datatype/hashset.h>
+#include <BALL/core/datatype/hashSet.h>
 #include <BALL/core/format/parameterSection.h>
 #include <BALL/core/kernel/atom.h>
 #include <BALL/core/kernel/system.h>
