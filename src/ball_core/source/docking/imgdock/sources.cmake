@@ -1,0 +1,3 @@
+set(SOURCES_LIST
+	IMGDock.C
+)
