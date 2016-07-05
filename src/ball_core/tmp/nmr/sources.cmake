@@ -1,0 +1,17 @@
+set(SOURCES_LIST
+	anisotropyShiftProcessor.C
+	clearShiftProcessor.C
+	EFShiftProcessor.C
+	empiricalHSShiftProcessor.C
+	experiment.C
+	HBondShiftProcessor.C
+	haighMallionShiftProcessor.C
+	createSpectrumProcessor.C
+	peak.C
+	peakList.C
+	shiftModel.C
+	shiftModule.C
+	spectrum.C
+	johnsonBoveyShiftProcessor.C
+	randomCoilShiftProcessor.C
+)	

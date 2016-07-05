@@ -1,0 +1,11 @@
+set(SOURCES_LIST
+	bitVector.C
+	contourSurface.C
+	hashGrid.C
+	options.C
+	regularExpression.C
+	regularData1D.C
+	regularData2D.C
+	regularData3D.C
+	string.C
+)	

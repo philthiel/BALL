@@ -1,0 +1,13 @@
+set(SOURCES_LIST
+	baseFunction.C
+	diffScoringFunction.C
+	diffGridBasedScoring.C
+	gridBasedScoring.C
+	linearBaseFunction.C
+	fermiBaseFunction.C
+	rescorer.C
+	scoreGridSet.C
+	scoringComponent.C
+	scoringFunction.C
+	scoringOptimizer.C
+)	

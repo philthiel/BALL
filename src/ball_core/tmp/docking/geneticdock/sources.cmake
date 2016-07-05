@@ -1,0 +1,10 @@
+set(SOURCES_LIST
+  dockProblem.C
+  evolutionaryDocking.C
+  genes.C
+  geneticAlgorithm.C
+  geneticIndividual.C
+  parameter.C
+  rotateBond.C
+  rotateBonds.C
+)
