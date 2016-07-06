@@ -124,9 +124,14 @@ macro(BALL_MACRO_collect_parser_sources SOURCE_FILE_LIST)
 
 			BISON_TARGET(${file}Parser ${PARSER_INPUT} ${PARSER_OUTPUT} COMPILE_FLAGS "--defines=${PARSER_HEADER} -p${PREFIX}")
 			FLEX_TARGET(${file}Lexer ${LEXER_INPUT} ${LEXER_OUTPUT} COMPILE_FLAGS "-P${PREFIX}")
+
 			ADD_FLEX_BISON_DEPENDENCY(${file}Lexer ${file}Parser)
 
 			list(APPEND ${SOURCE_FILE_LIST} ${PARSER_INPUT} ${PARSER_OUTPUT} ${LEXER_INPUT} ${LEXER_OUTPUT})
+
+			source_group("Source Files\\\\${group}" FILES ${PARSER_OUTPUT} ${LEXER_OUTPUT})
+			source_group("Parser Files\\\\${group}" FILES ${PARSER_INPUT})
+			source_group("Lexer Files\\\\${group}" FILES ${LEXER_INPUT})
 
 		endforeach()
 
