@@ -36,26 +36,28 @@ macro(BALL_MACRO_collect_headers HEADER_FILE_LIST)
 	# Step 1: collect groups
 	set(GROUPS)
 	file(GLOB_RECURSE ENTRIES RELATIVE ${PROJECT_SOURCE_DIR}/include/BALL "include/BALL/*")
-	foreach(e ${ENTRIES})
-		get_filename_component(group ${e} DIRECTORY)
+	foreach(entry ${ENTRIES})
+		get_filename_component(group ${entry} DIRECTORY)
 		list(APPEND GROUPS ${group})
 	endforeach()
 	list(REMOVE_DUPLICATES GROUPS)
 
 	# Step 2: collect files per group and add to list
-	foreach(g ${GROUPS})
-		file(GLOB_RECURSE FILES RELATIVE ${PROJECT_SOURCE_DIR} "include/BALL/${g}/*.h" "include/BALL/${g}/*.iC")
+	foreach(group ${GROUPS})
+
+		file(GLOB_RECURSE FILES RELATIVE ${PROJECT_SOURCE_DIR} "include/BALL/${group}/*.h" "include/BALL/${group}/*.iC")
 
 		set(HEADER_FILES_GROUP)
-		foreach(f ${FILES})
-			list(APPEND HEADER_FILES_GROUP ${f})
+		foreach(file ${FILES})
+			list(APPEND HEADER_FILES_GROUP ${file})
 		endforeach()
 
 		# Add header files to global list of header files
 		list(APPEND ${HEADER_FILE_LIST} ${HEADER_FILES_GROUP})
 
-		string(REGEX REPLACE "/" "\\\\" S_GROUP ${g})
+		string(REGEX REPLACE "/" "\\\\" S_GROUP ${group})
 		source_group("Header Files\\\\${S_GROUP}" FILES ${HEADER_FILES_GROUP})
+
 	endforeach()
 
 endmacro()
@@ -71,37 +73,62 @@ macro(BALL_MACRO_collect_sources SOURCE_FILE_LIST)
 
 	set(SOURCE_FILES)
 	foreach(s ${SOURCES_CMAKE})
-		set(PARSER_LIST)
 
 		get_filename_component(group ${s} DIRECTORY)
-		include(${PROJECT_SOURCE_DIR}/${s})
+		include(${s})
+
+		foreach(file ${SOURCES_LIST})
+			list(APPEND ${SOURCE_FILE_LIST} ${group}/${file})
+		endforeach()
 
 		string(REGEX REPLACE "/" "\\\\" S_GROUP ${group})
 		source_group("Source Files\\\\${S_GROUP}" FILES ${SOURCES_LIST})
 
-		foreach(f ${SOURCES_LIST})
-			list(APPEND ${SOURCE_FILE_LIST} ${group}/${f})
-		endforeach()
+	endforeach()
+
+endmacro()
+
+
+# --------------------------------------------------------------------------
+# Macro to collect and configure flex/bison source files
+#
+macro(BALL_MACRO_collect_parser_sources SOURCE_FILE_LIST)
+
+	# Step 1: collect sources.cmake files listing all source files
+	file(GLOB_RECURSE SOURCES_CMAKE RELATIVE ${PROJECT_SOURCE_DIR} "*sources.cmake")
+
+	foreach(s ${SOURCES_CMAKE})
+
+		set(PARSER_LIST)
+		get_filename_component(group ${s} DIRECTORY)
+		include(${s})
+
+		if(PARSER_LIST)
+			SET(OUTPUT_DIR ${PROJECT_BINARY_DIR}/${group})
+			FILE(MAKE_DIRECTORY ${OUTPUT_DIR})
+		endif()
 
 		# Collect and process parser/lexer files
-		foreach(f ${PARSER_LIST})
-			string(SUBSTRING ${f} 0 1 first)
-			string(SUBSTRING ${f} 1 -1 suffix)
+		foreach(file ${PARSER_LIST})
+
+			string(SUBSTRING ${file} 0 1 first)
+			string(SUBSTRING ${file} 1 -1 suffix)
 			string(TOUPPER ${first} first_uppercase)
 			set(PREFIX ${first_uppercase}${suffix})
 
-			SET(PARSERINPUT ${group}/${f}Parser.y)
-			SET(LEXERINPUT ${group}/${f}Lexer.l)
-			FILE(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/${group})
-			SET(PARSEROUTPUT ${PROJECT_BINARY_DIR}/${group}/${f}Parser.C)
-			SET(PARSERHEADER ${PROJECT_BINARY_DIR}/${group}/${f}Parser.h)
-			SET(LEXEROUTPUT  ${PROJECT_BINARY_DIR}/${group}/${f}Lexer.C )
-			BISON_TARGET(${f}Parser ${PARSERINPUT} ${PARSEROUTPUT} COMPILE_FLAGS "--defines=${PARSERHEADER} -p${PREFIX}")
-			FLEX_TARGET(${f}Lexer ${LEXERINPUT} ${LEXEROUTPUT} COMPILE_FLAGS "-P${PREFIX}")
-			ADD_FLEX_BISON_DEPENDENCY(${f}Lexer ${f}Parser)
-			list(APPEND ${SOURCE_FILE_LIST} ${PARSERINPUT} ${PARSEROUTPUT} ${LEXERINPUT} ${LEXEROUTPUT})
-		endforeach()
+			SET(PARSER_INPUT ${group}/${file}Parser.y)
+			SET(LEXER_INPUT ${group}/${file}Lexer.l)
+			SET(PARSER_OUTPUT ${OUTPUT_DIR}/${file}Parser.C)
+			SET(PARSER_HEADER ${OUTPUT_DIR}/${file}Parser.h)
+			SET(LEXER_OUTPUT  ${OUTPUT_DIR}/${file}Lexer.C )
 
+			BISON_TARGET(${file}Parser ${PARSER_INPUT} ${PARSER_OUTPUT} COMPILE_FLAGS "--defines=${PARSER_HEADER} -p${PREFIX}")
+			FLEX_TARGET(${file}Lexer ${LEXER_INPUT} ${LEXER_OUTPUT} COMPILE_FLAGS "-P${PREFIX}")
+			ADD_FLEX_BISON_DEPENDENCY(${file}Lexer ${file}Parser)
+
+			list(APPEND ${SOURCE_FILE_LIST} ${PARSER_INPUT} ${PARSER_OUTPUT} ${LEXER_INPUT} ${LEXER_OUTPUT})
+
+		endforeach()
 
 	endforeach()
 
@@ -119,24 +146,26 @@ macro(BALL_MACRO_add_class_tests LINK_LIBRARIES)
 	file(GLOB_RECURSE SOURCES_CMAKE RELATIVE ${PROJECT_SOURCE_DIR} "*sources.cmake")
 
 	set(SOURCE_FILES)
-	foreach(sources_cmake ${SOURCES_CMAKE})
+	foreach(s ${SOURCES_CMAKE})
 
-		get_filename_component(tmp ${sources_cmake} DIRECTORY)
-		get_filename_component(GROUP ${tmp} NAME)
-		include(${sources_cmake})
+		get_filename_component(tmp ${s} DIRECTORY)
+		get_filename_component(group ${tmp} NAME)
+		include(${s})
 
 		list(APPEND ALL_TESTS ${SOURCES_LIST})
 
-		add_custom_target("core_test_${GROUP}")
-		add_dependencies("core_test_${GROUP}" ${SOURCES_LIST})
+		add_custom_target("core_test_${group}")
+		add_dependencies("core_test_${group}" ${SOURCES_LIST})
 
 		foreach(test ${SOURCES_LIST})
-			add_executable(${test} source/${GROUP}/${test}.C ${HEADER_FILES_class_test_core})
+
+			add_executable(${test} source/${group}/${test}.C ${HEADER_FILES_class_test_core})
 			target_link_libraries(${test} ${LINK_LIBRARIES})
-			set_property(TARGET ${test} PROPERTY FOLDER ${GROUP})
+			set_property(TARGET ${test} PROPERTY FOLDER ${group})
 			set_target_properties(${test} PROPERTIES COMPILE_FLAGS "${Qt5Core_EXECUTABLE_COMPILE_FLAGS}")
 
 			add_test(${test} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${test})
+
 		endforeach()
 
 	endforeach()

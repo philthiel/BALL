@@ -19,6 +19,7 @@ set(ball_core_HEADER_FILES CACHE INTERNAL "This variable should hold all BALL he
 # Automatically collect header and source files
 BALL_MACRO_collect_headers(ball_core_HEADER_FILES)
 BALL_MACRO_collect_sources(ball_core_SOURCE_FILES)
+BALL_MACRO_collect_parser_sources(ball_core_SOURCE_FILES)
 
 # Mark header files
 set_property(SOURCE ${ball_core_HEADER_FILES} APPEND PROPERTY HEADER_FILE_ONLY TRUE)
